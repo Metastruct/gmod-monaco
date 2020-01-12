@@ -3,11 +3,8 @@ const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
-  mode: "development",
-  entry: {
-    app: "./src/index.js",
-    "editor.worker": "monaco-editor/esm/vs/editor/editor.worker.js",
-  },
+  mode: "production",
+  entry: "./src/index.js",
   output: {
     globalObject: "self",
     filename: "[name].bundle.js",
@@ -27,12 +24,13 @@ module.exports = {
   },
   plugins: [
     new MonacoWebpackPlugin(),
-    new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1, // disable creating additional chunks
-    }),
+    // new webpack.optimize.LimitChunkCountPlugin({
+    //   maxChunks: 1, // disable creating additional chunks
+    // }),
   ],
+
+  // having minimize enabled gives weird Â's for blank lines??
   optimization: {
-    // We no not want to minimize our code.
     minimize: false,
   },
 };
