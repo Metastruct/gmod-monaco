@@ -1,4 +1,4 @@
-name: Node CI
+name: Build and Deploy GitHub Pages
 
 on: [push]
 
@@ -16,8 +16,8 @@ jobs:
 
     - name: npm install, build
       run: |
-        npm ci
-        npm build
+        yarn
+        yarn build
       env:
         CI: true
 
