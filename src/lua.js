@@ -148,10 +148,13 @@ export var language = {
 		whitespace: [
 			[/[ \t\r\n]+/, ""],
 			[/--\[([=]*)\[/, "comment", "@comment.$1"],
+			[/\/\*/, "comment", "@comment.$1"]
 			[/--.*$/, "comment"],
+			[/\/\/.*$/, "comment"],
 		],
 		comment: [
 			[/[^\]]+/, "comment"],
+			[/\*\//, "comment"],
 			[
 				/\]([=]*)\]/,
 				{
