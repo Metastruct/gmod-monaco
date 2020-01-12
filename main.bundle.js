@@ -92838,6 +92838,14 @@ var editor = monaco.editor.create(document.getElementById("container"), {
     acceptSuggestionOnEnter: "off",
 });
 editor.focus();
+if (globalThis.gmodinterface)
+    globalThis.gmodinterface.OnReady();
+var previous;
+setInterval(function () {
+    if (previous !== undefined && previous !== editor.getValue() && globalThis.gmodinterface)
+        globalThis.gmodinterface.OnCode(editor.getValue());
+    previous = editor.getValue();
+}, 1);
 
 
 /***/ }),
