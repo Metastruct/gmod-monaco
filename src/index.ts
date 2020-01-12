@@ -27,3 +27,12 @@ var editor = monaco.editor.create(document.getElementById("container"), {
 });
 
 editor.focus();
+if(globalThis.gmodinterface) globalThis.gmodinterface.OnReady();
+
+let previous;
+
+setInterval(() => {
+  if(previous !== undefined && previous !== editor.getValue() && globalThis.gmodinterface)
+    globalThis.gmodinterface.OnCode(editor.getValue());
+  previous = editor.getValue();
+}, 1);
