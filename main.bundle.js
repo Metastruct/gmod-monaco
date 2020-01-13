@@ -92838,13 +92838,18 @@ var editor = monaco.editor.create(document.getElementById("container"), {
     acceptSuggestionOnEnter: "off",
 });
 editor.focus();
-if (globalThis.gmodinterface)
+if (globalThis.gmodinterface) {
+    globalThis.gmodinterface.SetCode = function (code) {
+        editor.setValue(code);
+    };
     globalThis.gmodinterface.OnReady();
-var previous;
+}
+var previousValue;
 setInterval(function () {
-    if (previous !== undefined && previous !== editor.getValue() && globalThis.gmodinterface)
+    if (previousValue && previousValue !== editor.getValue() && globalThis.gmodinterface) {
         globalThis.gmodinterface.OnCode(editor.getValue());
-    previous = editor.getValue();
+    }
+    previousValue = editor.getValue();
 }, 1);
 
 
