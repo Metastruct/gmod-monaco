@@ -27,6 +27,7 @@ var editor = monaco.editor.create(document.getElementById("container"), {
 });
 
 editor.focus();
+window.addEventListener('resize', () => editor.layout());
 
 if (globalThis.gmodinterface) {
   globalThis.gmodinterface.SetCode = (code: string) => {
