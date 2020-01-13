@@ -92838,6 +92838,7 @@ var editor = monaco.editor.create(document.getElementById("container"), {
     acceptSuggestionOnEnter: "off",
 });
 editor.focus();
+window.addEventListener('resize', function () { return editor.layout(); });
 if (globalThis.gmodinterface) {
     globalThis.gmodinterface.SetCode = function (code) {
         editor.setValue(code);
