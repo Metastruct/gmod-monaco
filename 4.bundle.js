@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[4],{
 
-/***/ 488:
+/***/ 501:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16327,7 +16327,7 @@ function isWhitespace(text, offset) {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/language/html/_deps/vscode-uri/index.js
-var vscode_uri = __webpack_require__(491);
+var vscode_uri = __webpack_require__(504);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/html/_deps/vscode-html-languageservice/services/htmlLinks.js
 /*---------------------------------------------------------------------------------------------
@@ -17907,7 +17907,7 @@ function disposeAll(disposables) {
 
 /***/ }),
 
-/***/ 491:
+/***/ 504:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

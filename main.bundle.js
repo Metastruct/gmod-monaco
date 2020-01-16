@@ -196,7 +196,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 189);
+/******/ 	return __webpack_require__(__webpack_require__.s = 193);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -6502,7 +6502,7 @@ var setImmediate = (function defineSetImmediate() {
 })();
 var OS = (_isMacintosh ? 2 /* Macintosh */ : (_isWindows ? 1 /* Windows */ : 3 /* Linux */));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(182), __webpack_require__(170)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(182), __webpack_require__(161)))
 
 /***/ }),
 /* 15 */
@@ -20247,7 +20247,7 @@ var Handler = {
 /* unused harmony export originalFSPath */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return relativePath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataUri; });
-/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(162);
+/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(163);
 /* harmony import */ var _path_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
 /* harmony import */ var _uri_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _strings_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
@@ -20709,7 +20709,7 @@ var IKeybindingService = Object(_instantiation_common_instantiation_js__WEBPACK_
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DragMouseEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return StandardWheelEvent; });
 /* harmony import */ var _browser_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
-/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(161);
+/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(162);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -23695,7 +23695,7 @@ var Gesture = /** @class */ (function (_super) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/peekView/media/peekViewWidget.css
-var peekViewWidget = __webpack_require__(237);
+var peekViewWidget = __webpack_require__(241);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -23722,10 +23722,10 @@ var strings = __webpack_require__(8);
 var codeEditorService = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/embeddedCodeEditorWidget.js
-var embeddedCodeEditorWidget = __webpack_require__(165);
+var embeddedCodeEditorWidget = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/zoneWidget.css
-var zoneWidget = __webpack_require__(271);
+var zoneWidget = __webpack_require__(275);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
 var sash = __webpack_require__(132);
@@ -25153,7 +25153,7 @@ var LRUCache = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return setARIAContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return alert; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return status; });
-/* harmony import */ var _aria_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(193);
+/* harmony import */ var _aria_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(197);
 /* harmony import */ var _aria_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_aria_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
@@ -29457,7 +29457,7 @@ var StaticDND = {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/media/scrollbars.css
-var scrollbars = __webpack_require__(218);
+var scrollbars = __webpack_require__(222);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/browser.js
 var browser = __webpack_require__(23);
@@ -31152,7 +31152,7 @@ function parseHrefAndDimensions(href) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalMouseMoveMonitor; });
 /* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
-/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(161);
+/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(162);
 /* harmony import */ var _mouseEvent_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(45);
 /* harmony import */ var _common_lifecycle_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2);
 /* harmony import */ var _canIUse_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(109);
@@ -31409,7 +31409,7 @@ var InMemoryStorageService = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Separator; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ActionViewItem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionBar; });
-/* harmony import */ var _actionbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(214);
+/* harmony import */ var _actionbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(218);
 /* harmony import */ var _actionbar_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_actionbar_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
@@ -32883,7 +32883,7 @@ var cursorColumnSelection_ColumnSelection = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorDeleteOperations.js
-var cursorDeleteOperations = __webpack_require__(164);
+var cursorDeleteOperations = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorMoveCommands.js
 var cursorMoveCommands = __webpack_require__(74);
@@ -37053,7 +37053,7 @@ var globalMouseMoveMonitor = __webpack_require__(83);
 var common_event = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/lightBulbWidget.css
-var lightBulbWidget = __webpack_require__(204);
+var lightBulbWidget = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
 var textModel = __webpack_require__(28);
@@ -41352,7 +41352,7 @@ _languageConfigurationRegistry_js__WEBPACK_IMPORTED_MODULE_3__[/* LanguageConfig
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageController; });
-/* harmony import */ var _messageController_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(202);
+/* harmony import */ var _messageController_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(206);
 /* harmony import */ var _messageController_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_messageController_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_common_async_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
@@ -41589,7 +41589,7 @@ var ServiceCollection = /** @class */ (function () {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/list/list.css
-var list_list = __webpack_require__(292);
+var list_list = __webpack_require__(296);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -43582,13 +43582,13 @@ var highlightedLabel = __webpack_require__(128);
 var dom = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.css
-var keybindingLabel = __webpack_require__(278);
+var keybindingLabel = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/objects.js
 var objects = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/keybindingLabels.js
-var keybindingLabels = __webpack_require__(167);
+var keybindingLabels = __webpack_require__(168);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.js
 /*---------------------------------------------------------------------------------------------
@@ -44338,9 +44338,9 @@ var ShiftCommand = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return renderCodicons; });
-/* harmony import */ var _codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(208);
+/* harmony import */ var _codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(212);
 /* harmony import */ var _codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(212);
+/* harmony import */ var _codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(216);
 /* harmony import */ var _codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _common_strings_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
 /*---------------------------------------------------------------------------------------------
@@ -44366,7 +44366,7 @@ function renderCodicons(label) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sash; });
-/* harmony import */ var _sash_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(227);
+/* harmony import */ var _sash_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(231);
 /* harmony import */ var _sash_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sash_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _common_lifecycle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _browser_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
@@ -46933,7 +46933,7 @@ var insane = __insane_func;
 // ESM-uncomment-end
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/marshalling.js
-var marshalling = __webpack_require__(168);
+var marshalling = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/objects.js
 var objects = __webpack_require__(35);
@@ -47136,7 +47136,7 @@ var common_opener = __webpack_require__(68);
 var modeService = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes/textToHtmlTokenizer.js
-var textToHtmlTokenizer = __webpack_require__(166);
+var textToHtmlTokenizer = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/instantiation/common/instantiation.js
 var instantiation = __webpack_require__(18);
@@ -48088,7 +48088,7 @@ var common_themeService = __webpack_require__(17);
 var InputFocusedContextKey = 'inputFocus';
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/tree/media/tree.css
-var media_tree = __webpack_require__(294);
+var media_tree = __webpack_require__(298);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/event.js
 var common_event = __webpack_require__(6);
@@ -52228,7 +52228,7 @@ var log = __webpack_require__(144);
 var arrays = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/snippet/snippetSession.css
-var snippetSession = __webpack_require__(325);
+var snippetSession = __webpack_require__(329);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/editOperation.js
 var editOperation = __webpack_require__(59);
@@ -55499,7 +55499,7 @@ var defaultGenerator = new IdGenerator('id#');
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IconLabel; });
-/* harmony import */ var _iconlabel_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(276);
+/* harmony import */ var _iconlabel_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(280);
 /* harmony import */ var _iconlabel_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_iconlabel_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var _highlightedlabel_highlightedLabel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(128);
@@ -55881,7 +55881,7 @@ var WorkspaceFolder = /** @class */ (function () {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/editor.css
-var media_editor = __webpack_require__(239);
+var media_editor = __webpack_require__(243);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -58722,7 +58722,7 @@ var pointerHandler_PointerHandler = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/controller/textAreaHandler.css
-var textAreaHandler = __webpack_require__(241);
+var textAreaHandler = __webpack_require__(245);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/strings.js
 var strings = __webpack_require__(8);
@@ -58734,7 +58734,7 @@ var textAreaInput = __webpack_require__(157);
 var textAreaState = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lineNumbers/lineNumbers.css
-var lineNumbers_lineNumbers = __webpack_require__(243);
+var lineNumbers_lineNumbers = __webpack_require__(247);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/view/dynamicViewOverlay.js
 /*---------------------------------------------------------------------------------------------
@@ -61240,7 +61240,7 @@ var contentWidgets_Widget = /** @class */ (function () {
 }());
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight.css
-var currentLineHighlight = __webpack_require__(245);
+var currentLineHighlight = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/arrays.js
 var arrays = __webpack_require__(15);
@@ -61439,7 +61439,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.css
-var decorations_decorations = __webpack_require__(247);
+var decorations_decorations = __webpack_require__(251);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.js
 /*---------------------------------------------------------------------------------------------
@@ -61804,7 +61804,7 @@ var editorScrollbar_EditorScrollbar = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.css
-var glyphMargin = __webpack_require__(249);
+var glyphMargin = __webpack_require__(253);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.js
 /*---------------------------------------------------------------------------------------------
@@ -61988,7 +61988,7 @@ var GlyphMarginOverlay = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.css
-var indentGuides = __webpack_require__(251);
+var indentGuides = __webpack_require__(255);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.js
 /*---------------------------------------------------------------------------------------------
@@ -62149,7 +62149,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.css
-var viewLines = __webpack_require__(253);
+var viewLines = __webpack_require__(257);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.js
 /*---------------------------------------------------------------------------------------------
@@ -62716,7 +62716,7 @@ var viewLines_ViewLines = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.css
-var linesDecorations = __webpack_require__(255);
+var linesDecorations = __webpack_require__(259);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.js
 /*---------------------------------------------------------------------------------------------
@@ -62828,7 +62828,7 @@ var linesDecorations_LinesDecorationsOverlay = /** @class */ (function (_super) 
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.css
-var marginDecorations = __webpack_require__(257);
+var marginDecorations = __webpack_require__(261);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.js
 /*---------------------------------------------------------------------------------------------
@@ -62929,7 +62929,7 @@ var marginDecorations_MarginViewLineDecorationsOverlay = /** @class */ (function
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/minimap/minimap.css
-var minimap_minimap = __webpack_require__(259);
+var minimap_minimap = __webpack_require__(263);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/rgba.js
 /*---------------------------------------------------------------------------------------------
@@ -64160,7 +64160,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.css
-var overlayWidgets = __webpack_require__(261);
+var overlayWidgets = __webpack_require__(265);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.js
 /*---------------------------------------------------------------------------------------------
@@ -64802,7 +64802,7 @@ var overviewRuler_OverviewRuler = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.css
-var rulers_rulers = __webpack_require__(263);
+var rulers_rulers = __webpack_require__(267);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.js
 /*---------------------------------------------------------------------------------------------
@@ -64905,7 +64905,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.css
-var scrollDecoration_scrollDecoration = __webpack_require__(265);
+var scrollDecoration_scrollDecoration = __webpack_require__(269);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.js
 /*---------------------------------------------------------------------------------------------
@@ -65002,7 +65002,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.css
-var selections_selections = __webpack_require__(267);
+var selections_selections = __webpack_require__(271);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.js
 /*---------------------------------------------------------------------------------------------
@@ -65371,7 +65371,7 @@ function abs(n) {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursors.css
-var viewCursors = __webpack_require__(269);
+var viewCursors = __webpack_require__(273);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursor.js
 /*---------------------------------------------------------------------------------------------
@@ -67092,7 +67092,7 @@ var cursorCollection_CursorCollection = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorDeleteOperations.js
-var cursorDeleteOperations = __webpack_require__(164);
+var cursorDeleteOperations = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorTypeOperations.js + 1 modules
 var cursorTypeOperations = __webpack_require__(99);
@@ -68032,7 +68032,7 @@ var editorAction = __webpack_require__(177);
 var editorContextKeys = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes/textToHtmlTokenizer.js
-var textToHtmlTokenizer = __webpack_require__(166);
+var textToHtmlTokenizer = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/scrollable.js
 var scrollable = __webpack_require__(176);
@@ -72561,7 +72561,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/editorQuickOpen.css
-var editorQuickOpen = __webpack_require__(280);
+var editorQuickOpen = __webpack_require__(284);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/editorExtensions.js
 var editorExtensions = __webpack_require__(5);
@@ -72573,7 +72573,7 @@ var textModel = __webpack_require__(28);
 var dom = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/parts/quickopen/browser/quickopen.css
-var quickopen = __webpack_require__(282);
+var quickopen = __webpack_require__(286);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -72711,7 +72711,7 @@ var Renderer = /** @class */ (function () {
 var inputBox = __webpack_require__(155);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/parts/tree/browser/tree.css
-var browser_tree = __webpack_require__(284);
+var browser_tree = __webpack_require__(288);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/errors.js
 var errors = __webpack_require__(12);
@@ -76081,7 +76081,7 @@ var treeImpl_Tree = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.css
-var progressbar = __webpack_require__(286);
+var progressbar = __webpack_require__(290);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.js
 /*---------------------------------------------------------------------------------------------
@@ -77125,7 +77125,7 @@ Object(editorExtensions["h" /* registerEditorContribution */])(editorQuickOpen_Q
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.css
-var inputBox = __webpack_require__(230);
+var inputBox = __webpack_require__(234);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -79821,7 +79821,7 @@ var storage = __webpack_require__(85);
 var referencesModel = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/peek/referencesWidget.css
-var referencesWidget = __webpack_require__(288);
+var referencesWidget = __webpack_require__(292);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -79839,7 +79839,7 @@ var network = __webpack_require__(37);
 var resources = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/embeddedCodeEditorWidget.js
-var embeddedCodeEditorWidget = __webpack_require__(165);
+var embeddedCodeEditorWidget = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/range.js
 var core_range = __webpack_require__(3);
@@ -79854,7 +79854,7 @@ var resolverService = __webpack_require__(105);
 var iconLabel = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/countBadge/countBadge.css
-var countBadge = __webpack_require__(290);
+var countBadge = __webpack_require__(294);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/strings.js
 var strings = __webpack_require__(8);
@@ -80193,7 +80193,7 @@ var colorRegistry = __webpack_require__(4);
 var peekView = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/splitview/splitview.css
-var splitview = __webpack_require__(296);
+var splitview = __webpack_require__(300);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/types.js
 var types = __webpack_require__(21);
@@ -81979,52 +81979,48 @@ self["MonacoEnvironment"] = (function (paths) {
   "handlebars": "html.worker.js",
   "razor": "html.worker.js"
 });
-__webpack_require__(190);
-__webpack_require__(195);
-__webpack_require__(420);
-__webpack_require__(198);
-__webpack_require__(201);
-__webpack_require__(415);
-__webpack_require__(183);
-__webpack_require__(418);
-__webpack_require__(421);
-__webpack_require__(89);
-__webpack_require__(220);
-__webpack_require__(422);
-__webpack_require__(169);
-__webpack_require__(412);
-__webpack_require__(234);
-__webpack_require__(416);
-__webpack_require__(181);
-__webpack_require__(273);
+__webpack_require__(194);
+__webpack_require__(199);
+__webpack_require__(433);
+__webpack_require__(202);
+__webpack_require__(205);
+__webpack_require__(428);
 __webpack_require__(185);
-__webpack_require__(184);
-__webpack_require__(413);
-__webpack_require__(304);
-__webpack_require__(423);
-__webpack_require__(307);
-__webpack_require__(414);
-__webpack_require__(424);
-__webpack_require__(312);
-__webpack_require__(417);
-__webpack_require__(315);
-__webpack_require__(419);
-__webpack_require__(322);
+__webpack_require__(431);
+__webpack_require__(434);
+__webpack_require__(89);
+__webpack_require__(224);
+__webpack_require__(435);
+__webpack_require__(170);
 __webpack_require__(425);
+__webpack_require__(238);
+__webpack_require__(429);
+__webpack_require__(181);
+__webpack_require__(277);
+__webpack_require__(187);
+__webpack_require__(186);
 __webpack_require__(426);
+__webpack_require__(308);
+__webpack_require__(436);
+__webpack_require__(311);
+__webpack_require__(427);
+__webpack_require__(437);
+__webpack_require__(316);
+__webpack_require__(430);
+__webpack_require__(319);
+__webpack_require__(432);
+__webpack_require__(326);
+__webpack_require__(438);
+__webpack_require__(439);
 __webpack_require__(139);
-__webpack_require__(411);
-__webpack_require__(329);
+__webpack_require__(424);
+__webpack_require__(333);
 __webpack_require__(171);
-__webpack_require__(330);
-__webpack_require__(331);
+__webpack_require__(334);
+__webpack_require__(335);
 __webpack_require__(158);
-__webpack_require__(332);
-module.exports = __webpack_require__(410);
-__webpack_require__(346);
-__webpack_require__(347);
-__webpack_require__(348);
-__webpack_require__(349);
+__webpack_require__(336);
+module.exports = __webpack_require__(423);
 __webpack_require__(350);
 __webpack_require__(351);
 __webpack_require__(352);
@@ -82081,13 +82077,43 @@ __webpack_require__(402);
 __webpack_require__(403);
 __webpack_require__(404);
 __webpack_require__(405);
-__webpack_require__(427);
 __webpack_require__(406);
 __webpack_require__(407);
 __webpack_require__(408);
+__webpack_require__(409);
+__webpack_require__(440);
+__webpack_require__(410);
+__webpack_require__(411);
+__webpack_require__(412);
 
 /***/ }),
 /* 161 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 162 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82205,7 +82231,7 @@ var IframeUtils = /** @class */ (function () {
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82260,7 +82286,7 @@ function isWindowsDriveLetter(char0) {
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82347,7 +82373,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_3__[/* registerLang
 
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82543,7 +82569,7 @@ var DeleteOperations = /** @class */ (function () {
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82629,7 +82655,7 @@ var EmbeddedCodeEditorWidget = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82737,7 +82763,7 @@ function _tokenizeToString(text, tokenizationSupport) {
 
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82846,7 +82872,7 @@ function _simpleAsString(modifiers, key, labels) {
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82885,7 +82911,7 @@ function revive(obj, depth) {
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84010,7 +84036,7 @@ var findModel_FindModelBoundToEditorModel = /** @class */ (function () {
 var dom = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/checkbox/checkbox.css
-var checkbox_checkbox = __webpack_require__(223);
+var checkbox_checkbox = __webpack_require__(227);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/widget.js
 var ui_widget = __webpack_require__(66);
@@ -84676,7 +84702,7 @@ var findState_FindReplaceState = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/find/findWidget.css
-var findWidget = __webpack_require__(225);
+var findWidget = __webpack_require__(229);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js
 var aria = __webpack_require__(57);
@@ -84691,7 +84717,7 @@ var errors = __webpack_require__(12);
 var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.css
-var findInput = __webpack_require__(186);
+var findInput = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.js + 1 modules
 var inputBox = __webpack_require__(155);
@@ -87370,32 +87396,6 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new FindCommand({
 
 
 /***/ }),
-/* 170 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
 /* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87513,7 +87513,7 @@ _registry_common_platform_js__WEBPACK_IMPORTED_MODULE_0__[/* Registry */ "a"].ad
 /* unused harmony export isRelativePattern */
 /* harmony import */ var _arrays_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 /* harmony import */ var _strings_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
-/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(162);
+/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(163);
 /* harmony import */ var _path_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(51);
 /* harmony import */ var _map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(56);
 /* harmony import */ var _async_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(16);
@@ -88065,7 +88065,7 @@ var StopWatch = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SubmenuAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Menu; });
 /* unused harmony export cleanMnemonic */
-/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(216);
+/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(220);
 /* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _common_strings_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
@@ -89601,7 +89601,7 @@ var themeService = __webpack_require__(17);
 var editorContextKeys = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/media/gotoErrorWidget.css
-var gotoErrorWidget = __webpack_require__(235);
+var gotoErrorWidget = __webpack_require__(239);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -90717,6 +90717,187 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 183 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function locStart(node) {
+    return node.range[0];
+}
+exports.locStart = locStart;
+function locEnd(node) {
+    return node.range[1];
+}
+exports.locEnd = locEnd;
+function isNode(value) {
+    if (!value || typeof (value.type) !== 'string') {
+        return false;
+    }
+    switch (value.type) {
+        case 'LabelStatement':
+        case 'BreakStatement':
+        case 'GotoStatement':
+        case 'ReturnStatement':
+        case 'IfStatement':
+        case 'IfClause':
+        case 'ElseifClause':
+        case 'ElseClause':
+        case 'WhileStatement':
+        case 'DoStatement':
+        case 'RepeatStatement':
+        case 'LocalStatement':
+        case 'AssignmentStatement':
+        case 'CallStatement':
+        case 'FunctionDeclaration':
+        case 'ForNumericStatement':
+        case 'ForGenericStatement':
+        case 'Chunk':
+        case 'Identifier':
+        case 'BooleanLiteral':
+        case 'NilLiteral':
+        case 'NumericLiteral':
+        case 'StringLiteral':
+        case 'VarargLiteral':
+        case 'TableKey':
+        case 'TableKeyString':
+        case 'TableValue':
+        case 'TableConstructorExpression':
+        case 'BinaryExpression':
+        case 'LogicalExpression':
+        case 'UnaryExpression':
+        case 'MemberExpression':
+        case 'IndexExpression':
+        case 'CallExpression':
+        case 'TableCallExpression':
+        case 'StringCallExpression':
+        case 'Comment':
+            return true;
+        default:
+            return false;
+    }
+}
+exports.isNode = isNode;
+;
+function skipOnce(text, idx, sequences, searchOptions = {}) {
+    let skipCount = 0;
+    sequences.forEach(seq => {
+        const searchText = searchOptions.searchBackwards
+            ? text.substring(idx - seq.length, idx)
+            : text.substring(idx, idx + seq.length);
+        if (searchText === seq) {
+            skipCount = seq.length;
+            return;
+        }
+    });
+    return idx + (searchOptions.searchBackwards ? -skipCount : skipCount);
+}
+exports.skipOnce = skipOnce;
+function skipMany(text, idx, sequences, searchOptions = {}) {
+    let oldIdx = null;
+    while (oldIdx !== idx) {
+        oldIdx = idx;
+        idx = skipOnce(text, idx, sequences, searchOptions);
+    }
+    return idx;
+}
+exports.skipMany = skipMany;
+function skipNewLine(text, idx, searchOptions = {}) {
+    return skipOnce(text, idx, ['\n', '\r\n'], searchOptions);
+}
+exports.skipNewLine = skipNewLine;
+function skipSpaces(text, idx, searchOptions = {}) {
+    return skipMany(text, idx, [' ', '\t'], searchOptions);
+}
+exports.skipSpaces = skipSpaces;
+function skipToLineEnd(text, idx, searchOptions = {}) {
+    return skipMany(text, skipSpaces(text, idx), [';'], searchOptions);
+}
+exports.skipToLineEnd = skipToLineEnd;
+function hasNewLine(text, idx, searchOptions = {}) {
+    const endOfLineIdx = skipSpaces(text, idx, searchOptions);
+    const nextLineIdx = skipNewLine(text, endOfLineIdx, searchOptions);
+    return endOfLineIdx !== nextLineIdx;
+}
+exports.hasNewLine = hasNewLine;
+function hasNewLineInRange(text, start, end) {
+    return text.substr(start, end - start).indexOf('\n') !== -1;
+}
+exports.hasNewLineInRange = hasNewLineInRange;
+function isPreviousLineEmpty(text, idx) {
+    idx = skipSpaces(text, idx, { searchBackwards: true });
+    idx = skipNewLine(text, idx, { searchBackwards: true });
+    idx = skipSpaces(text, idx, { searchBackwards: true });
+    const previousLine = skipNewLine(text, idx, { searchBackwards: true });
+    return idx !== previousLine;
+}
+exports.isPreviousLineEmpty = isPreviousLineEmpty;
+function skipTrailingComment(text, idx) {
+    if (text.charAt(idx) === '-' && text.charAt(idx + 1) === '-') {
+        idx += 2;
+        while (idx >= 0 && idx < text.length) {
+            if (text.charAt(idx) === '\n') {
+                return idx;
+            }
+            if (text.charAt(idx) === '\r' && text.charAt(idx + 1) === '\n') {
+                return idx;
+            }
+            idx++;
+        }
+    }
+    return idx;
+}
+exports.skipTrailingComment = skipTrailingComment;
+function isNextLineEmpty(text, idx, searchOptions = {
+    searchBackwards: false
+}) {
+    idx = skipToLineEnd(text, idx, searchOptions);
+    let oldIdx = null;
+    while (idx !== oldIdx) {
+        oldIdx = idx;
+        idx = skipSpaces(text, idx, searchOptions);
+    }
+    idx = skipTrailingComment(text, idx);
+    idx = skipNewLine(text, idx, searchOptions);
+    return hasNewLine(text, idx);
+}
+exports.isNextLineEmpty = isNextLineEmpty;
+//# sourceMappingURL=util.js.map
+
+/***/ }),
+/* 184 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var WriteMode;
+(function (WriteMode) {
+    WriteMode["StdOut"] = "stdout";
+    WriteMode["Replace"] = "replace";
+    WriteMode["Diff"] = "diff";
+})(WriteMode = exports.WriteMode || (exports.WriteMode = {}));
+exports.defaultOptions = {
+    sourceText: '',
+    lineWidth: 120,
+    indentCount: 4,
+    useTabs: false,
+    linebreakMultipleAssignments: false,
+    quotemark: 'double',
+    writeMode: WriteMode.StdOut
+};
+function getStringQuotemark(quotemark) {
+    return quotemark === 'single' ? '\'' : '"';
+}
+exports.getStringQuotemark = getStringQuotemark;
+function getAlternativeStringQuotemark(quotemark) {
+    return quotemark === 'single' ? '"' : '\'';
+}
+exports.getAlternativeStringQuotemark = getAlternativeStringQuotemark;
+//# sourceMappingURL=options.js.map
+
+/***/ }),
+/* 185 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90732,7 +90913,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_core_range_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3);
 /* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(28);
 /* harmony import */ var _common_modes_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
-/* harmony import */ var _color_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(163);
+/* harmony import */ var _color_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(164);
 /* harmony import */ var _platform_configuration_common_configuration_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(42);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -90975,13 +91156,13 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_5__[/* registerEdit
 
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GotoDefinitionAtPositionEditorContribution", function() { return GotoDefinitionAtPositionEditorContribution; });
-/* harmony import */ var _goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(298);
+/* harmony import */ var _goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(302);
 /* harmony import */ var _goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_common_async_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
@@ -90997,7 +91178,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(17);
 /* harmony import */ var _platform_theme_common_colorRegistry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4);
 /* harmony import */ var _browser_core_editorState_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(81);
-/* harmony import */ var _goToCommands_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(185);
+/* harmony import */ var _goToCommands_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(187);
 /* harmony import */ var _clickLinkGesture_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(178);
 /* harmony import */ var _common_core_position_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(9);
 /* harmony import */ var _base_common_types_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(21);
@@ -91301,7 +91482,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_12__[/* r
 
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92432,11 +92613,11 @@ commands["a" /* CommandsRegistry */].registerCommandAlias('editor.action.showRef
 
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(229);
+            var content = __webpack_require__(233);
 
             content = content.__esModule ? content.default : content;
 
@@ -92458,7 +92639,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92495,9 +92676,9 @@ module.exports = exported;
 /* unused harmony export SYMBOL_ICON_TYPEPARAMETER_FOREGROUND */
 /* unused harmony export SYMBOL_ICON_UNIT_FOREGROUND */
 /* unused harmony export SYMBOL_ICON_VARIABLE_FOREGROUND */
-/* harmony import */ var _media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(318);
+/* harmony import */ var _media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(322);
 /* harmony import */ var _media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(320);
+/* harmony import */ var _media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(324);
 /* harmony import */ var _media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var _platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
@@ -92809,15 +92990,469 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_3__[/* re
 
 
 /***/ }),
-/* 188 */,
-/* 189 */
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const docBuilder_1 = __webpack_require__(191);
+const util_1 = __webpack_require__(183);
+var CommentType;
+(function (CommentType) {
+    CommentType[CommentType["Leading"] = 0] = "Leading";
+    CommentType[CommentType["Trailing"] = 1] = "Trailing";
+    CommentType[CommentType["Dangling"] = 2] = "Dangling";
+    CommentType[CommentType["DanglingStatement"] = 3] = "DanglingStatement";
+})(CommentType || (CommentType = {}));
+function getChildrenOfNode(node) {
+    const keys = Object.keys(node);
+    const children = [];
+    function addChild(n) {
+        if (n && typeof (n.type) === 'string' && n.type !== 'Comment') {
+            let idx;
+            for (idx = children.length - 1; idx >= 0; --idx) {
+                if (util_1.locStart(children[idx]) <= util_1.locStart(n) &&
+                    util_1.locEnd(children[idx]) <= util_1.locEnd(node)) {
+                    break;
+                }
+            }
+            children.splice(idx + 1, 0, n);
+        }
+    }
+    ;
+    for (const key of keys) {
+        const val = node[key];
+        if (Array.isArray(val)) {
+            val.forEach(addChild);
+        }
+        else if (val) {
+            addChild(val);
+        }
+    }
+    return children;
+}
+function attachComments(ast, options) {
+    for (const comment of ast.comments) {
+        decorateComment(ast, comment);
+        const precedingNode = comment.precedingNode;
+        const enclosingNode = comment.enclosingNode;
+        const followingNode = comment.followingNode;
+        if (util_1.hasNewLine(options.sourceText, util_1.locStart(comment), { searchBackwards: true })) {
+            if (handleStatementsWithNoBodyComments(enclosingNode, comment) ||
+                handleFunctionBodyComments(precedingNode, enclosingNode, comment) ||
+                handleIfStatementsWithNoBodyComments(precedingNode, enclosingNode, followingNode, comment)) {
+            }
+            else if (followingNode) {
+                addLeadingComment(followingNode, comment);
+            }
+            else if (precedingNode) {
+                addTrailingComment(precedingNode, comment);
+            }
+            else if (enclosingNode) {
+                addDanglingComment(enclosingNode, comment);
+            }
+            else {
+                addDanglingComment(ast, comment);
+            }
+        }
+        else {
+            if (handleExpressionBeginComments(precedingNode, enclosingNode, comment) ||
+                handleDanglingIfStatementsWithNoBodies(precedingNode, enclosingNode, comment)) {
+            }
+            else if (precedingNode) {
+                addTrailingComment(precedingNode, comment);
+            }
+            else if (followingNode) {
+                addLeadingComment(followingNode, comment);
+            }
+            else if (enclosingNode) {
+                addDanglingComment(enclosingNode, comment);
+            }
+            else {
+                addDanglingComment(ast, comment);
+            }
+        }
+    }
+}
+exports.attachComments = attachComments;
+function injectShebang(ast, options) {
+    if (!options.sourceText.startsWith('#!')) {
+        return;
+    }
+    const endLine = options.sourceText.indexOf('\n');
+    const raw = options.sourceText.slice(0, endLine);
+    const shebang = options.sourceText.slice(2, endLine);
+    ast.comments.push({
+        type: 'Comment',
+        loc: {
+            start: {
+                line: 1,
+                column: 0
+            },
+            end: {
+                line: 1,
+                column: endLine
+            }
+        },
+        range: [0, endLine],
+        raw,
+        value: shebang
+    });
+}
+exports.injectShebang = injectShebang;
+function printDanglingComments(path, sameIndent = false) {
+    const node = path.getValue();
+    if (!node || !node.attachedComments) {
+        return '';
+    }
+    const parts = [];
+    path.forEach((commentPath) => {
+        const comment = commentPath.getValue();
+        if (comment.commentType === CommentType.Dangling) {
+            parts.push(comment.raw);
+        }
+    }, 'attachedComments');
+    if (parts.length === 0) {
+        return '';
+    }
+    if (sameIndent) {
+        return docBuilder_1.join(docBuilder_1.hardline, parts);
+    }
+    return docBuilder_1.indent(docBuilder_1.concat([docBuilder_1.hardline, docBuilder_1.join(docBuilder_1.hardline, parts)]));
+}
+exports.printDanglingComments = printDanglingComments;
+function printDanglingStatementComments(path) {
+    const node = path.getValue();
+    if (!node || !node.attachedComments) {
+        return '';
+    }
+    const parts = [];
+    path.forEach((commentPath) => {
+        const comment = commentPath.getValue();
+        if (comment.commentType === CommentType.DanglingStatement) {
+            parts.push(' ');
+            parts.push(comment.raw);
+        }
+    }, 'attachedComments');
+    if (parts.length === 0) {
+        return '';
+    }
+    return docBuilder_1.concat(parts);
+}
+exports.printDanglingStatementComments = printDanglingStatementComments;
+function printLeadingComment(path, options) {
+    const comment = path.getValue();
+    const isBlockComment = comment.raw.startsWith('--[[');
+    if (isBlockComment) {
+        return docBuilder_1.concat([
+            comment.raw,
+            util_1.hasNewLine(options.sourceText, util_1.locEnd(comment)) ? docBuilder_1.hardline : ' '
+        ]);
+    }
+    const parts = [];
+    parts.push(comment.raw);
+    parts.push(docBuilder_1.hardline);
+    if (util_1.isNextLineEmpty(options.sourceText, util_1.locEnd(comment))) {
+        parts.push(docBuilder_1.hardline);
+    }
+    return docBuilder_1.concat(parts);
+}
+function printTrailingComment(path, options) {
+    const comment = path.getValue();
+    if (util_1.hasNewLine(options.sourceText, util_1.locStart(comment), { searchBackwards: true })) {
+        const previousLineEmpty = util_1.isPreviousLineEmpty(options.sourceText, util_1.locStart(comment));
+        return docBuilder_1.concat([docBuilder_1.hardline, previousLineEmpty ? docBuilder_1.hardline : '', comment.raw]);
+    }
+    if (comment.raw.startsWith('--[[')) {
+        return docBuilder_1.concat([' ', comment.raw]);
+    }
+    const parts = [];
+    if (util_1.isNextLineEmpty(options.sourceText, util_1.locStart(comment), { searchBackwards: true })) {
+        parts.push(docBuilder_1.hardline);
+    }
+    parts.push(' ');
+    parts.push(comment.raw);
+    parts.push(docBuilder_1.breakParent);
+    return docBuilder_1.lineSuffix(docBuilder_1.concat(parts));
+}
+function printComments(path, options, print) {
+    const node = path.getValue();
+    const printed = print(path);
+    const comments = node.attachedComments;
+    if (!comments || comments.length === 0) {
+        return printed;
+    }
+    const leadingParts = [];
+    const trailingParts = [printed];
+    path.forEach((commentPath) => {
+        const comment = commentPath.getValue();
+        const commentType = comment.commentType;
+        switch (commentType) {
+            case CommentType.Leading:
+                leadingParts.push(printLeadingComment(path, options));
+                break;
+            case CommentType.Trailing:
+                trailingParts.push(printTrailingComment(path, options));
+                break;
+        }
+    }, 'attachedComments');
+    return docBuilder_1.concat(leadingParts.concat(trailingParts));
+}
+exports.printComments = printComments;
+function decorateComment(node, comment) {
+    const childNodes = getChildrenOfNode(node);
+    let precedingNode = null;
+    let followingNode = null;
+    let left = 0;
+    let right = childNodes.length;
+    while (left < right) {
+        const middle = Math.floor((left + right) / 2);
+        const childNode = childNodes[middle];
+        if (util_1.locStart(childNode) - util_1.locStart(comment) <= 0 &&
+            util_1.locEnd(comment) - util_1.locEnd(childNode) <= 0) {
+            comment.enclosingNode = childNode;
+            decorateComment(childNode, comment);
+            return;
+        }
+        if (util_1.locEnd(childNode) - util_1.locStart(comment) <= 0) {
+            precedingNode = childNode;
+            left = middle + 1;
+            continue;
+        }
+        if (util_1.locEnd(comment) - util_1.locStart(childNode) <= 0) {
+            followingNode = childNode;
+            right = middle;
+            continue;
+        }
+    }
+    if (precedingNode) {
+        comment.precedingNode = precedingNode;
+    }
+    if (followingNode) {
+        comment.followingNode = followingNode;
+    }
+}
+function addComment(node, comment) {
+    const comments = node.attachedComments || (node.attachedComments = []);
+    comments.push(comment);
+}
+function addLeadingComment(node, comment) {
+    comment.commentType = CommentType.Leading;
+    addComment(node, comment);
+}
+function addDanglingComment(node, comment) {
+    comment.commentType = CommentType.Dangling;
+    addComment(node, comment);
+}
+function addDanglingStatementComment(node, comment) {
+    comment.commentType = CommentType.DanglingStatement;
+    addComment(node, comment);
+}
+function addTrailingComment(node, comment) {
+    comment.commentType = CommentType.Trailing;
+    addComment(node, comment);
+}
+function handleStatementsWithNoBodyComments(enclosingNode, comment) {
+    if (!enclosingNode || enclosingNode.body == null) {
+        return false;
+    }
+    if (enclosingNode.body.length === 0) {
+        addDanglingComment(enclosingNode, comment);
+        return true;
+    }
+    return false;
+}
+function handleFunctionBodyComments(precedingNode, enclosingNode, comment) {
+    if (!enclosingNode || enclosingNode.type !== 'FunctionDeclaration' || enclosingNode.body.length > 0) {
+        return false;
+    }
+    if (enclosingNode.parameters.length > 0 &&
+        enclosingNode.parameters[enclosingNode.parameters.length - 1] === precedingNode) {
+        addDanglingComment(enclosingNode, comment);
+        return true;
+    }
+    if (precedingNode && precedingNode.type === 'Identifier') {
+        addDanglingComment(enclosingNode, comment);
+        return true;
+    }
+    return false;
+}
+function handleIfStatementsWithNoBodyComments(precedingNode, enclosingNode, followingNode, comment) {
+    if (!enclosingNode || enclosingNode.type !== 'IfStatement') {
+        return false;
+    }
+    if (followingNode && (followingNode.type === 'ElseifClause' || followingNode.type === 'ElseClause')) {
+        addDanglingComment(precedingNode, comment);
+        return true;
+    }
+    if (precedingNode && precedingNode.type === 'ElseClause') {
+        addDanglingComment(precedingNode, comment);
+        return true;
+    }
+    return false;
+}
+function handleExpressionBeginComments(precedingNode, enclosingNode, comment) {
+    if (comment.raw.startsWith('--[[')) {
+        return false;
+    }
+    if (!enclosingNode) {
+        return false;
+    }
+    switch (enclosingNode.type) {
+        case 'WhileStatement':
+            if (precedingNode === enclosingNode.condition) {
+                addDanglingStatementComment(enclosingNode, comment);
+                return true;
+            }
+            break;
+        case 'DoStatement':
+        case 'RepeatStatement':
+            if (precedingNode == null) {
+                addDanglingStatementComment(enclosingNode, comment);
+                return true;
+            }
+            break;
+        case 'FunctionDeclaration':
+            if ((enclosingNode.parameters.length &&
+                precedingNode === enclosingNode.parameters[enclosingNode.parameters.length - 1]) ||
+                (precedingNode === enclosingNode.identifier)) {
+                addDanglingStatementComment(enclosingNode, comment);
+                return true;
+            }
+            break;
+        case 'ForNumericStatement':
+            if (precedingNode === enclosingNode.end || precedingNode === enclosingNode.step) {
+                addDanglingStatementComment(enclosingNode, comment);
+                return true;
+            }
+            break;
+        case 'ForGenericStatement':
+            if (precedingNode === enclosingNode.iterators[enclosingNode.iterators.length - 1]) {
+                addDanglingStatementComment(enclosingNode, comment);
+                return true;
+            }
+            break;
+        case 'IfClause':
+        case 'ElseifClause':
+            if (precedingNode === enclosingNode.condition &&
+                comment.loc.start.column > precedingNode.loc.start.column) {
+                addDanglingStatementComment(enclosingNode, comment);
+                return true;
+            }
+            break;
+        case 'ElseClause':
+            if (precedingNode == null) {
+                addDanglingStatementComment(enclosingNode, comment);
+                return true;
+            }
+            break;
+    }
+    return false;
+}
+function handleDanglingIfStatementsWithNoBodies(precedingNode, enclosingNode, comment) {
+    if (!precedingNode || !enclosingNode) {
+        return false;
+    }
+    if (enclosingNode.type !== 'IfStatement') {
+        return false;
+    }
+    switch (precedingNode.type) {
+        case 'IfClause':
+        case 'ElseifClause':
+        case 'ElseClause':
+            if (precedingNode.body.length === 0) {
+                addDanglingStatementComment(precedingNode, comment);
+                return true;
+            }
+            break;
+    }
+    return false;
+}
+//# sourceMappingURL=comments.js.map
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function concat(parts) {
+    return {
+        type: 'concat',
+        parts
+    };
+}
+exports.concat = concat;
+function join(separator, parts) {
+    const result = [];
+    parts.forEach((val, i) => {
+        if (i > 0) {
+            result.push(separator);
+        }
+        result.push(val);
+    });
+    return concat(result);
+}
+exports.join = join;
+exports.line = {
+    type: 'line',
+    hard: false,
+    soft: false
+};
+exports.hardline = {
+    type: 'line',
+    hard: true,
+    soft: false
+};
+exports.softline = {
+    type: 'line',
+    hard: false,
+    soft: true
+};
+function indent(content) {
+    return {
+        type: 'indent',
+        content
+    };
+}
+exports.indent = indent;
+function lineSuffix(content) {
+    return {
+        type: 'lineSuffix',
+        content
+    };
+}
+exports.lineSuffix = lineSuffix;
+function group(content, willBreak = false) {
+    return {
+        type: 'group',
+        content,
+        willBreak
+    };
+}
+exports.group = group;
+exports.breakParent = {
+    type: 'breakParent'
+};
+function isEmpty(instruction) {
+    return typeof (instruction) === 'string' && instruction.length === 0;
+}
+exports.isEmpty = isEmpty;
+//# sourceMappingURL=docBuilder.js.map
+
+/***/ }),
+/* 192 */,
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var monaco = __webpack_require__(160);
-var lua = __webpack_require__(409);
+var lua = __webpack_require__(413);
+var formatter_1 = __webpack_require__(414);
 monaco.languages.register({
     id: "lua",
     extensions: [".lua"],
@@ -92825,6 +93460,7 @@ monaco.languages.register({
 });
 monaco.languages.setMonarchTokensProvider("lua", lua.language);
 monaco.languages.setLanguageConfiguration("lua", lua.conf);
+monaco.languages.registerDocumentFormattingEditProvider("lua", new formatter_1.LuaFormatter());
 var editor = monaco.editor.create(document.getElementById("container"), {
     value: ["do", "\tlua()", "end"].join("\n"),
     language: "lua",
@@ -92855,12 +93491,12 @@ setInterval(function () {
 
 
 /***/ }),
-/* 190 */
+/* 194 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(191);
+/* harmony import */ var _accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(195);
 /* harmony import */ var _accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_browser_browser_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
 /* harmony import */ var _base_browser_dom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
@@ -93212,11 +93848,11 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_19__[/* r
 
 
 /***/ }),
-/* 191 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(192);
+            var content = __webpack_require__(196);
 
             content = content.__esModule ? content.default : content;
 
@@ -93238,7 +93874,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 192 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -93251,11 +93887,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 193 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(194);
+            var content = __webpack_require__(198);
 
             content = content.__esModule ? content.default : content;
 
@@ -93277,7 +93913,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 194 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -93290,13 +93926,13 @@ module.exports = exports;
 
 
 /***/ }),
-/* 195 */
+/* 199 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BracketMatchingController", function() { return BracketMatchingController; });
-/* harmony import */ var _bracketMatching_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(196);
+/* harmony import */ var _bracketMatching_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(200);
 /* harmony import */ var _bracketMatching_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bracketMatching_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_common_async_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
@@ -93648,11 +94284,11 @@ _platform_actions_common_actions_js__WEBPACK_IMPORTED_MODULE_14__[/* MenuRegistr
 
 
 /***/ }),
-/* 196 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(197);
+            var content = __webpack_require__(201);
 
             content = content.__esModule ? content.default : content;
 
@@ -93674,7 +94310,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 197 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -93687,12 +94323,12 @@ module.exports = exports;
 
 
 /***/ }),
-/* 198 */
+/* 202 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _clipboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(199);
+/* harmony import */ var _clipboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(203);
 /* harmony import */ var _clipboard_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_clipboard_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_browser_browser_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
@@ -93929,11 +94565,11 @@ if (supportsCopyWithSyntaxHighlighting) {
 
 
 /***/ }),
-/* 199 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(200);
+            var content = __webpack_require__(204);
 
             content = content.__esModule ? content.default : content;
 
@@ -93955,7 +94591,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 200 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -93968,7 +94604,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 201 */
+/* 205 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93989,84 +94625,6 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEditorAction */ "f"])(_codeActionCommands_js__WEBPACK_IMPORTED_MODULE_1__[/* AutoFixAction */ "a"]);
 Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEditorAction */ "f"])(_codeActionCommands_js__WEBPACK_IMPORTED_MODULE_1__[/* FixAllAction */ "c"]);
 Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEditorCommand */ "g"])(new _codeActionCommands_js__WEBPACK_IMPORTED_MODULE_1__[/* CodeActionCommand */ "b"]());
-
-
-/***/ }),
-/* 202 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(203);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 203 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .monaco-editor-overlaymessage {\r\n\tpadding-bottom: 8px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n\tfrom { opacity: 0; }\r\n\tto { opacity: 1; }\r\n}\r\n.monaco-editor .monaco-editor-overlaymessage.fadeIn {\r\n\tanimation: fadeIn 150ms ease-out;\r\n}\r\n\r\n@keyframes fadeOut {\r\n\tfrom { opacity: 1; }\r\n\tto { opacity: 0; }\r\n}\r\n.monaco-editor .monaco-editor-overlaymessage.fadeOut {\r\n\tanimation: fadeOut 100ms ease-out;\r\n}\r\n\r\n.monaco-editor .monaco-editor-overlaymessage .message {\r\n\tpadding: 1px 4px;\r\n}\r\n\r\n.monaco-editor .monaco-editor-overlaymessage .anchor {\r\n\twidth: 0 !important;\r\n\theight: 0 !important;\r\n\tborder-color: transparent;\r\n\tborder-style: solid;\r\n\tz-index: 1000;\r\n\tborder-width: 8px;\r\n\tposition: absolute;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 204 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(205);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 205 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .lightbulb-glyph,\r\n.monaco-editor .codicon-lightbulb {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\theight: 16px;\r\n\twidth: 20px;\r\n\tpadding-left: 2px;\r\n}\r\n\r\n.monaco-editor .lightbulb-glyph:hover,\r\n.monaco-editor .codicon-lightbulb:hover {\r\n\tcursor: pointer;\r\n\t/* transform: scale(1.3, 1.3); */\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
 
 
 /***/ }),
@@ -94103,7 +94661,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .codelens-decoration {\r\n\toverflow: hidden;\r\n\tdisplay: inline-block;\r\n\ttext-overflow: ellipsis;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > span,\r\n.monaco-editor .codelens-decoration > a {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n\twhite-space: nowrap;\r\n\tvertical-align: sub;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > a {\r\n\ttext-decoration: none;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > a:hover {\r\n\ttext-decoration: underline;\r\n\tcursor: pointer;\r\n}\r\n\r\n@keyframes fadein {\r\n\t0% { opacity: 0; visibility: visible;}\r\n\t100% { opacity: 1; }\r\n}\r\n\r\n.monaco-editor .codelens-decoration.fadein {\r\n\tanimation: fadein 0.1s linear;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .monaco-editor-overlaymessage {\r\n\tpadding-bottom: 8px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n\tfrom { opacity: 0; }\r\n\tto { opacity: 1; }\r\n}\r\n.monaco-editor .monaco-editor-overlaymessage.fadeIn {\r\n\tanimation: fadeIn 150ms ease-out;\r\n}\r\n\r\n@keyframes fadeOut {\r\n\tfrom { opacity: 1; }\r\n\tto { opacity: 0; }\r\n}\r\n.monaco-editor .monaco-editor-overlaymessage.fadeOut {\r\n\tanimation: fadeOut 100ms ease-out;\r\n}\r\n\r\n.monaco-editor .monaco-editor-overlaymessage .message {\r\n\tpadding: 1px 4px;\r\n}\r\n\r\n.monaco-editor .monaco-editor-overlaymessage .anchor {\r\n\twidth: 0 !important;\r\n\theight: 0 !important;\r\n\tborder-color: transparent;\r\n\tborder-style: solid;\r\n\tz-index: 1000;\r\n\tborder-width: 8px;\r\n\tposition: absolute;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -94140,8 +94698,86 @@ module.exports = exported;
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(210);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(211);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .lightbulb-glyph,\r\n.monaco-editor .codicon-lightbulb {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\theight: 16px;\r\n\twidth: 20px;\r\n\tpadding-left: 2px;\r\n}\r\n\r\n.monaco-editor .lightbulb-glyph:hover,\r\n.monaco-editor .codicon-lightbulb:hover {\r\n\tcursor: pointer;\r\n\t/* transform: scale(1.3, 1.3); */\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 210 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(211);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .codelens-decoration {\r\n\toverflow: hidden;\r\n\tdisplay: inline-block;\r\n\ttext-overflow: ellipsis;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > span,\r\n.monaco-editor .codelens-decoration > a {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n\twhite-space: nowrap;\r\n\tvertical-align: sub;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > a {\r\n\ttext-decoration: none;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > a:hover {\r\n\ttext-decoration: underline;\r\n\tcursor: pointer;\r\n}\r\n\r\n@keyframes fadein {\r\n\t0% { opacity: 0; visibility: visible;}\r\n\t100% { opacity: 1; }\r\n}\r\n\r\n.monaco-editor .codelens-decoration.fadein {\r\n\tanimation: fadein 0.1s linear;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(213);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(214);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(215);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -94151,7 +94787,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 210 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94191,90 +94827,12 @@ module.exports = function (url, options) {
 };
 
 /***/ }),
-/* 211 */
+/* 215 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "35bb8d560db5205616671eab8c4d0303.ttf");
-
-/***/ }),
-/* 212 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(213);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 213 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n@keyframes codicon-spin {\r\n\t100% {\r\n\t\ttransform:rotate(360deg);\r\n\t}\r\n}\r\n\r\n.codicon-animation-spin {\r\n\tanimation: codicon-spin 1.5s linear infinite;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 214 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(215);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 215 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-action-bar {\r\n\ttext-align: right;\r\n\toverflow: hidden;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-action-bar .actions-container {\r\n\tdisplay: flex;\r\n\tmargin: 0 auto;\r\n\tpadding: 0;\r\n\twidth: 100%;\r\n\tjustify-content: flex-end;\r\n}\r\n\r\n.monaco-action-bar.vertical .actions-container {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-action-bar.reverse .actions-container {\r\n\tflex-direction: row-reverse;\r\n}\r\n\r\n.monaco-action-bar .action-item {\r\n\tcursor: pointer;\r\n\tdisplay: inline-block;\r\n\ttransition: transform 50ms ease;\r\n\tposition: relative;  /* DO NOT REMOVE - this is the key to preventing the ghosting icon bug in Chrome 42 */\r\n}\r\n\r\n.monaco-action-bar .action-item.disabled {\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-action-bar.animated .action-item.active {\r\n\ttransform: scale(1.272019649, 1.272019649); /* 1.272019649 = √φ */\r\n}\r\n\r\n.monaco-action-bar .action-item .icon,\r\n.monaco-action-bar .action-item .codicon {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-action-bar .action-label {\r\n\tfont-size: 11px;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-action-bar .action-item.disabled .action-label,\r\n.monaco-action-bar .action-item.disabled .action-label:hover {\r\n\topacity: 0.4;\r\n}\r\n\r\n/* Vertical actions */\r\n\r\n.monaco-action-bar.vertical {\r\n\ttext-align: left;\r\n}\r\n\r\n.monaco-action-bar.vertical .action-item {\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-action-bar.vertical .action-label.separator {\r\n\tdisplay: block;\r\n\tborder-bottom: 1px solid #bbb;\r\n\tpadding-top: 1px;\r\n\tmargin-left: .8em;\r\n\tmargin-right: .8em;\r\n}\r\n\r\n.monaco-action-bar.animated.vertical .action-item.active {\r\n\ttransform: translate(5px, 0);\r\n}\r\n\r\n.secondary-actions .monaco-action-bar .action-label {\r\n\tmargin-left: 6px;\r\n}\r\n\r\n/* Action Items */\r\n.monaco-action-bar .action-item.select-container {\r\n\toverflow: hidden; /* somehow the dropdown overflows its container, we prevent it here to not push */\r\n\tflex: 1;\r\n\tmax-width: 170px;\r\n\tmin-width: 60px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tmargin-right: 10px;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
 
 /***/ }),
 /* 216 */
@@ -94310,7 +94868,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-menu .monaco-action-bar.vertical {\r\n\tmargin-left: 0;\r\n\toverflow: visible;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .actions-container {\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tpadding: 0;\r\n\ttransform: none;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item.active {\r\n\ttransform: none;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-menu-item {\r\n\tflex: 1 1 auto;\r\n\tdisplay: flex;\r\n\theight: 2em;\r\n\talign-items: center;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label {\r\n\tflex: 1 1 auto;\r\n\ttext-decoration: none;\r\n\tpadding: 0 1em;\r\n\tbackground: none;\r\n\tfont-size: 12px;\r\n\tline-height: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .keybinding,\r\n.monaco-menu .monaco-action-bar.vertical .submenu-indicator {\r\n\tdisplay: inline-block;\r\n\tflex: 2 1 auto;\r\n\tpadding: 0 1em;\r\n\ttext-align: right;\r\n\tfont-size: 12px;\r\n\tline-height: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .submenu-indicator {\r\n\theight: 100%;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00LjUyMDUxIDEyLjM2NDNMOS44Nzc5MyA3TDQuNTIwNTEgMS42MzU3NDJMNS4xMzU3NCAxLjAyMDUwNzhMMTEuMTIyMSA3TDUuMTM1NzQgMTIuOTc5NUw0LjUyMDUxIDEyLjM2NDNaIiBmaWxsPSJibGFjayIvPg0KPC9zdmc+DQo=\") no-repeat 90% 50%/13px 13px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00LjUyMDUxIDEyLjM2NDNMOS44Nzc5MyA3TDQuNTIwNTEgMS42MzU3NDJMNS4xMzU3NCAxLjAyMDUwNzhMMTEuMTIyMSA3TDUuMTM1NzQgMTIuOTc5NUw0LjUyMDUxIDEyLjM2NDNaIiBmaWxsPSJibGFjayIvPg0KPC9zdmc+DQo=\") no-repeat 90% 50%/13px 13px;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item.disabled .keybinding,\r\n.monaco-menu .monaco-action-bar.vertical .action-item.disabled .submenu-indicator {\r\n\topacity: 0.4;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label:not(.separator) {\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tposition: static;\r\n\toverflow: visible;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item .monaco-submenu {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label.separator {\r\n\tpadding: 0.5em 0 0 0;\r\n\tmargin-bottom: 0.5em;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label.separator.text {\r\n\tpadding: 0.7em 1em 0.1em 1em;\r\n\tfont-weight: bold;\r\n\topacity: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label:hover {\r\n\tcolor: inherit;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .menu-item-check {\r\n\tposition: absolute;\r\n\tvisibility: hidden;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuNDMxNSAzLjMyMzJMNS45NjE1MSAxMy4zMjMyTDUuMTcwOCAxMy4yODc0TDEuODIwOCA4LjUxNzRMMi42MzkxNSA3Ljk0MjY4TDUuNjE2OTcgMTIuMTgyN0wxMy42Njg0IDIuNjc2ODhMMTQuNDMxNSAzLjMyMzJaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\") no-repeat 50% 56%/15px 15px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuNDMxNSAzLjMyMzJMNS45NjE1MSAxMy4zMjMyTDUuMTcwOCAxMy4yODc0TDEuODIwOCA4LjUxNzRMMi42MzkxNSA3Ljk0MjY4TDUuNjE2OTcgMTIuMTgyN0wxMy42Njg0IDIuNjc2ODhMMTQuNDMxNSAzLjMyMzJaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\") no-repeat 50% 56%/15px 15px;\r\n\twidth: 1em;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-menu-item.checked .menu-item-check {\r\n\tvisibility: visible;\r\n}\r\n\r\n/* Context Menu */\r\n\r\n.context-view.monaco-menu-container {\r\n\toutline: 0;\r\n\tborder: none;\r\n\tanimation: fadeIn 0.083s linear;\r\n}\r\n\r\n.context-view.monaco-menu-container :focus,\r\n.context-view.monaco-menu-container .monaco-action-bar.vertical:focus,\r\n.context-view.monaco-menu-container .monaco-action-bar.vertical :focus {\r\n\toutline: 0;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tborder: thin solid transparent; /* prevents jumping behaviour on hover or focus */\r\n}\r\n\r\n\r\n/* High Contrast Theming */\r\n.hc-black .context-view.monaco-menu-container {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-menu .monaco-action-bar.vertical .action-item.focused {\r\n\tbackground: none;\r\n}\r\n\r\n/* Menubar styles */\r\n\r\n.menubar {\r\n\tdisplay: flex;\r\n\tflex-shrink: 1;\r\n\tbox-sizing: border-box;\r\n\theight: 30px;\r\n\toverflow: hidden;\r\n\tflex-wrap: wrap;\r\n}\r\n\r\n.fullscreen .menubar:not(.compact) {\r\n\tmargin: 0px;\r\n\tpadding: 0px 5px;\r\n}\r\n\r\n.menubar > .menubar-menu-button {\r\n\talign-items: center;\r\n\tbox-sizing: border-box;\r\n\tpadding: 0px 8px;\r\n\tcursor: default;\r\n\t-webkit-app-region: no-drag;\r\n\tzoom: 1;\r\n\twhite-space: nowrap;\r\n\toutline: 0;\r\n}\r\n\r\n.menubar.compact {\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.menubar.compact > .menubar-menu-button {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tpadding: 0px;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder {\r\n\tposition: absolute;\r\n\tleft: 0px;\r\n\topacity: 1;\r\n\tz-index: 2000;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder.monaco-menu-container {\r\n\toutline: 0;\r\n\tborder: none;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder.monaco-menu-container :focus {\r\n\toutline: 0;\r\n}\r\n\r\n.menubar .toolbar-toggle-more {\r\n\tbackground-position: center;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 14px;\r\n\twidth: 20px;\r\n\theight: 100%;\r\n}\r\n\r\n.menubar.compact .toolbar-toggle-more {\r\n\tposition: absolute;\r\n\tleft: 0px;\r\n\ttop: 0px;\r\n\tbackground-position: center;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 16px;\r\n\tcursor: pointer;\r\n\twidth: 100%;\r\n}\r\n\r\n.menubar .toolbar-toggle-more {\r\n\tdisplay: inline-block;\r\n\tpadding: 0;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00IDhDNCA4LjE5Nzc4IDMuOTQxMzUgOC4zOTExMiAzLjgzMTQ3IDguNTU1NTdDMy43MjE1OSA4LjcyMDAyIDMuNTY1NDEgOC44NDgxOSAzLjM4MjY4IDguOTIzODhDMy4xOTk5NiA4Ljk5OTU3IDIuOTk4ODkgOS4wMTkzNyAyLjgwNDkxIDguOTgwNzlDMi42MTA5MyA4Ljk0MjIgMi40MzI3NSA4Ljg0Njk2IDIuMjkyODkgOC43MDcxMUMyLjE1MzA0IDguNTY3MjUgMi4wNTc4IDguMzg5MDcgMi4wMTkyMiA4LjE5NTA5QzEuOTgwNjMgOC4wMDExMSAyLjAwMDQzIDcuODAwMDQgMi4wNzYxMiA3LjYxNzMyQzIuMTUxODEgNy40MzQ1OSAyLjI3OTk4IDcuMjc4NDEgMi40NDQ0MyA3LjE2ODUzQzIuNjA4ODggNy4wNTg2NSAyLjgwMjIyIDcgMyA3QzMuMjY1MjIgNyAzLjUxOTU3IDcuMTA1MzYgMy43MDcxMSA3LjI5Mjg5QzMuODk0NjQgNy40ODA0MyA0IDcuNzM0NzggNCA4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPHBhdGggZD0iTTkgOEM5IDguMTk3NzggOC45NDEzNSA4LjM5MTEyIDguODMxNDcgOC41NTU1N0M4LjcyMTU5IDguNzIwMDIgOC41NjU0MSA4Ljg0ODE5IDguMzgyNjggOC45MjM4OEM4LjE5OTk2IDguOTk5NTcgNy45OTg4OSA5LjAxOTM3IDcuODA0OTEgOC45ODA3OUM3LjYxMDkzIDguOTQyMiA3LjQzMjc1IDguODQ2OTYgNy4yOTI4OSA4LjcwNzExQzcuMTUzMDQgOC41NjcyNSA3LjA1NzggOC4zODkwNyA3LjAxOTIyIDguMTk1MDlDNi45ODA2MyA4LjAwMTExIDcuMDAwNDMgNy44MDAwNCA3LjA3NjEyIDcuNjE3MzJDNy4xNTE4MSA3LjQzNDU5IDcuMjc5OTggNy4yNzg0MSA3LjQ0NDQzIDcuMTY4NTNDNy42MDg4OCA3LjA1ODY1IDcuODAyMjIgNyA4IDdDOC4yNjUyMiA3IDguNTE5NTcgNy4xMDUzNiA4LjcwNzExIDcuMjkyODlDOC44OTQ2NCA3LjQ4MDQzIDkgNy43MzQ3OCA5IDhaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8cGF0aCBkPSJNMTQgOEMxNCA4LjE5Nzc4IDEzLjk0MTQgOC4zOTExMiAxMy44MzE1IDguNTU1NTdDMTMuNzIxNiA4LjcyMDAyIDEzLjU2NTQgOC44NDgxOSAxMy4zODI3IDguOTIzODhDMTMuMiA4Ljk5OTU3IDEyLjk5ODkgOS4wMTkzNyAxMi44MDQ5IDguOTgwNzlDMTIuNjEwOSA4Ljk0MjIgMTIuNDMyNyA4Ljg0Njk2IDEyLjI5MjkgOC43MDcxMUMxMi4xNTMgOC41NjcyNSAxMi4wNTc4IDguMzg5MDcgMTIuMDE5MiA4LjE5NTA5QzExLjk4MDYgOC4wMDExMSAxMi4wMDA0IDcuODAwMDQgMTIuMDc2MSA3LjYxNzMyQzEyLjE1MTggNy40MzQ1OSAxMi4yOCA3LjI3ODQxIDEyLjQ0NDQgNy4xNjg1M0MxMi42MDg5IDcuMDU4NjUgMTIuODAyMiA3IDEzIDdDMTMuMjY1MiA3IDEzLjUxOTYgNy4xMDUzNiAxMy43MDcxIDcuMjkyODlDMTMuODk0NiA3LjQ4MDQzIDE0IDcuNzM0NzggMTQgOFoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") no-repeat 50% 55%/14px 14px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00IDhDNCA4LjE5Nzc4IDMuOTQxMzUgOC4zOTExMiAzLjgzMTQ3IDguNTU1NTdDMy43MjE1OSA4LjcyMDAyIDMuNTY1NDEgOC44NDgxOSAzLjM4MjY4IDguOTIzODhDMy4xOTk5NiA4Ljk5OTU3IDIuOTk4ODkgOS4wMTkzNyAyLjgwNDkxIDguOTgwNzlDMi42MTA5MyA4Ljk0MjIgMi40MzI3NSA4Ljg0Njk2IDIuMjkyODkgOC43MDcxMUMyLjE1MzA0IDguNTY3MjUgMi4wNTc4IDguMzg5MDcgMi4wMTkyMiA4LjE5NTA5QzEuOTgwNjMgOC4wMDExMSAyLjAwMDQzIDcuODAwMDQgMi4wNzYxMiA3LjYxNzMyQzIuMTUxODEgNy40MzQ1OSAyLjI3OTk4IDcuMjc4NDEgMi40NDQ0MyA3LjE2ODUzQzIuNjA4ODggNy4wNTg2NSAyLjgwMjIyIDcgMyA3QzMuMjY1MjIgNyAzLjUxOTU3IDcuMTA1MzYgMy43MDcxMSA3LjI5Mjg5QzMuODk0NjQgNy40ODA0MyA0IDcuNzM0NzggNCA4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPHBhdGggZD0iTTkgOEM5IDguMTk3NzggOC45NDEzNSA4LjM5MTEyIDguODMxNDcgOC41NTU1N0M4LjcyMTU5IDguNzIwMDIgOC41NjU0MSA4Ljg0ODE5IDguMzgyNjggOC45MjM4OEM4LjE5OTk2IDguOTk5NTcgNy45OTg4OSA5LjAxOTM3IDcuODA0OTEgOC45ODA3OUM3LjYxMDkzIDguOTQyMiA3LjQzMjc1IDguODQ2OTYgNy4yOTI4OSA4LjcwNzExQzcuMTUzMDQgOC41NjcyNSA3LjA1NzggOC4zODkwNyA3LjAxOTIyIDguMTk1MDlDNi45ODA2MyA4LjAwMTExIDcuMDAwNDMgNy44MDAwNCA3LjA3NjEyIDcuNjE3MzJDNy4xNTE4MSA3LjQzNDU5IDcuMjc5OTggNy4yNzg0MSA3LjQ0NDQzIDcuMTY4NTNDNy42MDg4OCA3LjA1ODY1IDcuODAyMjIgNyA4IDdDOC4yNjUyMiA3IDguNTE5NTcgNy4xMDUzNiA4LjcwNzExIDcuMjkyODlDOC44OTQ2NCA3LjQ4MDQzIDkgNy43MzQ3OCA5IDhaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8cGF0aCBkPSJNMTQgOEMxNCA4LjE5Nzc4IDEzLjk0MTQgOC4zOTExMiAxMy44MzE1IDguNTU1NTdDMTMuNzIxNiA4LjcyMDAyIDEzLjU2NTQgOC44NDgxOSAxMy4zODI3IDguOTIzODhDMTMuMiA4Ljk5OTU3IDEyLjk5ODkgOS4wMTkzNyAxMi44MDQ5IDguOTgwNzlDMTIuNjEwOSA4Ljk0MjIgMTIuNDMyNyA4Ljg0Njk2IDEyLjI5MjkgOC43MDcxMUMxMi4xNTMgOC41NjcyNSAxMi4wNTc4IDguMzg5MDcgMTIuMDE5MiA4LjE5NTA5QzExLjk4MDYgOC4wMDExMSAxMi4wMDA0IDcuODAwMDQgMTIuMDc2MSA3LjYxNzMyQzEyLjE1MTggNy40MzQ1OSAxMi4yOCA3LjI3ODQxIDEyLjQ0NDQgNy4xNjg1M0MxMi42MDg5IDcuMDU4NjUgMTIuODAyMiA3IDEzIDdDMTMuMjY1MiA3IDEzLjUxOTYgNy4xMDUzNiAxMy43MDcxIDcuMjkyODlDMTMuODk0NiA3LjQ4MDQzIDE0IDcuNzM0NzggMTQgOFoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") no-repeat 50% 55%/14px 14px;\r\n}\r\n\r\n.menubar.compact .toolbar-toggle-more {\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOCA1LjYyNUgwVjQuNUgxOFY1LjYyNVpNMTggMTQuNjI1SDBWMTMuNUgxOFYxNC42MjVaTTE4IDEwLjExNjJIMFY5SDE4VjEwLjExNjJaIiBmaWxsPSJ3aGl0ZSIvPg0KPC9zdmc+DQo=\") no-repeat 50% 55%/16px 16px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOCA1LjYyNUgwVjQuNUgxOFY1LjYyNVpNMTggMTQuNjI1SDBWMTMuNUgxOFYxNC42MjVaTTE4IDEwLjExNjJIMFY5SDE4VjEwLjExNjJaIiBmaWxsPSJ3aGl0ZSIvPg0KPC9zdmc+DQo=\") no-repeat 50% 55%/16px 16px;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n@keyframes codicon-spin {\r\n\t100% {\r\n\t\ttransform:rotate(360deg);\r\n\t}\r\n}\r\n\r\n.codicon-animation-spin {\r\n\tanimation: codicon-spin 1.5s linear infinite;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -94349,13 +94907,91 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Arrows */\r\n.monaco-scrollable-element > .scrollbar > .up-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiIGZpbGw9IiM0MjQyNDIiLz48L3N2Zz4=\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .down-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCA1LjQ5MDQ1OTkxODk3NTgzLDUuODExNTAwMDcyNDc5MjQ4KSIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiLz48L3N2Zz4=\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .left-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDUuNDkwNDU5OTE4OTc1ODMxLDUuNDMxMzgyMTc5MjYwMjU0KSIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNDgwNDYsOC41ODEzOGwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .right-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoOTAgNS42MTcxNjUwODg2NTM1NjQ1LDUuNTU4MDg5NzMzMTIzNzgpICIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNjA3MTcsOC43MDgwOWwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n\tcursor: pointer;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element > .scrollbar > .up-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .up-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiIGZpbGw9IiNFOEU4RTgiLz48L3N2Zz4=\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .down-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .down-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCA1LjQ5MDQ1OTkxODk3NTgzLDUuODExNTAwMDcyNDc5MjQ4KSIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiLz48L3N2Zz4=\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .left-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .left-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDUuNDkwNDU5OTE4OTc1ODMxLDUuNDMxMzgyMTc5MjYwMjU0KSIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNDgwNDYsOC41ODEzOGwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .right-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .right-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoOTAgNS42MTcxNjUwODg2NTM1NjQ1LDUuNTU4MDg5NzMzMTIzNzgpICIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNjA3MTcsOC43MDgwOWwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n}\r\n\r\n.monaco-scrollable-element > .visible {\r\n\topacity: 1;\r\n\r\n\t/* Background rule added for IE9 - to allow clicks on dom node */\r\n\tbackground:rgba(0,0,0,0);\r\n\r\n\ttransition: opacity 100ms linear;\r\n}\r\n.monaco-scrollable-element > .invisible {\r\n\topacity: 0;\r\n\tpointer-events: none;\r\n}\r\n.monaco-scrollable-element > .invisible.fade {\r\n\ttransition: opacity 800ms linear;\r\n}\r\n\r\n/* Scrollable Content Inset Shadow */\r\n.monaco-scrollable-element > .shadow {\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n}\r\n.monaco-scrollable-element > .shadow.top {\r\n\tdisplay: block;\r\n\ttop: 0;\r\n\tleft: 3px;\r\n\theight: 3px;\r\n\twidth: 100%;\r\n\tbox-shadow: #DDD 0 6px 6px -6px inset;\r\n}\r\n.monaco-scrollable-element > .shadow.left {\r\n\tdisplay: block;\r\n\ttop: 3px;\r\n\tleft: 0;\r\n\theight: 100%;\r\n\twidth: 3px;\r\n\tbox-shadow: #DDD 6px 0 6px -6px inset;\r\n}\r\n.monaco-scrollable-element > .shadow.top-left-corner {\r\n\tdisplay: block;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 3px;\r\n\twidth: 3px;\r\n}\r\n.monaco-scrollable-element > .shadow.top.left {\r\n\tbox-shadow: #DDD 6px 6px 6px -6px inset;\r\n}\r\n\r\n/* ---------- Default Style ---------- */\r\n\r\n.vs .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(100, 100, 100, .4);\r\n}\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(121, 121, 121, .4);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(111, 195, 223, .6);\r\n}\r\n\r\n.monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\tbackground: rgba(100, 100, 100, .7);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\tbackground: rgba(111, 195, 223, .8);\r\n}\r\n\r\n.monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(0, 0, 0, .6);\r\n}\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(191, 191, 191, .4);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(111, 195, 223, 1);\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.top {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.left {\r\n\tbox-shadow: #000 6px 0 6px -6px inset;\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.top.left {\r\n\tbox-shadow: #000 6px 6px 6px -6px inset;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.top {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.left {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.top.left {\r\n\tbox-shadow: none;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-action-bar {\r\n\ttext-align: right;\r\n\toverflow: hidden;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-action-bar .actions-container {\r\n\tdisplay: flex;\r\n\tmargin: 0 auto;\r\n\tpadding: 0;\r\n\twidth: 100%;\r\n\tjustify-content: flex-end;\r\n}\r\n\r\n.monaco-action-bar.vertical .actions-container {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-action-bar.reverse .actions-container {\r\n\tflex-direction: row-reverse;\r\n}\r\n\r\n.monaco-action-bar .action-item {\r\n\tcursor: pointer;\r\n\tdisplay: inline-block;\r\n\ttransition: transform 50ms ease;\r\n\tposition: relative;  /* DO NOT REMOVE - this is the key to preventing the ghosting icon bug in Chrome 42 */\r\n}\r\n\r\n.monaco-action-bar .action-item.disabled {\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-action-bar.animated .action-item.active {\r\n\ttransform: scale(1.272019649, 1.272019649); /* 1.272019649 = √φ */\r\n}\r\n\r\n.monaco-action-bar .action-item .icon,\r\n.monaco-action-bar .action-item .codicon {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-action-bar .action-label {\r\n\tfont-size: 11px;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-action-bar .action-item.disabled .action-label,\r\n.monaco-action-bar .action-item.disabled .action-label:hover {\r\n\topacity: 0.4;\r\n}\r\n\r\n/* Vertical actions */\r\n\r\n.monaco-action-bar.vertical {\r\n\ttext-align: left;\r\n}\r\n\r\n.monaco-action-bar.vertical .action-item {\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-action-bar.vertical .action-label.separator {\r\n\tdisplay: block;\r\n\tborder-bottom: 1px solid #bbb;\r\n\tpadding-top: 1px;\r\n\tmargin-left: .8em;\r\n\tmargin-right: .8em;\r\n}\r\n\r\n.monaco-action-bar.animated.vertical .action-item.active {\r\n\ttransform: translate(5px, 0);\r\n}\r\n\r\n.secondary-actions .monaco-action-bar .action-label {\r\n\tmargin-left: 6px;\r\n}\r\n\r\n/* Action Items */\r\n.monaco-action-bar .action-item.select-container {\r\n\toverflow: hidden; /* somehow the dropdown overflows its container, we prevent it here to not push */\r\n\tflex: 1;\r\n\tmax-width: 170px;\r\n\tmin-width: 60px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tmargin-right: 10px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 /* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(221);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-menu .monaco-action-bar.vertical {\r\n\tmargin-left: 0;\r\n\toverflow: visible;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .actions-container {\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tpadding: 0;\r\n\ttransform: none;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item.active {\r\n\ttransform: none;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-menu-item {\r\n\tflex: 1 1 auto;\r\n\tdisplay: flex;\r\n\theight: 2em;\r\n\talign-items: center;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label {\r\n\tflex: 1 1 auto;\r\n\ttext-decoration: none;\r\n\tpadding: 0 1em;\r\n\tbackground: none;\r\n\tfont-size: 12px;\r\n\tline-height: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .keybinding,\r\n.monaco-menu .monaco-action-bar.vertical .submenu-indicator {\r\n\tdisplay: inline-block;\r\n\tflex: 2 1 auto;\r\n\tpadding: 0 1em;\r\n\ttext-align: right;\r\n\tfont-size: 12px;\r\n\tline-height: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .submenu-indicator {\r\n\theight: 100%;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00LjUyMDUxIDEyLjM2NDNMOS44Nzc5MyA3TDQuNTIwNTEgMS42MzU3NDJMNS4xMzU3NCAxLjAyMDUwNzhMMTEuMTIyMSA3TDUuMTM1NzQgMTIuOTc5NUw0LjUyMDUxIDEyLjM2NDNaIiBmaWxsPSJibGFjayIvPg0KPC9zdmc+DQo=\") no-repeat 90% 50%/13px 13px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00LjUyMDUxIDEyLjM2NDNMOS44Nzc5MyA3TDQuNTIwNTEgMS42MzU3NDJMNS4xMzU3NCAxLjAyMDUwNzhMMTEuMTIyMSA3TDUuMTM1NzQgMTIuOTc5NUw0LjUyMDUxIDEyLjM2NDNaIiBmaWxsPSJibGFjayIvPg0KPC9zdmc+DQo=\") no-repeat 90% 50%/13px 13px;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item.disabled .keybinding,\r\n.monaco-menu .monaco-action-bar.vertical .action-item.disabled .submenu-indicator {\r\n\topacity: 0.4;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label:not(.separator) {\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tposition: static;\r\n\toverflow: visible;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item .monaco-submenu {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label.separator {\r\n\tpadding: 0.5em 0 0 0;\r\n\tmargin-bottom: 0.5em;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label.separator.text {\r\n\tpadding: 0.7em 1em 0.1em 1em;\r\n\tfont-weight: bold;\r\n\topacity: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label:hover {\r\n\tcolor: inherit;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .menu-item-check {\r\n\tposition: absolute;\r\n\tvisibility: hidden;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuNDMxNSAzLjMyMzJMNS45NjE1MSAxMy4zMjMyTDUuMTcwOCAxMy4yODc0TDEuODIwOCA4LjUxNzRMMi42MzkxNSA3Ljk0MjY4TDUuNjE2OTcgMTIuMTgyN0wxMy42Njg0IDIuNjc2ODhMMTQuNDMxNSAzLjMyMzJaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\") no-repeat 50% 56%/15px 15px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuNDMxNSAzLjMyMzJMNS45NjE1MSAxMy4zMjMyTDUuMTcwOCAxMy4yODc0TDEuODIwOCA4LjUxNzRMMi42MzkxNSA3Ljk0MjY4TDUuNjE2OTcgMTIuMTgyN0wxMy42Njg0IDIuNjc2ODhMMTQuNDMxNSAzLjMyMzJaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\") no-repeat 50% 56%/15px 15px;\r\n\twidth: 1em;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-menu-item.checked .menu-item-check {\r\n\tvisibility: visible;\r\n}\r\n\r\n/* Context Menu */\r\n\r\n.context-view.monaco-menu-container {\r\n\toutline: 0;\r\n\tborder: none;\r\n\tanimation: fadeIn 0.083s linear;\r\n}\r\n\r\n.context-view.monaco-menu-container :focus,\r\n.context-view.monaco-menu-container .monaco-action-bar.vertical:focus,\r\n.context-view.monaco-menu-container .monaco-action-bar.vertical :focus {\r\n\toutline: 0;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tborder: thin solid transparent; /* prevents jumping behaviour on hover or focus */\r\n}\r\n\r\n\r\n/* High Contrast Theming */\r\n.hc-black .context-view.monaco-menu-container {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-menu .monaco-action-bar.vertical .action-item.focused {\r\n\tbackground: none;\r\n}\r\n\r\n/* Menubar styles */\r\n\r\n.menubar {\r\n\tdisplay: flex;\r\n\tflex-shrink: 1;\r\n\tbox-sizing: border-box;\r\n\theight: 30px;\r\n\toverflow: hidden;\r\n\tflex-wrap: wrap;\r\n}\r\n\r\n.fullscreen .menubar:not(.compact) {\r\n\tmargin: 0px;\r\n\tpadding: 0px 5px;\r\n}\r\n\r\n.menubar > .menubar-menu-button {\r\n\talign-items: center;\r\n\tbox-sizing: border-box;\r\n\tpadding: 0px 8px;\r\n\tcursor: default;\r\n\t-webkit-app-region: no-drag;\r\n\tzoom: 1;\r\n\twhite-space: nowrap;\r\n\toutline: 0;\r\n}\r\n\r\n.menubar.compact {\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.menubar.compact > .menubar-menu-button {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tpadding: 0px;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder {\r\n\tposition: absolute;\r\n\tleft: 0px;\r\n\topacity: 1;\r\n\tz-index: 2000;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder.monaco-menu-container {\r\n\toutline: 0;\r\n\tborder: none;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder.monaco-menu-container :focus {\r\n\toutline: 0;\r\n}\r\n\r\n.menubar .toolbar-toggle-more {\r\n\tbackground-position: center;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 14px;\r\n\twidth: 20px;\r\n\theight: 100%;\r\n}\r\n\r\n.menubar.compact .toolbar-toggle-more {\r\n\tposition: absolute;\r\n\tleft: 0px;\r\n\ttop: 0px;\r\n\tbackground-position: center;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 16px;\r\n\tcursor: pointer;\r\n\twidth: 100%;\r\n}\r\n\r\n.menubar .toolbar-toggle-more {\r\n\tdisplay: inline-block;\r\n\tpadding: 0;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00IDhDNCA4LjE5Nzc4IDMuOTQxMzUgOC4zOTExMiAzLjgzMTQ3IDguNTU1NTdDMy43MjE1OSA4LjcyMDAyIDMuNTY1NDEgOC44NDgxOSAzLjM4MjY4IDguOTIzODhDMy4xOTk5NiA4Ljk5OTU3IDIuOTk4ODkgOS4wMTkzNyAyLjgwNDkxIDguOTgwNzlDMi42MTA5MyA4Ljk0MjIgMi40MzI3NSA4Ljg0Njk2IDIuMjkyODkgOC43MDcxMUMyLjE1MzA0IDguNTY3MjUgMi4wNTc4IDguMzg5MDcgMi4wMTkyMiA4LjE5NTA5QzEuOTgwNjMgOC4wMDExMSAyLjAwMDQzIDcuODAwMDQgMi4wNzYxMiA3LjYxNzMyQzIuMTUxODEgNy40MzQ1OSAyLjI3OTk4IDcuMjc4NDEgMi40NDQ0MyA3LjE2ODUzQzIuNjA4ODggNy4wNTg2NSAyLjgwMjIyIDcgMyA3QzMuMjY1MjIgNyAzLjUxOTU3IDcuMTA1MzYgMy43MDcxMSA3LjI5Mjg5QzMuODk0NjQgNy40ODA0MyA0IDcuNzM0NzggNCA4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPHBhdGggZD0iTTkgOEM5IDguMTk3NzggOC45NDEzNSA4LjM5MTEyIDguODMxNDcgOC41NTU1N0M4LjcyMTU5IDguNzIwMDIgOC41NjU0MSA4Ljg0ODE5IDguMzgyNjggOC45MjM4OEM4LjE5OTk2IDguOTk5NTcgNy45OTg4OSA5LjAxOTM3IDcuODA0OTEgOC45ODA3OUM3LjYxMDkzIDguOTQyMiA3LjQzMjc1IDguODQ2OTYgNy4yOTI4OSA4LjcwNzExQzcuMTUzMDQgOC41NjcyNSA3LjA1NzggOC4zODkwNyA3LjAxOTIyIDguMTk1MDlDNi45ODA2MyA4LjAwMTExIDcuMDAwNDMgNy44MDAwNCA3LjA3NjEyIDcuNjE3MzJDNy4xNTE4MSA3LjQzNDU5IDcuMjc5OTggNy4yNzg0MSA3LjQ0NDQzIDcuMTY4NTNDNy42MDg4OCA3LjA1ODY1IDcuODAyMjIgNyA4IDdDOC4yNjUyMiA3IDguNTE5NTcgNy4xMDUzNiA4LjcwNzExIDcuMjkyODlDOC44OTQ2NCA3LjQ4MDQzIDkgNy43MzQ3OCA5IDhaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8cGF0aCBkPSJNMTQgOEMxNCA4LjE5Nzc4IDEzLjk0MTQgOC4zOTExMiAxMy44MzE1IDguNTU1NTdDMTMuNzIxNiA4LjcyMDAyIDEzLjU2NTQgOC44NDgxOSAxMy4zODI3IDguOTIzODhDMTMuMiA4Ljk5OTU3IDEyLjk5ODkgOS4wMTkzNyAxMi44MDQ5IDguOTgwNzlDMTIuNjEwOSA4Ljk0MjIgMTIuNDMyNyA4Ljg0Njk2IDEyLjI5MjkgOC43MDcxMUMxMi4xNTMgOC41NjcyNSAxMi4wNTc4IDguMzg5MDcgMTIuMDE5MiA4LjE5NTA5QzExLjk4MDYgOC4wMDExMSAxMi4wMDA0IDcuODAwMDQgMTIuMDc2MSA3LjYxNzMyQzEyLjE1MTggNy40MzQ1OSAxMi4yOCA3LjI3ODQxIDEyLjQ0NDQgNy4xNjg1M0MxMi42MDg5IDcuMDU4NjUgMTIuODAyMiA3IDEzIDdDMTMuMjY1MiA3IDEzLjUxOTYgNy4xMDUzNiAxMy43MDcxIDcuMjkyODlDMTMuODk0NiA3LjQ4MDQzIDE0IDcuNzM0NzggMTQgOFoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") no-repeat 50% 55%/14px 14px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00IDhDNCA4LjE5Nzc4IDMuOTQxMzUgOC4zOTExMiAzLjgzMTQ3IDguNTU1NTdDMy43MjE1OSA4LjcyMDAyIDMuNTY1NDEgOC44NDgxOSAzLjM4MjY4IDguOTIzODhDMy4xOTk5NiA4Ljk5OTU3IDIuOTk4ODkgOS4wMTkzNyAyLjgwNDkxIDguOTgwNzlDMi42MTA5MyA4Ljk0MjIgMi40MzI3NSA4Ljg0Njk2IDIuMjkyODkgOC43MDcxMUMyLjE1MzA0IDguNTY3MjUgMi4wNTc4IDguMzg5MDcgMi4wMTkyMiA4LjE5NTA5QzEuOTgwNjMgOC4wMDExMSAyLjAwMDQzIDcuODAwMDQgMi4wNzYxMiA3LjYxNzMyQzIuMTUxODEgNy40MzQ1OSAyLjI3OTk4IDcuMjc4NDEgMi40NDQ0MyA3LjE2ODUzQzIuNjA4ODggNy4wNTg2NSAyLjgwMjIyIDcgMyA3QzMuMjY1MjIgNyAzLjUxOTU3IDcuMTA1MzYgMy43MDcxMSA3LjI5Mjg5QzMuODk0NjQgNy40ODA0MyA0IDcuNzM0NzggNCA4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPHBhdGggZD0iTTkgOEM5IDguMTk3NzggOC45NDEzNSA4LjM5MTEyIDguODMxNDcgOC41NTU1N0M4LjcyMTU5IDguNzIwMDIgOC41NjU0MSA4Ljg0ODE5IDguMzgyNjggOC45MjM4OEM4LjE5OTk2IDguOTk5NTcgNy45OTg4OSA5LjAxOTM3IDcuODA0OTEgOC45ODA3OUM3LjYxMDkzIDguOTQyMiA3LjQzMjc1IDguODQ2OTYgNy4yOTI4OSA4LjcwNzExQzcuMTUzMDQgOC41NjcyNSA3LjA1NzggOC4zODkwNyA3LjAxOTIyIDguMTk1MDlDNi45ODA2MyA4LjAwMTExIDcuMDAwNDMgNy44MDAwNCA3LjA3NjEyIDcuNjE3MzJDNy4xNTE4MSA3LjQzNDU5IDcuMjc5OTggNy4yNzg0MSA3LjQ0NDQzIDcuMTY4NTNDNy42MDg4OCA3LjA1ODY1IDcuODAyMjIgNyA4IDdDOC4yNjUyMiA3IDguNTE5NTcgNy4xMDUzNiA4LjcwNzExIDcuMjkyODlDOC44OTQ2NCA3LjQ4MDQzIDkgNy43MzQ3OCA5IDhaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8cGF0aCBkPSJNMTQgOEMxNCA4LjE5Nzc4IDEzLjk0MTQgOC4zOTExMiAxMy44MzE1IDguNTU1NTdDMTMuNzIxNiA4LjcyMDAyIDEzLjU2NTQgOC44NDgxOSAxMy4zODI3IDguOTIzODhDMTMuMiA4Ljk5OTU3IDEyLjk5ODkgOS4wMTkzNyAxMi44MDQ5IDguOTgwNzlDMTIuNjEwOSA4Ljk0MjIgMTIuNDMyNyA4Ljg0Njk2IDEyLjI5MjkgOC43MDcxMUMxMi4xNTMgOC41NjcyNSAxMi4wNTc4IDguMzg5MDcgMTIuMDE5MiA4LjE5NTA5QzExLjk4MDYgOC4wMDExMSAxMi4wMDA0IDcuODAwMDQgMTIuMDc2MSA3LjYxNzMyQzEyLjE1MTggNy40MzQ1OSAxMi4yOCA3LjI3ODQxIDEyLjQ0NDQgNy4xNjg1M0MxMi42MDg5IDcuMDU4NjUgMTIuODAyMiA3IDEzIDdDMTMuMjY1MiA3IDEzLjUxOTYgNy4xMDUzNiAxMy43MDcxIDcuMjkyODlDMTMuODk0NiA3LjQ4MDQzIDE0IDcuNzM0NzggMTQgOFoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") no-repeat 50% 55%/14px 14px;\r\n}\r\n\r\n.menubar.compact .toolbar-toggle-more {\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOCA1LjYyNUgwVjQuNUgxOFY1LjYyNVpNMTggMTQuNjI1SDBWMTMuNUgxOFYxNC42MjVaTTE4IDEwLjExNjJIMFY5SDE4VjEwLjExNjJaIiBmaWxsPSJ3aGl0ZSIvPg0KPC9zdmc+DQo=\") no-repeat 50% 55%/16px 16px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOCA1LjYyNUgwVjQuNUgxOFY1LjYyNVpNMTggMTQuNjI1SDBWMTMuNUgxOFYxNC42MjVaTTE4IDEwLjExNjJIMFY5SDE4VjEwLjExNjJaIiBmaWxsPSJ3aGl0ZSIvPg0KPC9zdmc+DQo=\") no-repeat 50% 55%/16px 16px;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(223);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Arrows */\r\n.monaco-scrollable-element > .scrollbar > .up-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiIGZpbGw9IiM0MjQyNDIiLz48L3N2Zz4=\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .down-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCA1LjQ5MDQ1OTkxODk3NTgzLDUuODExNTAwMDcyNDc5MjQ4KSIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiLz48L3N2Zz4=\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .left-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDUuNDkwNDU5OTE4OTc1ODMxLDUuNDMxMzgyMTc5MjYwMjU0KSIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNDgwNDYsOC41ODEzOGwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .right-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoOTAgNS42MTcxNjUwODg2NTM1NjQ1LDUuNTU4MDg5NzMzMTIzNzgpICIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNjA3MTcsOC43MDgwOWwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n\tcursor: pointer;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element > .scrollbar > .up-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .up-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiIGZpbGw9IiNFOEU4RTgiLz48L3N2Zz4=\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .down-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .down-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCA1LjQ5MDQ1OTkxODk3NTgzLDUuODExNTAwMDcyNDc5MjQ4KSIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiLz48L3N2Zz4=\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .left-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .left-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDUuNDkwNDU5OTE4OTc1ODMxLDUuNDMxMzgyMTc5MjYwMjU0KSIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNDgwNDYsOC41ODEzOGwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .right-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .right-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoOTAgNS42MTcxNjUwODg2NTM1NjQ1LDUuNTU4MDg5NzMzMTIzNzgpICIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNjA3MTcsOC43MDgwOWwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n}\r\n\r\n.monaco-scrollable-element > .visible {\r\n\topacity: 1;\r\n\r\n\t/* Background rule added for IE9 - to allow clicks on dom node */\r\n\tbackground:rgba(0,0,0,0);\r\n\r\n\ttransition: opacity 100ms linear;\r\n}\r\n.monaco-scrollable-element > .invisible {\r\n\topacity: 0;\r\n\tpointer-events: none;\r\n}\r\n.monaco-scrollable-element > .invisible.fade {\r\n\ttransition: opacity 800ms linear;\r\n}\r\n\r\n/* Scrollable Content Inset Shadow */\r\n.monaco-scrollable-element > .shadow {\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n}\r\n.monaco-scrollable-element > .shadow.top {\r\n\tdisplay: block;\r\n\ttop: 0;\r\n\tleft: 3px;\r\n\theight: 3px;\r\n\twidth: 100%;\r\n\tbox-shadow: #DDD 0 6px 6px -6px inset;\r\n}\r\n.monaco-scrollable-element > .shadow.left {\r\n\tdisplay: block;\r\n\ttop: 3px;\r\n\tleft: 0;\r\n\theight: 100%;\r\n\twidth: 3px;\r\n\tbox-shadow: #DDD 6px 0 6px -6px inset;\r\n}\r\n.monaco-scrollable-element > .shadow.top-left-corner {\r\n\tdisplay: block;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 3px;\r\n\twidth: 3px;\r\n}\r\n.monaco-scrollable-element > .shadow.top.left {\r\n\tbox-shadow: #DDD 6px 6px 6px -6px inset;\r\n}\r\n\r\n/* ---------- Default Style ---------- */\r\n\r\n.vs .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(100, 100, 100, .4);\r\n}\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(121, 121, 121, .4);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(111, 195, 223, .6);\r\n}\r\n\r\n.monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\tbackground: rgba(100, 100, 100, .7);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\tbackground: rgba(111, 195, 223, .8);\r\n}\r\n\r\n.monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(0, 0, 0, .6);\r\n}\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(191, 191, 191, .4);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(111, 195, 223, 1);\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.top {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.left {\r\n\tbox-shadow: #000 6px 0 6px -6px inset;\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.top.left {\r\n\tbox-shadow: #000 6px 6px 6px -6px inset;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.top {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.left {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.top.left {\r\n\tbox-shadow: none;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 224 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94516,84 +95152,6 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_2__[/* registerEdit
 
 
 /***/ }),
-/* 221 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(222);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 222 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor.vs .dnd-target {\r\n\tborder-right: 2px dotted black;\r\n\tcolor: white; /* opposite of black */\r\n}\r\n.monaco-editor.vs-dark .dnd-target {\r\n\tborder-right: 2px dotted #AEAFAD;\r\n\tcolor: #51504f; /* opposite of #AEAFAD */\r\n}\r\n.monaco-editor.hc-black .dnd-target {\r\n\tborder-right: 2px dotted #fff;\r\n\tcolor: #000; /* opposite of #fff */\r\n}\r\n\r\n.monaco-editor.mouse-default .view-lines,\r\n.monaco-editor.vs-dark.mac.mouse-default .view-lines,\r\n.monaco-editor.hc-black.mac.mouse-default .view-lines {\r\n\tcursor: default;\r\n}\r\n.monaco-editor.mouse-copy .view-lines,\r\n.monaco-editor.vs-dark.mac.mouse-copy .view-lines,\r\n.monaco-editor.hc-black.mac.mouse-copy .view-lines {\r\n\tcursor: copy;\r\n}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 223 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(224);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 224 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-custom-checkbox {\r\n\tmargin-left: 2px;\r\n\tfloat: left;\r\n\tcursor: pointer;\r\n\toverflow: hidden;\r\n\topacity: 0.7;\r\n\twidth: 20px;\r\n\theight: 20px;\r\n\tborder: 1px solid transparent;\r\n\tpadding: 1px;\r\n\tbox-sizing:\tborder-box;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-custom-checkbox:hover,\r\n.monaco-custom-checkbox.checked {\r\n\topacity: 1;\r\n}\r\n\r\n.hc-black .monaco-custom-checkbox {\r\n\tbackground: none;\r\n}\r\n\r\n.hc-black .monaco-custom-checkbox:hover {\r\n\tbackground: none;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox {\r\n\theight: 18px;\r\n\twidth: 18px;\r\n\tborder: 1px solid transparent;\r\n\tborder-radius: 3px;\r\n\tmargin-right: 9px;\r\n\tmargin-left: 0px;\r\n\tpadding: 0px;\r\n\topacity: 1;\r\n\tbackground-size: 16px !important;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox.checked {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUgMy43NjM0NUw1LjgwNjg3IDExLjkzNTFMNS4wODU4NCAxMS44OTI3TDEgNy4yOTYxNEwxLjc2MzQ1IDYuNjE3NTJMNS41MDk5NyAxMC44MzI0TDE0LjMyMTQgM0wxNSAzLjc2MzQ1WiIgZmlsbD0iIzQyNDI0MiIvPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox.checked {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUgMy43NjM0NUw1LjgwNjg3IDExLjkzNTFMNS4wODU4NCAxMS44OTI3TDEgNy4yOTYxNEwxLjc2MzQ1IDYuNjE3NTJMNS41MDk5NyAxMC44MzI0TDE0LjMyMTQgM0wxNSAzLjc2MzQ1WiIgZmlsbD0iI0M1QzVDNSIvPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
 /* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -94627,7 +95185,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Find widget */\r\n.monaco-editor .find-widget {\r\n\tposition: absolute;\r\n\tz-index: 10;\r\n\theight: 33px;\r\n\toverflow: hidden;\r\n\tline-height: 19px;\r\n\ttransition: transform 200ms linear;\r\n\tpadding: 0 4px;\r\n\tbox-sizing: border-box;\r\n\ttransform: translateY(Calc(-100% - 10px)); /* shadow (10px) */\r\n}\r\n\r\n.monaco-editor .find-widget textarea {\r\n\tmargin: 0px;\r\n}\r\n\r\n.monaco-editor .find-widget.hiddenEditor {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Find widget when replace is toggled on */\r\n.monaco-editor .find-widget.replaceToggled > .replace-part {\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .find-widget.visible  {\r\n\ttransform: translateY(0);\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-inputbox.synthetic-focus {\r\n\toutline: 1px solid -webkit-focus-ring-color;\r\n\toutline-offset: -1px;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-inputbox .input {\r\n\tbackground-color: transparent;\r\n\tmin-height: 0;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .input {\r\n\tfont-size: 13px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part,\r\n.monaco-editor .find-widget > .replace-part {\r\n\tmargin: 4px 0 0 17px;\r\n\tfont-size: 12px;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox {\r\n\tmin-height: 25px;\r\n}\r\n\r\n\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .mirror {\r\n\tpadding-right: 22px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox > .wrapper > .input,\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox > .wrapper > .mirror,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .input,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .mirror {\r\n\tpadding-top: 2px;\r\n\tpadding-bottom: 2px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .find-actions {\r\n\theight: 25px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part .replace-actions {\r\n\theight: 25px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput {\r\n\tvertical-align: middle;\r\n\tdisplay: flex;\r\n\tflex:1;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .monaco-scrollable-element {\r\n\t/* Make sure textarea inherits the width correctly */\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .monaco-scrollable-element .scrollbar.vertical {\r\n\t/* Hide vertical scrollbar */\r\n\topacity: 0;\r\n}\r\n\r\n.monaco-editor .find-widget .matchesCount {\r\n\tdisplay: flex;\r\n\tflex: initial;\r\n\tmargin: 0 0 0 3px;\r\n\tpadding: 2px 0 0 2px;\r\n\theight: 25px;\r\n\tvertical-align: middle;\r\n\tbox-sizing: border-box;\r\n\ttext-align: center;\r\n\tline-height: 23px;\r\n}\r\n\r\n.monaco-editor .find-widget .button {\r\n\twidth: 20px;\r\n\theight: 20px;\r\n\tdisplay: flex;\r\n\tflex: initial;\r\n\tmargin-left: 3px;\r\n\tbackground-position: center center;\r\n\tbackground-repeat: no-repeat;\r\n\tcursor: pointer;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n}\r\n\r\n.monaco-editor .find-widget .button:not(.disabled):hover {\r\n\tbackground-color: rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.monaco-editor .find-widget .button.left {\r\n\tmargin-left: 0;\r\n\tmargin-right: 3px;\r\n}\r\n\r\n.monaco-editor .find-widget .button.wide {\r\n\twidth: auto;\r\n\tpadding: 1px 6px;\r\n\ttop: -1px;\r\n}\r\n\r\n.monaco-editor .find-widget .button.toggle {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 3px;\r\n\twidth: 18px;\r\n\theight: 100%;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .find-widget .button.toggle.disabled {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .find-widget .disabled {\r\n\topacity: 0.3;\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part > .monaco-findInput {\r\n\tposition: relative;\r\n\tdisplay: flex;\r\n\tvertical-align: middle;\r\n\tflex: auto;\r\n\tflex-grow: 0;\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part > .monaco-findInput > .controls {\r\n\tposition: absolute;\r\n\ttop: 3px;\r\n\tright: 2px;\r\n}\r\n\r\n/* REDUCED */\r\n.monaco-editor .find-widget.reduced-find-widget .matchesCount {\r\n\tdisplay:none;\r\n}\r\n\r\n/* NARROW (SMALLER THAN REDUCED) */\r\n.monaco-editor .find-widget.narrow-find-widget {\r\n\tmax-width: 257px !important;\r\n}\r\n\r\n/* COLLAPSED (SMALLER THAN NARROW) */\r\n.monaco-editor .find-widget.collapsed-find-widget {\r\n\tmax-width: 170px !important;\r\n}\r\n\r\n.monaco-editor .find-widget.collapsed-find-widget .button.previous,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.next,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.replace,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.replace-all,\r\n.monaco-editor .find-widget.collapsed-find-widget > .find-part .monaco-findInput .controls {\r\n\tdisplay:none;\r\n}\r\n\r\n.monaco-editor .findMatch {\r\n\tanimation-duration: 0;\r\n\tanimation-name: inherit !important;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-sash {\r\n\twidth: 2px !important;\r\n\tmargin-left: -4px;\r\n}\r\n\r\n.monaco-editor.hc-black .find-widget .button:not(.disabled):hover,\r\n.monaco-editor.vs-dark .find-widget .button:not(.disabled):hover {\r\n\tbackground-color: rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.monaco-editor.hc-black .find-widget .button:before {\r\n\tposition: relative;\r\n\ttop: 1px;\r\n\tleft: 2px;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor.vs .dnd-target {\r\n\tborder-right: 2px dotted black;\r\n\tcolor: white; /* opposite of black */\r\n}\r\n.monaco-editor.vs-dark .dnd-target {\r\n\tborder-right: 2px dotted #AEAFAD;\r\n\tcolor: #51504f; /* opposite of #AEAFAD */\r\n}\r\n.monaco-editor.hc-black .dnd-target {\r\n\tborder-right: 2px dotted #fff;\r\n\tcolor: #000; /* opposite of #fff */\r\n}\r\n\r\n.monaco-editor.mouse-default .view-lines,\r\n.monaco-editor.vs-dark.mac.mouse-default .view-lines,\r\n.monaco-editor.hc-black.mac.mouse-default .view-lines {\r\n\tcursor: default;\r\n}\r\n.monaco-editor.mouse-copy .view-lines,\r\n.monaco-editor.vs-dark.mac.mouse-copy .view-lines,\r\n.monaco-editor.hc-black.mac.mouse-copy .view-lines {\r\n\tcursor: copy;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -94666,13 +95224,91 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-sash {\r\n\tposition: absolute;\r\n\tz-index: 35;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-sash.disabled {\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-sash.vertical {\r\n\tcursor: ew-resize;\r\n\ttop: 0;\r\n\twidth: 4px;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-sash.mac.vertical {\r\n\tcursor: col-resize;\r\n}\r\n\r\n.monaco-sash.vertical.minimum {\r\n\tcursor: e-resize;\r\n}\r\n\r\n.monaco-sash.vertical.maximum {\r\n\tcursor: w-resize;\r\n}\r\n\r\n.monaco-sash.horizontal {\r\n\tcursor: ns-resize;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 4px;\r\n}\r\n\r\n.monaco-sash.mac.horizontal {\r\n\tcursor: row-resize;\r\n}\r\n\r\n.monaco-sash.horizontal.minimum {\r\n\tcursor: s-resize;\r\n}\r\n\r\n.monaco-sash.horizontal.maximum {\r\n\tcursor: n-resize;\r\n}\r\n\r\n.monaco-sash:not(.disabled).orthogonal-start::before,\r\n.monaco-sash:not(.disabled).orthogonal-end::after {\r\n\tcontent: ' ';\r\n\theight: 8px;\r\n\twidth: 8px;\r\n\tz-index: 100;\r\n\tdisplay: block;\r\n\tcursor: all-scroll;\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-sash.orthogonal-start.vertical::before {\r\n\tleft: -2px;\r\n\ttop: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-end.vertical::after {\r\n\tleft: -2px;\r\n\tbottom: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-start.horizontal::before {\r\n\ttop: -2px;\r\n\tleft: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-end.horizontal::after {\r\n\ttop: -2px;\r\n\tright: -4px;\r\n}\r\n\r\n.monaco-sash.disabled {\r\n\tcursor: default !important;\r\n\tpointer-events: none !important;\r\n}\r\n\r\n/** Touch **/\r\n\r\n.monaco-sash.touch.vertical {\r\n\twidth: 20px;\r\n}\r\n\r\n.monaco-sash.touch.horizontal {\r\n\theight: 20px;\r\n}\r\n\r\n/** Debug **/\r\n\r\n.monaco-sash.debug {\r\n\tbackground: cyan;\r\n}\r\n\r\n.monaco-sash.debug.disabled {\r\n\tbackground: rgba(0, 255, 255, 0.2);\r\n}\r\n\r\n.monaco-sash.debug:not(.disabled).orthogonal-start::before,\r\n.monaco-sash.debug:not(.disabled).orthogonal-end::after {\r\n\tbackground: red;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-custom-checkbox {\r\n\tmargin-left: 2px;\r\n\tfloat: left;\r\n\tcursor: pointer;\r\n\toverflow: hidden;\r\n\topacity: 0.7;\r\n\twidth: 20px;\r\n\theight: 20px;\r\n\tborder: 1px solid transparent;\r\n\tpadding: 1px;\r\n\tbox-sizing:\tborder-box;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-custom-checkbox:hover,\r\n.monaco-custom-checkbox.checked {\r\n\topacity: 1;\r\n}\r\n\r\n.hc-black .monaco-custom-checkbox {\r\n\tbackground: none;\r\n}\r\n\r\n.hc-black .monaco-custom-checkbox:hover {\r\n\tbackground: none;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox {\r\n\theight: 18px;\r\n\twidth: 18px;\r\n\tborder: 1px solid transparent;\r\n\tborder-radius: 3px;\r\n\tmargin-right: 9px;\r\n\tmargin-left: 0px;\r\n\tpadding: 0px;\r\n\topacity: 1;\r\n\tbackground-size: 16px !important;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox.checked {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUgMy43NjM0NUw1LjgwNjg3IDExLjkzNTFMNS4wODU4NCAxMS44OTI3TDEgNy4yOTYxNEwxLjc2MzQ1IDYuNjE3NTJMNS41MDk5NyAxMC44MzI0TDE0LjMyMTQgM0wxNSAzLjc2MzQ1WiIgZmlsbD0iIzQyNDI0MiIvPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox.checked {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUgMy43NjM0NUw1LjgwNjg3IDExLjkzNTFMNS4wODU4NCAxMS44OTI3TDEgNy4yOTYxNEwxLjc2MzQ1IDYuNjE3NTJMNS41MDk5NyAxMC44MzI0TDE0LjMyMTQgM0wxNSAzLjc2MzQ1WiIgZmlsbD0iI0M1QzVDNSIvPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 /* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(230);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Find widget */\r\n.monaco-editor .find-widget {\r\n\tposition: absolute;\r\n\tz-index: 10;\r\n\theight: 33px;\r\n\toverflow: hidden;\r\n\tline-height: 19px;\r\n\ttransition: transform 200ms linear;\r\n\tpadding: 0 4px;\r\n\tbox-sizing: border-box;\r\n\ttransform: translateY(Calc(-100% - 10px)); /* shadow (10px) */\r\n}\r\n\r\n.monaco-editor .find-widget textarea {\r\n\tmargin: 0px;\r\n}\r\n\r\n.monaco-editor .find-widget.hiddenEditor {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Find widget when replace is toggled on */\r\n.monaco-editor .find-widget.replaceToggled > .replace-part {\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .find-widget.visible  {\r\n\ttransform: translateY(0);\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-inputbox.synthetic-focus {\r\n\toutline: 1px solid -webkit-focus-ring-color;\r\n\toutline-offset: -1px;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-inputbox .input {\r\n\tbackground-color: transparent;\r\n\tmin-height: 0;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .input {\r\n\tfont-size: 13px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part,\r\n.monaco-editor .find-widget > .replace-part {\r\n\tmargin: 4px 0 0 17px;\r\n\tfont-size: 12px;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox {\r\n\tmin-height: 25px;\r\n}\r\n\r\n\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .mirror {\r\n\tpadding-right: 22px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox > .wrapper > .input,\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox > .wrapper > .mirror,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .input,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .mirror {\r\n\tpadding-top: 2px;\r\n\tpadding-bottom: 2px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .find-actions {\r\n\theight: 25px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part .replace-actions {\r\n\theight: 25px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput {\r\n\tvertical-align: middle;\r\n\tdisplay: flex;\r\n\tflex:1;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .monaco-scrollable-element {\r\n\t/* Make sure textarea inherits the width correctly */\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .monaco-scrollable-element .scrollbar.vertical {\r\n\t/* Hide vertical scrollbar */\r\n\topacity: 0;\r\n}\r\n\r\n.monaco-editor .find-widget .matchesCount {\r\n\tdisplay: flex;\r\n\tflex: initial;\r\n\tmargin: 0 0 0 3px;\r\n\tpadding: 2px 0 0 2px;\r\n\theight: 25px;\r\n\tvertical-align: middle;\r\n\tbox-sizing: border-box;\r\n\ttext-align: center;\r\n\tline-height: 23px;\r\n}\r\n\r\n.monaco-editor .find-widget .button {\r\n\twidth: 20px;\r\n\theight: 20px;\r\n\tdisplay: flex;\r\n\tflex: initial;\r\n\tmargin-left: 3px;\r\n\tbackground-position: center center;\r\n\tbackground-repeat: no-repeat;\r\n\tcursor: pointer;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n}\r\n\r\n.monaco-editor .find-widget .button:not(.disabled):hover {\r\n\tbackground-color: rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.monaco-editor .find-widget .button.left {\r\n\tmargin-left: 0;\r\n\tmargin-right: 3px;\r\n}\r\n\r\n.monaco-editor .find-widget .button.wide {\r\n\twidth: auto;\r\n\tpadding: 1px 6px;\r\n\ttop: -1px;\r\n}\r\n\r\n.monaco-editor .find-widget .button.toggle {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 3px;\r\n\twidth: 18px;\r\n\theight: 100%;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .find-widget .button.toggle.disabled {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .find-widget .disabled {\r\n\topacity: 0.3;\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part > .monaco-findInput {\r\n\tposition: relative;\r\n\tdisplay: flex;\r\n\tvertical-align: middle;\r\n\tflex: auto;\r\n\tflex-grow: 0;\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part > .monaco-findInput > .controls {\r\n\tposition: absolute;\r\n\ttop: 3px;\r\n\tright: 2px;\r\n}\r\n\r\n/* REDUCED */\r\n.monaco-editor .find-widget.reduced-find-widget .matchesCount {\r\n\tdisplay:none;\r\n}\r\n\r\n/* NARROW (SMALLER THAN REDUCED) */\r\n.monaco-editor .find-widget.narrow-find-widget {\r\n\tmax-width: 257px !important;\r\n}\r\n\r\n/* COLLAPSED (SMALLER THAN NARROW) */\r\n.monaco-editor .find-widget.collapsed-find-widget {\r\n\tmax-width: 170px !important;\r\n}\r\n\r\n.monaco-editor .find-widget.collapsed-find-widget .button.previous,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.next,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.replace,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.replace-all,\r\n.monaco-editor .find-widget.collapsed-find-widget > .find-part .monaco-findInput .controls {\r\n\tdisplay:none;\r\n}\r\n\r\n.monaco-editor .findMatch {\r\n\tanimation-duration: 0;\r\n\tanimation-name: inherit !important;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-sash {\r\n\twidth: 2px !important;\r\n\tmargin-left: -4px;\r\n}\r\n\r\n.monaco-editor.hc-black .find-widget .button:not(.disabled):hover,\r\n.monaco-editor.vs-dark .find-widget .button:not(.disabled):hover {\r\n\tbackground-color: rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.monaco-editor.hc-black .find-widget .button:before {\r\n\tposition: relative;\r\n\ttop: 1px;\r\n\tleft: 2px;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 231 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(232);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 232 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-sash {\r\n\tposition: absolute;\r\n\tz-index: 35;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-sash.disabled {\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-sash.vertical {\r\n\tcursor: ew-resize;\r\n\ttop: 0;\r\n\twidth: 4px;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-sash.mac.vertical {\r\n\tcursor: col-resize;\r\n}\r\n\r\n.monaco-sash.vertical.minimum {\r\n\tcursor: e-resize;\r\n}\r\n\r\n.monaco-sash.vertical.maximum {\r\n\tcursor: w-resize;\r\n}\r\n\r\n.monaco-sash.horizontal {\r\n\tcursor: ns-resize;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 4px;\r\n}\r\n\r\n.monaco-sash.mac.horizontal {\r\n\tcursor: row-resize;\r\n}\r\n\r\n.monaco-sash.horizontal.minimum {\r\n\tcursor: s-resize;\r\n}\r\n\r\n.monaco-sash.horizontal.maximum {\r\n\tcursor: n-resize;\r\n}\r\n\r\n.monaco-sash:not(.disabled).orthogonal-start::before,\r\n.monaco-sash:not(.disabled).orthogonal-end::after {\r\n\tcontent: ' ';\r\n\theight: 8px;\r\n\twidth: 8px;\r\n\tz-index: 100;\r\n\tdisplay: block;\r\n\tcursor: all-scroll;\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-sash.orthogonal-start.vertical::before {\r\n\tleft: -2px;\r\n\ttop: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-end.vertical::after {\r\n\tleft: -2px;\r\n\tbottom: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-start.horizontal::before {\r\n\ttop: -2px;\r\n\tleft: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-end.horizontal::after {\r\n\ttop: -2px;\r\n\tright: -4px;\r\n}\r\n\r\n.monaco-sash.disabled {\r\n\tcursor: default !important;\r\n\tpointer-events: none !important;\r\n}\r\n\r\n/** Touch **/\r\n\r\n.monaco-sash.touch.vertical {\r\n\twidth: 20px;\r\n}\r\n\r\n.monaco-sash.touch.horizontal {\r\n\theight: 20px;\r\n}\r\n\r\n/** Debug **/\r\n\r\n.monaco-sash.debug {\r\n\tbackground: cyan;\r\n}\r\n\r\n.monaco-sash.debug.disabled {\r\n\tbackground: rgba(0, 255, 255, 0.2);\r\n}\r\n\r\n.monaco-sash.debug:not(.disabled).orthogonal-start::before,\r\n.monaco-sash.debug:not(.disabled).orthogonal-end::after {\r\n\tbackground: red;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -94685,11 +95321,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 230 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(231);
+            var content = __webpack_require__(235);
 
             content = content.__esModule ? content.default : content;
 
@@ -94711,7 +95347,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 231 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -94724,11 +95360,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 232 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(233);
+            var content = __webpack_require__(237);
 
             content = content.__esModule ? content.default : content;
 
@@ -94750,7 +95386,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 233 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -94763,7 +95399,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 234 */
+/* 238 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94842,84 +95478,6 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_1__[/* registerEdit
 
 
 /***/ }),
-/* 235 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(236);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 236 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* marker zone */\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .severity-icon {\r\n\tdisplay: inline-block;\r\n\tvertical-align: text-top;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-editor .marker-widget {\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .marker-widget > .stale {\r\n\topacity: 0.6;\r\n\tfont-style: italic;\r\n}\r\n\r\n.monaco-editor .marker-widget .title {\r\n\tdisplay: inline-block;\r\n\tpadding-right: 5px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer {\r\n\tposition: absolute;\r\n\twhite-space: pre;\r\n\tuser-select: text;\r\n\t-webkit-user-select: text;\r\n\t-ms-user-select: text;\r\n\tpadding: 8px 12px 0px 20px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message .details {\r\n\tpadding-left: 6px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message .source,\r\n.monaco-editor .marker-widget .descriptioncontainer .message .code {\r\n\topacity: 0.6;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .filename {\r\n\tcursor: pointer;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 237 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(238);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 238 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .peekview-widget .head {\r\n\tbox-sizing:\tborder-box;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tfont-size: 13px;\r\n\tmargin-left: 20px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .dirname:not(:empty) {\r\n\tfont-size: 0.9em;\r\n\tmargin-left: 0.5em;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .meta {\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .meta:not(:empty)::before {\r\n\tcontent: '-';\r\n\tpadding: 0 0.3em;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions {\r\n\tflex: 1;\r\n\ttext-align: right;\r\n\tpadding-right: 2px;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar,\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar > .actions-container {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-item {\r\n\tmargin-left: 4px;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-label {\r\n\twidth: 16px;\r\n\theight: 100%;\r\n\tmargin: 0;\r\n\tline-height: inherit;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: center center;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-label.codicon {\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-editor .peekview-widget > .body {\r\n\tborder-top: 1px solid;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .codicon {\r\n\tmargin-right: 4px;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
 /* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -94953,7 +95511,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* -------------------- IE10 remove auto clear button -------------------- */\r\n\r\n::-ms-clear {\r\n\tdisplay: none;\r\n}\r\n\r\n/* All widgets */\r\n/* I am not a big fan of this rule */\r\n.monaco-editor .editor-widget input {\r\n\tcolor: inherit;\r\n}\r\n\r\n/* -------------------- Editor -------------------- */\r\n\r\n.monaco-editor {\r\n\tposition: relative;\r\n\toverflow: visible;\r\n\t-webkit-text-size-adjust: 100%;\r\n}\r\n\r\n/* -------------------- Misc -------------------- */\r\n\r\n.monaco-editor .overflow-guard {\r\n\tposition: relative;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-editor .view-overlays {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n/*\r\n.monaco-editor .auto-closed-character {\r\n\topacity: 0.3;\r\n}\r\n*/\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* marker zone */\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .severity-icon {\r\n\tdisplay: inline-block;\r\n\tvertical-align: text-top;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-editor .marker-widget {\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .marker-widget > .stale {\r\n\topacity: 0.6;\r\n\tfont-style: italic;\r\n}\r\n\r\n.monaco-editor .marker-widget .title {\r\n\tdisplay: inline-block;\r\n\tpadding-right: 5px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer {\r\n\tposition: absolute;\r\n\twhite-space: pre;\r\n\tuser-select: text;\r\n\t-webkit-user-select: text;\r\n\t-ms-user-select: text;\r\n\tpadding: 8px 12px 0px 20px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message .details {\r\n\tpadding-left: 6px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message .source,\r\n.monaco-editor .marker-widget .descriptioncontainer .message .code {\r\n\topacity: 0.6;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .filename {\r\n\tcursor: pointer;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -94992,7 +95550,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .inputarea {\r\n\tmin-width: 0;\r\n\tmin-height: 0;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tposition: absolute;\r\n\toutline: none !important;\r\n\tresize: none;\r\n\tborder: none;\r\n\toverflow: hidden;\r\n\tcolor: transparent;\r\n\tbackground-color: transparent;\r\n}\r\n/*.monaco-editor .inputarea {\r\n\tposition: fixed !important;\r\n\twidth: 800px !important;\r\n\theight: 500px !important;\r\n\ttop: initial !important;\r\n\tleft: initial !important;\r\n\tbottom: 0 !important;\r\n\tright: 0 !important;\r\n\tcolor: black !important;\r\n\tbackground: white !important;\r\n\tline-height: 15px !important;\r\n\tfont-size: 14px !important;\r\n}*/\r\n.monaco-editor .inputarea.ime-input {\r\n\tz-index: 10;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .peekview-widget .head {\r\n\tbox-sizing:\tborder-box;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tfont-size: 13px;\r\n\tmargin-left: 20px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .dirname:not(:empty) {\r\n\tfont-size: 0.9em;\r\n\tmargin-left: 0.5em;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .meta {\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .meta:not(:empty)::before {\r\n\tcontent: '-';\r\n\tpadding: 0 0.3em;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions {\r\n\tflex: 1;\r\n\ttext-align: right;\r\n\tpadding-right: 2px;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar,\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar > .actions-container {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-item {\r\n\tmargin-left: 4px;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-label {\r\n\twidth: 16px;\r\n\theight: 100%;\r\n\tmargin: 0;\r\n\tline-height: inherit;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: center center;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-label.codicon {\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-editor .peekview-widget > .body {\r\n\tborder-top: 1px solid;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .codicon {\r\n\tmargin-right: 4px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95031,7 +95589,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers {\r\n\tposition: absolute;\r\n\ttext-align: right;\r\n\tdisplay: inline-block;\r\n\tvertical-align: middle;\r\n\tbox-sizing: border-box;\r\n\tcursor: default;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .relative-current-line-number {\r\n\ttext-align: left;\r\n\tdisplay: inline-block;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers {\r\n\tcursor: -webkit-image-set(\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIyNSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxNSAyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTUgMjU7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwIiBwb2ludHM9IjE0LjUsMS4yIDEuOSwxMy44IDcsMTMuOCAzLjIsMjEuNSA2LjMsMjIuNSAxMC4xLDE0LjkgMTQuNSwxOCIvPjwvc3ZnPg==\") 1x,\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzMCA1MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAgNTA7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyOyIgcG9pbnRzPSIyOSwyLjQgMy44LDI3LjYgMTQsMjcuNiA2LjQsNDMgMTIuNiw0NSAyMC4yLDI5LjggMjksMzYiLz48L3N2Zz4NCg==\") 2x\r\n\t) 30 0, default;\r\n}\r\n\r\n.monaco-editor.mac .margin-view-overlays .line-numbers {\r\n\tcursor: -webkit-image-set(\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTMgMTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEzIDE5OyIgd2lkdGg9IjEzIiBoZWlnaHQ9IjE5Ij48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PHRpdGxlPmZsaXBwZWQtY3Vyc29yLW1hYzwvdGl0bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTUuMywxNi42bDEuNi00LjdIMi4xTDEyLjUsMS4ydjE0LjRMOS43LDEzbC0xLjYsNC42Yy0wLjIsMC41LTAuOCwwLjgtMS4zLDAuNkw2LDE3LjkgQzUuNCwxNy43LDUuMSwxNy4yLDUuMywxNi42eiIvPjwvc3ZnPg0K\") 1x,\r\n\t\turl(\"data:image/svg+xml;base64,DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAyNiAzOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjYgMzg7IiB3aWR0aD0iMjYiIGhlaWdodD0iMzgiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtzdHJva2U6I0ZGRkZGRjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9PC9zdHlsZT4JPHRpdGxlPmZsaXBwZWQtY3Vyc29yLW1hYzwvdGl0bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTEwLjYsMzMuMmwzLjItOS40SDQuMkwyNSwyLjR2MjguOEwxOS40LDI2bC0zLjIsOS4yYy0wLjQsMS0xLjYsMS42LTIuNiwxLjJMMTIsMzUuOCBDMTAuOCwzNS40LDEwLjIsMzQuNCwxMC42LDMzLjJ6Ii8+PC9zdmc+DQo=\") 2x\r\n\t) 24 3, default;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers.lh-odd {\r\n\tmargin-top: 1px;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* -------------------- IE10 remove auto clear button -------------------- */\r\n\r\n::-ms-clear {\r\n\tdisplay: none;\r\n}\r\n\r\n/* All widgets */\r\n/* I am not a big fan of this rule */\r\n.monaco-editor .editor-widget input {\r\n\tcolor: inherit;\r\n}\r\n\r\n/* -------------------- Editor -------------------- */\r\n\r\n.monaco-editor {\r\n\tposition: relative;\r\n\toverflow: visible;\r\n\t-webkit-text-size-adjust: 100%;\r\n}\r\n\r\n/* -------------------- Misc -------------------- */\r\n\r\n.monaco-editor .overflow-guard {\r\n\tposition: relative;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-editor .view-overlays {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n/*\r\n.monaco-editor .auto-closed-character {\r\n\topacity: 0.3;\r\n}\r\n*/\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95070,7 +95628,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .view-overlays .current-line {\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .current-line {\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .current-line.current-line-margin.current-line-margin-both {\r\n\tborder-right: 0;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .inputarea {\r\n\tmin-width: 0;\r\n\tmin-height: 0;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tposition: absolute;\r\n\toutline: none !important;\r\n\tresize: none;\r\n\tborder: none;\r\n\toverflow: hidden;\r\n\tcolor: transparent;\r\n\tbackground-color: transparent;\r\n}\r\n/*.monaco-editor .inputarea {\r\n\tposition: fixed !important;\r\n\twidth: 800px !important;\r\n\theight: 500px !important;\r\n\ttop: initial !important;\r\n\tleft: initial !important;\r\n\tbottom: 0 !important;\r\n\tright: 0 !important;\r\n\tcolor: black !important;\r\n\tbackground: white !important;\r\n\tline-height: 15px !important;\r\n\tfont-size: 14px !important;\r\n}*/\r\n.monaco-editor .inputarea.ime-input {\r\n\tz-index: 10;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95109,7 +95667,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcdr = core decorations rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cdr {\r\n\tposition: absolute;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers {\r\n\tposition: absolute;\r\n\ttext-align: right;\r\n\tdisplay: inline-block;\r\n\tvertical-align: middle;\r\n\tbox-sizing: border-box;\r\n\tcursor: default;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .relative-current-line-number {\r\n\ttext-align: left;\r\n\tdisplay: inline-block;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers {\r\n\tcursor: -webkit-image-set(\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIyNSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxNSAyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTUgMjU7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwIiBwb2ludHM9IjE0LjUsMS4yIDEuOSwxMy44IDcsMTMuOCAzLjIsMjEuNSA2LjMsMjIuNSAxMC4xLDE0LjkgMTQuNSwxOCIvPjwvc3ZnPg==\") 1x,\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzMCA1MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAgNTA7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyOyIgcG9pbnRzPSIyOSwyLjQgMy44LDI3LjYgMTQsMjcuNiA2LjQsNDMgMTIuNiw0NSAyMC4yLDI5LjggMjksMzYiLz48L3N2Zz4NCg==\") 2x\r\n\t) 30 0, default;\r\n}\r\n\r\n.monaco-editor.mac .margin-view-overlays .line-numbers {\r\n\tcursor: -webkit-image-set(\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTMgMTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEzIDE5OyIgd2lkdGg9IjEzIiBoZWlnaHQ9IjE5Ij48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PHRpdGxlPmZsaXBwZWQtY3Vyc29yLW1hYzwvdGl0bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTUuMywxNi42bDEuNi00LjdIMi4xTDEyLjUsMS4ydjE0LjRMOS43LDEzbC0xLjYsNC42Yy0wLjIsMC41LTAuOCwwLjgtMS4zLDAuNkw2LDE3LjkgQzUuNCwxNy43LDUuMSwxNy4yLDUuMywxNi42eiIvPjwvc3ZnPg0K\") 1x,\r\n\t\turl(\"data:image/svg+xml;base64,DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAyNiAzOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjYgMzg7IiB3aWR0aD0iMjYiIGhlaWdodD0iMzgiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtzdHJva2U6I0ZGRkZGRjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9PC9zdHlsZT4JPHRpdGxlPmZsaXBwZWQtY3Vyc29yLW1hYzwvdGl0bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTEwLjYsMzMuMmwzLjItOS40SDQuMkwyNSwyLjR2MjguOEwxOS40LDI2bC0zLjIsOS4yYy0wLjQsMS0xLjYsMS42LTIuNiwxLjJMMTIsMzUuOCBDMTAuOCwzNS40LDEwLjIsMzQuNCwxMC42LDMzLjJ6Ii8+PC9zdmc+DQo=\") 2x\r\n\t) 24 3, default;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers.lh-odd {\r\n\tmargin-top: 1px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95148,7 +95706,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .glyph-margin {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcgmr = core glyph margin rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cgmr {\r\n\tposition: absolute;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .view-overlays .current-line {\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .current-line {\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .current-line.current-line-margin.current-line-margin-both {\r\n\tborder-right: 0;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95187,7 +95745,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcigr = core ident guides rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cigr {\r\n\tposition: absolute;\r\n}\r\n.monaco-editor .lines-content .cigra {\r\n\tposition: absolute;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcdr = core decorations rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cdr {\r\n\tposition: absolute;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95226,7 +95784,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Uncomment to see lines flashing when they're painted */\r\n/*.monaco-editor .view-lines > .view-line {\r\n\tbackground-color: none;\r\n\tanimation-name: flash-background;\r\n\tanimation-duration: 800ms;\r\n}\r\n@keyframes flash-background {\r\n\t0%   { background-color: lightgreen; }\r\n\t100% { background-color: none }\r\n}*/\r\n\r\n.monaco-editor.no-user-select .lines-content,\r\n.monaco-editor.no-user-select .view-line,\r\n.monaco-editor.no-user-select .view-lines {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-editor .view-lines {\r\n\tcursor: text;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor.vs-dark.mac .view-lines,\r\n.monaco-editor.hc-black.mac .view-lines {\r\n\tcursor: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAL0lEQVQoz2NgCD3x//9/BhBYBWdhgFVAiVW4JBFKGIa4AqD0//9D3pt4I4tAdAMAHTQ/j5Zom30AAAAASUVORK5CYII=) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAz0lEQVRIx2NgYGBY/R8I/vx5eelX3n82IJ9FxGf6tksvf/8FiTMQAcAGQMDvSwu09abffY8QYSAScNk45G198eX//yev73/4///701eh//kZSARckrNBRvz//+8+6ZohwCzjGNjdgQxkAg7B9WADeBjIBqtJCbhRA0YNoIkBSNmaPEMoNmA0FkYNoFKhapJ6FGyAH3nauaSmPfwI0v/3OukVi0CIZ+F25KrtYcx/CTIy0e+rC7R1Z4KMICVTQQ14feVXIbR695u14+Ir4gwAAD49E54wc1kWAAAAAElFTkSuQmCC) 2x) 5 8, text;\r\n}\r\n\r\n.monaco-editor .view-line {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n}\r\n\r\n/* TODO@tokenization bootstrap fix */\r\n/*.monaco-editor .view-line > span > span {\r\n\tfloat: none;\r\n\tmin-height: inherit;\r\n\tmargin-left: inherit;\r\n}*/\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .glyph-margin {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcgmr = core glyph margin rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cgmr {\r\n\tposition: absolute;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95265,7 +95823,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .lines-decorations {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbackground: white;\r\n}\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcldr = core lines decorations rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cldr {\r\n\tposition: absolute;\r\n\theight: 100%;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcigr = core ident guides rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cigr {\r\n\tposition: absolute;\r\n}\r\n.monaco-editor .lines-content .cigra {\r\n\tposition: absolute;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95304,7 +95862,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcmdr = core margin decorations rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cmdr {\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Uncomment to see lines flashing when they're painted */\r\n/*.monaco-editor .view-lines > .view-line {\r\n\tbackground-color: none;\r\n\tanimation-name: flash-background;\r\n\tanimation-duration: 800ms;\r\n}\r\n@keyframes flash-background {\r\n\t0%   { background-color: lightgreen; }\r\n\t100% { background-color: none }\r\n}*/\r\n\r\n.monaco-editor.no-user-select .lines-content,\r\n.monaco-editor.no-user-select .view-line,\r\n.monaco-editor.no-user-select .view-lines {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-editor .view-lines {\r\n\tcursor: text;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor.vs-dark.mac .view-lines,\r\n.monaco-editor.hc-black.mac .view-lines {\r\n\tcursor: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAL0lEQVQoz2NgCD3x//9/BhBYBWdhgFVAiVW4JBFKGIa4AqD0//9D3pt4I4tAdAMAHTQ/j5Zom30AAAAASUVORK5CYII=) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAz0lEQVRIx2NgYGBY/R8I/vx5eelX3n82IJ9FxGf6tksvf/8FiTMQAcAGQMDvSwu09abffY8QYSAScNk45G198eX//yev73/4///701eh//kZSARckrNBRvz//+8+6ZohwCzjGNjdgQxkAg7B9WADeBjIBqtJCbhRA0YNoIkBSNmaPEMoNmA0FkYNoFKhapJ6FGyAH3nauaSmPfwI0v/3OukVi0CIZ+F25KrtYcx/CTIy0e+rC7R1Z4KMICVTQQ14feVXIbR695u14+Ir4gwAAD49E54wc1kWAAAAAElFTkSuQmCC) 2x) 5 8, text;\r\n}\r\n\r\n.monaco-editor .view-line {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n}\r\n\r\n/* TODO@tokenization bootstrap fix */\r\n/*.monaco-editor .view-line > span > span {\r\n\tfloat: none;\r\n\tmin-height: inherit;\r\n\tmargin-left: inherit;\r\n}*/\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95343,7 +95901,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* START cover the case that slider is visible on mouseover */\r\n.monaco-editor .minimap.slider-mouseover .minimap-slider {\r\n\topacity: 0;\r\n\ttransition: opacity 100ms linear;\r\n}\r\n.monaco-editor .minimap.slider-mouseover:hover .minimap-slider {\r\n\topacity: 1;\r\n}\r\n.monaco-editor .minimap.slider-mouseover .minimap-slider.active {\r\n\topacity: 1;\r\n}\r\n/* END cover the case that slider is visible on mouseover */\r\n\r\n.monaco-editor .minimap-shadow-hidden {\r\n\tposition: absolute;\r\n\twidth: 0;\r\n}\r\n.monaco-editor .minimap-shadow-visible {\r\n\tposition: absolute;\r\n\tleft: -6px;\r\n\twidth: 6px;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .lines-decorations {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbackground: white;\r\n}\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcldr = core lines decorations rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cldr {\r\n\tposition: absolute;\r\n\theight: 100%;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95382,7 +95940,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .overlayWidgets {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft:0;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcmdr = core margin decorations rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cmdr {\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95421,7 +95979,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .view-ruler {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* START cover the case that slider is visible on mouseover */\r\n.monaco-editor .minimap.slider-mouseover .minimap-slider {\r\n\topacity: 0;\r\n\ttransition: opacity 100ms linear;\r\n}\r\n.monaco-editor .minimap.slider-mouseover:hover .minimap-slider {\r\n\topacity: 1;\r\n}\r\n.monaco-editor .minimap.slider-mouseover .minimap-slider.active {\r\n\topacity: 1;\r\n}\r\n/* END cover the case that slider is visible on mouseover */\r\n\r\n.monaco-editor .minimap-shadow-hidden {\r\n\tposition: absolute;\r\n\twidth: 0;\r\n}\r\n.monaco-editor .minimap-shadow-visible {\r\n\tposition: absolute;\r\n\tleft: -6px;\r\n\twidth: 6px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95460,7 +96018,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .scroll-decoration {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 6px;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .overlayWidgets {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft:0;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95499,7 +96057,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcslr = core selections layer rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cslr {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-editor\t\t\t.top-left-radius\t\t{ border-top-left-radius: 3px; }\r\n.monaco-editor\t\t\t.bottom-left-radius\t\t{ border-bottom-left-radius: 3px; }\r\n.monaco-editor\t\t\t.top-right-radius\t\t{ border-top-right-radius: 3px; }\r\n.monaco-editor\t\t\t.bottom-right-radius\t{ border-bottom-right-radius: 3px; }\r\n\r\n.monaco-editor.hc-black .top-left-radius\t\t{ border-top-left-radius: 0; }\r\n.monaco-editor.hc-black .bottom-left-radius\t\t{ border-bottom-left-radius: 0; }\r\n.monaco-editor.hc-black .top-right-radius\t\t{ border-top-right-radius: 0; }\r\n.monaco-editor.hc-black .bottom-right-radius\t{ border-bottom-right-radius: 0; }\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .view-ruler {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95538,7 +96096,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .cursors-layer {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n.monaco-editor .cursors-layer > .cursor {\r\n\tposition: absolute;\r\n\tcursor: text;\r\n\toverflow: hidden;\r\n}\r\n\r\n/* -- smooth-caret-animation -- */\r\n.monaco-editor .cursors-layer.cursor-smooth-caret-animation > .cursor {\r\n\ttransition: all 80ms;\r\n}\r\n\r\n/* -- block-outline-style -- */\r\n.monaco-editor .cursors-layer.cursor-block-outline-style > .cursor {\r\n\tbox-sizing: border-box;\r\n\tbackground: transparent !important;\r\n\tborder-style: solid;\r\n\tborder-width: 1px;\r\n}\r\n\r\n/* -- underline-style -- */\r\n.monaco-editor .cursors-layer.cursor-underline-style > .cursor {\r\n\tborder-bottom-width: 2px;\r\n\tborder-bottom-style: solid;\r\n\tbackground: transparent !important;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n/* -- underline-thin-style -- */\r\n.monaco-editor .cursors-layer.cursor-underline-thin-style > .cursor {\r\n\tborder-bottom-width: 1px;\r\n\tborder-bottom-style: solid;\r\n\tbackground: transparent !important;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n@keyframes monaco-cursor-smooth {\r\n\t0%,\r\n\t20% {\r\n\t\topacity: 1;\r\n\t}\r\n\t60%,\r\n\t100% {\r\n\t\topacity: 0;\r\n\t}\r\n}\r\n\r\n@keyframes monaco-cursor-phase {\r\n\t0%,\r\n\t20% {\r\n\t\topacity: 1;\r\n\t}\r\n\t90%,\r\n\t100% {\r\n\t\topacity: 0;\r\n\t}\r\n}\r\n\r\n@keyframes monaco-cursor-expand {\r\n\t0%,\r\n\t20% {\r\n\t\ttransform: scaleY(1);\r\n\t}\r\n\t80%,\r\n\t100% {\r\n\t\ttransform: scaleY(0);\r\n\t}\r\n}\r\n\r\n.cursor-smooth {\r\n\tanimation: monaco-cursor-smooth 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n\r\n.cursor-phase {\r\n\tanimation: monaco-cursor-phase 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n\r\n.cursor-expand > .cursor {\r\n\tanimation: monaco-cursor-expand 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .scroll-decoration {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 6px;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95577,20 +96135,98 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .zone-widget {\r\n\tposition: absolute;\r\n\tz-index: 10;\r\n}\r\n\r\n\r\n.monaco-editor .zone-widget .zone-widget-container {\r\n\tborder-top-style: solid;\r\n\tborder-bottom-style: solid;\r\n\tborder-top-width: 0;\r\n\tborder-bottom-width: 0;\r\n\tposition: relative;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcslr = core selections layer rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cslr {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-editor\t\t\t.top-left-radius\t\t{ border-top-left-radius: 3px; }\r\n.monaco-editor\t\t\t.bottom-left-radius\t\t{ border-bottom-left-radius: 3px; }\r\n.monaco-editor\t\t\t.top-right-radius\t\t{ border-top-right-radius: 3px; }\r\n.monaco-editor\t\t\t.bottom-right-radius\t{ border-bottom-right-radius: 3px; }\r\n\r\n.monaco-editor.hc-black .top-left-radius\t\t{ border-top-left-radius: 0; }\r\n.monaco-editor.hc-black .bottom-left-radius\t\t{ border-bottom-left-radius: 0; }\r\n.monaco-editor.hc-black .top-right-radius\t\t{ border-top-right-radius: 0; }\r\n.monaco-editor.hc-black .bottom-right-radius\t{ border-bottom-right-radius: 0; }\r\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 /* 273 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(274);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 274 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .cursors-layer {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n.monaco-editor .cursors-layer > .cursor {\r\n\tposition: absolute;\r\n\tcursor: text;\r\n\toverflow: hidden;\r\n}\r\n\r\n/* -- smooth-caret-animation -- */\r\n.monaco-editor .cursors-layer.cursor-smooth-caret-animation > .cursor {\r\n\ttransition: all 80ms;\r\n}\r\n\r\n/* -- block-outline-style -- */\r\n.monaco-editor .cursors-layer.cursor-block-outline-style > .cursor {\r\n\tbox-sizing: border-box;\r\n\tbackground: transparent !important;\r\n\tborder-style: solid;\r\n\tborder-width: 1px;\r\n}\r\n\r\n/* -- underline-style -- */\r\n.monaco-editor .cursors-layer.cursor-underline-style > .cursor {\r\n\tborder-bottom-width: 2px;\r\n\tborder-bottom-style: solid;\r\n\tbackground: transparent !important;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n/* -- underline-thin-style -- */\r\n.monaco-editor .cursors-layer.cursor-underline-thin-style > .cursor {\r\n\tborder-bottom-width: 1px;\r\n\tborder-bottom-style: solid;\r\n\tbackground: transparent !important;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n@keyframes monaco-cursor-smooth {\r\n\t0%,\r\n\t20% {\r\n\t\topacity: 1;\r\n\t}\r\n\t60%,\r\n\t100% {\r\n\t\topacity: 0;\r\n\t}\r\n}\r\n\r\n@keyframes monaco-cursor-phase {\r\n\t0%,\r\n\t20% {\r\n\t\topacity: 1;\r\n\t}\r\n\t90%,\r\n\t100% {\r\n\t\topacity: 0;\r\n\t}\r\n}\r\n\r\n@keyframes monaco-cursor-expand {\r\n\t0%,\r\n\t20% {\r\n\t\ttransform: scaleY(1);\r\n\t}\r\n\t80%,\r\n\t100% {\r\n\t\ttransform: scaleY(0);\r\n\t}\r\n}\r\n\r\n.cursor-smooth {\r\n\tanimation: monaco-cursor-smooth 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n\r\n.cursor-phase {\r\n\tanimation: monaco-cursor-phase 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n\r\n.cursor-expand > .cursor {\r\n\tanimation: monaco-cursor-expand 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 275 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(276);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 276 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .zone-widget {\r\n\tposition: absolute;\r\n\tz-index: 10;\r\n}\r\n\r\n\r\n.monaco-editor .zone-widget .zone-widget-container {\r\n\tborder-top-style: solid;\r\n\tborder-bottom-style: solid;\r\n\tborder-top-width: 0;\r\n\tborder-bottom-width: 0;\r\n\tposition: relative;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 277 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GotoLineEntry", function() { return GotoLineEntry; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GotoLineAction", function() { return GotoLineAction; });
-/* harmony import */ var _gotoLine_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(274);
+/* harmony import */ var _gotoLine_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(278);
 /* harmony import */ var _gotoLine_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_gotoLine_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_common_strings_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 /* harmony import */ var _base_parts_quickopen_browser_quickOpenModel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(129);
@@ -95760,84 +96396,6 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 
 
 /***/ }),
-/* 274 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(275);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 275 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tfont-size: 13px;\r\n}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 276 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(277);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 277 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* ---------- Icon label ---------- */\r\n\r\n.monaco-icon-label {\r\n\tdisplay: flex; /* required for icons support :before rule */\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n}\r\n\r\n.monaco-icon-label::before {\r\n\r\n\t/* svg icons rendered as background image */\r\n\tbackground-size: 16px;\r\n\tbackground-position: left center;\r\n\tbackground-repeat: no-repeat;\r\n\tpadding-right: 6px;\r\n\twidth: 16px;\r\n\theight: 22px;\r\n\tline-height: inherit !important;\r\n\tdisplay: inline-block;\r\n\r\n\t/* fonts icons */\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-osx-font-smoothing: grayscale;\r\n\tvertical-align: top;\r\n\r\n\tflex-shrink: 0; /* fix for https://github.com/Microsoft/vscode/issues/13787 */\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container {\r\n\tmin-width: 0;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-name-container > .label-name {\r\n\tcolor: inherit;\r\n\twhite-space: pre; /* enable to show labels that include multiple whitespaces */\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-name-container > .label-name > .label-separator {\r\n\tmargin: 0 2px;\r\n\topacity: 0.5;\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-description-container > .label-description {\r\n\topacity: .7;\r\n\tmargin-left: 0.5em;\r\n\tfont-size: 0.9em;\r\n\twhite-space: pre; /* enable to show labels that include multiple whitespaces */\r\n}\r\n\r\n.monaco-icon-label.italic > .monaco-icon-label-container > .monaco-icon-name-container > .label-name,\r\n.monaco-icon-label.italic > .monaco-icon-description-container > .label-description {\r\n\tfont-style: italic;\r\n}\r\n\r\n.monaco-icon-label::after {\r\n\topacity: 0.75;\r\n\tfont-size: 90%;\r\n\tfont-weight: 600;\r\n\tpadding: 0 16px 0 5px;\r\n\ttext-align: center;\r\n}\r\n\r\n/* make sure selection color wins when a label is being selected */\r\n.monaco-tree.focused .selected .monaco-icon-label, /* tree */\r\n.monaco-tree.focused .selected .monaco-icon-label::after,\r\n.monaco-list:focus .selected .monaco-icon-label, /* list */\r\n.monaco-list:focus .selected .monaco-icon-label::after\r\n{\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-tree-row.focused.selected .label-description,\r\n.monaco-tree-row.selected .label-description,\r\n.monaco-list-row.focused.selected .label-description,\r\n.monaco-list-row.selected .label-description {\r\n\topacity: .8;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
 /* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -95871,7 +96429,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-keybinding {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tline-height: 10px;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key {\r\n\tdisplay: inline-block;\r\n\tborder: solid 1px rgba(204, 204, 204, 0.4);\r\n\tborder-bottom-color: rgba(187, 187, 187, 0.4);\r\n\tborder-radius: 3px;\r\n\tbox-shadow: inset 0 -1px 0 rgba(187, 187, 187, 0.4);\r\n\tbackground-color: rgba(221, 221, 221, 0.4);\r\n\tvertical-align: middle;\r\n\tcolor: #555;\r\n\tfont-size: 11px;\r\n\tpadding: 3px 5px;\r\n\tmargin: 0 2px;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key:first-child {\r\n\tmargin-left: 0;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key:last-child {\r\n\tmargin-right: 0;\r\n}\r\n\r\n.hc-black .monaco-keybinding > .monaco-keybinding-key,\r\n.vs-dark .monaco-keybinding > .monaco-keybinding-key {\r\n\tbackground-color: rgba(128, 128, 128, 0.17);\r\n\tcolor: #ccc;\r\n\tborder: solid 1px rgba(51, 51, 51, 0.6);\r\n\tborder-bottom-color: rgba(68, 68, 68, 0.6);\r\n\tbox-shadow: inset 0 -1px 0 rgba(68, 68, 68, 0.6);\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key-separator {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key-chord-separator {\r\n\twidth: 6px;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tfont-size: 13px;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95910,7 +96468,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #0066BF;\r\n}\r\n\r\n.vs-dark .monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.vs-dark .monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #0097fb;\r\n}\r\n\r\n.hc-black .monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.hc-black .monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #F38518;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* ---------- Icon label ---------- */\r\n\r\n.monaco-icon-label {\r\n\tdisplay: flex; /* required for icons support :before rule */\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n}\r\n\r\n.monaco-icon-label::before {\r\n\r\n\t/* svg icons rendered as background image */\r\n\tbackground-size: 16px;\r\n\tbackground-position: left center;\r\n\tbackground-repeat: no-repeat;\r\n\tpadding-right: 6px;\r\n\twidth: 16px;\r\n\theight: 22px;\r\n\tline-height: inherit !important;\r\n\tdisplay: inline-block;\r\n\r\n\t/* fonts icons */\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-osx-font-smoothing: grayscale;\r\n\tvertical-align: top;\r\n\r\n\tflex-shrink: 0; /* fix for https://github.com/Microsoft/vscode/issues/13787 */\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container {\r\n\tmin-width: 0;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-name-container > .label-name {\r\n\tcolor: inherit;\r\n\twhite-space: pre; /* enable to show labels that include multiple whitespaces */\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-name-container > .label-name > .label-separator {\r\n\tmargin: 0 2px;\r\n\topacity: 0.5;\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-description-container > .label-description {\r\n\topacity: .7;\r\n\tmargin-left: 0.5em;\r\n\tfont-size: 0.9em;\r\n\twhite-space: pre; /* enable to show labels that include multiple whitespaces */\r\n}\r\n\r\n.monaco-icon-label.italic > .monaco-icon-label-container > .monaco-icon-name-container > .label-name,\r\n.monaco-icon-label.italic > .monaco-icon-description-container > .label-description {\r\n\tfont-style: italic;\r\n}\r\n\r\n.monaco-icon-label::after {\r\n\topacity: 0.75;\r\n\tfont-size: 90%;\r\n\tfont-weight: 600;\r\n\tpadding: 0 16px 0 5px;\r\n\ttext-align: center;\r\n}\r\n\r\n/* make sure selection color wins when a label is being selected */\r\n.monaco-tree.focused .selected .monaco-icon-label, /* tree */\r\n.monaco-tree.focused .selected .monaco-icon-label::after,\r\n.monaco-list:focus .selected .monaco-icon-label, /* list */\r\n.monaco-list:focus .selected .monaco-icon-label::after\r\n{\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-tree-row.focused.selected .label-description,\r\n.monaco-tree-row.selected .label-description,\r\n.monaco-list-row.focused.selected .label-description,\r\n.monaco-list-row.selected .label-description {\r\n\topacity: .8;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -95949,7 +96507,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tposition: absolute;\r\n\twidth: 600px;\r\n\tz-index: 2000;\r\n\tpadding-bottom: 6px;\r\n\tleft: 50%;\r\n\tmargin-left: -300px;\r\n}\r\n\r\n.monaco-quick-open-widget .monaco-progress-container {\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 38px;\r\n\tz-index: 1;\r\n\theight: 2px;\r\n}\r\n\r\n.monaco-quick-open-widget .monaco-progress-container .progress-bit {\r\n\theight: 2px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-input {\r\n\twidth: 588px;\r\n\tborder: none;\r\n\tmargin: 6px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-input .monaco-inputbox {\r\n\twidth: 100%;\r\n\theight: 25px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-result-count {\r\n\tposition: absolute;\r\n\tleft: -10000px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree {\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row  > .content > .sub-content {\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-quick-open-widget.content-changing .quick-open-tree .monaco-scrollable-element .slider {\r\n\tdisplay: none; /* scrollbar slider causes some hectic updates when input changes quickly, so hide it while quick open changes */\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry {\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry > .quick-open-row {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry .quick-open-entry-icon {\r\n\toverflow: hidden;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tmargin-right: 4px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tvertical-align: middle;\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-icon-label,\r\n.monaco-quick-open-widget .quick-open-tree .monaco-icon-label .monaco-icon-label-description-container {\r\n\tflex: 1; /* make sure the icon label grows within the row */\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry .monaco-highlighted-label span {\r\n\topacity: 1;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry-meta {\r\n\topacity: 0.7;\r\n\tline-height: normal;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .content.has-group-label .quick-open-entry-keybinding {\r\n\tmargin-right: 8px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry-keybinding .monaco-keybinding-key {\r\n\tvertical-align: text-bottom;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .results-group {\r\n\tmargin-right: 18px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row.focused > .content.has-actions > .results-group,\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row:hover:not(.highlighted) > .content.has-actions > .results-group,\r\n.monaco-quick-open-widget .quick-open-tree .focused .monaco-tree-row.focused > .content.has-actions > .results-group {\r\n\tmargin-right: 0px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .results-group-separator {\r\n\tborder-top-width: 1px;\r\n\tborder-top-style: solid;\r\n\tbox-sizing: border-box;\r\n\tmargin-left: -11px;\r\n\tpadding-left: 11px;\r\n}\r\n\r\n/* Actions in Quick Open Items */\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions {\r\n\tposition: relative;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .sub-content {\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions .action-item {\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar {\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar {\r\n\tdisplay: none;\r\n\tpadding: 0 0.8em 0 0.4em;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row.focused > .content.has-actions > .primary-action-bar {\r\n\twidth: 0; /* in order to support a11y with keyboard, we use width: 0 to hide the actions, which still allows to \"Tab\" into the actions */\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row:hover:not(.highlighted) > .content.has-actions > .primary-action-bar,\r\n.monaco-tree.focused .monaco-tree-row.focused > .content.has-actions > .primary-action-bar,\r\n.monaco-tree .monaco-tree-row > .content.has-actions.more > .primary-action-bar {\r\n\twidth: inherit;\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar .action-label {\r\n\tmargin-right: 0.4em;\r\n\tmargin-top: 4px;\r\n\tbackground-repeat: no-repeat;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-highlighted-label .highlight {\r\n\tfont-weight: bold;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-keybinding {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tline-height: 10px;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key {\r\n\tdisplay: inline-block;\r\n\tborder: solid 1px rgba(204, 204, 204, 0.4);\r\n\tborder-bottom-color: rgba(187, 187, 187, 0.4);\r\n\tborder-radius: 3px;\r\n\tbox-shadow: inset 0 -1px 0 rgba(187, 187, 187, 0.4);\r\n\tbackground-color: rgba(221, 221, 221, 0.4);\r\n\tvertical-align: middle;\r\n\tcolor: #555;\r\n\tfont-size: 11px;\r\n\tpadding: 3px 5px;\r\n\tmargin: 0 2px;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key:first-child {\r\n\tmargin-left: 0;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key:last-child {\r\n\tmargin-right: 0;\r\n}\r\n\r\n.hc-black .monaco-keybinding > .monaco-keybinding-key,\r\n.vs-dark .monaco-keybinding > .monaco-keybinding-key {\r\n\tbackground-color: rgba(128, 128, 128, 0.17);\r\n\tcolor: #ccc;\r\n\tborder: solid 1px rgba(51, 51, 51, 0.6);\r\n\tborder-bottom-color: rgba(68, 68, 68, 0.6);\r\n\tbox-shadow: inset 0 -1px 0 rgba(68, 68, 68, 0.6);\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key-separator {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key-chord-separator {\r\n\twidth: 6px;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -95988,7 +96546,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-tree {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\twhite-space: nowrap;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tree > .monaco-scrollable-element {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree > .monaco-scrollable-element > .monaco-tree-wrapper {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row {\r\n\tbox-sizing:\tborder-box;\r\n\tcursor: pointer;\r\n\toverflow: hidden;\r\n\twidth: 100%;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row > .content {\r\n\tposition: relative;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree-drag-image {\r\n\tdisplay: inline-block;\r\n\tpadding: 1px 7px;\r\n\tborder-radius: 10px;\r\n\tfont-size: 12px;\r\n\tposition: absolute;\r\n}\r\n\r\n/* for OS X ballistic scrolling */\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row.scrolling {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Highlighted */\r\n\r\n.monaco-tree.highlighted .monaco-tree-rows > .monaco-tree-row:not(.highlighted) {\r\n\topacity: 0.3;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #0066BF;\r\n}\r\n\r\n.vs-dark .monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.vs-dark .monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #0097fb;\r\n}\r\n\r\n.hc-black .monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.hc-black .monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #F38518;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -96027,7 +96585,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-progress-container {\r\n\twidth: 100%;\r\n\theight: 5px;\r\n\toverflow: hidden; /* keep progress bit in bounds */\r\n}\r\n\r\n.monaco-progress-container .progress-bit {\r\n\twidth: 2%;\r\n\theight: 5px;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-progress-container.active .progress-bit {\r\n\tdisplay: inherit;\r\n}\r\n\r\n.monaco-progress-container.discrete .progress-bit {\r\n\tleft: 0;\r\n\ttransition: width 100ms linear;\r\n}\r\n\r\n.monaco-progress-container.discrete.done .progress-bit {\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-progress-container.infinite .progress-bit {\r\n\tanimation-name: progress;\r\n\tanimation-duration: 4s;\r\n\tanimation-iteration-count: infinite;\r\n\tanimation-timing-function: linear;\r\n\ttransform: translate3d(0px, 0px, 0px);\r\n}\r\n\r\n/**\r\n * The progress bit has a width: 2% (1/50) of the parent container. The animation moves it from 0% to 100% of\r\n * that container. Since translateX is relative to the progress bit size, we have to multiple it with\r\n * its relative size to the parent container:\r\n *  50%: 50 * 50 = 2500%\r\n * 100%: 50 * 100 - 50 (do not overflow): 4950%\r\n */\r\n@keyframes progress { from { transform: translateX(0%) scaleX(1) } 50% { transform: translateX(2500%) scaleX(3) } to { transform: translateX(4950%) scaleX(1) } }\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tposition: absolute;\r\n\twidth: 600px;\r\n\tz-index: 2000;\r\n\tpadding-bottom: 6px;\r\n\tleft: 50%;\r\n\tmargin-left: -300px;\r\n}\r\n\r\n.monaco-quick-open-widget .monaco-progress-container {\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 38px;\r\n\tz-index: 1;\r\n\theight: 2px;\r\n}\r\n\r\n.monaco-quick-open-widget .monaco-progress-container .progress-bit {\r\n\theight: 2px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-input {\r\n\twidth: 588px;\r\n\tborder: none;\r\n\tmargin: 6px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-input .monaco-inputbox {\r\n\twidth: 100%;\r\n\theight: 25px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-result-count {\r\n\tposition: absolute;\r\n\tleft: -10000px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree {\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row  > .content > .sub-content {\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-quick-open-widget.content-changing .quick-open-tree .monaco-scrollable-element .slider {\r\n\tdisplay: none; /* scrollbar slider causes some hectic updates when input changes quickly, so hide it while quick open changes */\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry {\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry > .quick-open-row {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry .quick-open-entry-icon {\r\n\toverflow: hidden;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tmargin-right: 4px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tvertical-align: middle;\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-icon-label,\r\n.monaco-quick-open-widget .quick-open-tree .monaco-icon-label .monaco-icon-label-description-container {\r\n\tflex: 1; /* make sure the icon label grows within the row */\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry .monaco-highlighted-label span {\r\n\topacity: 1;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry-meta {\r\n\topacity: 0.7;\r\n\tline-height: normal;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .content.has-group-label .quick-open-entry-keybinding {\r\n\tmargin-right: 8px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry-keybinding .monaco-keybinding-key {\r\n\tvertical-align: text-bottom;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .results-group {\r\n\tmargin-right: 18px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row.focused > .content.has-actions > .results-group,\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row:hover:not(.highlighted) > .content.has-actions > .results-group,\r\n.monaco-quick-open-widget .quick-open-tree .focused .monaco-tree-row.focused > .content.has-actions > .results-group {\r\n\tmargin-right: 0px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .results-group-separator {\r\n\tborder-top-width: 1px;\r\n\tborder-top-style: solid;\r\n\tbox-sizing: border-box;\r\n\tmargin-left: -11px;\r\n\tpadding-left: 11px;\r\n}\r\n\r\n/* Actions in Quick Open Items */\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions {\r\n\tposition: relative;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .sub-content {\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions .action-item {\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar {\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar {\r\n\tdisplay: none;\r\n\tpadding: 0 0.8em 0 0.4em;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row.focused > .content.has-actions > .primary-action-bar {\r\n\twidth: 0; /* in order to support a11y with keyboard, we use width: 0 to hide the actions, which still allows to \"Tab\" into the actions */\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row:hover:not(.highlighted) > .content.has-actions > .primary-action-bar,\r\n.monaco-tree.focused .monaco-tree-row.focused > .content.has-actions > .primary-action-bar,\r\n.monaco-tree .monaco-tree-row > .content.has-actions.more > .primary-action-bar {\r\n\twidth: inherit;\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar .action-label {\r\n\tmargin-right: 0.4em;\r\n\tmargin-top: 4px;\r\n\tbackground-repeat: no-repeat;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-highlighted-label .highlight {\r\n\tfont-weight: bold;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -96066,7 +96624,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* -- zone widget */\r\n.monaco-editor .zone-widget .zone-widget-container.reference-zone-widget {\r\n\tborder-top-width: 1px;\r\n\tborder-bottom-width: 1px;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .inline {\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .messages {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tpadding: 3em 0;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree {\r\n\tline-height: 23px;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference {\r\n\ttext-overflow: ellipsis;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference-file {\r\n\tdisplay: inline-flex;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .selected .reference-file {\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference-file .count {\r\n\tmargin-right: 12px;\r\n\tmargin-left: auto;\r\n}\r\n\r\n/* High Contrast Theming */\r\n\r\n.monaco-editor.hc-black .reference-zone-widget .ref-tree .reference-file {\r\n\tfont-weight: bold;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-tree {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\twhite-space: nowrap;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tree > .monaco-scrollable-element {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree > .monaco-scrollable-element > .monaco-tree-wrapper {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row {\r\n\tbox-sizing:\tborder-box;\r\n\tcursor: pointer;\r\n\toverflow: hidden;\r\n\twidth: 100%;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row > .content {\r\n\tposition: relative;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree-drag-image {\r\n\tdisplay: inline-block;\r\n\tpadding: 1px 7px;\r\n\tborder-radius: 10px;\r\n\tfont-size: 12px;\r\n\tposition: absolute;\r\n}\r\n\r\n/* for OS X ballistic scrolling */\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row.scrolling {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Highlighted */\r\n\r\n.monaco-tree.highlighted .monaco-tree-rows > .monaco-tree-row:not(.highlighted) {\r\n\topacity: 0.3;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -96105,7 +96663,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-count-badge {\r\n\tpadding: 3px 5px;\r\n\tborder-radius: 11px;\r\n\tfont-size: 11px;\r\n\tmin-width: 18px;\r\n\tmin-height: 18px;\r\n\tline-height: 11px;\r\n\tfont-weight: normal;\r\n\ttext-align: center;\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-progress-container {\r\n\twidth: 100%;\r\n\theight: 5px;\r\n\toverflow: hidden; /* keep progress bit in bounds */\r\n}\r\n\r\n.monaco-progress-container .progress-bit {\r\n\twidth: 2%;\r\n\theight: 5px;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-progress-container.active .progress-bit {\r\n\tdisplay: inherit;\r\n}\r\n\r\n.monaco-progress-container.discrete .progress-bit {\r\n\tleft: 0;\r\n\ttransition: width 100ms linear;\r\n}\r\n\r\n.monaco-progress-container.discrete.done .progress-bit {\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-progress-container.infinite .progress-bit {\r\n\tanimation-name: progress;\r\n\tanimation-duration: 4s;\r\n\tanimation-iteration-count: infinite;\r\n\tanimation-timing-function: linear;\r\n\ttransform: translate3d(0px, 0px, 0px);\r\n}\r\n\r\n/**\r\n * The progress bit has a width: 2% (1/50) of the parent container. The animation moves it from 0% to 100% of\r\n * that container. Since translateX is relative to the progress bit size, we have to multiple it with\r\n * its relative size to the parent container:\r\n *  50%: 50 * 50 = 2500%\r\n * 100%: 50 * 100 - 50 (do not overflow): 4950%\r\n */\r\n@keyframes progress { from { transform: translateX(0%) scaleX(1) } 50% { transform: translateX(2500%) scaleX(3) } to { transform: translateX(4950%) scaleX(1) } }\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -96144,7 +96702,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-list {\r\n\tposition: relative;\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-list.mouse-support {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-list > .monaco-scrollable-element {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-list-rows {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-list.horizontal-scrolling .monaco-list-rows {\r\n\twidth: auto;\r\n\tmin-width: 100%;\r\n}\r\n\r\n.monaco-list-row {\r\n\tposition: absolute;\r\n\tbox-sizing:\tborder-box;\r\n\toverflow: hidden;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-list.mouse-support .monaco-list-row {\r\n\tcursor: pointer;\r\n\ttouch-action: none;\r\n}\r\n\r\n/* for OS X ballistic scrolling */\r\n.monaco-list-row.scrolling {\r\n\tdisplay: none !important;\r\n}\r\n\r\n/* Focus */\r\n.monaco-list.element-focused, .monaco-list.selection-single, .monaco-list.selection-multiple {\r\n\toutline: 0 !important;\r\n}\r\n\r\n.monaco-list:focus .monaco-list-row.selected .codicon {\r\n\tcolor: inherit;\r\n}\r\n\r\n/* Dnd */\r\n.monaco-drag-image {\r\n\tdisplay: inline-block;\r\n\tpadding: 1px 7px;\r\n\tborder-radius: 10px;\r\n\tfont-size: 12px;\r\n\tposition: absolute;\r\n}\r\n\r\n/* Type filter */\r\n\r\n.monaco-list-type-filter {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tposition: absolute;\r\n\tborder-radius: 2px;\r\n\tpadding: 0px 3px;\r\n\tmax-width: calc(100% - 10px);\r\n\ttext-overflow: ellipsis;\r\n\toverflow: hidden;\r\n\ttext-align: right;\r\n\tbox-sizing: border-box;\r\n\tcursor: all-scroll;\r\n\tfont-size: 13px;\r\n\tline-height: 18px;\r\n\theight: 20px;\r\n\tz-index: 1;\r\n\ttop: 4px;\r\n}\r\n\r\n.monaco-list-type-filter.dragging {\r\n\ttransition: top 0.2s, left 0.2s;\r\n}\r\n\r\n.monaco-list-type-filter.ne {\r\n\tright: 4px;\r\n}\r\n\r\n.monaco-list-type-filter.nw {\r\n\tleft: 4px;\r\n}\r\n\r\n.monaco-list-type-filter > .controls {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tbox-sizing: border-box;\r\n\ttransition: width 0.2s;\r\n\twidth: 0;\r\n}\r\n\r\n.monaco-list-type-filter.dragging > .controls,\r\n.monaco-list-type-filter:hover > .controls {\r\n\twidth: 36px;\r\n}\r\n\r\n.monaco-list-type-filter > .controls > * {\r\n\tborder: none;\r\n\tbox-sizing: border-box;\r\n\t-webkit-appearance: none;\r\n\t-moz-appearance: none;\r\n\tbackground: none;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tflex-shrink: 0;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-list-type-filter > .controls > .filter:checked::before {\r\n\tcontent: \"\\eb83\" !important; /* codicon-list-filter */\r\n}\r\n\r\n.monaco-list-type-filter > .controls > .filter {\r\n\tmargin-left: 4px;\r\n}\r\n\r\n.monaco-list-type-filter-message {\r\n\tposition: absolute;\r\n\tbox-sizing: border-box;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tpadding: 40px 1em 1em 1em;\r\n\ttext-align: center;\r\n\twhite-space: normal;\r\n\topacity: 0.7;\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-list-type-filter-message:empty {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Electron */\r\n\r\n.monaco-list-type-filter {\r\n\tcursor: grab;\r\n}\r\n\r\n.monaco-list-type-filter.dragging {\r\n\tcursor: grabbing;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* -- zone widget */\r\n.monaco-editor .zone-widget .zone-widget-container.reference-zone-widget {\r\n\tborder-top-width: 1px;\r\n\tborder-bottom-width: 1px;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .inline {\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .messages {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tpadding: 3em 0;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree {\r\n\tline-height: 23px;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference {\r\n\ttext-overflow: ellipsis;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference-file {\r\n\tdisplay: inline-flex;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .selected .reference-file {\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference-file .count {\r\n\tmargin-right: 12px;\r\n\tmargin-left: auto;\r\n}\r\n\r\n/* High Contrast Theming */\r\n\r\n.monaco-editor.hc-black .reference-zone-widget .ref-tree .reference-file {\r\n\tfont-weight: bold;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -96183,7 +96741,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-tl-row {\r\n\tdisplay: flex;\r\n\theight: 100%;\r\n\talign-items: center;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tl-indent {\r\n\theight: 100%;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 16px;\r\n\tpointer-events: none;\r\n}\r\n\r\n.hide-arrows .monaco-tl-indent {\r\n\tleft: 12px;\r\n}\r\n\r\n.monaco-tl-indent > .indent-guide {\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n\theight: 100%;\r\n\tborder-left: 1px solid transparent;\r\n}\r\n\r\n.monaco-tl-indent > .indent-guide {\r\n\ttransition: border-color 0.1s linear;\r\n}\r\n\r\n.monaco-tl-twistie,\r\n.monaco-tl-contents {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tl-twistie {\r\n\tfont-size: 10px;\r\n\ttext-align: right;\r\n\tpadding-right: 6px;\r\n\tflex-shrink: 0;\r\n\twidth: 16px;\r\n\tdisplay: flex !important;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tcolor: inherit !important;\r\n\ttransform: translateX(3px);\r\n}\r\n\r\n.monaco-tl-contents {\r\n\tflex: 1;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-tl-twistie.collapsed::before {\r\n\ttransform: rotate(-90deg);\r\n}\r\n\r\n.monaco-tl-twistie.codicon-loading::before {\r\n\tanimation: codicon-spin 1.25s linear infinite;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-count-badge {\r\n\tpadding: 3px 5px;\r\n\tborder-radius: 11px;\r\n\tfont-size: 11px;\r\n\tmin-width: 18px;\r\n\tmin-height: 18px;\r\n\tline-height: 11px;\r\n\tfont-weight: normal;\r\n\ttext-align: center;\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -96222,7 +96780,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-split-view2 {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-split-view2 > .sash-container {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-split-view2 > .sash-container > .monaco-sash {\r\n\tpointer-events: initial;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\twhite-space: nowrap;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container > .split-view-view {\r\n\twhite-space: initial;\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container > .split-view-view:not(.visible) {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-split-view2.vertical > .split-view-container > .split-view-view {\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-split-view2.horizontal > .split-view-container > .split-view-view {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-split-view2.separator-border > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\tcontent: ' ';\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tz-index: 5;\r\n\tpointer-events: none;\r\n\tbackground-color: var(--separator-border);\r\n}\r\n\r\n.monaco-split-view2.separator-border.horizontal > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\theight: 100%;\r\n\twidth: 1px;\r\n}\r\n\r\n.monaco-split-view2.separator-border.vertical > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\theight: 1px;\r\n\twidth: 100%;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-list {\r\n\tposition: relative;\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-list.mouse-support {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-list > .monaco-scrollable-element {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-list-rows {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-list.horizontal-scrolling .monaco-list-rows {\r\n\twidth: auto;\r\n\tmin-width: 100%;\r\n}\r\n\r\n.monaco-list-row {\r\n\tposition: absolute;\r\n\tbox-sizing:\tborder-box;\r\n\toverflow: hidden;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-list.mouse-support .monaco-list-row {\r\n\tcursor: pointer;\r\n\ttouch-action: none;\r\n}\r\n\r\n/* for OS X ballistic scrolling */\r\n.monaco-list-row.scrolling {\r\n\tdisplay: none !important;\r\n}\r\n\r\n/* Focus */\r\n.monaco-list.element-focused, .monaco-list.selection-single, .monaco-list.selection-multiple {\r\n\toutline: 0 !important;\r\n}\r\n\r\n.monaco-list:focus .monaco-list-row.selected .codicon {\r\n\tcolor: inherit;\r\n}\r\n\r\n/* Dnd */\r\n.monaco-drag-image {\r\n\tdisplay: inline-block;\r\n\tpadding: 1px 7px;\r\n\tborder-radius: 10px;\r\n\tfont-size: 12px;\r\n\tposition: absolute;\r\n}\r\n\r\n/* Type filter */\r\n\r\n.monaco-list-type-filter {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tposition: absolute;\r\n\tborder-radius: 2px;\r\n\tpadding: 0px 3px;\r\n\tmax-width: calc(100% - 10px);\r\n\ttext-overflow: ellipsis;\r\n\toverflow: hidden;\r\n\ttext-align: right;\r\n\tbox-sizing: border-box;\r\n\tcursor: all-scroll;\r\n\tfont-size: 13px;\r\n\tline-height: 18px;\r\n\theight: 20px;\r\n\tz-index: 1;\r\n\ttop: 4px;\r\n}\r\n\r\n.monaco-list-type-filter.dragging {\r\n\ttransition: top 0.2s, left 0.2s;\r\n}\r\n\r\n.monaco-list-type-filter.ne {\r\n\tright: 4px;\r\n}\r\n\r\n.monaco-list-type-filter.nw {\r\n\tleft: 4px;\r\n}\r\n\r\n.monaco-list-type-filter > .controls {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tbox-sizing: border-box;\r\n\ttransition: width 0.2s;\r\n\twidth: 0;\r\n}\r\n\r\n.monaco-list-type-filter.dragging > .controls,\r\n.monaco-list-type-filter:hover > .controls {\r\n\twidth: 36px;\r\n}\r\n\r\n.monaco-list-type-filter > .controls > * {\r\n\tborder: none;\r\n\tbox-sizing: border-box;\r\n\t-webkit-appearance: none;\r\n\t-moz-appearance: none;\r\n\tbackground: none;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tflex-shrink: 0;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-list-type-filter > .controls > .filter:checked::before {\r\n\tcontent: \"\\eb83\" !important; /* codicon-list-filter */\r\n}\r\n\r\n.monaco-list-type-filter > .controls > .filter {\r\n\tmargin-left: 4px;\r\n}\r\n\r\n.monaco-list-type-filter-message {\r\n\tposition: absolute;\r\n\tbox-sizing: border-box;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tpadding: 40px 1em 1em 1em;\r\n\ttext-align: center;\r\n\twhite-space: normal;\r\n\topacity: 0.7;\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-list-type-filter-message:empty {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Electron */\r\n\r\n.monaco-list-type-filter {\r\n\tcursor: grab;\r\n}\r\n\r\n.monaco-list-type-filter.dragging {\r\n\tcursor: grabbing;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -96261,7 +96819,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .goto-definition-link {\r\n\ttext-decoration: underline;\r\n\tcursor: pointer;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-tl-row {\r\n\tdisplay: flex;\r\n\theight: 100%;\r\n\talign-items: center;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tl-indent {\r\n\theight: 100%;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 16px;\r\n\tpointer-events: none;\r\n}\r\n\r\n.hide-arrows .monaco-tl-indent {\r\n\tleft: 12px;\r\n}\r\n\r\n.monaco-tl-indent > .indent-guide {\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n\theight: 100%;\r\n\tborder-left: 1px solid transparent;\r\n}\r\n\r\n.monaco-tl-indent > .indent-guide {\r\n\ttransition: border-color 0.1s linear;\r\n}\r\n\r\n.monaco-tl-twistie,\r\n.monaco-tl-contents {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tl-twistie {\r\n\tfont-size: 10px;\r\n\ttext-align: right;\r\n\tpadding-right: 6px;\r\n\tflex-shrink: 0;\r\n\twidth: 16px;\r\n\tdisplay: flex !important;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tcolor: inherit !important;\r\n\ttransform: translateX(3px);\r\n}\r\n\r\n.monaco-tl-contents {\r\n\tflex: 1;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-tl-twistie.collapsed::before {\r\n\ttransform: rotate(-90deg);\r\n}\r\n\r\n.monaco-tl-twistie.codicon-loading::before {\r\n\tanimation: codicon-spin 1.25s linear infinite;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -96300,7 +96858,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor-hover {\r\n\tcursor: default;\r\n\tposition: absolute;\r\n\toverflow: hidden;\r\n\tz-index: 50;\r\n\tuser-select: text;\r\n\t-webkit-user-select: text;\r\n\t-ms-user-select: text;\r\n\tbox-sizing: initial;\r\n\tanimation: fadein 100ms linear;\r\n\tline-height: 1.5em;\r\n}\r\n\r\n.monaco-editor-hover.hidden {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor-hover .hover-contents {\r\n\tpadding: 4px 8px;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover > .hover-contents:not(.code-hover-contents) {\r\n\tmax-width: 500px;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover > .hover-contents:not(.code-hover-contents) hr {\r\n\tmin-width: 100vw;\r\n}\r\n\r\n.monaco-editor-hover p,\r\n.monaco-editor-hover ul {\r\n\tmargin: 8px 0;\r\n}\r\n\r\n.monaco-editor-hover code {\r\n\tfont-family: var(--monaco-monospace-font);\r\n}\r\n\r\n.monaco-editor-hover hr {\r\n\tmargin-top: 4px;\r\n\tmargin-bottom: -6px;\r\n\tmargin-left: -10px;\r\n\tmargin-right: -10px;\r\n\theight: 1px;\r\n}\r\n\r\n.monaco-editor-hover p:first-child,\r\n.monaco-editor-hover ul:first-child {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor-hover p:last-child,\r\n.monaco-editor-hover ul:last-child {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n/* MarkupContent Layout */\r\n.monaco-editor-hover ul {\r\n\tpadding-left: 20px;\r\n}\r\n.monaco-editor-hover ol {\r\n\tpadding-left: 20px;\r\n}\r\n\r\n.monaco-editor-hover li > p {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.monaco-editor-hover li > ul {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor-hover code {\r\n\tborder-radius: 3px;\r\n\tpadding: 0 0.4em;\r\n}\r\n\r\n.monaco-editor-hover .monaco-tokenized-source {\r\n\twhite-space: pre-wrap;\r\n\tword-break: break-all;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar {\r\n\tfont-size: 12px;\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions {\r\n\tdisplay: flex;\r\n\tpadding: 0px 8px;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions .action-container {\r\n\tmargin-right: 16px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions .action-container .action .icon {\r\n\tpadding-right: 4px;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover .hover-contents .codicon {\r\n\tcolor: inherit;\r\n\tfont-size: inherit;\r\n\tvertical-align: middle;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-split-view2 {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-split-view2 > .sash-container {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-split-view2 > .sash-container > .monaco-sash {\r\n\tpointer-events: initial;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\twhite-space: nowrap;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container > .split-view-view {\r\n\twhite-space: initial;\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container > .split-view-view:not(.visible) {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-split-view2.vertical > .split-view-container > .split-view-view {\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-split-view2.horizontal > .split-view-container > .split-view-view {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-split-view2.separator-border > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\tcontent: ' ';\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tz-index: 5;\r\n\tpointer-events: none;\r\n\tbackground-color: var(--separator-border);\r\n}\r\n\r\n.monaco-split-view2.separator-border.horizontal > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\theight: 100%;\r\n\twidth: 1px;\r\n}\r\n\r\n.monaco-split-view2.separator-border.vertical > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\theight: 1px;\r\n\twidth: 100%;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -96339,19 +96897,97 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.colorpicker-widget {\r\n\theight: 190px;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-editor .colorpicker-hover:focus {\r\n\toutline: none;\r\n}\r\n\r\n\r\n/* Header */\r\n\r\n.colorpicker-header {\r\n\tdisplay: flex;\r\n\theight: 24px;\r\n\tposition: relative;\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=\");\r\n\tbackground-size: 9px 9px;\r\n\timage-rendering: pixelated;\r\n}\r\n\r\n.colorpicker-header .picked-color {\r\n\twidth: 216px;\r\n\ttext-align: center;\r\n\tline-height: 24px;\r\n\tcursor: pointer;\r\n\tcolor: white;\r\n\tflex: 1;\r\n\ttext-align: center;\r\n}\r\n\r\n.colorpicker-header .picked-color.light {\r\n\tcolor: black;\r\n}\r\n\r\n.colorpicker-header .original-color {\r\n\twidth: 74px;\r\n\tz-index: inherit;\r\n\tcursor: pointer;\r\n}\r\n\r\n\r\n/* Body */\r\n\r\n.colorpicker-body {\r\n\tdisplay: flex;\r\n\tpadding: 8px;\r\n\tposition: relative;\r\n}\r\n\r\n.colorpicker-body .saturation-wrap {\r\n\toverflow: hidden;\r\n\theight: 150px;\r\n\tposition: relative;\r\n\tmin-width: 220px;\r\n\tflex: 1;\r\n}\r\n\r\n.colorpicker-body .saturation-box {\r\n\theight: 150px;\r\n\tposition: absolute;\r\n}\r\n\r\n.colorpicker-body .saturation-selection {\r\n\twidth: 9px;\r\n\theight: 9px;\r\n\tmargin: -5px 0 0 -5px;\r\n\tborder: 1px solid rgb(255, 255, 255);\r\n\tborder-radius: 100%;\r\n\tbox-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);\r\n\tposition: absolute;\r\n}\r\n\r\n.colorpicker-body .strip {\r\n\twidth: 25px;\r\n\theight: 150px;\r\n}\r\n\r\n.colorpicker-body .hue-strip {\r\n\tposition: relative;\r\n\tmargin-left: 8px;\r\n\tcursor: grab;\r\n\tbackground: linear-gradient(to bottom, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);\r\n}\r\n\r\n.colorpicker-body .opacity-strip {\r\n\tposition: relative;\r\n\tmargin-left: 8px;\r\n\tcursor: grab;\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=\");\r\n\tbackground-size: 9px 9px;\r\n\timage-rendering: pixelated;\r\n}\r\n\r\n.colorpicker-body .strip.grabbing {\r\n\tcursor: grabbing;\r\n}\r\n\r\n.colorpicker-body .slider {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: -2px;\r\n\twidth: calc(100% + 4px);\r\n\theight: 4px;\r\n\tbox-sizing: border-box;\r\n\tborder: 1px solid rgba(255, 255, 255, 0.71);\r\n\tbox-shadow: 0px 0px 1px rgba(0, 0, 0, 0.85);\r\n}\r\n\r\n.colorpicker-body .strip .overlay {\r\n\theight: 150px;\r\n\tpointer-events: none;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .goto-definition-link {\r\n\ttext-decoration: underline;\r\n\tcursor: pointer;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 /* 304 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(305);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor-hover {\r\n\tcursor: default;\r\n\tposition: absolute;\r\n\toverflow: hidden;\r\n\tz-index: 50;\r\n\tuser-select: text;\r\n\t-webkit-user-select: text;\r\n\t-ms-user-select: text;\r\n\tbox-sizing: initial;\r\n\tanimation: fadein 100ms linear;\r\n\tline-height: 1.5em;\r\n}\r\n\r\n.monaco-editor-hover.hidden {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor-hover .hover-contents {\r\n\tpadding: 4px 8px;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover > .hover-contents:not(.code-hover-contents) {\r\n\tmax-width: 500px;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover > .hover-contents:not(.code-hover-contents) hr {\r\n\tmin-width: 100vw;\r\n}\r\n\r\n.monaco-editor-hover p,\r\n.monaco-editor-hover ul {\r\n\tmargin: 8px 0;\r\n}\r\n\r\n.monaco-editor-hover code {\r\n\tfont-family: var(--monaco-monospace-font);\r\n}\r\n\r\n.monaco-editor-hover hr {\r\n\tmargin-top: 4px;\r\n\tmargin-bottom: -6px;\r\n\tmargin-left: -10px;\r\n\tmargin-right: -10px;\r\n\theight: 1px;\r\n}\r\n\r\n.monaco-editor-hover p:first-child,\r\n.monaco-editor-hover ul:first-child {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor-hover p:last-child,\r\n.monaco-editor-hover ul:last-child {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n/* MarkupContent Layout */\r\n.monaco-editor-hover ul {\r\n\tpadding-left: 20px;\r\n}\r\n.monaco-editor-hover ol {\r\n\tpadding-left: 20px;\r\n}\r\n\r\n.monaco-editor-hover li > p {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.monaco-editor-hover li > ul {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor-hover code {\r\n\tborder-radius: 3px;\r\n\tpadding: 0 0.4em;\r\n}\r\n\r\n.monaco-editor-hover .monaco-tokenized-source {\r\n\twhite-space: pre-wrap;\r\n\tword-break: break-all;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar {\r\n\tfont-size: 12px;\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions {\r\n\tdisplay: flex;\r\n\tpadding: 0px 8px;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions .action-container {\r\n\tmargin-right: 16px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions .action-container .action .icon {\r\n\tpadding-right: 4px;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover .hover-contents .codicon {\r\n\tcolor: inherit;\r\n\tfont-size: inherit;\r\n\tvertical-align: middle;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 306 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(307);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 307 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.colorpicker-widget {\r\n\theight: 190px;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-editor .colorpicker-hover:focus {\r\n\toutline: none;\r\n}\r\n\r\n\r\n/* Header */\r\n\r\n.colorpicker-header {\r\n\tdisplay: flex;\r\n\theight: 24px;\r\n\tposition: relative;\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=\");\r\n\tbackground-size: 9px 9px;\r\n\timage-rendering: pixelated;\r\n}\r\n\r\n.colorpicker-header .picked-color {\r\n\twidth: 216px;\r\n\ttext-align: center;\r\n\tline-height: 24px;\r\n\tcursor: pointer;\r\n\tcolor: white;\r\n\tflex: 1;\r\n\ttext-align: center;\r\n}\r\n\r\n.colorpicker-header .picked-color.light {\r\n\tcolor: black;\r\n}\r\n\r\n.colorpicker-header .original-color {\r\n\twidth: 74px;\r\n\tz-index: inherit;\r\n\tcursor: pointer;\r\n}\r\n\r\n\r\n/* Body */\r\n\r\n.colorpicker-body {\r\n\tdisplay: flex;\r\n\tpadding: 8px;\r\n\tposition: relative;\r\n}\r\n\r\n.colorpicker-body .saturation-wrap {\r\n\toverflow: hidden;\r\n\theight: 150px;\r\n\tposition: relative;\r\n\tmin-width: 220px;\r\n\tflex: 1;\r\n}\r\n\r\n.colorpicker-body .saturation-box {\r\n\theight: 150px;\r\n\tposition: absolute;\r\n}\r\n\r\n.colorpicker-body .saturation-selection {\r\n\twidth: 9px;\r\n\theight: 9px;\r\n\tmargin: -5px 0 0 -5px;\r\n\tborder: 1px solid rgb(255, 255, 255);\r\n\tborder-radius: 100%;\r\n\tbox-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);\r\n\tposition: absolute;\r\n}\r\n\r\n.colorpicker-body .strip {\r\n\twidth: 25px;\r\n\theight: 150px;\r\n}\r\n\r\n.colorpicker-body .hue-strip {\r\n\tposition: relative;\r\n\tmargin-left: 8px;\r\n\tcursor: grab;\r\n\tbackground: linear-gradient(to bottom, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);\r\n}\r\n\r\n.colorpicker-body .opacity-strip {\r\n\tposition: relative;\r\n\tmargin-left: 8px;\r\n\tcursor: grab;\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=\");\r\n\tbackground-size: 9px 9px;\r\n\timage-rendering: pixelated;\r\n}\r\n\r\n.colorpicker-body .strip.grabbing {\r\n\tcursor: grabbing;\r\n}\r\n\r\n.colorpicker-body .slider {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: -2px;\r\n\twidth: calc(100% + 4px);\r\n\theight: 4px;\r\n\tbox-sizing: border-box;\r\n\tborder: 1px solid rgba(255, 255, 255, 0.71);\r\n\tbox-shadow: 0px 0px 1px rgba(0, 0, 0, 0.85);\r\n}\r\n\r\n.colorpicker-body .strip .overlay {\r\n\theight: 150px;\r\n\tpointer-events: none;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 308 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IPadShowKeyboard", function() { return IPadShowKeyboard; });
-/* harmony import */ var _iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(305);
+/* harmony import */ var _iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(309);
 /* harmony import */ var _iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_browser_browser_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
 /* harmony import */ var _base_browser_dom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
@@ -96451,11 +97087,11 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 
 
 /***/ }),
-/* 305 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(306);
+            var content = __webpack_require__(310);
 
             content = content.__esModule ? content.default : content;
 
@@ -96477,7 +97113,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 306 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -96490,12 +97126,12 @@ module.exports = exports;
 
 
 /***/ }),
-/* 307 */
+/* 311 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _inspectTokens_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(308);
+/* harmony import */ var _inspectTokens_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(312);
 /* harmony import */ var _inspectTokens_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_inspectTokens_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_common_color_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 /* harmony import */ var _base_common_lifecycle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
@@ -96800,11 +97436,11 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_10__[/* r
 
 
 /***/ }),
-/* 308 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(309);
+            var content = __webpack_require__(313);
 
             content = content.__esModule ? content.default : content;
 
@@ -96826,7 +97462,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 309 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -96839,11 +97475,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 310 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(311);
+            var content = __webpack_require__(315);
 
             content = content.__esModule ? content.default : content;
 
@@ -96865,7 +97501,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 311 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -96878,7 +97514,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 312 */
+/* 316 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96908,7 +97544,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_model_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(46);
 /* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(28);
 /* harmony import */ var _common_modes_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(11);
-/* harmony import */ var _find_findController_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(169);
+/* harmony import */ var _find_findController_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(170);
 /* harmony import */ var _platform_theme_common_colorRegistry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4);
 /* harmony import */ var _platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(17);
 /* harmony import */ var _platform_contextkey_common_contextkey_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(10);
@@ -97874,11 +98510,11 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 
 
 /***/ }),
-/* 313 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(26);
-            var content = __webpack_require__(314);
+            var content = __webpack_require__(318);
 
             content = content.__esModule ? content.default : content;
 
@@ -97900,7 +98536,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 314 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -97913,7 +98549,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 315 */
+/* 319 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98065,84 +98701,6 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_5__[/* registerEdit
 
 
 /***/ }),
-/* 316 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(317);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 317 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tfont-size: 13px;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 318 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(319);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 319 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-list .monaco-list-row.focused.selected .outline-element .monaco-highlighted-label,\r\n.monaco-list .monaco-list-row.focused.selected .outline-element-decoration {\r\n\t/* make sure selection color wins when a label is being selected */\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-list .outline-element {\r\n\tdisplay: flex;\r\n\tflex: 1;\r\n\tflex-flow: row nowrap;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-list .outline-element .monaco-highlighted-label {\r\n\tcolor: var(--outline-element-color);\r\n}\r\n\r\n.monaco-tree .monaco-tree-row.focused .outline-element .outline-element-detail {\r\n\tvisibility: inherit;\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-decoration {\r\n\topacity: 0.75;\r\n\tfont-size: 90%;\r\n\tfont-weight: 600;\r\n\tpadding: 0 12px 0 5px;\r\n\tmargin-left: auto;\r\n\ttext-align: center;\r\n\tcolor: var(--outline-element-color);\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-decoration.bubble {\r\n\tfont-family: codicon;\r\n\tfont-size: 14px;\r\n\topacity: 0.4;\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-icon {\r\n\tmargin-right: 4px;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
 /* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -98176,13 +98734,91 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-workbench .monaco-icon-label.deprecated {\r\n\ttext-decoration: line-through;\r\n\topacity: 0.66;\r\n}\r\n\r\n.monaco-workbench .symbol-icon.inline {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tpadding-left: 0;\r\n}\r\n\r\n.monaco-workbench .symbol-icon.block {\r\n\tdisplay: inline-block;\r\n\theight: 14px;\r\n\twidth: 16px;\r\n\tmin-height: 14px;\r\n\tmin-width: 16px;\r\n\tbackground-position: center;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tfont-size: 13px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 /* 322 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(323);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 323 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-list .monaco-list-row.focused.selected .outline-element .monaco-highlighted-label,\r\n.monaco-list .monaco-list-row.focused.selected .outline-element-decoration {\r\n\t/* make sure selection color wins when a label is being selected */\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-list .outline-element {\r\n\tdisplay: flex;\r\n\tflex: 1;\r\n\tflex-flow: row nowrap;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-list .outline-element .monaco-highlighted-label {\r\n\tcolor: var(--outline-element-color);\r\n}\r\n\r\n.monaco-tree .monaco-tree-row.focused .outline-element .outline-element-detail {\r\n\tvisibility: inherit;\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-decoration {\r\n\topacity: 0.75;\r\n\tfont-size: 90%;\r\n\tfont-weight: 600;\r\n\tpadding: 0 12px 0 5px;\r\n\tmargin-left: auto;\r\n\ttext-align: center;\r\n\tcolor: var(--outline-element-color);\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-decoration.bubble {\r\n\tfont-family: codicon;\r\n\tfont-size: 14px;\r\n\topacity: 0.4;\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-icon {\r\n\tmargin-right: 4px;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 324 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(325);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 325 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-workbench .monaco-icon-label.deprecated {\r\n\ttext-decoration: line-through;\r\n\topacity: 0.66;\r\n}\r\n\r\n.monaco-workbench .symbol-icon.inline {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tpadding-left: 0;\r\n}\r\n\r\n.monaco-workbench .symbol-icon.block {\r\n\tdisplay: inline-block;\r\n\theight: 14px;\r\n\twidth: 16px;\r\n\tmin-height: 14px;\r\n\tmin-width: 16px;\r\n\tbackground-position: center;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 326 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98250,84 +98886,6 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 323 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(324);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 324 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .rename-box {\r\n\tz-index: 100;\r\n\tcolor: inherit;\r\n}\r\n\r\n.monaco-editor .rename-box .rename-input {\r\n\tpadding: 4px;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 325 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(326);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 326 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .snippet-placeholder {\r\n\tmin-width: 2px;\r\n\toutline-style: solid;\r\n\toutline-width: 1px;\r\n}\r\n\r\n.monaco-editor .finish-snippet-placeholder {\r\n\toutline-style: solid;\r\n\toutline-width: 1px;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
 /* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -98361,13 +98919,91 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Suggest widget*/\r\n.monaco-editor .suggest-widget {\r\n\tz-index: 40;\r\n}\r\n\r\n/** Initial widths **/\r\n\r\n.monaco-editor .suggest-widget {\r\n\twidth: 430px;\r\n}\r\n\r\n.monaco-editor .suggest-widget > .message,\r\n.monaco-editor .suggest-widget > .tree,\r\n.monaco-editor .suggest-widget > .details {\r\n\twidth: 100%;\r\n\tborder-style: solid;\r\n\tborder-width: 1px;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor.hc-black .suggest-widget > .message,\r\n.monaco-editor.hc-black .suggest-widget > .tree,\r\n.monaco-editor.hc-black .suggest-widget > .details {\r\n\tborder-width: 2px;\r\n}\r\n\r\n/** Adjust width when docs are expanded to the side **/\r\n.monaco-editor .suggest-widget.docs-side {\r\n\twidth: 660px;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-side > .tree,\r\n.monaco-editor .suggest-widget.docs-side > .details {\r\n\twidth: 50%;\r\n\tfloat: left;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-side.list-right > .tree,\r\n.monaco-editor .suggest-widget.docs-side.list-right > .details  {\r\n\tfloat: right;\r\n}\r\n\r\n/* MarkupContent Layout */\r\n.monaco-editor .suggest-widget > .details ul {\r\n\tpadding-left: 20px;\r\n}\r\n.monaco-editor .suggest-widget > .details ol {\r\n\tpadding-left: 20px;\r\n}\r\n\r\n.monaco-editor .suggest-widget > .details p code {\r\n\tfont-family: var(--monaco-monospace-font);\r\n}\r\n\r\n/* Styles for Message element for when widget is loading or is empty */\r\n.monaco-editor .suggest-widget > .message {\r\n\tpadding-left: 22px;\r\n}\r\n\r\n/** Styles for the list element **/\r\n.monaco-editor .suggest-widget > .tree {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n/** Styles for each row in the list element **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row {\r\n\tdisplay: flex;\r\n\t-mox-box-sizing: border-box;\r\n\tbox-sizing: border-box;\r\n\tpadding-right: 10px;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: 2px 2px;\r\n\twhite-space: nowrap;\r\n\tcursor: pointer;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents {\r\n\tflex: 1;\r\n\theight: 100%;\r\n\toverflow: hidden;\r\n\tpadding-left: 2px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main {\r\n\tdisplay: flex;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: pre;\r\n}\r\n\r\n.monaco-editor .suggest-widget:not(.frozen) .monaco-highlighted-label .highlight {\r\n\tfont-weight: bold;\r\n}\r\n\r\n/** Icon styles **/\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore::before {\r\n\tcolor: inherit;\r\n\topacity: 0.6;\r\n\tfont-size: 14px;\r\n\tmargin-left: 4px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close {\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tright: 2px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close:hover,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore:hover {\r\n\topacity: 1;\r\n}\r\n\r\n/** Type Info and icon next to the label in the focused completion item **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label {\r\n\tmargin-left: 0.8em;\r\n\tflex: 1;\r\n\ttext-align: right;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\topacity: 0.7;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label > .monaco-tokenized-source {\r\n\tdisplay: inline;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label,\r\n.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row.focused > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row.focused > .contents > .main > .type-label,\r\n.monaco-editor .suggest-widget.docs-below .monaco-list .monaco-list-row.focused > .contents > .main > .readMore {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused > .contents > .main > .type-label {\r\n\tdisplay: inline;\r\n}\r\n\r\n/** Styles for each row in the list **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated {\r\n\topacity: 0.66;\r\n\ttext-decoration: unset;\r\n}\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated > .monaco-icon-label-description-container {\r\n\ttext-decoration: line-through;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label::before {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon {\r\n\tdisplay: block;\r\n\theight: 16px;\r\n\twidth: 16px;\r\n\tmargin-left: 2px;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 80%;\r\n\tbackground-position: center;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.hide {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .suggest-icon {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .icon,\r\n.monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .suggest-icon::before {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.customcolor .colorspan {\r\n\tmargin: 0 0 0 0.3em;\r\n\tborder: 0.1em solid #000;\r\n\twidth: 0.7em;\r\n\theight: 0.7em;\r\n\tdisplay: inline-block;\r\n}\r\n\r\n/** Styles for the docs of the completion item in focus **/\r\n.monaco-editor .suggest-widget .details {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details.no-docs {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-below .details {\r\n\tborder-top-width: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element {\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body {\r\n\tposition: absolute;\r\n\tbox-sizing: border-box;\r\n\theight: 100%;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .type {\r\n\tflex: 2;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\topacity: 0.7;\r\n\tword-break: break-all;\r\n\tmargin: 0 24px 0 0;\r\n\tpadding: 4px 0 12px 5px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs {\r\n\tmargin: 0;\r\n\tpadding: 4px 5px;\r\n\twhite-space: pre-wrap;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs {\r\n\tpadding: 0;\r\n\twhite-space: initial;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div,\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > span:not(:empty) {\r\n\tpadding: 4px 5px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div > p:first-child {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div > p:last-child\t {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs .code {\r\n\twhite-space: pre-wrap;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > p:empty {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details code {\r\n\tborder-radius: 3px;\r\n\tpadding: 0 0.4em;\r\n}\r\n\r\n\r\n/* replace/insert decorations */\r\n\r\n.monaco-editor .suggest-insert-unexpected {\r\n\tfont-style: italic;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .rename-box {\r\n\tz-index: 100;\r\n\tcolor: inherit;\r\n}\r\n\r\n.monaco-editor .rename-box .rename-input {\r\n\tpadding: 4px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 /* 329 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(330);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 330 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .snippet-placeholder {\r\n\tmin-width: 2px;\r\n\toutline-style: solid;\r\n\toutline-width: 1px;\r\n}\r\n\r\n.monaco-editor .finish-snippet-placeholder {\r\n\toutline-style: solid;\r\n\toutline-width: 1px;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 331 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(26);
+            var content = __webpack_require__(332);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 332 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Suggest widget*/\r\n.monaco-editor .suggest-widget {\r\n\tz-index: 40;\r\n}\r\n\r\n/** Initial widths **/\r\n\r\n.monaco-editor .suggest-widget {\r\n\twidth: 430px;\r\n}\r\n\r\n.monaco-editor .suggest-widget > .message,\r\n.monaco-editor .suggest-widget > .tree,\r\n.monaco-editor .suggest-widget > .details {\r\n\twidth: 100%;\r\n\tborder-style: solid;\r\n\tborder-width: 1px;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor.hc-black .suggest-widget > .message,\r\n.monaco-editor.hc-black .suggest-widget > .tree,\r\n.monaco-editor.hc-black .suggest-widget > .details {\r\n\tborder-width: 2px;\r\n}\r\n\r\n/** Adjust width when docs are expanded to the side **/\r\n.monaco-editor .suggest-widget.docs-side {\r\n\twidth: 660px;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-side > .tree,\r\n.monaco-editor .suggest-widget.docs-side > .details {\r\n\twidth: 50%;\r\n\tfloat: left;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-side.list-right > .tree,\r\n.monaco-editor .suggest-widget.docs-side.list-right > .details  {\r\n\tfloat: right;\r\n}\r\n\r\n/* MarkupContent Layout */\r\n.monaco-editor .suggest-widget > .details ul {\r\n\tpadding-left: 20px;\r\n}\r\n.monaco-editor .suggest-widget > .details ol {\r\n\tpadding-left: 20px;\r\n}\r\n\r\n.monaco-editor .suggest-widget > .details p code {\r\n\tfont-family: var(--monaco-monospace-font);\r\n}\r\n\r\n/* Styles for Message element for when widget is loading or is empty */\r\n.monaco-editor .suggest-widget > .message {\r\n\tpadding-left: 22px;\r\n}\r\n\r\n/** Styles for the list element **/\r\n.monaco-editor .suggest-widget > .tree {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n/** Styles for each row in the list element **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row {\r\n\tdisplay: flex;\r\n\t-mox-box-sizing: border-box;\r\n\tbox-sizing: border-box;\r\n\tpadding-right: 10px;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: 2px 2px;\r\n\twhite-space: nowrap;\r\n\tcursor: pointer;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents {\r\n\tflex: 1;\r\n\theight: 100%;\r\n\toverflow: hidden;\r\n\tpadding-left: 2px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main {\r\n\tdisplay: flex;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: pre;\r\n}\r\n\r\n.monaco-editor .suggest-widget:not(.frozen) .monaco-highlighted-label .highlight {\r\n\tfont-weight: bold;\r\n}\r\n\r\n/** Icon styles **/\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore::before {\r\n\tcolor: inherit;\r\n\topacity: 0.6;\r\n\tfont-size: 14px;\r\n\tmargin-left: 4px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close {\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tright: 2px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close:hover,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore:hover {\r\n\topacity: 1;\r\n}\r\n\r\n/** Type Info and icon next to the label in the focused completion item **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label {\r\n\tmargin-left: 0.8em;\r\n\tflex: 1;\r\n\ttext-align: right;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\topacity: 0.7;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label > .monaco-tokenized-source {\r\n\tdisplay: inline;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label,\r\n.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row.focused > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row.focused > .contents > .main > .type-label,\r\n.monaco-editor .suggest-widget.docs-below .monaco-list .monaco-list-row.focused > .contents > .main > .readMore {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused > .contents > .main > .type-label {\r\n\tdisplay: inline;\r\n}\r\n\r\n/** Styles for each row in the list **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated {\r\n\topacity: 0.66;\r\n\ttext-decoration: unset;\r\n}\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated > .monaco-icon-label-description-container {\r\n\ttext-decoration: line-through;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label::before {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon {\r\n\tdisplay: block;\r\n\theight: 16px;\r\n\twidth: 16px;\r\n\tmargin-left: 2px;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 80%;\r\n\tbackground-position: center;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.hide {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .suggest-icon {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .icon,\r\n.monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .suggest-icon::before {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.customcolor .colorspan {\r\n\tmargin: 0 0 0 0.3em;\r\n\tborder: 0.1em solid #000;\r\n\twidth: 0.7em;\r\n\theight: 0.7em;\r\n\tdisplay: inline-block;\r\n}\r\n\r\n/** Styles for the docs of the completion item in focus **/\r\n.monaco-editor .suggest-widget .details {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details.no-docs {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-below .details {\r\n\tborder-top-width: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element {\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body {\r\n\tposition: absolute;\r\n\tbox-sizing: border-box;\r\n\theight: 100%;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .type {\r\n\tflex: 2;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\topacity: 0.7;\r\n\tword-break: break-all;\r\n\tmargin: 0 24px 0 0;\r\n\tpadding: 4px 0 12px 5px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs {\r\n\tmargin: 0;\r\n\tpadding: 4px 5px;\r\n\twhite-space: pre-wrap;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs {\r\n\tpadding: 0;\r\n\twhite-space: initial;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div,\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > span:not(:empty) {\r\n\tpadding: 4px 5px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div > p:first-child {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div > p:last-child\t {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs .code {\r\n\twhite-space: pre-wrap;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > p:empty {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details code {\r\n\tborder-radius: 3px;\r\n\tpadding: 0 0.4em;\r\n}\r\n\r\n\r\n/* replace/insert decorations */\r\n\r\n.monaco-editor .suggest-insert-unexpected {\r\n\tfont-style: italic;\r\n}\r\n\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 333 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98425,7 +99061,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 330 */
+/* 334 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98520,7 +99156,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_1__[/* registerEdit
 
 
 /***/ }),
-/* 331 */
+/* 335 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99111,7 +99747,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_14__[/* r
 
 
 /***/ }),
-/* 332 */
+/* 336 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99318,7 +99954,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 333 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(setImmediate, global) {/*!
@@ -99612,10 +100248,10 @@ Copyright (c) 2014 Forbes Lindesay
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(334).setImmediate, __webpack_require__(170)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(338).setImmediate, __webpack_require__(161)))
 
 /***/ }),
-/* 334 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -99671,7 +100307,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(335);
+__webpack_require__(339);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -99682,10 +100318,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(170)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(161)))
 
 /***/ }),
-/* 335 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -99875,85 +100511,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(170), __webpack_require__(182)))
-
-/***/ }),
-/* 336 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(337);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 337 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n\r\n/* Default standalone editor font */\r\n.monaco-editor {\r\n\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe WPC\", \"Segoe UI\", \"HelveticaNeue-Light\", \"Ubuntu\", \"Droid Sans\", sans-serif;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item .action-menu-item:focus .action-label {\r\n\tstroke-width: 1.2px;\r\n}\r\n\r\n.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label,\r\n.monaco-editor.hc-black .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label {\r\n\tstroke-width: 1.2px;\r\n}\r\n\r\n.monaco-editor-hover p {\r\n\tmargin: 0;\r\n}\r\n\r\n/* The hc-black theme is already high contrast optimized */\r\n.monaco-editor.hc-black {\r\n\t-ms-high-contrast-adjust: none;\r\n}\r\n/* In case the browser goes into high contrast mode and the editor is not configured with the hc-black theme */\r\n@media screen and (-ms-high-contrast:active) {\r\n\r\n\t/* current line highlight */\r\n\t.monaco-editor.vs .view-overlays .current-line,\r\n\t.monaco-editor.vs-dark .view-overlays .current-line {\r\n\t\tborder-color: windowtext !important;\r\n\t\tborder-left: 0;\r\n\t\tborder-right: 0;\r\n\t}\r\n\r\n\t/* view cursors */\r\n\t.monaco-editor.vs .cursor,\r\n\t.monaco-editor.vs-dark .cursor {\r\n\t\tbackground-color: windowtext !important;\r\n\t}\r\n\t/* dnd target */\r\n\t.monaco-editor.vs .dnd-target,\r\n\t.monaco-editor.vs-dark .dnd-target {\r\n\t\tborder-color: windowtext !important;\r\n\t}\r\n\r\n\t/* selected text background */\r\n\t.monaco-editor.vs .selected-text,\r\n\t.monaco-editor.vs-dark .selected-text {\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\r\n\t/* allow the text to have a transparent background. */\r\n\t.monaco-editor.vs .view-line,\r\n\t.monaco-editor.vs-dark .view-line {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t}\r\n\r\n\t/* text color */\r\n\t.monaco-editor.vs .view-line span,\r\n\t.monaco-editor.vs-dark .view-line span {\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t/* selected text color */\r\n\t.monaco-editor.vs .view-line span.inline-selected-text,\r\n\t.monaco-editor.vs-dark .view-line span.inline-selected-text {\r\n\t\tcolor: highlighttext !important;\r\n\t}\r\n\r\n\t/* allow decorations */\r\n\t.monaco-editor.vs .view-overlays,\r\n\t.monaco-editor.vs-dark .view-overlays {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t}\r\n\r\n\t/* various decorations */\r\n\t.monaco-editor.vs .selectionHighlight,\r\n\t.monaco-editor.vs-dark .selectionHighlight,\r\n\t.monaco-editor.vs .wordHighlight,\r\n\t.monaco-editor.vs-dark .wordHighlight,\r\n\t.monaco-editor.vs .wordHighlightStrong,\r\n\t.monaco-editor.vs-dark .wordHighlightStrong,\r\n\t.monaco-editor.vs .reference-decoration,\r\n\t.monaco-editor.vs-dark .reference-decoration {\r\n\t\tborder: 2px dotted highlight !important;\r\n\t\tbackground: transparent !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .rangeHighlight,\r\n\t.monaco-editor.vs-dark .rangeHighlight {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px dotted activeborder !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .bracket-match,\r\n\t.monaco-editor.vs-dark .bracket-match {\r\n\t\tborder-color: windowtext !important;\r\n\t\tbackground: transparent !important;\r\n\t}\r\n\r\n\t/* find widget */\r\n\t.monaco-editor.vs .findMatch,\r\n\t.monaco-editor.vs-dark .findMatch,\r\n\t.monaco-editor.vs .currentFindMatch,\r\n\t.monaco-editor.vs-dark .currentFindMatch {\r\n\t\tborder: 2px dotted activeborder !important;\r\n\t\tbackground: transparent !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .find-widget,\r\n\t.monaco-editor.vs-dark .find-widget {\r\n\t\tborder: 1px solid windowtext;\r\n\t}\r\n\r\n\t/* list - used by suggest widget */\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row.focused,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row.focused {\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row:hover,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row:hover {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* tree */\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row.selected,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row.selected,\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row.focused,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row.focused {\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row:hover,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row:hover {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* scrollbars */\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tbackground: background !important;\r\n\t\tborder: 1px solid windowtext;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider {\r\n\t\tbackground: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider:hover,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\t\tbackground: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider.active,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\t\tbackground: highlight !important;\r\n\t}\r\n\r\n\t/* overview ruler */\r\n\t.monaco-editor.vs .decorationsOverviewRuler,\r\n\t.monaco-editor.vs-dark .decorationsOverviewRuler {\r\n\t\topacity: 0;\r\n\t}\r\n\r\n\t/* minimap */\r\n\t.monaco-editor.vs .minimap,\r\n\t.monaco-editor.vs-dark .minimap {\r\n\t\tdisplay: none;\r\n\t}\r\n\r\n\t/* squiggles */\r\n\t.monaco-editor.vs .squiggly-d-error,\r\n\t.monaco-editor.vs-dark .squiggly-d-error {\r\n\t\tbackground: transparent !important;\r\n\t\tborder-bottom: 4px double #E47777;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-c-warning,\r\n\t.monaco-editor.vs-dark .squiggly-c-warning {\r\n\t\tborder-bottom: 4px double #71B771;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-b-info,\r\n\t.monaco-editor.vs-dark .squiggly-b-info {\r\n\t\tborder-bottom: 4px double #71B771;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-a-hint,\r\n\t.monaco-editor.vs-dark .squiggly-a-hint {\r\n\t\tborder-bottom: 4px double #6c6c6c;\r\n\t}\r\n\r\n\t/* contextmenu */\r\n\t.monaco-editor.vs .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label,\r\n\t.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-menu .monaco-action-bar.vertical .action-menu-item:hover .action-label,\r\n\t.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:hover .action-label {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* diff editor */\r\n\t.monaco-diff-editor.vs .diffOverviewRuler,\r\n\t.monaco-diff-editor.vs-dark .diffOverviewRuler {\r\n\t\tdisplay: none;\r\n\t}\r\n\t.monaco-editor.vs .line-insert,\r\n\t.monaco-editor.vs-dark .line-insert,\r\n\t.monaco-editor.vs .line-delete,\r\n\t.monaco-editor.vs-dark .line-delete {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .char-insert,\r\n\t.monaco-editor.vs-dark .char-insert,\r\n\t.monaco-editor.vs .char-delete,\r\n\t.monaco-editor.vs-dark .char-delete {\r\n\t\tbackground: transparent !important;\r\n\t}\r\n}\r\n\r\n/*.monaco-editor.vs [tabindex=\"0\"]:focus {\r\n\toutline: 1px solid rgba(0, 122, 204, 0.4);\r\n\toutline-offset: -1px;\r\n\topacity: 1 !important;\r\n}\r\n\r\n.monaco-editor.vs-dark [tabindex=\"0\"]:focus {\r\n\toutline: 1px solid rgba(14, 99, 156, 0.6);\r\n\toutline-offset: -1px;\r\n\topacity: 1 !important;\r\n}*/\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 338 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(26);
-            var content = __webpack_require__(339);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 339 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n/* ---------- DiffEditor ---------- */\r\n\r\n.monaco-diff-editor .diffOverview {\r\n\tz-index: 9;\r\n}\r\n\r\n/* colors not externalized: using transparancy on background */\r\n.monaco-diff-editor.vs\t\t\t.diffOverview { background: rgba(0, 0, 0, 0.03); }\r\n.monaco-diff-editor.vs-dark\t\t.diffOverview { background: rgba(255, 255, 255, 0.01); }\r\n\r\n.monaco-diff-editor .diffViewport {\r\n\tbox-shadow: inset 0px 0px 1px 0px #B9B9B9;\r\n\tbackground: rgba(0, 0, 0, 0.10);\r\n}\r\n\r\n.monaco-diff-editor.vs-dark .diffViewport,\r\n.monaco-diff-editor.hc-black .diffViewport {\r\n\tbackground: rgba(255, 255, 255, 0.10);\r\n}\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.vs\t\t.scrollbar { background: rgba(0,0,0,0); }\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.vs-dark\t.scrollbar { background: rgba(0,0,0,0); }\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.hc-black\t.scrollbar { background: none; }\r\n\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor .slider {\r\n\tz-index: 10;\r\n}\r\n.modified-in-monaco-diff-editor\t\t\t\t.slider.active { background: rgba(171, 171, 171, .4); }\r\n.modified-in-monaco-diff-editor.hc-black\t.slider.active { background: none; }\r\n\r\n/* ---------- Diff ---------- */\r\n\r\n.monaco-editor .insert-sign,\r\n.monaco-diff-editor .insert-sign,\r\n.monaco-editor .delete-sign,\r\n.monaco-diff-editor .delete-sign {\r\n\tbackground-size: 60%;\r\n\topacity: 0.7;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: 75% center;\r\n\tbackground-size: 11px 11px;\r\n}\r\n.monaco-editor.hc-black .insert-sign,\r\n.monaco-diff-editor.hc-black .insert-sign,\r\n.monaco-editor.hc-black .delete-sign,\r\n.monaco-diff-editor.hc-black .delete-sign {\r\n\topacity: 1;\r\n}\r\n.monaco-editor .insert-sign,\r\n.monaco-diff-editor .insert-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNCA3VjhIOFYxNEg3VjhIMVY3SDdWMUg4VjdIMTRaIiBmaWxsPSIjNDI0MjQyIi8+DQo8L3N2Zz4NCg==\");\r\n}\r\n.monaco-editor .delete-sign,\r\n.monaco-diff-editor .delete-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNSA4SDFWN0gxNVY4WiIgZmlsbD0iIzQyNDI0MiIvPg0KPC9zdmc+DQo=\");\r\n}\r\n\r\n.monaco-editor.vs-dark .insert-sign,\r\n.monaco-diff-editor.vs-dark .insert-sign,\r\n.monaco-editor.hc-black .insert-sign,\r\n.monaco-diff-editor.hc-black .insert-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNCA3VjhIOFYxNEg3VjhIMVY3SDdWMUg4VjdIMTRaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\");\r\n}\r\n.monaco-editor.vs-dark .delete-sign,\r\n.monaco-diff-editor.vs-dark .delete-sign,\r\n.monaco-editor.hc-black .delete-sign,\r\n.monaco-diff-editor.hc-black .delete-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNSA4SDFWN0gxNVY4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPC9zdmc+DQo=\");\r\n}\r\n\r\n.monaco-editor .inline-deleted-margin-view-zone {\r\n\ttext-align: right;\r\n}\r\n.monaco-editor .inline-added-margin-view-zone {\r\n\ttext-align: right;\r\n}\r\n\r\n.monaco-editor .diagonal-fill {\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAChJREFUKFNjOH/+fAMDDgCSu3Dhwn9c8gwwBTgNGR4KQP4HhQOhsAIAZCBTkhtqePcAAAAASUVORK5CYII=\");\r\n}\r\n.monaco-editor.vs-dark .diagonal-fill {\r\n\topacity: 0.2;\r\n}\r\n.monaco-editor.hc-black .diagonal-fill {\r\n\tbackground: none;\r\n}\r\n\r\n/* ---------- Inline Diff ---------- */\r\n\r\n.monaco-editor .view-zones .view-lines .view-line span {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-editor .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiM0MjQyNDIiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiM0MjQyNDIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n\r\n.monaco-editor.vs-dark .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph,\r\n.monaco-editor.hc-dark .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiNDMkMyQzIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n\r\n.monaco-editor .margin-view-zones .lightbulb-glyph:hover {\r\n\tcursor: pointer;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(161), __webpack_require__(182)))
 
 /***/ }),
 /* 340 */
@@ -99989,7 +100547,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-diff-editor .diff-review-line-number {\r\n\ttext-align: right;\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-diff-editor .diff-review {\r\n\tposition: absolute;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-summary {\r\n\tpadding-left: 10px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-shadow {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-row {\r\n\twhite-space: pre;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-table {\r\n\tdisplay: table;\r\n\tmin-width: 100%;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-row {\r\n\tdisplay: table-row;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-cell {\r\n\tdisplay: table-cell;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-spacer {\r\n\tdisplay: inline-block;\r\n\twidth: 10px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-actions {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tright: 10px;\r\n\ttop: 2px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-actions .action-label {\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tmargin: 2px 0;\r\n}\r\n.monaco-diff-editor .action-label.icon.close-diff-review {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOC4wMDAwMSA4LjcwNzExTDExLjY0NjUgMTIuMzUzNkwxMi4zNTM2IDExLjY0NjVMOC43MDcxMSA4LjAwMDAxTDEyLjM1MzYgNC4zNTM1NkwxMS42NDY1IDMuNjQ2NDVMOC4wMDAwMSA3LjI5MjlMNC4zNTM1NiAzLjY0NjQ1TDMuNjQ2NDUgNC4zNTM1Nkw3LjI5MjkgOC4wMDAwMUwzLjY0NjQ1IDExLjY0NjVMNC4zNTM1NiAxMi4zNTM2TDguMDAwMDEgOC43MDcxMVoiIGZpbGw9IiM0MjQyNDIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n.monaco-diff-editor.hc-black .action-label.icon.close-diff-review,\r\n.monaco-diff-editor.vs-dark .action-label.icon.close-diff-review {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOC4wMDAwMSA4LjcwNzExTDExLjY0NjUgMTIuMzUzNkwxMi4zNTM2IDExLjY0NjVMOC43MDcxMSA4LjAwMDAxTDEyLjM1MzYgNC4zNTM1NkwxMS42NDY1IDMuNjQ2NDVMOC4wMDAwMSA3LjI5MjlMNC4zNTM1NiAzLjY0NjQ1TDMuNjQ2NDUgNC4zNTM1Nkw3LjI5MjkgOC4wMDAwMUwzLjY0NjQ1IDExLjY0NjVMNC4zNTM1NiAxMi4zNTM2TDguMDAwMDEgOC43MDcxMVoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n\r\n/* Default standalone editor font */\r\n.monaco-editor {\r\n\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe WPC\", \"Segoe UI\", \"HelveticaNeue-Light\", \"Ubuntu\", \"Droid Sans\", sans-serif;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item .action-menu-item:focus .action-label {\r\n\tstroke-width: 1.2px;\r\n}\r\n\r\n.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label,\r\n.monaco-editor.hc-black .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label {\r\n\tstroke-width: 1.2px;\r\n}\r\n\r\n.monaco-editor-hover p {\r\n\tmargin: 0;\r\n}\r\n\r\n/* The hc-black theme is already high contrast optimized */\r\n.monaco-editor.hc-black {\r\n\t-ms-high-contrast-adjust: none;\r\n}\r\n/* In case the browser goes into high contrast mode and the editor is not configured with the hc-black theme */\r\n@media screen and (-ms-high-contrast:active) {\r\n\r\n\t/* current line highlight */\r\n\t.monaco-editor.vs .view-overlays .current-line,\r\n\t.monaco-editor.vs-dark .view-overlays .current-line {\r\n\t\tborder-color: windowtext !important;\r\n\t\tborder-left: 0;\r\n\t\tborder-right: 0;\r\n\t}\r\n\r\n\t/* view cursors */\r\n\t.monaco-editor.vs .cursor,\r\n\t.monaco-editor.vs-dark .cursor {\r\n\t\tbackground-color: windowtext !important;\r\n\t}\r\n\t/* dnd target */\r\n\t.monaco-editor.vs .dnd-target,\r\n\t.monaco-editor.vs-dark .dnd-target {\r\n\t\tborder-color: windowtext !important;\r\n\t}\r\n\r\n\t/* selected text background */\r\n\t.monaco-editor.vs .selected-text,\r\n\t.monaco-editor.vs-dark .selected-text {\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\r\n\t/* allow the text to have a transparent background. */\r\n\t.monaco-editor.vs .view-line,\r\n\t.monaco-editor.vs-dark .view-line {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t}\r\n\r\n\t/* text color */\r\n\t.monaco-editor.vs .view-line span,\r\n\t.monaco-editor.vs-dark .view-line span {\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t/* selected text color */\r\n\t.monaco-editor.vs .view-line span.inline-selected-text,\r\n\t.monaco-editor.vs-dark .view-line span.inline-selected-text {\r\n\t\tcolor: highlighttext !important;\r\n\t}\r\n\r\n\t/* allow decorations */\r\n\t.monaco-editor.vs .view-overlays,\r\n\t.monaco-editor.vs-dark .view-overlays {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t}\r\n\r\n\t/* various decorations */\r\n\t.monaco-editor.vs .selectionHighlight,\r\n\t.monaco-editor.vs-dark .selectionHighlight,\r\n\t.monaco-editor.vs .wordHighlight,\r\n\t.monaco-editor.vs-dark .wordHighlight,\r\n\t.monaco-editor.vs .wordHighlightStrong,\r\n\t.monaco-editor.vs-dark .wordHighlightStrong,\r\n\t.monaco-editor.vs .reference-decoration,\r\n\t.monaco-editor.vs-dark .reference-decoration {\r\n\t\tborder: 2px dotted highlight !important;\r\n\t\tbackground: transparent !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .rangeHighlight,\r\n\t.monaco-editor.vs-dark .rangeHighlight {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px dotted activeborder !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .bracket-match,\r\n\t.monaco-editor.vs-dark .bracket-match {\r\n\t\tborder-color: windowtext !important;\r\n\t\tbackground: transparent !important;\r\n\t}\r\n\r\n\t/* find widget */\r\n\t.monaco-editor.vs .findMatch,\r\n\t.monaco-editor.vs-dark .findMatch,\r\n\t.monaco-editor.vs .currentFindMatch,\r\n\t.monaco-editor.vs-dark .currentFindMatch {\r\n\t\tborder: 2px dotted activeborder !important;\r\n\t\tbackground: transparent !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .find-widget,\r\n\t.monaco-editor.vs-dark .find-widget {\r\n\t\tborder: 1px solid windowtext;\r\n\t}\r\n\r\n\t/* list - used by suggest widget */\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row.focused,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row.focused {\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row:hover,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row:hover {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* tree */\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row.selected,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row.selected,\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row.focused,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row.focused {\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row:hover,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row:hover {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* scrollbars */\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tbackground: background !important;\r\n\t\tborder: 1px solid windowtext;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider {\r\n\t\tbackground: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider:hover,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\t\tbackground: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider.active,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\t\tbackground: highlight !important;\r\n\t}\r\n\r\n\t/* overview ruler */\r\n\t.monaco-editor.vs .decorationsOverviewRuler,\r\n\t.monaco-editor.vs-dark .decorationsOverviewRuler {\r\n\t\topacity: 0;\r\n\t}\r\n\r\n\t/* minimap */\r\n\t.monaco-editor.vs .minimap,\r\n\t.monaco-editor.vs-dark .minimap {\r\n\t\tdisplay: none;\r\n\t}\r\n\r\n\t/* squiggles */\r\n\t.monaco-editor.vs .squiggly-d-error,\r\n\t.monaco-editor.vs-dark .squiggly-d-error {\r\n\t\tbackground: transparent !important;\r\n\t\tborder-bottom: 4px double #E47777;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-c-warning,\r\n\t.monaco-editor.vs-dark .squiggly-c-warning {\r\n\t\tborder-bottom: 4px double #71B771;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-b-info,\r\n\t.monaco-editor.vs-dark .squiggly-b-info {\r\n\t\tborder-bottom: 4px double #71B771;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-a-hint,\r\n\t.monaco-editor.vs-dark .squiggly-a-hint {\r\n\t\tborder-bottom: 4px double #6c6c6c;\r\n\t}\r\n\r\n\t/* contextmenu */\r\n\t.monaco-editor.vs .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label,\r\n\t.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-menu .monaco-action-bar.vertical .action-menu-item:hover .action-label,\r\n\t.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:hover .action-label {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* diff editor */\r\n\t.monaco-diff-editor.vs .diffOverviewRuler,\r\n\t.monaco-diff-editor.vs-dark .diffOverviewRuler {\r\n\t\tdisplay: none;\r\n\t}\r\n\t.monaco-editor.vs .line-insert,\r\n\t.monaco-editor.vs-dark .line-insert,\r\n\t.monaco-editor.vs .line-delete,\r\n\t.monaco-editor.vs-dark .line-delete {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .char-insert,\r\n\t.monaco-editor.vs-dark .char-insert,\r\n\t.monaco-editor.vs .char-delete,\r\n\t.monaco-editor.vs-dark .char-delete {\r\n\t\tbackground: transparent !important;\r\n\t}\r\n}\r\n\r\n/*.monaco-editor.vs [tabindex=\"0\"]:focus {\r\n\toutline: 1px solid rgba(0, 122, 204, 0.4);\r\n\toutline-offset: -1px;\r\n\topacity: 1 !important;\r\n}\r\n\r\n.monaco-editor.vs-dark [tabindex=\"0\"]:focus {\r\n\toutline: 1px solid rgba(14, 99, 156, 0.6);\r\n\toutline-offset: -1px;\r\n\topacity: 1 !important;\r\n}*/\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -100028,7 +100586,7 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.context-view .monaco-menu {\r\n\tmin-width: 130px;\r\n}\r\n\r\n.context-view-block {\r\n\tposition: fixed;\r\n\tleft:0;\r\n\ttop:0;\r\n\tz-index: -1;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n/* ---------- DiffEditor ---------- */\r\n\r\n.monaco-diff-editor .diffOverview {\r\n\tz-index: 9;\r\n}\r\n\r\n/* colors not externalized: using transparancy on background */\r\n.monaco-diff-editor.vs\t\t\t.diffOverview { background: rgba(0, 0, 0, 0.03); }\r\n.monaco-diff-editor.vs-dark\t\t.diffOverview { background: rgba(255, 255, 255, 0.01); }\r\n\r\n.monaco-diff-editor .diffViewport {\r\n\tbox-shadow: inset 0px 0px 1px 0px #B9B9B9;\r\n\tbackground: rgba(0, 0, 0, 0.10);\r\n}\r\n\r\n.monaco-diff-editor.vs-dark .diffViewport,\r\n.monaco-diff-editor.hc-black .diffViewport {\r\n\tbackground: rgba(255, 255, 255, 0.10);\r\n}\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.vs\t\t.scrollbar { background: rgba(0,0,0,0); }\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.vs-dark\t.scrollbar { background: rgba(0,0,0,0); }\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.hc-black\t.scrollbar { background: none; }\r\n\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor .slider {\r\n\tz-index: 10;\r\n}\r\n.modified-in-monaco-diff-editor\t\t\t\t.slider.active { background: rgba(171, 171, 171, .4); }\r\n.modified-in-monaco-diff-editor.hc-black\t.slider.active { background: none; }\r\n\r\n/* ---------- Diff ---------- */\r\n\r\n.monaco-editor .insert-sign,\r\n.monaco-diff-editor .insert-sign,\r\n.monaco-editor .delete-sign,\r\n.monaco-diff-editor .delete-sign {\r\n\tbackground-size: 60%;\r\n\topacity: 0.7;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: 75% center;\r\n\tbackground-size: 11px 11px;\r\n}\r\n.monaco-editor.hc-black .insert-sign,\r\n.monaco-diff-editor.hc-black .insert-sign,\r\n.monaco-editor.hc-black .delete-sign,\r\n.monaco-diff-editor.hc-black .delete-sign {\r\n\topacity: 1;\r\n}\r\n.monaco-editor .insert-sign,\r\n.monaco-diff-editor .insert-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNCA3VjhIOFYxNEg3VjhIMVY3SDdWMUg4VjdIMTRaIiBmaWxsPSIjNDI0MjQyIi8+DQo8L3N2Zz4NCg==\");\r\n}\r\n.monaco-editor .delete-sign,\r\n.monaco-diff-editor .delete-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNSA4SDFWN0gxNVY4WiIgZmlsbD0iIzQyNDI0MiIvPg0KPC9zdmc+DQo=\");\r\n}\r\n\r\n.monaco-editor.vs-dark .insert-sign,\r\n.monaco-diff-editor.vs-dark .insert-sign,\r\n.monaco-editor.hc-black .insert-sign,\r\n.monaco-diff-editor.hc-black .insert-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNCA3VjhIOFYxNEg3VjhIMVY3SDdWMUg4VjdIMTRaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\");\r\n}\r\n.monaco-editor.vs-dark .delete-sign,\r\n.monaco-diff-editor.vs-dark .delete-sign,\r\n.monaco-editor.hc-black .delete-sign,\r\n.monaco-diff-editor.hc-black .delete-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNSA4SDFWN0gxNVY4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPC9zdmc+DQo=\");\r\n}\r\n\r\n.monaco-editor .inline-deleted-margin-view-zone {\r\n\ttext-align: right;\r\n}\r\n.monaco-editor .inline-added-margin-view-zone {\r\n\ttext-align: right;\r\n}\r\n\r\n.monaco-editor .diagonal-fill {\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAChJREFUKFNjOH/+fAMDDgCSu3Dhwn9c8gwwBTgNGR4KQP4HhQOhsAIAZCBTkhtqePcAAAAASUVORK5CYII=\");\r\n}\r\n.monaco-editor.vs-dark .diagonal-fill {\r\n\topacity: 0.2;\r\n}\r\n.monaco-editor.hc-black .diagonal-fill {\r\n\tbackground: none;\r\n}\r\n\r\n/* ---------- Inline Diff ---------- */\r\n\r\n.monaco-editor .view-zones .view-lines .view-line span {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-editor .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiM0MjQyNDIiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiM0MjQyNDIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n\r\n.monaco-editor.vs-dark .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph,\r\n.monaco-editor.hc-dark .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiNDMkMyQzIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n\r\n.monaco-editor .margin-view-zones .lightbulb-glyph:hover {\r\n\tcursor: pointer;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -100067,94 +100625,87 @@ module.exports = exported;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.context-view {\r\n\tposition: absolute;\r\n\tz-index: 2000;\r\n}", ""]);
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-diff-editor .diff-review-line-number {\r\n\ttext-align: right;\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-diff-editor .diff-review {\r\n\tposition: absolute;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-summary {\r\n\tpadding-left: 10px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-shadow {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-row {\r\n\twhite-space: pre;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-table {\r\n\tdisplay: table;\r\n\tmin-width: 100%;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-row {\r\n\tdisplay: table-row;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-cell {\r\n\tdisplay: table-cell;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-spacer {\r\n\tdisplay: inline-block;\r\n\twidth: 10px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-actions {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tright: 10px;\r\n\ttop: 2px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-actions .action-label {\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tmargin: 2px 0;\r\n}\r\n.monaco-diff-editor .action-label.icon.close-diff-review {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOC4wMDAwMSA4LjcwNzExTDExLjY0NjUgMTIuMzUzNkwxMi4zNTM2IDExLjY0NjVMOC43MDcxMSA4LjAwMDAxTDEyLjM1MzYgNC4zNTM1NkwxMS42NDY1IDMuNjQ2NDVMOC4wMDAwMSA3LjI5MjlMNC4zNTM1NiAzLjY0NjQ1TDMuNjQ2NDUgNC4zNTM1Nkw3LjI5MjkgOC4wMDAwMUwzLjY0NjQ1IDExLjY0NjVMNC4zNTM1NiAxMi4zNTM2TDguMDAwMDEgOC43MDcxMVoiIGZpbGw9IiM0MjQyNDIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n.monaco-diff-editor.hc-black .action-label.icon.close-diff-review,\r\n.monaco-diff-editor.vs-dark .action-label.icon.close-diff-review {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOC4wMDAwMSA4LjcwNzExTDExLjY0NjUgMTIuMzUzNkwxMi4zNTM2IDExLjY0NjVMOC43MDcxMSA4LjAwMDAxTDEyLjM1MzYgNC4zNTM1NkwxMS42NDY1IDMuNjQ2NDVMOC4wMDAwMSA3LjI5MjlMNC4zNTM1NiAzLjY0NjQ1TDMuNjQ2NDUgNC4zNTM1Nkw3LjI5MjkgOC4wMDAwMUwzLjY0NjQ1IDExLjY0NjVMNC4zNTM1NiAxMi4zNTM2TDguMDAwMDEgOC43MDcxMVoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 /* 346 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+var api = __webpack_require__(26);
+            var content = __webpack_require__(347);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
 
 
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'abap',
-    extensions: ['.abap'],
-    aliases: ['abap', 'ABAP'],
-    loader: function () { return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 429)); }
-});
 
+module.exports = exported;
 
 /***/ }),
 /* 347 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'apex',
-    extensions: ['.cls'],
-    aliases: ['Apex', 'apex'],
-    mimetypes: ['text/x-apex-source', 'text/x-apex'],
-    loader: function () { return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 430)); }
-});
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.context-view .monaco-menu {\r\n\tmin-width: 130px;\r\n}\r\n\r\n.context-view-block {\r\n\tposition: fixed;\r\n\tleft:0;\r\n\ttop:0;\r\n\tz-index: -1;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}", ""]);
+// Exports
+module.exports = exports;
 
 
 /***/ }),
 /* 348 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+var api = __webpack_require__(26);
+            var content = __webpack_require__(349);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
 
 
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'azcli',
-    extensions: ['.azcli'],
-    aliases: ['Azure CLI', 'azcli'],
-    loader: function () { return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 431)); }
-});
 
+module.exports = exported;
 
 /***/ }),
 /* 349 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'bat',
-    extensions: ['.bat', '.cmd'],
-    aliases: ['Batch', 'bat'],
-    loader: function () { return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, 432)); }
-});
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.context-view {\r\n\tposition: absolute;\r\n\tz-index: 2000;\r\n}", ""]);
+// Exports
+module.exports = exports;
 
 
 /***/ }),
@@ -100171,10 +100722,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'cameligo',
-    extensions: ['.mligo'],
-    aliases: ['Cameligo'],
-    loader: function () { return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, 433)); }
+    id: 'abap',
+    extensions: ['.abap'],
+    aliases: ['abap', 'ABAP'],
+    loader: function () { return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 442)); }
 });
 
 
@@ -100192,10 +100743,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'clojure',
-    extensions: ['.clj', '.cljs', '.cljc', '.edn'],
-    aliases: ['clojure', 'Clojure'],
-    loader: function () { return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 434)); }
+    id: 'apex',
+    extensions: ['.cls'],
+    aliases: ['Apex', 'apex'],
+    mimetypes: ['text/x-apex-source', 'text/x-apex'],
+    loader: function () { return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 443)); }
 });
 
 
@@ -100213,11 +100765,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'coffeescript',
-    extensions: ['.coffee'],
-    aliases: ['CoffeeScript', 'coffeescript', 'coffee'],
-    mimetypes: ['text/x-coffeescript', 'text/coffeescript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 12).then(__webpack_require__.bind(null, 435)); }
+    id: 'azcli',
+    extensions: ['.azcli'],
+    aliases: ['Azure CLI', 'azcli'],
+    loader: function () { return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 444)); }
 });
 
 
@@ -100235,16 +100786,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'c',
-    extensions: ['.c', '.h'],
-    aliases: ['C', 'c'],
-    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 188)); }
-});
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'cpp',
-    extensions: ['.cpp', '.cc', '.cxx', '.hpp', '.hh', '.hxx'],
-    aliases: ['C++', 'Cpp', 'cpp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 188)); }
+    id: 'bat',
+    extensions: ['.bat', '.cmd'],
+    aliases: ['Batch', 'bat'],
+    loader: function () { return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, 445)); }
 });
 
 
@@ -100262,10 +100807,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'csharp',
-    extensions: ['.cs', '.csx', '.cake'],
-    aliases: ['C#', 'csharp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 436)); }
+    id: 'cameligo',
+    extensions: ['.mligo'],
+    aliases: ['Cameligo'],
+    loader: function () { return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, 446)); }
 });
 
 
@@ -100283,10 +100828,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'csp',
-    extensions: [],
-    aliases: ['CSP', 'csp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 14).then(__webpack_require__.bind(null, 437)); }
+    id: 'clojure',
+    extensions: ['.clj', '.cljs', '.cljc', '.edn'],
+    aliases: ['clojure', 'Clojure'],
+    loader: function () { return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 447)); }
 });
 
 
@@ -100304,16 +100849,107 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'css',
-    extensions: ['.css'],
-    aliases: ['CSS', 'css'],
-    mimetypes: ['text/css'],
-    loader: function () { return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 438)); }
+    id: 'coffeescript',
+    extensions: ['.coffee'],
+    aliases: ['CoffeeScript', 'coffeescript', 'coffee'],
+    mimetypes: ['text/x-coffeescript', 'text/coffeescript'],
+    loader: function () { return __webpack_require__.e(/* import() */ 12).then(__webpack_require__.bind(null, 448)); }
 });
 
 
 /***/ }),
 /* 357 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'c',
+    extensions: ['.c', '.h'],
+    aliases: ['C', 'c'],
+    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 192)); }
+});
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'cpp',
+    extensions: ['.cpp', '.cc', '.cxx', '.hpp', '.hh', '.hxx'],
+    aliases: ['C++', 'Cpp', 'cpp'],
+    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 192)); }
+});
+
+
+/***/ }),
+/* 358 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'csharp',
+    extensions: ['.cs', '.csx', '.cake'],
+    aliases: ['C#', 'csharp'],
+    loader: function () { return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 449)); }
+});
+
+
+/***/ }),
+/* 359 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'csp',
+    extensions: [],
+    aliases: ['CSP', 'csp'],
+    loader: function () { return __webpack_require__.e(/* import() */ 14).then(__webpack_require__.bind(null, 450)); }
+});
+
+
+/***/ }),
+/* 360 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'css',
+    extensions: ['.css'],
+    aliases: ['CSS', 'css'],
+    mimetypes: ['text/css'],
+    loader: function () { return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 451)); }
+});
+
+
+/***/ }),
+/* 361 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100426,7 +101062,7 @@ function createAPI() {
 monaco.languages.css = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 487));
+    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 500));
 }
 monaco.languages.onLanguage('less', function () {
     getMode().then(function (mode) { return mode.setupMode(lessDefaults); });
@@ -100436,92 +101072,6 @@ monaco.languages.onLanguage('scss', function () {
 });
 monaco.languages.onLanguage('css', function () {
     getMode().then(function (mode) { return mode.setupMode(cssDefaults); });
-});
-
-
-/***/ }),
-/* 358 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'dockerfile',
-    extensions: ['.dockerfile'],
-    filenames: ['Dockerfile'],
-    aliases: ['Dockerfile'],
-    loader: function () { return __webpack_require__.e(/* import() */ 16).then(__webpack_require__.bind(null, 439)); }
-});
-
-
-/***/ }),
-/* 359 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'fsharp',
-    extensions: ['.fs', '.fsi', '.ml', '.mli', '.fsx', '.fsscript'],
-    aliases: ['F#', 'FSharp', 'fsharp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 17).then(__webpack_require__.bind(null, 440)); }
-});
-
-
-/***/ }),
-/* 360 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'go',
-    extensions: ['.go'],
-    aliases: ['Go'],
-    loader: function () { return __webpack_require__.e(/* import() */ 18).then(__webpack_require__.bind(null, 441)); }
-});
-
-
-/***/ }),
-/* 361 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'graphql',
-    extensions: ['.graphql', '.gql'],
-    aliases: ['GraphQL', 'graphql', 'gql'],
-    mimetypes: ['application/graphql'],
-    loader: function () { return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 442)); }
 });
 
 
@@ -100539,11 +101089,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'handlebars',
-    extensions: ['.handlebars', '.hbs'],
-    aliases: ['Handlebars', 'handlebars'],
-    mimetypes: ['text/x-handlebars-template'],
-    loader: function () { return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 443)); }
+    id: 'dockerfile',
+    extensions: ['.dockerfile'],
+    filenames: ['Dockerfile'],
+    aliases: ['Dockerfile'],
+    loader: function () { return __webpack_require__.e(/* import() */ 16).then(__webpack_require__.bind(null, 452)); }
 });
 
 
@@ -100561,16 +101111,102 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'html',
-    extensions: ['.html', '.htm', '.shtml', '.xhtml', '.mdoc', '.jsp', '.asp', '.aspx', '.jshtm'],
-    aliases: ['HTML', 'htm', 'html', 'xhtml'],
-    mimetypes: ['text/html', 'text/x-jshtm', 'text/template', 'text/ng-template'],
-    loader: function () { return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, 444)); }
+    id: 'fsharp',
+    extensions: ['.fs', '.fsi', '.ml', '.mli', '.fsx', '.fsscript'],
+    aliases: ['F#', 'FSharp', 'fsharp'],
+    loader: function () { return __webpack_require__.e(/* import() */ 17).then(__webpack_require__.bind(null, 453)); }
 });
 
 
 /***/ }),
 /* 364 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'go',
+    extensions: ['.go'],
+    aliases: ['Go'],
+    loader: function () { return __webpack_require__.e(/* import() */ 18).then(__webpack_require__.bind(null, 454)); }
+});
+
+
+/***/ }),
+/* 365 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'graphql',
+    extensions: ['.graphql', '.gql'],
+    aliases: ['GraphQL', 'graphql', 'gql'],
+    mimetypes: ['application/graphql'],
+    loader: function () { return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 455)); }
+});
+
+
+/***/ }),
+/* 366 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'handlebars',
+    extensions: ['.handlebars', '.hbs'],
+    aliases: ['Handlebars', 'handlebars'],
+    mimetypes: ['text/x-handlebars-template'],
+    loader: function () { return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 456)); }
+});
+
+
+/***/ }),
+/* 367 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'html',
+    extensions: ['.html', '.htm', '.shtml', '.xhtml', '.mdoc', '.jsp', '.asp', '.aspx', '.jshtm'],
+    aliases: ['HTML', 'htm', 'html', 'xhtml'],
+    mimetypes: ['text/html', 'text/x-jshtm', 'text/template', 'text/ng-template'],
+    loader: function () { return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, 457)); }
+});
+
+
+/***/ }),
+/* 368 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100692,7 +101328,7 @@ function createAPI() {
 monaco.languages.html = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 488));
+    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 501));
 }
 monaco.languages.onLanguage(htmlLanguageId, function () {
     getMode().then(function (mode) { return mode.setupMode(htmlDefaults); });
@@ -100706,7 +101342,7 @@ monaco.languages.onLanguage(razorLanguageId, function () {
 
 
 /***/ }),
-/* 365 */
+/* 369 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100723,12 +101359,12 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.ini', '.properties', '.gitconfig'],
     filenames: ['config', '.gitattributes', '.gitconfig', '.editorconfig'],
     aliases: ['Ini', 'ini'],
-    loader: function () { return __webpack_require__.e(/* import() */ 22).then(__webpack_require__.bind(null, 445)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 22).then(__webpack_require__.bind(null, 458)); }
 });
 
 
 /***/ }),
-/* 366 */
+/* 370 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100745,12 +101381,12 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.java', '.jav'],
     aliases: ['Java', 'java'],
     mimetypes: ['text/x-java-source', 'text/x-java'],
-    loader: function () { return __webpack_require__.e(/* import() */ 23).then(__webpack_require__.bind(null, 446)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 23).then(__webpack_require__.bind(null, 459)); }
 });
 
 
 /***/ }),
-/* 367 */
+/* 371 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100769,12 +101405,12 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     filenames: ['jakefile'],
     aliases: ['JavaScript', 'javascript', 'js'],
     mimetypes: ['text/javascript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 447)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 460)); }
 });
 
 
 /***/ }),
-/* 368 */
+/* 372 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100865,7 +101501,7 @@ function createAPI() {
 monaco.languages.json = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 489));
+    return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 502));
 }
 monaco.languages.register({
     id: 'json',
@@ -100875,92 +101511,6 @@ monaco.languages.register({
 });
 monaco.languages.onLanguage('json', function () {
     getMode().then(function (mode) { return mode.setupMode(jsonDefaults); });
-});
-
-
-/***/ }),
-/* 369 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'kotlin',
-    extensions: ['.kt'],
-    aliases: ['Kotlin', 'kotlin'],
-    mimetypes: ['text/x-kotlin-source', 'text/x-kotlin'],
-    loader: function () { return __webpack_require__.e(/* import() */ 24).then(__webpack_require__.bind(null, 448)); }
-});
-
-
-/***/ }),
-/* 370 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'less',
-    extensions: ['.less'],
-    aliases: ['Less', 'less'],
-    mimetypes: ['text/x-less', 'text/less'],
-    loader: function () { return __webpack_require__.e(/* import() */ 25).then(__webpack_require__.bind(null, 449)); }
-});
-
-
-/***/ }),
-/* 371 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'lua',
-    extensions: ['.lua'],
-    aliases: ['Lua', 'lua'],
-    loader: function () { return __webpack_require__.e(/* import() */ 26).then(__webpack_require__.bind(null, 450)); }
-});
-
-
-/***/ }),
-/* 372 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'markdown',
-    extensions: ['.md', '.markdown', '.mdown', '.mkdn', '.mkd', '.mdwn', '.mdtxt', '.mdtext'],
-    aliases: ['Markdown', 'markdown'],
-    loader: function () { return __webpack_require__.e(/* import() */ 27).then(__webpack_require__.bind(null, 451)); }
 });
 
 
@@ -100978,11 +101528,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'mips',
-    extensions: ['.s'],
-    aliases: ['MIPS', 'MIPS-V'],
-    mimetypes: ['text/x-mips', 'text/mips', 'text/plaintext'],
-    loader: function () { return __webpack_require__.e(/* import() */ 28).then(__webpack_require__.bind(null, 452)); }
+    id: 'kotlin',
+    extensions: ['.kt'],
+    aliases: ['Kotlin', 'kotlin'],
+    mimetypes: ['text/x-kotlin-source', 'text/x-kotlin'],
+    loader: function () { return __webpack_require__.e(/* import() */ 24).then(__webpack_require__.bind(null, 461)); }
 });
 
 
@@ -101000,10 +101550,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'msdax',
-    extensions: ['.dax', '.msdax'],
-    aliases: ['DAX', 'MSDAX'],
-    loader: function () { return __webpack_require__.e(/* import() */ 29).then(__webpack_require__.bind(null, 453)); }
+    id: 'less',
+    extensions: ['.less'],
+    aliases: ['Less', 'less'],
+    mimetypes: ['text/x-less', 'text/less'],
+    loader: function () { return __webpack_require__.e(/* import() */ 25).then(__webpack_require__.bind(null, 462)); }
 });
 
 
@@ -101021,10 +101572,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'mysql',
-    extensions: [],
-    aliases: ['MySQL', 'mysql'],
-    loader: function () { return __webpack_require__.e(/* import() */ 30).then(__webpack_require__.bind(null, 454)); }
+    id: 'lua',
+    extensions: ['.lua'],
+    aliases: ['Lua', 'lua'],
+    loader: function () { return __webpack_require__.e(/* import() */ 26).then(__webpack_require__.bind(null, 463)); }
 });
 
 
@@ -101042,10 +101593,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'objective-c',
-    extensions: ['.m'],
-    aliases: ['Objective-C'],
-    loader: function () { return __webpack_require__.e(/* import() */ 31).then(__webpack_require__.bind(null, 455)); }
+    id: 'markdown',
+    extensions: ['.md', '.markdown', '.mdown', '.mkdn', '.mkd', '.mdwn', '.mdtxt', '.mdtext'],
+    aliases: ['Markdown', 'markdown'],
+    loader: function () { return __webpack_require__.e(/* import() */ 27).then(__webpack_require__.bind(null, 464)); }
 });
 
 
@@ -101063,11 +101614,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'pascal',
-    extensions: ['.pas', '.p', '.pp'],
-    aliases: ['Pascal', 'pas'],
-    mimetypes: ['text/x-pascal-source', 'text/x-pascal'],
-    loader: function () { return __webpack_require__.e(/* import() */ 32).then(__webpack_require__.bind(null, 456)); }
+    id: 'mips',
+    extensions: ['.s'],
+    aliases: ['MIPS', 'MIPS-V'],
+    mimetypes: ['text/x-mips', 'text/mips', 'text/plaintext'],
+    loader: function () { return __webpack_require__.e(/* import() */ 28).then(__webpack_require__.bind(null, 465)); }
 });
 
 
@@ -101085,10 +101636,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'pascaligo',
-    extensions: ['.ligo'],
-    aliases: ['Pascaligo', 'ligo'],
-    loader: function () { return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, 457)); }
+    id: 'msdax',
+    extensions: ['.dax', '.msdax'],
+    aliases: ['DAX', 'MSDAX'],
+    loader: function () { return __webpack_require__.e(/* import() */ 29).then(__webpack_require__.bind(null, 466)); }
 });
 
 
@@ -101100,16 +101651,16 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /*---------------------------------------------------------------------------------------------
-*  Copyright (c) Microsoft Corporation. All rights reserved.
-*  Licensed under the MIT License. See License.txt in the project root for license information.
-*--------------------------------------------------------------------------------------------*/
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'perl',
-    extensions: ['.pl'],
-    aliases: ['Perl', 'pl'],
-    loader: function () { return __webpack_require__.e(/* import() */ 34).then(__webpack_require__.bind(null, 458)); },
+    id: 'mysql',
+    extensions: [],
+    aliases: ['MySQL', 'mysql'],
+    loader: function () { return __webpack_require__.e(/* import() */ 30).then(__webpack_require__.bind(null, 467)); }
 });
 
 
@@ -101127,10 +101678,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'pgsql',
-    extensions: [],
-    aliases: ['PostgreSQL', 'postgres', 'pg', 'postgre'],
-    loader: function () { return __webpack_require__.e(/* import() */ 35).then(__webpack_require__.bind(null, 459)); }
+    id: 'objective-c',
+    extensions: ['.m'],
+    aliases: ['Objective-C'],
+    loader: function () { return __webpack_require__.e(/* import() */ 31).then(__webpack_require__.bind(null, 468)); }
 });
 
 
@@ -101148,11 +101699,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'php',
-    extensions: ['.php', '.php4', '.php5', '.phtml', '.ctp'],
-    aliases: ['PHP', 'php'],
-    mimetypes: ['application/x-php'],
-    loader: function () { return __webpack_require__.e(/* import() */ 36).then(__webpack_require__.bind(null, 460)); }
+    id: 'pascal',
+    extensions: ['.pas', '.p', '.pp'],
+    aliases: ['Pascal', 'pas'],
+    mimetypes: ['text/x-pascal-source', 'text/x-pascal'],
+    loader: function () { return __webpack_require__.e(/* import() */ 32).then(__webpack_require__.bind(null, 469)); }
 });
 
 
@@ -101170,10 +101721,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'postiats',
-    extensions: ['.dats', '.sats', '.hats'],
-    aliases: ['ATS', 'ATS/Postiats'],
-    loader: function () { return __webpack_require__.e(/* import() */ 37).then(__webpack_require__.bind(null, 461)); }
+    id: 'pascaligo',
+    extensions: ['.ligo'],
+    aliases: ['Pascaligo', 'ligo'],
+    loader: function () { return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, 470)); }
 });
 
 
@@ -101185,16 +101736,16 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+*  Copyright (c) Microsoft Corporation. All rights reserved.
+*  Licensed under the MIT License. See License.txt in the project root for license information.
+*--------------------------------------------------------------------------------------------*/
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'powerquery',
-    extensions: ['.pq', '.pqm'],
-    aliases: ['PQ', 'M', 'Power Query', 'Power Query M'],
-    loader: function () { return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, 462)); }
+    id: 'perl',
+    extensions: ['.pl'],
+    aliases: ['Perl', 'pl'],
+    loader: function () { return __webpack_require__.e(/* import() */ 34).then(__webpack_require__.bind(null, 471)); },
 });
 
 
@@ -101212,10 +101763,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'powershell',
-    extensions: ['.ps1', '.psm1', '.psd1'],
-    aliases: ['PowerShell', 'powershell', 'ps', 'ps1'],
-    loader: function () { return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, 463)); }
+    id: 'pgsql',
+    extensions: [],
+    aliases: ['PostgreSQL', 'postgres', 'pg', 'postgre'],
+    loader: function () { return __webpack_require__.e(/* import() */ 35).then(__webpack_require__.bind(null, 472)); }
 });
 
 
@@ -101233,10 +101784,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'pug',
-    extensions: ['.jade', '.pug'],
-    aliases: ['Pug', 'Jade', 'jade'],
-    loader: function () { return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, 464)); }
+    id: 'php',
+    extensions: ['.php', '.php4', '.php5', '.phtml', '.ctp'],
+    aliases: ['PHP', 'php'],
+    mimetypes: ['application/x-php'],
+    loader: function () { return __webpack_require__.e(/* import() */ 36).then(__webpack_require__.bind(null, 473)); }
 });
 
 
@@ -101254,11 +101806,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'python',
-    extensions: ['.py', '.rpy', '.pyw', '.cpy', '.gyp', '.gypi'],
-    aliases: ['Python', 'py'],
-    firstLine: '^#!/.*\\bpython[0-9.-]*\\b',
-    loader: function () { return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, 465)); }
+    id: 'postiats',
+    extensions: ['.dats', '.sats', '.hats'],
+    aliases: ['ATS', 'ATS/Postiats'],
+    loader: function () { return __webpack_require__.e(/* import() */ 37).then(__webpack_require__.bind(null, 474)); }
 });
 
 
@@ -101276,10 +101827,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'r',
-    extensions: ['.r', '.rhistory', '.rprofile', '.rt'],
-    aliases: ['R', 'r'],
-    loader: function () { return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, 466)); }
+    id: 'powerquery',
+    extensions: ['.pq', '.pqm'],
+    aliases: ['PQ', 'M', 'Power Query', 'Power Query M'],
+    loader: function () { return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, 475)); }
 });
 
 
@@ -101297,11 +101848,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'razor',
-    extensions: ['.cshtml'],
-    aliases: ['Razor', 'razor'],
-    mimetypes: ['text/x-cshtml'],
-    loader: function () { return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, 467)); }
+    id: 'powershell',
+    extensions: ['.ps1', '.psm1', '.psd1'],
+    aliases: ['PowerShell', 'powershell', 'ps', 'ps1'],
+    loader: function () { return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, 476)); }
 });
 
 
@@ -101319,10 +101869,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'redis',
-    extensions: ['.redis'],
-    aliases: ['redis'],
-    loader: function () { return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, 468)); }
+    id: 'pug',
+    extensions: ['.jade', '.pug'],
+    aliases: ['Pug', 'Jade', 'jade'],
+    loader: function () { return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, 477)); }
 });
 
 
@@ -101340,10 +101890,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'redshift',
-    extensions: [],
-    aliases: ['Redshift', 'redshift'],
-    loader: function () { return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, 469)); }
+    id: 'python',
+    extensions: ['.py', '.rpy', '.pyw', '.cpy', '.gyp', '.gypi'],
+    aliases: ['Python', 'py'],
+    firstLine: '^#!/.*\\bpython[0-9.-]*\\b',
+    loader: function () { return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, 478)); }
 });
 
 
@@ -101361,10 +101912,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'restructuredtext',
-    extensions: ['.rst'],
-    aliases: ['reStructuredText', 'restructuredtext'],
-    loader: function () { return __webpack_require__.e(/* import() */ 46).then(__webpack_require__.bind(null, 470)); }
+    id: 'r',
+    extensions: ['.r', '.rhistory', '.rprofile', '.rt'],
+    aliases: ['R', 'r'],
+    loader: function () { return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, 479)); }
 });
 
 
@@ -101382,11 +101933,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'ruby',
-    extensions: ['.rb', '.rbx', '.rjs', '.gemspec', '.pp'],
-    filenames: ['rakefile'],
-    aliases: ['Ruby', 'rb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 47).then(__webpack_require__.bind(null, 471)); }
+    id: 'razor',
+    extensions: ['.cshtml'],
+    aliases: ['Razor', 'razor'],
+    mimetypes: ['text/x-cshtml'],
+    loader: function () { return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, 480)); }
 });
 
 
@@ -101404,10 +101955,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'rust',
-    extensions: ['.rs', '.rlib'],
-    aliases: ['Rust', 'rust'],
-    loader: function () { return __webpack_require__.e(/* import() */ 48).then(__webpack_require__.bind(null, 472)); }
+    id: 'redis',
+    extensions: ['.redis'],
+    aliases: ['redis'],
+    loader: function () { return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, 481)); }
 });
 
 
@@ -101425,10 +101976,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'sb',
-    extensions: ['.sb'],
-    aliases: ['Small Basic', 'sb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 49).then(__webpack_require__.bind(null, 473)); }
+    id: 'redshift',
+    extensions: [],
+    aliases: ['Redshift', 'redshift'],
+    loader: function () { return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, 482)); }
 });
 
 
@@ -101446,10 +101997,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'scheme',
-    extensions: ['.scm', '.ss', '.sch', '.rkt'],
-    aliases: ['scheme', 'Scheme'],
-    loader: function () { return __webpack_require__.e(/* import() */ 50).then(__webpack_require__.bind(null, 474)); },
+    id: 'restructuredtext',
+    extensions: ['.rst'],
+    aliases: ['reStructuredText', 'restructuredtext'],
+    loader: function () { return __webpack_require__.e(/* import() */ 46).then(__webpack_require__.bind(null, 483)); }
 });
 
 
@@ -101467,11 +102018,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'scss',
-    extensions: ['.scss'],
-    aliases: ['Sass', 'sass', 'scss'],
-    mimetypes: ['text/x-scss', 'text/scss'],
-    loader: function () { return __webpack_require__.e(/* import() */ 51).then(__webpack_require__.bind(null, 475)); }
+    id: 'ruby',
+    extensions: ['.rb', '.rbx', '.rjs', '.gemspec', '.pp'],
+    filenames: ['rakefile'],
+    aliases: ['Ruby', 'rb'],
+    loader: function () { return __webpack_require__.e(/* import() */ 47).then(__webpack_require__.bind(null, 484)); }
 });
 
 
@@ -101483,16 +102034,16 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /*---------------------------------------------------------------------------------------------
-*  Copyright (c) Microsoft Corporation. All rights reserved.
-*  Licensed under the MIT License. See License.txt in the project root for license information.
-*--------------------------------------------------------------------------------------------*/
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'shell',
-    extensions: ['.sh', '.bash'],
-    aliases: ['Shell', 'sh'],
-    loader: function () { return __webpack_require__.e(/* import() */ 52).then(__webpack_require__.bind(null, 476)); },
+    id: 'rust',
+    extensions: ['.rs', '.rlib'],
+    aliases: ['Rust', 'rust'],
+    loader: function () { return __webpack_require__.e(/* import() */ 48).then(__webpack_require__.bind(null, 485)); }
 });
 
 
@@ -101510,10 +102061,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'sol',
-    extensions: ['.sol'],
-    aliases: ['sol', 'solidity', 'Solidity'],
-    loader: function () { return __webpack_require__.e(/* import() */ 53).then(__webpack_require__.bind(null, 477)); }
+    id: 'sb',
+    extensions: ['.sb'],
+    aliases: ['Small Basic', 'sb'],
+    loader: function () { return __webpack_require__.e(/* import() */ 49).then(__webpack_require__.bind(null, 486)); }
 });
 
 
@@ -101531,10 +102082,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'aes',
-    extensions: ['.aes'],
-    aliases: ['aes', 'sophia', 'Sophia'],
-    loader: function () { return __webpack_require__.e(/* import() */ 54).then(__webpack_require__.bind(null, 478)); }
+    id: 'scheme',
+    extensions: ['.scm', '.ss', '.sch', '.rkt'],
+    aliases: ['scheme', 'Scheme'],
+    loader: function () { return __webpack_require__.e(/* import() */ 50).then(__webpack_require__.bind(null, 487)); },
 });
 
 
@@ -101552,10 +102103,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'sql',
-    extensions: ['.sql'],
-    aliases: ['SQL'],
-    loader: function () { return __webpack_require__.e(/* import() */ 55).then(__webpack_require__.bind(null, 479)); }
+    id: 'scss',
+    extensions: ['.scss'],
+    aliases: ['Sass', 'sass', 'scss'],
+    mimetypes: ['text/x-scss', 'text/scss'],
+    loader: function () { return __webpack_require__.e(/* import() */ 51).then(__webpack_require__.bind(null, 488)); }
 });
 
 
@@ -101567,16 +102119,16 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+*  Copyright (c) Microsoft Corporation. All rights reserved.
+*  Licensed under the MIT License. See License.txt in the project root for license information.
+*--------------------------------------------------------------------------------------------*/
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'st',
-    extensions: ['.st', '.iecst', '.iecplc', '.lc3lib'],
-    aliases: ['StructuredText', 'scl', 'stl'],
-    loader: function () { return __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(null, 480)); }
+    id: 'shell',
+    extensions: ['.sh', '.bash'],
+    aliases: ['Shell', 'sh'],
+    loader: function () { return __webpack_require__.e(/* import() */ 52).then(__webpack_require__.bind(null, 489)); },
 });
 
 
@@ -101594,11 +102146,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'swift',
-    aliases: ['Swift', 'swift'],
-    extensions: ['.swift'],
-    mimetypes: ['text/swift'],
-    loader: function () { return __webpack_require__.e(/* import() */ 57).then(__webpack_require__.bind(null, 481)); }
+    id: 'sol',
+    extensions: ['.sol'],
+    aliases: ['sol', 'solidity', 'Solidity'],
+    loader: function () { return __webpack_require__.e(/* import() */ 53).then(__webpack_require__.bind(null, 490)); }
 });
 
 
@@ -101616,10 +102167,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'tcl',
-    extensions: ['.tcl'],
-    aliases: ['tcl', 'Tcl', 'tcltk', 'TclTk', 'tcl/tk', 'Tcl/Tk'],
-    loader: function () { return __webpack_require__.e(/* import() */ 58).then(__webpack_require__.bind(null, 482)); }
+    id: 'aes',
+    extensions: ['.aes'],
+    aliases: ['aes', 'sophia', 'Sophia'],
+    loader: function () { return __webpack_require__.e(/* import() */ 54).then(__webpack_require__.bind(null, 491)); }
 });
 
 
@@ -101637,11 +102188,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'twig',
-    extensions: ['.twig'],
-    aliases: ['Twig', 'twig'],
-    mimetypes: ['text/x-twig'],
-    loader: function () { return __webpack_require__.e(/* import() */ 59).then(__webpack_require__.bind(null, 483)); }
+    id: 'sql',
+    extensions: ['.sql'],
+    aliases: ['SQL'],
+    loader: function () { return __webpack_require__.e(/* import() */ 55).then(__webpack_require__.bind(null, 492)); }
 });
 
 
@@ -101659,11 +102209,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'typescript',
-    extensions: ['.ts', '.tsx'],
-    aliases: ['TypeScript', 'ts', 'typescript'],
-    mimetypes: ['text/typescript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 60).then(__webpack_require__.bind(null, 428)); }
+    id: 'st',
+    extensions: ['.st', '.iecst', '.iecplc', '.lc3lib'],
+    aliases: ['StructuredText', 'scl', 'stl'],
+    loader: function () { return __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(null, 493)); }
 });
 
 
@@ -101681,10 +102230,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'vb',
-    extensions: ['.vb'],
-    aliases: ['Visual Basic', 'vb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 61).then(__webpack_require__.bind(null, 484)); }
+    id: 'swift',
+    aliases: ['Swift', 'swift'],
+    extensions: ['.swift'],
+    mimetypes: ['text/swift'],
+    loader: function () { return __webpack_require__.e(/* import() */ 57).then(__webpack_require__.bind(null, 494)); }
 });
 
 
@@ -101702,12 +102252,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'xml',
-    extensions: ['.xml', '.dtd', '.ascx', '.csproj', '.config', '.wxi', '.wxl', '.wxs', '.xaml', '.svg', '.svgz', '.opf', '.xsl'],
-    firstLine: '(\\<\\?xml.*)|(\\<svg)|(\\<\\!doctype\\s+svg)',
-    aliases: ['XML', 'xml'],
-    mimetypes: ['text/xml', 'application/xml', 'application/xaml+xml', 'application/xml-dtd'],
-    loader: function () { return __webpack_require__.e(/* import() */ 62).then(__webpack_require__.bind(null, 485)); }
+    id: 'tcl',
+    extensions: ['.tcl'],
+    aliases: ['tcl', 'Tcl', 'tcltk', 'TclTk', 'tcl/tk', 'Tcl/Tk'],
+    loader: function () { return __webpack_require__.e(/* import() */ 58).then(__webpack_require__.bind(null, 495)); }
 });
 
 
@@ -101725,16 +102273,104 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
-    id: 'yaml',
-    extensions: ['.yaml', '.yml'],
-    aliases: ['YAML', 'yaml', 'YML', 'yml'],
-    mimetypes: ['application/x-yaml'],
-    loader: function () { return __webpack_require__.e(/* import() */ 63).then(__webpack_require__.bind(null, 486)); }
+    id: 'twig',
+    extensions: ['.twig'],
+    aliases: ['Twig', 'twig'],
+    mimetypes: ['text/x-twig'],
+    loader: function () { return __webpack_require__.e(/* import() */ 59).then(__webpack_require__.bind(null, 496)); }
 });
 
 
 /***/ }),
 /* 409 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'typescript',
+    extensions: ['.ts', '.tsx'],
+    aliases: ['TypeScript', 'ts', 'typescript'],
+    mimetypes: ['text/typescript'],
+    loader: function () { return __webpack_require__.e(/* import() */ 60).then(__webpack_require__.bind(null, 441)); }
+});
+
+
+/***/ }),
+/* 410 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'vb',
+    extensions: ['.vb'],
+    aliases: ['Visual Basic', 'vb'],
+    loader: function () { return __webpack_require__.e(/* import() */ 61).then(__webpack_require__.bind(null, 497)); }
+});
+
+
+/***/ }),
+/* 411 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'xml',
+    extensions: ['.xml', '.dtd', '.ascx', '.csproj', '.config', '.wxi', '.wxl', '.wxs', '.xaml', '.svg', '.svgz', '.opf', '.xsl'],
+    firstLine: '(\\<\\?xml.*)|(\\<svg)|(\\<\\!doctype\\s+svg)',
+    aliases: ['XML', 'xml'],
+    mimetypes: ['text/xml', 'application/xml', 'application/xaml+xml', 'application/xml-dtd'],
+    loader: function () { return __webpack_require__.e(/* import() */ 62).then(__webpack_require__.bind(null, 498)); }
+});
+
+
+/***/ }),
+/* 412 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contribution_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
+    id: 'yaml',
+    extensions: ['.yaml', '.yml'],
+    aliases: ['YAML', 'yaml', 'YML', 'yml'],
+    mimetypes: ['application/x-yaml'],
+    loader: function () { return __webpack_require__.e(/* import() */ 63).then(__webpack_require__.bind(null, 499)); }
+});
+
+
+/***/ }),
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101919,7 +102555,4974 @@ exports.language = {
 
 
 /***/ }),
-/* 410 */
+/* 414 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var lua_fmt_1 = __webpack_require__(415);
+var LuaFormatter = /** @class */ (function () {
+    function LuaFormatter() {
+    }
+    LuaFormatter.prototype.provideDocumentFormattingEdits = function (model, options, token) {
+        var code = model.getValue();
+        var range = model.getFullModelRange();
+        return [{
+                range: range,
+                text: lua_fmt_1.formatText(code)
+            }];
+    };
+    return LuaFormatter;
+}());
+exports.LuaFormatter = LuaFormatter;
+
+
+/***/ }),
+/* 415 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+if (false) {}
+const comments_1 = __webpack_require__(190);
+const printer_1 = __webpack_require__(416);
+const docPrinter_1 = __webpack_require__(419);
+const options_1 = __webpack_require__(184);
+const luaparse_1 = __webpack_require__(420);
+const diff_1 = __webpack_require__(422);
+var options_2 = __webpack_require__(184);
+exports.defaultOptions = options_2.defaultOptions;
+exports.WriteMode = options_2.WriteMode;
+function formatText(text, userOptions) {
+    const ast = luaparse_1.parse(text, {
+        comments: true,
+        locations: true,
+        ranges: true,
+        luaVersion: '5.3'
+    });
+    ast.range[0] = 0;
+    ast.range[1] = text.length;
+    const mergedOptions = Object.assign({}, options_1.defaultOptions, userOptions);
+    const options = Object.assign({}, mergedOptions, { sourceText: text });
+    comments_1.injectShebang(ast, options);
+    comments_1.attachComments(ast, options);
+    const doc = printer_1.buildDocFromAst(ast, options);
+    const formattedText = docPrinter_1.printDocToString(doc, options);
+    return formattedText;
+}
+exports.formatText = formatText;
+function producePatch(filename, originalDocument, formattedDocument) {
+    return diff_1.createPatch(filename, originalDocument, formattedDocument, 'original', 'formatted');
+}
+exports.producePatch = producePatch;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 416 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const fastPath_1 = __webpack_require__(417);
+const docBuilder_1 = __webpack_require__(191);
+const docUtils_1 = __webpack_require__(418);
+const comments_1 = __webpack_require__(190);
+const util_1 = __webpack_require__(183);
+const options_1 = __webpack_require__(184);
+function printStatementSequence(path, options, print) {
+    const printed = [];
+    path.forEach((statementPath) => {
+        const parts = [print(statementPath)];
+        if (util_1.isNextLineEmpty(options.sourceText, util_1.locEnd(statementPath.getValue())) && !isLastStatement(path)) {
+            parts.push(docBuilder_1.hardline);
+        }
+        printed.push(docBuilder_1.concat(parts));
+    });
+    return docBuilder_1.join(docBuilder_1.hardline, printed);
+}
+function printIndentedStatementList(path, options, print, field) {
+    const printedBody = path.call((bodyPath) => {
+        return printStatementSequence(bodyPath, options, print);
+    }, field);
+    return docBuilder_1.indent(docBuilder_1.concat([docBuilder_1.hardline, printedBody]));
+}
+function printDanglingStatementComment(path) {
+    const comments = path.getValue().attachedComments;
+    if (!comments) {
+        return '';
+    }
+    return docBuilder_1.concat([comments_1.printDanglingStatementComments(path), comments_1.printDanglingComments(path)]);
+}
+function makeStringLiteral(raw, quotemark) {
+    const preferredQuoteCharacter = options_1.getStringQuotemark(quotemark);
+    const alternativeQuoteCharacter = options_1.getAlternativeStringQuotemark(quotemark === 'single' ? 'single' : 'double');
+    const newString = raw.replace(/\\([\s\S])|(['"])/g, (match, escaped, quote) => {
+        if (escaped === alternativeQuoteCharacter) {
+            return escaped;
+        }
+        if (quote === preferredQuoteCharacter) {
+            return '\\' + quote;
+        }
+        return match;
+    });
+    return preferredQuoteCharacter + newString + preferredQuoteCharacter;
+}
+function printStringLiteral(path, options) {
+    const literal = path.getValue();
+    if (literal.type !== 'StringLiteral') {
+        throw new Error('printStringLiteral: Expected StringLiteral, got ' + literal.type);
+    }
+    if (literal.raw.startsWith('[[') || literal.raw.startsWith('[=')) {
+        return literal.raw;
+    }
+    const raw = literal.raw.slice(1, -1);
+    let preferredQuotemark = options.quotemark;
+    const preferredQuoteCharacter = options_1.getStringQuotemark(preferredQuotemark);
+    if (raw.includes(preferredQuoteCharacter)) {
+        preferredQuotemark = preferredQuotemark === 'single' ? 'double' : 'single';
+    }
+    return makeStringLiteral(raw, preferredQuotemark);
+}
+function isLastStatement(path) {
+    const parent = path.getParent();
+    const node = path.getValue();
+    const body = parent.body;
+    return body && body[body.length - 1] === node;
+}
+function printNodeNoParens(path, options, print) {
+    const value = path.getValue();
+    if (!value) {
+        return '';
+    }
+    const parts = [];
+    const node = value;
+    switch (node.type) {
+        case 'Chunk':
+            parts.push(path.call((bodyPath) => {
+                return printStatementSequence(bodyPath, options, print);
+            }, 'body'));
+            parts.push(comments_1.printDanglingComments(path, true));
+            if (node.body.length || node.attachedComments) {
+                parts.push(docBuilder_1.hardline);
+            }
+            return docBuilder_1.concat(parts);
+        case 'LabelStatement':
+            return docBuilder_1.concat(['::', path.call(print, 'label'), '::']);
+        case 'GotoStatement':
+            return docBuilder_1.concat(['goto ', path.call(print, 'label')]);
+        case 'BreakStatement':
+            return 'break';
+        case 'ReturnStatement':
+            parts.push('return');
+            if (node.arguments.length > 0) {
+                parts.push(' ');
+                parts.push(docBuilder_1.join(', ', path.map(print, 'arguments')));
+            }
+            return docBuilder_1.concat(parts);
+        case 'WhileStatement':
+            parts.push('while ');
+            parts.push(path.call(print, 'condition'));
+            parts.push(' do');
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            parts.push(docBuilder_1.concat([docBuilder_1.hardline, 'end']));
+            return docBuilder_1.concat(parts);
+        case 'DoStatement':
+            parts.push('do');
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            parts.push(docBuilder_1.concat([docBuilder_1.hardline, 'end']));
+            return docBuilder_1.concat(parts);
+        case 'RepeatStatement':
+            parts.push('repeat');
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            parts.push(docBuilder_1.concat([docBuilder_1.hardline, 'until ']));
+            parts.push(path.call(print, 'condition'));
+            return docBuilder_1.concat(parts);
+        case 'LocalStatement':
+        case 'AssignmentStatement':
+            {
+                const left = [];
+                if (node.type === 'LocalStatement') {
+                    left.push('local ');
+                }
+                const shouldBreak = options.linebreakMultipleAssignments;
+                left.push(docBuilder_1.indent(docBuilder_1.join(docBuilder_1.concat([
+                    ',',
+                    shouldBreak ? docBuilder_1.hardline : docBuilder_1.line
+                ]), path.map(print, 'variables'))));
+                let operator = '';
+                const right = [];
+                if (node.init.length) {
+                    operator = ' =';
+                    if (node.init.length > 1) {
+                        right.push(docBuilder_1.indent(docBuilder_1.join(docBuilder_1.concat([',', docBuilder_1.line]), path.map(print, 'init'))));
+                    }
+                    else {
+                        right.push(docBuilder_1.join(docBuilder_1.concat([',', docBuilder_1.line]), path.map(print, 'init')));
+                    }
+                }
+                const canBreakLine = node.init.some(n => n != null &&
+                    n.type !== 'TableConstructorExpression' &&
+                    n.type !== 'FunctionDeclaration');
+                return docBuilder_1.group(docBuilder_1.concat([
+                    docBuilder_1.group(docBuilder_1.concat(left)),
+                    docBuilder_1.group(docBuilder_1.concat([
+                        operator,
+                        canBreakLine ? docBuilder_1.indent(docBuilder_1.line) : ' ',
+                        docBuilder_1.concat(right)
+                    ]))
+                ]));
+            }
+        case 'CallStatement':
+            return path.call(print, 'expression');
+        case 'FunctionDeclaration':
+            if (node.isLocal) {
+                parts.push('local ');
+            }
+            parts.push('function');
+            if (node.identifier) {
+                parts.push(' ', path.call(print, 'identifier'));
+            }
+            parts.push(docBuilder_1.concat([
+                '(',
+                docBuilder_1.group(docBuilder_1.indent(docBuilder_1.concat([
+                    docBuilder_1.softline,
+                    docBuilder_1.join(docBuilder_1.concat([',', docBuilder_1.line]), path.map(print, 'parameters'))
+                ]))),
+                ')'
+            ]));
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            parts.push(docBuilder_1.hardline, 'end');
+            return docBuilder_1.concat(parts);
+        case 'ForNumericStatement':
+            parts.push('for ');
+            parts.push(path.call(print, 'variable'));
+            parts.push(' = ');
+            parts.push(path.call(print, 'start'));
+            parts.push(', ');
+            parts.push(path.call(print, 'end'));
+            if (node.step) {
+                parts.push(', ');
+                parts.push(path.call(print, 'step'));
+            }
+            parts.push(' do');
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            parts.push(docBuilder_1.concat([docBuilder_1.hardline, 'end']));
+            return docBuilder_1.concat(parts);
+        case 'ForGenericStatement':
+            parts.push('for ');
+            parts.push(docBuilder_1.join(', ', path.map(print, 'variables')));
+            parts.push(' in ');
+            parts.push(docBuilder_1.join(', ', path.map(print, 'iterators')));
+            parts.push(' do');
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            parts.push(docBuilder_1.concat([docBuilder_1.hardline, 'end']));
+            return docBuilder_1.concat(parts);
+        case 'IfStatement':
+            const printed = [];
+            path.forEach((statementPath) => {
+                printed.push(print(statementPath));
+            }, 'clauses');
+            parts.push(docBuilder_1.join(docBuilder_1.hardline, printed));
+            parts.push(docBuilder_1.concat([docBuilder_1.hardline, 'end']));
+            return docBuilder_1.concat(parts);
+        case 'IfClause':
+            parts.push(docBuilder_1.concat([
+                'if ',
+                docBuilder_1.group(docBuilder_1.concat([
+                    docBuilder_1.indent(docBuilder_1.concat([
+                        docBuilder_1.softline,
+                        path.call(print, 'condition')
+                    ])),
+                    docBuilder_1.softline
+                ])),
+                ' then'
+            ]));
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            return docBuilder_1.concat(parts);
+        case 'ElseifClause':
+            parts.push(docBuilder_1.concat([
+                'elseif ',
+                docBuilder_1.group(docBuilder_1.concat([
+                    docBuilder_1.indent(docBuilder_1.concat([
+                        docBuilder_1.softline,
+                        path.call(print, 'condition')
+                    ])),
+                    docBuilder_1.softline
+                ])),
+                ' then'
+            ]));
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            return docBuilder_1.concat(parts);
+        case 'ElseClause':
+            parts.push('else');
+            parts.push(printDanglingStatementComment(path));
+            if (node.body.length) {
+                parts.push(printIndentedStatementList(path, options, print, 'body'));
+            }
+            return docBuilder_1.concat(parts);
+        case 'BooleanLiteral':
+            return node.raw;
+        case 'NilLiteral':
+            return 'nil';
+        case 'NumericLiteral':
+            return node.raw;
+        case 'StringLiteral':
+            return printStringLiteral(path, options);
+        case 'VarargLiteral':
+            return '...';
+        case 'Identifier':
+            return node.name;
+        case 'BinaryExpression':
+        case 'LogicalExpression':
+            const parent = path.getParent();
+            const shouldGroup = parent.type !== node.type &&
+                node.left.type !== node.type &&
+                node.right.type !== node.type;
+            const right = docBuilder_1.concat([
+                node.operator,
+                docBuilder_1.line,
+                path.call(print, 'right')
+            ]);
+            return docBuilder_1.group(docBuilder_1.concat([
+                path.call(print, 'left'),
+                docBuilder_1.indent(docBuilder_1.concat([
+                    ' ', shouldGroup ? docBuilder_1.group(right) : right
+                ]))
+            ]));
+        case 'UnaryExpression':
+            parts.push(node.operator);
+            if (node.operator === 'not') {
+                parts.push(' ');
+            }
+            parts.push(path.call(print, 'argument'));
+            return docBuilder_1.concat(parts);
+        case 'MemberExpression':
+            return docBuilder_1.concat([
+                path.call(print, 'base'),
+                node.indexer,
+                path.call(print, 'identifier')
+            ]);
+        case 'IndexExpression':
+            return docBuilder_1.concat([
+                path.call(print, 'base'),
+                '[',
+                docBuilder_1.group(docBuilder_1.concat([
+                    docBuilder_1.indent(docBuilder_1.concat([docBuilder_1.softline, path.call(print, 'index')])),
+                    docBuilder_1.softline
+                ])),
+                ']'
+            ]);
+        case 'CallExpression':
+            const printedCallExpressionArgs = path.map(print, 'arguments');
+            return docBuilder_1.concat([
+                path.call(print, 'base'),
+                docBuilder_1.group(docBuilder_1.concat([
+                    '(',
+                    docBuilder_1.indent(docBuilder_1.concat([docBuilder_1.softline, docBuilder_1.join(docBuilder_1.concat([',', docBuilder_1.line]), printedCallExpressionArgs)])),
+                    docBuilder_1.softline,
+                    ')'
+                ]), printedCallExpressionArgs.some(docUtils_1.willBreak))
+            ]);
+        case 'TableCallExpression':
+            parts.push(path.call(print, 'base'));
+            parts.push(' ');
+            parts.push(path.call(print, 'arguments'));
+            return docBuilder_1.concat(parts);
+        case 'StringCallExpression':
+            parts.push(path.call(print, 'base'));
+            parts.push(' ');
+            parts.push(path.call(print, 'argument'));
+            return docBuilder_1.concat(parts);
+        case 'TableConstructorExpression':
+            if (node.fields.length === 0) {
+                return '{}';
+            }
+            const fields = [];
+            let separatorParts = [];
+            path.forEach(childPath => {
+                fields.push(docBuilder_1.concat(separatorParts));
+                fields.push(docBuilder_1.group(print(childPath)));
+                separatorParts = [',', docBuilder_1.line];
+            }, 'fields');
+            const shouldBreak = util_1.hasNewLineInRange(options.sourceText, node.range[0], node.range[1]);
+            return docBuilder_1.group(docBuilder_1.concat([
+                '{',
+                docBuilder_1.indent(docBuilder_1.concat([docBuilder_1.softline, docBuilder_1.concat(fields)])),
+                docBuilder_1.softline,
+                '}'
+            ]), shouldBreak);
+        case 'TableKeyString':
+            return docBuilder_1.concat([
+                path.call(print, 'key'),
+                ' = ',
+                path.call(print, 'value')
+            ]);
+        case 'TableKey':
+            return docBuilder_1.concat([
+                '[', path.call(print, 'key'), ']',
+                ' = ',
+                path.call(print, 'value')
+            ]);
+        case 'TableValue':
+            return path.call(print, 'value');
+    }
+    throw new Error('Unhandled AST node: ' + node.type);
+}
+function printNode(path, options, print) {
+    const printed = printNodeNoParens(path, options, print);
+    const parts = [];
+    const needsParens = path.needsParens();
+    if (needsParens) {
+        parts.push('(');
+    }
+    parts.push(printed);
+    if (needsParens) {
+        parts.push(')');
+    }
+    return docBuilder_1.concat(parts);
+}
+function buildDocFromAst(ast, options) {
+    const printNodeWithComments = (path) => {
+        return comments_1.printComments(path, options, p => printNode(p, options, printNodeWithComments));
+    };
+    const doc = printNodeWithComments(new fastPath_1.FastPath(ast));
+    docUtils_1.propagateBreaks(doc);
+    return doc;
+}
+exports.buildDocFromAst = buildDocFromAst;
+//# sourceMappingURL=printer.js.map
+
+/***/ }),
+/* 417 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const util_1 = __webpack_require__(183);
+class FastPath {
+    constructor(ast) {
+        this.stack = [ast];
+    }
+    getValue() {
+        return this.stack[this.stack.length - 1];
+    }
+    getNodeAtDepth(depth) {
+        for (let i = this.stack.length - 1; i >= 0; i -= 2) {
+            const value = this.stack[i];
+            if (util_1.isNode(value) && --depth < 0) {
+                return value;
+            }
+        }
+        return null;
+    }
+    getParent(depth = 0) {
+        return this.getNodeAtDepth(depth + 1);
+    }
+    call(callback, field) {
+        const node = this.getValue();
+        const origLength = this.stack.length;
+        this.stack.push(field, node[field]);
+        const result = callback(this);
+        this.stack.length = origLength;
+        return result;
+    }
+    forEach(callback, field = null) {
+        let value = this.getValue();
+        const origLength = this.stack.length;
+        if (field) {
+            value = value[field];
+            this.stack.push(value);
+        }
+        for (let i = 0; i < value.length; ++i) {
+            this.stack.push(i, value[i]);
+            callback(this, i);
+            this.stack.length -= 2;
+        }
+        this.stack.length = origLength;
+    }
+    map(callback, field) {
+        const node = this.getValue()[field];
+        if (!Array.isArray(node)) {
+            return [];
+        }
+        const result = [];
+        const origLength = this.stack.length;
+        this.stack.push(field, node);
+        node.forEach((val, i) => {
+            this.stack.push(i, val);
+            result.push(callback(this, i));
+            this.stack.length -= 2;
+        });
+        this.stack.length = origLength;
+        return result;
+    }
+    needsParens() {
+        const parent = this.getParent();
+        const value = this.getValue();
+        let inParens = false;
+        switch (value.type) {
+            case 'FunctionDeclaration':
+            case 'Chunk':
+            case 'Identifier':
+            case 'BooleanLiteral':
+            case 'NilLiteral':
+            case 'NumericLiteral':
+            case 'StringLiteral':
+            case 'VarargLiteral':
+            case 'TableConstructorExpression':
+            case 'BinaryExpression':
+            case 'LogicalExpression':
+            case 'UnaryExpression':
+            case 'MemberExpression':
+            case 'IndexExpression':
+            case 'CallExpression':
+            case 'TableCallExpression':
+            case 'StringCallExpression':
+                inParens = value.inParens || false;
+        }
+        if (parent) {
+            if (value.type === 'UnaryExpression' && parent.type === 'UnaryExpression') {
+                inParens = true;
+            }
+        }
+        return inParens;
+    }
+}
+exports.FastPath = FastPath;
+//# sourceMappingURL=fastPath.js.map
+
+/***/ }),
+/* 418 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function visitInstructions(insn, onEnter, onExit) {
+    let abort = false;
+    const visitInstruction = (ins) => {
+        if (onEnter(ins)) {
+            abort = true;
+            return;
+        }
+        if (abort) {
+            return;
+        }
+        if (typeof ins === 'string') {
+            return;
+        }
+        switch (ins.type) {
+            case 'concat':
+                ins.parts.forEach(visitInstruction);
+                break;
+            case 'indent':
+            case 'group':
+            case 'lineSuffix':
+                visitInstruction(ins.content);
+                break;
+        }
+        if (onExit) {
+            onExit(ins);
+        }
+    };
+    visitInstruction(insn);
+}
+function any(insn, callback) {
+    let result = false;
+    visitInstructions(insn, (instruction) => {
+        if (callback(instruction)) {
+            result = true;
+            return true;
+        }
+        return false;
+    });
+    return result;
+}
+function willBreak(insn) {
+    return any(insn, (instruction) => {
+        if (typeof instruction === 'string') {
+            return false;
+        }
+        switch (instruction.type) {
+            case 'line':
+                if (instruction.hard) {
+                    return true;
+                }
+                break;
+            case 'group':
+                if (instruction.willBreak) {
+                    return true;
+                }
+        }
+        return false;
+    });
+}
+exports.willBreak = willBreak;
+function breakParentGroup(stack) {
+    if (stack.length > 0) {
+        stack[stack.length - 1].willBreak = true;
+    }
+}
+function propagateBreaks(insn) {
+    const groupStack = [];
+    visitInstructions(insn, (instruction) => {
+        if (typeof instruction === 'string') {
+            return false;
+        }
+        switch (instruction.type) {
+            case 'breakParent':
+                breakParentGroup(groupStack);
+                break;
+            case 'group':
+                groupStack.push(instruction);
+                break;
+        }
+        return false;
+    }, (instruction) => {
+        if (typeof instruction === 'string') {
+            return false;
+        }
+        if (instruction.type === 'group') {
+            const group = groupStack.pop();
+            if (group && group.willBreak) {
+                breakParentGroup(groupStack);
+            }
+        }
+        return false;
+    });
+}
+exports.propagateBreaks = propagateBreaks;
+//# sourceMappingURL=docUtils.js.map
+
+/***/ }),
+/* 419 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Mode;
+(function (Mode) {
+    Mode[Mode["Flat"] = 0] = "Flat";
+    Mode[Mode["Break"] = 1] = "Break";
+})(Mode || (Mode = {}));
+;
+function printDocToString(doc, options) {
+    const state = {
+        options,
+        indentation: 0,
+        currentLineLength: 0,
+        mode: Mode.Break,
+        lineSuffixes: [],
+        renderedText: ''
+    };
+    printDocToStringWithState(doc, state);
+    return state.renderedText;
+}
+exports.printDocToString = printDocToString;
+function canFitOnSingleLine(doc, state) {
+    function fits(text) {
+        if (state.currentLineLength + text.length <= state.options.lineWidth) {
+            state.currentLineLength += text.length;
+            return true;
+        }
+        return false;
+    }
+    if (typeof (doc) === 'string') {
+        return fits(doc);
+    }
+    switch (doc.type) {
+        case 'concat':
+            return doc.parts.every((part) => canFitOnSingleLine(part, state));
+        case 'indent':
+            state.indentation++;
+            if (canFitOnSingleLine(doc.content, state)) {
+                state.indentation--;
+                return true;
+            }
+            state.indentation--;
+            return false;
+        case 'group':
+            if (doc.willBreak) {
+                state.mode = Mode.Break;
+            }
+            return canFitOnSingleLine(doc.content, state);
+        case 'line':
+            if (state.mode === Mode.Flat) {
+                if (!doc.hard) {
+                    if (!doc.soft) {
+                        return fits(' ');
+                    }
+                    return true;
+                }
+            }
+            state.currentLineLength = state.indentation;
+            return true;
+        case 'lineSuffix':
+            return true;
+    }
+    return false;
+}
+function printDocToStringWithState(doc, state) {
+    if (typeof (doc) === 'string') {
+        state.renderedText += doc;
+        state.currentLineLength += doc.length;
+    }
+    else {
+        switch (doc.type) {
+            case 'concat':
+                for (const part of doc.parts) {
+                    printDocToStringWithState(part, state);
+                }
+                break;
+            case 'line':
+                if (state.mode === Mode.Flat) {
+                    if (!doc.hard) {
+                        if (!doc.soft) {
+                            state.renderedText += ' ';
+                            state.currentLineLength += 1;
+                        }
+                        break;
+                    }
+                }
+                if (state.lineSuffixes.length > 0) {
+                    const suffixes = [...state.lineSuffixes];
+                    state.lineSuffixes.length = 0;
+                    for (const suffix of suffixes) {
+                        printDocToStringWithState(suffix.content, state);
+                    }
+                }
+                if (state.renderedText.length > 0) {
+                    state.renderedText = state.renderedText.replace(/[^\S\n]*$/, '');
+                }
+                const renderedIndentation = state.options.useTabs
+                    ? '\t'.repeat(state.indentation)
+                    : ' '.repeat(state.indentation * state.options.indentCount);
+                state.renderedText += '\n' + renderedIndentation;
+                state.currentLineLength = renderedIndentation.length;
+                break;
+            case 'indent':
+                {
+                    state.indentation++;
+                    printDocToStringWithState(doc.content, state);
+                    state.indentation--;
+                    break;
+                }
+            case 'lineSuffix':
+                state.lineSuffixes.push(doc);
+                break;
+            case 'group':
+                const canFit = canFitOnSingleLine(doc, Object.assign({}, state, { mode: Mode.Flat }));
+                const oldMode = state.mode;
+                if (!doc.willBreak && canFit) {
+                    state.mode = Mode.Flat;
+                }
+                else {
+                    state.mode = Mode.Break;
+                }
+                printDocToStringWithState(doc.content, state);
+                state.mode = oldMode;
+                break;
+        }
+    }
+}
+//# sourceMappingURL=docPrinter.js.map
+
+/***/ }),
+/* 420 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global exports:true, module:true, require:true, define:true, global:true */
+
+(function (root, name, factory) {
+  'use strict';
+
+  // Used to determine if values are of the language type `Object`
+  var objectTypes = {
+        'function': true
+      , 'object': true
+    }
+    // Detect free variable `exports`
+    , freeExports = objectTypes[typeof exports] && exports && !exports.nodeType && exports
+    // Detect free variable `module`
+    , freeModule = objectTypes[typeof module] && module && !module.nodeType && module
+    // Detect free variable `global`, from Node.js or Browserified code, and
+    // use it as `window`
+    , freeGlobal = freeExports && freeModule && typeof global === 'object' && global
+    // Detect the popular CommonJS extension `module.exports`
+    , moduleExports = freeModule && freeModule.exports === freeExports && freeExports;
+
+  /* istanbul ignore else */
+  if (freeGlobal && (freeGlobal.global === freeGlobal ||
+                     /* istanbul ignore next */ freeGlobal.window === freeGlobal ||
+                     /* istanbul ignore next */ freeGlobal.self === freeGlobal)) {
+    root = freeGlobal;
+  }
+
+  // Some AMD build optimizers, like r.js, check for specific condition
+  // patterns like the following:
+  /* istanbul ignore if */
+  if (true) {
+    // defined as an anonymous module.
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    // In case the source has been processed and wrapped in a define module use
+    // the supplied `exports` object.
+    if (freeExports && moduleExports) factory(freeModule.exports);
+  }
+  // check for `exports` after `define` in case a build optimizer adds an
+  // `exports` object
+  else /* istanbul ignore else */ {}
+}(this, 'luaparse', function (exports) {
+  'use strict';
+
+  exports.version = '0.2.1';
+
+  var input, options, length;
+
+  // Options can be set either globally on the parser object through
+  // defaultOptions, or during the parse call.
+  var defaultOptions = exports.defaultOptions = {
+    // Explicitly tell the parser when the input ends.
+      wait: false
+    // Store comments as an array in the chunk object.
+    , comments: true
+    // Track identifier scopes by adding an isLocal attribute to each
+    // identifier-node.
+    , scope: false
+    // Store location information on each syntax node as
+    // `loc: { start: { line, column }, end: { line, column } }`.
+    , locations: false
+    // Store the start and end character locations on each syntax node as
+    // `range: [start, end]`.
+    , ranges: false
+    // A callback which will be invoked when a syntax node has been completed.
+    // The node which has been created will be passed as the only parameter.
+    , onCreateNode: null
+    // A callback which will be invoked when a new scope is created.
+    , onCreateScope: null
+    // A callback which will be invoked when the current scope is destroyed.
+    , onDestroyScope: null
+    // A callback which will be invoked when a local variable is declared in the current scope.
+    // The variable's name will be passed as the only parameter
+    , onLocalDeclaration: null
+    // The version of Lua targeted by the parser (string; allowed values are
+    // '5.1', '5.2', '5.3').
+    , luaVersion: '5.1'
+  };
+
+  // The available tokens expressed as enum flags so they can be checked with
+  // bitwise operations.
+
+  var EOF = 1, StringLiteral = 2, Keyword = 4, Identifier = 8
+    , NumericLiteral = 16, Punctuator = 32, BooleanLiteral = 64
+    , NilLiteral = 128, VarargLiteral = 256;
+
+  exports.tokenTypes = { EOF: EOF, StringLiteral: StringLiteral
+    , Keyword: Keyword, Identifier: Identifier, NumericLiteral: NumericLiteral
+    , Punctuator: Punctuator, BooleanLiteral: BooleanLiteral
+    , NilLiteral: NilLiteral, VarargLiteral: VarargLiteral
+  };
+
+  // As this parser is a bit different from luas own, the error messages
+  // will be different in some situations.
+
+  var errors = exports.errors = {
+      unexpected: 'unexpected %1 \'%2\' near \'%3\''
+    , expected: '\'%1\' expected near \'%2\''
+    , expectedToken: '%1 expected near \'%2\''
+    , unfinishedString: 'unfinished string near \'%1\''
+    , malformedNumber: 'malformed number near \'%1\''
+    , invalidVar: 'invalid left-hand side of assignment near \'%1\''
+    , decimalEscapeTooLarge: 'decimal escape too large near \'%1\''
+    , invalidEscape: 'invalid escape sequence near \'%1\''
+    , hexadecimalDigitExpected: 'hexadecimal digit expected near \'%1\''
+    , braceExpected: 'missing \'%1\' near \'%2\''
+    , tooLargeCodepoint: 'UTF-8 value too large near \'%1\''
+    , unfinishedLongString: 'unfinished long string (starting at line %1) near \'%2\''
+    , unfinishedLongComment: 'unfinished long comment (starting at line %1) near \'%2\''
+  };
+
+  // ### Abstract Syntax Tree
+  //
+  // The default AST structure is inspired by the Mozilla Parser API but can
+  // easily be customized by overriding these functions.
+
+  var ast = exports.ast = {
+      labelStatement: function(label) {
+      return {
+          type: 'LabelStatement'
+        , label: label
+      };
+    }
+
+    , breakStatement: function() {
+      return {
+          type: 'BreakStatement'
+      };
+    }
+
+    , gotoStatement: function(label) {
+      return {
+          type: 'GotoStatement'
+        , label: label
+      };
+    }
+
+    , returnStatement: function(args) {
+      return {
+          type: 'ReturnStatement'
+        , 'arguments': args
+      };
+    }
+
+    , ifStatement: function(clauses) {
+      return {
+          type: 'IfStatement'
+        , clauses: clauses
+      };
+    }
+    , ifClause: function(condition, body) {
+      return {
+          type: 'IfClause'
+        , condition: condition
+        , body: body
+      };
+    }
+    , elseifClause: function(condition, body) {
+      return {
+          type: 'ElseifClause'
+        , condition: condition
+        , body: body
+      };
+    }
+    , elseClause: function(body) {
+      return {
+          type: 'ElseClause'
+        , body: body
+      };
+    }
+
+    , whileStatement: function(condition, body) {
+      return {
+          type: 'WhileStatement'
+        , condition: condition
+        , body: body
+      };
+    }
+
+    , doStatement: function(body) {
+      return {
+          type: 'DoStatement'
+        , body: body
+      };
+    }
+
+    , repeatStatement: function(condition, body) {
+      return {
+          type: 'RepeatStatement'
+        , condition: condition
+        , body: body
+      };
+    }
+
+    , localStatement: function(variables, init) {
+      return {
+          type: 'LocalStatement'
+        , variables: variables
+        , init: init
+      };
+    }
+
+    , assignmentStatement: function(variables, init) {
+      return {
+          type: 'AssignmentStatement'
+        , variables: variables
+        , init: init
+      };
+    }
+
+    , callStatement: function(expression) {
+      return {
+          type: 'CallStatement'
+        , expression: expression
+      };
+    }
+
+    , functionStatement: function(identifier, parameters, isLocal, body) {
+      return {
+          type: 'FunctionDeclaration'
+        , identifier: identifier
+        , isLocal: isLocal
+        , parameters: parameters
+        , body: body
+      };
+    }
+
+    , forNumericStatement: function(variable, start, end, step, body) {
+      return {
+          type: 'ForNumericStatement'
+        , variable: variable
+        , start: start
+        , end: end
+        , step: step
+        , body: body
+      };
+    }
+
+    , forGenericStatement: function(variables, iterators, body) {
+      return {
+          type: 'ForGenericStatement'
+        , variables: variables
+        , iterators: iterators
+        , body: body
+      };
+    }
+
+    , chunk: function(body) {
+      return {
+          type: 'Chunk'
+        , body: body
+      };
+    }
+
+    , identifier: function(name) {
+      return {
+          type: 'Identifier'
+        , name: name
+      };
+    }
+
+    , literal: function(type, value, raw) {
+      type = (type === StringLiteral) ? 'StringLiteral'
+        : (type === NumericLiteral) ? 'NumericLiteral'
+        : (type === BooleanLiteral) ? 'BooleanLiteral'
+        : (type === NilLiteral) ? 'NilLiteral'
+        : 'VarargLiteral';
+
+      return {
+          type: type
+        , value: value
+        , raw: raw
+      };
+    }
+
+    , tableKey: function(key, value) {
+      return {
+          type: 'TableKey'
+        , key: key
+        , value: value
+      };
+    }
+    , tableKeyString: function(key, value) {
+      return {
+          type: 'TableKeyString'
+        , key: key
+        , value: value
+      };
+    }
+    , tableValue: function(value) {
+      return {
+          type: 'TableValue'
+        , value: value
+      };
+    }
+
+
+    , tableConstructorExpression: function(fields) {
+      return {
+          type: 'TableConstructorExpression'
+        , fields: fields
+      };
+    }
+    , binaryExpression: function(operator, left, right) {
+      var type = ('and' === operator || 'or' === operator) ?
+        'LogicalExpression' :
+        'BinaryExpression';
+
+      return {
+          type: type
+        , operator: operator
+        , left: left
+        , right: right
+      };
+    }
+    , unaryExpression: function(operator, argument) {
+      return {
+          type: 'UnaryExpression'
+        , operator: operator
+        , argument: argument
+      };
+    }
+    , memberExpression: function(base, indexer, identifier) {
+      return {
+          type: 'MemberExpression'
+        , indexer: indexer
+        , identifier: identifier
+        , base: base
+      };
+    }
+
+    , indexExpression: function(base, index) {
+      return {
+          type: 'IndexExpression'
+        , base: base
+        , index: index
+      };
+    }
+
+    , callExpression: function(base, args) {
+      return {
+          type: 'CallExpression'
+        , base: base
+        , 'arguments': args
+      };
+    }
+
+    , tableCallExpression: function(base, args) {
+      return {
+          type: 'TableCallExpression'
+        , base: base
+        , 'arguments': args
+      };
+    }
+
+    , stringCallExpression: function(base, argument) {
+      return {
+          type: 'StringCallExpression'
+        , base: base
+        , argument: argument
+      };
+    }
+
+    , comment: function(value, raw) {
+      return {
+          type: 'Comment'
+        , value: value
+        , raw: raw
+      };
+    }
+  };
+
+  // Wrap up the node object.
+
+  function finishNode(node) {
+    // Pop a `Marker` off the location-array and attach its location data.
+    if (trackLocations) {
+      var location = locations.pop();
+      location.complete();
+      location.bless(node);
+    }
+    if (options.onCreateNode) options.onCreateNode(node);
+    return node;
+  }
+
+
+  // Helpers
+  // -------
+
+  var slice = Array.prototype.slice
+    , toString = Object.prototype.toString
+    , indexOf = function indexOf(array, element) {
+      for (var i = 0, length = array.length; i < length; ++i) {
+        if (array[i] === element) return i;
+      }
+      return -1;
+    };
+
+  // Iterate through an array of objects and return the index of an object
+  // with a matching property.
+
+  function indexOfObject(array, property, element) {
+    for (var i = 0, length = array.length; i < length; ++i) {
+      if (array[i][property] === element) return i;
+    }
+    return -1;
+  }
+
+  // A sprintf implementation using %index (beginning at 1) to input
+  // arguments in the format string.
+  //
+  // Example:
+  //
+  //     // Unexpected function in token
+  //     sprintf('Unexpected %2 in %1.', 'token', 'function');
+
+  function sprintf(format) {
+    var args = slice.call(arguments, 1);
+    format = format.replace(/%(\d)/g, function (match, index) {
+      return '' + args[index - 1] || /* istanbul ignore next */ '';
+    });
+    return format;
+  }
+
+  // Returns a new object with the properties from all objectes passed as
+  // arguments. Last argument takes precedence.
+  //
+  // Example:
+  //
+  //     this.options = extend(options, { output: false });
+
+  function extend() {
+    var args = slice.call(arguments)
+      , dest = {}
+      , src, prop;
+
+    for (var i = 0, length = args.length; i < length; ++i) {
+      src = args[i];
+      for (prop in src)
+        /* istanbul ignore else */
+        if (src.hasOwnProperty(prop)) {
+          dest[prop] = src[prop];
+        }
+    }
+    return dest;
+  }
+
+  // ### Error functions
+
+  // #### Raise an exception.
+  //
+  // Raise an exception by passing a token, a string format and its paramters.
+  //
+  // The passed tokens location will automatically be added to the error
+  // message if it exists, if not it will default to the lexers current
+  // position.
+  //
+  // Example:
+  //
+  //     // [1:0] expected [ near (
+  //     raise(token, "expected %1 near %2", '[', token.value);
+
+  function raise(token) {
+    var message = sprintf.apply(null, slice.call(arguments, 1))
+      , error, col;
+
+    if ('undefined' !== typeof token.line) {
+      col = token.range[0] - token.lineStart;
+      error = new SyntaxError(sprintf('[%1:%2] %3', token.line, col, message));
+      error.line = token.line;
+      error.index = token.range[0];
+      error.column = col;
+    } else {
+      col = index - lineStart + 1;
+      error = new SyntaxError(sprintf('[%1:%2] %3', line, col, message));
+      error.index = index;
+      error.line = line;
+      error.column = col;
+    }
+    throw error;
+  }
+
+  // #### Raise an unexpected token error.
+  //
+  // Example:
+  //
+  //     // expected <name> near '0'
+  //     raiseUnexpectedToken('<name>', token);
+
+  function raiseUnexpectedToken(type, token) {
+    raise(token, errors.expectedToken, type, token.value);
+  }
+
+  // #### Raise a general unexpected error
+  //
+  // Usage should pass either a token object or a symbol string which was
+  // expected. We can also specify a nearby token such as <eof>, this will
+  // default to the currently active token.
+  //
+  // Example:
+  //
+  //     // Unexpected symbol 'end' near '<eof>'
+  //     unexpected(token);
+  //
+  // If there's no token in the buffer it means we have reached <eof>.
+
+  function unexpected(found) {
+    var near = lookahead.value;
+    if ('undefined' !== typeof found.type) {
+      var type;
+      switch (found.type) {
+        case StringLiteral:   type = 'string';      break;
+        case Keyword:         type = 'keyword';     break;
+        case Identifier:      type = 'identifier';  break;
+        case NumericLiteral:  type = 'number';      break;
+        case Punctuator:      type = 'symbol';      break;
+        case BooleanLiteral:  type = 'boolean';     break;
+        case NilLiteral:
+          return raise(found, errors.unexpected, 'symbol', 'nil', near);
+      }
+      return raise(found, errors.unexpected, type, found.value, near);
+    }
+    return raise(found, errors.unexpected, 'symbol', found, near);
+  }
+
+  // Lexer
+  // -----
+  //
+  // The lexer, or the tokenizer reads the input string character by character
+  // and derives a token left-right. To be as efficient as possible the lexer
+  // prioritizes the common cases such as identifiers. It also works with
+  // character codes instead of characters as string comparisons was the
+  // biggest bottleneck of the parser.
+  //
+  // If `options.comments` is enabled, all comments encountered will be stored
+  // in an array which later will be appended to the chunk object. If disabled,
+  // they will simply be disregarded.
+  //
+  // When the lexer has derived a valid token, it will be returned as an object
+  // containing its value and as well as its position in the input string (this
+  // is always enabled to provide proper debug messages).
+  //
+  // `lex()` starts lexing and returns the following token in the stream.
+
+  var index
+    , token
+    , previousToken
+    , lookahead
+    , comments
+    , tokenStart
+    , line
+    , lineStart;
+
+  exports.lex = lex;
+
+  function lex() {
+    skipWhiteSpace();
+
+    // Skip comments beginning with --
+    while (45 === input.charCodeAt(index) &&
+           45 === input.charCodeAt(index + 1)) {
+      scanComment();
+      skipWhiteSpace();
+    }
+    if (index >= length) return {
+        type : EOF
+      , value: '<eof>'
+      , line: line
+      , lineStart: lineStart
+      , range: [index, index]
+    };
+
+    var charCode = input.charCodeAt(index)
+      , next = input.charCodeAt(index + 1);
+
+    // Memorize the range index where the token begins.
+    tokenStart = index;
+    if (isIdentifierStart(charCode)) return scanIdentifierOrKeyword();
+
+    switch (charCode) {
+      case 39: case 34: // '"
+        return scanStringLiteral();
+
+      case 48: case 49: case 50: case 51: case 52: case 53:
+      case 54: case 55: case 56: case 57: // 0-9
+        return scanNumericLiteral();
+
+      case 46: // .
+        // If the dot is followed by a digit it's a float.
+        if (isDecDigit(next)) return scanNumericLiteral();
+        if (46 === next) {
+          if (46 === input.charCodeAt(index + 2)) return scanVarargLiteral();
+          return scanPunctuator('..');
+        }
+        return scanPunctuator('.');
+
+      case 61: // =
+        if (61 === next) return scanPunctuator('==');
+        return scanPunctuator('=');
+
+      case 62: // >
+        if (options.luaVersion === '5.3')
+          if (62 === next) return scanPunctuator('>>');
+        if (61 === next) return scanPunctuator('>=');
+        return scanPunctuator('>');
+
+      case 60: // <
+        if (options.luaVersion === '5.3')
+          if (60 === next) return scanPunctuator('<<');
+        if (61 === next) return scanPunctuator('<=');
+        return scanPunctuator('<');
+
+      case 126: // ~
+        if (61 === next) return scanPunctuator('~=');
+        if ((options.luaVersion === '5.1') || (options.luaVersion === '5.2'))
+          break;
+        return scanPunctuator('~');
+
+      case 58: // :
+        if ((options.luaVersion === '5.2') || (options.luaVersion === '5.3'))
+          if (58 === next) return scanPunctuator('::');
+        return scanPunctuator(':');
+
+      case 91: // [
+        // Check for a multiline string, they begin with [= or [[
+        if (91 === next || 61 === next) return scanLongStringLiteral();
+        return scanPunctuator('[');
+
+      case 47: // /
+        // Check for integer division op (//)
+        if (options.luaVersion === '5.3')
+          if (47 === next) return scanPunctuator('//');
+        return scanPunctuator('/');
+
+      case 38: case 124: // & |
+        if ((options.luaVersion === '5.1') || (options.luaVersion === '5.2'))
+          break;
+
+        /* fall through */
+      case 42: case 94: case 37: case 44: case 123: case 125:
+      case 93: case 40: case 41: case 59: case 35: case 45:
+      case 43: // * ^ % , { } ] ( ) ; # - +
+        return scanPunctuator(input.charAt(index));
+    }
+
+    return unexpected(input.charAt(index));
+  }
+
+  // Whitespace has no semantic meaning in lua so simply skip ahead while
+  // tracking the encounted newlines. Any kind of eol sequence is counted as a
+  // single line.
+
+  function consumeEOL() {
+    var charCode = input.charCodeAt(index)
+      , peekCharCode = input.charCodeAt(index + 1);
+
+    if (isLineTerminator(charCode)) {
+      // Count \n\r and \r\n as one newline.
+      if (10 === charCode && 13 === peekCharCode) ++index;
+      if (13 === charCode && 10 === peekCharCode) ++index;
+      ++line;
+      lineStart = ++index;
+
+      return true;
+    }
+    return false;
+  }
+
+  function skipWhiteSpace() {
+    while (index < length) {
+      var charCode = input.charCodeAt(index);
+      if (isWhiteSpace(charCode)) {
+        ++index;
+      } else if (!consumeEOL()) {
+        break;
+      }
+    }
+  }
+
+  // Identifiers, keywords, booleans and nil all look the same syntax wise. We
+  // simply go through them one by one and defaulting to an identifier if no
+  // previous case matched.
+
+  function scanIdentifierOrKeyword() {
+    var value, type;
+
+    // Slicing the input string is prefered before string concatenation in a
+    // loop for performance reasons.
+    while (isIdentifierPart(input.charCodeAt(++index)));
+    value = input.slice(tokenStart, index);
+
+    // Decide on the token type and possibly cast the value.
+    if (isKeyword(value)) {
+      type = Keyword;
+    } else if ('true' === value || 'false' === value) {
+      type = BooleanLiteral;
+      value = ('true' === value);
+    } else if ('nil' === value) {
+      type = NilLiteral;
+      value = null;
+    } else {
+      type = Identifier;
+    }
+
+    return {
+        type: type
+      , value: value
+      , line: line
+      , lineStart: lineStart
+      , range: [tokenStart, index]
+    };
+  }
+
+  // Once a punctuator reaches this function it should already have been
+  // validated so we simply return it as a token.
+
+  function scanPunctuator(value) {
+    index += value.length;
+    return {
+        type: Punctuator
+      , value: value
+      , line: line
+      , lineStart: lineStart
+      , range: [tokenStart, index]
+    };
+  }
+
+  // A vararg literal consists of three dots.
+
+  function scanVarargLiteral() {
+    index += 3;
+    return {
+        type: VarargLiteral
+      , value: '...'
+      , line: line
+      , lineStart: lineStart
+      , range: [tokenStart, index]
+    };
+  }
+
+  // Find the string literal by matching the delimiter marks used.
+
+  function scanStringLiteral() {
+    var delimiter = input.charCodeAt(index++)
+      , beginLine = line
+      , beginLineStart = lineStart
+      , stringStart = index
+      , string = ''
+      , charCode;
+
+    while (index < length) {
+      charCode = input.charCodeAt(index++);
+      if (delimiter === charCode) break;
+      if (92 === charCode) { // backslash
+        string += input.slice(stringStart, index - 1) + readEscapeSequence();
+        stringStart = index;
+      }
+      // EOF or `\n` terminates a string literal. If we haven't found the
+      // ending delimiter by now, raise an exception.
+      else if (index >= length || isLineTerminator(charCode)) {
+        string += input.slice(stringStart, index - 1);
+        raise({}, errors.unfinishedString, string + String.fromCharCode(charCode));
+      }
+    }
+    string += input.slice(stringStart, index - 1);
+
+    return {
+        type: StringLiteral
+      , value: string
+      , line: beginLine
+      , lineStart: beginLineStart
+      , lastLine: line
+      , lastLineStart: lineStart
+      , range: [tokenStart, index]
+    };
+  }
+
+  // Expect a multiline string literal and return it as a regular string
+  // literal, if it doesn't validate into a valid multiline string, throw an
+  // exception.
+
+  function scanLongStringLiteral() {
+    var beginLine = line
+      , beginLineStart = lineStart
+      , string = readLongString(false);
+    // Fail if it's not a multiline literal.
+    if (false === string) raise(token, errors.expected, '[', token.value);
+
+    return {
+        type: StringLiteral
+      , value: string
+      , line: beginLine
+      , lineStart: beginLineStart
+      , lastLine: line
+      , lastLineStart: lineStart
+      , range: [tokenStart, index]
+    };
+  }
+
+  // Numeric literals will be returned as floating-point numbers instead of
+  // strings. The raw value should be retrieved from slicing the input string
+  // later on in the process.
+  //
+  // If a hexadecimal number is encountered, it will be converted.
+
+  function scanNumericLiteral() {
+    var character = input.charAt(index)
+      , next = input.charAt(index + 1);
+
+    var value = ('0' === character && 'xX'.indexOf(next || null) >= 0) ?
+      readHexLiteral() : readDecLiteral();
+
+    return {
+        type: NumericLiteral
+      , value: value
+      , line: line
+      , lineStart: lineStart
+      , range: [tokenStart, index]
+    };
+  }
+
+  // Lua hexadecimals have an optional fraction part and an optional binary
+  // exoponent part. These are not included in JavaScript so we will compute
+  // all three parts separately and then sum them up at the end of the function
+  // with the following algorithm.
+  //
+  //     Digit := toDec(digit)
+  //     Fraction := toDec(fraction) / 16 ^ fractionCount
+  //     BinaryExp := 2 ^ binaryExp
+  //     Number := ( Digit + Fraction ) * BinaryExp
+
+  function readHexLiteral() {
+    var fraction = 0 // defaults to 0 as it gets summed
+      , binaryExponent = 1 // defaults to 1 as it gets multiplied
+      , binarySign = 1 // positive
+      , digit, fractionStart, exponentStart, digitStart;
+
+    digitStart = index += 2; // Skip 0x part
+
+    // A minimum of one hex digit is required.
+    if (!isHexDigit(input.charCodeAt(index)))
+      raise({}, errors.malformedNumber, input.slice(tokenStart, index));
+
+    while (isHexDigit(input.charCodeAt(index))) ++index;
+    // Convert the hexadecimal digit to base 10.
+    digit = parseInt(input.slice(digitStart, index), 16);
+
+    // Fraction part i optional.
+    if ('.' === input.charAt(index)) {
+      fractionStart = ++index;
+
+      while (isHexDigit(input.charCodeAt(index))) ++index;
+      fraction = input.slice(fractionStart, index);
+
+      // Empty fraction parts should default to 0, others should be converted
+      // 0.x form so we can use summation at the end.
+      fraction = (fractionStart === index) ? 0
+        : parseInt(fraction, 16) / Math.pow(16, index - fractionStart);
+    }
+
+    // Binary exponents are optional
+    if ('pP'.indexOf(input.charAt(index) || null) >= 0) {
+      ++index;
+
+      // Sign part is optional and defaults to 1 (positive).
+      if ('+-'.indexOf(input.charAt(index) || null) >= 0)
+        binarySign = ('+' === input.charAt(index++)) ? 1 : -1;
+
+      exponentStart = index;
+
+      // The binary exponent sign requires a decimal digit.
+      if (!isDecDigit(input.charCodeAt(index)))
+        raise({}, errors.malformedNumber, input.slice(tokenStart, index));
+
+      while (isDecDigit(input.charCodeAt(index))) ++index;
+      binaryExponent = input.slice(exponentStart, index);
+
+      // Calculate the binary exponent of the number.
+      binaryExponent = Math.pow(2, binaryExponent * binarySign);
+    }
+
+    return (digit + fraction) * binaryExponent;
+  }
+
+  // Decimal numbers are exactly the same in Lua and in JavaScript, because of
+  // this we check where the token ends and then parse it with native
+  // functions.
+
+  function readDecLiteral() {
+    while (isDecDigit(input.charCodeAt(index))) ++index;
+    // Fraction part is optional
+    if ('.' === input.charAt(index)) {
+      ++index;
+      // Fraction part defaults to 0
+      while (isDecDigit(input.charCodeAt(index))) ++index;
+    }
+    // Exponent part is optional.
+    if ('eE'.indexOf(input.charAt(index) || null) >= 0) {
+      ++index;
+      // Sign part is optional.
+      if ('+-'.indexOf(input.charAt(index) || null) >= 0) ++index;
+      // An exponent is required to contain at least one decimal digit.
+      if (!isDecDigit(input.charCodeAt(index)))
+        raise({}, errors.malformedNumber, input.slice(tokenStart, index));
+
+      while (isDecDigit(input.charCodeAt(index))) ++index;
+    }
+
+    return parseFloat(input.slice(tokenStart, index));
+  }
+
+  function encodeUTF8(codepoint) {
+    if (codepoint < 0x80) {
+      return String.fromCharCode(codepoint);
+    } else if (codepoint < 0x800) {
+      return String.fromCharCode(
+        0xc0 |  (codepoint >>  6)        ,
+        0x80 | ( codepoint        & 0x3f)
+      );
+    } else if (codepoint < 0x10000) {
+      return String.fromCharCode(
+        0xe0 |  (codepoint >> 12)        ,
+        0x80 | ((codepoint >>  6) & 0x3f),
+        0x80 | ( codepoint        & 0x3f)
+      );
+    } else if (codepoint < 0x110000) {
+      return String.fromCharCode(
+        0xf0 |  (codepoint >> 18)        ,
+        0x80 | ((codepoint >> 12) & 0x3f),
+        0x80 | ((codepoint >>  6) & 0x3f),
+        0x80 | ( codepoint        & 0x3f)
+      );
+    } else {
+      return null;
+    }
+  }
+
+  function readUnicodeEscapeSequence() {
+    var sequenceStart = index++;
+
+    if (input.charAt(index++) !== '{')
+      raise({}, errors.braceExpected, '{', '\\' + input.slice(sequenceStart, index));
+    if (!isHexDigit(input.charCodeAt(index)))
+      raise({}, errors.hexadecimalDigitExpected, '\\' + input.slice(sequenceStart, index));
+
+    while (input.charCodeAt(index) === 0x30) ++index;
+    var escStart = index;
+
+    while (isHexDigit(input.charCodeAt(index))) {
+      ++index;
+      if (index - escStart > 6)
+        raise({}, errors.tooLargeCodepoint, '\\' + input.slice(sequenceStart, index));
+    }
+
+    var b = input.charAt(index++);
+    if (b !== '}') {
+      if ((b === '"') || (b === "'"))
+        raise({}, errors.braceExpected, '}', '\\' + input.slice(sequenceStart, index--));
+      else
+        raise({}, errors.hexadecimalDigitExpected, '\\' + input.slice(sequenceStart, index));
+    }
+
+    var codepoint = parseInt(input.slice(escStart, index - 1), 16);
+
+    /* Now we have a codepoint number in a variable; encode it in UTF-8,
+     * interpreting each code unit as a code point number, as if we were reading
+     * a UTF-8 file using the ISO-8859-1 encoding. This is wasteful, but at least
+     * it preserves the property that literals that denote the same byte sequence
+     * are interpreted identically, i.e.
+     *
+     * "\u{1f4a9}" == "\xf0\x9f\x92\xa9" == "\240\159\146\169"
+     *
+     * Some other options to consider:
+     *
+     * @ Use an ArrayBuffer or Uint8Array for string literal values
+     *   - Cannot be serialised as JSON
+     *   - May fail to be portable to older JavaScript engines
+     * @ Store string literal values as code point strings, and require that
+     *   escape sequences constitute well-formed UTF-8; throw an exception
+     *   if they do not
+     *   - Reduced compatibility with PUC Lua
+     * @ Like above, but transform ill-formed escapes to unpaired surrogates,
+     *   just like Python's 'surrogateescape' encoding error handler
+     *   - Destroys the property that ("\xc4" .. "\x99") == "\xc4\x99"
+     *   - If the AST is encoded in JSON, some JSON libraries may refuse to parse it
+     */
+    codepoint = encodeUTF8(codepoint);
+    if (codepoint === null) {
+      raise({}, errors.tooLargeCodepoint, '\\' + input.slice(sequenceStart, index));
+    }
+    return codepoint;
+  }
+
+  // Translate escape sequences to the actual characters.
+  function readEscapeSequence() {
+    var sequenceStart = index;
+    switch (input.charAt(index)) {
+      // Lua allow the following escape sequences.
+      case 'a': ++index; return '\x07';
+      case 'n': ++index; return '\n';
+      case 'r': ++index; return '\r';
+      case 't': ++index; return '\t';
+      case 'v': ++index; return '\x0b';
+      case 'b': ++index; return '\b';
+      case 'f': ++index; return '\f';
+
+      // Backslash at the end of the line. We treat all line endings as equivalent,
+      // and as representing the [LF] character (code 10). Lua 5.1 through 5.3
+      // have been verified to behave the same way.
+      case '\r':
+      case '\n':
+        consumeEOL();
+        return '\n';
+
+      case '0': case '1': case '2': case '3': case '4':
+      case '5': case '6': case '7': case '8': case '9':
+        // \ddd, where ddd is a sequence of up to three decimal digits.
+        while (isDecDigit(input.charCodeAt(index)) && index - sequenceStart < 3) ++index;
+
+        var ddd = parseInt(input.slice(sequenceStart, index), 10);
+        if (ddd > 255) {
+          raise({}, errors.decimalEscapeTooLarge, '\\' + ddd);
+        }
+        return String.fromCharCode(ddd);
+
+      case 'z':
+        if ((options.luaVersion === '5.2') || (options.luaVersion === '5.3')) {
+          ++index;
+          skipWhiteSpace();
+          return '';
+        }
+
+        /* fall through */
+      case 'x':
+        if ((options.luaVersion === '5.2') || (options.luaVersion === '5.3')) {
+          // \xXX, where XX is a sequence of exactly two hexadecimal digits
+          if (isHexDigit(input.charCodeAt(index + 1)) &&
+              isHexDigit(input.charCodeAt(index + 2))) {
+            index += 3;
+            return String.fromCharCode(parseInt(input.slice(sequenceStart + 1, index), 16));
+          }
+          raise({}, errors.hexadecimalDigitExpected, '\\' + input.slice(sequenceStart, index + 2));
+        }
+
+        /* fall through */
+      case 'u':
+        if (options.luaVersion === '5.3') {
+          return readUnicodeEscapeSequence();
+        }
+
+        /* fall through */
+      default:
+        if ((options.luaVersion === '5.2') || (options.luaVersion === '5.3'))
+          raise({}, errors.invalidEscape, '\\' + input.slice(sequenceStart, index + 1));
+
+        /* fall through */
+      case '\\': case '"': case "'":
+        return input.charAt(index++);
+    }
+  }
+
+  // Comments begin with -- after which it will be decided if they are
+  // multiline comments or not.
+  //
+  // The multiline functionality works the exact same way as with string
+  // literals so we reuse the functionality.
+
+  function scanComment() {
+    tokenStart = index;
+    index += 2; // --
+
+    var character = input.charAt(index)
+      , content = ''
+      , isLong = false
+      , commentStart = index
+      , lineStartComment = lineStart
+      , lineComment = line;
+
+    if ('[' === character) {
+      content = readLongString(true);
+      // This wasn't a multiline comment after all.
+      if (false === content) content = character;
+      else isLong = true;
+    }
+    // Scan until next line as long as it's not a multiline comment.
+    if (!isLong) {
+      while (index < length) {
+        if (isLineTerminator(input.charCodeAt(index))) break;
+        ++index;
+      }
+      if (options.comments) content = input.slice(commentStart, index);
+    }
+
+    if (options.comments) {
+      var node = ast.comment(content, input.slice(tokenStart, index));
+
+      // `Marker`s depend on tokens available in the parser and as comments are
+      // intercepted in the lexer all location data is set manually.
+      if (options.locations) {
+        node.loc = {
+            start: { line: lineComment, column: tokenStart - lineStartComment }
+          , end: { line: line, column: index - lineStart }
+        };
+      }
+      if (options.ranges) {
+        node.range = [tokenStart, index];
+      }
+      if (options.onCreateNode) options.onCreateNode(node);
+      comments.push(node);
+    }
+  }
+
+  // Read a multiline string by calculating the depth of `=` characters and
+  // then appending until an equal depth is found.
+
+  function readLongString(isComment) {
+    var level = 0
+      , content = ''
+      , terminator = false
+      , character, stringStart, firstLine = line;
+
+    ++index; // [
+
+    // Calculate the depth of the comment.
+    while ('=' === input.charAt(index + level)) ++level;
+    // Exit, this is not a long string afterall.
+    if ('[' !== input.charAt(index + level)) return false;
+
+    index += level + 1;
+
+    // If the first character is a newline, ignore it and begin on next line.
+    if (isLineTerminator(input.charCodeAt(index))) consumeEOL();
+
+    stringStart = index;
+    while (index < length) {
+      // To keep track of line numbers run the `consumeEOL()` which increments
+      // its counter.
+      if (isLineTerminator(input.charCodeAt(index))) consumeEOL();
+
+      character = input.charAt(index++);
+
+      // Once the delimiter is found, iterate through the depth count and see
+      // if it matches.
+      if (']' === character) {
+        terminator = true;
+        for (var i = 0; i < level; ++i) {
+          if ('=' !== input.charAt(index + i)) terminator = false;
+        }
+        if (']' !== input.charAt(index + level)) terminator = false;
+      }
+
+      // We reached the end of the multiline string. Get out now.
+      if (terminator) {
+        content += input.slice(stringStart, index - 1);
+        index += level + 1;
+        return content;
+      }
+    }
+
+    raise({}, isComment ?
+              errors.unfinishedLongComment :
+              errors.unfinishedLongString,
+          firstLine, '<eof>');
+  }
+
+  // ## Lex functions and helpers.
+
+  // Read the next token.
+  //
+  // This is actually done by setting the current token to the lookahead and
+  // reading in the new lookahead token.
+
+  function next() {
+    previousToken = token;
+    token = lookahead;
+    lookahead = lex();
+  }
+
+  // Consume a token if its value matches. Once consumed or not, return the
+  // success of the operation.
+
+  function consume(value) {
+    if (value === token.value) {
+      next();
+      return true;
+    }
+    return false;
+  }
+
+  // Expect the next token value to match. If not, throw an exception.
+
+  function expect(value) {
+    if (value === token.value) next();
+    else raise(token, errors.expected, value, token.value);
+  }
+
+  // ### Validation functions
+
+  function isWhiteSpace(charCode) {
+    return 9 === charCode || 32 === charCode || 0xB === charCode || 0xC === charCode;
+  }
+
+  function isLineTerminator(charCode) {
+    return 10 === charCode || 13 === charCode;
+  }
+
+  function isDecDigit(charCode) {
+    return charCode >= 48 && charCode <= 57;
+  }
+
+  function isHexDigit(charCode) {
+    return (charCode >= 48 && charCode <= 57) || (charCode >= 97 && charCode <= 102) || (charCode >= 65 && charCode <= 70);
+  }
+
+  // From [Lua 5.2](http://www.lua.org/manual/5.2/manual.html#8.1) onwards
+  // identifiers cannot use locale-dependet letters.
+
+  function isIdentifierStart(charCode) {
+    return (charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || 95 === charCode;
+  }
+
+  function isIdentifierPart(charCode) {
+    return (charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || 95 === charCode || (charCode >= 48 && charCode <= 57);
+  }
+
+  // [3.1 Lexical Conventions](http://www.lua.org/manual/5.2/manual.html#3.1)
+  //
+  // `true`, `false` and `nil` will not be considered keywords, but literals.
+
+  function isKeyword(id) {
+    switch (id.length) {
+      case 2:
+        return 'do' === id || 'if' === id || 'in' === id || 'or' === id;
+      case 3:
+        return 'and' === id || 'end' === id || 'for' === id || 'not' === id;
+      case 4:
+        if ('else' === id || 'then' === id)
+          return true;
+        if ((options.luaVersion === '5.2') || (options.luaVersion === '5.3'))
+          return ('goto' === id);
+        return false;
+      case 5:
+        return 'break' === id || 'local' === id || 'until' === id || 'while' === id;
+      case 6:
+        return 'elseif' === id || 'repeat' === id || 'return' === id;
+      case 8:
+        return 'function' === id;
+    }
+    return false;
+  }
+
+  function isUnary(token) {
+    if (Punctuator === token.type) return '#-~'.indexOf(token.value) >= 0;
+    if (Keyword === token.type) return 'not' === token.value;
+    return false;
+  }
+
+  // @TODO this needs to be rethought.
+  function isCallExpression(expression) {
+    switch (expression.type) {
+      case 'CallExpression':
+      case 'TableCallExpression':
+      case 'StringCallExpression':
+        return true;
+    }
+    return false;
+  }
+
+  // Check if the token syntactically closes a block.
+
+  function isBlockFollow(token) {
+    if (EOF === token.type) return true;
+    if (Keyword !== token.type) return false;
+    switch (token.value) {
+      case 'else': case 'elseif':
+      case 'end': case 'until':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  // Scope
+  // -----
+
+  // Store each block scope as a an array of identifier names. Each scope is
+  // stored in an FILO-array.
+  var scopes
+    // The current scope index
+    , scopeDepth
+    // A list of all global identifier nodes.
+    , globals;
+
+  // Create a new scope inheriting all declarations from the previous scope.
+  function createScope() {
+    var scope = Array.apply(null, scopes[scopeDepth++]);
+    scopes.push(scope);
+    if (options.onCreateScope) options.onCreateScope();
+  }
+
+  // Exit and remove the current scope.
+  function destroyScope() {
+    var scope = scopes.pop();
+    scopeDepth--;
+    if (options.onDestroyScope) options.onDestroyScope();
+  }
+
+  // Add identifier name to the current scope if it doesnt already exist.
+  function scopeIdentifierName(name) {
+    if (options.onLocalDeclaration) options.onLocalDeclaration(name);
+    if (-1 !== indexOf(scopes[scopeDepth], name)) return;
+    scopes[scopeDepth].push(name);
+  }
+
+  // Add identifier to the current scope
+  function scopeIdentifier(node) {
+    scopeIdentifierName(node.name);
+    attachScope(node, true);
+  }
+
+  // Attach scope information to node. If the node is global, store it in the
+  // globals array so we can return the information to the user.
+  function attachScope(node, isLocal) {
+    if (!isLocal && -1 === indexOfObject(globals, 'name', node.name))
+      globals.push(node);
+
+    node.isLocal = isLocal;
+  }
+
+  // Is the identifier name available in this scope.
+  function scopeHasName(name) {
+    return (-1 !== indexOf(scopes[scopeDepth], name));
+  }
+
+  // Location tracking
+  // -----------------
+  //
+  // Locations are stored in FILO-array as a `Marker` object consisting of both
+  // `loc` and `range` data. Once a `Marker` is popped off the list an end
+  // location is added and the data is attached to a syntax node.
+
+  var locations = []
+    , trackLocations;
+
+  function createLocationMarker() {
+    return new Marker(token);
+  }
+
+  function Marker(token) {
+    if (options.locations) {
+      this.loc = {
+          start: {
+            line: token.line
+          , column: token.range[0] - token.lineStart
+        }
+        , end: {
+            line: 0
+          , column: 0
+        }
+      };
+    }
+    if (options.ranges) this.range = [token.range[0], 0];
+  }
+
+  // Complete the location data stored in the `Marker` by adding the location
+  // of the *previous token* as an end location.
+  Marker.prototype.complete = function() {
+    if (options.locations) {
+      this.loc.end.line = previousToken.lastLine || previousToken.line;
+      this.loc.end.column = previousToken.range[1] - (previousToken.lastLineStart || previousToken.lineStart);
+    }
+    if (options.ranges) {
+      this.range[1] = previousToken.range[1];
+    }
+  };
+
+  Marker.prototype.bless = function (node) {
+    if (this.loc) {
+      var loc = this.loc;
+      node.loc = {
+        start: {
+          line: loc.start.line,
+          column: loc.start.column
+        },
+        end: {
+          line: loc.end.line,
+          column: loc.end.column
+        }
+      };
+    }
+    if (this.range) {
+      node.range = [
+        this.range[0],
+        this.range[1]
+      ];
+    }
+  };
+
+  // Create a new `Marker` and add it to the FILO-array.
+  function markLocation() {
+    if (trackLocations) locations.push(createLocationMarker());
+  }
+
+  // Push an arbitrary `Marker` object onto the FILO-array.
+  function pushLocation(marker) {
+    if (trackLocations) locations.push(marker);
+  }
+
+  // Parse functions
+  // ---------------
+
+  // Chunk is the main program object. Syntactically it's the same as a block.
+  //
+  //     chunk ::= block
+
+  function parseChunk() {
+    next();
+    markLocation();
+    if (options.scope) createScope();
+    var body = parseBlock();
+    if (options.scope) destroyScope();
+    if (EOF !== token.type) unexpected(token);
+    // If the body is empty no previousToken exists when finishNode runs.
+    if (trackLocations && !body.length) previousToken = token;
+    return finishNode(ast.chunk(body));
+  }
+
+  // A block contains a list of statements with an optional return statement
+  // as its last statement.
+  //
+  //     block ::= {stat} [retstat]
+
+  function parseBlock(terminator) {
+    var block = []
+      , statement;
+
+    while (!isBlockFollow(token)) {
+      // Return has to be the last statement in a block.
+      if ('return' === token.value) {
+        block.push(parseStatement());
+        break;
+      }
+      statement = parseStatement();
+      consume(';');
+      // Statements are only added if they are returned, this allows us to
+      // ignore some statements, such as EmptyStatement.
+      if (statement) block.push(statement);
+    }
+
+    // Doesn't really need an ast node
+    return block;
+  }
+
+  // There are two types of statements, simple and compound.
+  //
+  //     statement ::= break | goto | do | while | repeat | return
+  //          | if | for | function | local | label | assignment
+  //          | functioncall | ';'
+
+  function parseStatement() {
+    markLocation();
+    if (Keyword === token.type) {
+      switch (token.value) {
+        case 'local':    next(); return parseLocalStatement();
+        case 'if':       next(); return parseIfStatement();
+        case 'return':   next(); return parseReturnStatement();
+        case 'function': next();
+          var name = parseFunctionName();
+          return parseFunctionDeclaration(name);
+        case 'while':    next(); return parseWhileStatement();
+        case 'for':      next(); return parseForStatement();
+        case 'repeat':   next(); return parseRepeatStatement();
+        case 'break':    next(); return parseBreakStatement();
+        case 'do':       next(); return parseDoStatement();
+        case 'goto':     next(); return parseGotoStatement();
+      }
+    }
+
+    if (Punctuator === token.type) {
+      if (consume('::')) return parseLabelStatement();
+    }
+    // Assignments memorizes the location and pushes it manually for wrapper
+    // nodes. Additionally empty `;` statements should not mark a location.
+    if (trackLocations) locations.pop();
+
+    // When a `;` is encounted, simply eat it without storing it.
+    if (options.luaVersion === '5.2' || options.luaVersion === '5.3') {
+      if (consume(';')) return;
+    }
+
+    return parseAssignmentOrCallStatement();
+  }
+
+  // ## Statements
+
+  //     label ::= '::' Name '::'
+
+  function parseLabelStatement() {
+    var name = token.value
+      , label = parseIdentifier();
+
+    if (options.scope) {
+      scopeIdentifierName('::' + name + '::');
+      attachScope(label, true);
+    }
+
+    expect('::');
+    return finishNode(ast.labelStatement(label));
+  }
+
+  //     break ::= 'break'
+
+  function parseBreakStatement() {
+    return finishNode(ast.breakStatement());
+  }
+
+  //     goto ::= 'goto' Name
+
+  function parseGotoStatement() {
+    var name = token.value
+      , label = parseIdentifier();
+
+    return finishNode(ast.gotoStatement(label));
+  }
+
+  //     do ::= 'do' block 'end'
+
+  function parseDoStatement() {
+    if (options.scope) createScope();
+    var body = parseBlock();
+    if (options.scope) destroyScope();
+    expect('end');
+    return finishNode(ast.doStatement(body));
+  }
+
+  //     while ::= 'while' exp 'do' block 'end'
+
+  function parseWhileStatement() {
+    var condition = parseExpectedExpression();
+    expect('do');
+    if (options.scope) createScope();
+    var body = parseBlock();
+    if (options.scope) destroyScope();
+    expect('end');
+    return finishNode(ast.whileStatement(condition, body));
+  }
+
+  //     repeat ::= 'repeat' block 'until' exp
+
+  function parseRepeatStatement() {
+    if (options.scope) createScope();
+    var body = parseBlock();
+    expect('until');
+    var condition = parseExpectedExpression();
+    if (options.scope) destroyScope();
+    return finishNode(ast.repeatStatement(condition, body));
+  }
+
+  //     retstat ::= 'return' [exp {',' exp}] [';']
+
+  function parseReturnStatement() {
+    var expressions = [];
+
+    if ('end' !== token.value) {
+      var expression = parseExpression();
+      if (null != expression) expressions.push(expression);
+      while (consume(',')) {
+        expression = parseExpectedExpression();
+        expressions.push(expression);
+      }
+      consume(';'); // grammar tells us ; is optional here.
+    }
+    return finishNode(ast.returnStatement(expressions));
+  }
+
+  //     if ::= 'if' exp 'then' block {elif} ['else' block] 'end'
+  //     elif ::= 'elseif' exp 'then' block
+
+  function parseIfStatement() {
+    var clauses = []
+      , condition
+      , body
+      , marker;
+
+    // IfClauses begin at the same location as the parent IfStatement.
+    // It ends at the start of `end`, `else`, or `elseif`.
+    if (trackLocations) {
+      marker = locations[locations.length - 1];
+      locations.push(marker);
+    }
+    condition = parseExpectedExpression();
+    expect('then');
+    if (options.scope) createScope();
+    body = parseBlock();
+    if (options.scope) destroyScope();
+    clauses.push(finishNode(ast.ifClause(condition, body)));
+
+    if (trackLocations) marker = createLocationMarker();
+    while (consume('elseif')) {
+      pushLocation(marker);
+      condition = parseExpectedExpression();
+      expect('then');
+      if (options.scope) createScope();
+      body = parseBlock();
+      if (options.scope) destroyScope();
+      clauses.push(finishNode(ast.elseifClause(condition, body)));
+      if (trackLocations) marker = createLocationMarker();
+    }
+
+    if (consume('else')) {
+      // Include the `else` in the location of ElseClause.
+      if (trackLocations) {
+        marker = new Marker(previousToken);
+        locations.push(marker);
+      }
+      if (options.scope) createScope();
+      body = parseBlock();
+      if (options.scope) destroyScope();
+      clauses.push(finishNode(ast.elseClause(body)));
+    }
+
+    expect('end');
+    return finishNode(ast.ifStatement(clauses));
+  }
+
+  // There are two types of for statements, generic and numeric.
+  //
+  //     for ::= Name '=' exp ',' exp [',' exp] 'do' block 'end'
+  //     for ::= namelist 'in' explist 'do' block 'end'
+  //     namelist ::= Name {',' Name}
+  //     explist ::= exp {',' exp}
+
+  function parseForStatement() {
+    var variable = parseIdentifier()
+      , body;
+
+    // The start-identifier is local.
+
+    if (options.scope) {
+      createScope();
+      scopeIdentifier(variable);
+    }
+
+    // If the first expression is followed by a `=` punctuator, this is a
+    // Numeric For Statement.
+    if (consume('=')) {
+      // Start expression
+      var start = parseExpectedExpression();
+      expect(',');
+      // End expression
+      var end = parseExpectedExpression();
+      // Optional step expression
+      var step = consume(',') ? parseExpectedExpression() : null;
+
+      expect('do');
+      body = parseBlock();
+      expect('end');
+      if (options.scope) destroyScope();
+
+      return finishNode(ast.forNumericStatement(variable, start, end, step, body));
+    }
+    // If not, it's a Generic For Statement
+    else {
+      // The namelist can contain one or more identifiers.
+      var variables = [variable];
+      while (consume(',')) {
+        variable = parseIdentifier();
+        // Each variable in the namelist is locally scoped.
+        if (options.scope) scopeIdentifier(variable);
+        variables.push(variable);
+      }
+      expect('in');
+      var iterators = [];
+
+      // One or more expressions in the explist.
+      do {
+        var expression = parseExpectedExpression();
+        iterators.push(expression);
+      } while (consume(','));
+
+      expect('do');
+      body = parseBlock();
+      expect('end');
+      if (options.scope) destroyScope();
+
+      return finishNode(ast.forGenericStatement(variables, iterators, body));
+    }
+  }
+
+  // Local statements can either be variable assignments or function
+  // definitions. If a function definition is found, it will be delegated to
+  // `parseFunctionDeclaration()` with the isLocal flag.
+  //
+  // This AST structure might change into a local assignment with a function
+  // child.
+  //
+  //     local ::= 'local' 'function' Name funcdecl
+  //        | 'local' Name {',' Name} ['=' exp {',' exp}]
+
+  function parseLocalStatement() {
+    var name;
+
+    if (Identifier === token.type) {
+      var variables = []
+        , init = [];
+
+      do {
+        name = parseIdentifier();
+
+        variables.push(name);
+      } while (consume(','));
+
+      if (consume('=')) {
+        do {
+          var expression = parseExpectedExpression();
+          init.push(expression);
+        } while (consume(','));
+      }
+
+      // Declarations doesn't exist before the statement has been evaluated.
+      // Therefore assignments can't use their declarator. And the identifiers
+      // shouldn't be added to the scope until the statement is complete.
+      if (options.scope) {
+        for (var i = 0, l = variables.length; i < l; ++i) {
+          scopeIdentifier(variables[i]);
+        }
+      }
+
+      return finishNode(ast.localStatement(variables, init));
+    }
+    if (consume('function')) {
+      name = parseIdentifier();
+
+      if (options.scope) {
+        scopeIdentifier(name);
+        createScope();
+      }
+
+      // MemberExpressions are not allowed in local function statements.
+      return parseFunctionDeclaration(name, true);
+    } else {
+      raiseUnexpectedToken('<name>', token);
+    }
+  }
+
+  function validateVar(node) {
+    // @TODO we need something not dependent on the exact AST used. see also isCallExpression()
+    if (node.inParens || (['Identifier', 'MemberExpression', 'IndexExpression'].indexOf(node.type) === -1)) {
+      raise(token, errors.invalidVar, token.value);
+    }
+  }
+
+  //     assignment ::= varlist '=' explist
+  //     var ::= Name | prefixexp '[' exp ']' | prefixexp '.' Name
+  //     varlist ::= var {',' var}
+  //     explist ::= exp {',' exp}
+  //
+  //     call ::= callexp
+  //     callexp ::= prefixexp args | prefixexp ':' Name args
+
+  function parseAssignmentOrCallStatement() {
+    // Keep a reference to the previous token for better error messages in case
+    // of invalid statement
+    var previous = token
+      , expression, marker;
+
+    if (trackLocations) marker = createLocationMarker();
+    expression = parsePrefixExpression();
+
+    if (null == expression) return unexpected(token);
+    if (',='.indexOf(token.value) >= 0) {
+      var variables = [expression]
+        , init = []
+        , exp;
+
+      validateVar(expression);
+      while (consume(',')) {
+        exp = parsePrefixExpression();
+        if (null == exp) raiseUnexpectedToken('<expression>', token);
+        validateVar(exp);
+        variables.push(exp);
+      }
+      expect('=');
+      do {
+        exp = parseExpectedExpression();
+        init.push(exp);
+      } while (consume(','));
+
+      pushLocation(marker);
+      return finishNode(ast.assignmentStatement(variables, init));
+    }
+    if (isCallExpression(expression)) {
+      pushLocation(marker);
+      return finishNode(ast.callStatement(expression));
+    }
+    // The prefix expression was neither part of an assignment or a
+    // callstatement, however as it was valid it's been consumed, so raise
+    // the exception on the previous token to provide a helpful message.
+    return unexpected(previous);
+  }
+
+
+
+  // ### Non-statements
+
+  //     Identifier ::= Name
+
+  function parseIdentifier() {
+    markLocation();
+    var identifier = token.value;
+    if (Identifier !== token.type) raiseUnexpectedToken('<name>', token);
+    next();
+    return finishNode(ast.identifier(identifier));
+  }
+
+  // Parse the functions parameters and body block. The name should already
+  // have been parsed and passed to this declaration function. By separating
+  // this we allow for anonymous functions in expressions.
+  //
+  // For local functions there's a boolean parameter which needs to be set
+  // when parsing the declaration.
+  //
+  //     funcdecl ::= '(' [parlist] ')' block 'end'
+  //     parlist ::= Name {',' Name} | [',' '...'] | '...'
+
+  function parseFunctionDeclaration(name, isLocal) {
+    var parameters = [];
+    expect('(');
+
+    // The declaration has arguments
+    if (!consume(')')) {
+      // Arguments are a comma separated list of identifiers, optionally ending
+      // with a vararg.
+      while (true) {
+        if (Identifier === token.type) {
+          var parameter = parseIdentifier();
+          // Function parameters are local.
+          if (options.scope) scopeIdentifier(parameter);
+
+          parameters.push(parameter);
+
+          if (consume(',')) continue;
+          else if (consume(')')) break;
+        }
+        // No arguments are allowed after a vararg.
+        else if (VarargLiteral === token.type) {
+          parameters.push(parsePrimaryExpression());
+          expect(')');
+          break;
+        } else {
+          raiseUnexpectedToken('<name> or \'...\'', token);
+        }
+      }
+    }
+
+    var body = parseBlock();
+    expect('end');
+    if (options.scope) destroyScope();
+
+    isLocal = isLocal || false;
+    return finishNode(ast.functionStatement(name, parameters, isLocal, body));
+  }
+
+  // Parse the function name as identifiers and member expressions.
+  //
+  //     Name {'.' Name} [':' Name]
+
+  function parseFunctionName() {
+    var base, name, marker;
+
+    if (trackLocations) marker = createLocationMarker();
+    base = parseIdentifier();
+
+    if (options.scope) {
+      attachScope(base, scopeHasName(base.name));
+      createScope();
+    }
+
+    while (consume('.')) {
+      pushLocation(marker);
+      name = parseIdentifier();
+      base = finishNode(ast.memberExpression(base, '.', name));
+    }
+
+    if (consume(':')) {
+      pushLocation(marker);
+      name = parseIdentifier();
+      base = finishNode(ast.memberExpression(base, ':', name));
+      if (options.scope) scopeIdentifierName('self');
+    }
+
+    return base;
+  }
+
+  //     tableconstructor ::= '{' [fieldlist] '}'
+  //     fieldlist ::= field {fieldsep field} fieldsep
+  //     field ::= '[' exp ']' '=' exp | Name = 'exp' | exp
+  //
+  //     fieldsep ::= ',' | ';'
+
+  function parseTableConstructor() {
+    var fields = []
+      , key, value;
+
+    while (true) {
+      markLocation();
+      if (Punctuator === token.type && consume('[')) {
+        key = parseExpectedExpression();
+        expect(']');
+        expect('=');
+        value = parseExpectedExpression();
+        fields.push(finishNode(ast.tableKey(key, value)));
+      } else if (Identifier === token.type) {
+        if ('=' === lookahead.value) {
+          key = parseIdentifier();
+          next();
+          value = parseExpectedExpression();
+          fields.push(finishNode(ast.tableKeyString(key, value)));
+        } else {
+          value = parseExpectedExpression();
+          fields.push(finishNode(ast.tableValue(value)));
+        }
+      } else {
+        if (null == (value = parseExpression())) {
+          locations.pop();
+          break;
+        }
+        fields.push(finishNode(ast.tableValue(value)));
+      }
+      if (',;'.indexOf(token.value) >= 0) {
+        next();
+        continue;
+      }
+      break;
+    }
+    expect('}');
+    return finishNode(ast.tableConstructorExpression(fields));
+  }
+
+  // Expression parser
+  // -----------------
+  //
+  // Expressions are evaluated and always return a value. If nothing is
+  // matched null will be returned.
+  //
+  //     exp ::= (unop exp | primary | prefixexp ) { binop exp }
+  //
+  //     primary ::= nil | false | true | Number | String | '...'
+  //          | functiondef | tableconstructor
+  //
+  //     prefixexp ::= (Name | '(' exp ')' ) { '[' exp ']'
+  //          | '.' Name | ':' Name args | args }
+  //
+
+  function parseExpression() {
+    var expression = parseSubExpression(0);
+    return expression;
+  }
+
+  // Parse an expression expecting it to be valid.
+
+  function parseExpectedExpression() {
+    var expression = parseExpression();
+    if (null == expression) raiseUnexpectedToken('<expression>', token);
+    else return expression;
+  }
+
+
+  // Return the precedence priority of the operator.
+  //
+  // As unary `-` can't be distinguished from binary `-`, unary precedence
+  // isn't described in this table but in `parseSubExpression()` itself.
+  //
+  // As this function gets hit on every expression it's been optimized due to
+  // the expensive CompareICStub which took ~8% of the parse time.
+
+  function binaryPrecedence(operator) {
+    var charCode = operator.charCodeAt(0)
+      , length = operator.length;
+
+    if (1 === length) {
+      switch (charCode) {
+        case 94: return 12; // ^
+        case 42: case 47: case 37: return 10; // * / %
+        case 43: case 45: return 9; // + -
+        case 38: return 6; // &
+        case 126: return 5; // ~
+        case 124: return 4; // |
+        case 60: case 62: return 3; // < >
+      }
+    } else if (2 === length) {
+      switch (charCode) {
+        case 47: return 10; // //
+        case 46: return 8; // ..
+        case 60: case 62:
+            if('<<' === operator || '>>' === operator) return 7; // << >>
+            return 3; // <= >=
+        case 61: case 126: return 3; // == ~=
+        case 111: return 1; // or
+      }
+    } else if (97 === charCode && 'and' === operator) return 2;
+    return 0;
+  }
+
+  // Implement an operator-precedence parser to handle binary operator
+  // precedence.
+  //
+  // We use this algorithm because it's compact, it's fast and Lua core uses
+  // the same so we can be sure our expressions are parsed in the same manner
+  // without excessive amounts of tests.
+  //
+  //     exp ::= (unop exp | primary | prefixexp ) { binop exp }
+
+  function parseSubExpression(minPrecedence) {
+    var operator = token.value
+    // The left-hand side in binary operations.
+      , expression, marker;
+
+    if (trackLocations) marker = createLocationMarker();
+
+    // UnaryExpression
+    if (isUnary(token)) {
+      markLocation();
+      next();
+      var argument = parseSubExpression(10);
+      if (argument == null) raiseUnexpectedToken('<expression>', token);
+      expression = finishNode(ast.unaryExpression(operator, argument));
+    }
+    if (null == expression) {
+      // PrimaryExpression
+      expression = parsePrimaryExpression();
+
+      // PrefixExpression
+      if (null == expression) {
+        expression = parsePrefixExpression();
+      }
+    }
+    // This is not a valid left hand expression.
+    if (null == expression) return null;
+
+    var precedence;
+    while (true) {
+      operator = token.value;
+
+      precedence = (Punctuator === token.type || Keyword === token.type) ?
+        binaryPrecedence(operator) : 0;
+
+      if (precedence === 0 || precedence <= minPrecedence) break;
+      // Right-hand precedence operators
+      if ('^' === operator || '..' === operator) precedence--;
+      next();
+      var right = parseSubExpression(precedence);
+      if (null == right) raiseUnexpectedToken('<expression>', token);
+      // Push in the marker created before the loop to wrap its entirety.
+      if (trackLocations) locations.push(marker);
+      expression = finishNode(ast.binaryExpression(operator, expression, right));
+
+    }
+    return expression;
+  }
+
+  //     prefixexp ::= prefix {suffix}
+  //     prefix ::= Name | '(' exp ')'
+  //     suffix ::= '[' exp ']' | '.' Name | ':' Name args | args
+  //
+  //     args ::= '(' [explist] ')' | tableconstructor | String
+
+  function parsePrefixExpression() {
+    var base, name, marker;
+
+    if (trackLocations) marker = createLocationMarker();
+
+    // The prefix
+    if (Identifier === token.type) {
+      name = token.value;
+      base = parseIdentifier();
+      // Set the parent scope.
+      if (options.scope) attachScope(base, scopeHasName(name));
+    } else if (consume('(')) {
+      base = parseExpectedExpression();
+      expect(')');
+      base.inParens = true; // XXX: quick and dirty. needed for validateVar
+    } else {
+      return null;
+    }
+
+    // The suffix
+    var expression, identifier;
+    while (true) {
+      if (Punctuator === token.type) {
+        switch (token.value) {
+          case '[':
+            pushLocation(marker);
+            next();
+            expression = parseExpectedExpression();
+            expect(']');
+            base = finishNode(ast.indexExpression(base, expression));
+            break;
+          case '.':
+            pushLocation(marker);
+            next();
+            identifier = parseIdentifier();
+            base = finishNode(ast.memberExpression(base, '.', identifier));
+            break;
+          case ':':
+            pushLocation(marker);
+            next();
+            identifier = parseIdentifier();
+            base = finishNode(ast.memberExpression(base, ':', identifier));
+            // Once a : is found, this has to be a CallExpression, otherwise
+            // throw an error.
+            pushLocation(marker);
+            base = parseCallExpression(base);
+            break;
+          case '(': case '{': // args
+            pushLocation(marker);
+            base = parseCallExpression(base);
+            break;
+          default:
+            return base;
+        }
+      } else if (StringLiteral === token.type) {
+        pushLocation(marker);
+        base = parseCallExpression(base);
+      } else {
+        break;
+      }
+    }
+
+    return base;
+  }
+
+  //     args ::= '(' [explist] ')' | tableconstructor | String
+
+  function parseCallExpression(base) {
+    if (Punctuator === token.type) {
+      switch (token.value) {
+        case '(':
+          next();
+
+          // List of expressions
+          var expressions = [];
+          var expression = parseExpression();
+          if (null != expression) expressions.push(expression);
+          while (consume(',')) {
+            expression = parseExpectedExpression();
+            expressions.push(expression);
+          }
+
+          expect(')');
+          return finishNode(ast.callExpression(base, expressions));
+
+        case '{':
+          markLocation();
+          next();
+          var table = parseTableConstructor();
+          return finishNode(ast.tableCallExpression(base, table));
+      }
+    } else if (StringLiteral === token.type) {
+      return finishNode(ast.stringCallExpression(base, parsePrimaryExpression()));
+    }
+
+    raiseUnexpectedToken('function arguments', token);
+  }
+
+  //     primary ::= String | Numeric | nil | true | false
+  //          | functiondef | tableconstructor | '...'
+
+  function parsePrimaryExpression() {
+    var literals = StringLiteral | NumericLiteral | BooleanLiteral | NilLiteral | VarargLiteral
+      , value = token.value
+      , type = token.type
+      , marker;
+
+    if (trackLocations) marker = createLocationMarker();
+
+    if (type & literals) {
+      pushLocation(marker);
+      var raw = input.slice(token.range[0], token.range[1]);
+      next();
+      return finishNode(ast.literal(type, value, raw));
+    } else if (Keyword === type && 'function' === value) {
+      pushLocation(marker);
+      next();
+      if (options.scope) createScope();
+      return parseFunctionDeclaration(null);
+    } else if (consume('{')) {
+      pushLocation(marker);
+      return parseTableConstructor();
+    }
+  }
+
+  // Parser
+  // ------
+
+  // Export the main parser.
+  //
+  //   - `wait` Hold parsing until end() is called. Defaults to false
+  //   - `comments` Store comments. Defaults to true.
+  //   - `scope` Track identifier scope. Defaults to false.
+  //   - `locations` Store location information. Defaults to false.
+  //   - `ranges` Store the start and end character locations. Defaults to
+  //     false.
+  //   - `onCreateNode` Callback which will be invoked when a syntax node is
+  //     created.
+  //   - `onCreateScope` Callback which will be invoked when a new scope is
+  //     created.
+  //   - `onDestroyScope` Callback which will be invoked when the current scope
+  //     is destroyed.
+  //
+  // Example:
+  //
+  //     var parser = require('luaparser');
+  //     parser.parse('i = 0');
+
+  exports.parse = parse;
+
+  function parse(_input, _options) {
+    if ('undefined' === typeof _options && 'object' === typeof _input) {
+      _options = _input;
+      _input = undefined;
+    }
+    if (!_options) _options = {};
+
+    input = _input || '';
+    options = extend(defaultOptions, _options);
+
+    // Rewind the lexer
+    index = 0;
+    line = 1;
+    lineStart = 0;
+    length = input.length;
+    // When tracking identifier scope, initialize with an empty scope.
+    scopes = [[]];
+    scopeDepth = 0;
+    globals = [];
+    locations = [];
+
+    if (!((options.luaVersion === '5.1') || (options.luaVersion === '5.2') || (options.luaVersion === '5.3'))) {
+      throw new Error(sprintf("Lua version '%1' not supported", options.luaVersion));
+    }
+
+    if (options.comments) comments = [];
+    if (!options.wait) return end();
+    return exports;
+  }
+
+  // Write to the source code buffer without beginning the parse.
+  exports.write = write;
+
+  function write(_input) {
+    input += String(_input);
+    length = input.length;
+    return exports;
+  }
+
+  // Send an EOF and begin parsing.
+  exports.end = end;
+
+  function end(_input) {
+    if ('undefined' !== typeof _input) write(_input);
+
+    // Ignore shebangs.
+    if (input && input.substr(0, 2) === '#!') input = input.replace(/^.*/, function (line) {
+      return line.replace(/./g, ' ');
+    });
+
+    length = input.length;
+    trackLocations = options.locations || options.ranges;
+    // Initialize with a lookahead token.
+    lookahead = lex();
+
+    var chunk = parseChunk();
+    if (options.comments) chunk.comments = comments;
+    if (options.scope) chunk.globals = globals;
+
+    /* istanbul ignore if */
+    if (locations.length > 0)
+      throw new Error('Location tracking failed. This is most likely a bug in luaparse');
+
+    return chunk;
+  }
+
+}));
+/* vim: set sw=2 ts=2 et tw=79 : */
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(421)(module), __webpack_require__(161)))
+
+/***/ }),
+/* 421 */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+/* 422 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*!
+
+ diff v3.5.0
+
+Software License Agreement (BSD License)
+
+Copyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>
+
+All rights reserved.
+
+Redistribution and use of this software in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above
+  copyright notice, this list of conditions and the
+  following disclaimer.
+
+* Redistributions in binary form must reproduce the above
+  copyright notice, this list of conditions and the
+  following disclaimer in the documentation and/or other
+  materials provided with the distribution.
+
+* Neither the name of Kevin Decker nor the names of its
+  contributors may be used to endorse or promote products
+  derived from this software without specific prior
+  written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+@license
+*/
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.canonicalize = exports.convertChangesToXML = exports.convertChangesToDMP = exports.merge = exports.parsePatch = exports.applyPatches = exports.applyPatch = exports.createPatch = exports.createTwoFilesPatch = exports.structuredPatch = exports.diffArrays = exports.diffJson = exports.diffCss = exports.diffSentences = exports.diffTrimmedLines = exports.diffLines = exports.diffWordsWithSpace = exports.diffWords = exports.diffChars = exports.Diff = undefined;
+
+	/*istanbul ignore end*/var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	/*istanbul ignore end*/var /*istanbul ignore start*/_character = __webpack_require__(2) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_word = __webpack_require__(3) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_line = __webpack_require__(5) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_sentence = __webpack_require__(6) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_css = __webpack_require__(7) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_json = __webpack_require__(8) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_array = __webpack_require__(9) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_apply = __webpack_require__(10) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_parse = __webpack_require__(11) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_merge = __webpack_require__(13) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_create = __webpack_require__(14) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_dmp = __webpack_require__(16) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_xml = __webpack_require__(17) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/* See LICENSE file for terms of use */
+
+	/*
+	 * Text diff implementation.
+	 *
+	 * This library supports the following APIS:
+	 * JsDiff.diffChars: Character by character diff
+	 * JsDiff.diffWords: Word (as defined by \b regex) diff which ignores whitespace
+	 * JsDiff.diffLines: Line based diff
+	 *
+	 * JsDiff.diffCss: Diff targeted at CSS content
+	 *
+	 * These methods are based on the implementation proposed in
+	 * "An O(ND) Difference Algorithm and its Variations" (Myers, 1986).
+	 * http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.4.6927
+	 */
+	exports. /*istanbul ignore end*/Diff = _base2['default'];
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffChars = _character.diffChars;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffWords = _word.diffWords;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffWordsWithSpace = _word.diffWordsWithSpace;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffLines = _line.diffLines;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffTrimmedLines = _line.diffTrimmedLines;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffSentences = _sentence.diffSentences;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffCss = _css.diffCss;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffJson = _json.diffJson;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffArrays = _array.diffArrays;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/structuredPatch = _create.structuredPatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/createTwoFilesPatch = _create.createTwoFilesPatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/createPatch = _create.createPatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/applyPatch = _apply.applyPatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/applyPatches = _apply.applyPatches;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/parsePatch = _parse.parsePatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/merge = _merge.merge;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/convertChangesToDMP = _dmp.convertChangesToDMP;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/convertChangesToXML = _xml.convertChangesToXML;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/canonicalize = _json.canonicalize;
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC5qcyJdLCJuYW1lcyI6WyJEaWZmIiwiZGlmZkNoYXJzIiwiZGlmZldvcmRzIiwiZGlmZldvcmRzV2l0aFNwYWNlIiwiZGlmZkxpbmVzIiwiZGlmZlRyaW1tZWRMaW5lcyIsImRpZmZTZW50ZW5jZXMiLCJkaWZmQ3NzIiwiZGlmZkpzb24iLCJkaWZmQXJyYXlzIiwic3RydWN0dXJlZFBhdGNoIiwiY3JlYXRlVHdvRmlsZXNQYXRjaCIsImNyZWF0ZVBhdGNoIiwiYXBwbHlQYXRjaCIsImFwcGx5UGF0Y2hlcyIsInBhcnNlUGF0Y2giLCJtZXJnZSIsImNvbnZlcnRDaGFuZ2VzVG9ETVAiLCJjb252ZXJ0Q2hhbmdlc1RvWE1MIiwiY2Fub25pY2FsaXplIl0sIm1hcHBpbmdzIjoiOzs7Ozt1QkFnQkE7Ozs7dUJBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBRUE7O0FBQ0E7O0FBRUE7O0FBRUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBRUE7O0FBQ0E7Ozs7QUFqQ0E7O0FBRUE7Ozs7Ozs7Ozs7Ozs7O2dDQWtDRUEsSTt5REFFQUMsUzt5REFDQUMsUzt5REFDQUMsa0I7eURBQ0FDLFM7eURBQ0FDLGdCO3lEQUNBQyxhO3lEQUVBQyxPO3lEQUNBQyxRO3lEQUVBQyxVO3lEQUVBQyxlO3lEQUNBQyxtQjt5REFDQUMsVzt5REFDQUMsVTt5REFDQUMsWTt5REFDQUMsVTt5REFDQUMsSzt5REFDQUMsbUI7eURBQ0FDLG1CO3lEQUNBQyxZIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyogU2VlIExJQ0VOU0UgZmlsZSBmb3IgdGVybXMgb2YgdXNlICovXG5cbi8qXG4gKiBUZXh0IGRpZmYgaW1wbGVtZW50YXRpb24uXG4gKlxuICogVGhpcyBsaWJyYXJ5IHN1cHBvcnRzIHRoZSBmb2xsb3dpbmcgQVBJUzpcbiAqIEpzRGlmZi5kaWZmQ2hhcnM6IENoYXJhY3RlciBieSBjaGFyYWN0ZXIgZGlmZlxuICogSnNEaWZmLmRpZmZXb3JkczogV29yZCAoYXMgZGVmaW5lZCBieSBcXGIgcmVnZXgpIGRpZmYgd2hpY2ggaWdub3JlcyB3aGl0ZXNwYWNlXG4gKiBKc0RpZmYuZGlmZkxpbmVzOiBMaW5lIGJhc2VkIGRpZmZcbiAqXG4gKiBKc0RpZmYuZGlmZkNzczogRGlmZiB0YXJnZXRlZCBhdCBDU1MgY29udGVudFxuICpcbiAqIFRoZXNlIG1ldGhvZHMgYXJlIGJhc2VkIG9uIHRoZSBpbXBsZW1lbnRhdGlvbiBwcm9wb3NlZCBpblxuICogXCJBbiBPKE5EKSBEaWZmZXJlbmNlIEFsZ29yaXRobSBhbmQgaXRzIFZhcmlhdGlvbnNcIiAoTXllcnMsIDE5ODYpLlxuICogaHR0cDovL2NpdGVzZWVyeC5pc3QucHN1LmVkdS92aWV3ZG9jL3N1bW1hcnk/ZG9pPTEwLjEuMS40LjY5MjdcbiAqL1xuaW1wb3J0IERpZmYgZnJvbSAnLi9kaWZmL2Jhc2UnO1xuaW1wb3J0IHtkaWZmQ2hhcnN9IGZyb20gJy4vZGlmZi9jaGFyYWN0ZXInO1xuaW1wb3J0IHtkaWZmV29yZHMsIGRpZmZXb3Jkc1dpdGhTcGFjZX0gZnJvbSAnLi9kaWZmL3dvcmQnO1xuaW1wb3J0IHtkaWZmTGluZXMsIGRpZmZUcmltbWVkTGluZXN9IGZyb20gJy4vZGlmZi9saW5lJztcbmltcG9ydCB7ZGlmZlNlbnRlbmNlc30gZnJvbSAnLi9kaWZmL3NlbnRlbmNlJztcblxuaW1wb3J0IHtkaWZmQ3NzfSBmcm9tICcuL2RpZmYvY3NzJztcbmltcG9ydCB7ZGlmZkpzb24sIGNhbm9uaWNhbGl6ZX0gZnJvbSAnLi9kaWZmL2pzb24nO1xuXG5pbXBvcnQge2RpZmZBcnJheXN9IGZyb20gJy4vZGlmZi9hcnJheSc7XG5cbmltcG9ydCB7YXBwbHlQYXRjaCwgYXBwbHlQYXRjaGVzfSBmcm9tICcuL3BhdGNoL2FwcGx5JztcbmltcG9ydCB7cGFyc2VQYXRjaH0gZnJvbSAnLi9wYXRjaC9wYXJzZSc7XG5pbXBvcnQge21lcmdlfSBmcm9tICcuL3BhdGNoL21lcmdlJztcbmltcG9ydCB7c3RydWN0dXJlZFBhdGNoLCBjcmVhdGVUd29GaWxlc1BhdGNoLCBjcmVhdGVQYXRjaH0gZnJvbSAnLi9wYXRjaC9jcmVhdGUnO1xuXG5pbXBvcnQge2NvbnZlcnRDaGFuZ2VzVG9ETVB9IGZyb20gJy4vY29udmVydC9kbXAnO1xuaW1wb3J0IHtjb252ZXJ0Q2hhbmdlc1RvWE1MfSBmcm9tICcuL2NvbnZlcnQveG1sJztcblxuZXhwb3J0IHtcbiAgRGlmZixcblxuICBkaWZmQ2hhcnMsXG4gIGRpZmZXb3JkcyxcbiAgZGlmZldvcmRzV2l0aFNwYWNlLFxuICBkaWZmTGluZXMsXG4gIGRpZmZUcmltbWVkTGluZXMsXG4gIGRpZmZTZW50ZW5jZXMsXG5cbiAgZGlmZkNzcyxcbiAgZGlmZkpzb24sXG5cbiAgZGlmZkFycmF5cyxcblxuICBzdHJ1Y3R1cmVkUGF0Y2gsXG4gIGNyZWF0ZVR3b0ZpbGVzUGF0Y2gsXG4gIGNyZWF0ZVBhdGNoLFxuICBhcHBseVBhdGNoLFxuICBhcHBseVBhdGNoZXMsXG4gIHBhcnNlUGF0Y2gsXG4gIG1lcmdlLFxuICBjb252ZXJ0Q2hhbmdlc1RvRE1QLFxuICBjb252ZXJ0Q2hhbmdlc1RvWE1MLFxuICBjYW5vbmljYWxpemVcbn07XG4iXX0=
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports['default'] = /*istanbul ignore end*/Diff;
+	function Diff() {}
+
+	Diff.prototype = {
+	  /*istanbul ignore start*/ /*istanbul ignore end*/diff: function diff(oldString, newString) {
+	    /*istanbul ignore start*/var /*istanbul ignore end*/options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+	    var callback = options.callback;
+	    if (typeof options === 'function') {
+	      callback = options;
+	      options = {};
+	    }
+	    this.options = options;
+
+	    var self = this;
+
+	    function done(value) {
+	      if (callback) {
+	        setTimeout(function () {
+	          callback(undefined, value);
+	        }, 0);
+	        return true;
+	      } else {
+	        return value;
+	      }
+	    }
+
+	    // Allow subclasses to massage the input prior to running
+	    oldString = this.castInput(oldString);
+	    newString = this.castInput(newString);
+
+	    oldString = this.removeEmpty(this.tokenize(oldString));
+	    newString = this.removeEmpty(this.tokenize(newString));
+
+	    var newLen = newString.length,
+	        oldLen = oldString.length;
+	    var editLength = 1;
+	    var maxEditLength = newLen + oldLen;
+	    var bestPath = [{ newPos: -1, components: [] }];
+
+	    // Seed editLength = 0, i.e. the content starts with the same values
+	    var oldPos = this.extractCommon(bestPath[0], newString, oldString, 0);
+	    if (bestPath[0].newPos + 1 >= newLen && oldPos + 1 >= oldLen) {
+	      // Identity per the equality and tokenizer
+	      return done([{ value: this.join(newString), count: newString.length }]);
+	    }
+
+	    // Main worker method. checks all permutations of a given edit length for acceptance.
+	    function execEditLength() {
+	      for (var diagonalPath = -1 * editLength; diagonalPath <= editLength; diagonalPath += 2) {
+	        var basePath = /*istanbul ignore start*/void 0 /*istanbul ignore end*/;
+	        var addPath = bestPath[diagonalPath - 1],
+	            removePath = bestPath[diagonalPath + 1],
+	            _oldPos = (removePath ? removePath.newPos : 0) - diagonalPath;
+	        if (addPath) {
+	          // No one else is going to attempt to use this value, clear it
+	          bestPath[diagonalPath - 1] = undefined;
+	        }
+
+	        var canAdd = addPath && addPath.newPos + 1 < newLen,
+	            canRemove = removePath && 0 <= _oldPos && _oldPos < oldLen;
+	        if (!canAdd && !canRemove) {
+	          // If this path is a terminal then prune
+	          bestPath[diagonalPath] = undefined;
+	          continue;
+	        }
+
+	        // Select the diagonal that we want to branch from. We select the prior
+	        // path whose position in the new string is the farthest from the origin
+	        // and does not pass the bounds of the diff graph
+	        if (!canAdd || canRemove && addPath.newPos < removePath.newPos) {
+	          basePath = clonePath(removePath);
+	          self.pushComponent(basePath.components, undefined, true);
+	        } else {
+	          basePath = addPath; // No need to clone, we've pulled it from the list
+	          basePath.newPos++;
+	          self.pushComponent(basePath.components, true, undefined);
+	        }
+
+	        _oldPos = self.extractCommon(basePath, newString, oldString, diagonalPath);
+
+	        // If we have hit the end of both strings, then we are done
+	        if (basePath.newPos + 1 >= newLen && _oldPos + 1 >= oldLen) {
+	          return done(buildValues(self, basePath.components, newString, oldString, self.useLongestToken));
+	        } else {
+	          // Otherwise track this path as a potential candidate and continue.
+	          bestPath[diagonalPath] = basePath;
+	        }
+	      }
+
+	      editLength++;
+	    }
+
+	    // Performs the length of edit iteration. Is a bit fugly as this has to support the
+	    // sync and async mode which is never fun. Loops over execEditLength until a value
+	    // is produced.
+	    if (callback) {
+	      (function exec() {
+	        setTimeout(function () {
+	          // This should not happen, but we want to be safe.
+	          /* istanbul ignore next */
+	          if (editLength > maxEditLength) {
+	            return callback();
+	          }
+
+	          if (!execEditLength()) {
+	            exec();
+	          }
+	        }, 0);
+	      })();
+	    } else {
+	      while (editLength <= maxEditLength) {
+	        var ret = execEditLength();
+	        if (ret) {
+	          return ret;
+	        }
+	      }
+	    }
+	  },
+	  /*istanbul ignore start*/ /*istanbul ignore end*/pushComponent: function pushComponent(components, added, removed) {
+	    var last = components[components.length - 1];
+	    if (last && last.added === added && last.removed === removed) {
+	      // We need to clone here as the component clone operation is just
+	      // as shallow array clone
+	      components[components.length - 1] = { count: last.count + 1, added: added, removed: removed };
+	    } else {
+	      components.push({ count: 1, added: added, removed: removed });
+	    }
+	  },
+	  /*istanbul ignore start*/ /*istanbul ignore end*/extractCommon: function extractCommon(basePath, newString, oldString, diagonalPath) {
+	    var newLen = newString.length,
+	        oldLen = oldString.length,
+	        newPos = basePath.newPos,
+	        oldPos = newPos - diagonalPath,
+	        commonCount = 0;
+	    while (newPos + 1 < newLen && oldPos + 1 < oldLen && this.equals(newString[newPos + 1], oldString[oldPos + 1])) {
+	      newPos++;
+	      oldPos++;
+	      commonCount++;
+	    }
+
+	    if (commonCount) {
+	      basePath.components.push({ count: commonCount });
+	    }
+
+	    basePath.newPos = newPos;
+	    return oldPos;
+	  },
+	  /*istanbul ignore start*/ /*istanbul ignore end*/equals: function equals(left, right) {
+	    if (this.options.comparator) {
+	      return this.options.comparator(left, right);
+	    } else {
+	      return left === right || this.options.ignoreCase && left.toLowerCase() === right.toLowerCase();
+	    }
+	  },
+	  /*istanbul ignore start*/ /*istanbul ignore end*/removeEmpty: function removeEmpty(array) {
+	    var ret = [];
+	    for (var i = 0; i < array.length; i++) {
+	      if (array[i]) {
+	        ret.push(array[i]);
+	      }
+	    }
+	    return ret;
+	  },
+	  /*istanbul ignore start*/ /*istanbul ignore end*/castInput: function castInput(value) {
+	    return value;
+	  },
+	  /*istanbul ignore start*/ /*istanbul ignore end*/tokenize: function tokenize(value) {
+	    return value.split('');
+	  },
+	  /*istanbul ignore start*/ /*istanbul ignore end*/join: function join(chars) {
+	    return chars.join('');
+	  }
+	};
+
+	function buildValues(diff, components, newString, oldString, useLongestToken) {
+	  var componentPos = 0,
+	      componentLen = components.length,
+	      newPos = 0,
+	      oldPos = 0;
+
+	  for (; componentPos < componentLen; componentPos++) {
+	    var component = components[componentPos];
+	    if (!component.removed) {
+	      if (!component.added && useLongestToken) {
+	        var value = newString.slice(newPos, newPos + component.count);
+	        value = value.map(function (value, i) {
+	          var oldValue = oldString[oldPos + i];
+	          return oldValue.length > value.length ? oldValue : value;
+	        });
+
+	        component.value = diff.join(value);
+	      } else {
+	        component.value = diff.join(newString.slice(newPos, newPos + component.count));
+	      }
+	      newPos += component.count;
+
+	      // Common case
+	      if (!component.added) {
+	        oldPos += component.count;
+	      }
+	    } else {
+	      component.value = diff.join(oldString.slice(oldPos, oldPos + component.count));
+	      oldPos += component.count;
+
+	      // Reverse add and remove so removes are output first to match common convention
+	      // The diffing algorithm is tied to add then remove output and this is the simplest
+	      // route to get the desired output with minimal overhead.
+	      if (componentPos && components[componentPos - 1].added) {
+	        var tmp = components[componentPos - 1];
+	        components[componentPos - 1] = components[componentPos];
+	        components[componentPos] = tmp;
+	      }
+	    }
+	  }
+
+	  // Special case handle for when one terminal is ignored (i.e. whitespace).
+	  // For this case we merge the terminal into the prior string and drop the change.
+	  // This is only available for string mode.
+	  var lastComponent = components[componentLen - 1];
+	  if (componentLen > 1 && typeof lastComponent.value === 'string' && (lastComponent.added || lastComponent.removed) && diff.equals('', lastComponent.value)) {
+	    components[componentLen - 2].value += lastComponent.value;
+	    components.pop();
+	  }
+
+	  return components;
+	}
+
+	function clonePath(path) {
+	  return { newPos: path.newPos, components: path.components.slice(0) };
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL2Jhc2UuanMiXSwibmFtZXMiOlsiRGlmZiIsInByb3RvdHlwZSIsImRpZmYiLCJvbGRTdHJpbmciLCJuZXdTdHJpbmciLCJvcHRpb25zIiwiY2FsbGJhY2siLCJzZWxmIiwiZG9uZSIsInZhbHVlIiwic2V0VGltZW91dCIsInVuZGVmaW5lZCIsImNhc3RJbnB1dCIsInJlbW92ZUVtcHR5IiwidG9rZW5pemUiLCJuZXdMZW4iLCJsZW5ndGgiLCJvbGRMZW4iLCJlZGl0TGVuZ3RoIiwibWF4RWRpdExlbmd0aCIsImJlc3RQYXRoIiwibmV3UG9zIiwiY29tcG9uZW50cyIsIm9sZFBvcyIsImV4dHJhY3RDb21tb24iLCJqb2luIiwiY291bnQiLCJleGVjRWRpdExlbmd0aCIsImRpYWdvbmFsUGF0aCIsImJhc2VQYXRoIiwiYWRkUGF0aCIsInJlbW92ZVBhdGgiLCJjYW5BZGQiLCJjYW5SZW1vdmUiLCJjbG9uZVBhdGgiLCJwdXNoQ29tcG9uZW50IiwiYnVpbGRWYWx1ZXMiLCJ1c2VMb25nZXN0VG9rZW4iLCJleGVjIiwicmV0IiwiYWRkZWQiLCJyZW1vdmVkIiwibGFzdCIsInB1c2giLCJjb21tb25Db3VudCIsImVxdWFscyIsImxlZnQiLCJyaWdodCIsImNvbXBhcmF0b3IiLCJpZ25vcmVDYXNlIiwidG9Mb3dlckNhc2UiLCJhcnJheSIsImkiLCJzcGxpdCIsImNoYXJzIiwiY29tcG9uZW50UG9zIiwiY29tcG9uZW50TGVuIiwiY29tcG9uZW50Iiwic2xpY2UiLCJtYXAiLCJvbGRWYWx1ZSIsInRtcCIsImxhc3RDb21wb25lbnQiLCJwb3AiLCJwYXRoIl0sIm1hcHBpbmdzIjoiOzs7NENBQXdCQSxJO0FBQVQsU0FBU0EsSUFBVCxHQUFnQixDQUFFOztBQUVqQ0EsS0FBS0MsU0FBTCxHQUFpQjtBQUFBLG1EQUNmQyxJQURlLGdCQUNWQyxTQURVLEVBQ0NDLFNBREQsRUFDMEI7QUFBQSx3REFBZEMsT0FBYyx1RUFBSixFQUFJOztBQUN2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RUFBd0JBLFNBQVNrQyxVQUFVL0IsS0FBM0MsQ0FBVixDQUFsQjtBQUNBSCxnQkFBVWtDLFVBQVUvQixLQUFwQjs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxVQUFJNkIsZ0JBQWdCakMsV0FBV2lDLGVBQWUsQ0FBMUIsRUFBNkJmLEtBQWpELEVBQXdEO0FBQ3RELFlBQUlxQixNQUFNdkMsV0FBV2lDLGVBQWUsQ0FBMUIsQ0FBVjtBQUNBakMsbUJBQVdpQyxlQUFlLENBQTFCLElBQStCakMsV0FBV2lDLFlBQVgsQ0FBL0I7QUFDQWpDLG1CQUFXaUMsWUFBWCxJQUEyQk0sR0FBM0I7QUFDRDtBQUNGO0FBQ0Y7O0FBRUQ7QUFDQTtBQUNBO0FBQ0EsTUFBSUMsZ0JBQWdCeEMsV0FBV2tDLGVBQWUsQ0FBMUIsQ0FBcEI7QUFDQSxNQUFJQSxlQUFlLENBQWYsSUFDRyxPQUFPTSxjQUFjckQsS0FBckIsS0FBK0IsUUFEbEMsS0FFSXFELGNBQWN0QixLQUFkLElBQXVCc0IsY0FBY3JCLE9BRnpDLEtBR0d2QyxLQUFLMkMsTUFBTCxDQUFZLEVBQVosRUFBZ0JpQixjQUFjckQsS0FBOUIsQ0FIUCxFQUc2QztBQUMzQ2EsZUFBV2tDLGVBQWUsQ0FBMUIsRUFBNkIvQyxLQUE3QixJQUFzQ3FELGNBQWNyRCxLQUFwRDtBQUNBYSxlQUFXeUMsR0FBWDtBQUNEOztBQUVELFNBQU96QyxVQUFQO0FBQ0Q7O0FBRUQsU0FBU1ksU0FBVCxDQUFtQjhCLElBQW5CLEVBQXlCO0FBQ3ZCLFNBQU8sRUFBRTNDLFFBQVEyQyxLQUFLM0MsTUFBZixFQUF1QkMsWUFBWTBDLEtBQUsxQyxVQUFMLENBQWdCb0MsS0FBaEIsQ0FBc0IsQ0FBdEIsQ0FBbkMsRUFBUDtBQUNEIiwiZmlsZSI6ImJhc2UuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBEaWZmKCkge31cblxuRGlmZi5wcm90b3R5cGUgPSB7XG4gIGRpZmYob2xkU3RyaW5nLCBuZXdTdHJpbmcsIG9wdGlvbnMgPSB7fSkge1xuICAgIGxldCBjYWxsYmFjayA9IG9wdGlvbnMuY2FsbGJhY2s7XG4gICAgaWYgKHR5cGVvZiBvcHRpb25zID09PSAnZnVuY3Rpb24nKSB7XG4gICAgICBjYWxsYmFjayA9IG9wdGlvbnM7XG4gICAgICBvcHRpb25zID0ge307XG4gICAgfVxuICAgIHRoaXMub3B0aW9ucyA9IG9wdGlvbnM7XG5cbiAgICBsZXQgc2VsZiA9IHRoaXM7XG5cbiAgICBmdW5jdGlvbiBkb25lKHZhbHVlKSB7XG4gICAgICBpZiAoY2FsbGJhY2spIHtcbiAgICAgICAgc2V0VGltZW91dChmdW5jdGlvbigpIHsgY2FsbGJhY2sodW5kZWZpbmVkLCB2YWx1ZSk7IH0sIDApO1xuICAgICAgICByZXR1cm4gdHJ1ZTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIHJldHVybiB2YWx1ZTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICAvLyBBbGxvdyBzdWJjbGFzc2VzIHRvIG1hc3NhZ2UgdGhlIGlucHV0IHByaW9yIHRvIHJ1bm5pbmdcbiAgICBvbGRTdHJpbmcgPSB0aGlzLmNhc3RJbnB1dChvbGRTdHJpbmcpO1xuICAgIG5ld1N0cmluZyA9IHRoaXMuY2FzdElucHV0KG5ld1N0cmluZyk7XG5cbiAgICBvbGRTdHJpbmcgPSB0aGlzLnJlbW92ZUVtcHR5KHRoaXMudG9rZW5pemUob2xkU3RyaW5nKSk7XG4gICAgbmV3U3RyaW5nID0gdGhpcy5yZW1vdmVFbXB0eSh0aGlzLnRva2VuaXplKG5ld1N0cmluZykpO1xuXG4gICAgbGV0IG5ld0xlbiA9IG5ld1N0cmluZy5sZW5ndGgsIG9sZExlbiA9IG9sZFN0cmluZy5sZW5ndGg7XG4gICAgbGV0IGVkaXRMZW5ndGggPSAxO1xuICAgIGxldCBtYXhFZGl0TGVuZ3RoID0gbmV3TGVuICsgb2xkTGVuO1xuICAgIGxldCBiZXN0UGF0aCA9IFt7IG5ld1BvczogLTEsIGNvbXBvbmVudHM6IFtdIH1dO1xuXG4gICAgLy8gU2VlZCBlZGl0TGVuZ3RoID0gMCwgaS5lLiB0aGUgY29udGVudCBzdGFydHMgd2l0aCB0aGUgc2FtZSB2YWx1ZXNcbiAgICBsZXQgb2xkUG9zID0gdGhpcy5leHRyYWN0Q29tbW9uKGJlc3RQYXRoWzBdLCBuZXdTdHJpbmcsIG9sZFN0cmluZywgMCk7XG4gICAgaWYgKGJlc3RQYXRoWzBdLm5ld1BvcyArIDEgPj0gbmV3TGVuICYmIG9sZFBvcyArIDEgPj0gb2xkTGVuKSB7XG4gICAgICAvLyBJZGVudGl0eSBwZXIgdGhlIGVxdWFsaXR5IGFuZCB0b2tlbml6ZXJcbiAgICAgIHJldHVybiBkb25lKFt7dmFsdWU6IHRoaXMuam9pbihuZXdTdHJpbmcpLCBjb3VudDogbmV3U3RyaW5nLmxlbmd0aH1dKTtcbiAgICB9XG5cbiAgICAvLyBNYWluIHdvcmtlciBtZXRob2QuIGNoZWNrcyBhbGwgcGVybXV0YXRpb25zIG9mIGEgZ2l2ZW4gZWRpdCBsZW5ndGggZm9yIGFjY2VwdGFuY2UuXG4gICAgZnVuY3Rpb24gZXhlY0VkaXRMZW5ndGgoKSB7XG4gICAgICBmb3IgKGxldCBkaWFnb25hbFBhdGggPSAtMSAqIGVkaXRMZW5ndGg7IGRpYWdvbmFsUGF0aCA8PSBlZGl0TGVuZ3RoOyBkaWFnb25hbFBhdGggKz0gMikge1xuICAgICAgICBsZXQgYmFzZVBhdGg7XG4gICAgICAgIGxldCBhZGRQYXRoID0gYmVzdFBhdGhbZGlhZ29uYWxQYXRoIC0gMV0sXG4gICAgICAgICAgICByZW1vdmVQYXRoID0gYmVzdFBhdGhbZGlhZ29uYWxQYXRoICsgMV0sXG4gICAgICAgICAgICBvbGRQb3MgPSAocmVtb3ZlUGF0aCA/IHJlbW92ZVBhdGgubmV3UG9zIDogMCkgLSBkaWFnb25hbFBhdGg7XG4gICAgICAgIGlmIChhZGRQYXRoKSB7XG4gICAgICAgICAgLy8gTm8gb25lIGVsc2UgaXMgZ29pbmcgdG8gYXR0ZW1wdCB0byB1c2UgdGhpcyB2YWx1ZSwgY2xlYXIgaXRcbiAgICAgICAgICBiZXN0UGF0aFtkaWFnb25hbFBhdGggLSAxXSA9IHVuZGVmaW5lZDtcbiAgICAgICAgfVxuXG4gICAgICAgIGxldCBjYW5BZGQgPSBhZGRQYXRoICYmIGFkZFBhdGgubmV3UG9zICsgMSA8IG5ld0xlbixcbiAgICAgICAgICAgIGNhblJlbW92ZSA9IHJlbW92ZVBhdGggJiYgMCA8PSBvbGRQb3MgJiYgb2xkUG9zIDwgb2xkTGVuO1xuICAgICAgICBpZiAoIWNhbkFkZCAmJiAhY2FuUmVtb3ZlKSB7XG4gICAgICAgICAgLy8gSWYgdGhpcyBwYXRoIGlzIGEgdGVybWluYWwgdGhlbiBwcnVuZVxuICAgICAgICAgIGJlc3RQYXRoW2RpYWdvbmFsUGF0aF0gPSB1bmRlZmluZWQ7XG4gICAgICAgICAgY29udGludWU7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTZWxlY3QgdGhlIGRpYWdvbmFsIHRoYXQgd2Ugd2FudCB0byBicmFuY2ggZnJvbS4gV2Ugc2VsZWN0IHRoZSBwcmlvclxuICAgICAgICAvLyBwYXRoIHdob3NlIHBvc2l0aW9uIGluIHRoZSBuZXcgc3RyaW5nIGlzIHRoZSBmYXJ0aGVzdCBmcm9tIHRoZSBvcmlnaW5cbiAgICAgICAgLy8gYW5kIGRvZXMgbm90IHBhc3MgdGhlIGJvdW5kcyBvZiB0aGUgZGlmZiBncmFwaFxuICAgICAgICBpZiAoIWNhbkFkZCB8fCAoY2FuUmVtb3ZlICYmIGFkZFBhdGgubmV3UG9zIDwgcmVtb3ZlUGF0aC5uZXdQb3MpKSB7XG4gICAgICAgICAgYmFzZVBhdGggPSBjbG9uZVBhdGgocmVtb3ZlUGF0aCk7XG4gICAgICAgICAgc2VsZi5wdXNoQ29tcG9uZW50KGJhc2VQYXRoLmNvbXBvbmVudHMsIHVuZGVmaW5lZCwgdHJ1ZSk7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgYmFzZVBhdGggPSBhZGRQYXRoOyAgIC8vIE5vIG5lZWQgdG8gY2xvbmUsIHdlJ3ZlIHB1bGxlZCBpdCBmcm9tIHRoZSBsaXN0XG4gICAgICAgICAgYmFzZVBhdGgubmV3UG9zKys7XG4gICAgICAgICAgc2VsZi5wdXNoQ29tcG9uZW50KGJhc2VQYXRoLmNvbXBvbmVudHMsIHRydWUsIHVuZGVmaW5lZCk7XG4gICAgICAgIH1cblxuICAgICAgICBvbGRQb3MgPSBzZWxmLmV4dHJhY3RDb21tb24oYmFzZVBhdGgsIG5ld1N0cmluZywgb2xkU3RyaW5nLCBkaWFnb25hbFBhdGgpO1xuXG4gICAgICAgIC8vIElmIHdlIGhhdmUgaGl0IHRoZSBlbmQgb2YgYm90aCBzdHJpbmdzLCB0aGVuIHdlIGFyZSBkb25lXG4gICAgICAgIGlmIChiYXNlUGF0aC5uZXdQb3MgKyAxID49IG5ld0xlbiAmJiBvbGRQb3MgKyAxID49IG9sZExlbikge1xuICAgICAgICAgIHJldHVybiBkb25lKGJ1aWxkVmFsdWVzKHNlbGYsIGJhc2VQYXRoLmNvbXBvbmVudHMsIG5ld1N0cmluZywgb2xkU3RyaW5nLCBzZWxmLnVzZUxvbmdlc3RUb2tlbikpO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIC8vIE90aGVyd2lzZSB0cmFjayB0aGlzIHBhdGggYXMgYSBwb3RlbnRpYWwgY2FuZGlkYXRlIGFuZCBjb250aW51ZS5cbiAgICAgICAgICBiZXN0UGF0aFtkaWFnb25hbFBhdGhdID0gYmFzZVBhdGg7XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgZWRpdExlbmd0aCsrO1xuICAgIH1cblxuICAgIC8vIFBlcmZvcm1zIHRoZSBsZW5ndGggb2YgZWRpdCBpdGVyYXRpb24uIElzIGEgYml0IGZ1Z2x5IGFzIHRoaXMgaGFzIHRvIHN1cHBvcnQgdGhlXG4gICAgLy8gc3luYyBhbmQgYXN5bmMgbW9kZSB3aGljaCBpcyBuZXZlciBmdW4uIExvb3BzIG92ZXIgZXhlY0VkaXRMZW5ndGggdW50aWwgYSB2YWx1ZVxuICAgIC8vIGlzIHByb2R1Y2VkLlxuICAgIGlmIChjYWxsYmFjaykge1xuICAgICAgKGZ1bmN0aW9uIGV4ZWMoKSB7XG4gICAgICAgIHNldFRpbWVvdXQoZnVuY3Rpb24oKSB7XG4gICAgICAgICAgLy8gVGhpcyBzaG91bGQgbm90IGhhcHBlbiwgYnV0IHdlIHdhbnQgdG8gYmUgc2FmZS5cbiAgICAgICAgICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqL1xuICAgICAgICAgIGlmIChlZGl0TGVuZ3RoID4gbWF4RWRpdExlbmd0aCkge1xuICAgICAgICAgICAgcmV0dXJuIGNhbGxiYWNrKCk7XG4gICAgICAgICAgfVxuXG4gICAgICAgICAgaWYgKCFleGVjRWRpdExlbmd0aCgpKSB7XG4gICAgICAgICAgICBleGVjKCk7XG4gICAgICAgICAgfVxuICAgICAgICB9LCAwKTtcbiAgICAgIH0oKSk7XG4gICAgfSBlbHNlIHtcbiAgICAgIHdoaWxlIChlZGl0TGVuZ3RoIDw9IG1heEVkaXRMZW5ndGgpIHtcbiAgICAgICAgbGV0IHJldCA9IGV4ZWNFZGl0TGVuZ3RoKCk7XG4gICAgICAgIGlmIChyZXQpIHtcbiAgICAgICAgICByZXR1cm4gcmV0O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9LFxuXG4gIHB1c2hDb21wb25lbnQoY29tcG9uZW50cywgYWRkZWQsIHJlbW92ZWQpIHtcbiAgICBsZXQgbGFzdCA9IGNvbXBvbmVudHNbY29tcG9uZW50cy5sZW5ndGggLSAxXTtcbiAgICBpZiAobGFzdCAmJiBsYXN0LmFkZGVkID09PSBhZGRlZCAmJiBsYXN0LnJlbW92ZWQgPT09IHJlbW92ZWQpIHtcbiAgICAgIC8vIFdlIG5lZWQgdG8gY2xvbmUgaGVyZSBhcyB0aGUgY29tcG9uZW50IGNsb25lIG9wZXJhdGlvbiBpcyBqdXN0XG4gICAgICAvLyBhcyBzaGFsbG93IGFycmF5IGNsb25lXG4gICAgICBjb21wb25lbnRzW2NvbXBvbmVudHMubGVuZ3RoIC0gMV0gPSB7Y291bnQ6IGxhc3QuY291bnQgKyAxLCBhZGRlZDogYWRkZWQsIHJlbW92ZWQ6IHJlbW92ZWQgfTtcbiAgICB9IGVsc2Uge1xuICAgICAgY29tcG9uZW50cy5wdXNoKHtjb3VudDogMSwgYWRkZWQ6IGFkZGVkLCByZW1vdmVkOiByZW1vdmVkIH0pO1xuICAgIH1cbiAgfSxcbiAgZXh0cmFjdENvbW1vbihiYXNlUGF0aCwgbmV3U3RyaW5nLCBvbGRTdHJpbmcsIGRpYWdvbmFsUGF0aCkge1xuICAgIGxldCBuZXdMZW4gPSBuZXdTdHJpbmcubGVuZ3RoLFxuICAgICAgICBvbGRMZW4gPSBvbGRTdHJpbmcubGVuZ3RoLFxuICAgICAgICBuZXdQb3MgPSBiYXNlUGF0aC5uZXdQb3MsXG4gICAgICAgIG9sZFBvcyA9IG5ld1BvcyAtIGRpYWdvbmFsUGF0aCxcblxuICAgICAgICBjb21tb25Db3VudCA9IDA7XG4gICAgd2hpbGUgKG5ld1BvcyArIDEgPCBuZXdMZW4gJiYgb2xkUG9zICsgMSA8IG9sZExlbiAmJiB0aGlzLmVxdWFscyhuZXdTdHJpbmdbbmV3UG9zICsgMV0sIG9sZFN0cmluZ1tvbGRQb3MgKyAxXSkpIHtcbiAgICAgIG5ld1BvcysrO1xuICAgICAgb2xkUG9zKys7XG4gICAgICBjb21tb25Db3VudCsrO1xuICAgIH1cblxuICAgIGlmIChjb21tb25Db3VudCkge1xuICAgICAgYmFzZVBhdGguY29tcG9uZW50cy5wdXNoKHtjb3VudDogY29tbW9uQ291bnR9KTtcbiAgICB9XG5cbiAgICBiYXNlUGF0aC5uZXdQb3MgPSBuZXdQb3M7XG4gICAgcmV0dXJuIG9sZFBvcztcbiAgfSxcblxuICBlcXVhbHMobGVmdCwgcmlnaHQpIHtcbiAgICBpZiAodGhpcy5vcHRpb25zLmNvbXBhcmF0b3IpIHtcbiAgICAgIHJldHVybiB0aGlzLm9wdGlvbnMuY29tcGFyYXRvcihsZWZ0LCByaWdodCk7XG4gICAgfSBlbHNlIHtcbiAgICAgIHJldHVybiBsZWZ0ID09PSByaWdodFxuICAgICAgICB8fCAodGhpcy5vcHRpb25zLmlnbm9yZUNhc2UgJiYgbGVmdC50b0xvd2VyQ2FzZSgpID09PSByaWdodC50b0xvd2VyQ2FzZSgpKTtcbiAgICB9XG4gIH0sXG4gIHJlbW92ZUVtcHR5KGFycmF5KSB7XG4gICAgbGV0IHJldCA9IFtdO1xuICAgIGZvciAobGV0IGkgPSAwOyBpIDwgYXJyYXkubGVuZ3RoOyBpKyspIHtcbiAgICAgIGlmIChhcnJheVtpXSkge1xuICAgICAgICByZXQucHVzaChhcnJheVtpXSk7XG4gICAgICB9XG4gICAgfVxuICAgIHJldHVybiByZXQ7XG4gIH0sXG4gIGNhc3RJbnB1dCh2YWx1ZSkge1xuICAgIHJldHVybiB2YWx1ZTtcbiAgfSxcbiAgdG9rZW5pemUodmFsdWUpIHtcbiAgICByZXR1cm4gdmFsdWUuc3BsaXQoJycpO1xuICB9LFxuICBqb2luKGNoYXJzKSB7XG4gICAgcmV0dXJuIGNoYXJzLmpvaW4oJycpO1xuICB9XG59O1xuXG5mdW5jdGlvbiBidWlsZFZhbHVlcyhkaWZmLCBjb21wb25lbnRzLCBuZXdTdHJpbmcsIG9sZFN0cmluZywgdXNlTG9uZ2VzdFRva2VuKSB7XG4gIGxldCBjb21wb25lbnRQb3MgPSAwLFxuICAgICAgY29tcG9uZW50TGVuID0gY29tcG9uZW50cy5sZW5ndGgsXG4gICAgICBuZXdQb3MgPSAwLFxuICAgICAgb2xkUG9zID0gMDtcblxuICBmb3IgKDsgY29tcG9uZW50UG9zIDwgY29tcG9uZW50TGVuOyBjb21wb25lbnRQb3MrKykge1xuICAgIGxldCBjb21wb25lbnQgPSBjb21wb25lbnRzW2NvbXBvbmVudFBvc107XG4gICAgaWYgKCFjb21wb25lbnQucmVtb3ZlZCkge1xuICAgICAgaWYgKCFjb21wb25lbnQuYWRkZWQgJiYgdXNlTG9uZ2VzdFRva2VuKSB7XG4gICAgICAgIGxldCB2YWx1ZSA9IG5ld1N0cmluZy5zbGljZShuZXdQb3MsIG5ld1BvcyArIGNvbXBvbmVudC5jb3VudCk7XG4gICAgICAgIHZhbHVlID0gdmFsdWUubWFwKGZ1bmN0aW9uKHZhbHVlLCBpKSB7XG4gICAgICAgICAgbGV0IG9sZFZhbHVlID0gb2xkU3RyaW5nW29sZFBvcyArIGldO1xuICAgICAgICAgIHJldHVybiBvbGRWYWx1ZS5sZW5ndGggPiB2YWx1ZS5sZW5ndGggPyBvbGRWYWx1ZSA6IHZhbHVlO1xuICAgICAgICB9KTtcblxuICAgICAgICBjb21wb25lbnQudmFsdWUgPSBkaWZmLmpvaW4odmFsdWUpO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgY29tcG9uZW50LnZhbHVlID0gZGlmZi5qb2luKG5ld1N0cmluZy5zbGljZShuZXdQb3MsIG5ld1BvcyArIGNvbXBvbmVudC5jb3VudCkpO1xuICAgICAgfVxuICAgICAgbmV3UG9zICs9IGNvbXBvbmVudC5jb3VudDtcblxuICAgICAgLy8gQ29tbW9uIGNhc2VcbiAgICAgIGlmICghY29tcG9uZW50LmFkZGVkKSB7XG4gICAgICAgIG9sZFBvcyArPSBjb21wb25lbnQuY291bnQ7XG4gICAgICB9XG4gICAgfSBlbHNlIHtcbiAgICAgIGNvbXBvbmVudC52YWx1ZSA9IGRpZmYuam9pbihvbGRTdHJpbmcuc2xpY2Uob2xkUG9zLCBvbGRQb3MgKyBjb21wb25lbnQuY291bnQpKTtcbiAgICAgIG9sZFBvcyArPSBjb21wb25lbnQuY291bnQ7XG5cbiAgICAgIC8vIFJldmVyc2UgYWRkIGFuZCByZW1vdmUgc28gcmVtb3ZlcyBhcmUgb3V0cHV0IGZpcnN0IHRvIG1hdGNoIGNvbW1vbiBjb252ZW50aW9uXG4gICAgICAvLyBUaGUgZGlmZmluZyBhbGdvcml0aG0gaXMgdGllZCB0byBhZGQgdGhlbiByZW1vdmUgb3V0cHV0IGFuZCB0aGlzIGlzIHRoZSBzaW1wbGVzdFxuICAgICAgLy8gcm91dGUgdG8gZ2V0IHRoZSBkZXNpcmVkIG91dHB1dCB3aXRoIG1pbmltYWwgb3ZlcmhlYWQuXG4gICAgICBpZiAoY29tcG9uZW50UG9zICYmIGNvbXBvbmVudHNbY29tcG9uZW50UG9zIC0gMV0uYWRkZWQpIHtcbiAgICAgICAgbGV0IHRtcCA9IGNvbXBvbmVudHNbY29tcG9uZW50UG9zIC0gMV07XG4gICAgICAgIGNvbXBvbmVudHNbY29tcG9uZW50UG9zIC0gMV0gPSBjb21wb25lbnRzW2NvbXBvbmVudFBvc107XG4gICAgICAgIGNvbXBvbmVudHNbY29tcG9uZW50UG9zXSA9IHRtcDtcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICAvLyBTcGVjaWFsIGNhc2UgaGFuZGxlIGZvciB3aGVuIG9uZSB0ZXJtaW5hbCBpcyBpZ25vcmVkIChpLmUuIHdoaXRlc3BhY2UpLlxuICAvLyBGb3IgdGhpcyBjYXNlIHdlIG1lcmdlIHRoZSB0ZXJtaW5hbCBpbnRvIHRoZSBwcmlvciBzdHJpbmcgYW5kIGRyb3AgdGhlIGNoYW5nZS5cbiAgLy8gVGhpcyBpcyBvbmx5IGF2YWlsYWJsZSBmb3Igc3RyaW5nIG1vZGUuXG4gIGxldCBsYXN0Q29tcG9uZW50ID0gY29tcG9uZW50c1tjb21wb25lbnRMZW4gLSAxXTtcbiAgaWYgKGNvbXBvbmVudExlbiA+IDFcbiAgICAgICYmIHR5cGVvZiBsYXN0Q29tcG9uZW50LnZhbHVlID09PSAnc3RyaW5nJ1xuICAgICAgJiYgKGxhc3RDb21wb25lbnQuYWRkZWQgfHwgbGFzdENvbXBvbmVudC5yZW1vdmVkKVxuICAgICAgJiYgZGlmZi5lcXVhbHMoJycsIGxhc3RDb21wb25lbnQudmFsdWUpKSB7XG4gICAgY29tcG9uZW50c1tjb21wb25lbnRMZW4gLSAyXS52YWx1ZSArPSBsYXN0Q29tcG9uZW50LnZhbHVlO1xuICAgIGNvbXBvbmVudHMucG9wKCk7XG4gIH1cblxuICByZXR1cm4gY29tcG9uZW50cztcbn1cblxuZnVuY3Rpb24gY2xvbmVQYXRoKHBhdGgpIHtcbiAgcmV0dXJuIHsgbmV3UG9zOiBwYXRoLm5ld1BvcywgY29tcG9uZW50czogcGF0aC5jb21wb25lbnRzLnNsaWNlKDApIH07XG59XG4iXX0=
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.characterDiff = undefined;
+	exports. /*istanbul ignore end*/diffChars = diffChars;
+
+	var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/var characterDiff = /*istanbul ignore start*/exports. /*istanbul ignore end*/characterDiff = new /*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/();
+	function diffChars(oldStr, newStr, options) {
+	  return characterDiff.diff(oldStr, newStr, options);
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL2NoYXJhY3Rlci5qcyJdLCJuYW1lcyI6WyJkaWZmQ2hhcnMiLCJjaGFyYWN0ZXJEaWZmIiwib2xkU3RyIiwibmV3U3RyIiwib3B0aW9ucyIsImRpZmYiXSwibWFwcGluZ3MiOiI7Ozs7Z0NBR2dCQSxTLEdBQUFBLFM7O0FBSGhCOzs7Ozs7dUJBRU8sSUFBTUMseUZBQWdCLHdFQUF0QjtBQUNBLFNBQVNELFNBQVQsQ0FBbUJFLE1BQW5CLEVBQTJCQyxNQUEzQixFQUFtQ0MsT0FBbkMsRUFBNEM7QUFBRSxTQUFPSCxjQUFjSSxJQUFkLENBQW1CSCxNQUFuQixFQUEyQkMsTUFBM0IsRUFBbUNDLE9BQW5DLENBQVA7QUFBcUQiLCJmaWxlIjoiY2hhcmFjdGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IERpZmYgZnJvbSAnLi9iYXNlJztcblxuZXhwb3J0IGNvbnN0IGNoYXJhY3RlckRpZmYgPSBuZXcgRGlmZigpO1xuZXhwb3J0IGZ1bmN0aW9uIGRpZmZDaGFycyhvbGRTdHIsIG5ld1N0ciwgb3B0aW9ucykgeyByZXR1cm4gY2hhcmFjdGVyRGlmZi5kaWZmKG9sZFN0ciwgbmV3U3RyLCBvcHRpb25zKTsgfVxuIl19
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.wordDiff = undefined;
+	exports. /*istanbul ignore end*/diffWords = diffWords;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffWordsWithSpace = diffWordsWithSpace;
+
+	var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	/*istanbul ignore end*/var /*istanbul ignore start*/_params = __webpack_require__(4) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/ // Based on https://en.wikipedia.org/wiki/Latin_script_in_Unicode
+	//
+	// Ranges and exceptions:
+	// Latin-1 Supplement, 0080–00FF
+	//  - U+00D7  × Multiplication sign
+	//  - U+00F7  ÷ Division sign
+	// Latin Extended-A, 0100–017F
+	// Latin Extended-B, 0180–024F
+	// IPA Extensions, 0250–02AF
+	// Spacing Modifier Letters, 02B0–02FF
+	//  - U+02C7  ˇ &#711;  Caron
+	//  - U+02D8  ˘ &#728;  Breve
+	//  - U+02D9  ˙ &#729;  Dot Above
+	//  - U+02DA  ˚ &#730;  Ring Above
+	//  - U+02DB  ˛ &#731;  Ogonek
+	//  - U+02DC  ˜ &#732;  Small Tilde
+	//  - U+02DD  ˝ &#733;  Double Acute Accent
+	// Latin Extended Additional, 1E00–1EFF
+	var extendedWordChars = /^[A-Za-z\xC0-\u02C6\u02C8-\u02D7\u02DE-\u02FF\u1E00-\u1EFF]+$/;
+
+	var reWhitespace = /\S/;
+
+	var wordDiff = /*istanbul ignore start*/exports. /*istanbul ignore end*/wordDiff = new /*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/();
+	wordDiff.equals = function (left, right) {
+	  if (this.options.ignoreCase) {
+	    left = left.toLowerCase();
+	    right = right.toLowerCase();
+	  }
+	  return left === right || this.options.ignoreWhitespace && !reWhitespace.test(left) && !reWhitespace.test(right);
+	};
+	wordDiff.tokenize = function (value) {
+	  var tokens = value.split(/(\s+|\b)/);
+
+	  // Join the boundary splits that we do not consider to be boundaries. This is primarily the extended Latin character set.
+	  for (var i = 0; i < tokens.length - 1; i++) {
+	    // If we have an empty string in the next field and we have only word chars before and after, merge
+	    if (!tokens[i + 1] && tokens[i + 2] && extendedWordChars.test(tokens[i]) && extendedWordChars.test(tokens[i + 2])) {
+	      tokens[i] += tokens[i + 2];
+	      tokens.splice(i + 1, 2);
+	      i--;
+	    }
+	  }
+
+	  return tokens;
+	};
+
+	function diffWords(oldStr, newStr, options) {
+	  options = /*istanbul ignore start*/(0, _params.generateOptions) /*istanbul ignore end*/(options, { ignoreWhitespace: true });
+	  return wordDiff.diff(oldStr, newStr, options);
+	}
+
+	function diffWordsWithSpace(oldStr, newStr, options) {
+	  return wordDiff.diff(oldStr, newStr, options);
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL3dvcmQuanMiXSwibmFtZXMiOlsiZGlmZldvcmRzIiwiZGlmZldvcmRzV2l0aFNwYWNlIiwiZXh0ZW5kZWRXb3JkQ2hhcnMiLCJyZVdoaXRlc3BhY2UiLCJ3b3JkRGlmZiIsImVxdWFscyIsImxlZnQiLCJyaWdodCIsIm9wdGlvbnMiLCJpZ25vcmVDYXNlIiwidG9Mb3dlckNhc2UiLCJpZ25vcmVXaGl0ZXNwYWNlIiwidGVzdCIsInRva2VuaXplIiwidmFsdWUiLCJ0b2tlbnMiLCJzcGxpdCIsImkiLCJsZW5ndGgiLCJzcGxpY2UiLCJvbGRTdHIiLCJuZXdTdHIiLCJkaWZmIl0sIm1hcHBpbmdzIjoiOzs7O2dDQW1EZ0JBLFMsR0FBQUEsUzt5REFLQUMsa0IsR0FBQUEsa0I7O0FBeERoQjs7Ozt1QkFDQTs7Ozt3QkFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFNQyxvQkFBb0IsK0RBQTFCOztBQUVBLElBQU1DLGVBQWUsSUFBckI7O0FBRU8sSUFBTUMsK0VBQVcsd0VBQWpCO0FBQ1BBLFNBQVNDLE1BQVQsR0FBa0IsVUFBU0MsSUFBVCxFQUFlQyxLQUFmLEVBQXNCO0FBQ3RDLE1BQUksS0FBS0MsT0FBTCxDQUFhQyxVQUFqQixFQUE2QjtBQUMzQkgsV0FBT0EsS0FBS0ksV0FBTCxFQUFQO0FBQ0FILFlBQVFBLE1BQU1HLFdBQU4sRUFBUjtBQUNEO0FBQ0QsU0FBT0osU0FBU0MsS0FBVCxJQUFtQixLQUFLQyxPQUFMLENBQWFHLGdCQUFiLElBQWlDLENBQUNSLGFBQWFTLElBQWIsQ0FBa0JOLElBQWxCLENBQWxDLElBQTZELENBQUNILGFBQWFTLElBQWIsQ0FBa0JMLEtBQWxCLENBQXhGO0FBQ0QsQ0FORDtBQU9BSCxTQUFTUyxRQUFULEdBQW9CLFVBQVNDLEtBQVQsRUFBZ0I7QUFDbEMsTUFBSUMsU0FBU0QsTUFBTUUsS0FBTixDQUFZLFVBQVosQ0FBYjs7QUFFQTtBQUNBLE9BQUssSUFBSUMsSUFBSSxDQUFiLEVBQWdCQSxJQUFJRixPQUFPRyxNQUFQLEdBQWdCLENBQXBDLEVBQXVDRCxHQUF2QyxFQUE0QztBQUMxQztBQUNBLFFBQUksQ0FBQ0YsT0FBT0UsSUFBSSxDQUFYLENBQUQsSUFBa0JGLE9BQU9FLElBQUksQ0FBWCxDQUFsQixJQUNLZixrQkFBa0JVLElBQWxCLENBQXVCRyxPQUFPRSxDQUFQLENBQXZCLENBREwsSUFFS2Ysa0JBQWtCVSxJQUFsQixDQUF1QkcsT0FBT0UsSUFBSSxDQUFYLENBQXZCLENBRlQsRUFFZ0Q7QUFDOUNGLGFBQU9FLENBQVAsS0FBYUYsT0FBT0UsSUFBSSxDQUFYLENBQWI7QUFDQUYsYUFBT0ksTUFBUCxDQUFjRixJQUFJLENBQWxCLEVBQXFCLENBQXJCO0FBQ0FBO0FBQ0Q7QUFDRjs7QUFFRCxTQUFPRixNQUFQO0FBQ0QsQ0FoQkQ7O0FBa0JPLFNBQVNmLFNBQVQsQ0FBbUJvQixNQUFuQixFQUEyQkMsTUFBM0IsRUFBbUNiLE9BQW5DLEVBQTRDO0FBQ2pEQSxZQUFVLDhFQUFnQkEsT0FBaEIsRUFBeUIsRUFBQ0csa0JBQWtCLElBQW5CLEVBQXpCLENBQVY7QUFDQSxTQUFPUCxTQUFTa0IsSUFBVCxDQUFjRixNQUFkLEVBQXNCQyxNQUF0QixFQUE4QmIsT0FBOUIsQ0FBUDtBQUNEOztBQUVNLFNBQVNQLGtCQUFULENBQTRCbUIsTUFBNUIsRUFBb0NDLE1BQXBDLEVBQTRDYixPQUE1QyxFQUFxRDtBQUMxRCxTQUFPSixTQUFTa0IsSUFBVCxDQUFjRixNQUFkLEVBQXNCQyxNQUF0QixFQUE4QmIsT0FBOUIsQ0FBUDtBQUNEIiwiZmlsZSI6IndvcmQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgRGlmZiBmcm9tICcuL2Jhc2UnO1xuaW1wb3J0IHtnZW5lcmF0ZU9wdGlvbnN9IGZyb20gJy4uL3V0aWwvcGFyYW1zJztcblxuLy8gQmFzZWQgb24gaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTGF0aW5fc2NyaXB0X2luX1VuaWNvZGVcbi8vXG4vLyBSYW5nZXMgYW5kIGV4Y2VwdGlvbnM6XG4vLyBMYXRpbi0xIFN1cHBsZW1lbnQsIDAwODDigJMwMEZGXG4vLyAgLSBVKzAwRDcgIMOXIE11bHRpcGxpY2F0aW9uIHNpZ25cbi8vICAtIFUrMDBGNyAgw7cgRGl2aXNpb24gc2lnblxuLy8gTGF0aW4gRXh0ZW5kZWQtQSwgMDEwMOKAkzAxN0Zcbi8vIExhdGluIEV4dGVuZGVkLUIsIDAxODDigJMwMjRGXG4vLyBJUEEgRXh0ZW5zaW9ucywgMDI1MOKAkzAyQUZcbi8vIFNwYWNpbmcgTW9kaWZpZXIgTGV0dGVycywgMDJCMOKAkzAyRkZcbi8vICAtIFUrMDJDNyAgy4cgJiM3MTE7ICBDYXJvblxuLy8gIC0gVSswMkQ4ICDLmCAmIzcyODsgIEJyZXZlXG4vLyAgLSBVKzAyRDkgIMuZICYjNzI5OyAgRG90IEFib3ZlXG4vLyAgLSBVKzAyREEgIMuaICYjNzMwOyAgUmluZyBBYm92ZVxuLy8gIC0gVSswMkRCICDLmyAmIzczMTsgIE9nb25la1xuLy8gIC0gVSswMkRDICDLnCAmIzczMjsgIFNtYWxsIFRpbGRlXG4vLyAgLSBVKzAyREQgIMudICYjNzMzOyAgRG91YmxlIEFjdXRlIEFjY2VudFxuLy8gTGF0aW4gRXh0ZW5kZWQgQWRkaXRpb25hbCwgMUUwMOKAkzFFRkZcbmNvbnN0IGV4dGVuZGVkV29yZENoYXJzID0gL15bYS16QS1aXFx1e0MwfS1cXHV7RkZ9XFx1e0Q4fS1cXHV7RjZ9XFx1e0Y4fS1cXHV7MkM2fVxcdXsyQzh9LVxcdXsyRDd9XFx1ezJERX0tXFx1ezJGRn1cXHV7MUUwMH0tXFx1ezFFRkZ9XSskL3U7XG5cbmNvbnN0IHJlV2hpdGVzcGFjZSA9IC9cXFMvO1xuXG5leHBvcnQgY29uc3Qgd29yZERpZmYgPSBuZXcgRGlmZigpO1xud29yZERpZmYuZXF1YWxzID0gZnVuY3Rpb24obGVmdCwgcmlnaHQpIHtcbiAgaWYgKHRoaXMub3B0aW9ucy5pZ25vcmVDYXNlKSB7XG4gICAgbGVmdCA9IGxlZnQudG9Mb3dlckNhc2UoKTtcbiAgICByaWdodCA9IHJpZ2h0LnRvTG93ZXJDYXNlKCk7XG4gIH1cbiAgcmV0dXJuIGxlZnQgPT09IHJpZ2h0IHx8ICh0aGlzLm9wdGlvbnMuaWdub3JlV2hpdGVzcGFjZSAmJiAhcmVXaGl0ZXNwYWNlLnRlc3QobGVmdCkgJiYgIXJlV2hpdGVzcGFjZS50ZXN0KHJpZ2h0KSk7XG59O1xud29yZERpZmYudG9rZW5pemUgPSBmdW5jdGlvbih2YWx1ZSkge1xuICBsZXQgdG9rZW5zID0gdmFsdWUuc3BsaXQoLyhcXHMrfFxcYikvKTtcblxuICAvLyBKb2luIHRoZSBib3VuZGFyeSBzcGxpdHMgdGhhdCB3ZSBkbyBub3QgY29uc2lkZXIgdG8gYmUgYm91bmRhcmllcy4gVGhpcyBpcyBwcmltYXJpbHkgdGhlIGV4dGVuZGVkIExhdGluIGNoYXJhY3RlciBzZXQuXG4gIGZvciAobGV0IGkgPSAwOyBpIDwgdG9rZW5zLmxlbmd0aCAtIDE7IGkrKykge1xuICAgIC8vIElmIHdlIGhhdmUgYW4gZW1wdHkgc3RyaW5nIGluIHRoZSBuZXh0IGZpZWxkIGFuZCB3ZSBoYXZlIG9ubHkgd29yZCBjaGFycyBiZWZvcmUgYW5kIGFmdGVyLCBtZXJnZVxuICAgIGlmICghdG9rZW5zW2kgKyAxXSAmJiB0b2tlbnNbaSArIDJdXG4gICAgICAgICAgJiYgZXh0ZW5kZWRXb3JkQ2hhcnMudGVzdCh0b2tlbnNbaV0pXG4gICAgICAgICAgJiYgZXh0ZW5kZWRXb3JkQ2hhcnMudGVzdCh0b2tlbnNbaSArIDJdKSkge1xuICAgICAgdG9rZW5zW2ldICs9IHRva2Vuc1tpICsgMl07XG4gICAgICB0b2tlbnMuc3BsaWNlKGkgKyAxLCAyKTtcbiAgICAgIGktLTtcbiAgICB9XG4gIH1cblxuICByZXR1cm4gdG9rZW5zO1xufTtcblxuZXhwb3J0IGZ1bmN0aW9uIGRpZmZXb3JkcyhvbGRTdHIsIG5ld1N0ciwgb3B0aW9ucykge1xuICBvcHRpb25zID0gZ2VuZXJhdGVPcHRpb25zKG9wdGlvbnMsIHtpZ25vcmVXaGl0ZXNwYWNlOiB0cnVlfSk7XG4gIHJldHVybiB3b3JkRGlmZi5kaWZmKG9sZFN0ciwgbmV3U3RyLCBvcHRpb25zKTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGRpZmZXb3Jkc1dpdGhTcGFjZShvbGRTdHIsIG5ld1N0ciwgb3B0aW9ucykge1xuICByZXR1cm4gd29yZERpZmYuZGlmZihvbGRTdHIsIG5ld1N0ciwgb3B0aW9ucyk7XG59XG4iXX0=
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/generateOptions = generateOptions;
+	function generateOptions(options, defaults) {
+	  if (typeof options === 'function') {
+	    defaults.callback = options;
+	  } else if (options) {
+	    for (var name in options) {
+	      /* istanbul ignore else */
+	      if (options.hasOwnProperty(name)) {
+	        defaults[name] = options[name];
+	      }
+	    }
+	  }
+	  return defaults;
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy91dGlsL3BhcmFtcy5qcyJdLCJuYW1lcyI6WyJnZW5lcmF0ZU9wdGlvbnMiLCJvcHRpb25zIiwiZGVmYXVsdHMiLCJjYWxsYmFjayIsIm5hbWUiLCJoYXNPd25Qcm9wZXJ0eSJdLCJtYXBwaW5ncyI6Ijs7O2dDQUFnQkEsZSxHQUFBQSxlO0FBQVQsU0FBU0EsZUFBVCxDQUF5QkMsT0FBekIsRUFBa0NDLFFBQWxDLEVBQTRDO0FBQ2pELE1BQUksT0FBT0QsT0FBUCxLQUFtQixVQUF2QixFQUFtQztBQUNqQ0MsYUFBU0MsUUFBVCxHQUFvQkYsT0FBcEI7QUFDRCxHQUZELE1BRU8sSUFBSUEsT0FBSixFQUFhO0FBQ2xCLFNBQUssSUFBSUcsSUFBVCxJQUFpQkgsT0FBakIsRUFBMEI7QUFDeEI7QUFDQSxVQUFJQSxRQUFRSSxjQUFSLENBQXVCRCxJQUF2QixDQUFKLEVBQWtDO0FBQ2hDRixpQkFBU0UsSUFBVCxJQUFpQkgsUUFBUUcsSUFBUixDQUFqQjtBQUNEO0FBQ0Y7QUFDRjtBQUNELFNBQU9GLFFBQVA7QUFDRCIsImZpbGUiOiJwYXJhbXMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gZ2VuZXJhdGVPcHRpb25zKG9wdGlvbnMsIGRlZmF1bHRzKSB7XG4gIGlmICh0eXBlb2Ygb3B0aW9ucyA9PT0gJ2Z1bmN0aW9uJykge1xuICAgIGRlZmF1bHRzLmNhbGxiYWNrID0gb3B0aW9ucztcbiAgfSBlbHNlIGlmIChvcHRpb25zKSB7XG4gICAgZm9yIChsZXQgbmFtZSBpbiBvcHRpb25zKSB7XG4gICAgICAvKiBpc3RhbmJ1bCBpZ25vcmUgZWxzZSAqL1xuICAgICAgaWYgKG9wdGlvbnMuaGFzT3duUHJvcGVydHkobmFtZSkpIHtcbiAgICAgICAgZGVmYXVsdHNbbmFtZV0gPSBvcHRpb25zW25hbWVdO1xuICAgICAgfVxuICAgIH1cbiAgfVxuICByZXR1cm4gZGVmYXVsdHM7XG59XG4iXX0=
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.lineDiff = undefined;
+	exports. /*istanbul ignore end*/diffLines = diffLines;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/diffTrimmedLines = diffTrimmedLines;
+
+	var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	/*istanbul ignore end*/var /*istanbul ignore start*/_params = __webpack_require__(4) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/var lineDiff = /*istanbul ignore start*/exports. /*istanbul ignore end*/lineDiff = new /*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/();
+	lineDiff.tokenize = function (value) {
+	  var retLines = [],
+	      linesAndNewlines = value.split(/(\n|\r\n)/);
+
+	  // Ignore the final empty token that occurs if the string ends with a new line
+	  if (!linesAndNewlines[linesAndNewlines.length - 1]) {
+	    linesAndNewlines.pop();
+	  }
+
+	  // Merge the content and line separators into single tokens
+	  for (var i = 0; i < linesAndNewlines.length; i++) {
+	    var line = linesAndNewlines[i];
+
+	    if (i % 2 && !this.options.newlineIsToken) {
+	      retLines[retLines.length - 1] += line;
+	    } else {
+	      if (this.options.ignoreWhitespace) {
+	        line = line.trim();
+	      }
+	      retLines.push(line);
+	    }
+	  }
+
+	  return retLines;
+	};
+
+	function diffLines(oldStr, newStr, callback) {
+	  return lineDiff.diff(oldStr, newStr, callback);
+	}
+	function diffTrimmedLines(oldStr, newStr, callback) {
+	  var options = /*istanbul ignore start*/(0, _params.generateOptions) /*istanbul ignore end*/(callback, { ignoreWhitespace: true });
+	  return lineDiff.diff(oldStr, newStr, options);
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL2xpbmUuanMiXSwibmFtZXMiOlsiZGlmZkxpbmVzIiwiZGlmZlRyaW1tZWRMaW5lcyIsImxpbmVEaWZmIiwidG9rZW5pemUiLCJ2YWx1ZSIsInJldExpbmVzIiwibGluZXNBbmROZXdsaW5lcyIsInNwbGl0IiwibGVuZ3RoIiwicG9wIiwiaSIsImxpbmUiLCJvcHRpb25zIiwibmV3bGluZUlzVG9rZW4iLCJpZ25vcmVXaGl0ZXNwYWNlIiwidHJpbSIsInB1c2giLCJvbGRTdHIiLCJuZXdTdHIiLCJjYWxsYmFjayIsImRpZmYiXSwibWFwcGluZ3MiOiI7Ozs7Z0NBOEJnQkEsUyxHQUFBQSxTO3lEQUNBQyxnQixHQUFBQSxnQjs7QUEvQmhCOzs7O3VCQUNBOzs7O3VCQUVPLElBQU1DLCtFQUFXLHdFQUFqQjtBQUNQQSxTQUFTQyxRQUFULEdBQW9CLFVBQVNDLEtBQVQsRUFBZ0I7QUFDbEMsTUFBSUMsV0FBVyxFQUFmO0FBQUEsTUFDSUMsbUJBQW1CRixNQUFNRyxLQUFOLENBQVksV0FBWixDQUR2Qjs7QUFHQTtBQUNBLE1BQUksQ0FBQ0QsaUJBQWlCQSxpQkFBaUJFLE1BQWpCLEdBQTBCLENBQTNDLENBQUwsRUFBb0Q7QUFDbERGLHFCQUFpQkcsR0FBakI7QUFDRDs7QUFFRDtBQUNBLE9BQUssSUFBSUMsSUFBSSxDQUFiLEVBQWdCQSxJQUFJSixpQkFBaUJFLE1BQXJDLEVBQTZDRSxHQUE3QyxFQUFrRDtBQUNoRCxRQUFJQyxPQUFPTCxpQkFBaUJJLENBQWpCLENBQVg7O0FBRUEsUUFBSUEsSUFBSSxDQUFKLElBQVMsQ0FBQyxLQUFLRSxPQUFMLENBQWFDLGNBQTNCLEVBQTJDO0FBQ3pDUixlQUFTQSxTQUFTRyxNQUFULEdBQWtCLENBQTNCLEtBQWlDRyxJQUFqQztBQUNELEtBRkQsTUFFTztBQUNMLFVBQUksS0FBS0MsT0FBTCxDQUFhRSxnQkFBakIsRUFBbUM7QUFDakNILGVBQU9BLEtBQUtJLElBQUwsRUFBUDtBQUNEO0FBQ0RWLGVBQVNXLElBQVQsQ0FBY0wsSUFBZDtBQUNEO0FBQ0Y7O0FBRUQsU0FBT04sUUFBUDtBQUNELENBeEJEOztBQTBCTyxTQUFTTCxTQUFULENBQW1CaUIsTUFBbkIsRUFBMkJDLE1BQTNCLEVBQW1DQyxRQUFuQyxFQUE2QztBQUFFLFNBQU9qQixTQUFTa0IsSUFBVCxDQUFjSCxNQUFkLEVBQXNCQyxNQUF0QixFQUE4QkMsUUFBOUIsQ0FBUDtBQUFpRDtBQUNoRyxTQUFTbEIsZ0JBQVQsQ0FBMEJnQixNQUExQixFQUFrQ0MsTUFBbEMsRUFBMENDLFFBQTFDLEVBQW9EO0FBQ3pELE1BQUlQLFVBQVUsOEVBQWdCTyxRQUFoQixFQUEwQixFQUFDTCxrQkFBa0IsSUFBbkIsRUFBMUIsQ0FBZDtBQUNBLFNBQU9aLFNBQVNrQixJQUFULENBQWNILE1BQWQsRUFBc0JDLE1BQXRCLEVBQThCTixPQUE5QixDQUFQO0FBQ0QiLCJmaWxlIjoibGluZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBEaWZmIGZyb20gJy4vYmFzZSc7XG5pbXBvcnQge2dlbmVyYXRlT3B0aW9uc30gZnJvbSAnLi4vdXRpbC9wYXJhbXMnO1xuXG5leHBvcnQgY29uc3QgbGluZURpZmYgPSBuZXcgRGlmZigpO1xubGluZURpZmYudG9rZW5pemUgPSBmdW5jdGlvbih2YWx1ZSkge1xuICBsZXQgcmV0TGluZXMgPSBbXSxcbiAgICAgIGxpbmVzQW5kTmV3bGluZXMgPSB2YWx1ZS5zcGxpdCgvKFxcbnxcXHJcXG4pLyk7XG5cbiAgLy8gSWdub3JlIHRoZSBmaW5hbCBlbXB0eSB0b2tlbiB0aGF0IG9jY3VycyBpZiB0aGUgc3RyaW5nIGVuZHMgd2l0aCBhIG5ldyBsaW5lXG4gIGlmICghbGluZXNBbmROZXdsaW5lc1tsaW5lc0FuZE5ld2xpbmVzLmxlbmd0aCAtIDFdKSB7XG4gICAgbGluZXNBbmROZXdsaW5lcy5wb3AoKTtcbiAgfVxuXG4gIC8vIE1lcmdlIHRoZSBjb250ZW50IGFuZCBsaW5lIHNlcGFyYXRvcnMgaW50byBzaW5nbGUgdG9rZW5zXG4gIGZvciAobGV0IGkgPSAwOyBpIDwgbGluZXNBbmROZXdsaW5lcy5sZW5ndGg7IGkrKykge1xuICAgIGxldCBsaW5lID0gbGluZXNBbmROZXdsaW5lc1tpXTtcblxuICAgIGlmIChpICUgMiAmJiAhdGhpcy5vcHRpb25zLm5ld2xpbmVJc1Rva2VuKSB7XG4gICAgICByZXRMaW5lc1tyZXRMaW5lcy5sZW5ndGggLSAxXSArPSBsaW5lO1xuICAgIH0gZWxzZSB7XG4gICAgICBpZiAodGhpcy5vcHRpb25zLmlnbm9yZVdoaXRlc3BhY2UpIHtcbiAgICAgICAgbGluZSA9IGxpbmUudHJpbSgpO1xuICAgICAgfVxuICAgICAgcmV0TGluZXMucHVzaChsaW5lKTtcbiAgICB9XG4gIH1cblxuICByZXR1cm4gcmV0TGluZXM7XG59O1xuXG5leHBvcnQgZnVuY3Rpb24gZGlmZkxpbmVzKG9sZFN0ciwgbmV3U3RyLCBjYWxsYmFjaykgeyByZXR1cm4gbGluZURpZmYuZGlmZihvbGRTdHIsIG5ld1N0ciwgY2FsbGJhY2spOyB9XG5leHBvcnQgZnVuY3Rpb24gZGlmZlRyaW1tZWRMaW5lcyhvbGRTdHIsIG5ld1N0ciwgY2FsbGJhY2spIHtcbiAgbGV0IG9wdGlvbnMgPSBnZW5lcmF0ZU9wdGlvbnMoY2FsbGJhY2ssIHtpZ25vcmVXaGl0ZXNwYWNlOiB0cnVlfSk7XG4gIHJldHVybiBsaW5lRGlmZi5kaWZmKG9sZFN0ciwgbmV3U3RyLCBvcHRpb25zKTtcbn1cbiJdfQ==
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.sentenceDiff = undefined;
+	exports. /*istanbul ignore end*/diffSentences = diffSentences;
+
+	var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/var sentenceDiff = /*istanbul ignore start*/exports. /*istanbul ignore end*/sentenceDiff = new /*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/();
+	sentenceDiff.tokenize = function (value) {
+	  return value.split(/(\S.+?[.!?])(?=\s+|$)/);
+	};
+
+	function diffSentences(oldStr, newStr, callback) {
+	  return sentenceDiff.diff(oldStr, newStr, callback);
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL3NlbnRlbmNlLmpzIl0sIm5hbWVzIjpbImRpZmZTZW50ZW5jZXMiLCJzZW50ZW5jZURpZmYiLCJ0b2tlbml6ZSIsInZhbHVlIiwic3BsaXQiLCJvbGRTdHIiLCJuZXdTdHIiLCJjYWxsYmFjayIsImRpZmYiXSwibWFwcGluZ3MiOiI7Ozs7Z0NBUWdCQSxhLEdBQUFBLGE7O0FBUmhCOzs7Ozs7dUJBR08sSUFBTUMsdUZBQWUsd0VBQXJCO0FBQ1BBLGFBQWFDLFFBQWIsR0FBd0IsVUFBU0MsS0FBVCxFQUFnQjtBQUN0QyxTQUFPQSxNQUFNQyxLQUFOLENBQVksdUJBQVosQ0FBUDtBQUNELENBRkQ7O0FBSU8sU0FBU0osYUFBVCxDQUF1QkssTUFBdkIsRUFBK0JDLE1BQS9CLEVBQXVDQyxRQUF2QyxFQUFpRDtBQUFFLFNBQU9OLGFBQWFPLElBQWIsQ0FBa0JILE1BQWxCLEVBQTBCQyxNQUExQixFQUFrQ0MsUUFBbEMsQ0FBUDtBQUFxRCIsImZpbGUiOiJzZW50ZW5jZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBEaWZmIGZyb20gJy4vYmFzZSc7XG5cblxuZXhwb3J0IGNvbnN0IHNlbnRlbmNlRGlmZiA9IG5ldyBEaWZmKCk7XG5zZW50ZW5jZURpZmYudG9rZW5pemUgPSBmdW5jdGlvbih2YWx1ZSkge1xuICByZXR1cm4gdmFsdWUuc3BsaXQoLyhcXFMuKz9bLiE/XSkoPz1cXHMrfCQpLyk7XG59O1xuXG5leHBvcnQgZnVuY3Rpb24gZGlmZlNlbnRlbmNlcyhvbGRTdHIsIG5ld1N0ciwgY2FsbGJhY2spIHsgcmV0dXJuIHNlbnRlbmNlRGlmZi5kaWZmKG9sZFN0ciwgbmV3U3RyLCBjYWxsYmFjayk7IH1cbiJdfQ==
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.cssDiff = undefined;
+	exports. /*istanbul ignore end*/diffCss = diffCss;
+
+	var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/var cssDiff = /*istanbul ignore start*/exports. /*istanbul ignore end*/cssDiff = new /*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/();
+	cssDiff.tokenize = function (value) {
+	  return value.split(/([{}:;,]|\s+)/);
+	};
+
+	function diffCss(oldStr, newStr, callback) {
+	  return cssDiff.diff(oldStr, newStr, callback);
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL2Nzcy5qcyJdLCJuYW1lcyI6WyJkaWZmQ3NzIiwiY3NzRGlmZiIsInRva2VuaXplIiwidmFsdWUiLCJzcGxpdCIsIm9sZFN0ciIsIm5ld1N0ciIsImNhbGxiYWNrIiwiZGlmZiJdLCJtYXBwaW5ncyI6Ijs7OztnQ0FPZ0JBLE8sR0FBQUEsTzs7QUFQaEI7Ozs7Ozt1QkFFTyxJQUFNQyw2RUFBVSx3RUFBaEI7QUFDUEEsUUFBUUMsUUFBUixHQUFtQixVQUFTQyxLQUFULEVBQWdCO0FBQ2pDLFNBQU9BLE1BQU1DLEtBQU4sQ0FBWSxlQUFaLENBQVA7QUFDRCxDQUZEOztBQUlPLFNBQVNKLE9BQVQsQ0FBaUJLLE1BQWpCLEVBQXlCQyxNQUF6QixFQUFpQ0MsUUFBakMsRUFBMkM7QUFBRSxTQUFPTixRQUFRTyxJQUFSLENBQWFILE1BQWIsRUFBcUJDLE1BQXJCLEVBQTZCQyxRQUE3QixDQUFQO0FBQWdEIiwiZmlsZSI6ImNzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBEaWZmIGZyb20gJy4vYmFzZSc7XG5cbmV4cG9ydCBjb25zdCBjc3NEaWZmID0gbmV3IERpZmYoKTtcbmNzc0RpZmYudG9rZW5pemUgPSBmdW5jdGlvbih2YWx1ZSkge1xuICByZXR1cm4gdmFsdWUuc3BsaXQoLyhbe306OyxdfFxccyspLyk7XG59O1xuXG5leHBvcnQgZnVuY3Rpb24gZGlmZkNzcyhvbGRTdHIsIG5ld1N0ciwgY2FsbGJhY2spIHsgcmV0dXJuIGNzc0RpZmYuZGlmZihvbGRTdHIsIG5ld1N0ciwgY2FsbGJhY2spOyB9XG4iXX0=
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.jsonDiff = undefined;
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	exports. /*istanbul ignore end*/diffJson = diffJson;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/canonicalize = canonicalize;
+
+	var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	/*istanbul ignore end*/var /*istanbul ignore start*/_line = __webpack_require__(5) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/var objectPrototypeToString = Object.prototype.toString;
+
+	var jsonDiff = /*istanbul ignore start*/exports. /*istanbul ignore end*/jsonDiff = new /*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/();
+	// Discriminate between two lines of pretty-printed, serialized JSON where one of them has a
+	// dangling comma and the other doesn't. Turns out including the dangling comma yields the nicest output:
+	jsonDiff.useLongestToken = true;
+
+	jsonDiff.tokenize = /*istanbul ignore start*/_line.lineDiff /*istanbul ignore end*/.tokenize;
+	jsonDiff.castInput = function (value) {
+	  /*istanbul ignore start*/var _options = /*istanbul ignore end*/this.options,
+	      undefinedReplacement = _options.undefinedReplacement,
+	      _options$stringifyRep = _options.stringifyReplacer,
+	      stringifyReplacer = _options$stringifyRep === undefined ? function (k, v) /*istanbul ignore start*/{
+	    return (/*istanbul ignore end*/typeof v === 'undefined' ? undefinedReplacement : v
+	    );
+	  } : _options$stringifyRep;
+
+
+	  return typeof value === 'string' ? value : JSON.stringify(canonicalize(value, null, null, stringifyReplacer), stringifyReplacer, '  ');
+	};
+	jsonDiff.equals = function (left, right) {
+	  return (/*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/.prototype.equals.call(jsonDiff, left.replace(/,([\r\n])/g, '$1'), right.replace(/,([\r\n])/g, '$1'))
+	  );
+	};
+
+	function diffJson(oldObj, newObj, options) {
+	  return jsonDiff.diff(oldObj, newObj, options);
+	}
+
+	// This function handles the presence of circular references by bailing out when encountering an
+	// object that is already on the "stack" of items being processed. Accepts an optional replacer
+	function canonicalize(obj, stack, replacementStack, replacer, key) {
+	  stack = stack || [];
+	  replacementStack = replacementStack || [];
+
+	  if (replacer) {
+	    obj = replacer(key, obj);
+	  }
+
+	  var i = /*istanbul ignore start*/void 0 /*istanbul ignore end*/;
+
+	  for (i = 0; i < stack.length; i += 1) {
+	    if (stack[i] === obj) {
+	      return replacementStack[i];
+	    }
+	  }
+
+	  var canonicalizedObj = /*istanbul ignore start*/void 0 /*istanbul ignore end*/;
+
+	  if ('[object Array]' === objectPrototypeToString.call(obj)) {
+	    stack.push(obj);
+	    canonicalizedObj = new Array(obj.length);
+	    replacementStack.push(canonicalizedObj);
+	    for (i = 0; i < obj.length; i += 1) {
+	      canonicalizedObj[i] = canonicalize(obj[i], stack, replacementStack, replacer, key);
+	    }
+	    stack.pop();
+	    replacementStack.pop();
+	    return canonicalizedObj;
+	  }
+
+	  if (obj && obj.toJSON) {
+	    obj = obj.toJSON();
+	  }
+
+	  if ( /*istanbul ignore start*/(typeof /*istanbul ignore end*/obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object' && obj !== null) {
+	    stack.push(obj);
+	    canonicalizedObj = {};
+	    replacementStack.push(canonicalizedObj);
+	    var sortedKeys = [],
+	        _key = /*istanbul ignore start*/void 0 /*istanbul ignore end*/;
+	    for (_key in obj) {
+	      /* istanbul ignore else */
+	      if (obj.hasOwnProperty(_key)) {
+	        sortedKeys.push(_key);
+	      }
+	    }
+	    sortedKeys.sort();
+	    for (i = 0; i < sortedKeys.length; i += 1) {
+	      _key = sortedKeys[i];
+	      canonicalizedObj[_key] = canonicalize(obj[_key], stack, replacementStack, replacer, _key);
+	    }
+	    stack.pop();
+	    replacementStack.pop();
+	  } else {
+	    canonicalizedObj = obj;
+	  }
+	  return canonicalizedObj;
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL2pzb24uanMiXSwibmFtZXMiOlsiZGlmZkpzb24iLCJjYW5vbmljYWxpemUiLCJvYmplY3RQcm90b3R5cGVUb1N0cmluZyIsIk9iamVjdCIsInByb3RvdHlwZSIsInRvU3RyaW5nIiwianNvbkRpZmYiLCJ1c2VMb25nZXN0VG9rZW4iLCJ0b2tlbml6ZSIsImNhc3RJbnB1dCIsInZhbHVlIiwib3B0aW9ucyIsInVuZGVmaW5lZFJlcGxhY2VtZW50Iiwic3RyaW5naWZ5UmVwbGFjZXIiLCJrIiwidiIsIkpTT04iLCJzdHJpbmdpZnkiLCJlcXVhbHMiLCJsZWZ0IiwicmlnaHQiLCJjYWxsIiwicmVwbGFjZSIsIm9sZE9iaiIsIm5ld09iaiIsImRpZmYiLCJvYmoiLCJzdGFjayIsInJlcGxhY2VtZW50U3RhY2siLCJyZXBsYWNlciIsImtleSIsImkiLCJsZW5ndGgiLCJjYW5vbmljYWxpemVkT2JqIiwicHVzaCIsIkFycmF5IiwicG9wIiwidG9KU09OIiwic29ydGVkS2V5cyIsImhhc093blByb3BlcnR5Iiwic29ydCJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztnQ0FxQmdCQSxRLEdBQUFBLFE7eURBSUFDLFksR0FBQUEsWTs7QUF6QmhCOzs7O3VCQUNBOzs7O3VCQUVBLElBQU1DLDBCQUEwQkMsT0FBT0MsU0FBUCxDQUFpQkMsUUFBakQ7O0FBR08sSUFBTUMsK0VBQVcsd0VBQWpCO0FBQ1A7QUFDQTtBQUNBQSxTQUFTQyxlQUFULEdBQTJCLElBQTNCOztBQUVBRCxTQUFTRSxRQUFULEdBQW9CLGdFQUFTQSxRQUE3QjtBQUNBRixTQUFTRyxTQUFULEdBQXFCLFVBQVNDLEtBQVQsRUFBZ0I7QUFBQSxpRUFDK0UsS0FBS0MsT0FEcEY7QUFBQSxNQUM1QkMsb0JBRDRCLFlBQzVCQSxvQkFENEI7QUFBQSx1Q0FDTkMsaUJBRE07QUFBQSxNQUNOQSxpQkFETSx5Q0FDYyxVQUFDQyxDQUFELEVBQUlDLENBQUo7QUFBQSxtQ0FBVSxPQUFPQSxDQUFQ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QUFLVCxJQUFJLENBQVQsRUFBWUEsSUFBSU8sV0FBV04sTUFBM0IsRUFBbUNELEtBQUssQ0FBeEMsRUFBMkM7QUFDekNELGFBQU1RLFdBQVdQLENBQVgsQ0FBTjtBQUNBRSx1QkFBaUJILElBQWpCLElBQXdCN0IsYUFBYXlCLElBQUlJLElBQUosQ0FBYixFQUF1QkgsS0FBdkIsRUFBOEJDLGdCQUE5QixFQUFnREMsUUFBaEQsRUFBMERDLElBQTFELENBQXhCO0FBQ0Q7QUFDREgsVUFBTVMsR0FBTjtBQUNBUixxQkFBaUJRLEdBQWpCO0FBQ0QsR0FuQkQsTUFtQk87QUFDTEgsdUJBQW1CUCxHQUFuQjtBQUNEO0FBQ0QsU0FBT08sZ0JBQVA7QUFDRCIsImZpbGUiOiJqc29uLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IERpZmYgZnJvbSAnLi9iYXNlJztcbmltcG9ydCB7bGluZURpZmZ9IGZyb20gJy4vbGluZSc7XG5cbmNvbnN0IG9iamVjdFByb3RvdHlwZVRvU3RyaW5nID0gT2JqZWN0LnByb3RvdHlwZS50b1N0cmluZztcblxuXG5leHBvcnQgY29uc3QganNvbkRpZmYgPSBuZXcgRGlmZigpO1xuLy8gRGlzY3JpbWluYXRlIGJldHdlZW4gdHdvIGxpbmVzIG9mIHByZXR0eS1wcmludGVkLCBzZXJpYWxpemVkIEpTT04gd2hlcmUgb25lIG9mIHRoZW0gaGFzIGFcbi8vIGRhbmdsaW5nIGNvbW1hIGFuZCB0aGUgb3RoZXIgZG9lc24ndC4gVHVybnMgb3V0IGluY2x1ZGluZyB0aGUgZGFuZ2xpbmcgY29tbWEgeWllbGRzIHRoZSBuaWNlc3Qgb3V0cHV0OlxuanNvbkRpZmYudXNlTG9uZ2VzdFRva2VuID0gdHJ1ZTtcblxuanNvbkRpZmYudG9rZW5pemUgPSBsaW5lRGlmZi50b2tlbml6ZTtcbmpzb25EaWZmLmNhc3RJbnB1dCA9IGZ1bmN0aW9uKHZhbHVlKSB7XG4gIGNvbnN0IHt1bmRlZmluZWRSZXBsYWNlbWVudCwgc3RyaW5naWZ5UmVwbGFjZXIgPSAoaywgdikgPT4gdHlwZW9mIHYgPT09ICd1bmRlZmluZWQnID8gdW5kZWZpbmVkUmVwbGFjZW1lbnQgOiB2fSA9IHRoaXMub3B0aW9ucztcblxuICByZXR1cm4gdHlwZW9mIHZhbHVlID09PSAnc3RyaW5nJyA/IHZhbHVlIDogSlNPTi5zdHJpbmdpZnkoY2Fub25pY2FsaXplKHZhbHVlLCBudWxsLCBudWxsLCBzdHJpbmdpZnlSZXBsYWNlciksIHN0cmluZ2lmeVJlcGxhY2VyLCAnICAnKTtcbn07XG5qc29uRGlmZi5lcXVhbHMgPSBmdW5jdGlvbihsZWZ0LCByaWdodCkge1xuICByZXR1cm4gRGlmZi5wcm90b3R5cGUuZXF1YWxzLmNhbGwoanNvbkRpZmYsIGxlZnQucmVwbGFjZSgvLChbXFxyXFxuXSkvZywgJyQxJyksIHJpZ2h0LnJlcGxhY2UoLywoW1xcclxcbl0pL2csICckMScpKTtcbn07XG5cbmV4cG9ydCBmdW5jdGlvbiBkaWZmSnNvbihvbGRPYmosIG5ld09iaiwgb3B0aW9ucykgeyByZXR1cm4ganNvbkRpZmYuZGlmZihvbGRPYmosIG5ld09iaiwgb3B0aW9ucyk7IH1cblxuLy8gVGhpcyBmdW5jdGlvbiBoYW5kbGVzIHRoZSBwcmVzZW5jZSBvZiBjaXJjdWxhciByZWZlcmVuY2VzIGJ5IGJhaWxpbmcgb3V0IHdoZW4gZW5jb3VudGVyaW5nIGFuXG4vLyBvYmplY3QgdGhhdCBpcyBhbHJlYWR5IG9uIHRoZSBcInN0YWNrXCIgb2YgaXRlbXMgYmVpbmcgcHJvY2Vzc2VkLiBBY2NlcHRzIGFuIG9wdGlvbmFsIHJlcGxhY2VyXG5leHBvcnQgZnVuY3Rpb24gY2Fub25pY2FsaXplKG9iaiwgc3RhY2ssIHJlcGxhY2VtZW50U3RhY2ssIHJlcGxhY2VyLCBrZXkpIHtcbiAgc3RhY2sgPSBzdGFjayB8fCBbXTtcbiAgcmVwbGFjZW1lbnRTdGFjayA9IHJlcGxhY2VtZW50U3RhY2sgfHwgW107XG5cbiAgaWYgKHJlcGxhY2VyKSB7XG4gICAgb2JqID0gcmVwbGFjZXIoa2V5LCBvYmopO1xuICB9XG5cbiAgbGV0IGk7XG5cbiAgZm9yIChpID0gMDsgaSA8IHN0YWNrLmxlbmd0aDsgaSArPSAxKSB7XG4gICAgaWYgKHN0YWNrW2ldID09PSBvYmopIHtcbiAgICAgIHJldHVybiByZXBsYWNlbWVudFN0YWNrW2ldO1xuICAgIH1cbiAgfVxuXG4gIGxldCBjYW5vbmljYWxpemVkT2JqO1xuXG4gIGlmICgnW29iamVjdCBBcnJheV0nID09PSBvYmplY3RQcm90b3R5cGVUb1N0cmluZy5jYWxsKG9iaikpIHtcbiAgICBzdGFjay5wdXNoKG9iaik7XG4gICAgY2Fub25pY2FsaXplZE9iaiA9IG5ldyBBcnJheShvYmoubGVuZ3RoKTtcbiAgICByZXBsYWNlbWVudFN0YWNrLnB1c2goY2Fub25pY2FsaXplZE9iaik7XG4gICAgZm9yIChpID0gMDsgaSA8IG9iai5sZW5ndGg7IGkgKz0gMSkge1xuICAgICAgY2Fub25pY2FsaXplZE9ialtpXSA9IGNhbm9uaWNhbGl6ZShvYmpbaV0sIHN0YWNrLCByZXBsYWNlbWVudFN0YWNrLCByZXBsYWNlciwga2V5KTtcbiAgICB9XG4gICAgc3RhY2sucG9wKCk7XG4gICAgcmVwbGFjZW1lbnRTdGFjay5wb3AoKTtcbiAgICByZXR1cm4gY2Fub25pY2FsaXplZE9iajtcbiAgfVxuXG4gIGlmIChvYmogJiYgb2JqLnRvSlNPTikge1xuICAgIG9iaiA9IG9iai50b0pTT04oKTtcbiAgfVxuXG4gIGlmICh0eXBlb2Ygb2JqID09PSAnb2JqZWN0JyAmJiBvYmogIT09IG51bGwpIHtcbiAgICBzdGFjay5wdXNoKG9iaik7XG4gICAgY2Fub25pY2FsaXplZE9iaiA9IHt9O1xuICAgIHJlcGxhY2VtZW50U3RhY2sucHVzaChjYW5vbmljYWxpemVkT2JqKTtcbiAgICBsZXQgc29ydGVkS2V5cyA9IFtdLFxuICAgICAgICBrZXk7XG4gICAgZm9yIChrZXkgaW4gb2JqKSB7XG4gICAgICAvKiBpc3RhbmJ1bCBpZ25vcmUgZWxzZSAqL1xuICAgICAgaWYgKG9iai5oYXNPd25Qcm9wZXJ0eShrZXkpKSB7XG4gICAgICAgIHNvcnRlZEtleXMucHVzaChrZXkpO1xuICAgICAgfVxuICAgIH1cbiAgICBzb3J0ZWRLZXlzLnNvcnQoKTtcbiAgICBmb3IgKGkgPSAwOyBpIDwgc29ydGVkS2V5cy5sZW5ndGg7IGkgKz0gMSkge1xuICAgICAga2V5ID0gc29ydGVkS2V5c1tpXTtcbiAgICAgIGNhbm9uaWNhbGl6ZWRPYmpba2V5XSA9IGNhbm9uaWNhbGl6ZShvYmpba2V5XSwgc3RhY2ssIHJlcGxhY2VtZW50U3RhY2ssIHJlcGxhY2VyLCBrZXkpO1xuICAgIH1cbiAgICBzdGFjay5wb3AoKTtcbiAgICByZXBsYWNlbWVudFN0YWNrLnBvcCgpO1xuICB9IGVsc2Uge1xuICAgIGNhbm9uaWNhbGl6ZWRPYmogPSBvYmo7XG4gIH1cbiAgcmV0dXJuIGNhbm9uaWNhbGl6ZWRPYmo7XG59XG4iXX0=
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports.arrayDiff = undefined;
+	exports. /*istanbul ignore end*/diffArrays = diffArrays;
+
+	var /*istanbul ignore start*/_base = __webpack_require__(1) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _base2 = _interopRequireDefault(_base);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/var arrayDiff = /*istanbul ignore start*/exports. /*istanbul ignore end*/arrayDiff = new /*istanbul ignore start*/_base2['default'] /*istanbul ignore end*/();
+	arrayDiff.tokenize = function (value) {
+	  return value.slice();
+	};
+	arrayDiff.join = arrayDiff.removeEmpty = function (value) {
+	  return value;
+	};
+
+	function diffArrays(oldArr, newArr, callback) {
+	  return arrayDiff.diff(oldArr, newArr, callback);
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kaWZmL2FycmF5LmpzIl0sIm5hbWVzIjpbImRpZmZBcnJheXMiLCJhcnJheURpZmYiLCJ0b2tlbml6ZSIsInZhbHVlIiwic2xpY2UiLCJqb2luIiwicmVtb3ZlRW1wdHkiLCJvbGRBcnIiLCJuZXdBcnIiLCJjYWxsYmFjayIsImRpZmYiXSwibWFwcGluZ3MiOiI7Ozs7Z0NBVWdCQSxVLEdBQUFBLFU7O0FBVmhCOzs7Ozs7dUJBRU8sSUFBTUMsaUZBQVksd0VBQWxCO0FBQ1BBLFVBQVVDLFFBQVYsR0FBcUIsVUFBU0MsS0FBVCxFQUFnQjtBQUNuQyxTQUFPQSxNQUFNQyxLQUFOLEVBQVA7QUFDRCxDQUZEO0FBR0FILFVBQVVJLElBQVYsR0FBaUJKLFVBQVVLLFdBQVYsR0FBd0IsVUFBU0gsS0FBVCxFQUFnQjtBQUN2RCxTQUFPQSxLQUFQO0FBQ0QsQ0FGRDs7QUFJTyxTQUFTSCxVQUFULENBQW9CTyxNQUFwQixFQUE0QkMsTUFBNUIsRUFBb0NDLFFBQXBDLEVBQThDO0FBQUUsU0FBT1IsVUFBVVMsSUFBVixDQUFlSCxNQUFmLEVBQXVCQyxNQUF2QixFQUErQkMsUUFBL0IsQ0FBUDtBQUFrRCIsImZpbGUiOiJhcnJheS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBEaWZmIGZyb20gJy4vYmFzZSc7XG5cbmV4cG9ydCBjb25zdCBhcnJheURpZmYgPSBuZXcgRGlmZigpO1xuYXJyYXlEaWZmLnRva2VuaXplID0gZnVuY3Rpb24odmFsdWUpIHtcbiAgcmV0dXJuIHZhbHVlLnNsaWNlKCk7XG59O1xuYXJyYXlEaWZmLmpvaW4gPSBhcnJheURpZmYucmVtb3ZlRW1wdHkgPSBmdW5jdGlvbih2YWx1ZSkge1xuICByZXR1cm4gdmFsdWU7XG59O1xuXG5leHBvcnQgZnVuY3Rpb24gZGlmZkFycmF5cyhvbGRBcnIsIG5ld0FyciwgY2FsbGJhY2spIHsgcmV0dXJuIGFycmF5RGlmZi5kaWZmKG9sZEFyciwgbmV3QXJyLCBjYWxsYmFjayk7IH1cbiJdfQ==
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/applyPatch = applyPatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/applyPatches = applyPatches;
+
+	var /*istanbul ignore start*/_parse = __webpack_require__(11) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_distanceIterator = __webpack_require__(12) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/var _distanceIterator2 = _interopRequireDefault(_distanceIterator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	/*istanbul ignore end*/function applyPatch(source, uniDiff) {
+	  /*istanbul ignore start*/var /*istanbul ignore end*/options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+	  if (typeof uniDiff === 'string') {
+	    uniDiff = /*istanbul ignore start*/(0, _parse.parsePatch) /*istanbul ignore end*/(uniDiff);
+	  }
+
+	  if (Array.isArray(uniDiff)) {
+	    if (uniDiff.length > 1) {
+	      throw new Error('applyPatch only works with a single input.');
+	    }
+
+	    uniDiff = uniDiff[0];
+	  }
+
+	  // Apply the diff to the input
+	  var lines = source.split(/\r\n|[\n\v\f\r\x85]/),
+	      delimiters = source.match(/\r\n|[\n\v\f\r\x85]/g) || [],
+	      hunks = uniDiff.hunks,
+	      compareLine = options.compareLine || function (lineNumber, line, operation, patchContent) /*istanbul ignore start*/{
+	    return (/*istanbul ignore end*/line === patchContent
+	    );
+	  },
+	      errorCount = 0,
+	      fuzzFactor = options.fuzzFactor || 0,
+	      minLine = 0,
+	      offset = 0,
+	      removeEOFNL = /*istanbul ignore start*/void 0 /*istanbul ignore end*/,
+	      addEOFNL = /*istanbul ignore start*/void 0 /*istanbul ignore end*/;
+
+	  /**
+	   * Checks if the hunk exactly fits on the provided location
+	   */
+	  function hunkFits(hunk, toPos) {
+	    for (var j = 0; j < hunk.lines.length; j++) {
+	      var line = hunk.lines[j],
+	          operation = line.length > 0 ? line[0] : ' ',
+	          content = line.length > 0 ? line.substr(1) : line;
+
+	      if (operation === ' ' || operation === '-') {
+	        // Context sanity check
+	        if (!compareLine(toPos + 1, lines[toPos], operation, content)) {
+	          errorCount++;
+
+	          if (errorCount > fuzzFactor) {
+	            return false;
+	          }
+	        }
+	        toPos++;
+	      }
+	    }
+
+	    return true;
+	  }
+
+	  // Search best fit offsets for each hunk based on the previous ones
+	  for (var i = 0; i < hunks.length; i++) {
+	    var hunk = hunks[i],
+	        maxLine = lines.length - hunk.oldLines,
+	        localOffset = 0,
+	        toPos = offset + hunk.oldStart - 1;
+
+	    var iterator = /*istanbul ignore start*/(0, _distanceIterator2['default']) /*istanbul ignore end*/(toPos, minLine, maxLine);
+
+	    for (; localOffset !== undefined; localOffset = iterator()) {
+	      if (hunkFits(hunk, toPos + localOffset)) {
+	        hunk.offset = offset += localOffset;
+	        break;
+	      }
+	    }
+
+	    if (localOffset === undefined) {
+	      return false;
+	    }
+
+	    // Set lower text limit to end of the current hunk, so next ones don't try
+	    // to fit over already patched text
+	    minLine = hunk.offset + hunk.oldStart + hunk.oldLines;
+	  }
+
+	  // Apply patch hunks
+	  var diffOffset = 0;
+	  for (var _i = 0; _i < hunks.length; _i++) {
+	    var _hunk = hunks[_i],
+	        _toPos = _hunk.oldStart + _hunk.offset + diffOffset - 1;
+	    diffOffset += _hunk.newLines - _hunk.oldLines;
+
+	    if (_toPos < 0) {
+	      // Creating a new file
+	      _toPos = 0;
+	    }
+
+	    for (var j = 0; j < _hunk.lines.length; j++) {
+	      var line = _hunk.lines[j],
+	          operation = line.length > 0 ? line[0] : ' ',
+	          content = line.length > 0 ? line.substr(1) : line,
+	          delimiter = _hunk.linedelimiters[j];
+
+	      if (operation === ' ') {
+	        _toPos++;
+	      } else if (operation === '-') {
+	        lines.splice(_toPos, 1);
+	        delimiters.splice(_toPos, 1);
+	        /* istanbul ignore else */
+	      } else if (operation === '+') {
+	        lines.splice(_toPos, 0, content);
+	        delimiters.splice(_toPos, 0, delimiter);
+	        _toPos++;
+	      } else if (operation === '\\') {
+	        var previousOperation = _hunk.lines[j - 1] ? _hunk.lines[j - 1][0] : null;
+	        if (previousOperation === '+') {
+	          removeEOFNL = true;
+	        } else if (previousOperation === '-') {
+	          addEOFNL = true;
+	        }
+	      }
+	    }
+	  }
+
+	  // Handle EOFNL insertion/removal
+	  if (removeEOFNL) {
+	    while (!lines[lines.length - 1]) {
+	      lines.pop();
+	      delimiters.pop();
+	    }
+	  } else if (addEOFNL) {
+	    lines.push('');
+	    delimiters.push('\n');
+	  }
+	  for (var _k = 0; _k < lines.length - 1; _k++) {
+	    lines[_k] = lines[_k] + delimiters[_k];
+	  }
+	  return lines.join('');
+	}
+
+	// Wrapper that supports multiple file patches via callbacks.
+	function applyPatches(uniDiff, options) {
+	  if (typeof uniDiff === 'string') {
+	    uniDiff = /*istanbul ignore start*/(0, _parse.parsePatch) /*istanbul ignore end*/(uniDiff);
+	  }
+
+	  var currentIndex = 0;
+	  function processIndex() {
+	    var index = uniDiff[currentIndex++];
+	    if (!index) {
+	      return options.complete();
+	    }
+
+	    options.loadFile(index, function (err, data) {
+	      if (err) {
+	        return options.complete(err);
+	      }
+
+	      var updatedContent = applyPatch(data, index, options);
+	      options.patched(index, updatedContent, function (err) {
+	        if (err) {
+	          return options.complete(err);
+	        }
+
+	        processIndex();
+	      });
+	    });
+	  }
+	  processIndex();
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9wYXRjaC9hcHBseS5qcyJdLCJuYW1lcyI6WyJhcHBseVBhdGNoIiwiYXBwbHlQYXRjaGVzIiwic291cmNlIiwidW5pRGlmZiIsIm9wdGlvbnMiLCJBcnJheSIsImlzQXJyYXkiLCJsZW5ndGgiLCJFcnJvciIsImxpbmVzIiwic3BsaXQiLCJkZWxpbWl0ZXJzIiwibWF0Y2giLCJodW5rcyIsImNvbXBhcmVMaW5lIiwibGluZU51bWJlciIsImxpbmUiLCJvcGVyYXRpb24iLCJwYXRjaENvbnRlbnQiLCJlcnJvckNvdW50IiwiZnV6ekZhY3RvciIsIm1pbkxpbmUiLCJvZmZzZXQiLCJyZW1vdmVFT0ZOTCIsImFkZEVPRk5MIiwiaHVua0ZpdHMiLCJodW5rIiwidG9Qb3MiLCJqIiwiY29udGVudCIsInN1YnN0ciIsImkiLCJtYXhMaW5lIiwib2xkTGluZXMiLCJsb2NhbE9mZnNldCIsIm9sZFN0YXJ0IiwiaXRlcmF0b3IiLCJ1bmRlZmluZWQiLCJkaWZmT2Zmc2V0IiwibmV3TGluZXMiLCJkZWxpbWl0ZXIiLCJsaW5lZGVsaW1pdGVycyIsInNwbGljZSIsInByZXZpb3VzT3BlcmF0aW9uIiwicG9wIiwicHVzaCIsIl9rIiwiam9pbiIsImN1cnJlbnRJbmRleCIsInByb2Nlc3NJbmRleCIsImluZGV4IiwiY29tcGxldGUiLCJsb2FkRmlsZSIsImVyciIsImRhdGEiLCJ1cGRhdGVkQ29udGVudCIsInBhdGNoZWQiXSwibWFwcGluZ3MiOiI7OztnQ0FHZ0JBLFUsR0FBQUEsVTt5REFvSUFDLFksR0FBQUEsWTs7QUF2SWhCOztBQUNBOzs7Ozs7dUJBRU8sU0FBU0QsVUFBVCxDQUFvQkUsTUFBcEIsRUFBNEJDLE9BQTVCLEVBQW1EO0FBQUEsc0RBQWRDLE9BQWMsdUVBQUosRUFBSTs7QUFDeEQsTUFBSSxPQUFPRCxPQUFQLEtBQW1CLFFBQXZCLEVBQWlDO0FBQy9CQSxjQUFVLHdFQUFXQSxPQUFYLENBQVY7QUFDRDs7QUFFRCxNQUFJRSxNQUFNQyxP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QUFZO0FBQ1YsYUFBTzlDLFFBQVErQyxRQUFSLEVBQVA7QUFDRDs7QUFFRC9DLFlBQVFnRCxRQUFSLENBQWlCRixLQUFqQixFQUF3QixVQUFTRyxHQUFULEVBQWNDLElBQWQsRUFBb0I7QUFDMUMsVUFBSUQsR0FBSixFQUFTO0FBQ1AsZUFBT2pELFFBQVErQyxRQUFSLENBQWlCRSxHQUFqQixDQUFQO0FBQ0Q7O0FBRUQsVUFBSUUsaUJBQWlCdkQsV0FBV3NELElBQVgsRUFBaUJKLEtBQWpCLEVBQXdCOUMsT0FBeEIsQ0FBckI7QUFDQUEsY0FBUW9ELE9BQVIsQ0FBZ0JOLEtBQWhCLEVBQXVCSyxjQUF2QixFQUF1QyxVQUFTRixHQUFULEVBQWM7QUFDbkQsWUFBSUEsR0FBSixFQUFTO0FBQ1AsaUJBQU9qRCxRQUFRK0MsUUFBUixDQUFpQkUsR0FBakIsQ0FBUDtBQUNEOztBQUVESjtBQUNELE9BTkQ7QUFPRCxLQWJEO0FBY0Q7QUFDREE7QUFDRCIsImZpbGUiOiJhcHBseS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7cGFyc2VQYXRjaH0gZnJvbSAnLi9wYXJzZSc7XG5pbXBvcnQgZGlzdGFuY2VJdGVyYXRvciBmcm9tICcuLi91dGlsL2Rpc3RhbmNlLWl0ZXJhdG9yJztcblxuZXhwb3J0IGZ1bmN0aW9uIGFwcGx5UGF0Y2goc291cmNlLCB1bmlEaWZmLCBvcHRpb25zID0ge30pIHtcbiAgaWYgKHR5cGVvZiB1bmlEaWZmID09PSAnc3RyaW5nJykge1xuICAgIHVuaURpZmYgPSBwYXJzZVBhdGNoKHVuaURpZmYpO1xuICB9XG5cbiAgaWYgKEFycmF5LmlzQXJyYXkodW5pRGlmZikpIHtcbiAgICBpZiAodW5pRGlmZi5sZW5ndGggPiAxKSB7XG4gICAgICB0aHJvdyBuZXcgRXJyb3IoJ2FwcGx5UGF0Y2ggb25seSB3b3JrcyB3aXRoIGEgc2luZ2xlIGlucHV0LicpO1xuICAgIH1cblxuICAgIHVuaURpZmYgPSB1bmlEaWZmWzBdO1xuICB9XG5cbiAgLy8gQXBwbHkgdGhlIGRpZmYgdG8gdGhlIGlucHV0XG4gIGxldCBsaW5lcyA9IHNvdXJjZS5zcGxpdCgvXFxyXFxufFtcXG5cXHZcXGZcXHJcXHg4NV0vKSxcbiAgICAgIGRlbGltaXRlcnMgPSBzb3VyY2UubWF0Y2goL1xcclxcbnxbXFxuXFx2XFxmXFxyXFx4ODVdL2cpIHx8IFtdLFxuICAgICAgaHVua3MgPSB1bmlEaWZmLmh1bmtzLFxuXG4gICAgICBjb21wYXJlTGluZSA9IG9wdGlvbnMuY29tcGFyZUxpbmUgfHwgKChsaW5lTnVtYmVyLCBsaW5lLCBvcGVyYXRpb24sIHBhdGNoQ29udGVudCkgPT4gbGluZSA9PT0gcGF0Y2hDb250ZW50KSxcbiAgICAgIGVycm9yQ291bnQgPSAwLFxuICAgICAgZnV6ekZhY3RvciA9IG9wdGlvbnMuZnV6ekZhY3RvciB8fCAwLFxuICAgICAgbWluTGluZSA9IDAsXG4gICAgICBvZmZzZXQgPSAwLFxuXG4gICAgICByZW1vdmVFT0ZOTCxcbiAgICAgIGFkZEVPRk5MO1xuXG4gIC8qKlxuICAgKiBDaGVja3MgaWYgdGhlIGh1bmsgZXhhY3RseSBmaXRzIG9uIHRoZSBwcm92aWRlZCBsb2NhdGlvblxuICAgKi9cbiAgZnVuY3Rpb24gaHVua0ZpdHMoaHVuaywgdG9Qb3MpIHtcbiAgICBmb3IgKGxldCBqID0gMDsgaiA8IGh1bmsubGluZXMubGVuZ3RoOyBqKyspIHtcbiAgICAgIGxldCBsaW5lID0gaHVuay5saW5lc1tqXSxcbiAgICAgICAgICBvcGVyYXRpb24gPSAobGluZS5sZW5ndGggPiAwID8gbGluZVswXSA6ICcgJyksXG4gICAgICAgICAgY29udGVudCA9IChsaW5lLmxlbmd0aCA+IDAgPyBsaW5lLnN1YnN0cigxKSA6IGxpbmUpO1xuXG4gICAgICBpZiAob3BlcmF0aW9uID09PSAnICcgfHwgb3BlcmF0aW9uID09PSAnLScpIHtcbiAgICAgICAgLy8gQ29udGV4dCBzYW5pdHkgY2hlY2tcbiAgICAgICAgaWYgKCFjb21wYXJlTGluZSh0b1BvcyArIDEsIGxpbmVzW3RvUG9zXSwgb3BlcmF0aW9uLCBjb250ZW50KSkge1xuICAgICAgICAgIGVycm9yQ291bnQrKztcblxuICAgICAgICAgIGlmIChlcnJvckNvdW50ID4gZnV6ekZhY3Rvcikge1xuICAgICAgICAgICAgcmV0dXJuIGZhbHNlO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICB0b1BvcysrO1xuICAgICAgfVxuICAgIH1cblxuICAgIHJldHVybiB0cnVlO1xuICB9XG5cbiAgLy8gU2VhcmNoIGJlc3QgZml0IG9mZnNldHMgZm9yIGVhY2ggaHVuayBiYXNlZCBvbiB0aGUgcHJldmlvdXMgb25lc1xuICBmb3IgKGxldCBpID0gMDsgaSA8IGh1bmtzLmxlbmd0aDsgaSsrKSB7XG4gICAgbGV0IGh1bmsgPSBodW5rc1tpXSxcbiAgICAgICAgbWF4TGluZSA9IGxpbmVzLmxlbmd0aCAtIGh1bmsub2xkTGluZXMsXG4gICAgICAgIGxvY2FsT2Zmc2V0ID0gMCxcbiAgICAgICAgdG9Qb3MgPSBvZmZzZXQgKyBodW5rLm9sZFN0YXJ0IC0gMTtcblxuICAgIGxldCBpdGVyYXRvciA9IGRpc3RhbmNlSXRlcmF0b3IodG9Qb3MsIG1pbkxpbmUsIG1heExpbmUpO1xuXG4gICAgZm9yICg7IGxvY2FsT2Zmc2V0ICE9PSB1bmRlZmluZWQ7IGxvY2FsT2Zmc2V0ID0gaXRlcmF0b3IoKSkge1xuICAgICAgaWYgKGh1bmtGaXRzKGh1bmssIHRvUG9zICsgbG9jYWxPZmZzZXQpKSB7XG4gICAgICAgIGh1bmsub2Zmc2V0ID0gb2Zmc2V0ICs9IGxvY2FsT2Zmc2V0O1xuICAgICAgICBicmVhaztcbiAgICAgIH1cbiAgICB9XG5cbiAgICBpZiAobG9jYWxPZmZzZXQgPT09IHVuZGVmaW5lZCkge1xuICAgICAgcmV0dXJuIGZhbHNlO1xuICAgIH1cblxuICAgIC8vIFNldCBsb3dlciB0ZXh0IGxpbWl0IHRvIGVuZCBvZiB0aGUgY3VycmVudCBodW5rLCBzbyBuZXh0IG9uZXMgZG9uJ3QgdHJ5XG4gICAgLy8gdG8gZml0IG92ZXIgYWxyZWFkeSBwYXRjaGVkIHRleHRcbiAgICBtaW5MaW5lID0gaHVuay5vZmZzZXQgKyBodW5rLm9sZFN0YXJ0ICsgaHVuay5vbGRMaW5lcztcbiAgfVxuXG4gIC8vIEFwcGx5IHBhdGNoIGh1bmtzXG4gIGxldCBkaWZmT2Zmc2V0ID0gMDtcbiAgZm9yIChsZXQgaSA9IDA7IGkgPCBodW5rcy5sZW5ndGg7IGkrKykge1xuICAgIGxldCBodW5rID0gaHVua3NbaV0sXG4gICAgICAgIHRvUG9zID0gaHVuay5vbGRTdGFydCArIGh1bmsub2Zmc2V0ICsgZGlmZk9mZnNldCAtIDE7XG4gICAgZGlmZk9mZnNldCArPSBodW5rLm5ld0xpbmVzIC0gaHVuay5vbGRMaW5lcztcblxuICAgIGlmICh0b1BvcyA8IDApIHsgLy8gQ3JlYXRpbmcgYSBuZXcgZmlsZVxuICAgICAgdG9Qb3MgPSAwO1xuICAgIH1cblxuICAgIGZvciAobGV0IGogPSAwOyBqIDwgaHVuay5saW5lcy5sZW5ndGg7IGorKykge1xuICAgICAgbGV0IGxpbmUgPSBodW5rLmxpbmVzW2pdLFxuICAgICAgICAgIG9wZXJhdGlvbiA9IChsaW5lLmxlbmd0aCA+IDAgPyBsaW5lWzBdIDogJyAnKSxcbiAgICAgICAgICBjb250ZW50ID0gKGxpbmUubGVuZ3RoID4gMCA/IGxpbmUuc3Vic3RyKDEpIDogbGluZSksXG4gICAgICAgICAgZGVsaW1pdGVyID0gaHVuay5saW5lZGVsaW1pdGVyc1tqXTtcblxuICAgICAgaWYgKG9wZXJhdGlvbiA9PT0gJyAnKSB7XG4gICAgICAgIHRvUG9zKys7XG4gICAgICB9IGVsc2UgaWYgKG9wZXJhdGlvbiA9PT0gJy0nKSB7XG4gICAgICAgIGxpbmVzLnNwbGljZSh0b1BvcywgMSk7XG4gICAgICAgIGRlbGltaXRlcnMuc3BsaWNlKHRvUG9zLCAxKTtcbiAgICAgIC8qIGlzdGFuYnVsIGlnbm9yZSBlbHNlICovXG4gICAgICB9IGVsc2UgaWYgKG9wZXJhdGlvbiA9PT0gJysnKSB7XG4gICAgICAgIGxpbmVzLnNwbGljZSh0b1BvcywgMCwgY29udGVudCk7XG4gICAgICAgIGRlbGltaXRlcnMuc3BsaWNlKHRvUG9zLCAwLCBkZWxpbWl0ZXIpO1xuICAgICAgICB0b1BvcysrO1xuICAgICAgfSBlbHNlIGlmIChvcGVyYXRpb24gPT09ICdcXFxcJykge1xuICAgICAgICBsZXQgcHJldmlvdXNPcGVyYXRpb24gPSBodW5rLmxpbmVzW2ogLSAxXSA/IGh1bmsubGluZXNbaiAtIDFdWzBdIDogbnVsbDtcbiAgICAgICAgaWYgKHByZXZpb3VzT3BlcmF0aW9uID09PSAnKycpIHtcbiAgICAgICAgICByZW1vdmVFT0ZOTCA9IHRydWU7XG4gICAgICAgIH0gZWxzZSBpZiAocHJldmlvdXNPcGVyYXRpb24gPT09ICctJykge1xuICAgICAgICAgIGFkZEVPRk5MID0gdHJ1ZTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC8vIEhhbmRsZSBFT0ZOTCBpbnNlcnRpb24vcmVtb3ZhbFxuICBpZiAocmVtb3ZlRU9GTkwpIHtcbiAgICB3aGlsZSAoIWxpbmVzW2xpbmVzLmxlbmd0aCAtIDFdKSB7XG4gICAgICBsaW5lcy5wb3AoKTtcbiAgICAgIGRlbGltaXRlcnMucG9wKCk7XG4gICAgfVxuICB9IGVsc2UgaWYgKGFkZEVPRk5MKSB7XG4gICAgbGluZXMucHVzaCgnJyk7XG4gICAgZGVsaW1pdGVycy5wdXNoKCdcXG4nKTtcbiAgfVxuICBmb3IgKGxldCBfayA9IDA7IF9rIDwgbGluZXMubGVuZ3RoIC0gMTsgX2srKykge1xuICAgIGxpbmVzW19rXSA9IGxpbmVzW19rXSArIGRlbGltaXRlcnNbX2tdO1xuICB9XG4gIHJldHVybiBsaW5lcy5qb2luKCcnKTtcbn1cblxuLy8gV3JhcHBlciB0aGF0IHN1cHBvcnRzIG11bHRpcGxlIGZpbGUgcGF0Y2hlcyB2aWEgY2FsbGJhY2tzLlxuZXhwb3J0IGZ1bmN0aW9uIGFwcGx5UGF0Y2hlcyh1bmlEaWZmLCBvcHRpb25zKSB7XG4gIGlmICh0eXBlb2YgdW5pRGlmZiA9PT0gJ3N0cmluZycpIHtcbiAgICB1bmlEaWZmID0gcGFyc2VQYXRjaCh1bmlEaWZmKTtcbiAgfVxuXG4gIGxldCBjdXJyZW50SW5kZXggPSAwO1xuICBmdW5jdGlvbiBwcm9jZXNzSW5kZXgoKSB7XG4gICAgbGV0IGluZGV4ID0gdW5pRGlmZltjdXJyZW50SW5kZXgrK107XG4gICAgaWYgKCFpbmRleCkge1xuICAgICAgcmV0dXJuIG9wdGlvbnMuY29tcGxldGUoKTtcbiAgICB9XG5cbiAgICBvcHRpb25zLmxvYWRGaWxlKGluZGV4LCBmdW5jdGlvbihlcnIsIGRhdGEpIHtcbiAgICAgIGlmIChlcnIpIHtcbiAgICAgICAgcmV0dXJuIG9wdGlvbnMuY29tcGxldGUoZXJyKTtcbiAgICAgIH1cblxuICAgICAgbGV0IHVwZGF0ZWRDb250ZW50ID0gYXBwbHlQYXRjaChkYXRhLCBpbmRleCwgb3B0aW9ucyk7XG4gICAgICBvcHRpb25zLnBhdGNoZWQoaW5kZXgsIHVwZGF0ZWRDb250ZW50LCBmdW5jdGlvbihlcnIpIHtcbiAgICAgICAgaWYgKGVycikge1xuICAgICAgICAgIHJldHVybiBvcHRpb25zLmNvbXBsZXRlKGVycik7XG4gICAgICAgIH1cblxuICAgICAgICBwcm9jZXNzSW5kZXgoKTtcbiAgICAgIH0pO1xuICAgIH0pO1xuICB9XG4gIHByb2Nlc3NJbmRleCgpO1xufVxuIl19
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/parsePatch = parsePatch;
+	function parsePatch(uniDiff) {
+	  /*istanbul ignore start*/var /*istanbul ignore end*/options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	  var diffstr = uniDiff.split(/\r\n|[\n\v\f\r\x85]/),
+	      delimiters = uniDiff.match(/\r\n|[\n\v\f\r\x85]/g) || [],
+	      list = [],
+	      i = 0;
+
+	  function parseIndex() {
+	    var index = {};
+	    list.push(index);
+
+	    // Parse diff metadata
+	    while (i < diffstr.length) {
+	      var line = diffstr[i];
+
+	      // File header found, end parsing diff metadata
+	      if (/^(\-\-\-|\+\+\+|@@)\s/.test(line)) {
+	        break;
+	      }
+
+	      // Diff index
+	      var header = /^(?:Index:|diff(?: -r \w+)+)\s+(.+?)\s*$/.exec(line);
+	      if (header) {
+	        index.index = header[1];
+	      }
+
+	      i++;
+	    }
+
+	    // Parse file headers if they are defined. Unified diff requires them, but
+	    // there's no technical issues to have an isolated hunk without file header
+	    parseFileHeader(index);
+	    parseFileHeader(index);
+
+	    // Parse hunks
+	    index.hunks = [];
+
+	    while (i < diffstr.length) {
+	      var _line = diffstr[i];
+
+	      if (/^(Index:|diff|\-\-\-|\+\+\+)\s/.test(_line)) {
+	        break;
+	      } else if (/^@@/.test(_line)) {
+	        index.hunks.push(parseHunk());
+	      } else if (_line && options.strict) {
+	        // Ignore unexpected content unless in strict mode
+	        throw new Error('Unknown line ' + (i + 1) + ' ' + JSON.stringify(_line));
+	      } else {
+	        i++;
+	      }
+	    }
+	  }
+
+	  // Parses the --- and +++ headers, if none are found, no lines
+	  // are consumed.
+	  function parseFileHeader(index) {
+	    var fileHeader = /^(---|\+\+\+)\s+(.*)$/.exec(diffstr[i]);
+	    if (fileHeader) {
+	      var keyPrefix = fileHeader[1] === '---' ? 'old' : 'new';
+	      var data = fileHeader[2].split('\t', 2);
+	      var fileName = data[0].replace(/\\\\/g, '\\');
+	      if (/^".*"$/.test(fileName)) {
+	        fileName = fileName.substr(1, fileName.length - 2);
+	      }
+	      index[keyPrefix + 'FileName'] = fileName;
+	      index[keyPrefix + 'Header'] = (data[1] || '').trim();
+
+	      i++;
+	    }
+	  }
+
+	  // Parses a hunk
+	  // This assumes that we are at the start of a hunk.
+	  function parseHunk() {
+	    var chunkHeaderIndex = i,
+	        chunkHeaderLine = diffstr[i++],
+	        chunkHeader = chunkHeaderLine.split(/@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@/);
+
+	    var hunk = {
+	      oldStart: +chunkHeader[1],
+	      oldLines: +chunkHeader[2] || 1,
+	      newStart: +chunkHeader[3],
+	      newLines: +chunkHeader[4] || 1,
+	      lines: [],
+	      linedelimiters: []
+	    };
+
+	    var addCount = 0,
+	        removeCount = 0;
+	    for (; i < diffstr.length; i++) {
+	      // Lines starting with '---' could be mistaken for the "remove line" operation
+	      // But they could be the header for the next file. Therefore prune such cases out.
+	      if (diffstr[i].indexOf('--- ') === 0 && i + 2 < diffstr.length && diffstr[i + 1].indexOf('+++ ') === 0 && diffstr[i + 2].indexOf('@@') === 0) {
+	        break;
+	      }
+	      var operation = diffstr[i].length == 0 && i != diffstr.length - 1 ? ' ' : diffstr[i][0];
+
+	      if (operation === '+' || operation === '-' || operation === ' ' || operation === '\\') {
+	        hunk.lines.push(diffstr[i]);
+	        hunk.linedelimiters.push(delimiters[i] || '\n');
+
+	        if (operation === '+') {
+	          addCount++;
+	        } else if (operation === '-') {
+	          removeCount++;
+	        } else if (operation === ' ') {
+	          addCount++;
+	          removeCount++;
+	        }
+	      } else {
+	        break;
+	      }
+	    }
+
+	    // Handle the empty block count case
+	    if (!addCount && hunk.newLines === 1) {
+	      hunk.newLines = 0;
+	    }
+	    if (!removeCount && hunk.oldLines === 1) {
+	      hunk.oldLines = 0;
+	    }
+
+	    // Perform optional sanity checking
+	    if (options.strict) {
+	      if (addCount !== hunk.newLines) {
+	        throw new Error('Added line count did not match for hunk at line ' + (chunkHeaderIndex + 1));
+	      }
+	      if (removeCount !== hunk.oldLines) {
+	        throw new Error('Removed line count did not match for hunk at line ' + (chunkHeaderIndex + 1));
+	      }
+	    }
+
+	    return hunk;
+	  }
+
+	  while (i < diffstr.length) {
+	    parseIndex();
+	  }
+
+	  return list;
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9wYXRjaC9wYXJzZS5qcyJdLCJuYW1lcyI6WyJwYXJzZVBhdGNoIiwidW5pRGlmZiIsIm9wdGlvbnMiLCJkaWZmc3RyIiwic3BsaXQiLCJkZWxpbWl0ZXJzIiwibWF0Y2giLCJsaXN0IiwiaSIsInBhcnNlSW5kZXgiLCJpbmRleCIsInB1c2giLCJsZW5ndGgiLCJsaW5lIiwidGVzdCIsImhlYWRlciIsImV4ZWMiLCJwYXJzZUZpbGVIZWFkZXIiLCJodW5rcyIsInBhcnNlSHVuayIsInN0cmljdCIsIkVycm9yIiwiSlNPTiIsInN0cmluZ2lmeSIsImZpbGVIZWFkZXIiLCJrZXlQcmVmaXgiLCJkYXRhIiwiZmlsZU5hbWUiLCJyZXBsYWNlIiwic3Vic3RyIiwidHJpbSIsImNodW5rSGVhZGVySW5kZXgiLCJjaHVua0hlYWRlckxpbmUiLCJjaHVua0hlYWRlciIsImh1bmsiLCJvbGRTdGFydCIsIm9sZExpbmVzIiwibmV3U3RhcnQiLCJuZXdMaW5lcyIsImxpbmVzIiwibGluZWRlbGltaXRlcnMiLCJhZGRDb3VudCIsInJlbW92ZUNvdW50IiwiaW5kZXhPZiIsIm9wZXJhdGlvbiJdLCJtYXBwaW5ncyI6Ijs7O2dDQUFnQkEsVSxHQUFBQSxVO0FBQVQsU0FBU0EsVUFBVCxDQUFvQkMsT0FBcEIsRUFBMkM7QUFBQSxzREFBZEMsT0FBYyx1RUFBSixFQUFJOztBQUNoRCxNQUFJQyxVQUFVRixRQUFRRyxLQUFSLENBQWMscUJBQWQsQ0FBZDtBQUFBLE1BQ0lDLGFBQWFKLFFBQVFLLEtBQVIsQ0FBYyxzQkFBZCxLQUF5QyxFQUQxRDtBQUFBLE1BRUlDLE9BQU8sRUFGWDtBQUFBLE1BR0lDLElBQUksQ0FIUjs7QUFLQSxXQUFTQyxVQUFULEdBQXNCO0FBQ3BCLFFBQUlDLFFBQVEsRUFBWjtBQUNBSCxTQUFLSSxJQUFMLENBQVVELEtBQVY7O0FBRUE7QUFDQSxXQUFPRixJQUFJTCxRQUFRUyxNQUFuQixFQUEyQjtBQUN6QixVQUFJQyxPQUFPVixRQUFR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QW9CO0FBQ2xCLFVBQUlxQixhQUFhUCxLQUFLSSxRQUF0QixFQUFnQztBQUM5QixjQUFNLElBQUlqQixLQUFKLENBQVUsc0RBQXNEVSxtQkFBbUIsQ0FBekUsQ0FBVixDQUFOO0FBQ0Q7QUFDRCxVQUFJVyxnQkFBZ0JSLEtBQUtFLFFBQXpCLEVBQW1DO0FBQ2pDLGNBQU0sSUFBSWYsS0FBSixDQUFVLHdEQUF3RFUsbUJBQW1CLENBQTNFLENBQVYsQ0FBTjtBQUNEO0FBQ0Y7O0FBRUQsV0FBT0csSUFBUDtBQUNEOztBQUVELFNBQU8xQixJQUFJTCxRQUFRUyxNQUFuQixFQUEyQjtBQUN6Qkg7QUFDRDs7QUFFRCxTQUFPRixJQUFQO0FBQ0QiLCJmaWxlIjoicGFyc2UuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gcGFyc2VQYXRjaCh1bmlEaWZmLCBvcHRpb25zID0ge30pIHtcbiAgbGV0IGRpZmZzdHIgPSB1bmlEaWZmLnNwbGl0KC9cXHJcXG58W1xcblxcdlxcZlxcclxceDg1XS8pLFxuICAgICAgZGVsaW1pdGVycyA9IHVuaURpZmYubWF0Y2goL1xcclxcbnxbXFxuXFx2XFxmXFxyXFx4ODVdL2cpIHx8IFtdLFxuICAgICAgbGlzdCA9IFtdLFxuICAgICAgaSA9IDA7XG5cbiAgZnVuY3Rpb24gcGFyc2VJbmRleCgpIHtcbiAgICBsZXQgaW5kZXggPSB7fTtcbiAgICBsaXN0LnB1c2goaW5kZXgpO1xuXG4gICAgLy8gUGFyc2UgZGlmZiBtZXRhZGF0YVxuICAgIHdoaWxlIChpIDwgZGlmZnN0ci5sZW5ndGgpIHtcbiAgICAgIGxldCBsaW5lID0gZGlmZnN0cltpXTtcblxuICAgICAgLy8gRmlsZSBoZWFkZXIgZm91bmQsIGVuZCBwYXJzaW5nIGRpZmYgbWV0YWRhdGFcbiAgICAgIGlmICgvXihcXC1cXC1cXC18XFwrXFwrXFwrfEBAKVxccy8udGVzdChsaW5lKSkge1xuICAgICAgICBicmVhaztcbiAgICAgIH1cblxuICAgICAgLy8gRGlmZiBpbmRleFxuICAgICAgbGV0IGhlYWRlciA9ICgvXig/OkluZGV4OnxkaWZmKD86IC1yIFxcdyspKylcXHMrKC4rPylcXHMqJC8pLmV4ZWMobGluZSk7XG4gICAgICBpZiAoaGVhZGVyKSB7XG4gICAgICAgIGluZGV4LmluZGV4ID0gaGVhZGVyWzFdO1xuICAgICAgfVxuXG4gICAgICBpKys7XG4gICAgfVxuXG4gICAgLy8gUGFyc2UgZmlsZSBoZWFkZXJzIGlmIHRoZXkgYXJlIGRlZmluZWQuIFVuaWZpZWQgZGlmZiByZXF1aXJlcyB0aGVtLCBidXRcbiAgICAvLyB0aGVyZSdzIG5vIHRlY2huaWNhbCBpc3N1ZXMgdG8gaGF2ZSBhbiBpc29sYXRlZCBodW5rIHdpdGhvdXQgZmlsZSBoZWFkZXJcbiAgICBwYXJzZUZpbGVIZWFkZXIoaW5kZXgpO1xuICAgIHBhcnNlRmlsZUhlYWRlcihpbmRleCk7XG5cbiAgICAvLyBQYXJzZSBodW5rc1xuICAgIGluZGV4Lmh1bmtzID0gW107XG5cbiAgICB3aGlsZSAoaSA8IGRpZmZzdHIubGVuZ3RoKSB7XG4gICAgICBsZXQgbGluZSA9IGRpZmZzdHJbaV07XG5cbiAgICAgIGlmICgvXihJbmRleDp8ZGlmZnxcXC1cXC1cXC18XFwrXFwrXFwrKVxccy8udGVzdChsaW5lKSkge1xuICAgICAgICBicmVhaztcbiAgICAgIH0gZWxzZSBpZiAoL15AQC8udGVzdChsaW5lKSkge1xuICAgICAgICBpbmRleC5odW5rcy5wdXNoKHBhcnNlSHVuaygpKTtcbiAgICAgIH0gZWxzZSBpZiAobGluZSAmJiBvcHRpb25zLnN0cmljdCkge1xuICAgICAgICAvLyBJZ25vcmUgdW5leHBlY3RlZCBjb250ZW50IHVubGVzcyBpbiBzdHJpY3QgbW9kZVxuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ1Vua25vd24gbGluZSAnICsgKGkgKyAxKSArICcgJyArIEpTT04uc3RyaW5naWZ5KGxpbmUpKTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGkrKztcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICAvLyBQYXJzZXMgdGhlIC0tLSBhbmQgKysrIGhlYWRlcnMsIGlmIG5vbmUgYXJlIGZvdW5kLCBubyBsaW5lc1xuICAvLyBhcmUgY29uc3VtZWQuXG4gIGZ1bmN0aW9uIHBhcnNlRmlsZUhlYWRlcihpbmRleCkge1xuICAgIGNvbnN0IGZpbGVIZWFkZXIgPSAoL14oLS0tfFxcK1xcK1xcKylcXHMrKC4qKSQvKS5leGVjKGRpZmZzdHJbaV0pO1xuICAgIGlmIChmaWxlSGVhZGVyKSB7XG4gICAgICBsZXQga2V5UHJlZml4ID0gZmlsZUhlYWRlclsxXSA9PT0gJy0tLScgPyAnb2xkJyA6ICduZXcnO1xuICAgICAgY29uc3QgZGF0YSA9IGZpbGVIZWFkZXJbMl0uc3BsaXQoJ1xcdCcsIDIpO1xuICAgICAgbGV0IGZpbGVOYW1lID0gZGF0YVswXS5yZXBsYWNlKC9cXFxcXFxcXC9nLCAnXFxcXCcpO1xuICAgICAgaWYgKC9eXCIuKlwiJC8udGVzdChmaWxlTmFtZSkpIHtcbiAgICAgICAgZmlsZU5hbWUgPSBmaWxlTmFtZS5zdWJzdHIoMSwgZmlsZU5hbWUubGVuZ3RoIC0gMik7XG4gICAgICB9XG4gICAgICBpbmRleFtrZXlQcmVmaXggKyAnRmlsZU5hbWUnXSA9IGZpbGVOYW1lO1xuICAgICAgaW5kZXhba2V5UHJlZml4ICsgJ0hlYWRlciddID0gKGRhdGFbMV0gfHwgJycpLnRyaW0oKTtcblxuICAgICAgaSsrO1xuICAgIH1cbiAgfVxuXG4gIC8vIFBhcnNlcyBhIGh1bmtcbiAgLy8gVGhpcyBhc3N1bWVzIHRoYXQgd2UgYXJlIGF0IHRoZSBzdGFydCBvZiBhIGh1bmsuXG4gIGZ1bmN0aW9uIHBhcnNlSHVuaygpIHtcbiAgICBsZXQgY2h1bmtIZWFkZXJJbmRleCA9IGksXG4gICAgICAgIGNodW5rSGVhZGVyTGluZSA9IGRpZmZzdHJbaSsrXSxcbiAgICAgICAgY2h1bmtIZWFkZXIgPSBjaHVua0hlYWRlckxpbmUuc3BsaXQoL0BAIC0oXFxkKykoPzosKFxcZCspKT8gXFwrKFxcZCspKD86LChcXGQrKSk/IEBALyk7XG5cbiAgICBsZXQgaHVuayA9IHtcbiAgICAgIG9sZFN0YXJ0OiArY2h1bmtIZWFkZXJbMV0sXG4gICAgICBvbGRMaW5lczogK2NodW5rSGVhZGVyWzJdIHx8IDEsXG4gICAgICBuZXdTdGFydDogK2NodW5rSGVhZGVyWzNdLFxuICAgICAgbmV3TGluZXM6ICtjaHVua0hlYWRlcls0XSB8fCAxLFxuICAgICAgbGluZXM6IFtdLFxuICAgICAgbGluZWRlbGltaXRlcnM6IFtdXG4gICAgfTtcblxuICAgIGxldCBhZGRDb3VudCA9IDAsXG4gICAgICAgIHJlbW92ZUNvdW50ID0gMDtcbiAgICBmb3IgKDsgaSA8IGRpZmZzdHIubGVuZ3RoOyBpKyspIHtcbiAgICAgIC8vIExpbmVzIHN0YXJ0aW5nIHdpdGggJy0tLScgY291bGQgYmUgbWlzdGFrZW4gZm9yIHRoZSBcInJlbW92ZSBsaW5lXCIgb3BlcmF0aW9uXG4gICAgICAvLyBCdXQgdGhleSBjb3VsZCBiZSB0aGUgaGVhZGVyIGZvciB0aGUgbmV4dCBmaWxlLiBUaGVyZWZvcmUgcHJ1bmUgc3VjaCBjYXNlcyBvdXQuXG4gICAgICBpZiAoZGlmZnN0cltpXS5pbmRleE9mKCctLS0gJykgPT09IDBcbiAgICAgICAgICAgICYmIChpICsgMiA8IGRpZmZzdHIubGVuZ3RoKVxuICAgICAgICAgICAgJiYgZGlmZnN0cltpICsgMV0uaW5kZXhPZignKysrICcpID09PSAwXG4gICAgICAgICAgICAmJiBkaWZmc3RyW2kgKyAyXS5pbmRleE9mKCdAQCcpID09PSAwKSB7XG4gICAgICAgICAgYnJlYWs7XG4gICAgICB9XG4gICAgICBsZXQgb3BlcmF0aW9uID0gKGRpZmZzdHJbaV0ubGVuZ3RoID09IDAgJiYgaSAhPSAoZGlmZnN0ci5sZW5ndGggLSAxKSkgPyAnICcgOiBkaWZmc3RyW2ldWzBdO1xuXG4gICAgICBpZiAob3BlcmF0aW9uID09PSAnKycgfHwgb3BlcmF0aW9uID09PSAnLScgfHwgb3BlcmF0aW9uID09PSAnICcgfHwgb3BlcmF0aW9uID09PSAnXFxcXCcpIHtcbiAgICAgICAgaHVuay5saW5lcy5wdXNoKGRpZmZzdHJbaV0pO1xuICAgICAgICBodW5rLmxpbmVkZWxpbWl0ZXJzLnB1c2goZGVsaW1pdGVyc1tpXSB8fCAnXFxuJyk7XG5cbiAgICAgICAgaWYgKG9wZXJhdGlvbiA9PT0gJysnKSB7XG4gICAgICAgICAgYWRkQ291bnQrKztcbiAgICAgICAgfSBlbHNlIGlmIChvcGVyYXRpb24gPT09ICctJykge1xuICAgICAgICAgIHJlbW92ZUNvdW50Kys7XG4gICAgICAgIH0gZWxzZSBpZiAob3BlcmF0aW9uID09PSAnICcpIHtcbiAgICAgICAgICBhZGRDb3VudCsrO1xuICAgICAgICAgIHJlbW92ZUNvdW50Kys7XG4gICAgICAgIH1cbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGJyZWFrO1xuICAgICAgfVxuICAgIH1cblxuICAgIC8vIEhhbmRsZSB0aGUgZW1wdHkgYmxvY2sgY291bnQgY2FzZVxuICAgIGlmICghYWRkQ291bnQgJiYgaHVuay5uZXdMaW5lcyA9PT0gMSkge1xuICAgICAgaHVuay5uZXdMaW5lcyA9IDA7XG4gICAgfVxuICAgIGlmICghcmVtb3ZlQ291bnQgJiYgaHVuay5vbGRMaW5lcyA9PT0gMSkge1xuICAgICAgaHVuay5vbGRMaW5lcyA9IDA7XG4gICAgfVxuXG4gICAgLy8gUGVyZm9ybSBvcHRpb25hbCBzYW5pdHkgY2hlY2tpbmdcbiAgICBpZiAob3B0aW9ucy5zdHJpY3QpIHtcbiAgICAgIGlmIChhZGRDb3VudCAhPT0gaHVuay5uZXdMaW5lcykge1xuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ0FkZGVkIGxpbmUgY291bnQgZGlkIG5vdCBtYXRjaCBmb3IgaHVuayBhdCBsaW5lICcgKyAoY2h1bmtIZWFkZXJJbmRleCArIDEpKTtcbiAgICAgIH1cbiAgICAgIGlmIChyZW1vdmVDb3VudCAhPT0gaHVuay5vbGRMaW5lcykge1xuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ1JlbW92ZWQgbGluZSBjb3VudCBkaWQgbm90IG1hdGNoIGZvciBodW5rIGF0IGxpbmUgJyArIChjaHVua0hlYWRlckluZGV4ICsgMSkpO1xuICAgICAgfVxuICAgIH1cblxuICAgIHJldHVybiBodW5rO1xuICB9XG5cbiAgd2hpbGUgKGkgPCBkaWZmc3RyLmxlbmd0aCkge1xuICAgIHBhcnNlSW5kZXgoKTtcbiAgfVxuXG4gIHJldHVybiBsaXN0O1xufVxuIl19
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+	/*istanbul ignore start*/"use strict";
+
+	exports.__esModule = true;
+
+	exports["default"] = /*istanbul ignore end*/function (start, minLine, maxLine) {
+	  var wantForward = true,
+	      backwardExhausted = false,
+	      forwardExhausted = false,
+	      localOffset = 1;
+
+	  return function iterator() {
+	    if (wantForward && !forwardExhausted) {
+	      if (backwardExhausted) {
+	        localOffset++;
+	      } else {
+	        wantForward = false;
+	      }
+
+	      // Check if trying to fit beyond text length, and if not, check it fits
+	      // after offset location (or desired location on first iteration)
+	      if (start + localOffset <= maxLine) {
+	        return localOffset;
+	      }
+
+	      forwardExhausted = true;
+	    }
+
+	    if (!backwardExhausted) {
+	      if (!forwardExhausted) {
+	        wantForward = true;
+	      }
+
+	      // Check if trying to fit before text beginning, and if not, check it fits
+	      // before offset location
+	      if (minLine <= start - localOffset) {
+	        return -localOffset++;
+	      }
+
+	      backwardExhausted = true;
+	      return iterator();
+	    }
+
+	    // We tried to fit hunk before text beginning and beyond text length, then
+	    // hunk can't fit on the text. Return undefined
+	  };
+	};
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy91dGlsL2Rpc3RhbmNlLWl0ZXJhdG9yLmpzIl0sIm5hbWVzIjpbInN0YXJ0IiwibWluTGluZSIsIm1heExpbmUiLCJ3YW50Rm9yd2FyZCIsImJhY2t3YXJkRXhoYXVzdGVkIiwiZm9yd2FyZEV4aGF1c3RlZCIsImxvY2FsT2Zmc2V0IiwiaXRlcmF0b3IiXSwibWFwcGluZ3MiOiI7Ozs7NENBR2UsVUFBU0EsS0FBVCxFQUFnQkMsT0FBaEIsRUFBeUJDLE9BQXpCLEVBQWtDO0FBQy9DLE1BQUlDLGNBQWMsSUFBbEI7QUFBQSxNQUNJQyxvQkFBb0IsS0FEeEI7QUFBQSxNQUVJQyxtQkFBbUIsS0FGdkI7QUFBQSxNQUdJQyxjQUFjLENBSGxCOztBQUtBLFNBQU8sU0FBU0MsUUFBVCxHQUFvQjtBQUN6QixRQUFJSixlQUFlLENBQUNFLGdCQUFwQixFQUFzQztBQUNwQyxVQUFJRCxpQkFBSixFQUF1QjtBQUNyQkU7QUFDRCxPQUZELE1BRU87QUFDTEgsc0JBQWMsS0FBZDtBQUNEOztBQUVEO0FBQ0E7QUFDQSxVQUFJSCxRQUFRTSxXQUFSLElBQXVCSixPQUEzQixFQUFvQztBQUNsQyxlQUFPSSxXQUFQO0FBQ0Q7O0FBRURELHlCQUFtQixJQUFuQjtBQUNEOztBQUVELFFBQUksQ0FBQ0QsaUJBQUwsRUFBd0I7QUFDdEIsVUFBSSxDQUFDQyxnQkFBTCxFQUF1QjtBQUNyQkYsc0JBQWMsSUFBZDtBQUNEOztBQUVEO0FBQ0E7QUFDQSxVQUFJRixXQUFXRCxRQUFRTSxXQUF2QixFQUFvQztBQUNsQyxlQUFPLENBQUNBLGFBQVI7QUFDRDs7QUFFREYsMEJBQW9CLElBQXBCO0FBQ0EsYUFBT0csVUFBUDtBQUNEOztBQUVEO0FBQ0E7QUFDRCxHQWxDRDtBQW1DRCxDIiwiZmlsZSI6ImRpc3RhbmNlLWl0ZXJhdG9yLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gSXRlcmF0b3IgdGhhdCB0cmF2ZXJzZXMgaW4gdGhlIHJhbmdlIG9mIFttaW4sIG1heF0sIHN0ZXBwaW5nXG4vLyBieSBkaXN0YW5jZSBmcm9tIGEgZ2l2ZW4gc3RhcnQgcG9zaXRpb24uIEkuZS4gZm9yIFswLCA0XSwgd2l0aFxuLy8gc3RhcnQgb2YgMiwgdGhpcyB3aWxsIGl0ZXJhdGUgMiwgMywgMSwgNCwgMC5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uKHN0YXJ0LCBtaW5MaW5lLCBtYXhMaW5lKSB7XG4gIGxldCB3YW50Rm9yd2FyZCA9IHRydWUsXG4gICAgICBiYWNrd2FyZEV4aGF1c3RlZCA9IGZhbHNlLFxuICAgICAgZm9yd2FyZEV4aGF1c3RlZCA9IGZhbHNlLFxuICAgICAgbG9jYWxPZmZzZXQgPSAxO1xuXG4gIHJldHVybiBmdW5jdGlvbiBpdGVyYXRvcigpIHtcbiAgICBpZiAod2FudEZvcndhcmQgJiYgIWZvcndhcmRFeGhhdXN0ZWQpIHtcbiAgICAgIGlmIChiYWNrd2FyZEV4aGF1c3RlZCkge1xuICAgICAgICBsb2NhbE9mZnNldCsrO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgd2FudEZvcndhcmQgPSBmYWxzZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ2hlY2sgaWYgdHJ5aW5nIHRvIGZpdCBiZXlvbmQgdGV4dCBsZW5ndGgsIGFuZCBpZiBub3QsIGNoZWNrIGl0IGZpdHNcbiAgICAgIC8vIGFmdGVyIG9mZnNldCBsb2NhdGlvbiAob3IgZGVzaXJlZCBsb2NhdGlvbiBvbiBmaXJzdCBpdGVyYXRpb24pXG4gICAgICBpZiAoc3RhcnQgKyBsb2NhbE9mZnNldCA8PSBtYXhMaW5lKSB7XG4gICAgICAgIHJldHVybiBsb2NhbE9mZnNldDtcbiAgICAgIH1cblxuICAgICAgZm9yd2FyZEV4aGF1c3RlZCA9IHRydWU7XG4gICAgfVxuXG4gICAgaWYgKCFiYWNrd2FyZEV4aGF1c3RlZCkge1xuICAgICAgaWYgKCFmb3J3YXJkRXhoYXVzdGVkKSB7XG4gICAgICAgIHdhbnRGb3J3YXJkID0gdHJ1ZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ2hlY2sgaWYgdHJ5aW5nIHRvIGZpdCBiZWZvcmUgdGV4dCBiZWdpbm5pbmcsIGFuZCBpZiBub3QsIGNoZWNrIGl0IGZpdHNcbiAgICAgIC8vIGJlZm9yZSBvZmZzZXQgbG9jYXRpb25cbiAgICAgIGlmIChtaW5MaW5lIDw9IHN0YXJ0IC0gbG9jYWxPZmZzZXQpIHtcbiAgICAgICAgcmV0dXJuIC1sb2NhbE9mZnNldCsrO1xuICAgICAgfVxuXG4gICAgICBiYWNrd2FyZEV4aGF1c3RlZCA9IHRydWU7XG4gICAgICByZXR1cm4gaXRlcmF0b3IoKTtcbiAgICB9XG5cbiAgICAvLyBXZSB0cmllZCB0byBmaXQgaHVuayBiZWZvcmUgdGV4dCBiZWdpbm5pbmcgYW5kIGJleW9uZCB0ZXh0IGxlbmd0aCwgdGhlblxuICAgIC8vIGh1bmsgY2FuJ3QgZml0IG9uIHRoZSB0ZXh0LiBSZXR1cm4gdW5kZWZpbmVkXG4gIH07XG59XG4iXX0=
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/calcLineCount = calcLineCount;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/merge = merge;
+
+	var /*istanbul ignore start*/_create = __webpack_require__(14) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_parse = __webpack_require__(11) /*istanbul ignore end*/;
+
+	var /*istanbul ignore start*/_array = __webpack_require__(15) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	/*istanbul ignore end*/function calcLineCount(hunk) {
+	  /*istanbul ignore start*/var _calcOldNewLineCount = /*istanbul ignore end*/calcOldNewLineCount(hunk.lines),
+	      oldLines = _calcOldNewLineCount.oldLines,
+	      newLines = _calcOldNewLineCount.newLines;
+
+	  if (oldLines !== undefined) {
+	    hunk.oldLines = oldLines;
+	  } else {
+	    delete hunk.oldLines;
+	  }
+
+	  if (newLines !== undefined) {
+	    hunk.newLines = newLines;
+	  } else {
+	    delete hunk.newLines;
+	  }
+	}
+
+	function merge(mine, theirs, base) {
+	  mine = loadPatch(mine, base);
+	  theirs = loadPatch(theirs, base);
+
+	  var ret = {};
+
+	  // For index we just let it pass through as it doesn't have any necessary meaning.
+	  // Leaving sanity checks on this to the API consumer that may know more about the
+	  // meaning in their own context.
+	  if (mine.index || theirs.index) {
+	    ret.index = mine.index || theirs.index;
+	  }
+
+	  if (mine.newFileName || theirs.newFileName) {
+	    if (!fileNameChanged(mine)) {
+	      // No header or no change in ours, use theirs (and ours if theirs does not exist)
+	      ret.oldFileName = theirs.oldFileName || mine.oldFileName;
+	      ret.newFileName = theirs.newFileName || mine.newFileName;
+	      ret.oldHeader = theirs.oldHeader || mine.oldHeader;
+	      ret.newHeader = theirs.newHeader || mine.newHeader;
+	    } else if (!fileNameChanged(theirs)) {
+	      // No header or no change in theirs, use ours
+	      ret.oldFileName = mine.oldFileName;
+	      ret.newFileName = mine.newFileName;
+	      ret.oldHeader = mine.oldHeader;
+	      ret.newHeader = mine.newHeader;
+	    } else {
+	      // Both changed... figure it out
+	      ret.oldFileName = selectField(ret, mine.oldFileName, theirs.oldFileName);
+	      ret.newFileName = selectField(ret, mine.newFileName, theirs.newFileName);
+	      ret.oldHeader = selectField(ret, mine.oldHeader, theirs.oldHeader);
+	      ret.newHeader = selectField(ret, mine.newHeader, theirs.newHeader);
+	    }
+	  }
+
+	  ret.hunks = [];
+
+	  var mineIndex = 0,
+	      theirsIndex = 0,
+	      mineOffset = 0,
+	      theirsOffset = 0;
+
+	  while (mineIndex < mine.hunks.length || theirsIndex < theirs.hunks.length) {
+	    var mineCurrent = mine.hunks[mineIndex] || { oldStart: Infinity },
+	        theirsCurrent = theirs.hunks[theirsIndex] || { oldStart: Infinity };
+
+	    if (hunkBefore(mineCurrent, theirsCurrent)) {
+	      // This patch does not overlap with any of the others, yay.
+	      ret.hunks.push(cloneHunk(mineCurrent, mineOffset));
+	      mineIndex++;
+	      theirsOffset += mineCurrent.newLines - mineCurrent.oldLines;
+	    } else if (hunkBefore(theirsCurrent, mineCurrent)) {
+	      // This patch does not overlap with any of the others, yay.
+	      ret.hunks.push(cloneHunk(theirsCurrent, theirsOffset));
+	      theirsIndex++;
+	      mineOffset += theirsCurrent.newLines - theirsCurrent.oldLines;
+	    } else {
+	      // Overlap, merge as best we can
+	      var mergedHunk = {
+	        oldStart: Math.min(mineCurrent.oldStart, theirsCurrent.oldStart),
+	        oldLines: 0,
+	        newStart: Math.min(mineCurrent.newStart + mineOffset, theirsCurrent.oldStart + theirsOffset),
+	        newLines: 0,
+	        lines: []
+	      };
+	      mergeLines(mergedHunk, mineCurrent.oldStart, mineCurrent.lines, theirsCurrent.oldStart, theirsCurrent.lines);
+	      theirsIndex++;
+	      mineIndex++;
+
+	      ret.hunks.push(mergedHunk);
+	    }
+	  }
+
+	  return ret;
+	}
+
+	function loadPatch(param, base) {
+	  if (typeof param === 'string') {
+	    if (/^@@/m.test(param) || /^Index:/m.test(param)) {
+	      return (/*istanbul ignore start*/(0, _parse.parsePatch) /*istanbul ignore end*/(param)[0]
+	      );
+	    }
+
+	    if (!base) {
+	      throw new Error('Must provide a base reference or pass in a patch');
+	    }
+	    return (/*istanbul ignore start*/(0, _create.structuredPatch) /*istanbul ignore end*/(undefined, undefined, base, param)
+	    );
+	  }
+
+	  return param;
+	}
+
+	function fileNameChanged(patch) {
+	  return patch.newFileName && patch.newFileName !== patch.oldFileName;
+	}
+
+	function selectField(index, mine, theirs) {
+	  if (mine === theirs) {
+	    return mine;
+	  } else {
+	    index.conflict = true;
+	    return { mine: mine, theirs: theirs };
+	  }
+	}
+
+	function hunkBefore(test, check) {
+	  return test.oldStart < check.oldStart && test.oldStart + test.oldLines < check.oldStart;
+	}
+
+	function cloneHunk(hunk, offset) {
+	  return {
+	    oldStart: hunk.oldStart, oldLines: hunk.oldLines,
+	    newStart: hunk.newStart + offset, newLines: hunk.newLines,
+	    lines: hunk.lines
+	  };
+	}
+
+	function mergeLines(hunk, mineOffset, mineLines, theirOffset, theirLines) {
+	  // This will generally result in a conflicted hunk, but there are cases where the context
+	  // is the only overlap where we can successfully merge the content here.
+	  var mine = { offset: mineOffset, lines: mineLines, index: 0 },
+	      their = { offset: theirOffset, lines: theirLines, index: 0 };
+
+	  // Handle any leading content
+	  insertLeading(hunk, mine, their);
+	  insertLeading(hunk, their, mine);
+
+	  // Now in the overlap content. Scan through and select the best changes from each.
+	  while (mine.index < mine.lines.length && their.index < their.lines.length) {
+	    var mineCurrent = mine.lines[mine.index],
+	        theirCurrent = their.lines[their.index];
+
+	    if ((mineCurrent[0] === '-' || mineCurrent[0] === '+') && (theirCurrent[0] === '-' || theirCurrent[0] === '+')) {
+	      // Both modified ...
+	      mutualChange(hunk, mine, their);
+	    } else if (mineCurrent[0] === '+' && theirCurrent[0] === ' ') {
+	      /*istanbul ignore start*/var _hunk$lines;
+
+	      /*istanbul ignore end*/ // Mine inserted
+	      /*istanbul ignore start*/(_hunk$lines = /*istanbul ignore end*/hunk.lines).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_hunk$lines /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/collectChange(mine)));
+	    } else if (theirCurrent[0] === '+' && mineCurrent[0] === ' ') {
+	      /*istanbul ignore start*/var _hunk$lines2;
+
+	      /*istanbul ignore end*/ // Theirs inserted
+	      /*istanbul ignore start*/(_hunk$lines2 = /*istanbul ignore end*/hunk.lines).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_hunk$lines2 /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/collectChange(their)));
+	    } else if (mineCurrent[0] === '-' && theirCurrent[0] === ' ') {
+	      // Mine removed or edited
+	      removal(hunk, mine, their);
+	    } else if (theirCurrent[0] === '-' && mineCurrent[0] === ' ') {
+	      // Their removed or edited
+	      removal(hunk, their, mine, true);
+	    } else if (mineCurrent === theirCurrent) {
+	      // Context identity
+	      hunk.lines.push(mineCurrent);
+	      mine.index++;
+	      their.index++;
+	    } else {
+	      // Context mismatch
+	      conflict(hunk, collectChange(mine), collectChange(their));
+	    }
+	  }
+
+	  // Now push anything that may be remaining
+	  insertTrailing(hunk, mine);
+	  insertTrailing(hunk, their);
+
+	  calcLineCount(hunk);
+	}
+
+	function mutualChange(hunk, mine, their) {
+	  var myChanges = collectChange(mine),
+	      theirChanges = collectChange(their);
+
+	  if (allRemoves(myChanges) && allRemoves(theirChanges)) {
+	    // Special case for remove changes that are supersets of one another
+	    if ( /*istanbul ignore start*/(0, _array.arrayStartsWith) /*istanbul ignore end*/(myChanges, theirChanges) && skipRemoveSuperset(their, myChanges, myChanges.length - theirChanges.length)) {
+	      /*istanbul ignore start*/var _hunk$lines3;
+
+	      /*istanbul ignore end*/ /*istanbul ignore start*/(_hunk$lines3 = /*istanbul ignore end*/hunk.lines).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_hunk$lines3 /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/myChanges));
+	      return;
+	    } else if ( /*istanbul ignore start*/(0, _array.arrayStartsWith) /*istanbul ignore end*/(theirChanges, myChanges) && skipRemoveSuperset(mine, theirChanges, theirChanges.length - myChanges.length)) {
+	      /*istanbul ignore start*/var _hunk$lines4;
+
+	      /*istanbul ignore end*/ /*istanbul ignore start*/(_hunk$lines4 = /*istanbul ignore end*/hunk.lines).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_hunk$lines4 /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/theirChanges));
+	      return;
+	    }
+	  } else if ( /*istanbul ignore start*/(0, _array.arrayEqual) /*istanbul ignore end*/(myChanges, theirChanges)) {
+	    /*istanbul ignore start*/var _hunk$lines5;
+
+	    /*istanbul ignore end*/ /*istanbul ignore start*/(_hunk$lines5 = /*istanbul ignore end*/hunk.lines).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_hunk$lines5 /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/myChanges));
+	    return;
+	  }
+
+	  conflict(hunk, myChanges, theirChanges);
+	}
+
+	function removal(hunk, mine, their, swap) {
+	  var myChanges = collectChange(mine),
+	      theirChanges = collectContext(their, myChanges);
+	  if (theirChanges.merged) {
+	    /*istanbul ignore start*/var _hunk$lines6;
+
+	    /*istanbul ignore end*/ /*istanbul ignore start*/(_hunk$lines6 = /*istanbul ignore end*/hunk.lines).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_hunk$lines6 /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/theirChanges.merged));
+	  } else {
+	    conflict(hunk, swap ? theirChanges : myChanges, swap ? myChanges : theirChanges);
+	  }
+	}
+
+	function conflict(hunk, mine, their) {
+	  hunk.conflict = true;
+	  hunk.lines.push({
+	    conflict: true,
+	    mine: mine,
+	    theirs: their
+	  });
+	}
+
+	function insertLeading(hunk, insert, their) {
+	  while (insert.offset < their.offset && insert.index < insert.lines.length) {
+	    var line = insert.lines[insert.index++];
+	    hunk.lines.push(line);
+	    insert.offset++;
+	  }
+	}
+	function insertTrailing(hunk, insert) {
+	  while (insert.index < insert.lines.length) {
+	    var line = insert.lines[insert.index++];
+	    hunk.lines.push(line);
+	  }
+	}
+
+	function collectChange(state) {
+	  var ret = [],
+	      operation = state.lines[state.index][0];
+	  while (state.index < state.lines.length) {
+	    var line = state.lines[state.index];
+
+	    // Group additions that are immediately after subtractions and treat them as one "atomic" modify change.
+	    if (operation === '-' && line[0] === '+') {
+	      operation = '+';
+	    }
+
+	    if (operation === line[0]) {
+	      ret.push(line);
+	      state.index++;
+	    } else {
+	      break;
+	    }
+	  }
+
+	  return ret;
+	}
+	function collectContext(state, matchChanges) {
+	  var changes = [],
+	      merged = [],
+	      matchIndex = 0,
+	      contextChanges = false,
+	      conflicted = false;
+	  while (matchIndex < matchChanges.length && state.index < state.lines.length) {
+	    var change = state.lines[state.index],
+	        match = matchChanges[matchIndex];
+
+	    // Once we've hit our add, then we are done
+	    if (match[0] === '+') {
+	      break;
+	    }
+
+	    contextChanges = contextChanges || change[0] !== ' ';
+
+	    merged.push(match);
+	    matchIndex++;
+
+	    // Consume any additions in the other block as a conflict to attempt
+	    // to pull in the remaining context after this
+	    if (change[0] === '+') {
+	      conflicted = true;
+
+	      while (change[0] === '+') {
+	        changes.push(change);
+	        change = state.lines[++state.index];
+	      }
+	    }
+
+	    if (match.substr(1) === change.substr(1)) {
+	      changes.push(change);
+	      state.index++;
+	    } else {
+	      conflicted = true;
+	    }
+	  }
+
+	  if ((matchChanges[matchIndex] || '')[0] === '+' && contextChanges) {
+	    conflicted = true;
+	  }
+
+	  if (conflicted) {
+	    return changes;
+	  }
+
+	  while (matchIndex < matchChanges.length) {
+	    merged.push(matchChanges[matchIndex++]);
+	  }
+
+	  return {
+	    merged: merged,
+	    changes: changes
+	  };
+	}
+
+	function allRemoves(changes) {
+	  return changes.reduce(function (prev, change) {
+	    return prev && change[0] === '-';
+	  }, true);
+	}
+	function skipRemoveSuperset(state, removeChanges, delta) {
+	  for (var i = 0; i < delta; i++) {
+	    var changeContent = removeChanges[removeChanges.length - delta + i].substr(1);
+	    if (state.lines[state.index + i] !== ' ' + changeContent) {
+	      return false;
+	    }
+	  }
+
+	  state.index += delta;
+	  return true;
+	}
+
+	function calcOldNewLineCount(lines) {
+	  var oldLines = 0;
+	  var newLines = 0;
+
+	  lines.forEach(function (line) {
+	    if (typeof line !== 'string') {
+	      var myCount = calcOldNewLineCount(line.mine);
+	      var theirCount = calcOldNewLineCount(line.theirs);
+
+	      if (oldLines !== undefined) {
+	        if (myCount.oldLines === theirCount.oldLines) {
+	          oldLines += myCount.oldLines;
+	        } else {
+	          oldLines = undefined;
+	        }
+	      }
+
+	      if (newLines !== undefined) {
+	        if (myCount.newLines === theirCount.newLines) {
+	          newLines += myCount.newLines;
+	        } else {
+	          newLines = undefined;
+	        }
+	      }
+	    } else {
+	      if (newLines !== undefined && (line[0] === '+' || line[0] === ' ')) {
+	        newLines++;
+	      }
+	      if (oldLines !== undefined && (line[0] === '-' || line[0] === ' ')) {
+	        oldLines++;
+	      }
+	    }
+	  });
+
+	  return { oldLines: oldLines, newLines: newLines };
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9wYXRjaC9tZXJnZS5qcyJdLCJuYW1lcyI6WyJjYWxjTGluZUNvdW50IiwibWVyZ2UiLCJodW5rIiwiY2FsY09sZE5ld0xpbmVDb3VudCIsImxpbmVzIiwib2xkTGluZXMiLCJuZXdMaW5lcyIsInVuZGVmaW5lZCIsIm1pbmUiLCJ0aGVpcnMiLCJiYXNlIiwibG9hZFBhdGNoIiwicmV0IiwiaW5kZXgiLCJuZXdGaWxlTmFtZSIsImZpbGVOYW1lQ2hhbmdlZCIsIm9sZEZpbGVOYW1lIiwib2xkSGVhZGVyIiwibmV3SGVhZGVyIiwic2VsZWN0RmllbGQiLCJodW5rcyIsIm1pbmVJbmRleCIsInRoZWlyc0luZGV4IiwibWluZU9mZnNldCIsInRoZWlyc09mZnNldCIsImxlbmd0aCIsIm1pbmVDdXJyZW50Iiwib2xkU3RhcnQiLCJJbmZpbml0eSIsInRoZWlyc0N1cnJlbnQiLCJodW5rQmVmb3JlIiwicHVzaCIsImNsb25lSHVuayIsIm1lcmdlZEh1bmsiLCJNYXRoIiwibWluIiwibmV3U3RhcnQiLCJtZXJnZUxpbmVzIiwicGFyYW0iLCJ0ZXN0IiwiRXJyb3IiLCJwYXRjaCIsImNvbmZsaWN0IiwiY2hlY2siLCJvZmZzZXQiLCJtaW5lTGluZXMiLCJ0aGVpck9mZnNldCIsInRoZWlyTGluZXMiLCJ0aGVpciIsImluc2VydExlYWRpbmciLCJ0aGVpckN1cnJlbnQiLCJtdXR1YWxDaGFuZ2UiLCJjb2xsZWN0Q2hhbmdlIiwicmVtb3ZhbCIsImluc2VydFRyYWlsaW5nIiwibXlDaGFuZ2VzIiwidGhlaXJDaGFuZ2VzIiwiYWxsUmVtb3ZlcyIsInNraXBSZW1vdmVTdXBlcnNldCIsInN3YXAiLCJjb2xsZWN0Q29udGV4dCIsIm1lcmdlZCIsImluc2VydCIsImxpbmUiLCJzdGF0ZSIsIm9wZXJhdGlvbiIsIm1hdGNoQ2hhbmdlcyIsImNoYW5nZXMiLCJtYXRjaEluZGV4IiwiY29udGV4dENoYW5nZXMiLCJjb25mbGljdGVkIiwiY2hhbmdlIiwibWF0Y2giLCJzdWJzdHIiLCJyZWR1Y2UiLCJwcmV2IiwicmVtb3ZlQ2hhbmdlcyIsImRlbHRhIiwiaSIsImNoYW5nZUNvbnRlbnQiLCJmb3JFYWNoIiwibXlDb3VudCIsInRoZWlyQ291bnQiXSwibWFwcGluZ3MiOiI7OztnQ0FLZ0JBLGEsR0FBQUEsYTt5REFnQkFDLEssR0FBQUEsSzs7QUFyQmhCOztBQUNBOztBQUVBOzs7O3VCQUVPLFNBQVNELGFBQVQsQ0FBdUJFLElBQXZCLEVBQTZCO0FBQUEsNkVBQ0xDLG9CQUFvQkQsS0FBS0UsS0FBekIsQ0FESztBQUFBLE1BQzNCQyxRQUQyQix3QkFDM0JBLFFBRDJCO0FBQUEsTUFDakJDLFFBRGlCLHdCQUNqQkEsUUFEaUI7O0FBR2xDLE1BQUlELGFBQWFFLFNBQWpCLEVBQTRCO0FBQzFCTCxTQUFLRyxRQUFMLEdBQWdCQSxRQUFoQjtBQUNELEdBRkQsTUFFTztBQUNMLFdBQU9ILEtBQUtHLFFBQVo7QUFDRDs7QUFFRCxNQUFJQyxhQUFhQyxTQUFqQixFQUE0QjtBQUMxQkwsU0FBS0ksUUFBTCxHQUFnQkEsUUFBaEI7QUFDRCxHQUZELE1BRU87QUFDTCxXQUFPSixLQUFLSSxRQUFaO0FBQ0Q7QUFDRjs7QUFFTSxTQUFTTCxLQUFULENBQWVPLElBQWYsRUFBcUJDLE1BQXJCLEVBQTZCQyxJQUE3QixFQUFtQztBQUN4Q0YsU0FBT0csVUFBVUgsSUFBVixFQUFnQkUsSUFBaEIsQ0FBUDtBQUNBRCxXQUFTRSxVQUFVRixNQUFWLEVBQWtCQyxJQUFsQixDQUFUOztBQUVBLE1BQUlFLE1BQU0sRUFBVjs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxNQUFJSixLQUFLSyxLQUFMLElBQWNKLE9BQU9JLEtBQXpCLEVBQWdDO0FBQzlCRCxRQUFJQyxLQUFKLEdBQVlMLEtBQUtLLEtBQUwsSUFBY0osT0FBT0ksS0FBakM7QUFDRDs7QUFFRCxNQUFJTCxLQUFLTSxXQUFMLElBQW9CTCxPQUFPSyxXQUEvQixFQUE0QztBQUMxQyxRQUFJLENBQUNDLGdCQUFnQlAsSUFBaEIsQ0FBTCxF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Q0Q7QUFDRjs7QUFFRCxVQUFJRCxhQUFhQyxTQUFqQixFQUE0QjtBQUMxQixZQUFJMEUsUUFBUTNFLFFBQVIsS0FBcUI0RSxXQUFXNUUsUUFBcEMsRUFBOEM7QUFDNUNBLHNCQUFZMkUsUUFBUTNFLFFBQXBCO0FBQ0QsU0FGRCxNQUVPO0FBQ0xBLHFCQUFXQyxTQUFYO0FBQ0Q7QUFDRjtBQUNGLEtBbkJELE1BbUJPO0FBQ0wsVUFBSUQsYUFBYUMsU0FBYixLQUEyQndELEtBQUssQ0FBTCxNQUFZLEdBQVosSUFBbUJBLEtBQUssQ0FBTCxNQUFZLEdBQTFELENBQUosRUFBb0U7QUFDbEV6RDtBQUNEO0FBQ0QsVUFBSUQsYUFBYUUsU0FBYixLQUEyQndELEtBQUssQ0FBTCxNQUFZLEdBQVosSUFBbUJBLEtBQUssQ0FBTCxNQUFZLEdBQTFELENBQUosRUFBb0U7QUFDbEUxRDtBQUNEO0FBQ0Y7QUFDRixHQTVCRDs7QUE4QkEsU0FBTyxFQUFDQSxrQkFBRCxFQUFXQyxrQkFBWCxFQUFQO0FBQ0QiLCJmaWxlIjoibWVyZ2UuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge3N0cnVjdHVyZWRQYXRjaH0gZnJvbSAnLi9jcmVhdGUnO1xuaW1wb3J0IHtwYXJzZVBhdGNofSBmcm9tICcuL3BhcnNlJztcblxuaW1wb3J0IHthcnJheUVxdWFsLCBhcnJheVN0YXJ0c1dpdGh9IGZyb20gJy4uL3V0aWwvYXJyYXknO1xuXG5leHBvcnQgZnVuY3Rpb24gY2FsY0xpbmVDb3VudChodW5rKSB7XG4gIGNvbnN0IHtvbGRMaW5lcywgbmV3TGluZXN9ID0gY2FsY09sZE5ld0xpbmVDb3VudChodW5rLmxpbmVzKTtcblxuICBpZiAob2xkTGluZXMgIT09IHVuZGVmaW5lZCkge1xuICAgIGh1bmsub2xkTGluZXMgPSBvbGRMaW5lcztcbiAgfSBlbHNlIHtcbiAgICBkZWxldGUgaHVuay5vbGRMaW5lcztcbiAgfVxuXG4gIGlmIChuZXdMaW5lcyAhPT0gdW5kZWZpbmVkKSB7XG4gICAgaHVuay5uZXdMaW5lcyA9IG5ld0xpbmVzO1xuICB9IGVsc2Uge1xuICAgIGRlbGV0ZSBodW5rLm5ld0xpbmVzO1xuICB9XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBtZXJnZShtaW5lLCB0aGVpcnMsIGJhc2UpIHtcbiAgbWluZSA9IGxvYWRQYXRjaChtaW5lLCBiYXNlKTtcbiAgdGhlaXJzID0gbG9hZFBhdGNoKHRoZWlycywgYmFzZSk7XG5cbiAgbGV0IHJldCA9IHt9O1xuXG4gIC8vIEZvciBpbmRleCB3ZSBqdXN0IGxldCBpdCBwYXNzIHRocm91Z2ggYXMgaXQgZG9lc24ndCBoYXZlIGFueSBuZWNlc3NhcnkgbWVhbmluZy5cbiAgLy8gTGVhdmluZyBzYW5pdHkgY2hlY2tzIG9uIHRoaXMgdG8gdGhlIEFQSSBjb25zdW1lciB0aGF0IG1heSBrbm93IG1vcmUgYWJvdXQgdGhlXG4gIC8vIG1lYW5pbmcgaW4gdGhlaXIgb3duIGNvbnRleHQuXG4gIGlmIChtaW5lLmluZGV4IHx8IHRoZWlycy5pbmRleCkge1xuICAgIHJldC5pbmRleCA9IG1pbmUuaW5kZXggfHwgdGhlaXJzLmluZGV4O1xuICB9XG5cbiAgaWYgKG1pbmUubmV3RmlsZU5hbWUgfHwgdGhlaXJzLm5ld0ZpbGVOYW1lKSB7XG4gICAgaWYgKCFmaWxlTmFtZUNoYW5nZWQobWluZSkpIHtcbiAgICAgIC8vIE5vIGhlYWRlciBvciBubyBjaGFuZ2UgaW4gb3VycywgdXNlIHRoZWlycyAoYW5kIG91cnMgaWYgdGhlaXJzIGRvZXMgbm90IGV4aXN0KVxuICAgICAgcmV0Lm9sZEZpbGVOYW1lID0gdGhlaXJzLm9sZEZpbGVOYW1lIHx8IG1pbmUub2xkRmlsZU5hbWU7XG4gICAgICByZXQubmV3RmlsZU5hbWUgPSB0aGVpcnMubmV3RmlsZU5hbWUgfHwgbWluZS5uZXdGaWxlTmFtZTtcbiAgICAgIHJldC5vbGRIZWFkZXIgPSB0aGVpcnMub2xkSGVhZGVyIHx8IG1pbmUub2xkSGVhZGVyO1xuICAgICAgcmV0Lm5ld0hlYWRlciA9IHRoZWlycy5uZXdIZWFkZXIgfHwgbWluZS5uZXdIZWFkZXI7XG4gICAgfSBlbHNlIGlmICghZmlsZU5hbWVDaGFuZ2VkKHRoZWlycykpIHtcbiAgICAgIC8vIE5vIGhlYWRlciBvciBubyBjaGFuZ2UgaW4gdGhlaXJzLCB1c2Ugb3Vyc1xuICAgICAgcmV0Lm9sZEZpbGVOYW1lID0gbWluZS5vbGRGaWxlTmFtZTtcbiAgICAgIHJldC5uZXdGaWxlTmFtZSA9IG1pbmUubmV3RmlsZU5hbWU7XG4gICAgICByZXQub2xkSGVhZGVyID0gbWluZS5vbGRIZWFkZXI7XG4gICAgICByZXQubmV3SGVhZGVyID0gbWluZS5uZXdIZWFkZXI7XG4gICAgfSBlbHNlIHtcbiAgICAgIC8vIEJvdGggY2hhbmdlZC4uLiBmaWd1cmUgaXQgb3V0XG4gICAgICByZXQub2xkRmlsZU5hbWUgPSBzZWxlY3RGaWVsZChyZXQsIG1pbmUub2xkRmlsZU5hbWUsIHRoZWlycy5vbGRGaWxlTmFtZSk7XG4gICAgICByZXQubmV3RmlsZU5hbWUgPSBzZWxlY3RGaWVsZChyZXQsIG1pbmUubmV3RmlsZU5hbWUsIHRoZWlycy5uZXdGaWxlTmFtZSk7XG4gICAgICByZXQub2xkSGVhZGVyID0gc2VsZWN0RmllbGQocmV0LCBtaW5lLm9sZEhlYWRlciwgdGhlaXJzLm9sZEhlYWRlcik7XG4gICAgICByZXQubmV3SGVhZGVyID0gc2VsZWN0RmllbGQocmV0LCBtaW5lLm5ld0hlYWRlciwgdGhlaXJzLm5ld0hlYWRlcik7XG4gICAgfVxuICB9XG5cbiAgcmV0Lmh1bmtzID0gW107XG5cbiAgbGV0IG1pbmVJbmRleCA9IDAsXG4gICAgICB0aGVpcnNJbmRleCA9IDAsXG4gICAgICBtaW5lT2Zmc2V0ID0gMCxcbiAgICAgIHRoZWlyc09mZnNldCA9IDA7XG5cbiAgd2hpbGUgKG1pbmVJbmRleCA8IG1pbmUuaHVua3MubGVuZ3RoIHx8IHRoZWlyc0luZGV4IDwgdGhlaXJzLmh1bmtzLmxlbmd0aCkge1xuICAgIGxldCBtaW5lQ3VycmVudCA9IG1pbmUuaHVua3NbbWluZUluZGV4XSB8fCB7b2xkU3RhcnQ6IEluZmluaXR5fSxcbiAgICAgICAgdGhlaXJzQ3VycmVudCA9IHRoZWlycy5odW5rc1t0aGVpcnNJbmRleF0gfHwge29sZFN0YXJ0OiBJbmZpbml0eX07XG5cbiAgICBpZiAoaHVua0JlZm9yZShtaW5lQ3VycmVudCwgdGhlaXJzQ3VycmVudCkpIHtcbiAgICAgIC8vIFRoaXMgcGF0Y2ggZG9lcyBub3Qgb3ZlcmxhcCB3aXRoIGFueSBvZiB0aGUgb3RoZXJzLCB5YXkuXG4gICAgICByZXQuaHVua3MucHVzaChjbG9uZUh1bmsobWluZUN1cnJlbnQsIG1pbmVPZmZzZXQpKTtcbiAgICAgIG1pbmVJbmRleCsrO1xuICAgICAgdGhlaXJzT2Zmc2V0ICs9IG1pbmVDdXJyZW50Lm5ld0xpbmVzIC0gbWluZUN1cnJlbnQub2xkTGluZXM7XG4gICAgfSBlbHNlIGlmIChodW5rQmVmb3JlKHRoZWlyc0N1cnJlbnQsIG1pbmVDdXJyZW50KSkge1xuICAgICAgLy8gVGhpcyBwYXRjaCBkb2VzIG5vdCBvdmVybGFwIHdpdGggYW55IG9mIHRoZSBvdGhlcnMsIHlheS5cbiAgICAgIHJldC5odW5rcy5wdXNoKGNsb25lSHVuayh0aGVpcnNDdXJyZW50LCB0aGVpcnNPZmZzZXQpKTtcbiAgICAgIHRoZWlyc0luZGV4Kys7XG4gICAgICBtaW5lT2Zmc2V0ICs9IHRoZWlyc0N1cnJlbnQubmV3TGluZXMgLSB0aGVpcnNDdXJyZW50Lm9sZExpbmVzO1xuICAgIH0gZWxzZSB7XG4gICAgICAvLyBPdmVybGFwLCBtZXJnZSBhcyBiZXN0IHdlIGNhblxuICAgICAgbGV0IG1lcmdlZEh1bmsgPSB7XG4gICAgICAgIG9sZFN0YXJ0OiBNYXRoLm1pbihtaW5lQ3VycmVudC5vbGRTdGFydCwgdGhlaXJzQ3VycmVudC5vbGRTdGFydCksXG4gICAgICAgIG9sZExpbmVzOiAwLFxuICAgICAgICBuZXdTdGFydDogTWF0aC5taW4obWluZUN1cnJlbnQubmV3U3RhcnQgKyBtaW5lT2Zmc2V0LCB0aGVpcnNDdXJyZW50Lm9sZFN0YXJ0ICsgdGhlaXJzT2Zmc2V0KSxcbiAgICAgICAgbmV3TGluZXM6IDAsXG4gICAgICAgIGxpbmVzOiBbXVxuICAgICAgfTtcbiAgICAgIG1lcmdlTGluZXMobWVyZ2VkSHVuaywgbWluZUN1cnJlbnQub2xkU3RhcnQsIG1pbmVDdXJyZW50LmxpbmVzLCB0aGVpcnNDdXJyZW50Lm9sZFN0YXJ0LCB0aGVpcnNDdXJyZW50LmxpbmVzKTtcbiAgICAgIHRoZWlyc0luZGV4Kys7XG4gICAgICBtaW5lSW5kZXgrKztcblxuICAgICAgcmV0Lmh1bmtzLnB1c2gobWVyZ2VkSHVuayk7XG4gICAgfVxuICB9XG5cbiAgcmV0dXJuIHJldDtcbn1cblxuZnVuY3Rpb24gbG9hZFBhdGNoKHBhcmFtLCBiYXNlKSB7XG4gIGlmICh0eXBlb2YgcGFyYW0gPT09ICdzdHJpbmcnKSB7XG4gICAgaWYgKC9eQEAvbS50ZXN0KHBhcmFtKSB8fCAoL15JbmRleDovbS50ZXN0KHBhcmFtKSkpIHtcbiAgICAgIHJldHVybiBwYXJzZVBhdGNoKHBhcmFtKVswXTtcbiAgICB9XG5cbiAgICBpZiAoIWJhc2UpIHtcbiAgICAgIHRocm93IG5ldyBFcnJvcignTXVzdCBwcm92aWRlIGEgYmFzZSByZWZlcmVuY2Ugb3IgcGFzcyBpbiBhIHBhdGNoJyk7XG4gICAgfVxuICAgIHJldHVybiBzdHJ1Y3R1cmVkUGF0Y2godW5kZWZpbmVkLCB1bmRlZmluZWQsIGJhc2UsIHBhcmFtKTtcbiAgfVxuXG4gIHJldHVybiBwYXJhbTtcbn1cblxuZnVuY3Rpb24gZmlsZU5hbWVDaGFuZ2VkKHBhdGNoKSB7XG4gIHJldHVybiBwYXRjaC5uZXdGaWxlTmFtZSAmJiBwYXRjaC5uZXdGaWxlTmFtZSAhPT0gcGF0Y2gub2xkRmlsZU5hbWU7XG59XG5cbmZ1bmN0aW9uIHNlbGVjdEZpZWxkKGluZGV4LCBtaW5lLCB0aGVpcnMpIHtcbiAgaWYgKG1pbmUgPT09IHRoZWlycykge1xuICAgIHJldHVybiBtaW5lO1xuICB9IGVsc2Uge1xuICAgIGluZGV4LmNvbmZsaWN0ID0gdHJ1ZTtcbiAgICByZXR1cm4ge21pbmUsIHRoZWlyc307XG4gIH1cbn1cblxuZnVuY3Rpb24gaHVua0JlZm9yZSh0ZXN0LCBjaGVjaykge1xuICByZXR1cm4gdGVzdC5vbGRTdGFydCA8IGNoZWNrLm9sZFN0YXJ0XG4gICAgJiYgKHRlc3Qub2xkU3RhcnQgKyB0ZXN0Lm9sZExpbmVzKSA8IGNoZWNrLm9sZFN0YXJ0O1xufVxuXG5mdW5jdGlvbiBjbG9uZUh1bmsoaHVuaywgb2Zmc2V0KSB7XG4gIHJldHVybiB7XG4gICAgb2xkU3RhcnQ6IGh1bmsub2xkU3RhcnQsIG9sZExpbmVzOiBodW5rLm9sZExpbmVzLFxuICAgIG5ld1N0YXJ0OiBodW5rLm5ld1N0YXJ0ICsgb2Zmc2V0LCBuZXdMaW5lczogaHVuay5uZXdMaW5lcyxcbiAgICBsaW5lczogaHVuay5saW5lc1xuICB9O1xufVxuXG5mdW5jdGlvbiBtZXJnZUxpbmVzKGh1bmssIG1pbmVPZmZzZXQsIG1pbmVMaW5lcywgdGhlaXJPZmZzZXQsIHRoZWlyTGluZXMpIHtcbiAgLy8gVGhpcyB3aWxsIGdlbmVyYWxseSByZXN1bHQgaW4gYSBjb25mbGljdGVkIGh1bmssIGJ1dCB0aGVyZSBhcmUgY2FzZXMgd2hlcmUgdGhlIGNvbnRleHRcbiAgLy8gaXMgdGhlIG9ubHkgb3ZlcmxhcCB3aGVyZSB3ZSBjYW4gc3VjY2Vzc2Z1bGx5IG1lcmdlIHRoZSBjb250ZW50IGhlcmUuXG4gIGxldCBtaW5lID0ge29mZnNldDogbWluZU9mZnNldCwgbGluZXM6IG1pbmVMaW5lcywgaW5kZXg6IDB9LFxuICAgICAgdGhlaXIgPSB7b2Zmc2V0OiB0aGVpck9mZnNldCwgbGluZXM6IHRoZWlyTGluZXMsIGluZGV4OiAwfTtcblxuICAvLyBIYW5kbGUgYW55IGxlYWRpbmcgY29udGVudFxuICBpbnNlcnRMZWFkaW5nKGh1bmssIG1pbmUsIHRoZWlyKTtcbiAgaW5zZXJ0TGVhZGluZyhodW5rLCB0aGVpciwgbWluZSk7XG5cbiAgLy8gTm93IGluIHRoZSBvdmVybGFwIGNvbnRlbnQuIFNjYW4gdGhyb3VnaCBhbmQgc2VsZWN0IHRoZSBiZXN0IGNoYW5nZXMgZnJvbSBlYWNoLlxuICB3aGlsZSAobWluZS5pbmRleCA8IG1pbmUubGluZXMubGVuZ3RoICYmIHRoZWlyLmluZGV4IDwgdGhlaXIubGluZXMubGVuZ3RoKSB7XG4gICAgbGV0IG1pbmVDdXJyZW50ID0gbWluZS5saW5lc1ttaW5lLmluZGV4XSxcbiAgICAgICAgdGhlaXJDdXJyZW50ID0gdGhlaXIubGluZXNbdGhlaXIuaW5kZXhdO1xuXG4gICAgaWYgKChtaW5lQ3VycmVudFswXSA9PT0gJy0nIHx8IG1pbmVDdXJyZW50WzBdID09PSAnKycpXG4gICAgICAgICYmICh0aGVpckN1cnJlbnRbMF0gPT09ICctJyB8fCB0aGVpckN1cnJlbnRbMF0gPT09ICcrJykpIHtcbiAgICAgIC8vIEJvdGggbW9kaWZpZWQgLi4uXG4gICAgICBtdXR1YWxDaGFuZ2UoaHVuaywgbWluZSwgdGhlaXIpO1xuICAgIH0gZWxzZSBpZiAobWluZUN1cnJlbnRbMF0gPT09ICcrJyAmJiB0aGVpckN1cnJlbnRbMF0gPT09ICcgJykge1xuICAgICAgLy8gTWluZSBpbnNlcnRlZFxuICAgICAgaHVuay5saW5lcy5wdXNoKC4uLiBjb2xsZWN0Q2hhbmdlKG1pbmUpKTtcbiAgICB9IGVsc2UgaWYgKHRoZWlyQ3VycmVudFswXSA9PT0gJysnICYmIG1pbmVDdXJyZW50WzBdID09PSAnICcpIHtcbiAgICAgIC8vIFRoZWlycyBpbnNlcnRlZFxuICAgICAgaHVuay5saW5lcy5wdXNoKC4uLiBjb2xsZWN0Q2hhbmdlKHRoZWlyKSk7XG4gICAgfSBlbHNlIGlmIChtaW5lQ3VycmVudFswXSA9PT0gJy0nICYmIHRoZWlyQ3VycmVudFswXSA9PT0gJyAnKSB7XG4gICAgICAvLyBNaW5lIHJlbW92ZWQgb3IgZWRpdGVkXG4gICAgICByZW1vdmFsKGh1bmssIG1pbmUsIHRoZWlyKTtcbiAgICB9IGVsc2UgaWYgKHRoZWlyQ3VycmVudFswXSA9PT0gJy0nICYmIG1pbmVDdXJyZW50WzBdID09PSAnICcpIHtcbiAgICAgIC8vIFRoZWlyIHJlbW92ZWQgb3IgZWRpdGVkXG4gICAgICByZW1vdmFsKGh1bmssIHRoZWlyLCBtaW5lLCB0cnVlKTtcbiAgICB9IGVsc2UgaWYgKG1pbmVDdXJyZW50ID09PSB0aGVpckN1cnJlbnQpIHtcbiAgICAgIC8vIENvbnRleHQgaWRlbnRpdHlcbiAgICAgIGh1bmsubGluZXMucHVzaChtaW5lQ3VycmVudCk7XG4gICAgICBtaW5lLmluZGV4Kys7XG4gICAgICB0aGVpci5pbmRleCsrO1xuICAgIH0gZWxzZSB7XG4gICAgICAvLyBDb250ZXh0IG1pc21hdGNoXG4gICAgICBjb25mbGljdChodW5rLCBjb2xsZWN0Q2hhbmdlKG1pbmUpLCBjb2xsZWN0Q2hhbmdlKHRoZWlyKSk7XG4gICAgfVxuICB9XG5cbiAgLy8gTm93IHB1c2ggYW55dGhpbmcgdGhhdCBtYXkgYmUgcmVtYWluaW5nXG4gIGluc2VydFRyYWlsaW5nKGh1bmssIG1pbmUpO1xuICBpbnNlcnRUcmFpbGluZyhodW5rLCB0aGVpcik7XG5cbiAgY2FsY0xpbmVDb3VudChodW5rKTtcbn1cblxuZnVuY3Rpb24gbXV0dWFsQ2hhbmdlKGh1bmssIG1pbmUsIHRoZWlyKSB7XG4gIGxldCBteUNoYW5nZXMgPSBjb2xsZWN0Q2hhbmdlKG1pbmUpLFxuICAgICAgdGhlaXJDaGFuZ2VzID0gY29sbGVjdENoYW5nZSh0aGVpcik7XG5cbiAgaWYgKGFsbFJlbW92ZXMobXlDaGFuZ2VzKSAmJiBhbGxSZW1vdmVzKHRoZWlyQ2hhbmdlcykpIHtcbiAgICAvLyBTcGVjaWFsIGNhc2UgZm9yIHJlbW92ZSBjaGFuZ2VzIHRoYXQgYXJlIHN1cGVyc2V0cyBvZiBvbmUgYW5vdGhlclxuICAgIGlmIChhcnJheVN0YXJ0c1dpdGgobXlDaGFuZ2VzLCB0aGVpckNoYW5nZXMpXG4gICAgICAgICYmIHNraXBSZW1vdmVTdXBlcnNldCh0aGVpciwgbXlDaGFuZ2VzLCBteUNoYW5nZXMubGVuZ3RoIC0gdGhlaXJDaGFuZ2VzLmxlbmd0aCkpIHtcbiAgICAgIGh1bmsubGluZXMucHVzaCguLi4gbXlDaGFuZ2VzKTtcbiAgICAgIHJldHVybjtcbiAgICB9IGVsc2UgaWYgKGFycmF5U3RhcnRzV2l0aCh0aGVpckNoYW5nZXMsIG15Q2hhbmdlcylcbiAgICAgICAgJiYgc2tpcFJlbW92ZVN1cGVyc2V0KG1pbmUsIHRoZWlyQ2hhbmdlcywgdGhlaXJDaGFuZ2VzLmxlbmd0aCAtIG15Q2hhbmdlcy5sZW5ndGgpKSB7XG4gICAgICBodW5rLmxpbmVzLnB1c2goLi4uIHRoZWlyQ2hhbmdlcyk7XG4gICAgICByZXR1cm47XG4gICAgfVxuICB9IGVsc2UgaWYgKGFycmF5RXF1YWwobXlDaGFuZ2VzLCB0aGVpckNoYW5nZXMpKSB7XG4gICAgaHVuay5saW5lcy5wdXNoKC4uLiBteUNoYW5nZXMpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbmZsaWN0KGh1bmssIG15Q2hhbmdlcywgdGhlaXJDaGFuZ2VzKTtcbn1cblxuZnVuY3Rpb24gcmVtb3ZhbChodW5rLCBtaW5lLCB0aGVpciwgc3dhcCkge1xuICBsZXQgbXlDaGFuZ2VzID0gY29sbGVjdENoYW5nZShtaW5lKSxcbiAgICAgIHRoZWlyQ2hhbmdlcyA9IGNvbGxlY3RDb250ZXh0KHRoZWlyLCBteUNoYW5nZXMpO1xuICBpZiAodGhlaXJDaGFuZ2VzLm1lcmdlZCkge1xuICAgIGh1bmsubGluZXMucHVzaCguLi4gdGhlaXJDaGFuZ2VzLm1lcmdlZCk7XG4gIH0gZWxzZSB7XG4gICAgY29uZmxpY3QoaHVuaywgc3dhcCA/IHRoZWlyQ2hhbmdlcyA6IG15Q2hhbmdlcywgc3dhcCA/IG15Q2hhbmdlcyA6IHRoZWlyQ2hhbmdlcyk7XG4gIH1cbn1cblxuZnVuY3Rpb24gY29uZmxpY3QoaHVuaywgbWluZSwgdGhlaXIpIHtcbiAgaHVuay5jb25mbGljdCA9IHRydWU7XG4gIGh1bmsubGluZXMucHVzaCh7XG4gICAgY29uZmxpY3Q6IHRydWUsXG4gICAgbWluZTogbWluZSxcbiAgICB0aGVpcnM6IHRoZWlyXG4gIH0pO1xufVxuXG5mdW5jdGlvbiBpbnNlcnRMZWFkaW5nKGh1bmssIGluc2VydCwgdGhlaXIpIHtcbiAgd2hpbGUgKGluc2VydC5vZmZzZXQgPCB0aGVpci5vZmZzZXQgJiYgaW5zZXJ0LmluZGV4IDwgaW5zZXJ0LmxpbmVzLmxlbmd0aCkge1xuICAgIGxldCBsaW5lID0gaW5zZXJ0LmxpbmVzW2luc2VydC5pbmRleCsrXTtcbiAgICBodW5rLmxpbmVzLnB1c2gobGluZSk7XG4gICAgaW5zZXJ0Lm9mZnNldCsrO1xuICB9XG59XG5mdW5jdGlvbiBpbnNlcnRUcmFpbGluZyhodW5rLCBpbnNlcnQpIHtcbiAgd2hpbGUgKGluc2VydC5pbmRleCA8IGluc2VydC5saW5lcy5sZW5ndGgpIHtcbiAgICBsZXQgbGluZSA9IGluc2VydC5saW5lc1tpbnNlcnQuaW5kZXgrK107XG4gICAgaHVuay5saW5lcy5wdXNoKGxpbmUpO1xuICB9XG59XG5cbmZ1bmN0aW9uIGNvbGxlY3RDaGFuZ2Uoc3RhdGUpIHtcbiAgbGV0IHJldCA9IFtdLFxuICAgICAgb3BlcmF0aW9uID0gc3RhdGUubGluZXNbc3RhdGUuaW5kZXhdWzBdO1xuICB3aGlsZSAoc3RhdGUuaW5kZXggPCBzdGF0ZS5saW5lcy5sZW5ndGgpIHtcbiAgICBsZXQgbGluZSA9IHN0YXRlLmxpbmVzW3N0YXRlLmluZGV4XTtcblxuICAgIC8vIEdyb3VwIGFkZGl0aW9ucyB0aGF0IGFyZSBpbW1lZGlhdGVseSBhZnRlciBzdWJ0cmFjdGlvbnMgYW5kIHRyZWF0IHRoZW0gYXMgb25lIFwiYXRvbWljXCIgbW9kaWZ5IGNoYW5nZS5cbiAgICBpZiAob3BlcmF0aW9uID09PSAnLScgJiYgbGluZVswXSA9PT0gJysnKSB7XG4gICAgICBvcGVyYXRpb24gPSAnKyc7XG4gICAgfVxuXG4gICAgaWYgKG9wZXJhdGlvbiA9PT0gbGluZVswXSkge1xuICAgICAgcmV0LnB1c2gobGluZSk7XG4gICAgICBzdGF0ZS5pbmRleCsrO1xuICAgIH0gZWxzZSB7XG4gICAgICBicmVhaztcbiAgICB9XG4gIH1cblxuICByZXR1cm4gcmV0O1xufVxuZnVuY3Rpb24gY29sbGVjdENvbnRleHQoc3RhdGUsIG1hdGNoQ2hhbmdlcykge1xuICBsZXQgY2hhbmdlcyA9IFtdLFxuICAgICAgbWVyZ2VkID0gW10sXG4gICAgICBtYXRjaEluZGV4ID0gMCxcbiAgICAgIGNvbnRleHRDaGFuZ2VzID0gZmFsc2UsXG4gICAgICBjb25mbGljdGVkID0gZmFsc2U7XG4gIHdoaWxlIChtYXRjaEluZGV4IDwgbWF0Y2hDaGFuZ2VzLmxlbmd0aFxuICAgICAgICAmJiBzdGF0ZS5pbmRleCA8IHN0YXRlLmxpbmVzLmxlbmd0aCkge1xuICAgIGxldCBjaGFuZ2UgPSBzdGF0ZS5saW5lc1tzdGF0ZS5pbmRleF0sXG4gICAgICAgIG1hdGNoID0gbWF0Y2hDaGFuZ2VzW21hdGNoSW5kZXhdO1xuXG4gICAgLy8gT25jZSB3ZSd2ZSBoaXQgb3VyIGFkZCwgdGhlbiB3ZSBhcmUgZG9uZVxuICAgIGlmIChtYXRjaFswXSA9PT0gJysnKSB7XG4gICAgICBicmVhaztcbiAgICB9XG5cbiAgICBjb250ZXh0Q2hhbmdlcyA9IGNvbnRleHRDaGFuZ2VzIHx8IGNoYW5nZVswXSAhPT0gJyAnO1xuXG4gICAgbWVyZ2VkLnB1c2gobWF0Y2gpO1xuICAgIG1hdGNoSW5kZXgrKztcblxuICAgIC8vIENvbnN1bWUgYW55IGFkZGl0aW9ucyBpbiB0aGUgb3RoZXIgYmxvY2sgYXMgYSBjb25mbGljdCB0byBhdHRlbXB0XG4gICAgLy8gdG8gcHVsbCBpbiB0aGUgcmVtYWluaW5nIGNvbnRleHQgYWZ0ZXIgdGhpc1xuICAgIGlmIChjaGFuZ2VbMF0gPT09ICcrJykge1xuICAgICAgY29uZmxpY3RlZCA9IHRydWU7XG5cbiAgICAgIHdoaWxlIChjaGFuZ2VbMF0gPT09ICcrJykge1xuICAgICAgICBjaGFuZ2VzLnB1c2goY2hhbmdlKTtcbiAgICAgICAgY2hhbmdlID0gc3RhdGUubGluZXNbKytzdGF0ZS5pbmRleF07XG4gICAgICB9XG4gICAgfVxuXG4gICAgaWYgKG1hdGNoLnN1YnN0cigxKSA9PT0gY2hhbmdlLnN1YnN0cigxKSkge1xuICAgICAgY2hhbmdlcy5wdXNoKGNoYW5nZSk7XG4gICAgICBzdGF0ZS5pbmRleCsrO1xuICAgIH0gZWxzZSB7XG4gICAgICBjb25mbGljdGVkID0gdHJ1ZTtcbiAgICB9XG4gIH1cblxuICBpZiAoKG1hdGNoQ2hhbmdlc1ttYXRjaEluZGV4XSB8fCAnJylbMF0gPT09ICcrJ1xuICAgICAgJiYgY29udGV4dENoYW5nZXMpIHtcbiAgICBjb25mbGljdGVkID0gdHJ1ZTtcbiAgfVxuXG4gIGlmIChjb25mbGljdGVkKSB7XG4gICAgcmV0dXJuIGNoYW5nZXM7XG4gIH1cblxuICB3aGlsZSAobWF0Y2hJbmRleCA8IG1hdGNoQ2hhbmdlcy5sZW5ndGgpIHtcbiAgICBtZXJnZWQucHVzaChtYXRjaENoYW5nZXNbbWF0Y2hJbmRleCsrXSk7XG4gIH1cblxuICByZXR1cm4ge1xuICAgIG1lcmdlZCxcbiAgICBjaGFuZ2VzXG4gIH07XG59XG5cbmZ1bmN0aW9uIGFsbFJlbW92ZXMoY2hhbmdlcykge1xuICByZXR1cm4gY2hhbmdlcy5yZWR1Y2UoZnVuY3Rpb24ocHJldiwgY2hhbmdlKSB7XG4gICAgcmV0dXJuIHByZXYgJiYgY2hhbmdlWzBdID09PSAnLSc7XG4gIH0sIHRydWUpO1xufVxuZnVuY3Rpb24gc2tpcFJlbW92ZVN1cGVyc2V0KHN0YXRlLCByZW1vdmVDaGFuZ2VzLCBkZWx0YSkge1xuICBmb3IgKGxldCBpID0gMDsgaSA8IGRlbHRhOyBpKyspIHtcbiAgICBsZXQgY2hhbmdlQ29udGVudCA9IHJlbW92ZUNoYW5nZXNbcmVtb3ZlQ2hhbmdlcy5sZW5ndGggLSBkZWx0YSArIGldLnN1YnN0cigxKTtcbiAgICBpZiAoc3RhdGUubGluZXNbc3RhdGUuaW5kZXggKyBpXSAhPT0gJyAnICsgY2hhbmdlQ29udGVudCkge1xuICAgICAgcmV0dXJuIGZhbHNlO1xuICAgIH1cbiAgfVxuXG4gIHN0YXRlLmluZGV4ICs9IGRlbHRhO1xuICByZXR1cm4gdHJ1ZTtcbn1cblxuZnVuY3Rpb24gY2FsY09sZE5ld0xpbmVDb3VudChsaW5lcykge1xuICBsZXQgb2xkTGluZXMgPSAwO1xuICBsZXQgbmV3TGluZXMgPSAwO1xuXG4gIGxpbmVzLmZvckVhY2goZnVuY3Rpb24obGluZSkge1xuICAgIGlmICh0eXBlb2YgbGluZSAhPT0gJ3N0cmluZycpIHtcbiAgICAgIGxldCBteUNvdW50ID0gY2FsY09sZE5ld0xpbmVDb3VudChsaW5lLm1pbmUpO1xuICAgICAgbGV0IHRoZWlyQ291bnQgPSBjYWxjT2xkTmV3TGluZUNvdW50KGxpbmUudGhlaXJzKTtcblxuICAgICAgaWYgKG9sZExpbmVzICE9PSB1bmRlZmluZWQpIHtcbiAgICAgICAgaWYgKG15Q291bnQub2xkTGluZXMgPT09IHRoZWlyQ291bnQub2xkTGluZXMpIHtcbiAgICAgICAgICBvbGRMaW5lcyArPSBteUNvdW50Lm9sZExpbmVzO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIG9sZExpbmVzID0gdW5kZWZpbmVkO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIGlmIChuZXdMaW5lcyAhPT0gdW5kZWZpbmVkKSB7XG4gICAgICAgIGlmIChteUNvdW50Lm5ld0xpbmVzID09PSB0aGVpckNvdW50Lm5ld0xpbmVzKSB7XG4gICAgICAgICAgbmV3TGluZXMgKz0gbXlDb3VudC5uZXdMaW5lcztcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICBuZXdMaW5lcyA9IHVuZGVmaW5lZDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH0gZWxzZSB7XG4gICAgICBpZiAobmV3TGluZXMgIT09IHVuZGVmaW5lZCAmJiAobGluZVswXSA9PT0gJysnIHx8IGxpbmVbMF0gPT09ICcgJykpIHtcbiAgICAgICAgbmV3TGluZXMrKztcbiAgICAgIH1cbiAgICAgIGlmIChvbGRMaW5lcyAhPT0gdW5kZWZpbmVkICYmIChsaW5lWzBdID09PSAnLScgfHwgbGluZVswXSA9PT0gJyAnKSkge1xuICAgICAgICBvbGRMaW5lcysrO1xuICAgICAgfVxuICAgIH1cbiAgfSk7XG5cbiAgcmV0dXJuIHtvbGRMaW5lcywgbmV3TGluZXN9O1xufVxuIl19
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/structuredPatch = structuredPatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/createTwoFilesPatch = createTwoFilesPatch;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/createPatch = createPatch;
+
+	var /*istanbul ignore start*/_line = __webpack_require__(5) /*istanbul ignore end*/;
+
+	/*istanbul ignore start*/function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	/*istanbul ignore end*/function structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, newHeader, options) {
+	  if (!options) {
+	    options = {};
+	  }
+	  if (typeof options.context === 'undefined') {
+	    options.context = 4;
+	  }
+
+	  var diff = /*istanbul ignore start*/(0, _line.diffLines) /*istanbul ignore end*/(oldStr, newStr, options);
+	  diff.push({ value: '', lines: [] }); // Append an empty value to make cleanup easier
+
+	  function contextLines(lines) {
+	    return lines.map(function (entry) {
+	      return ' ' + entry;
+	    });
+	  }
+
+	  var hunks = [];
+	  var oldRangeStart = 0,
+	      newRangeStart = 0,
+	      curRange = [],
+	      oldLine = 1,
+	      newLine = 1;
+
+	  /*istanbul ignore start*/var _loop = function _loop( /*istanbul ignore end*/i) {
+	    var current = diff[i],
+	        lines = current.lines || current.value.replace(/\n$/, '').split('\n');
+	    current.lines = lines;
+
+	    if (current.added || current.removed) {
+	      /*istanbul ignore start*/var _curRange;
+
+	      /*istanbul ignore end*/ // If we have previous context, start with that
+	      if (!oldRangeStart) {
+	        var prev = diff[i - 1];
+	        oldRangeStart = oldLine;
+	        newRangeStart = newLine;
+
+	        if (prev) {
+	          curRange = options.context > 0 ? contextLines(prev.lines.slice(-options.context)) : [];
+	          oldRangeStart -= curRange.length;
+	          newRangeStart -= curRange.length;
+	        }
+	      }
+
+	      // Output our changes
+	      /*istanbul ignore start*/(_curRange = /*istanbul ignore end*/curRange).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_curRange /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/lines.map(function (entry) {
+	        return (current.added ? '+' : '-') + entry;
+	      })));
+
+	      // Track the updated file position
+	      if (current.added) {
+	        newLine += lines.length;
+	      } else {
+	        oldLine += lines.length;
+	      }
+	    } else {
+	      // Identical context lines. Track line changes
+	      if (oldRangeStart) {
+	        // Close out any changes that have been output (or join overlapping)
+	        if (lines.length <= options.context * 2 && i < diff.length - 2) {
+	          /*istanbul ignore start*/var _curRange2;
+
+	          /*istanbul ignore end*/ // Overlapping
+	          /*istanbul ignore start*/(_curRange2 = /*istanbul ignore end*/curRange).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_curRange2 /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/contextLines(lines)));
+	        } else {
+	          /*istanbul ignore start*/var _curRange3;
+
+	          /*istanbul ignore end*/ // end the range and output
+	          var contextSize = Math.min(lines.length, options.context);
+	          /*istanbul ignore start*/(_curRange3 = /*istanbul ignore end*/curRange).push. /*istanbul ignore start*/apply /*istanbul ignore end*/( /*istanbul ignore start*/_curRange3 /*istanbul ignore end*/, /*istanbul ignore start*/_toConsumableArray( /*istanbul ignore end*/contextLines(lines.slice(0, contextSize))));
+
+	          var hunk = {
+	            oldStart: oldRangeStart,
+	            oldLines: oldLine - oldRangeStart + contextSize,
+	            newStart: newRangeStart,
+	            newLines: newLine - newRangeStart + contextSize,
+	            lines: curRange
+	          };
+	          if (i >= diff.length - 2 && lines.length <= options.context) {
+	            // EOF is inside this hunk
+	            var oldEOFNewline = /\n$/.test(oldStr);
+	            var newEOFNewline = /\n$/.test(newStr);
+	            if (lines.length == 0 && !oldEOFNewline) {
+	              // special case: old has no eol and no trailing context; no-nl can end up before adds
+	              curRange.splice(hunk.oldLines, 0, '\\ No newline at end of file');
+	            } else if (!oldEOFNewline || !newEOFNewline) {
+	              curRange.push('\\ No newline at end of file');
+	            }
+	          }
+	          hunks.push(hunk);
+
+	          oldRangeStart = 0;
+	          newRangeStart = 0;
+	          curRange = [];
+	        }
+	      }
+	      oldLine += lines.length;
+	      newLine += lines.length;
+	    }
+	  };
+
+	  for (var i = 0; i < diff.length; i++) {
+	    /*istanbul ignore start*/_loop( /*istanbul ignore end*/i);
+	  }
+
+	  return {
+	    oldFileName: oldFileName, newFileName: newFileName,
+	    oldHeader: oldHeader, newHeader: newHeader,
+	    hunks: hunks
+	  };
+	}
+
+	function createTwoFilesPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, newHeader, options) {
+	  var diff = structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, newHeader, options);
+
+	  var ret = [];
+	  if (oldFileName == newFileName) {
+	    ret.push('Index: ' + oldFileName);
+	  }
+	  ret.push('===================================================================');
+	  ret.push('--- ' + diff.oldFileName + (typeof diff.oldHeader === 'undefined' ? '' : '\t' + diff.oldHeader));
+	  ret.push('+++ ' + diff.newFileName + (typeof diff.newHeader === 'undefined' ? '' : '\t' + diff.newHeader));
+
+	  for (var i = 0; i < diff.hunks.length; i++) {
+	    var hunk = diff.hunks[i];
+	    ret.push('@@ -' + hunk.oldStart + ',' + hunk.oldLines + ' +' + hunk.newStart + ',' + hunk.newLines + ' @@');
+	    ret.push.apply(ret, hunk.lines);
+	  }
+
+	  return ret.join('\n') + '\n';
+	}
+
+	function createPatch(fileName, oldStr, newStr, oldHeader, newHeader, options) {
+	  return createTwoFilesPatch(fileName, fileName, oldStr, newStr, oldHeader, newHeader, options);
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9wYXRjaC9jcmVhdGUuanMiXSwibmFtZXMiOlsic3RydWN0dXJlZFBhdGNoIiwiY3JlYXRlVHdvRmlsZXNQYXRjaCIsImNyZWF0ZVBhdGNoIiwib2xkRmlsZU5hbWUiLCJuZXdGaWxlTmFtZSIsIm9sZFN0ciIsIm5ld1N0ciIsIm9sZEhlYWRlciIsIm5ld0hlYWRlciIsIm9wdGlvbnMiLCJjb250ZXh0IiwiZGlmZiIsInB1c2giLCJ2YWx1ZSIsImxpbmVzIiwiY29udGV4dExpbmVzIiwibWFwIiwiZW50cnkiLCJodW5rcyIsIm9sZFJhbmdlU3RhcnQiLCJuZXdSYW5nZVN0YXJ0IiwiY3VyUmFuZ2UiLCJvbGRMaW5lIiwibmV3TGluZSIsImkiLCJjdXJyZW50IiwicmVwbGFjZSIsInNwbGl0IiwiYWRkZWQiLCJyZW1vdmVkIiwicHJldiIsInNsaWNlIiwibGVuZ3RoIiwiY29udGV4dFNpemUiLCJNYXRoIiwibWluIiwiaHVuayIsIm9sZFN0YXJ0Iiwib2xkTGluZXMiLCJuZXdTdGFydCIsIm5ld0xpbmVzIiwib2xkRU9GTmV3bGluZSIsInRlc3QiLCJuZXdFT0ZOZXdsaW5lIiwic3BsaWNlIiwicmV0IiwiYXBwbHkiLCJqb2luIiwiZmlsZU5hbWUiXSwibWFwcGluZ3MiOiI7OztnQ0FFZ0JBLGUsR0FBQUEsZTt5REFpR0FDLG1CLEdBQUFBLG1CO3lEQXdCQUMsVyxHQUFBQSxXOztBQTNIaEI7Ozs7dUJBRU8sU0FBU0YsZUFBVCxDQUF5QkcsV0FBekIsRUFBc0NDLFdBQXRDLEVBQW1EQyxNQUFuRCxFQUEyREMsTUFBM0QsRUFBbUVDLFNBQW5FLEVBQThFQyxTQUE5RSxFQUF5RkMsT0FBekYsRUFBa0c7QUFDdkcsTUFBSSxDQUFDQSxPQUFMLEVBQWM7QUFDWkEsY0FBVSxFQUFWO0FBQ0Q7QUFDRCxNQUFJLE9BQU9BLFFBQVFDLE9BQWYsS0FBMkIsV0FBL0IsRUFBNEM7QUFDMUNELFlBQVFDLE9BQVIsR0FBa0IsQ0FBbEI7QUFDRDs7QUFFRCxN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QUEvQyxFQUEwREMsU0FBMUQsRUFBcUVDLE9BQXJFLEVBQThFO0FBQ25GLFNBQU9SLG9CQUFvQitDLFFBQXBCLEVBQThCQSxRQUE5QixFQUF3QzNDLE1BQXhDLEVBQWdEQyxNQUFoRCxFQUF3REMsU0FBeEQsRUFBbUVDLFNBQW5FLEVBQThFQyxPQUE5RSxDQUFQO0FBQ0QiLCJmaWxlIjoiY3JlYXRlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtkaWZmTGluZXN9IGZyb20gJy4uL2RpZmYvbGluZSc7XG5cbmV4cG9ydCBmdW5jdGlvbiBzdHJ1Y3R1cmVkUGF0Y2gob2xkRmlsZU5hbWUsIG5ld0ZpbGVOYW1lLCBvbGRTdHIsIG5ld1N0ciwgb2xkSGVhZGVyLCBuZXdIZWFkZXIsIG9wdGlvbnMpIHtcbiAgaWYgKCFvcHRpb25zKSB7XG4gICAgb3B0aW9ucyA9IHt9O1xuICB9XG4gIGlmICh0eXBlb2Ygb3B0aW9ucy5jb250ZXh0ID09PSAndW5kZWZpbmVkJykge1xuICAgIG9wdGlvbnMuY29udGV4dCA9IDQ7XG4gIH1cblxuICBjb25zdCBkaWZmID0gZGlmZkxpbmVzKG9sZFN0ciwgbmV3U3RyLCBvcHRpb25zKTtcbiAgZGlmZi5wdXNoKHt2YWx1ZTogJycsIGxpbmVzOiBbXX0pOyAgIC8vIEFwcGVuZCBhbiBlbXB0eSB2YWx1ZSB0byBtYWtlIGNsZWFudXAgZWFzaWVyXG5cbiAgZnVuY3Rpb24gY29udGV4dExpbmVzKGxpbmVzKSB7XG4gICAgcmV0dXJuIGxpbmVzLm1hcChmdW5jdGlvbihlbnRyeSkgeyByZXR1cm4gJyAnICsgZW50cnk7IH0pO1xuICB9XG5cbiAgbGV0IGh1bmtzID0gW107XG4gIGxldCBvbGRSYW5nZVN0YXJ0ID0gMCwgbmV3UmFuZ2VTdGFydCA9IDAsIGN1clJhbmdlID0gW10sXG4gICAgICBvbGRMaW5lID0gMSwgbmV3TGluZSA9IDE7XG4gIGZvciAobGV0IGkgPSAwOyBpIDwgZGlmZi5sZW5ndGg7IGkrKykge1xuICAgIGNvbnN0IGN1cnJlbnQgPSBkaWZmW2ldLFxuICAgICAgICAgIGxpbmVzID0gY3VycmVudC5saW5lcyB8fCBjdXJyZW50LnZhbHVlLnJlcGxhY2UoL1xcbiQvLCAnJykuc3BsaXQoJ1xcbicpO1xuICAgIGN1cnJlbnQubGluZXMgPSBsaW5lcztcblxuICAgIGlmIChjdXJyZW50LmFkZGVkIHx8IGN1cnJlbnQucmVtb3ZlZCkge1xuICAgICAgLy8gSWYgd2UgaGF2ZSBwcmV2aW91cyBjb250ZXh0LCBzdGFydCB3aXRoIHRoYXRcbiAgICAgIGlmICghb2xkUmFuZ2VTdGFydCkge1xuICAgICAgICBjb25zdCBwcmV2ID0gZGlmZltpIC0gMV07XG4gICAgICAgIG9sZFJhbmdlU3RhcnQgPSBvbGRMaW5lO1xuICAgICAgICBuZXdSYW5nZVN0YXJ0ID0gbmV3TGluZTtcblxuICAgICAgICBpZiAocHJldikge1xuICAgICAgICAgIGN1clJhbmdlID0gb3B0aW9ucy5jb250ZXh0ID4gMCA/IGNvbnRleHRMaW5lcyhwcmV2LmxpbmVzLnNsaWNlKC1vcHRpb25zLmNvbnRleHQpKSA6IFtdO1xuICAgICAgICAgIG9sZFJhbmdlU3RhcnQgLT0gY3VyUmFuZ2UubGVuZ3RoO1xuICAgICAgICAgIG5ld1JhbmdlU3RhcnQgLT0gY3VyUmFuZ2UubGVuZ3RoO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC8vIE91dHB1dCBvdXIgY2hhbmdlc1xuICAgICAgY3VyUmFuZ2UucHVzaCguLi4gbGluZXMubWFwKGZ1bmN0aW9uKGVudHJ5KSB7XG4gICAgICAgIHJldHVybiAoY3VycmVudC5hZGRlZCA/ICcrJyA6ICctJykgKyBlbnRyeTtcbiAgICAgIH0pKTtcblxuICAgICAgLy8gVHJhY2sgdGhlIHVwZGF0ZWQgZmlsZSBwb3NpdGlvblxuICAgICAgaWYgKGN1cnJlbnQuYWRkZWQpIHtcbiAgICAgICAgbmV3TGluZSArPSBsaW5lcy5sZW5ndGg7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBvbGRMaW5lICs9IGxpbmVzLmxlbmd0aDtcbiAgICAgIH1cbiAgICB9IGVsc2Uge1xuICAgICAgLy8gSWRlbnRpY2FsIGNvbnRleHQgbGluZXMuIFRyYWNrIGxpbmUgY2hhbmdlc1xuICAgICAgaWYgKG9sZFJhbmdlU3RhcnQpIHtcbiAgICAgICAgLy8gQ2xvc2Ugb3V0IGFueSBjaGFuZ2VzIHRoYXQgaGF2ZSBiZWVuIG91dHB1dCAob3Igam9pbiBvdmVybGFwcGluZylcbiAgICAgICAgaWYgKGxpbmVzLmxlbmd0aCA8PSBvcHRpb25zLmNvbnRleHQgKiAyICYmIGkgPCBkaWZmLmxlbmd0aCAtIDIpIHtcbiAgICAgICAgICAvLyBPdmVybGFwcGluZ1xuICAgICAgICAgIGN1clJhbmdlLnB1c2goLi4uIGNvbnRleHRMaW5lcyhsaW5lcykpO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIC8vIGVuZCB0aGUgcmFuZ2UgYW5kIG91dHB1dFxuICAgICAgICAgIGxldCBjb250ZXh0U2l6ZSA9IE1hdGgubWluKGxpbmVzLmxlbmd0aCwgb3B0aW9ucy5jb250ZXh0KTtcbiAgICAgICAgICBjdXJSYW5nZS5wdXNoKC4uLiBjb250ZXh0TGluZXMobGluZXMuc2xpY2UoMCwgY29udGV4dFNpemUpKSk7XG5cbiAgICAgICAgICBsZXQgaHVuayA9IHtcbiAgICAgICAgICAgIG9sZFN0YXJ0OiBvbGRSYW5nZVN0YXJ0LFxuICAgICAgICAgICAgb2xkTGluZXM6IChvbGRMaW5lIC0gb2xkUmFuZ2VTdGFydCArIGNvbnRleHRTaXplKSxcbiAgICAgICAgICAgIG5ld1N0YXJ0OiBuZXdSYW5nZVN0YXJ0LFxuICAgICAgICAgICAgbmV3TGluZXM6IChuZXdMaW5lIC0gbmV3UmFuZ2VTdGFydCArIGNvbnRleHRTaXplKSxcbiAgICAgICAgICAgIGxpbmVzOiBjdXJSYW5nZVxuICAgICAgICAgIH07XG4gICAgICAgICAgaWYgKGkgPj0gZGlmZi5sZW5ndGggLSAyICYmIGxpbmVzLmxlbmd0aCA8PSBvcHRpb25zLmNvbnRleHQpIHtcbiAgICAgICAgICAgIC8vIEVPRiBpcyBpbnNpZGUgdGhpcyBodW5rXG4gICAgICAgICAgICBsZXQgb2xkRU9GTmV3bGluZSA9ICgvXFxuJC8udGVzdChvbGRTdHIpKTtcbiAgICAgICAgICAgIGxldCBuZXdFT0ZOZXdsaW5lID0gKC9cXG4kLy50ZXN0KG5ld1N0cikpO1xuICAgICAgICAgICAgaWYgKGxpbmVzLmxlbmd0aCA9PSAwICYmICFvbGRFT0ZOZXdsaW5lKSB7XG4gICAgICAgICAgICAgIC8vIHNwZWNpYWwgY2FzZTogb2xkIGhhcyBubyBlb2wgYW5kIG5vIHRyYWlsaW5nIGNvbnRleHQ7IG5vLW5sIGNhbiBlbmQgdXAgYmVmb3JlIGFkZHNcbiAgICAgICAgICAgICAgY3VyUmFuZ2Uuc3BsaWNlKGh1bmsub2xkTGluZXMsIDAsICdcXFxcIE5vIG5ld2xpbmUgYXQgZW5kIG9mIGZpbGUnKTtcbiAgICAgICAgICAgIH0gZWxzZSBpZiAoIW9sZEVPRk5ld2xpbmUgfHwgIW5ld0VPRk5ld2xpbmUpIHtcbiAgICAgICAgICAgICAgY3VyUmFuZ2UucHVzaCgnXFxcXCBObyBuZXdsaW5lIGF0IGVuZCBvZiBmaWxlJyk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgfVxuICAgICAgICAgIGh1bmtzLnB1c2goaHVuayk7XG5cbiAgICAgICAgICBvbGRSYW5nZVN0YXJ0ID0gMDtcbiAgICAgICAgICBuZXdSYW5nZVN0YXJ0ID0gMDtcbiAgICAgICAgICBjdXJSYW5nZSA9IFtdO1xuICAgICAgICB9XG4gICAgICB9XG4gICAgICBvbGRMaW5lICs9IGxpbmVzLmxlbmd0aDtcbiAgICAgIG5ld0xpbmUgKz0gbGluZXMubGVuZ3RoO1xuICAgIH1cbiAgfVxuXG4gIHJldHVybiB7XG4gICAgb2xkRmlsZU5hbWU6IG9sZEZpbGVOYW1lLCBuZXdGaWxlTmFtZTogbmV3RmlsZU5hbWUsXG4gICAgb2xkSGVhZGVyOiBvbGRIZWFkZXIsIG5ld0hlYWRlcjogbmV3SGVhZGVyLFxuICAgIGh1bmtzOiBodW5rc1xuICB9O1xufVxuXG5leHBvcnQgZnVuY3Rpb24gY3JlYXRlVHdvRmlsZXNQYXRjaChvbGRGaWxlTmFtZSwgbmV3RmlsZU5hbWUsIG9sZFN0ciwgbmV3U3RyLCBvbGRIZWFkZXIsIG5ld0hlYWRlciwgb3B0aW9ucykge1xuICBjb25zdCBkaWZmID0gc3RydWN0dXJlZFBhdGNoKG9sZEZpbGVOYW1lLCBuZXdGaWxlTmFtZSwgb2xkU3RyLCBuZXdTdHIsIG9sZEhlYWRlciwgbmV3SGVhZGVyLCBvcHRpb25zKTtcblxuICBjb25zdCByZXQgPSBbXTtcbiAgaWYgKG9sZEZpbGVOYW1lID09IG5ld0ZpbGVOYW1lKSB7XG4gICAgcmV0LnB1c2goJ0luZGV4OiAnICsgb2xkRmlsZU5hbWUpO1xuICB9XG4gIHJldC5wdXNoKCc9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Jyk7XG4gIHJldC5wdXNoKCctLS0gJyArIGRpZmYub2xkRmlsZU5hbWUgKyAodHlwZW9mIGRpZmYub2xkSGVhZGVyID09PSAndW5kZWZpbmVkJyA/ICcnIDogJ1xcdCcgKyBkaWZmLm9sZEhlYWRlcikpO1xuICByZXQucHVzaCgnKysrICcgKyBkaWZmLm5ld0ZpbGVOYW1lICsgKHR5cGVvZiBkaWZmLm5ld0hlYWRlciA9PT0gJ3VuZGVmaW5lZCcgPyAnJyA6ICdcXHQnICsgZGlmZi5uZXdIZWFkZXIpKTtcblxuICBmb3IgKGxldCBpID0gMDsgaSA8IGRpZmYuaHVua3MubGVuZ3RoOyBpKyspIHtcbiAgICBjb25zdCBodW5rID0gZGlmZi5odW5rc1tpXTtcbiAgICByZXQucHVzaChcbiAgICAgICdAQCAtJyArIGh1bmsub2xkU3RhcnQgKyAnLCcgKyBodW5rLm9sZExpbmVzXG4gICAgICArICcgKycgKyBodW5rLm5ld1N0YXJ0ICsgJywnICsgaHVuay5uZXdMaW5lc1xuICAgICAgKyAnIEBAJ1xuICAgICk7XG4gICAgcmV0LnB1c2guYXBwbHkocmV0LCBodW5rLmxpbmVzKTtcbiAgfVxuXG4gIHJldHVybiByZXQuam9pbignXFxuJykgKyAnXFxuJztcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZVBhdGNoKGZpbGVOYW1lLCBvbGRTdHIsIG5ld1N0ciwgb2xkSGVhZGVyLCBuZXdIZWFkZXIsIG9wdGlvbnMpIHtcbiAgcmV0dXJuIGNyZWF0ZVR3b0ZpbGVzUGF0Y2goZmlsZU5hbWUsIGZpbGVOYW1lLCBvbGRTdHIsIG5ld1N0ciwgb2xkSGVhZGVyLCBuZXdIZWFkZXIsIG9wdGlvbnMpO1xufVxuIl19
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+	/*istanbul ignore start*/"use strict";
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/arrayEqual = arrayEqual;
+	/*istanbul ignore start*/exports. /*istanbul ignore end*/arrayStartsWith = arrayStartsWith;
+	function arrayEqual(a, b) {
+	  if (a.length !== b.length) {
+	    return false;
+	  }
+
+	  return arrayStartsWith(a, b);
+	}
+
+	function arrayStartsWith(array, start) {
+	  if (start.length > array.length) {
+	    return false;
+	  }
+
+	  for (var i = 0; i < start.length; i++) {
+	    if (start[i] !== array[i]) {
+	      return false;
+	    }
+	  }
+
+	  return true;
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy91dGlsL2FycmF5LmpzIl0sIm5hbWVzIjpbImFycmF5RXF1YWwiLCJhcnJheVN0YXJ0c1dpdGgiLCJhIiwiYiIsImxlbmd0aCIsImFycmF5Iiwic3RhcnQiLCJpIl0sIm1hcHBpbmdzIjoiOzs7Z0NBQWdCQSxVLEdBQUFBLFU7eURBUUFDLGUsR0FBQUEsZTtBQVJULFNBQVNELFVBQVQsQ0FBb0JFLENBQXBCLEVBQXVCQyxDQUF2QixFQUEwQjtBQUMvQixNQUFJRCxFQUFFRSxNQUFGLEtBQWFELEVBQUVDLE1BQW5CLEVBQTJCO0FBQ3pCLFdBQU8sS0FBUDtBQUNEOztBQUVELFNBQU9ILGdCQUFnQkMsQ0FBaEIsRUFBbUJDLENBQW5CLENBQVA7QUFDRDs7QUFFTSxTQUFTRixlQUFULENBQXlCSSxLQUF6QixFQUFnQ0MsS0FBaEMsRUFBdUM7QUFDNUMsTUFBSUEsTUFBTUYsTUFBTixHQUFlQyxNQUFNRCxNQUF6QixFQUFpQztBQUMvQixXQUFPLEtBQVA7QUFDRDs7QUFFRCxPQUFLLElBQUlHLElBQUksQ0FBYixFQUFnQkEsSUFBSUQsTUFBTUYsTUFBMUIsRUFBa0NHLEdBQWxDLEVBQXVDO0FBQ3JDLFFBQUlELE1BQU1DLENBQU4sTUFBYUYsTUFBTUUsQ0FBTixDQUFqQixFQUEyQjtBQUN6QixhQUFPLEtBQVA7QUFDRDtBQUNGOztBQUVELFNBQU8sSUFBUDtBQUNEIiwiZmlsZSI6ImFycmF5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGZ1bmN0aW9uIGFycmF5RXF1YWwoYSwgYikge1xuICBpZiAoYS5sZW5ndGggIT09IGIubGVuZ3RoKSB7XG4gICAgcmV0dXJuIGZhbHNlO1xuICB9XG5cbiAgcmV0dXJuIGFycmF5U3RhcnRzV2l0aChhLCBiKTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGFycmF5U3RhcnRzV2l0aChhcnJheSwgc3RhcnQpIHtcbiAgaWYgKHN0YXJ0Lmxlbmd0aCA+IGFycmF5Lmxlbmd0aCkge1xuICAgIHJldHVybiBmYWxzZTtcbiAgfVxuXG4gIGZvciAobGV0IGkgPSAwOyBpIDwgc3RhcnQubGVuZ3RoOyBpKyspIHtcbiAgICBpZiAoc3RhcnRbaV0gIT09IGFycmF5W2ldKSB7XG4gICAgICByZXR1cm4gZmFsc2U7XG4gICAgfVxuICB9XG5cbiAgcmV0dXJuIHRydWU7XG59XG4iXX0=
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+	/*istanbul ignore start*/"use strict";
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/convertChangesToDMP = convertChangesToDMP;
+	// See: http://code.google.com/p/google-diff-match-patch/wiki/API
+	function convertChangesToDMP(changes) {
+	  var ret = [],
+	      change = /*istanbul ignore start*/void 0 /*istanbul ignore end*/,
+	      operation = /*istanbul ignore start*/void 0 /*istanbul ignore end*/;
+	  for (var i = 0; i < changes.length; i++) {
+	    change = changes[i];
+	    if (change.added) {
+	      operation = 1;
+	    } else if (change.removed) {
+	      operation = -1;
+	    } else {
+	      operation = 0;
+	    }
+
+	    ret.push([operation, change.value]);
+	  }
+	  return ret;
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb252ZXJ0L2RtcC5qcyJdLCJuYW1lcyI6WyJjb252ZXJ0Q2hhbmdlc1RvRE1QIiwiY2hhbmdlcyIsInJldCIsImNoYW5nZSIsIm9wZXJhdGlvbiIsImkiLCJsZW5ndGgiLCJhZGRlZCIsInJlbW92ZWQiLCJwdXNoIiwidmFsdWUiXSwibWFwcGluZ3MiOiI7OztnQ0FDZ0JBLG1CLEdBQUFBLG1CO0FBRGhCO0FBQ08sU0FBU0EsbUJBQVQsQ0FBNkJDLE9BQTdCLEVBQXNDO0FBQzNDLE1BQUlDLE1BQU0sRUFBVjtBQUFBLE1BQ0lDLHdDQURKO0FBQUEsTUFFSUMsMkNBRko7QUFHQSxPQUFLLElBQUlDLElBQUksQ0FBYixFQUFnQkEsSUFBSUosUUFBUUssTUFBNUIsRUFBb0NELEdBQXBDLEVBQXlDO0FBQ3ZDRixhQUFTRixRQUFRSSxDQUFSLENBQVQ7QUFDQSxRQUFJRixPQUFPSSxLQUFYLEVBQWtCO0FBQ2hCSCxrQkFBWSxDQUFaO0FBQ0QsS0FGRCxNQUVPLElBQUlELE9BQU9LLE9BQVgsRUFBb0I7QUFDekJKLGtCQUFZLENBQUMsQ0FBYjtBQUNELEtBRk0sTUFFQTtBQUNMQSxrQkFBWSxDQUFaO0FBQ0Q7O0FBRURGLFFBQUlPLElBQUosQ0FBUyxDQUFDTCxTQUFELEVBQVlELE9BQU9PLEtBQW5CLENBQVQ7QUFDRDtBQUNELFNBQU9SLEdBQVA7QUFDRCIsImZpbGUiOiJkbXAuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBTZWU6IGh0dHA6Ly9jb2RlLmdvb2dsZS5jb20vcC9nb29nbGUtZGlmZi1tYXRjaC1wYXRjaC93aWtpL0FQSVxuZXhwb3J0IGZ1bmN0aW9uIGNvbnZlcnRDaGFuZ2VzVG9ETVAoY2hhbmdlcykge1xuICBsZXQgcmV0ID0gW10sXG4gICAgICBjaGFuZ2UsXG4gICAgICBvcGVyYXRpb247XG4gIGZvciAobGV0IGkgPSAwOyBpIDwgY2hhbmdlcy5sZW5ndGg7IGkrKykge1xuICAgIGNoYW5nZSA9IGNoYW5nZXNbaV07XG4gICAgaWYgKGNoYW5nZS5hZGRlZCkge1xuICAgICAgb3BlcmF0aW9uID0gMTtcbiAgICB9IGVsc2UgaWYgKGNoYW5nZS5yZW1vdmVkKSB7XG4gICAgICBvcGVyYXRpb24gPSAtMTtcbiAgICB9IGVsc2Uge1xuICAgICAgb3BlcmF0aW9uID0gMDtcbiAgICB9XG5cbiAgICByZXQucHVzaChbb3BlcmF0aW9uLCBjaGFuZ2UudmFsdWVdKTtcbiAgfVxuICByZXR1cm4gcmV0O1xufVxuIl19
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+	/*istanbul ignore start*/'use strict';
+
+	exports.__esModule = true;
+	exports. /*istanbul ignore end*/convertChangesToXML = convertChangesToXML;
+	function convertChangesToXML(changes) {
+	  var ret = [];
+	  for (var i = 0; i < changes.length; i++) {
+	    var change = changes[i];
+	    if (change.added) {
+	      ret.push('<ins>');
+	    } else if (change.removed) {
+	      ret.push('<del>');
+	    }
+
+	    ret.push(escapeHTML(change.value));
+
+	    if (change.added) {
+	      ret.push('</ins>');
+	    } else if (change.removed) {
+	      ret.push('</del>');
+	    }
+	  }
+	  return ret.join('');
+	}
+
+	function escapeHTML(s) {
+	  var n = s;
+	  n = n.replace(/&/g, '&amp;');
+	  n = n.replace(/</g, '&lt;');
+	  n = n.replace(/>/g, '&gt;');
+	  n = n.replace(/"/g, '&quot;');
+
+	  return n;
+	}
+	//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb252ZXJ0L3htbC5qcyJdLCJuYW1lcyI6WyJjb252ZXJ0Q2hhbmdlc1RvWE1MIiwiY2hhbmdlcyIsInJldCIsImkiLCJsZW5ndGgiLCJjaGFuZ2UiLCJhZGRlZCIsInB1c2giLCJyZW1vdmVkIiwiZXNjYXBlSFRNTCIsInZhbHVlIiwiam9pbiIsInMiLCJuIiwicmVwbGFjZSJdLCJtYXBwaW5ncyI6Ijs7O2dDQUFnQkEsbUIsR0FBQUEsbUI7QUFBVCxTQUFTQSxtQkFBVCxDQUE2QkMsT0FBN0IsRUFBc0M7QUFDM0MsTUFBSUMsTUFBTSxFQUFWO0FBQ0EsT0FBSyxJQUFJQyxJQUFJLENBQWIsRUFBZ0JBLElBQUlGLFFBQVFHLE1BQTVCLEVBQW9DRCxHQUFwQyxFQUF5QztBQUN2QyxRQUFJRSxTQUFTSixRQUFRRSxDQUFSLENBQWI7QUFDQSxRQUFJRSxPQUFPQyxLQUFYLEVBQWtCO0FBQ2hCSixVQUFJSyxJQUFKLENBQVMsT0FBVDtBQUNELEtBRkQsTUFFTyxJQUFJRixPQUFPRyxPQUFYLEVBQW9CO0FBQ3pCTixVQUFJSyxJQUFKLENBQVMsT0FBVDtBQUNEOztBQUVETCxRQUFJSyxJQUFKLENBQVNFLFdBQVdKLE9BQU9LLEtBQWxCLENBQVQ7O0FBRUEsUUFBSUwsT0FBT0MsS0FBWCxFQUFrQjtBQUNoQkosVUFBSUssSUFBSixDQUFTLFFBQVQ7QUFDRCxLQUZELE1BRU8sSUFBSUYsT0FBT0csT0FBWCxFQUFvQjtBQUN6Qk4sVUFBSUssSUFBSixDQUFTLFFBQVQ7QUFDRDtBQUNGO0FBQ0QsU0FBT0wsSUFBSVMsSUFBSixDQUFTLEVBQVQsQ0FBUDtBQUNEOztBQUVELFNBQVNGLFVBQVQsQ0FBb0JHLENBQXBCLEVBQXVCO0FBQ3JCLE1BQUlDLElBQUlELENBQVI7QUFDQUMsTUFBSUEsRUFBRUMsT0FBRixDQUFVLElBQVYsRUFBZ0IsT0FBaEIsQ0FBSjtBQUNBRCxNQUFJQSxFQUFFQyxPQUFGLENBQVUsSUFBVixFQUFnQixNQUFoQixDQUFKO0FBQ0FELE1BQUlBLEVBQUVDLE9BQUYsQ0FBVSxJQUFWLEVBQWdCLE1BQWhCLENBQUo7QUFDQUQsTUFBSUEsRUFBRUMsT0FBRixDQUFVLElBQVYsRUFBZ0IsUUFBaEIsQ0FBSjs7QUFFQSxTQUFPRCxDQUFQO0FBQ0QiLCJmaWxlIjoieG1sLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGZ1bmN0aW9uIGNvbnZlcnRDaGFuZ2VzVG9YTUwoY2hhbmdlcykge1xuICBsZXQgcmV0ID0gW107XG4gIGZvciAobGV0IGkgPSAwOyBpIDwgY2hhbmdlcy5sZW5ndGg7IGkrKykge1xuICAgIGxldCBjaGFuZ2UgPSBjaGFuZ2VzW2ldO1xuICAgIGlmIChjaGFuZ2UuYWRkZWQpIHtcbiAgICAgIHJldC5wdXNoKCc8aW5zPicpO1xuICAgIH0gZWxzZSBpZiAoY2hhbmdlLnJlbW92ZWQpIHtcbiAgICAgIHJldC5wdXNoKCc8ZGVsPicpO1xuICAgIH1cblxuICAgIHJldC5wdXNoKGVzY2FwZUhUTUwoY2hhbmdlLnZhbHVlKSk7XG5cbiAgICBpZiAoY2hhbmdlLmFkZGVkKSB7XG4gICAgICByZXQucHVzaCgnPC9pbnM+Jyk7XG4gICAgfSBlbHNlIGlmIChjaGFuZ2UucmVtb3ZlZCkge1xuICAgICAgcmV0LnB1c2goJzwvZGVsPicpO1xuICAgIH1cbiAgfVxuICByZXR1cm4gcmV0LmpvaW4oJycpO1xufVxuXG5mdW5jdGlvbiBlc2NhcGVIVE1MKHMpIHtcbiAgbGV0IG4gPSBzO1xuICBuID0gbi5yZXBsYWNlKC8mL2csICcmYW1wOycpO1xuICBuID0gbi5yZXBsYWNlKC88L2csICcmbHQ7Jyk7XG4gIG4gPSBuLnJlcGxhY2UoLz4vZywgJyZndDsnKTtcbiAgbiA9IG4ucmVwbGFjZSgvXCIvZywgJyZxdW90OycpO1xuXG4gIHJldHVybiBuO1xufVxuIl19
+
+
+/***/ })
+/******/ ])
+});
+;
+
+/***/ }),
+/* 423 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -101929,7 +107532,7 @@ __webpack_require__.r(__webpack_exports__);
 var editorOptions = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/standalone/promise-polyfill/polyfill.js
-var polyfill = __webpack_require__(333);
+var polyfill = __webpack_require__(337);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/cancellation.js
 var cancellation = __webpack_require__(30);
@@ -102579,7 +108182,7 @@ function createMonacoBaseAPI() {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/standalone-tokens.css
-var standalone_tokens = __webpack_require__(336);
+var standalone_tokens = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/services/codeEditorService.js
 var services_codeEditorService = __webpack_require__(36);
@@ -102591,7 +108194,7 @@ var dom = __webpack_require__(1);
 var linkedList = __webpack_require__(92);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/marshalling.js
-var marshalling = __webpack_require__(168);
+var marshalling = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/network.js
 var network = __webpack_require__(37);
@@ -107470,7 +113073,7 @@ function removeElementsAfterNulls(arr) {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/keybindingLabels.js
-var keybindingLabels = __webpack_require__(167);
+var keybindingLabels = __webpack_require__(168);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/platform/keybinding/common/baseResolvedKeybinding.js
 /*---------------------------------------------------------------------------------------------
@@ -108117,7 +113720,7 @@ var aria = __webpack_require__(57);
 var codeEditorWidget = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffEditor.css
-var media_diffEditor = __webpack_require__(338);
+var media_diffEditor = __webpack_require__(342);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/fastDomNode.js
 var fastDomNode = __webpack_require__(25);
@@ -108132,7 +113735,7 @@ var config_configuration = __webpack_require__(75);
 var editorState = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffReview.css
-var diffReview = __webpack_require__(340);
+var diffReview = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.js
 var actionbar = __webpack_require__(86);
@@ -114079,7 +119682,7 @@ commands["a" /* CommandsRegistry */].registerCommand(contextkey["e" /* SET_CONTE
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/contextview/browser/contextMenuHandler.css
-var contextMenuHandler = __webpack_require__(342);
+var contextMenuHandler = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/menu/menu.js
 var menu_menu = __webpack_require__(175);
@@ -114279,7 +119882,7 @@ var contextMenuService_ContextMenuService = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.css
-var contextview = __webpack_require__(344);
+var contextview = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/range.js
 var common_range = __webpack_require__(84);
@@ -117226,7 +122829,7 @@ if (typeof global.require !== 'undefined' && typeof global.require.config === 'f
 
 
 /***/ }),
-/* 411 */
+/* 424 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118606,13 +124209,13 @@ var suggestModel_SuggestModel = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/suggest/media/suggest.css
-var media_suggest = __webpack_require__(327);
+var media_suggest = __webpack_require__(331);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/codiconLabel/codiconLabel.js
 var codiconLabel = __webpack_require__(131);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/documentSymbols/outlineTree.js
-var outlineTree = __webpack_require__(187);
+var outlineTree = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -120768,14 +126371,14 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new SuggestCommand({
 
 
 /***/ }),
-/* 412 */
+/* 425 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/folding/folding.css
-var folding = __webpack_require__(232);
+var folding = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -122740,14 +128343,14 @@ for (var folding_i = 1; folding_i <= 7; folding_i++) {
 
 
 /***/ }),
-/* 413 */
+/* 426 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/hover/hover.css
-var hover = __webpack_require__(300);
+var hover = __webpack_require__(304);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -122792,10 +128395,10 @@ var textModel = __webpack_require__(28);
 var modes = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/color.js
-var colorPicker_color = __webpack_require__(163);
+var colorPicker_color = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/colorDetector.js
-var colorPicker_colorDetector = __webpack_require__(183);
+var colorPicker_colorDetector = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/event.js
 var common_event = __webpack_require__(6);
@@ -122874,7 +128477,7 @@ var colorPickerModel_ColorPickerModel = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/colorPicker.css
-var colorPicker = __webpack_require__(302);
+var colorPicker = __webpack_require__(306);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/browser.js
 var browser = __webpack_require__(23);
@@ -124337,7 +129940,7 @@ var markersDecorationService = __webpack_require__(179);
 var common_keybinding = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/link/goToDefinitionAtPosition.js
-var goToDefinitionAtPosition = __webpack_require__(184);
+var goToDefinitionAtPosition = __webpack_require__(186);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/hover/hover.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModesHoverController", function() { return hover_ModesHoverController; });
@@ -124671,7 +130274,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 
 
 /***/ }),
-/* 414 */
+/* 427 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -126299,7 +131902,7 @@ Object(editorExtensions["f" /* registerEditorAction */])(linesOperations_TitleCa
 
 
 /***/ }),
-/* 415 */
+/* 428 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -126441,7 +132044,7 @@ Object(editorExtensions["j" /* registerLanguageCommand */])('_executeCodeLensPro
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codelens/codelensWidget.css
-var codelensWidget = __webpack_require__(206);
+var codelensWidget = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -127254,7 +132857,7 @@ Object(editorExtensions["h" /* registerEditorContribution */])(codelensControlle
 
 
 /***/ }),
-/* 416 */
+/* 429 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -128195,7 +133798,7 @@ commands["a" /* CommandsRegistry */].registerCommand('editor.action.format', fun
 
 
 /***/ }),
-/* 417 */
+/* 430 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -128235,7 +133838,7 @@ var scrollableElement = __webpack_require__(79);
 var common_event = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/parameterHints.css
-var parameterHints = __webpack_require__(313);
+var parameterHints = __webpack_require__(317);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/modeService.js
 var services_modeService = __webpack_require__(94);
@@ -129164,7 +134767,7 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new ParameterHintsComm
 
 
 /***/ }),
-/* 418 */
+/* 431 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -129827,20 +135430,20 @@ Object(editorExtensions["f" /* registerEditorAction */])(comment_BlockCommentAct
 
 
 /***/ }),
-/* 419 */
+/* 432 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/quickOutline.css
-var quickOutline = __webpack_require__(316);
+var quickOutline = __webpack_require__(320);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/codiconLabel/codiconLabel.js
 var codiconLabel = __webpack_require__(131);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/documentSymbols/outlineTree.js
-var outlineTree = __webpack_require__(187);
+var outlineTree = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/cancellation.js
 var cancellation = __webpack_require__(30);
@@ -130566,7 +136169,7 @@ Object(editorExtensions["f" /* registerEditorAction */])(quickOutline_QuickOutli
 
 
 /***/ }),
-/* 420 */
+/* 433 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -130719,7 +136322,7 @@ Object(editorExtensions["f" /* registerEditorAction */])(caretOperations_MoveCar
 
 
 /***/ }),
-/* 421 */
+/* 434 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -131049,14 +136652,14 @@ Object(editorExtensions["f" /* registerEditorAction */])(contextmenu_ShowContext
 
 
 /***/ }),
-/* 422 */
+/* 435 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/dnd/dnd.css
-var dnd = __webpack_require__(221);
+var dnd = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/lifecycle.js
 var lifecycle = __webpack_require__(2);
@@ -131352,7 +136955,7 @@ Object(editorExtensions["h" /* registerEditorContribution */])(dnd_DragAndDropCo
 
 
 /***/ }),
-/* 423 */
+/* 436 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -131605,14 +137208,14 @@ Object(themeService["e" /* registerThemingParticipant */])(function (theme, coll
 
 
 /***/ }),
-/* 424 */
+/* 437 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/links/links.css
-var links_links = __webpack_require__(310);
+var links_links = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -132329,7 +137932,7 @@ Object(themeService["e" /* registerThemingParticipant */])(function (theme, coll
 
 
 /***/ }),
-/* 425 */
+/* 438 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -132354,7 +137957,7 @@ var editorExtensions = __webpack_require__(5);
 var editorContextKeys = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/rename/renameInputField.css
-var renameInputField = __webpack_require__(323);
+var renameInputField = __webpack_require__(327);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/lifecycle.js
 var lifecycle = __webpack_require__(2);
@@ -132939,7 +138542,7 @@ Object(editorExtensions["e" /* registerDefaultLanguageCommand */])('_executeDocu
 
 
 /***/ }),
-/* 426 */
+/* 439 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -133406,7 +139009,7 @@ Object(editorExtensions["e" /* registerDefaultLanguageCommand */])('_executeSele
 
 
 /***/ }),
-/* 427 */
+/* 440 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -133616,7 +139219,7 @@ function createAPI() {
 monaco.languages.typescript = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 64).then(__webpack_require__.bind(null, 493));
+    return __webpack_require__.e(/* import() */ 64).then(__webpack_require__.bind(null, 506));
 }
 monaco.languages.onLanguage('typescript', function () {
     return getMode().then(function (mode) { return mode.setupTypeScript(typescriptDefaults); });
