@@ -1,6 +1,8 @@
 {
   "name": "gmod-monaco",
-  "dependencies": {},
+  "dependencies": {
+    "lua-fmt": "^2.6.0"
+  },
   "devDependencies": {
     "css-loader": "^3.4.0",
     "file-loader": "^5.0.2",
