@@ -102567,11 +102567,12 @@ var LuaFormatter = /** @class */ (function () {
     }
     LuaFormatter.prototype.provideDocumentFormattingEdits = function (model, options, token) {
         var code = model.getValue();
-        var range = model.getFullModelRange();
-        return [{
-                range: range,
-                text: lua_fmt_1.formatText(code)
-            }];
+        model.setValue(lua_fmt_1.formatText(code, {
+            useTabs: true,
+            indentCount: 4,
+            quotemark: "double",
+        }));
+        return [];
     };
     return LuaFormatter;
 }());
