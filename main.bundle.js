@@ -93479,18 +93479,18 @@ if (globalThis.gmodinterface) {
     globalThis.gmodinterface.SetCode = function (code) {
         editor.setValue(code);
     };
-    var curDecoration_1 = [];
     globalThis.gmodinterface.SubmitLuaReport = function (report) {
-        var newDecorations = report.events.map(function (e) {
+        var markers = report.events.map(function (e) {
             return {
-                range: new monaco.Range(e.line, e.startColumn, e.line, e.endColumn),
-                options: {
-                    afterContentClassName: e.isError ? "lua-error" : "lua-warn",
-                    hoverMessage: { value: e.message }
-                }
+                message: e.message,
+                endColumn: e.endColumn,
+                startColumn: e.startColumn,
+                startLineNumber: e.line,
+                endLineNumber: e.line,
+                severity: e.isError ? monaco.MarkerSeverity.Error : monaco.MarkerSeverity.Warning
             };
         });
-        curDecoration_1 = editor.deltaDecorations(curDecoration_1, newDecorations);
+        monaco.editor.setModelMarkers(editor.getModel(), "luacheck", markers);
     };
     globalThis.gmodinterface.OnReady();
 }
