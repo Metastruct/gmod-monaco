@@ -43,7 +43,7 @@ if (globalThis.gmodinterface) {
       return {
         range: new monaco.Range(e.line, e.startColumn, e.line, e.endColumn),
         options: {
-          className: e.isError ? "lua-error" : "lua-warn",
+          inlineClassName: e.isError ? "lua-error" : "lua-warn",
           hoverMessage: { value: e.message }
         }
       }
