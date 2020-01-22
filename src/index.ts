@@ -37,19 +37,19 @@ if (globalThis.gmodinterface) {
     editor.setValue(code);
   };
 
-  let curDecoration: string[] = [];
   globalThis.gmodinterface.SubmitLuaReport = (report: LuaReport) => {
-    let newDecorations: monaco.editor.IModelDeltaDecoration[] = report.events.map(e => {
+     let markers: monaco.editor.IMarkerData[] = report.events.map(e => {
       return {
-        range: new monaco.Range(e.line, e.startColumn, e.line, e.endColumn),
-        options: {
-          afterContentClassName: e.isError ? "lua-error" : "lua-warn",
-          hoverMessage: { value: e.message }
-        }
-      }
+        message: e.message,
+        endColumn: e.endColumn,
+        startColumn: e.startColumn,
+        startLineNumber: e.line,
+        endLineNumber: e.line,
+        severity: e.isError ? monaco.MarkerSeverity.Error : monaco.MarkerSeverity.Warning
+      };
     });
 
-    curDecoration = editor.deltaDecorations(curDecoration, newDecorations);
+    monaco.editor.setModelMarkers(editor.getModel(), "luacheck", markers);
   }
 
   globalThis.gmodinterface.OnReady();
