@@ -93474,7 +93474,7 @@ var editor = monaco.editor.create(document.getElementById("container"), {
     acceptSuggestionOnEnter: "off",
 });
 editor.focus();
-window.addEventListener('resize', function () { return editor.layout(); });
+window.addEventListener("resize", function () { return editor.layout(); });
 if (globalThis.gmodinterface) {
     globalThis.gmodinterface.SetCode = function (code) {
         editor.setValue(code);
@@ -93485,7 +93485,8 @@ if (globalThis.gmodinterface) {
             return {
                 range: new monaco.Range(e.line, e.startColumn, e.line, e.endColumn),
                 options: {
-                    glyphMarginHoverMessage: { value: e.message }
+                    className: e.isError ? "lua-error" : "lua-warn",
+                    hoverMessage: { value: e.message }
                 }
             };
         });
@@ -102529,14 +102530,17 @@ exports.language = {
         ],
         whitespace: [
             [/[ \t\r\n]+/, ""],
-            [/--\[([=]*)\[/, "comment", "@comment.$1"],
-            [/\/\*/, "comment", "@comment.$1"],
-            [/--.*$/, "comment"],
+            [/\/\*/, "comment", "@comment"],
             [/\/\/.*$/, "comment"],
+            [/--\[([=]*)\[/, "comment", "@comment.$1"],
+            [/--.*$/, "comment"],
         ],
         comment: [
+            [/[^\/*]+/, "comment"],
+            [/\/\*/, "comment", "@push"],
+            [new RegExp("\\*/"), "comment", "@pop"],
+            [/[\/*]/, "comment"],
             [/[^\]]+/, "comment"],
-            [/\*\//, "comment"],
             [
                 /\]([=]*)\]/,
                 {
