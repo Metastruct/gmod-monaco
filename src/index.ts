@@ -30,7 +30,7 @@ let editor = monaco.editor.create(document.getElementById("container"), {
 });
 
 editor.focus();
-window.addEventListener('resize', () => editor.layout());
+window.addEventListener("resize", () => editor.layout());
 
 if (globalThis.gmodinterface) {
   globalThis.gmodinterface.SetCode = (code: string) => {
@@ -43,7 +43,8 @@ if (globalThis.gmodinterface) {
       return {
         range: new monaco.Range(e.line, e.startColumn, e.line, e.endColumn),
         options: {
-          glyphMarginHoverMessage: { value: e.message }
+          className: e.isError ? "lua-error" : "lua-warn",
+          hoverMessage: { value: e.message }
         }
       }
     });
