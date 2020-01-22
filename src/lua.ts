@@ -147,14 +147,17 @@ export const language: monaco.languages.IMonarchLanguage = {
     ],
     whitespace: [
       [/[ \t\r\n]+/, ""],
-      [/--\[([=]*)\[/, "comment", "@comment.$1"],
-      [/\/\*/, "comment", "@comment.$1"],
-      [/--.*$/, "comment"],
+      [/\/\*/, "comment", "@comment" ],
       [/\/\/.*$/, "comment"],
+      [/--\[([=]*)\[/, "comment", "@comment.$1"],
+      [/--.*$/, "comment"],
     ],
     comment: [
+      [/[^\/*]+/, "comment" ],
+      [/\/\*/, "comment", "@push" ], // nested comment
+      [new RegExp("\\*/"), "comment", "@pop" ],
+      [/[\/*]/, "comment" ],
       [/[^\]]+/, "comment"],
-      [/\*\//, "comment"],
       [
         /\]([=]*)\]/,
         {
