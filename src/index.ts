@@ -9,6 +9,7 @@ monaco.languages.register({
   extensions: [".lua"],
   aliases: ["Lua", "lua"],
 });
+
 monaco.languages.setMonarchTokensProvider("lua", lua.language);
 monaco.languages.setLanguageConfiguration("lua", lua.conf);
 monaco.languages.registerDocumentFormattingEditProvider("lua", new LuaFormatter());
@@ -34,20 +35,20 @@ let editor = monaco.editor.create(document.getElementById("container"), {
 editor.focus();
 window.addEventListener("resize", () => editor.layout());
 
+GmodInterface.SetEditor(editor);
+
 // override GmodInterface funcs with the lua ones we received
 if (globalThis.gmodinterface) {
   // valid functions to copy over
-  let copyFuncs: string[] = [ "OnCode", "OnReady" ];
+  let validFuncNames: string[] = [ "OnCode", "OnReady" ];
 
-  for (let funcName of copyFuncs) {
+  for (let funcName of validFuncNames) {
     let luaDefinedFunc: any = globalThis.gmodinterface[funcName]
     if (luaDefinedFunc) {
       GmodInterface[funcName] = luaDefinedFunc;
     }
   }
-
-  globalThis.gmodinterface = GmodInterface;
 }
 
-GmodInterface.SetEditor(editor);
+globalThis.gmodinterface = GmodInterface;
 GmodInterface.OnReady();
