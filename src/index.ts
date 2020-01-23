@@ -1,6 +1,7 @@
 import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
 import * as lua from "./lua";
 import { LuaFormatter } from "./formatter";
+import { LuaCompletionProvider } from "./completionProvider";
 import { LuaReport } from "./luacheckCompat";
 
 monaco.languages.register({
@@ -11,6 +12,7 @@ monaco.languages.register({
 monaco.languages.setMonarchTokensProvider("lua", lua.language);
 monaco.languages.setLanguageConfiguration("lua", lua.conf);
 monaco.languages.registerDocumentFormattingEditProvider("lua", new LuaFormatter());
+monaco.languages.registerCompletionItemProvider("lua", new LuaCompletionProvider());
 
 let editor = monaco.editor.create(document.getElementById("container"), {
   value: ["do", "\tlua()", "end"].join("\n"),
