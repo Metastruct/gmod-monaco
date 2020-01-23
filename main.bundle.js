@@ -118667,8 +118667,19 @@ var editor = monaco.editor.create(document.getElementById("container"), {
 });
 editor.focus();
 window.addEventListener("resize", function () { return editor.layout(); });
-// so we can access it from the browser
-globalThis.gmodinterface = gmodInterface_1.GmodInterface;
+// override GmodInterface funcs with the lua ones we received
+if (globalThis.gmodinterface) {
+    // valid functions to copy over
+    var copyFuncs = ["OnCode", "OnReady"];
+    for (var _i = 0, copyFuncs_1 = copyFuncs; _i < copyFuncs_1.length; _i++) {
+        var funcName = copyFuncs_1[_i];
+        var luaDefinedFunc = globalThis.gmodinterface[funcName];
+        if (luaDefinedFunc) {
+            gmodInterface_1.GmodInterface[funcName] = luaDefinedFunc;
+        }
+    }
+    globalThis.gmodinterface = gmodInterface_1.GmodInterface;
+}
 gmodInterface_1.GmodInterface.SetEditor(editor);
 gmodInterface_1.GmodInterface.OnReady();
 
