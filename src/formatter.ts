@@ -6,12 +6,14 @@ export class LuaFormatter implements monaco.languages.DocumentFormattingEditProv
 
 	provideDocumentFormattingEdits(model: monaco.editor.ITextModel, options: monaco.languages.FormattingOptions, token: monaco.CancellationToken): monaco.languages.ProviderResult<monaco.languages.TextEdit[]> {
 		let code: string = model.getValue();
-		model.setValue(formatText(code, {
-			useTabs: true,
-			indentCount: 4,
-			quotemark: "double",
-		}));
-
-		return [];
+		return [{
+			eol: monaco.editor.EndOfLineSequence.LF,
+			range: model.getFullModelRange(),
+			text: formatText(code, {
+				useTabs: !options.insertSpaces,
+				indentCount: options.tabSize,
+				quotemark: "double",
+			})
+		}];
 	}
 }

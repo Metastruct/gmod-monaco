@@ -24,7 +24,7 @@ let editor = monaco.editor.create(document.getElementById("container"), {
   autoIndent: "full",
   formatOnPaste: true,
   formatOnType: true,
-  acceptSuggestionOnEnter: "off",
+  acceptSuggestionOnEnter: "smart",
 
   // snippetSuggestions
 });
@@ -37,8 +37,12 @@ if (globalThis.gmodinterface) {
     editor.setValue(code);
   };
 
+  globalThis.gmodinterface.GotoLine = (line: number) => {
+    editor.revealLineInCenter(line, monaco.editor.ScrollType.Immediate);
+  };
+
   globalThis.gmodinterface.SubmitLuaReport = (report: LuaReport) => {
-     let markers: monaco.editor.IMarkerData[] = report.events.map(e => {
+    let markers: monaco.editor.IMarkerData[] = report.events.map(e => {
       return {
         message: e.message,
         endColumn: e.endColumn,
@@ -50,7 +54,7 @@ if (globalThis.gmodinterface) {
     });
 
     monaco.editor.setModelMarkers(editor.getModel(), "luacheck", markers);
-  }
+  };
 
   globalThis.gmodinterface.OnReady();
 }
