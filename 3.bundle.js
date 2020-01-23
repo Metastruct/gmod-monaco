@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[3],{
 
-/***/ 508:
+/***/ 509:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33497,7 +33497,7 @@ function getSelectionRanges(document, positions, stylesheet) {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/language/css/_deps/vscode-uri/index.js
-var vscode_uri = __webpack_require__(511);
+var vscode_uri = __webpack_require__(512);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/css/_deps/vscode-css-languageservice/services/scssNavigation.js
 /*---------------------------------------------------------------------------------------------
@@ -34372,7 +34372,7 @@ function disposeAll(disposables) {
 
 /***/ }),
 
-/***/ 511:
+/***/ 512:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
