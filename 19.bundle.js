@@ -65,16 +65,27 @@ var language = {
     // The main tokenizer for our languages
     tokenizer: {
         root: [
-            // identifiers and keywords
+            // fields and argument names
             [
-                /[a-z_$][\w$]*/,
+                /[a-z_][\w$]*/,
                 {
                     cases: {
                         '@keywords': 'keyword',
-                        '@default': 'identifier',
+                        '@default': 'key.identifier',
                     },
                 },
             ],
+            // identify typed input variables
+            [
+                /[$][\w$]*/,
+                {
+                    cases: {
+                        '@keywords': 'keyword',
+                        '@default': 'argument.identifier',
+                    },
+                },
+            ],
+            // to show class names nicely
             [
                 /[A-Z][\w\$]*/,
                 {
