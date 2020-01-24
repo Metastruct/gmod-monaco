@@ -118647,7 +118647,7 @@ var gmodInterface_1 = __webpack_require__(447);
 monaco.languages.register({
     id: "lua",
     extensions: [".lua"],
-    aliases: ["Lua", "lua"],
+    aliases: ["Lua", "lua"]
 });
 monaco.languages.setMonarchTokensProvider("lua", lua.language);
 monaco.languages.setLanguageConfiguration("lua", lua.conf);
@@ -118658,12 +118658,13 @@ var editor = monaco.editor.create(document.getElementById("container"), {
     language: "lua",
     theme: "vs-dark",
     minimap: {
-        enabled: false,
+        enabled: false
     },
     autoIndent: "full",
     formatOnPaste: true,
     formatOnType: true,
-    acceptSuggestionOnEnter: "smart",
+    acceptSuggestionOnEnter: "smart"
+    // snippetSuggestions
 });
 editor.focus();
 window.addEventListener("resize", function () { return editor.layout(); });
@@ -121931,31 +121932,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.conf = {
     comments: {
         lineComment: "--",
-        blockComment: ["--[[", "]]"],
+        blockComment: ["--[[", "]]"]
     },
     brackets: [
         ["{", "}"],
         ["[", "]"],
-        ["(", ")"],
+        ["(", ")"]
     ],
     autoClosingPairs: [
         { open: "{", close: "}" },
         { open: "[", close: "]" },
         { open: "(", close: ")" },
         { open: '"', close: '"', notIn: ["string"] },
-        { open: "'", close: "'", notIn: ["string"] },
+        { open: "'", close: "'", notIn: ["string"] }
     ],
     surroundingPairs: [
         { open: "{", close: "}" },
         { open: "[", close: "]" },
         { open: "(", close: ")" },
         { open: '"', close: '"' },
-        { open: "'", close: "'" },
+        { open: "'", close: "'" }
     ],
     indentationRules: {
         increaseIndentPattern: new RegExp("^((?!(\\-\\-)).)*((\\b(else|function|then|do|repeat)\\b((?!\\b(end|until)\\b).)*)|(\\{\\s*))$"),
-        decreaseIndentPattern: new RegExp("^\\s*((\\b(elseif|else|end|until)\\b)|(\\})|(\\)))"),
-    },
+        decreaseIndentPattern: new RegExp("^\\s*((\\b(elseif|else|end|until)\\b)|(\\})|(\\)))")
+    }
 };
 exports.language = {
     defaultToken: "",
@@ -121984,12 +121985,12 @@ exports.language = {
         "true",
         "until",
         "while",
-        "continue",
+        "continue"
     ],
     brackets: [
         { token: "delimiter.bracket", open: "{", close: "}" },
         { token: "delimiter.array", open: "[", close: "]" },
-        { token: "delimiter.parenthesis", open: "(", close: ")" },
+        { token: "delimiter.parenthesis", open: "(", close: ")" }
     ],
     operators: [
         "+",
@@ -122015,7 +122016,7 @@ exports.language = {
         "&&",
         "!",
         "!=",
-        "||",
+        "||"
     ],
     // we include these common regular expressions
     symbols: /[=><!~?:&|+\-*\/\^%]+/,
@@ -122029,20 +122030,20 @@ exports.language = {
                 {
                     cases: {
                         "@keywords": { token: "keyword.$0" },
-                        "@default": "identifier",
-                    },
-                },
+                        "@default": "identifier"
+                    }
+                }
             ],
             // whitespace
             { include: "@whitespace" },
             // keys
             [
                 /(,)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/,
-                ["delimiter", "", "key", "", "delimiter"],
+                ["delimiter", "", "key", "", "delimiter"]
             ],
             [
                 /({)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/,
-                ["@brackets", "", "key", "", "delimiter"],
+                ["@brackets", "", "key", "", "delimiter"]
             ],
             // delimiters and operators
             [/[{}()\[\]]/, "@brackets"],
@@ -122051,9 +122052,9 @@ exports.language = {
                 {
                     cases: {
                         "@operators": "delimiter",
-                        "@default": "",
-                    },
-                },
+                        "@default": ""
+                    }
+                }
             ],
             // numbers
             [/\d*\.\d+([eE][\-+]?\d+)?/, "number.float"],
@@ -122065,14 +122066,14 @@ exports.language = {
             [/"([^"\\]|\\.)*$/, "string.invalid"],
             [/'([^'\\]|\\.)*$/, "string.invalid"],
             [/"/, "string", '@string."'],
-            [/'/, "string", "@string.'"],
+            [/'/, "string", "@string.'"]
         ],
         whitespace: [
             [/[ \t\r\n]+/, ""],
             [/\/\*/, "comment", "@comment"],
             [/\/\/.*$/, "comment"],
             [/--\[([=]*)\[/, "comment", "@comment.$1"],
-            [/--.*$/, "comment"],
+            [/--.*$/, "comment"]
         ],
         comment: [
             [/[^\/*]+/, "comment"],
@@ -122085,11 +122086,11 @@ exports.language = {
                 {
                     cases: {
                         "$1==$S2": { token: "comment", next: "@pop" },
-                        "@default": "comment",
-                    },
-                },
+                        "@default": "comment"
+                    }
+                }
             ],
-            [/./, "comment"],
+            [/./, "comment"]
         ],
         string: [
             [/[^\\"']+/, "string"],
@@ -122100,12 +122101,12 @@ exports.language = {
                 {
                     cases: {
                         "$#==$S2": { token: "string", next: "@pop" },
-                        "@default": "string",
-                    },
-                },
-            ],
-        ],
-    },
+                        "@default": "string"
+                    }
+                }
+            ]
+        ]
+    }
 };
 
 
@@ -122123,15 +122124,17 @@ var LuaFormatter = /** @class */ (function () {
     }
     LuaFormatter.prototype.provideDocumentFormattingEdits = function (model, options, token) {
         var code = model.getValue();
-        return [{
+        return [
+            {
                 eol: monaco.editor.EndOfLineSequence.LF,
                 range: model.getFullModelRange(),
                 text: lua_fmt_1.formatText(code, {
                     useTabs: !options.insertSpaces,
                     indentCount: options.tabSize,
-                    quotemark: "double",
+                    quotemark: "double"
                 })
-            }];
+            }
+        ];
     };
     return LuaFormatter;
 }());
@@ -127293,7 +127296,7 @@ var LuaCompletionProvider = /** @class */ (function () {
         this.isCachingSuggestionList = false;
     }
     LuaCompletionProvider.prototype.hasSuggestionListCached = function () {
-        return this.suggestionListAttempts < 3 && this.suggestionList.length === 0;
+        return this.suggestionListAttempts >= 3 || this.suggestionList.length > 0;
     };
     LuaCompletionProvider.prototype.cacheSuggestionList = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -127315,13 +127318,13 @@ var LuaCompletionProvider = /** @class */ (function () {
                         lookup = _a.sent();
                         this.suggestionList = lookup.map(function (item) {
                             return {
-                                kind: item.html.match("wiki\.garrysmod.com\/page\/Enums")
+                                kind: item.html.match("wiki.garrysmod.com/page/Enums")
                                     ? monaco.languages.CompletionItemKind.Enum
                                     : monaco.languages.CompletionItemKind.Function,
                                 label: "[" + item.scope + "] " + item.title,
                                 insertText: item.title,
                                 description: item.html,
-                                range: new monaco.Range(0, 0, 0, 0),
+                                range: new monaco.Range(0, 0, 0, 0)
                             };
                         });
                         return [3 /*break*/, 6];
@@ -127386,7 +127389,9 @@ var GmodInterface = /** @class */ (function () {
                 startColumn: e.startColumn,
                 startLineNumber: e.line,
                 endLineNumber: e.line,
-                severity: e.isError ? monaco.MarkerSeverity.Error : monaco.MarkerSeverity.Warning
+                severity: e.isError
+                    ? monaco.MarkerSeverity.Error
+                    : monaco.MarkerSeverity.Warning
             };
         });
         monaco.editor.setModelMarkers(this.editor.getModel(), "luacheck", markers);
