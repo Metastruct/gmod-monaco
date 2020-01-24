@@ -1,6 +1,4 @@
 {
-	"cSpell.words": [
-		"gmodinterface"
-	],
-	"editor.tabSize": 2
+    "cSpell.words": ["gmodinterface"],
+    "editor.tabSize": 4
 }
