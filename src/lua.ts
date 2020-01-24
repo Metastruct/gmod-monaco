@@ -3,26 +3,26 @@ import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
 export const conf: monaco.languages.LanguageConfiguration = {
   comments: {
     lineComment: "--",
-    blockComment: ["--[[", "]]"],
+    blockComment: ["--[[", "]]"]
   },
   brackets: [
     ["{", "}"],
     ["[", "]"],
-    ["(", ")"],
+    ["(", ")"]
   ],
   autoClosingPairs: [
     { open: "{", close: "}" },
     { open: "[", close: "]" },
     { open: "(", close: ")" },
     { open: '"', close: '"', notIn: ["string"] },
-    { open: "'", close: "'", notIn: ["string"] },
+    { open: "'", close: "'", notIn: ["string"] }
   ],
   surroundingPairs: [
     { open: "{", close: "}" },
     { open: "[", close: "]" },
     { open: "(", close: ")" },
     { open: '"', close: '"' },
-    { open: "'", close: "'" },
+    { open: "'", close: "'" }
   ],
   indentationRules: {
     increaseIndentPattern: new RegExp(
@@ -30,8 +30,8 @@ export const conf: monaco.languages.LanguageConfiguration = {
     ),
     decreaseIndentPattern: new RegExp(
       "^\\s*((\\b(elseif|else|end|until)\\b)|(\\})|(\\)))"
-    ),
-  },
+    )
+  }
 };
 
 export const language: monaco.languages.IMonarchLanguage = {
@@ -62,12 +62,12 @@ export const language: monaco.languages.IMonarchLanguage = {
     "true",
     "until",
     "while",
-    "continue",
+    "continue"
   ],
   brackets: [
     { token: "delimiter.bracket", open: "{", close: "}" },
     { token: "delimiter.array", open: "[", close: "]" },
-    { token: "delimiter.parenthesis", open: "(", close: ")" },
+    { token: "delimiter.parenthesis", open: "(", close: ")" }
   ],
   operators: [
     "+",
@@ -93,7 +93,7 @@ export const language: monaco.languages.IMonarchLanguage = {
     "&&",
     "!",
     "!=",
-    "||",
+    "||"
   ],
   // we include these common regular expressions
   symbols: /[=><!~?:&|+\-*\/\^%]+/,
@@ -107,20 +107,20 @@ export const language: monaco.languages.IMonarchLanguage = {
         {
           cases: {
             "@keywords": { token: "keyword.$0" },
-            "@default": "identifier",
-          },
-        },
+            "@default": "identifier"
+          }
+        }
       ],
       // whitespace
       { include: "@whitespace" },
       // keys
       [
         /(,)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/,
-        ["delimiter", "", "key", "", "delimiter"],
+        ["delimiter", "", "key", "", "delimiter"]
       ],
       [
         /({)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/,
-        ["@brackets", "", "key", "", "delimiter"],
+        ["@brackets", "", "key", "", "delimiter"]
       ],
       // delimiters and operators
       [/[{}()\[\]]/, "@brackets"],
@@ -129,9 +129,9 @@ export const language: monaco.languages.IMonarchLanguage = {
         {
           cases: {
             "@operators": "delimiter",
-            "@default": "",
-          },
-        },
+            "@default": ""
+          }
+        }
       ],
       // numbers
       [/\d*\.\d+([eE][\-+]?\d+)?/, "number.float"],
@@ -143,14 +143,14 @@ export const language: monaco.languages.IMonarchLanguage = {
       [/"([^"\\]|\\.)*$/, "string.invalid"],
       [/'([^'\\]|\\.)*$/, "string.invalid"],
       [/"/, "string", '@string."'],
-      [/'/, "string", "@string.'"],
+      [/'/, "string", "@string.'"]
     ],
     whitespace: [
       [/[ \t\r\n]+/, ""],
       [/\/\*/, "comment", "@comment"],
       [/\/\/.*$/, "comment"],
       [/--\[([=]*)\[/, "comment", "@comment.$1"],
-      [/--.*$/, "comment"],
+      [/--.*$/, "comment"]
     ],
     comment: [
       [/[^\/*]+/, "comment"],
@@ -163,11 +163,11 @@ export const language: monaco.languages.IMonarchLanguage = {
         {
           cases: {
             "$1==$S2": { token: "comment", next: "@pop" },
-            "@default": "comment",
-          },
-        },
+            "@default": "comment"
+          }
+        }
       ],
-      [/./, "comment"],
+      [/./, "comment"]
     ],
     string: [
       [/[^\\"']+/, "string"],
@@ -178,10 +178,10 @@ export const language: monaco.languages.IMonarchLanguage = {
         {
           cases: {
             "$#==$S2": { token: "string", next: "@pop" },
-            "@default": "string",
-          },
-        },
-      ],
-    ],
-  },
+            "@default": "string"
+          }
+        }
+      ]
+    ]
+  }
 };
