@@ -127347,8 +127347,24 @@ var LuaCompletionProvider = /** @class */ (function () {
             // return an empty completion list, we dont have the data yet anyway
             return { suggestions: [] };
         }
+        var word = model.getWordAtPosition(position);
+        var replace = word
+            ? new monaco.Range(position.lineNumber, word.startColumn, position.lineNumber, word.endColumn)
+            : monaco.Range.fromPositions(position);
+        var insert = replace.setEndPosition(position.lineNumber, position.column);
         return {
-            suggestions: [] //this.suggestionList
+            suggestions: this.suggestionList
+                .filter(function (item) {
+                return item.label.indexOf(word.word) !== -1;
+            })
+                .map(function (item) {
+                return {
+                    kind: item.kind,
+                    label: item.label,
+                    insertText: item.insertText,
+                    range: { insert: insert, replace: replace }
+                };
+            })
         };
     };
     return LuaCompletionProvider;
