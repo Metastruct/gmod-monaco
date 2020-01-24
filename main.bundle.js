@@ -2006,7 +2006,7 @@ var Range = /** @class */ (function () {
 /* harmony import */ var _base_common_color_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 /* harmony import */ var _base_common_event_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(0);
-/* harmony import */ var _jsonschemas_common_jsonContributionRegistry_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(177);
+/* harmony import */ var _jsonschemas_common_jsonContributionRegistry_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(178);
 /* harmony import */ var _base_common_async_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(16);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -5056,7 +5056,7 @@ var common_event = __webpack_require__(6);
 var lifecycle = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/glob.js
-var glob = __webpack_require__(178);
+var glob = __webpack_require__(179);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes/languageSelector.js
 /*---------------------------------------------------------------------------------------------
@@ -6502,7 +6502,7 @@ var setImmediate = (function defineSetImmediate() {
 })();
 var OS = (_isMacintosh ? 2 /* Macintosh */ : (_isWindows ? 1 /* Windows */ : 3 /* Linux */));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(185), __webpack_require__(165)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(186), __webpack_require__(165)))
 
 /***/ }),
 /* 15 */
@@ -7330,7 +7330,7 @@ function optional(serviceIdentifier) {
 /* harmony import */ var _core_position_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var _core_range_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3);
 /* harmony import */ var _core_selection_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(22);
-/* harmony import */ var _model_textModel_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
+/* harmony import */ var _model_textModel_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(29);
 /* harmony import */ var _modes_languageConfigurationRegistry_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(32);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -9078,6 +9078,1900 @@ function createFastDomNode(domNode) {
 
 /***/ }),
 /* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return MINIMAP_GUTTER_WIDTH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigurationChangedEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return ValidatedEditorOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return TextEditorCursorStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return EditorFontLigatures; });
+/* unused harmony export EditorLayoutInfoComputer */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return EDITOR_FONT_DEFAULTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return EDITOR_MODEL_DEFAULTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return editorOptionsRegistry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return EditorOptions; });
+/* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var _base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
+/* harmony import */ var _model_wordHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(111);
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+
+
+/**
+ * @internal
+ * The width of the minimap gutter, in pixels.
+ */
+var MINIMAP_GUTTER_WIDTH = 8;
+//#endregion
+/**
+ * An event describing that the configuration of the editor has changed.
+ */
+var ConfigurationChangedEvent = /** @class */ (function () {
+    /**
+     * @internal
+     */
+    function ConfigurationChangedEvent(values) {
+        this._values = values;
+    }
+    /**
+     * @internal
+     */
+    ConfigurationChangedEvent.prototype.hasChanged = function (id) {
+        return this._values[id];
+    };
+    return ConfigurationChangedEvent;
+}());
+
+/**
+ * @internal
+ */
+var ValidatedEditorOptions = /** @class */ (function () {
+    function ValidatedEditorOptions() {
+        this._values = [];
+    }
+    ValidatedEditorOptions.prototype._read = function (option) {
+        return this._values[option];
+    };
+    ValidatedEditorOptions.prototype.get = function (id) {
+        return this._values[id];
+    };
+    ValidatedEditorOptions.prototype._write = function (option, value) {
+        this._values[option] = value;
+    };
+    return ValidatedEditorOptions;
+}());
+
+/**
+ * @internal
+ */
+var BaseEditorOption = /** @class */ (function () {
+    function BaseEditorOption(id, name, defaultValue, schema) {
+        this.id = id;
+        this.name = name;
+        this.defaultValue = defaultValue;
+        this.schema = schema;
+    }
+    BaseEditorOption.prototype.compute = function (env, options, value) {
+        return value;
+    };
+    return BaseEditorOption;
+}());
+/**
+ * @internal
+ */
+var ComputedEditorOption = /** @class */ (function () {
+    function ComputedEditorOption(id, deps) {
+        if (deps === void 0) { deps = null; }
+        this.schema = undefined;
+        this.id = id;
+        this.name = '_never_';
+        this.defaultValue = undefined;
+        this.deps = deps;
+    }
+    ComputedEditorOption.prototype.validate = function (input) {
+        return this.defaultValue;
+    };
+    return ComputedEditorOption;
+}());
+var SimpleEditorOption = /** @class */ (function () {
+    function SimpleEditorOption(id, name, defaultValue, schema) {
+        this.id = id;
+        this.name = name;
+        this.defaultValue = defaultValue;
+        this.schema = schema;
+    }
+    SimpleEditorOption.prototype.validate = function (input) {
+        if (typeof input === 'undefined') {
+            return this.defaultValue;
+        }
+        return input;
+    };
+    SimpleEditorOption.prototype.compute = function (env, options, value) {
+        return value;
+    };
+    return SimpleEditorOption;
+}());
+var EditorBooleanOption = /** @class */ (function (_super) {
+    __extends(EditorBooleanOption, _super);
+    function EditorBooleanOption(id, name, defaultValue, schema) {
+        if (schema === void 0) { schema = undefined; }
+        var _this = this;
+        if (typeof schema !== 'undefined') {
+            schema.type = 'boolean';
+            schema.default = defaultValue;
+        }
+        _this = _super.call(this, id, name, defaultValue, schema) || this;
+        return _this;
+    }
+    EditorBooleanOption.boolean = function (value, defaultValue) {
+        if (typeof value === 'undefined') {
+            return defaultValue;
+        }
+        if (value === 'false') {
+            // treat the string 'false' as false
+            return false;
+        }
+        return Boolean(value);
+    };
+    EditorBooleanOption.prototype.validate = function (input) {
+        return EditorBooleanOption.boolean(input, this.defaultValue);
+    };
+    return EditorBooleanOption;
+}(SimpleEditorOption));
+var EditorIntOption = /** @class */ (function (_super) {
+    __extends(EditorIntOption, _super);
+    function EditorIntOption(id, name, defaultValue, minimum, maximum, schema) {
+        if (schema === void 0) { schema = undefined; }
+        var _this = this;
+        if (typeof schema !== 'undefined') {
+            schema.type = 'integer';
+            schema.default = defaultValue;
+            schema.minimum = minimum;
+            schema.maximum = maximum;
+        }
+        _this = _super.call(this, id, name, defaultValue, schema) || this;
+        _this.minimum = minimum;
+        _this.maximum = maximum;
+        return _this;
+    }
+    EditorIntOption.clampedInt = function (value, defaultValue, minimum, maximum) {
+        var r;
+        if (typeof value === 'undefined') {
+            r = defaultValue;
+        }
+        else {
+            r = parseInt(value, 10);
+            if (isNaN(r)) {
+                r = defaultValue;
+            }
+        }
+        r = Math.max(minimum, r);
+        r = Math.min(maximum, r);
+        return r | 0;
+    };
+    EditorIntOption.prototype.validate = function (input) {
+        return EditorIntOption.clampedInt(input, this.defaultValue, this.minimum, this.maximum);
+    };
+    return EditorIntOption;
+}(SimpleEditorOption));
+var EditorFloatOption = /** @class */ (function (_super) {
+    __extends(EditorFloatOption, _super);
+    function EditorFloatOption(id, name, defaultValue, validationFn, schema) {
+        var _this = this;
+        if (typeof schema !== 'undefined') {
+            schema.type = 'number';
+            schema.default = defaultValue;
+        }
+        _this = _super.call(this, id, name, defaultValue, schema) || this;
+        _this.validationFn = validationFn;
+        return _this;
+    }
+    EditorFloatOption.clamp = function (n, min, max) {
+        if (n < min) {
+            return min;
+        }
+        if (n > max) {
+            return max;
+        }
+        return n;
+    };
+    EditorFloatOption.float = function (value, defaultValue) {
+        if (typeof value === 'number') {
+            return value;
+        }
+        if (typeof value === 'undefined') {
+            return defaultValue;
+        }
+        var r = parseFloat(value);
+        return (isNaN(r) ? defaultValue : r);
+    };
+    EditorFloatOption.prototype.validate = function (input) {
+        return this.validationFn(EditorFloatOption.float(input, this.defaultValue));
+    };
+    return EditorFloatOption;
+}(SimpleEditorOption));
+var EditorStringOption = /** @class */ (function (_super) {
+    __extends(EditorStringOption, _super);
+    function EditorStringOption(id, name, defaultValue, schema) {
+        if (schema === void 0) { schema = undefined; }
+        var _this = this;
+        if (typeof schema !== 'undefined') {
+            schema.type = 'string';
+            schema.default = defaultValue;
+        }
+        _this = _super.call(this, id, name, defaultValue, schema) || this;
+        return _this;
+    }
+    EditorStringOption.string = function (value, defaultValue) {
+        if (typeof value !== 'string') {
+            return defaultValue;
+        }
+        return value;
+    };
+    EditorStringOption.prototype.validate = function (input) {
+        return EditorStringOption.string(input, this.defaultValue);
+    };
+    return EditorStringOption;
+}(SimpleEditorOption));
+var EditorStringEnumOption = /** @class */ (function (_super) {
+    __extends(EditorStringEnumOption, _super);
+    function EditorStringEnumOption(id, name, defaultValue, allowedValues, schema) {
+        if (schema === void 0) { schema = undefined; }
+        var _this = this;
+        if (typeof schema !== 'undefined') {
+            schema.type = 'string';
+            schema.enum = allowedValues;
+            schema.default = defaultValue;
+        }
+        _this = _super.call(this, id, name, defaultValue, schema) || this;
+        _this._allowedValues = allowedValues;
+        return _this;
+    }
+    EditorStringEnumOption.stringSet = function (value, defaultValue, allowedValues) {
+        if (typeof value !== 'string') {
+            return defaultValue;
+        }
+        if (allowedValues.indexOf(value) === -1) {
+            return defaultValue;
+        }
+        return value;
+    };
+    EditorStringEnumOption.prototype.validate = function (input) {
+        return EditorStringEnumOption.stringSet(input, this.defaultValue, this._allowedValues);
+    };
+    return EditorStringEnumOption;
+}(SimpleEditorOption));
+var EditorEnumOption = /** @class */ (function (_super) {
+    __extends(EditorEnumOption, _super);
+    function EditorEnumOption(id, name, defaultValue, defaultStringValue, allowedValues, convert, schema) {
+        if (schema === void 0) { schema = undefined; }
+        var _this = this;
+        if (typeof schema !== 'undefined') {
+            schema.type = 'string';
+            schema.enum = allowedValues;
+            schema.default = defaultStringValue;
+        }
+        _this = _super.call(this, id, name, defaultValue, schema) || this;
+        _this._allowedValues = allowedValues;
+        _this._convert = convert;
+        return _this;
+    }
+    EditorEnumOption.prototype.validate = function (input) {
+        if (typeof input !== 'string') {
+            return this.defaultValue;
+        }
+        if (this._allowedValues.indexOf(input) === -1) {
+            return this.defaultValue;
+        }
+        return this._convert(input);
+    };
+    return EditorEnumOption;
+}(BaseEditorOption));
+//#endregion
+//#region autoIndent
+function _autoIndentFromString(autoIndent) {
+    switch (autoIndent) {
+        case 'none': return 0 /* None */;
+        case 'keep': return 1 /* Keep */;
+        case 'brackets': return 2 /* Brackets */;
+        case 'advanced': return 3 /* Advanced */;
+        case 'full': return 4 /* Full */;
+    }
+}
+//#endregion
+//#region accessibilitySupport
+var EditorAccessibilitySupport = /** @class */ (function (_super) {
+    __extends(EditorAccessibilitySupport, _super);
+    function EditorAccessibilitySupport() {
+        return _super.call(this, 2 /* accessibilitySupport */, 'accessibilitySupport', 0 /* Unknown */, {
+            type: 'string',
+            enum: ['auto', 'on', 'off'],
+            enumDescriptions: [
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport.auto', "The editor will use platform APIs to detect when a Screen Reader is attached."),
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport.on', "The editor will be permanently optimized for usage with a Screen Reader."),
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport.off', "The editor will never be optimized for usage with a Screen Reader."),
+            ],
+            default: 'auto',
+            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport', "Controls whether the editor should run in a mode where it is optimized for screen readers.")
+        }) || this;
+    }
+    EditorAccessibilitySupport.prototype.validate = function (input) {
+        switch (input) {
+            case 'auto': return 0 /* Unknown */;
+            case 'off': return 1 /* Disabled */;
+            case 'on': return 2 /* Enabled */;
+        }
+        return this.defaultValue;
+    };
+    EditorAccessibilitySupport.prototype.compute = function (env, options, value) {
+        if (value === 0 /* Unknown */) {
+            // The editor reads the `accessibilitySupport` from the environment
+            return env.accessibilitySupport;
+        }
+        return value;
+    };
+    return EditorAccessibilitySupport;
+}(BaseEditorOption));
+function _cursorBlinkingStyleFromString(cursorBlinkingStyle) {
+    switch (cursorBlinkingStyle) {
+        case 'blink': return 1 /* Blink */;
+        case 'smooth': return 2 /* Smooth */;
+        case 'phase': return 3 /* Phase */;
+        case 'expand': return 4 /* Expand */;
+        case 'solid': return 5 /* Solid */;
+    }
+}
+//#endregion
+//#region cursorStyle
+/**
+ * The style in which the editor's cursor should be rendered.
+ */
+var TextEditorCursorStyle;
+(function (TextEditorCursorStyle) {
+    /**
+     * As a vertical line (sitting between two characters).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["Line"] = 1] = "Line";
+    /**
+     * As a block (sitting on top of a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["Block"] = 2] = "Block";
+    /**
+     * As a horizontal line (sitting under a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["Underline"] = 3] = "Underline";
+    /**
+     * As a thin vertical line (sitting between two characters).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["LineThin"] = 4] = "LineThin";
+    /**
+     * As an outlined block (sitting on top of a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["BlockOutline"] = 5] = "BlockOutline";
+    /**
+     * As a thin horizontal line (sitting under a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["UnderlineThin"] = 6] = "UnderlineThin";
+})(TextEditorCursorStyle || (TextEditorCursorStyle = {}));
+function _cursorStyleFromString(cursorStyle) {
+    switch (cursorStyle) {
+        case 'line': return TextEditorCursorStyle.Line;
+        case 'block': return TextEditorCursorStyle.Block;
+        case 'underline': return TextEditorCursorStyle.Underline;
+        case 'line-thin': return TextEditorCursorStyle.LineThin;
+        case 'block-outline': return TextEditorCursorStyle.BlockOutline;
+        case 'underline-thin': return TextEditorCursorStyle.UnderlineThin;
+    }
+}
+//#endregion
+//#region editorClassName
+var EditorClassName = /** @class */ (function (_super) {
+    __extends(EditorClassName, _super);
+    function EditorClassName() {
+        return _super.call(this, 100 /* editorClassName */, [53 /* mouseStyle */, 25 /* extraEditorClassName */]) || this;
+    }
+    EditorClassName.prototype.compute = function (env, options, _) {
+        var className = 'monaco-editor';
+        if (options.get(25 /* extraEditorClassName */)) {
+            className += ' ' + options.get(25 /* extraEditorClassName */);
+        }
+        if (env.extraEditorClassName) {
+            className += ' ' + env.extraEditorClassName;
+        }
+        if (options.get(53 /* mouseStyle */) === 'default') {
+            className += ' mouse-default';
+        }
+        else if (options.get(53 /* mouseStyle */) === 'copy') {
+            className += ' mouse-copy';
+        }
+        if (options.get(81 /* showUnused */)) {
+            className += ' showUnused';
+        }
+        return className;
+    };
+    return EditorClassName;
+}(ComputedEditorOption));
+//#endregion
+//#region emptySelectionClipboard
+var EditorEmptySelectionClipboard = /** @class */ (function (_super) {
+    __extends(EditorEmptySelectionClipboard, _super);
+    function EditorEmptySelectionClipboard() {
+        return _super.call(this, 24 /* emptySelectionClipboard */, 'emptySelectionClipboard', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('emptySelectionClipboard', "Controls whether copying without a selection copies the current line.") }) || this;
+    }
+    EditorEmptySelectionClipboard.prototype.compute = function (env, options, value) {
+        return value && env.emptySelectionClipboard;
+    };
+    return EditorEmptySelectionClipboard;
+}(EditorBooleanOption));
+var EditorFind = /** @class */ (function (_super) {
+    __extends(EditorFind, _super);
+    function EditorFind() {
+        var _this = this;
+        var defaults = {
+            seedSearchStringFromSelection: true,
+            autoFindInSelection: 'never',
+            globalFindClipboard: false,
+            addExtraSpaceOnTop: true
+        };
+        _this = _super.call(this, 27 /* find */, 'find', defaults, {
+            'editor.find.seedSearchStringFromSelection': {
+                type: 'boolean',
+                default: defaults.seedSearchStringFromSelection,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.seedSearchStringFromSelection', "Controls whether the search string in the Find Widget is seeded from the editor selection.")
+            },
+            'editor.find.autoFindInSelection': {
+                type: 'string',
+                enum: ['never', 'always', 'multiline'],
+                default: defaults.autoFindInSelection,
+                enumDescriptions: [
+                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.find.autoFindInSelection.never', 'Never turn on Find in selection automatically (default)'),
+                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.find.autoFindInSelection.always', 'Always turn on Find in selection automatically'),
+                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.find.autoFindInSelection.multiline', 'Turn on Find in selection automatically when multiple lines of content are selected.')
+                ],
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.autoFindInSelection', "Controls whether the find operation is carried out on selected text or the entire file in the editor.")
+            },
+            'editor.find.globalFindClipboard': {
+                type: 'boolean',
+                default: defaults.globalFindClipboard,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.globalFindClipboard', "Controls whether the Find Widget should read or modify the shared find clipboard on macOS."),
+                included: _base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"]
+            },
+            'editor.find.addExtraSpaceOnTop': {
+                type: 'boolean',
+                default: defaults.addExtraSpaceOnTop,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.addExtraSpaceOnTop', "Controls whether the Find Widget should add extra lines on top of the editor. When true, you can scroll beyond the first line when the Find Widget is visible.")
+            }
+        }) || this;
+        return _this;
+    }
+    EditorFind.prototype.validate = function (_input) {
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        return {
+            seedSearchStringFromSelection: EditorBooleanOption.boolean(input.seedSearchStringFromSelection, this.defaultValue.seedSearchStringFromSelection),
+            autoFindInSelection: typeof _input.autoFindInSelection === 'boolean'
+                ? (_input.autoFindInSelection ? 'always' : 'never')
+                : EditorStringEnumOption.stringSet(input.autoFindInSelection, this.defaultValue.autoFindInSelection, ['never', 'always', 'multiline']),
+            globalFindClipboard: EditorBooleanOption.boolean(input.globalFindClipboard, this.defaultValue.globalFindClipboard),
+            addExtraSpaceOnTop: EditorBooleanOption.boolean(input.addExtraSpaceOnTop, this.defaultValue.addExtraSpaceOnTop)
+        };
+    };
+    return EditorFind;
+}(BaseEditorOption));
+//#endregion
+//#region fontLigatures
+/**
+ * @internal
+ */
+var EditorFontLigatures = /** @class */ (function (_super) {
+    __extends(EditorFontLigatures, _super);
+    function EditorFontLigatures() {
+        return _super.call(this, 33 /* fontLigatures */, 'fontLigatures', EditorFontLigatures.OFF, {
+            anyOf: [
+                {
+                    type: 'boolean',
+                    description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontLigatures', "Enables/Disables font ligatures."),
+                },
+                {
+                    type: 'string',
+                    description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontFeatureSettings', "Explicit font-feature-settings.")
+                }
+            ],
+            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontLigaturesGeneral', "Configures font ligatures."),
+            default: false
+        }) || this;
+    }
+    EditorFontLigatures.prototype.validate = function (input) {
+        if (typeof input === 'undefined') {
+            return this.defaultValue;
+        }
+        if (typeof input === 'string') {
+            if (input === 'false') {
+                return EditorFontLigatures.OFF;
+            }
+            if (input === 'true') {
+                return EditorFontLigatures.ON;
+            }
+            return input;
+        }
+        if (Boolean(input)) {
+            return EditorFontLigatures.ON;
+        }
+        return EditorFontLigatures.OFF;
+    };
+    EditorFontLigatures.OFF = '"liga" off, "calt" off';
+    EditorFontLigatures.ON = '"liga" on, "calt" on';
+    return EditorFontLigatures;
+}(BaseEditorOption));
+
+//#endregion
+//#region fontInfo
+var EditorFontInfo = /** @class */ (function (_super) {
+    __extends(EditorFontInfo, _super);
+    function EditorFontInfo() {
+        return _super.call(this, 32 /* fontInfo */) || this;
+    }
+    EditorFontInfo.prototype.compute = function (env, options, _) {
+        return env.fontInfo;
+    };
+    return EditorFontInfo;
+}(ComputedEditorOption));
+//#endregion
+//#region fontSize
+var EditorFontSize = /** @class */ (function (_super) {
+    __extends(EditorFontSize, _super);
+    function EditorFontSize() {
+        return _super.call(this, 34 /* fontSize */, 'fontSize', EDITOR_FONT_DEFAULTS.fontSize, {
+            type: 'number',
+            minimum: 6,
+            maximum: 100,
+            default: EDITOR_FONT_DEFAULTS.fontSize,
+            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontSize', "Controls the font size in pixels.")
+        }) || this;
+    }
+    EditorFontSize.prototype.validate = function (input) {
+        var r = EditorFloatOption.float(input, this.defaultValue);
+        if (r === 0) {
+            return EDITOR_FONT_DEFAULTS.fontSize;
+        }
+        return EditorFloatOption.clamp(r, 6, 100);
+    };
+    EditorFontSize.prototype.compute = function (env, options, value) {
+        // The final fontSize respects the editor zoom level.
+        // So take the result from env.fontInfo
+        return env.fontInfo.fontSize;
+    };
+    return EditorFontSize;
+}(SimpleEditorOption));
+var EditorGoToLocation = /** @class */ (function (_super) {
+    __extends(EditorGoToLocation, _super);
+    function EditorGoToLocation() {
+        var _this = this;
+        var defaults = {
+            multiple: 'peek',
+            multipleDefinitions: 'peek',
+            multipleTypeDefinitions: 'peek',
+            multipleDeclarations: 'peek',
+            multipleImplementations: 'peek',
+            multipleReferences: 'peek',
+            alternativeDefinitionCommand: 'editor.action.goToReferences',
+            alternativeTypeDefinitionCommand: 'editor.action.goToReferences',
+            alternativeDeclarationCommand: 'editor.action.goToReferences',
+            alternativeImplementationCommand: '',
+            alternativeReferenceCommand: '',
+        };
+        var jsonSubset = {
+            type: 'string',
+            enum: ['peek', 'gotoAndPeek', 'goto'],
+            default: defaults.multiple,
+            enumDescriptions: [
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.peek', 'Show peek view of the results (default)'),
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.gotoAndPeek', 'Go to the primary result and show a peek view'),
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.goto', 'Go to the primary result and enable peek-less navigation to others')
+            ]
+        };
+        _this = _super.call(this, 39 /* gotoLocation */, 'gotoLocation', defaults, {
+            'editor.gotoLocation.multiple': {
+                deprecationMessage: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.deprecated', "This setting is deprecated, please use separate settings like 'editor.editor.gotoLocation.multipleDefinitions' or 'editor.editor.gotoLocation.multipleImplementations' instead."),
+            },
+            'editor.gotoLocation.multipleDefinitions': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleDefinitions', "Controls the behavior the 'Go to Definition'-command when multiple target locations exist.") }, jsonSubset),
+            'editor.gotoLocation.multipleTypeDefinitions': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleTypeDefinitions', "Controls the behavior the 'Go to Type Definition'-command when multiple target locations exist.") }, jsonSubset),
+            'editor.gotoLocation.multipleDeclarations': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleDeclarations', "Controls the behavior the 'Go to Declaration'-command when multiple target locations exist.") }, jsonSubset),
+            'editor.gotoLocation.multipleImplementations': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleImplemenattions', "Controls the behavior the 'Go to Implementations'-command when multiple target locations exist.") }, jsonSubset),
+            'editor.gotoLocation.multipleReferences': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleReferences', "Controls the behavior the 'Go to References'-command when multiple target locations exist.") }, jsonSubset),
+            'editor.gotoLocation.alternativeDefinitionCommand': {
+                type: 'string',
+                default: defaults.alternativeDefinitionCommand,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeDefinitionCommand', "Alternative command id that is being executed when the result of 'Go to Definition' is the current location.")
+            },
+            'editor.gotoLocation.alternativeTypeDefinitionCommand': {
+                type: 'string',
+                default: defaults.alternativeTypeDefinitionCommand,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeTypeDefinitionCommand', "Alternative command id that is being executed when the result of 'Go to Type Definition' is the current location.")
+            },
+            'editor.gotoLocation.alternativeDeclarationCommand': {
+                type: 'string',
+                default: defaults.alternativeDeclarationCommand,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeDeclarationCommand', "Alternative command id that is being executed when the result of 'Go to Declaration' is the current location.")
+            },
+            'editor.gotoLocation.alternativeImplementationCommand': {
+                type: 'string',
+                default: defaults.alternativeImplementationCommand,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeImplementationCommand', "Alternative command id that is being executed when the result of 'Go to Implementation' is the current location.")
+            },
+            'editor.gotoLocation.alternativeReferenceCommand': {
+                type: 'string',
+                default: defaults.alternativeReferenceCommand,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeReferenceCommand', "Alternative command id that is being executed when the result of 'Go to Reference' is the current location.")
+            },
+        }) || this;
+        return _this;
+    }
+    EditorGoToLocation.prototype.validate = function (_input) {
+        var _a, _b, _c, _d, _e;
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        return {
+            multiple: EditorStringEnumOption.stringSet(input.multiple, this.defaultValue.multiple, ['peek', 'gotoAndPeek', 'goto']),
+            multipleDefinitions: (_a = input.multipleDefinitions, (_a !== null && _a !== void 0 ? _a : EditorStringEnumOption.stringSet(input.multipleDefinitions, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
+            multipleTypeDefinitions: (_b = input.multipleTypeDefinitions, (_b !== null && _b !== void 0 ? _b : EditorStringEnumOption.stringSet(input.multipleTypeDefinitions, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
+            multipleDeclarations: (_c = input.multipleDeclarations, (_c !== null && _c !== void 0 ? _c : EditorStringEnumOption.stringSet(input.multipleDeclarations, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
+            multipleImplementations: (_d = input.multipleImplementations, (_d !== null && _d !== void 0 ? _d : EditorStringEnumOption.stringSet(input.multipleImplementations, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
+            multipleReferences: (_e = input.multipleReferences, (_e !== null && _e !== void 0 ? _e : EditorStringEnumOption.stringSet(input.multipleReferences, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
+            alternativeDefinitionCommand: EditorStringOption.string(input.alternativeDefinitionCommand, this.defaultValue.alternativeDefinitionCommand),
+            alternativeTypeDefinitionCommand: EditorStringOption.string(input.alternativeTypeDefinitionCommand, this.defaultValue.alternativeTypeDefinitionCommand),
+            alternativeDeclarationCommand: EditorStringOption.string(input.alternativeDeclarationCommand, this.defaultValue.alternativeDeclarationCommand),
+            alternativeImplementationCommand: EditorStringOption.string(input.alternativeImplementationCommand, this.defaultValue.alternativeImplementationCommand),
+            alternativeReferenceCommand: EditorStringOption.string(input.alternativeReferenceCommand, this.defaultValue.alternativeReferenceCommand),
+        };
+    };
+    return EditorGoToLocation;
+}(BaseEditorOption));
+var EditorHover = /** @class */ (function (_super) {
+    __extends(EditorHover, _super);
+    function EditorHover() {
+        var _this = this;
+        var defaults = {
+            enabled: true,
+            delay: 300,
+            sticky: true
+        };
+        _this = _super.call(this, 42 /* hover */, 'hover', defaults, {
+            'editor.hover.enabled': {
+                type: 'boolean',
+                default: defaults.enabled,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hover.enabled', "Controls whether the hover is shown.")
+            },
+            'editor.hover.delay': {
+                type: 'number',
+                default: defaults.delay,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hover.delay', "Controls the delay in milliseconds after which the hover is shown.")
+            },
+            'editor.hover.sticky': {
+                type: 'boolean',
+                default: defaults.sticky,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hover.sticky', "Controls whether the hover should remain visible when mouse is moved over it.")
+            },
+        }) || this;
+        return _this;
+    }
+    EditorHover.prototype.validate = function (_input) {
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        return {
+            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled),
+            delay: EditorIntOption.clampedInt(input.delay, this.defaultValue.delay, 0, 10000),
+            sticky: EditorBooleanOption.boolean(input.sticky, this.defaultValue.sticky)
+        };
+    };
+    return EditorHover;
+}(BaseEditorOption));
+/**
+ * @internal
+ */
+var EditorLayoutInfoComputer = /** @class */ (function (_super) {
+    __extends(EditorLayoutInfoComputer, _super);
+    function EditorLayoutInfoComputer() {
+        return _super.call(this, 103 /* layoutInfo */, [38 /* glyphMargin */, 46 /* lineDecorationsWidth */, 29 /* folding */, 52 /* minimap */, 74 /* scrollbar */, 48 /* lineNumbers */]) || this;
+    }
+    EditorLayoutInfoComputer.prototype.compute = function (env, options, _) {
+        return EditorLayoutInfoComputer.computeLayout(options, {
+            outerWidth: env.outerWidth,
+            outerHeight: env.outerHeight,
+            lineHeight: env.fontInfo.lineHeight,
+            lineNumbersDigitCount: env.lineNumbersDigitCount,
+            typicalHalfwidthCharacterWidth: env.fontInfo.typicalHalfwidthCharacterWidth,
+            maxDigitWidth: env.fontInfo.maxDigitWidth,
+            pixelRatio: env.pixelRatio
+        });
+    };
+    EditorLayoutInfoComputer.computeLayout = function (options, env) {
+        var outerWidth = env.outerWidth | 0;
+        var outerHeight = env.outerHeight | 0;
+        var lineHeight = env.lineHeight | 0;
+        var lineNumbersDigitCount = env.lineNumbersDigitCount | 0;
+        var typicalHalfwidthCharacterWidth = env.typicalHalfwidthCharacterWidth;
+        var maxDigitWidth = env.maxDigitWidth;
+        var pixelRatio = env.pixelRatio;
+        var showGlyphMargin = options.get(38 /* glyphMargin */);
+        var showLineNumbers = (options.get(48 /* lineNumbers */).renderType !== 0 /* Off */);
+        var lineNumbersMinChars = options.get(49 /* lineNumbersMinChars */) | 0;
+        var minimap = options.get(52 /* minimap */);
+        var minimapEnabled = minimap.enabled;
+        var minimapSide = minimap.side;
+        var minimapRenderCharacters = minimap.renderCharacters;
+        var minimapScale = (pixelRatio >= 2 ? Math.round(minimap.scale * 2) : minimap.scale);
+        var minimapMaxColumn = minimap.maxColumn | 0;
+        var scrollbar = options.get(74 /* scrollbar */);
+        var verticalScrollbarWidth = scrollbar.verticalScrollbarSize | 0;
+        var verticalScrollbarHasArrows = scrollbar.verticalHasArrows;
+        var scrollbarArrowSize = scrollbar.arrowSize | 0;
+        var horizontalScrollbarHeight = scrollbar.horizontalScrollbarSize | 0;
+        var rawLineDecorationsWidth = options.get(46 /* lineDecorationsWidth */);
+        var folding = options.get(29 /* folding */);
+        var lineDecorationsWidth;
+        if (typeof rawLineDecorationsWidth === 'string' && /^\d+(\.\d+)?ch$/.test(rawLineDecorationsWidth)) {
+            var multiple = parseFloat(rawLineDecorationsWidth.substr(0, rawLineDecorationsWidth.length - 2));
+            lineDecorationsWidth = EditorIntOption.clampedInt(multiple * typicalHalfwidthCharacterWidth, 0, 0, 1000);
+        }
+        else {
+            lineDecorationsWidth = EditorIntOption.clampedInt(rawLineDecorationsWidth, 0, 0, 1000);
+        }
+        if (folding) {
+            lineDecorationsWidth += 16;
+        }
+        var lineNumbersWidth = 0;
+        if (showLineNumbers) {
+            var digitCount = Math.max(lineNumbersDigitCount, lineNumbersMinChars);
+            lineNumbersWidth = Math.round(digitCount * maxDigitWidth);
+        }
+        var glyphMarginWidth = 0;
+        if (showGlyphMargin) {
+            glyphMarginWidth = lineHeight;
+        }
+        var glyphMarginLeft = 0;
+        var lineNumbersLeft = glyphMarginLeft + glyphMarginWidth;
+        var decorationsLeft = lineNumbersLeft + lineNumbersWidth;
+        var contentLeft = decorationsLeft + lineDecorationsWidth;
+        var remainingWidth = outerWidth - glyphMarginWidth - lineNumbersWidth - lineDecorationsWidth;
+        var renderMinimap;
+        var minimapLeft;
+        var minimapWidth;
+        var contentWidth;
+        if (!minimapEnabled) {
+            minimapLeft = 0;
+            minimapWidth = 0;
+            renderMinimap = 0 /* None */;
+            contentWidth = remainingWidth;
+        }
+        else {
+            // The minimapScale is also the pixel width of each character. Adjust
+            // for the pixel ratio of the screen.
+            var minimapCharWidth = minimapScale / pixelRatio;
+            renderMinimap = minimapRenderCharacters ? 1 /* Text */ : 2 /* Blocks */;
+            // Given:
+            // (leaving 2px for the cursor to have space after the last character)
+            // viewportColumn = (contentWidth - verticalScrollbarWidth - 2) / typicalHalfwidthCharacterWidth
+            // minimapWidth = viewportColumn * minimapCharWidth
+            // contentWidth = remainingWidth - minimapWidth
+            // What are good values for contentWidth and minimapWidth ?
+            // minimapWidth = ((contentWidth - verticalScrollbarWidth - 2) / typicalHalfwidthCharacterWidth) * minimapCharWidth
+            // typicalHalfwidthCharacterWidth * minimapWidth = (contentWidth - verticalScrollbarWidth - 2) * minimapCharWidth
+            // typicalHalfwidthCharacterWidth * minimapWidth = (remainingWidth - minimapWidth - verticalScrollbarWidth - 2) * minimapCharWidth
+            // (typicalHalfwidthCharacterWidth + minimapCharWidth) * minimapWidth = (remainingWidth - verticalScrollbarWidth - 2) * minimapCharWidth
+            // minimapWidth = ((remainingWidth - verticalScrollbarWidth - 2) * minimapCharWidth) / (typicalHalfwidthCharacterWidth + minimapCharWidth)
+            minimapWidth = Math.max(0, Math.floor(((remainingWidth - verticalScrollbarWidth - 2) * minimapCharWidth) / (typicalHalfwidthCharacterWidth + minimapCharWidth))) + MINIMAP_GUTTER_WIDTH;
+            var minimapColumns = minimapWidth / minimapCharWidth;
+            if (minimapColumns > minimapMaxColumn) {
+                minimapWidth = Math.floor(minimapMaxColumn * minimapCharWidth);
+            }
+            contentWidth = remainingWidth - minimapWidth;
+            if (minimapSide === 'left') {
+                minimapLeft = 0;
+                glyphMarginLeft += minimapWidth;
+                lineNumbersLeft += minimapWidth;
+                decorationsLeft += minimapWidth;
+                contentLeft += minimapWidth;
+            }
+            else {
+                minimapLeft = outerWidth - minimapWidth - verticalScrollbarWidth;
+            }
+        }
+        // (leaving 2px for the cursor to have space after the last character)
+        var viewportColumn = Math.max(1, Math.floor((contentWidth - verticalScrollbarWidth - 2) / typicalHalfwidthCharacterWidth));
+        var verticalArrowSize = (verticalScrollbarHasArrows ? scrollbarArrowSize : 0);
+        return {
+            width: outerWidth,
+            height: outerHeight,
+            glyphMarginLeft: glyphMarginLeft,
+            glyphMarginWidth: glyphMarginWidth,
+            glyphMarginHeight: outerHeight,
+            lineNumbersLeft: lineNumbersLeft,
+            lineNumbersWidth: lineNumbersWidth,
+            lineNumbersHeight: outerHeight,
+            decorationsLeft: decorationsLeft,
+            decorationsWidth: lineDecorationsWidth,
+            decorationsHeight: outerHeight,
+            contentLeft: contentLeft,
+            contentWidth: contentWidth,
+            contentHeight: outerHeight,
+            renderMinimap: renderMinimap,
+            minimapLeft: minimapLeft,
+            minimapWidth: minimapWidth,
+            viewportColumn: viewportColumn,
+            verticalScrollbarWidth: verticalScrollbarWidth,
+            horizontalScrollbarHeight: horizontalScrollbarHeight,
+            overviewRuler: {
+                top: verticalArrowSize,
+                width: verticalScrollbarWidth,
+                height: (outerHeight - 2 * verticalArrowSize),
+                right: 0
+            }
+        };
+    };
+    return EditorLayoutInfoComputer;
+}(ComputedEditorOption));
+
+var EditorLightbulb = /** @class */ (function (_super) {
+    __extends(EditorLightbulb, _super);
+    function EditorLightbulb() {
+        var _this = this;
+        var defaults = { enabled: true };
+        _this = _super.call(this, 45 /* lightbulb */, 'lightbulb', defaults, {
+            'editor.lightbulb.enabled': {
+                type: 'boolean',
+                default: defaults.enabled,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('codeActions', "Enables the code action lightbulb in the editor.")
+            },
+        }) || this;
+        return _this;
+    }
+    EditorLightbulb.prototype.validate = function (_input) {
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        return {
+            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled)
+        };
+    };
+    return EditorLightbulb;
+}(BaseEditorOption));
+//#endregion
+//#region lineHeight
+var EditorLineHeight = /** @class */ (function (_super) {
+    __extends(EditorLineHeight, _super);
+    function EditorLineHeight() {
+        return _super.call(this, 47 /* lineHeight */, 'lineHeight', EDITOR_FONT_DEFAULTS.lineHeight, 0, 150, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineHeight', "Controls the line height. Use 0 to compute the line height from the font size.") }) || this;
+    }
+    EditorLineHeight.prototype.compute = function (env, options, value) {
+        // The lineHeight is computed from the fontSize if it is 0.
+        // Moreover, the final lineHeight respects the editor zoom level.
+        // So take the result from env.fontInfo
+        return env.fontInfo.lineHeight;
+    };
+    return EditorLineHeight;
+}(EditorIntOption));
+var EditorMinimap = /** @class */ (function (_super) {
+    __extends(EditorMinimap, _super);
+    function EditorMinimap() {
+        var _this = this;
+        var defaults = {
+            enabled: true,
+            side: 'right',
+            showSlider: 'mouseover',
+            renderCharacters: true,
+            maxColumn: 120,
+            scale: 1,
+        };
+        _this = _super.call(this, 52 /* minimap */, 'minimap', defaults, {
+            'editor.minimap.enabled': {
+                type: 'boolean',
+                default: defaults.enabled,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.enabled', "Controls whether the minimap is shown.")
+            },
+            'editor.minimap.side': {
+                type: 'string',
+                enum: ['left', 'right'],
+                default: defaults.side,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.side', "Controls the side where to render the minimap.")
+            },
+            'editor.minimap.showSlider': {
+                type: 'string',
+                enum: ['always', 'mouseover'],
+                default: defaults.showSlider,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.showSlider', "Controls when the minimap slider is shown.")
+            },
+            'editor.minimap.scale': {
+                type: 'number',
+                default: defaults.scale,
+                minimum: 1,
+                maximum: 3,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.scale', "Scale of content drawn in the minimap.")
+            },
+            'editor.minimap.renderCharacters': {
+                type: 'boolean',
+                default: defaults.renderCharacters,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.renderCharacters', "Render the actual characters on a line as opposed to color blocks.")
+            },
+            'editor.minimap.maxColumn': {
+                type: 'number',
+                default: defaults.maxColumn,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.maxColumn', "Limit the width of the minimap to render at most a certain number of columns.")
+            },
+        }) || this;
+        return _this;
+    }
+    EditorMinimap.prototype.validate = function (_input) {
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        return {
+            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled),
+            side: EditorStringEnumOption.stringSet(input.side, this.defaultValue.side, ['right', 'left']),
+            showSlider: EditorStringEnumOption.stringSet(input.showSlider, this.defaultValue.showSlider, ['always', 'mouseover']),
+            renderCharacters: EditorBooleanOption.boolean(input.renderCharacters, this.defaultValue.renderCharacters),
+            scale: EditorIntOption.clampedInt(input.scale, 1, 1, 3),
+            maxColumn: EditorIntOption.clampedInt(input.maxColumn, this.defaultValue.maxColumn, 1, 10000),
+        };
+    };
+    return EditorMinimap;
+}(BaseEditorOption));
+//#endregion
+//#region multiCursorModifier
+function _multiCursorModifierFromString(multiCursorModifier) {
+    if (multiCursorModifier === 'ctrlCmd') {
+        return (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"] ? 'metaKey' : 'ctrlKey');
+    }
+    return 'altKey';
+}
+var EditorParameterHints = /** @class */ (function (_super) {
+    __extends(EditorParameterHints, _super);
+    function EditorParameterHints() {
+        var _this = this;
+        var defaults = {
+            enabled: true,
+            cycle: false
+        };
+        _this = _super.call(this, 62 /* parameterHints */, 'parameterHints', defaults, {
+            'editor.parameterHints.enabled': {
+                type: 'boolean',
+                default: defaults.enabled,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('parameterHints.enabled', "Enables a pop-up that shows parameter documentation and type information as you type.")
+            },
+            'editor.parameterHints.cycle': {
+                type: 'boolean',
+                default: defaults.cycle,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('parameterHints.cycle', "Controls whether the parameter hints menu cycles or closes when reaching the end of the list.")
+            },
+        }) || this;
+        return _this;
+    }
+    EditorParameterHints.prototype.validate = function (_input) {
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        return {
+            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled),
+            cycle: EditorBooleanOption.boolean(input.cycle, this.defaultValue.cycle)
+        };
+    };
+    return EditorParameterHints;
+}(BaseEditorOption));
+//#endregion
+//#region pixelRatio
+var EditorPixelRatio = /** @class */ (function (_super) {
+    __extends(EditorPixelRatio, _super);
+    function EditorPixelRatio() {
+        return _super.call(this, 101 /* pixelRatio */) || this;
+    }
+    EditorPixelRatio.prototype.compute = function (env, options, _) {
+        return env.pixelRatio;
+    };
+    return EditorPixelRatio;
+}(ComputedEditorOption));
+var EditorQuickSuggestions = /** @class */ (function (_super) {
+    __extends(EditorQuickSuggestions, _super);
+    function EditorQuickSuggestions() {
+        var _this = this;
+        var defaults = {
+            other: true,
+            comments: false,
+            strings: false
+        };
+        _this = _super.call(this, 63 /* quickSuggestions */, 'quickSuggestions', defaults, {
+            anyOf: [
+                {
+                    type: 'boolean',
+                },
+                {
+                    type: 'object',
+                    properties: {
+                        strings: {
+                            type: 'boolean',
+                            default: defaults.strings,
+                            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions.strings', "Enable quick suggestions inside strings.")
+                        },
+                        comments: {
+                            type: 'boolean',
+                            default: defaults.comments,
+                            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions.comments', "Enable quick suggestions inside comments.")
+                        },
+                        other: {
+                            type: 'boolean',
+                            default: defaults.other,
+                            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions.other', "Enable quick suggestions outside of strings and comments.")
+                        },
+                    }
+                }
+            ],
+            default: defaults,
+            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions', "Controls whether suggestions should automatically show up while typing.")
+        }) || this;
+        _this.defaultValue = defaults;
+        return _this;
+    }
+    EditorQuickSuggestions.prototype.validate = function (_input) {
+        if (typeof _input === 'boolean') {
+            return _input;
+        }
+        if (typeof _input === 'object') {
+            var input = _input;
+            var opts = {
+                other: EditorBooleanOption.boolean(input.other, this.defaultValue.other),
+                comments: EditorBooleanOption.boolean(input.comments, this.defaultValue.comments),
+                strings: EditorBooleanOption.boolean(input.strings, this.defaultValue.strings),
+            };
+            if (opts.other && opts.comments && opts.strings) {
+                return true; // all on
+            }
+            else if (!opts.other && !opts.comments && !opts.strings) {
+                return false; // all off
+            }
+            else {
+                return opts;
+            }
+        }
+        return this.defaultValue;
+    };
+    return EditorQuickSuggestions;
+}(BaseEditorOption));
+var EditorRenderLineNumbersOption = /** @class */ (function (_super) {
+    __extends(EditorRenderLineNumbersOption, _super);
+    function EditorRenderLineNumbersOption() {
+        return _super.call(this, 48 /* lineNumbers */, 'lineNumbers', { renderType: 1 /* On */, renderFn: null }, {
+            type: 'string',
+            enum: ['off', 'on', 'relative', 'interval'],
+            enumDescriptions: [
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.off', "Line numbers are not rendered."),
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.on', "Line numbers are rendered as absolute number."),
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.relative', "Line numbers are rendered as distance in lines to cursor position."),
+                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.interval', "Line numbers are rendered every 10 lines.")
+            ],
+            default: 'on',
+            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers', "Controls the display of line numbers.")
+        }) || this;
+    }
+    EditorRenderLineNumbersOption.prototype.validate = function (lineNumbers) {
+        var renderType = this.defaultValue.renderType;
+        var renderFn = this.defaultValue.renderFn;
+        if (typeof lineNumbers !== 'undefined') {
+            if (typeof lineNumbers === 'function') {
+                renderType = 4 /* Custom */;
+                renderFn = lineNumbers;
+            }
+            else if (lineNumbers === 'interval') {
+                renderType = 3 /* Interval */;
+            }
+            else if (lineNumbers === 'relative') {
+                renderType = 2 /* Relative */;
+            }
+            else if (lineNumbers === 'on') {
+                renderType = 1 /* On */;
+            }
+            else {
+                renderType = 0 /* Off */;
+            }
+        }
+        return {
+            renderType: renderType,
+            renderFn: renderFn
+        };
+    };
+    return EditorRenderLineNumbersOption;
+}(BaseEditorOption));
+//#endregion
+//#region rulers
+var EditorRulers = /** @class */ (function (_super) {
+    __extends(EditorRulers, _super);
+    function EditorRulers() {
+        var _this = this;
+        var defaults = [];
+        _this = _super.call(this, 73 /* rulers */, 'rulers', defaults, {
+            type: 'array',
+            items: {
+                type: 'number'
+            },
+            default: defaults,
+            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('rulers', "Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.")
+        }) || this;
+        return _this;
+    }
+    EditorRulers.prototype.validate = function (input) {
+        if (Array.isArray(input)) {
+            var rulers = [];
+            for (var _i = 0, input_1 = input; _i < input_1.length; _i++) {
+                var value = input_1[_i];
+                rulers.push(EditorIntOption.clampedInt(value, 0, 0, 10000));
+            }
+            rulers.sort(function (a, b) { return a - b; });
+            return rulers;
+        }
+        return this.defaultValue;
+    };
+    return EditorRulers;
+}(SimpleEditorOption));
+function _scrollbarVisibilityFromString(visibility, defaultValue) {
+    if (typeof visibility !== 'string') {
+        return defaultValue;
+    }
+    switch (visibility) {
+        case 'hidden': return 2 /* Hidden */;
+        case 'visible': return 3 /* Visible */;
+        default: return 1 /* Auto */;
+    }
+}
+var EditorScrollbar = /** @class */ (function (_super) {
+    __extends(EditorScrollbar, _super);
+    function EditorScrollbar() {
+        return _super.call(this, 74 /* scrollbar */, 'scrollbar', {
+            vertical: 1 /* Auto */,
+            horizontal: 1 /* Auto */,
+            arrowSize: 11,
+            useShadows: true,
+            verticalHasArrows: false,
+            horizontalHasArrows: false,
+            horizontalScrollbarSize: 10,
+            horizontalSliderSize: 10,
+            verticalScrollbarSize: 14,
+            verticalSliderSize: 14,
+            handleMouseWheel: true,
+            alwaysConsumeMouseWheel: true
+        }) || this;
+    }
+    EditorScrollbar.prototype.validate = function (_input) {
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        var horizontalScrollbarSize = EditorIntOption.clampedInt(input.horizontalScrollbarSize, this.defaultValue.horizontalScrollbarSize, 0, 1000);
+        var verticalScrollbarSize = EditorIntOption.clampedInt(input.verticalScrollbarSize, this.defaultValue.verticalScrollbarSize, 0, 1000);
+        return {
+            arrowSize: EditorIntOption.clampedInt(input.arrowSize, this.defaultValue.arrowSize, 0, 1000),
+            vertical: _scrollbarVisibilityFromString(input.vertical, this.defaultValue.vertical),
+            horizontal: _scrollbarVisibilityFromString(input.horizontal, this.defaultValue.horizontal),
+            useShadows: EditorBooleanOption.boolean(input.useShadows, this.defaultValue.useShadows),
+            verticalHasArrows: EditorBooleanOption.boolean(input.verticalHasArrows, this.defaultValue.verticalHasArrows),
+            horizontalHasArrows: EditorBooleanOption.boolean(input.horizontalHasArrows, this.defaultValue.horizontalHasArrows),
+            handleMouseWheel: EditorBooleanOption.boolean(input.handleMouseWheel, this.defaultValue.handleMouseWheel),
+            alwaysConsumeMouseWheel: EditorBooleanOption.boolean(input.alwaysConsumeMouseWheel, this.defaultValue.alwaysConsumeMouseWheel),
+            horizontalScrollbarSize: horizontalScrollbarSize,
+            horizontalSliderSize: EditorIntOption.clampedInt(input.horizontalSliderSize, horizontalScrollbarSize, 0, 1000),
+            verticalScrollbarSize: verticalScrollbarSize,
+            verticalSliderSize: EditorIntOption.clampedInt(input.verticalSliderSize, verticalScrollbarSize, 0, 1000),
+        };
+    };
+    return EditorScrollbar;
+}(BaseEditorOption));
+var EditorSuggest = /** @class */ (function (_super) {
+    __extends(EditorSuggest, _super);
+    function EditorSuggest() {
+        var _this = this;
+        var defaults = {
+            insertMode: 'insert',
+            insertHighlight: false,
+            filterGraceful: true,
+            snippetsPreventQuickSuggestions: true,
+            localityBonus: false,
+            shareSuggestSelections: false,
+            showIcons: true,
+            maxVisibleSuggestions: 12,
+            showMethods: true,
+            showFunctions: true,
+            showConstructors: true,
+            showFields: true,
+            showVariables: true,
+            showClasses: true,
+            showStructs: true,
+            showInterfaces: true,
+            showModules: true,
+            showProperties: true,
+            showEvents: true,
+            showOperators: true,
+            showUnits: true,
+            showValues: true,
+            showConstants: true,
+            showEnums: true,
+            showEnumMembers: true,
+            showKeywords: true,
+            showWords: true,
+            showColors: true,
+            showFiles: true,
+            showReferences: true,
+            showFolders: true,
+            showTypeParameters: true,
+            showSnippets: true,
+        };
+        _this = _super.call(this, 85 /* suggest */, 'suggest', defaults, {
+            'editor.suggest.insertMode': {
+                type: 'string',
+                enum: ['insert', 'replace'],
+                enumDescriptions: [
+                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertMode.insert', "Insert suggestion without overwriting text right of the cursor."),
+                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertMode.replace', "Insert suggestion and overwrite text right of the cursor."),
+                ],
+                default: defaults.insertMode,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertMode', "Controls whether words are overwritten when accepting completions. Note that this depends on extensions opting into this feature.")
+            },
+            'editor.suggest.insertHighlight': {
+                type: 'boolean',
+                default: defaults.insertHighlight,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertHighlight', "Controls whether unexpected text modifications while accepting completions should be highlighted, e.g `insertMode` is `replace` but the completion only supports `insert`.")
+            },
+            'editor.suggest.filterGraceful': {
+                type: 'boolean',
+                default: defaults.filterGraceful,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.filterGraceful', "Controls whether filtering and sorting suggestions accounts for small typos.")
+            },
+            'editor.suggest.localityBonus': {
+                type: 'boolean',
+                default: defaults.localityBonus,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.localityBonus', "Controls whether sorting favours words that appear close to the cursor.")
+            },
+            'editor.suggest.shareSuggestSelections': {
+                type: 'boolean',
+                default: defaults.shareSuggestSelections,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.shareSuggestSelections', "Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `#editor.suggestSelection#`).")
+            },
+            'editor.suggest.snippetsPreventQuickSuggestions': {
+                type: 'boolean',
+                default: defaults.snippetsPreventQuickSuggestions,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.snippetsPreventQuickSuggestions', "Control whether an active snippet prevents quick suggestions.")
+            },
+            'editor.suggest.showIcons': {
+                type: 'boolean',
+                default: defaults.showIcons,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.showIcons', "Controls whether to show or hide icons in suggestions.")
+            },
+            'editor.suggest.maxVisibleSuggestions': {
+                type: 'number',
+                default: defaults.maxVisibleSuggestions,
+                minimum: 1,
+                maximum: 15,
+                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.maxVisibleSuggestions', "Controls how many suggestions IntelliSense will show before showing a scrollbar (maximum 15).")
+            },
+            'editor.suggest.filteredTypes': {
+                type: 'object',
+                deprecationMessage: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('deprecated', "This setting is deprecated, please use separate settings like 'editor.suggest.showKeywords' or 'editor.suggest.showSnippets' instead.")
+            },
+            'editor.suggest.showMethods': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showMethods', "When enabled IntelliSense shows `method`-suggestions.")
+            },
+            'editor.suggest.showFunctions': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFunctions', "When enabled IntelliSense shows `function`-suggestions.")
+            },
+            'editor.suggest.showConstructors': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showConstructors', "When enabled IntelliSense shows `constructor`-suggestions.")
+            },
+            'editor.suggest.showFields': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFields', "When enabled IntelliSense shows `field`-suggestions.")
+            },
+            'editor.suggest.showVariables': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showVariables', "When enabled IntelliSense shows `variable`-suggestions.")
+            },
+            'editor.suggest.showClasses': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showClasss', "When enabled IntelliSense shows `class`-suggestions.")
+            },
+            'editor.suggest.showStructs': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showStructs', "When enabled IntelliSense shows `struct`-suggestions.")
+            },
+            'editor.suggest.showInterfaces': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showInterfaces', "When enabled IntelliSense shows `interface`-suggestions.")
+            },
+            'editor.suggest.showModules': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showModules', "When enabled IntelliSense shows `module`-suggestions.")
+            },
+            'editor.suggest.showProperties': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showPropertys', "When enabled IntelliSense shows `property`-suggestions.")
+            },
+            'editor.suggest.showEvents': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showEvents', "When enabled IntelliSense shows `event`-suggestions.")
+            },
+            'editor.suggest.showOperators': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showOperators', "When enabled IntelliSense shows `operator`-suggestions.")
+            },
+            'editor.suggest.showUnits': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showUnits', "When enabled IntelliSense shows `unit`-suggestions.")
+            },
+            'editor.suggest.showValues': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showValues', "When enabled IntelliSense shows `value`-suggestions.")
+            },
+            'editor.suggest.showConstants': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showConstants', "When enabled IntelliSense shows `constant`-suggestions.")
+            },
+            'editor.suggest.showEnums': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showEnums', "When enabled IntelliSense shows `enum`-suggestions.")
+            },
+            'editor.suggest.showEnumMembers': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showEnumMembers', "When enabled IntelliSense shows `enumMember`-suggestions.")
+            },
+            'editor.suggest.showKeywords': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showKeywords', "When enabled IntelliSense shows `keyword`-suggestions.")
+            },
+            'editor.suggest.showWords': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showTexts', "When enabled IntelliSense shows `text`-suggestions.")
+            },
+            'editor.suggest.showColors': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showColors', "When enabled IntelliSense shows `color`-suggestions.")
+            },
+            'editor.suggest.showFiles': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFiles', "When enabled IntelliSense shows `file`-suggestions.")
+            },
+            'editor.suggest.showReferences': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showReferences', "When enabled IntelliSense shows `reference`-suggestions.")
+            },
+            'editor.suggest.showCustomcolors': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showCustomcolors', "When enabled IntelliSense shows `customcolor`-suggestions.")
+            },
+            'editor.suggest.showFolders': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFolders', "When enabled IntelliSense shows `folder`-suggestions.")
+            },
+            'editor.suggest.showTypeParameters': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showTypeParameters', "When enabled IntelliSense shows `typeParameter`-suggestions.")
+            },
+            'editor.suggest.showSnippets': {
+                type: 'boolean',
+                default: true,
+                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showSnippets', "When enabled IntelliSense shows `snippet`-suggestions.")
+            },
+        }) || this;
+        return _this;
+    }
+    EditorSuggest.prototype.validate = function (_input) {
+        if (typeof _input !== 'object') {
+            return this.defaultValue;
+        }
+        var input = _input;
+        return {
+            insertMode: EditorStringEnumOption.stringSet(input.insertMode, this.defaultValue.insertMode, ['insert', 'replace']),
+            insertHighlight: EditorBooleanOption.boolean(input.insertHighlight, this.defaultValue.insertHighlight),
+            filterGraceful: EditorBooleanOption.boolean(input.filterGraceful, this.defaultValue.filterGraceful),
+            snippetsPreventQuickSuggestions: EditorBooleanOption.boolean(input.snippetsPreventQuickSuggestions, this.defaultValue.filterGraceful),
+            localityBonus: EditorBooleanOption.boolean(input.localityBonus, this.defaultValue.localityBonus),
+            shareSuggestSelections: EditorBooleanOption.boolean(input.shareSuggestSelections, this.defaultValue.shareSuggestSelections),
+            showIcons: EditorBooleanOption.boolean(input.showIcons, this.defaultValue.showIcons),
+            maxVisibleSuggestions: EditorIntOption.clampedInt(input.maxVisibleSuggestions, this.defaultValue.maxVisibleSuggestions, 1, 15),
+            showMethods: EditorBooleanOption.boolean(input.showMethods, this.defaultValue.showMethods),
+            showFunctions: EditorBooleanOption.boolean(input.showFunctions, this.defaultValue.showFunctions),
+            showConstructors: EditorBooleanOption.boolean(input.showConstructors, this.defaultValue.showConstructors),
+            showFields: EditorBooleanOption.boolean(input.showFields, this.defaultValue.showFields),
+            showVariables: EditorBooleanOption.boolean(input.showVariables, this.defaultValue.showVariables),
+            showClasses: EditorBooleanOption.boolean(input.showClasses, this.defaultValue.showClasses),
+            showStructs: EditorBooleanOption.boolean(input.showStructs, this.defaultValue.showStructs),
+            showInterfaces: EditorBooleanOption.boolean(input.showInterfaces, this.defaultValue.showInterfaces),
+            showModules: EditorBooleanOption.boolean(input.showModules, this.defaultValue.showModules),
+            showProperties: EditorBooleanOption.boolean(input.showProperties, this.defaultValue.showProperties),
+            showEvents: EditorBooleanOption.boolean(input.showEvents, this.defaultValue.showEvents),
+            showOperators: EditorBooleanOption.boolean(input.showOperators, this.defaultValue.showOperators),
+            showUnits: EditorBooleanOption.boolean(input.showUnits, this.defaultValue.showUnits),
+            showValues: EditorBooleanOption.boolean(input.showValues, this.defaultValue.showValues),
+            showConstants: EditorBooleanOption.boolean(input.showConstants, this.defaultValue.showConstants),
+            showEnums: EditorBooleanOption.boolean(input.showEnums, this.defaultValue.showEnums),
+            showEnumMembers: EditorBooleanOption.boolean(input.showEnumMembers, this.defaultValue.showEnumMembers),
+            showKeywords: EditorBooleanOption.boolean(input.showKeywords, this.defaultValue.showKeywords),
+            showWords: EditorBooleanOption.boolean(input.showWords, this.defaultValue.showWords),
+            showColors: EditorBooleanOption.boolean(input.showColors, this.defaultValue.showColors),
+            showFiles: EditorBooleanOption.boolean(input.showFiles, this.defaultValue.showFiles),
+            showReferences: EditorBooleanOption.boolean(input.showReferences, this.defaultValue.showReferences),
+            showFolders: EditorBooleanOption.boolean(input.showFolders, this.defaultValue.showFolders),
+            showTypeParameters: EditorBooleanOption.boolean(input.showTypeParameters, this.defaultValue.showTypeParameters),
+            showSnippets: EditorBooleanOption.boolean(input.showSnippets, this.defaultValue.showSnippets),
+        };
+    };
+    return EditorSuggest;
+}(BaseEditorOption));
+//#endregion
+//#region tabFocusMode
+var EditorTabFocusMode = /** @class */ (function (_super) {
+    __extends(EditorTabFocusMode, _super);
+    function EditorTabFocusMode() {
+        return _super.call(this, 102 /* tabFocusMode */, [65 /* readOnly */]) || this;
+    }
+    EditorTabFocusMode.prototype.compute = function (env, options, _) {
+        var readOnly = options.get(65 /* readOnly */);
+        return (readOnly ? true : env.tabFocusMode);
+    };
+    return EditorTabFocusMode;
+}(ComputedEditorOption));
+function _wrappingIndentFromString(wrappingIndent) {
+    switch (wrappingIndent) {
+        case 'none': return 0 /* None */;
+        case 'same': return 1 /* Same */;
+        case 'indent': return 2 /* Indent */;
+        case 'deepIndent': return 3 /* DeepIndent */;
+    }
+}
+var EditorWrappingInfoComputer = /** @class */ (function (_super) {
+    __extends(EditorWrappingInfoComputer, _super);
+    function EditorWrappingInfoComputer() {
+        return _super.call(this, 104 /* wrappingInfo */, [93 /* wordWrap */, 97 /* wordWrapColumn */, 98 /* wordWrapMinified */, 103 /* layoutInfo */, 2 /* accessibilitySupport */]) || this;
+    }
+    EditorWrappingInfoComputer.prototype.compute = function (env, options, _) {
+        var wordWrap = options.get(93 /* wordWrap */);
+        var wordWrapColumn = options.get(97 /* wordWrapColumn */);
+        var wordWrapMinified = options.get(98 /* wordWrapMinified */);
+        var layoutInfo = options.get(103 /* layoutInfo */);
+        var accessibilitySupport = options.get(2 /* accessibilitySupport */);
+        var bareWrappingInfo = null;
+        {
+            if (accessibilitySupport === 2 /* Enabled */) {
+                // See https://github.com/Microsoft/vscode/issues/27766
+                // Never enable wrapping when a screen reader is attached
+                // because arrow down etc. will not move the cursor in the way
+                // a screen reader expects.
+                bareWrappingInfo = {
+                    isWordWrapMinified: false,
+                    isViewportWrapping: false,
+                    wrappingColumn: -1
+                };
+            }
+            else if (wordWrapMinified && env.isDominatedByLongLines) {
+                // Force viewport width wrapping if model is dominated by long lines
+                bareWrappingInfo = {
+                    isWordWrapMinified: true,
+                    isViewportWrapping: true,
+                    wrappingColumn: Math.max(1, layoutInfo.viewportColumn)
+                };
+            }
+            else if (wordWrap === 'on') {
+                bareWrappingInfo = {
+                    isWordWrapMinified: false,
+                    isViewportWrapping: true,
+                    wrappingColumn: Math.max(1, layoutInfo.viewportColumn)
+                };
+            }
+            else if (wordWrap === 'bounded') {
+                bareWrappingInfo = {
+                    isWordWrapMinified: false,
+                    isViewportWrapping: true,
+                    wrappingColumn: Math.min(Math.max(1, layoutInfo.viewportColumn), wordWrapColumn)
+                };
+            }
+            else if (wordWrap === 'wordWrapColumn') {
+                bareWrappingInfo = {
+                    isWordWrapMinified: false,
+                    isViewportWrapping: false,
+                    wrappingColumn: wordWrapColumn
+                };
+            }
+            else {
+                bareWrappingInfo = {
+                    isWordWrapMinified: false,
+                    isViewportWrapping: false,
+                    wrappingColumn: -1
+                };
+            }
+        }
+        return {
+            isDominatedByLongLines: env.isDominatedByLongLines,
+            isWordWrapMinified: bareWrappingInfo.isWordWrapMinified,
+            isViewportWrapping: bareWrappingInfo.isViewportWrapping,
+            wrappingColumn: bareWrappingInfo.wrappingColumn,
+        };
+    };
+    return EditorWrappingInfoComputer;
+}(ComputedEditorOption));
+//#endregion
+var DEFAULT_WINDOWS_FONT_FAMILY = 'Consolas, \'Courier New\', monospace';
+var DEFAULT_MAC_FONT_FAMILY = 'Menlo, Monaco, \'Courier New\', monospace';
+var DEFAULT_LINUX_FONT_FAMILY = '\'Droid Sans Mono\', \'monospace\', monospace, \'Droid Sans Fallback\'';
+/**
+ * @internal
+ */
+var EDITOR_FONT_DEFAULTS = {
+    fontFamily: (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"] ? DEFAULT_MAC_FONT_FAMILY : (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isLinux */ "d"] ? DEFAULT_LINUX_FONT_FAMILY : DEFAULT_WINDOWS_FONT_FAMILY)),
+    fontWeight: 'normal',
+    fontSize: (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"] ? 12 : 14),
+    lineHeight: 0,
+    letterSpacing: 0,
+};
+/**
+ * @internal
+ */
+var EDITOR_MODEL_DEFAULTS = {
+    tabSize: 4,
+    indentSize: 4,
+    insertSpaces: true,
+    detectIndentation: true,
+    trimAutoWhitespace: true,
+    largeFileOptimizations: true
+};
+/**
+ * @internal
+ */
+var editorOptionsRegistry = [];
+function register(option) {
+    editorOptionsRegistry[option.id] = option;
+    return option;
+}
+/**
+ * WORKAROUND: TS emits "any" for complex editor options values (anything except string, bool, enum, etc. ends up being "any")
+ * @monacodtsreplace
+ * /accessibilitySupport, any/accessibilitySupport, AccessibilitySupport/
+ * /find, any/find, EditorFindOptions/
+ * /fontInfo, any/fontInfo, FontInfo/
+ * /gotoLocation, any/gotoLocation, GoToLocationOptions/
+ * /hover, any/hover, EditorHoverOptions/
+ * /lightbulb, any/lightbulb, EditorLightbulbOptions/
+ * /minimap, any/minimap, EditorMinimapOptions/
+ * /parameterHints, any/parameterHints, InternalParameterHintOptions/
+ * /quickSuggestions, any/quickSuggestions, ValidQuickSuggestionsOptions/
+ * /suggest, any/suggest, InternalSuggestOptions/
+ */
+var EditorOptions = {
+    acceptSuggestionOnCommitCharacter: register(new EditorBooleanOption(0 /* acceptSuggestionOnCommitCharacter */, 'acceptSuggestionOnCommitCharacter', true, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('acceptSuggestionOnCommitCharacter', "Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.") })),
+    acceptSuggestionOnEnter: register(new EditorStringEnumOption(1 /* acceptSuggestionOnEnter */, 'acceptSuggestionOnEnter', 'on', ['on', 'smart', 'off'], {
+        markdownEnumDescriptions: [
+            '',
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('acceptSuggestionOnEnterSmart', "Only accept a suggestion with `Enter` when it makes a textual change."),
+            ''
+        ],
+        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('acceptSuggestionOnEnter', "Controls whether suggestions should be accepted on `Enter`, in addition to `Tab`. Helps to avoid ambiguity between inserting new lines or accepting suggestions.")
+    })),
+    accessibilitySupport: register(new EditorAccessibilitySupport()),
+    accessibilityPageSize: register(new EditorIntOption(3 /* accessibilityPageSize */, 'accessibilityPageSize', 10, 1, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilityPageSize', "Controls the number of lines in the editor that can be read out by a screen reader. Warning: this has a performance implication for numbers larger than the default.") })),
+    ariaLabel: register(new EditorStringOption(4 /* ariaLabel */, 'ariaLabel', _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editorViewAccessibleLabel', "Editor content"))),
+    autoClosingBrackets: register(new EditorStringEnumOption(5 /* autoClosingBrackets */, 'autoClosingBrackets', 'languageDefined', ['always', 'languageDefined', 'beforeWhitespace', 'never'], {
+        enumDescriptions: [
+            '',
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingBrackets.languageDefined', "Use language configurations to determine when to autoclose brackets."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingBrackets.beforeWhitespace', "Autoclose brackets only when the cursor is to the left of whitespace."),
+            '',
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoClosingBrackets', "Controls whether the editor should automatically close brackets after the user adds an opening bracket.")
+    })),
+    autoClosingOvertype: register(new EditorStringEnumOption(6 /* autoClosingOvertype */, 'autoClosingOvertype', 'auto', ['always', 'auto', 'never'], {
+        enumDescriptions: [
+            '',
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingOvertype.auto', "Type over closing quotes or brackets only if they were automatically inserted."),
+            '',
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoClosingOvertype', "Controls whether the editor should type over closing quotes or brackets.")
+    })),
+    autoClosingQuotes: register(new EditorStringEnumOption(7 /* autoClosingQuotes */, 'autoClosingQuotes', 'languageDefined', ['always', 'languageDefined', 'beforeWhitespace', 'never'], {
+        enumDescriptions: [
+            '',
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingQuotes.languageDefined', "Use language configurations to determine when to autoclose quotes."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingQuotes.beforeWhitespace', "Autoclose quotes only when the cursor is to the left of whitespace."),
+            '',
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoClosingQuotes', "Controls whether the editor should automatically close quotes after the user adds an opening quote.")
+    })),
+    autoIndent: register(new EditorEnumOption(8 /* autoIndent */, 'autoIndent', 4 /* Full */, 'full', ['none', 'keep', 'brackets', 'advanced', 'full'], _autoIndentFromString, {
+        enumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.none', "The editor will not insert indentation automatically."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.keep', "The editor will keep the current line's indentation."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.brackets', "The editor will keep the current line's indentation and honor language defined brackets."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.advanced', "The editor will keep the current line's indentation, honor language defined brackets and invoke special onEnterRules defined by languages."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.full', "The editor will keep the current line's indentation, honor language defined brackets, invoke special onEnterRules defined by languages, and honor indentationRules defined by languages."),
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoIndent', "Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.")
+    })),
+    automaticLayout: register(new EditorBooleanOption(9 /* automaticLayout */, 'automaticLayout', false)),
+    autoSurround: register(new EditorStringEnumOption(10 /* autoSurround */, 'autoSurround', 'languageDefined', ['languageDefined', 'quotes', 'brackets', 'never'], {
+        enumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoSurround.languageDefined', "Use language configurations to determine when to automatically surround selections."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoSurround.quotes', "Surround with quotes but not brackets."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoSurround.brackets', "Surround with brackets but not quotes."),
+            ''
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoSurround', "Controls whether the editor should automatically surround selections.")
+    })),
+    codeLens: register(new EditorBooleanOption(11 /* codeLens */, 'codeLens', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('codeLens', "Controls whether the editor shows CodeLens.") })),
+    colorDecorators: register(new EditorBooleanOption(12 /* colorDecorators */, 'colorDecorators', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('colorDecorators', "Controls whether the editor should render the inline color decorators and color picker.") })),
+    contextmenu: register(new EditorBooleanOption(13 /* contextmenu */, 'contextmenu', true)),
+    copyWithSyntaxHighlighting: register(new EditorBooleanOption(14 /* copyWithSyntaxHighlighting */, 'copyWithSyntaxHighlighting', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('copyWithSyntaxHighlighting', "Controls whether syntax highlighting should be copied into the clipboard.") })),
+    cursorBlinking: register(new EditorEnumOption(15 /* cursorBlinking */, 'cursorBlinking', 1 /* Blink */, 'blink', ['blink', 'smooth', 'phase', 'expand', 'solid'], _cursorBlinkingStyleFromString, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorBlinking', "Control the cursor animation style.") })),
+    cursorSmoothCaretAnimation: register(new EditorBooleanOption(16 /* cursorSmoothCaretAnimation */, 'cursorSmoothCaretAnimation', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSmoothCaretAnimation', "Controls whether the smooth caret animation should be enabled.") })),
+    cursorStyle: register(new EditorEnumOption(17 /* cursorStyle */, 'cursorStyle', TextEditorCursorStyle.Line, 'line', ['line', 'block', 'underline', 'line-thin', 'block-outline', 'underline-thin'], _cursorStyleFromString, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorStyle', "Controls the cursor style.") })),
+    cursorSurroundingLines: register(new EditorIntOption(18 /* cursorSurroundingLines */, 'cursorSurroundingLines', 0, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLines', "Controls the minimal number of visible leading and trailing lines surrounding the cursor. Known as 'scrollOff' or `scrollOffset` in some other editors.") })),
+    cursorSurroundingLinesStyle: register(new EditorStringEnumOption(19 /* cursorSurroundingLinesStyle */, 'cursorSurroundingLinesStyle', 'default', ['default', 'all'], {
+        enumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLinesStyle.default', "`cursorSurroundingLines` is enforced only when triggered via the keyboard or API."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLinesStyle.all', "`cursorSurroundingLines` is enforced always.")
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLinesStyle', "Controls when `cursorSurroundingLines` should be enforced.")
+    })),
+    cursorWidth: register(new EditorIntOption(20 /* cursorWidth */, 'cursorWidth', 0, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorWidth', "Controls the width of the cursor when `#editor.cursorStyle#` is set to `line`.") })),
+    disableLayerHinting: register(new EditorBooleanOption(21 /* disableLayerHinting */, 'disableLayerHinting', false)),
+    disableMonospaceOptimizations: register(new EditorBooleanOption(22 /* disableMonospaceOptimizations */, 'disableMonospaceOptimizations', false)),
+    dragAndDrop: register(new EditorBooleanOption(23 /* dragAndDrop */, 'dragAndDrop', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('dragAndDrop', "Controls whether the editor should allow moving selections via drag and drop.") })),
+    emptySelectionClipboard: register(new EditorEmptySelectionClipboard()),
+    extraEditorClassName: register(new EditorStringOption(25 /* extraEditorClassName */, 'extraEditorClassName', '')),
+    fastScrollSensitivity: register(new EditorFloatOption(26 /* fastScrollSensitivity */, 'fastScrollSensitivity', 5, function (x) { return (x <= 0 ? 5 : x); }, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fastScrollSensitivity', "Scrolling speed multiplier when pressing `Alt`.") })),
+    find: register(new EditorFind()),
+    fixedOverflowWidgets: register(new EditorBooleanOption(28 /* fixedOverflowWidgets */, 'fixedOverflowWidgets', false)),
+    folding: register(new EditorBooleanOption(29 /* folding */, 'folding', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('folding', "Controls whether the editor has code folding enabled.") })),
+    foldingStrategy: register(new EditorStringEnumOption(30 /* foldingStrategy */, 'foldingStrategy', 'auto', ['auto', 'indentation'], { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('foldingStrategy', "Controls the strategy for computing folding ranges. `auto` uses a language specific folding strategy, if available. `indentation` uses the indentation based folding strategy.") })),
+    fontFamily: register(new EditorStringOption(31 /* fontFamily */, 'fontFamily', EDITOR_FONT_DEFAULTS.fontFamily, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontFamily', "Controls the font family.") })),
+    fontInfo: register(new EditorFontInfo()),
+    fontLigatures2: register(new EditorFontLigatures()),
+    fontSize: register(new EditorFontSize()),
+    fontWeight: register(new EditorStringOption(35 /* fontWeight */, 'fontWeight', EDITOR_FONT_DEFAULTS.fontWeight, {
+        enum: ['normal', 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900'],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontWeight', "Controls the font weight.")
+    })),
+    formatOnPaste: register(new EditorBooleanOption(36 /* formatOnPaste */, 'formatOnPaste', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('formatOnPaste', "Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.") })),
+    formatOnType: register(new EditorBooleanOption(37 /* formatOnType */, 'formatOnType', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('formatOnType', "Controls whether the editor should automatically format the line after typing.") })),
+    glyphMargin: register(new EditorBooleanOption(38 /* glyphMargin */, 'glyphMargin', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('glyphMargin', "Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.") })),
+    gotoLocation: register(new EditorGoToLocation()),
+    hideCursorInOverviewRuler: register(new EditorBooleanOption(40 /* hideCursorInOverviewRuler */, 'hideCursorInOverviewRuler', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hideCursorInOverviewRuler', "Controls whether the cursor should be hidden in the overview ruler.") })),
+    highlightActiveIndentGuide: register(new EditorBooleanOption(41 /* highlightActiveIndentGuide */, 'highlightActiveIndentGuide', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('highlightActiveIndentGuide', "Controls whether the editor should highlight the active indent guide.") })),
+    hover: register(new EditorHover()),
+    inDiffEditor: register(new EditorBooleanOption(43 /* inDiffEditor */, 'inDiffEditor', false)),
+    letterSpacing: register(new EditorFloatOption(44 /* letterSpacing */, 'letterSpacing', EDITOR_FONT_DEFAULTS.letterSpacing, function (x) { return EditorFloatOption.clamp(x, -5, 20); }, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('letterSpacing', "Controls the letter spacing in pixels.") })),
+    lightbulb: register(new EditorLightbulb()),
+    lineDecorationsWidth: register(new SimpleEditorOption(46 /* lineDecorationsWidth */, 'lineDecorationsWidth', 10)),
+    lineHeight: register(new EditorLineHeight()),
+    lineNumbers: register(new EditorRenderLineNumbersOption()),
+    lineNumbersMinChars: register(new EditorIntOption(49 /* lineNumbersMinChars */, 'lineNumbersMinChars', 5, 1, 300)),
+    links: register(new EditorBooleanOption(50 /* links */, 'links', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('links', "Controls whether the editor should detect links and make them clickable.") })),
+    matchBrackets: register(new EditorStringEnumOption(51 /* matchBrackets */, 'matchBrackets', 'always', ['always', 'near', 'never'], { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('matchBrackets', "Highlight matching brackets.") })),
+    minimap: register(new EditorMinimap()),
+    mouseStyle: register(new EditorStringEnumOption(53 /* mouseStyle */, 'mouseStyle', 'text', ['text', 'default', 'copy'])),
+    mouseWheelScrollSensitivity: register(new EditorFloatOption(54 /* mouseWheelScrollSensitivity */, 'mouseWheelScrollSensitivity', 1, function (x) { return (x === 0 ? 1 : x); }, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('mouseWheelScrollSensitivity', "A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events.") })),
+    mouseWheelZoom: register(new EditorBooleanOption(55 /* mouseWheelZoom */, 'mouseWheelZoom', false, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('mouseWheelZoom', "Zoom the font of the editor when using mouse wheel and holding `Ctrl`.") })),
+    multiCursorMergeOverlapping: register(new EditorBooleanOption(56 /* multiCursorMergeOverlapping */, 'multiCursorMergeOverlapping', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorMergeOverlapping', "Merge multiple cursors when they are overlapping.") })),
+    multiCursorModifier: register(new EditorEnumOption(57 /* multiCursorModifier */, 'multiCursorModifier', 'altKey', 'alt', ['ctrlCmd', 'alt'], _multiCursorModifierFromString, {
+        markdownEnumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorModifier.ctrlCmd', "Maps to `Control` on Windows and Linux and to `Command` on macOS."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorModifier.alt', "Maps to `Alt` on Windows and Linux and to `Option` on macOS.")
+        ],
+        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
+            key: 'multiCursorModifier',
+            comment: [
+                '- `ctrlCmd` refers to a value the setting can take and should not be localized.',
+                '- `Control` and `Command` refer to the modifier keys Ctrl or Cmd on the keyboard and can be localized.'
+            ]
+        }, "The modifier to be used to add multiple cursors with the mouse. The Go To Definition and Open Link mouse gestures will adapt such that they do not conflict with the multicursor modifier. [Read more](https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier).")
+    })),
+    multiCursorPaste: register(new EditorStringEnumOption(58 /* multiCursorPaste */, 'multiCursorPaste', 'spread', ['spread', 'full'], {
+        markdownEnumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorPaste.spread', "Each cursor pastes a single line of the text."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorPaste.full', "Each cursor pastes the full text.")
+        ],
+        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorPaste', "Controls pasting when the line count of the pasted text matches the cursor count.")
+    })),
+    occurrencesHighlight: register(new EditorBooleanOption(59 /* occurrencesHighlight */, 'occurrencesHighlight', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('occurrencesHighlight', "Controls whether the editor should highlight semantic symbol occurrences.") })),
+    overviewRulerBorder: register(new EditorBooleanOption(60 /* overviewRulerBorder */, 'overviewRulerBorder', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('overviewRulerBorder', "Controls whether a border should be drawn around the overview ruler.") })),
+    overviewRulerLanes: register(new EditorIntOption(61 /* overviewRulerLanes */, 'overviewRulerLanes', 3, 0, 3)),
+    parameterHints: register(new EditorParameterHints()),
+    quickSuggestions: register(new EditorQuickSuggestions()),
+    quickSuggestionsDelay: register(new EditorIntOption(64 /* quickSuggestionsDelay */, 'quickSuggestionsDelay', 10, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestionsDelay', "Controls the delay in milliseconds after which quick suggestions will show up.") })),
+    readOnly: register(new EditorBooleanOption(65 /* readOnly */, 'readOnly', false)),
+    renderControlCharacters: register(new EditorBooleanOption(66 /* renderControlCharacters */, 'renderControlCharacters', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderControlCharacters', "Controls whether the editor should render control characters.") })),
+    renderIndentGuides: register(new EditorBooleanOption(67 /* renderIndentGuides */, 'renderIndentGuides', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderIndentGuides', "Controls whether the editor should render indent guides.") })),
+    renderFinalNewline: register(new EditorBooleanOption(68 /* renderFinalNewline */, 'renderFinalNewline', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderFinalNewline', "Render last line number when the file ends with a newline.") })),
+    renderLineHighlight: register(new EditorStringEnumOption(69 /* renderLineHighlight */, 'renderLineHighlight', 'line', ['none', 'gutter', 'line', 'all'], {
+        enumDescriptions: [
+            '',
+            '',
+            '',
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderLineHighlight.all', "Highlights both the gutter and the current line."),
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderLineHighlight', "Controls how the editor should render the current line highlight.")
+    })),
+    renderWhitespace: register(new EditorStringEnumOption(70 /* renderWhitespace */, 'renderWhitespace', 'none', ['none', 'boundary', 'selection', 'all'], {
+        enumDescriptions: [
+            '',
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderWhitespace.boundary', "Render whitespace characters except for single spaces between words."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderWhitespace.selection', "Render whitespace characters only on selected text."),
+            ''
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderWhitespace', "Controls how the editor should render whitespace characters.")
+    })),
+    revealHorizontalRightPadding: register(new EditorIntOption(71 /* revealHorizontalRightPadding */, 'revealHorizontalRightPadding', 30, 0, 1000)),
+    roundedSelection: register(new EditorBooleanOption(72 /* roundedSelection */, 'roundedSelection', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('roundedSelection', "Controls whether selections should have rounded corners.") })),
+    rulers: register(new EditorRulers()),
+    scrollbar: register(new EditorScrollbar()),
+    scrollBeyondLastColumn: register(new EditorIntOption(75 /* scrollBeyondLastColumn */, 'scrollBeyondLastColumn', 5, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('scrollBeyondLastColumn', "Controls the number of extra characters beyond which the editor will scroll horizontally.") })),
+    scrollBeyondLastLine: register(new EditorBooleanOption(76 /* scrollBeyondLastLine */, 'scrollBeyondLastLine', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('scrollBeyondLastLine', "Controls whether the editor will scroll beyond the last line.") })),
+    selectionClipboard: register(new EditorBooleanOption(77 /* selectionClipboard */, 'selectionClipboard', true, {
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('selectionClipboard', "Controls whether the Linux primary clipboard should be supported."),
+        included: _base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isLinux */ "d"]
+    })),
+    selectionHighlight: register(new EditorBooleanOption(78 /* selectionHighlight */, 'selectionHighlight', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('selectionHighlight', "Controls whether the editor should highlight matches similar to the selection.") })),
+    selectOnLineNumbers: register(new EditorBooleanOption(79 /* selectOnLineNumbers */, 'selectOnLineNumbers', true)),
+    showFoldingControls: register(new EditorStringEnumOption(80 /* showFoldingControls */, 'showFoldingControls', 'mouseover', ['always', 'mouseover'], { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('showFoldingControls', "Controls whether the fold controls on the gutter are automatically hidden.") })),
+    showUnused: register(new EditorBooleanOption(81 /* showUnused */, 'showUnused', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('showUnused', "Controls fading out of unused code.") })),
+    snippetSuggestions: register(new EditorStringEnumOption(82 /* snippetSuggestions */, 'snippetSuggestions', 'inline', ['top', 'bottom', 'inline', 'none'], {
+        enumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.top', "Show snippet suggestions on top of other suggestions."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.bottom', "Show snippet suggestions below other suggestions."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.inline', "Show snippets suggestions with other suggestions."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.none', "Do not show snippet suggestions."),
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions', "Controls whether snippets are shown with other suggestions and how they are sorted.")
+    })),
+    smoothScrolling: register(new EditorBooleanOption(83 /* smoothScrolling */, 'smoothScrolling', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('smoothScrolling', "Controls whether the editor will scroll using an animation.") })),
+    stopRenderingLineAfter: register(new EditorIntOption(84 /* stopRenderingLineAfter */, 'stopRenderingLineAfter', 10000, -1, 1073741824 /* MAX_SAFE_SMALL_INTEGER */)),
+    suggest: register(new EditorSuggest()),
+    suggestFontSize: register(new EditorIntOption(86 /* suggestFontSize */, 'suggestFontSize', 0, 0, 1000, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestFontSize', "Font size for the suggest widget. When set to `0`, the value of `#editor.fontSize#` is used.") })),
+    suggestLineHeight: register(new EditorIntOption(87 /* suggestLineHeight */, 'suggestLineHeight', 0, 0, 1000, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestLineHeight', "Line height for the suggest widget. When set to `0`, the value of `#editor.lineHeight#` is used.") })),
+    suggestOnTriggerCharacters: register(new EditorBooleanOption(88 /* suggestOnTriggerCharacters */, 'suggestOnTriggerCharacters', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestOnTriggerCharacters', "Controls whether suggestions should automatically show up when typing trigger characters.") })),
+    suggestSelection: register(new EditorStringEnumOption(89 /* suggestSelection */, 'suggestSelection', 'recentlyUsed', ['first', 'recentlyUsed', 'recentlyUsedByPrefix'], {
+        markdownEnumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection.first', "Always select the first suggestion."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection.recentlyUsed', "Select recent suggestions unless further typing selects one, e.g. `console.| -> console.log` because `log` has been completed recently."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection.recentlyUsedByPrefix', "Select suggestions based on previous prefixes that have completed those suggestions, e.g. `co -> console` and `con -> const`."),
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection', "Controls how suggestions are pre-selected when showing the suggest list.")
+    })),
+    tabCompletion: register(new EditorStringEnumOption(90 /* tabCompletion */, 'tabCompletion', 'off', ['on', 'off', 'onlySnippets'], {
+        enumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion.on', "Tab complete will insert the best matching suggestion when pressing tab."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion.off', "Disable tab completions."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion.onlySnippets', "Tab complete snippets when their prefix match. Works best when 'quickSuggestions' aren't enabled."),
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion', "Enables tab completions.")
+    })),
+    useTabStops: register(new EditorBooleanOption(91 /* useTabStops */, 'useTabStops', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('useTabStops', "Inserting and deleting whitespace follows tab stops.") })),
+    wordSeparators: register(new EditorStringOption(92 /* wordSeparators */, 'wordSeparators', _model_wordHelper_js__WEBPACK_IMPORTED_MODULE_2__[/* USUAL_WORD_SEPARATORS */ "b"], { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wordSeparators', "Characters that will be used as word separators when doing word related navigations or operations.") })),
+    wordWrap: register(new EditorStringEnumOption(93 /* wordWrap */, 'wordWrap', 'off', ['off', 'on', 'wordWrapColumn', 'bounded'], {
+        markdownEnumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wordWrap.off', "Lines will never wrap."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wordWrap.on', "Lines will wrap at the viewport width."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
+                key: 'wordWrap.wordWrapColumn',
+                comment: [
+                    '- `editor.wordWrapColumn` refers to a different setting and should not be localized.'
+                ]
+            }, "Lines will wrap at `#editor.wordWrapColumn#`."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
+                key: 'wordWrap.bounded',
+                comment: [
+                    '- viewport means the edge of the visible window size.',
+                    '- `editor.wordWrapColumn` refers to a different setting and should not be localized.'
+                ]
+            }, "Lines will wrap at the minimum of viewport and `#editor.wordWrapColumn#`."),
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
+            key: 'wordWrap',
+            comment: [
+                '- \'off\', \'on\', \'wordWrapColumn\' and \'bounded\' refer to values the setting can take and should not be localized.',
+                '- `editor.wordWrapColumn` refers to a different setting and should not be localized.'
+            ]
+        }, "Controls how lines should wrap.")
+    })),
+    wordWrapBreakAfterCharacters: register(new EditorStringOption(94 /* wordWrapBreakAfterCharacters */, 'wordWrapBreakAfterCharacters', ' \t})]?|/&,;¢°′″‰℃、。｡､￠，．：；？！％・･ゝゞヽヾーァィゥェォッャュョヮヵヶぁぃぅぇぉっゃゅょゎゕゖㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ々〻ｧｨｩｪｫｬｭｮｯｰ”〉》」』】〕）］｝｣')),
+    wordWrapBreakBeforeCharacters: register(new EditorStringOption(95 /* wordWrapBreakBeforeCharacters */, 'wordWrapBreakBeforeCharacters', '([{‘“〈《「『【〔（［｛｢£¥＄￡￥+＋')),
+    wordWrapBreakObtrusiveCharacters: register(new EditorStringOption(96 /* wordWrapBreakObtrusiveCharacters */, 'wordWrapBreakObtrusiveCharacters', '.')),
+    wordWrapColumn: register(new EditorIntOption(97 /* wordWrapColumn */, 'wordWrapColumn', 80, 1, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, {
+        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
+            key: 'wordWrapColumn',
+            comment: [
+                '- `editor.wordWrap` refers to a different setting and should not be localized.',
+                '- \'wordWrapColumn\' and \'bounded\' refer to values the different setting can take and should not be localized.'
+            ]
+        }, "Controls the wrapping column of the editor when `#editor.wordWrap#` is `wordWrapColumn` or `bounded`.")
+    })),
+    wordWrapMinified: register(new EditorBooleanOption(98 /* wordWrapMinified */, 'wordWrapMinified', true)),
+    wrappingIndent: register(new EditorEnumOption(99 /* wrappingIndent */, 'wrappingIndent', 1 /* Same */, 'same', ['none', 'same', 'indent', 'deepIndent'], _wrappingIndentFromString, {
+        enumDescriptions: [
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.none', "No indentation. Wrapped lines begin at column 1."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.same', "Wrapped lines get the same indentation as the parent."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.indent', "Wrapped lines get +1 indentation toward the parent."),
+            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.deepIndent', "Wrapped lines get +2 indentation toward the parent."),
+        ],
+        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent', "Controls the indentation of wrapped lines."),
+    })),
+    // Leave these at the end (because they have dependencies!)
+    editorClassName: register(new EditorClassName()),
+    pixelRatio: register(new EditorPixelRatio()),
+    tabFocusMode: register(new EditorTabFocusMode()),
+    layoutInfo: register(new EditorLayoutInfoComputer()),
+    wrappingInfo: register(new EditorWrappingInfoComputer()),
+};
+
+
+/***/ }),
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9123,22 +11017,53 @@ var getTarget = function getTarget() {
   };
 }();
 
-var stylesInDom = {};
+var stylesInDom = [];
 
-function modulesToDom(moduleId, list, options) {
-  for (var i = 0; i < list.length; i++) {
-    var part = {
-      css: list[i][1],
-      media: list[i][2],
-      sourceMap: list[i][3]
-    };
+function getIndexByIdentifier(identifier) {
+  var result = -1;
 
-    if (stylesInDom[moduleId][i]) {
-      stylesInDom[moduleId][i](part);
-    } else {
-      stylesInDom[moduleId].push(addStyle(part, options));
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
     }
   }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
 }
 
 function insertStyleElement(options) {
@@ -9192,7 +11117,7 @@ var replaceText = function replaceText() {
 }();
 
 function applyToSingletonTag(style, index, remove, obj) {
-  var css = remove ? '' : obj.css; // For old IE
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
 
   /* istanbul ignore if  */
 
@@ -9279,7 +11204,7 @@ function addStyle(obj, options) {
   };
 }
 
-module.exports = function (moduleId, list, options) {
+module.exports = function (list, options) {
   options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
   // tags it will allow on a page
 
@@ -9287,14 +11212,8 @@ module.exports = function (moduleId, list, options) {
     options.singleton = isOldIE();
   }
 
-  moduleId = options.base ? moduleId + options.base : moduleId;
   list = list || [];
-
-  if (!stylesInDom[moduleId]) {
-    stylesInDom[moduleId] = [];
-  }
-
-  modulesToDom(moduleId, list, options);
+  var lastIdentifiers = modulesToDom(list, options);
   return function update(newList) {
     newList = newList || [];
 
@@ -9302,26 +11221,32 @@ module.exports = function (moduleId, list, options) {
       return;
     }
 
-    if (!stylesInDom[moduleId]) {
-      stylesInDom[moduleId] = [];
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
     }
 
-    modulesToDom(moduleId, newList, options);
+    var newLastIdentifiers = modulesToDom(newList, options);
 
-    for (var j = newList.length; j < stylesInDom[moduleId].length; j++) {
-      stylesInDom[moduleId][j]();
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
     }
 
-    stylesInDom[moduleId].length = newList.length;
-
-    if (stylesInDom[moduleId].length === 0) {
-      delete stylesInDom[moduleId];
-    }
+    lastIdentifiers = newLastIdentifiers;
   };
 };
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9421,7 +11346,7 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9442,7 +11367,7 @@ var strings = __webpack_require__(8);
 var uri = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/editorOptions.js
-var editorOptions = __webpack_require__(29);
+var editorOptions = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/position.js
 var core_position = __webpack_require__(9);
@@ -16135,1890 +18060,6 @@ var textModel_DidChangeContentEmitter = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 29 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return MINIMAP_GUTTER_WIDTH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigurationChangedEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return ValidatedEditorOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return TextEditorCursorStyle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return EditorFontLigatures; });
-/* unused harmony export EditorLayoutInfoComputer */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return EDITOR_FONT_DEFAULTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return EDITOR_MODEL_DEFAULTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return editorOptionsRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return EditorOptions; });
-/* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var _base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
-/* harmony import */ var _model_wordHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(111);
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
-
-
-/**
- * @internal
- * The width of the minimap gutter, in pixels.
- */
-var MINIMAP_GUTTER_WIDTH = 8;
-//#endregion
-/**
- * An event describing that the configuration of the editor has changed.
- */
-var ConfigurationChangedEvent = /** @class */ (function () {
-    /**
-     * @internal
-     */
-    function ConfigurationChangedEvent(values) {
-        this._values = values;
-    }
-    /**
-     * @internal
-     */
-    ConfigurationChangedEvent.prototype.hasChanged = function (id) {
-        return this._values[id];
-    };
-    return ConfigurationChangedEvent;
-}());
-
-/**
- * @internal
- */
-var ValidatedEditorOptions = /** @class */ (function () {
-    function ValidatedEditorOptions() {
-        this._values = [];
-    }
-    ValidatedEditorOptions.prototype._read = function (option) {
-        return this._values[option];
-    };
-    ValidatedEditorOptions.prototype.get = function (id) {
-        return this._values[id];
-    };
-    ValidatedEditorOptions.prototype._write = function (option, value) {
-        this._values[option] = value;
-    };
-    return ValidatedEditorOptions;
-}());
-
-/**
- * @internal
- */
-var BaseEditorOption = /** @class */ (function () {
-    function BaseEditorOption(id, name, defaultValue, schema) {
-        this.id = id;
-        this.name = name;
-        this.defaultValue = defaultValue;
-        this.schema = schema;
-    }
-    BaseEditorOption.prototype.compute = function (env, options, value) {
-        return value;
-    };
-    return BaseEditorOption;
-}());
-/**
- * @internal
- */
-var ComputedEditorOption = /** @class */ (function () {
-    function ComputedEditorOption(id, deps) {
-        if (deps === void 0) { deps = null; }
-        this.schema = undefined;
-        this.id = id;
-        this.name = '_never_';
-        this.defaultValue = undefined;
-        this.deps = deps;
-    }
-    ComputedEditorOption.prototype.validate = function (input) {
-        return this.defaultValue;
-    };
-    return ComputedEditorOption;
-}());
-var SimpleEditorOption = /** @class */ (function () {
-    function SimpleEditorOption(id, name, defaultValue, schema) {
-        this.id = id;
-        this.name = name;
-        this.defaultValue = defaultValue;
-        this.schema = schema;
-    }
-    SimpleEditorOption.prototype.validate = function (input) {
-        if (typeof input === 'undefined') {
-            return this.defaultValue;
-        }
-        return input;
-    };
-    SimpleEditorOption.prototype.compute = function (env, options, value) {
-        return value;
-    };
-    return SimpleEditorOption;
-}());
-var EditorBooleanOption = /** @class */ (function (_super) {
-    __extends(EditorBooleanOption, _super);
-    function EditorBooleanOption(id, name, defaultValue, schema) {
-        if (schema === void 0) { schema = undefined; }
-        var _this = this;
-        if (typeof schema !== 'undefined') {
-            schema.type = 'boolean';
-            schema.default = defaultValue;
-        }
-        _this = _super.call(this, id, name, defaultValue, schema) || this;
-        return _this;
-    }
-    EditorBooleanOption.boolean = function (value, defaultValue) {
-        if (typeof value === 'undefined') {
-            return defaultValue;
-        }
-        if (value === 'false') {
-            // treat the string 'false' as false
-            return false;
-        }
-        return Boolean(value);
-    };
-    EditorBooleanOption.prototype.validate = function (input) {
-        return EditorBooleanOption.boolean(input, this.defaultValue);
-    };
-    return EditorBooleanOption;
-}(SimpleEditorOption));
-var EditorIntOption = /** @class */ (function (_super) {
-    __extends(EditorIntOption, _super);
-    function EditorIntOption(id, name, defaultValue, minimum, maximum, schema) {
-        if (schema === void 0) { schema = undefined; }
-        var _this = this;
-        if (typeof schema !== 'undefined') {
-            schema.type = 'integer';
-            schema.default = defaultValue;
-            schema.minimum = minimum;
-            schema.maximum = maximum;
-        }
-        _this = _super.call(this, id, name, defaultValue, schema) || this;
-        _this.minimum = minimum;
-        _this.maximum = maximum;
-        return _this;
-    }
-    EditorIntOption.clampedInt = function (value, defaultValue, minimum, maximum) {
-        var r;
-        if (typeof value === 'undefined') {
-            r = defaultValue;
-        }
-        else {
-            r = parseInt(value, 10);
-            if (isNaN(r)) {
-                r = defaultValue;
-            }
-        }
-        r = Math.max(minimum, r);
-        r = Math.min(maximum, r);
-        return r | 0;
-    };
-    EditorIntOption.prototype.validate = function (input) {
-        return EditorIntOption.clampedInt(input, this.defaultValue, this.minimum, this.maximum);
-    };
-    return EditorIntOption;
-}(SimpleEditorOption));
-var EditorFloatOption = /** @class */ (function (_super) {
-    __extends(EditorFloatOption, _super);
-    function EditorFloatOption(id, name, defaultValue, validationFn, schema) {
-        var _this = this;
-        if (typeof schema !== 'undefined') {
-            schema.type = 'number';
-            schema.default = defaultValue;
-        }
-        _this = _super.call(this, id, name, defaultValue, schema) || this;
-        _this.validationFn = validationFn;
-        return _this;
-    }
-    EditorFloatOption.clamp = function (n, min, max) {
-        if (n < min) {
-            return min;
-        }
-        if (n > max) {
-            return max;
-        }
-        return n;
-    };
-    EditorFloatOption.float = function (value, defaultValue) {
-        if (typeof value === 'number') {
-            return value;
-        }
-        if (typeof value === 'undefined') {
-            return defaultValue;
-        }
-        var r = parseFloat(value);
-        return (isNaN(r) ? defaultValue : r);
-    };
-    EditorFloatOption.prototype.validate = function (input) {
-        return this.validationFn(EditorFloatOption.float(input, this.defaultValue));
-    };
-    return EditorFloatOption;
-}(SimpleEditorOption));
-var EditorStringOption = /** @class */ (function (_super) {
-    __extends(EditorStringOption, _super);
-    function EditorStringOption(id, name, defaultValue, schema) {
-        if (schema === void 0) { schema = undefined; }
-        var _this = this;
-        if (typeof schema !== 'undefined') {
-            schema.type = 'string';
-            schema.default = defaultValue;
-        }
-        _this = _super.call(this, id, name, defaultValue, schema) || this;
-        return _this;
-    }
-    EditorStringOption.string = function (value, defaultValue) {
-        if (typeof value !== 'string') {
-            return defaultValue;
-        }
-        return value;
-    };
-    EditorStringOption.prototype.validate = function (input) {
-        return EditorStringOption.string(input, this.defaultValue);
-    };
-    return EditorStringOption;
-}(SimpleEditorOption));
-var EditorStringEnumOption = /** @class */ (function (_super) {
-    __extends(EditorStringEnumOption, _super);
-    function EditorStringEnumOption(id, name, defaultValue, allowedValues, schema) {
-        if (schema === void 0) { schema = undefined; }
-        var _this = this;
-        if (typeof schema !== 'undefined') {
-            schema.type = 'string';
-            schema.enum = allowedValues;
-            schema.default = defaultValue;
-        }
-        _this = _super.call(this, id, name, defaultValue, schema) || this;
-        _this._allowedValues = allowedValues;
-        return _this;
-    }
-    EditorStringEnumOption.stringSet = function (value, defaultValue, allowedValues) {
-        if (typeof value !== 'string') {
-            return defaultValue;
-        }
-        if (allowedValues.indexOf(value) === -1) {
-            return defaultValue;
-        }
-        return value;
-    };
-    EditorStringEnumOption.prototype.validate = function (input) {
-        return EditorStringEnumOption.stringSet(input, this.defaultValue, this._allowedValues);
-    };
-    return EditorStringEnumOption;
-}(SimpleEditorOption));
-var EditorEnumOption = /** @class */ (function (_super) {
-    __extends(EditorEnumOption, _super);
-    function EditorEnumOption(id, name, defaultValue, defaultStringValue, allowedValues, convert, schema) {
-        if (schema === void 0) { schema = undefined; }
-        var _this = this;
-        if (typeof schema !== 'undefined') {
-            schema.type = 'string';
-            schema.enum = allowedValues;
-            schema.default = defaultStringValue;
-        }
-        _this = _super.call(this, id, name, defaultValue, schema) || this;
-        _this._allowedValues = allowedValues;
-        _this._convert = convert;
-        return _this;
-    }
-    EditorEnumOption.prototype.validate = function (input) {
-        if (typeof input !== 'string') {
-            return this.defaultValue;
-        }
-        if (this._allowedValues.indexOf(input) === -1) {
-            return this.defaultValue;
-        }
-        return this._convert(input);
-    };
-    return EditorEnumOption;
-}(BaseEditorOption));
-//#endregion
-//#region autoIndent
-function _autoIndentFromString(autoIndent) {
-    switch (autoIndent) {
-        case 'none': return 0 /* None */;
-        case 'keep': return 1 /* Keep */;
-        case 'brackets': return 2 /* Brackets */;
-        case 'advanced': return 3 /* Advanced */;
-        case 'full': return 4 /* Full */;
-    }
-}
-//#endregion
-//#region accessibilitySupport
-var EditorAccessibilitySupport = /** @class */ (function (_super) {
-    __extends(EditorAccessibilitySupport, _super);
-    function EditorAccessibilitySupport() {
-        return _super.call(this, 2 /* accessibilitySupport */, 'accessibilitySupport', 0 /* Unknown */, {
-            type: 'string',
-            enum: ['auto', 'on', 'off'],
-            enumDescriptions: [
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport.auto', "The editor will use platform APIs to detect when a Screen Reader is attached."),
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport.on', "The editor will be permanently optimized for usage with a Screen Reader."),
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport.off', "The editor will never be optimized for usage with a Screen Reader."),
-            ],
-            default: 'auto',
-            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilitySupport', "Controls whether the editor should run in a mode where it is optimized for screen readers.")
-        }) || this;
-    }
-    EditorAccessibilitySupport.prototype.validate = function (input) {
-        switch (input) {
-            case 'auto': return 0 /* Unknown */;
-            case 'off': return 1 /* Disabled */;
-            case 'on': return 2 /* Enabled */;
-        }
-        return this.defaultValue;
-    };
-    EditorAccessibilitySupport.prototype.compute = function (env, options, value) {
-        if (value === 0 /* Unknown */) {
-            // The editor reads the `accessibilitySupport` from the environment
-            return env.accessibilitySupport;
-        }
-        return value;
-    };
-    return EditorAccessibilitySupport;
-}(BaseEditorOption));
-function _cursorBlinkingStyleFromString(cursorBlinkingStyle) {
-    switch (cursorBlinkingStyle) {
-        case 'blink': return 1 /* Blink */;
-        case 'smooth': return 2 /* Smooth */;
-        case 'phase': return 3 /* Phase */;
-        case 'expand': return 4 /* Expand */;
-        case 'solid': return 5 /* Solid */;
-    }
-}
-//#endregion
-//#region cursorStyle
-/**
- * The style in which the editor's cursor should be rendered.
- * @internal
- */
-var TextEditorCursorStyle;
-(function (TextEditorCursorStyle) {
-    /**
-     * As a vertical line (sitting between two characters).
-     */
-    TextEditorCursorStyle[TextEditorCursorStyle["Line"] = 1] = "Line";
-    /**
-     * As a block (sitting on top of a character).
-     */
-    TextEditorCursorStyle[TextEditorCursorStyle["Block"] = 2] = "Block";
-    /**
-     * As a horizontal line (sitting under a character).
-     */
-    TextEditorCursorStyle[TextEditorCursorStyle["Underline"] = 3] = "Underline";
-    /**
-     * As a thin vertical line (sitting between two characters).
-     */
-    TextEditorCursorStyle[TextEditorCursorStyle["LineThin"] = 4] = "LineThin";
-    /**
-     * As an outlined block (sitting on top of a character).
-     */
-    TextEditorCursorStyle[TextEditorCursorStyle["BlockOutline"] = 5] = "BlockOutline";
-    /**
-     * As a thin horizontal line (sitting under a character).
-     */
-    TextEditorCursorStyle[TextEditorCursorStyle["UnderlineThin"] = 6] = "UnderlineThin";
-})(TextEditorCursorStyle || (TextEditorCursorStyle = {}));
-function _cursorStyleFromString(cursorStyle) {
-    switch (cursorStyle) {
-        case 'line': return TextEditorCursorStyle.Line;
-        case 'block': return TextEditorCursorStyle.Block;
-        case 'underline': return TextEditorCursorStyle.Underline;
-        case 'line-thin': return TextEditorCursorStyle.LineThin;
-        case 'block-outline': return TextEditorCursorStyle.BlockOutline;
-        case 'underline-thin': return TextEditorCursorStyle.UnderlineThin;
-    }
-}
-//#endregion
-//#region editorClassName
-var EditorClassName = /** @class */ (function (_super) {
-    __extends(EditorClassName, _super);
-    function EditorClassName() {
-        return _super.call(this, 100 /* editorClassName */, [53 /* mouseStyle */, 25 /* extraEditorClassName */]) || this;
-    }
-    EditorClassName.prototype.compute = function (env, options, _) {
-        var className = 'monaco-editor';
-        if (options.get(25 /* extraEditorClassName */)) {
-            className += ' ' + options.get(25 /* extraEditorClassName */);
-        }
-        if (env.extraEditorClassName) {
-            className += ' ' + env.extraEditorClassName;
-        }
-        if (options.get(53 /* mouseStyle */) === 'default') {
-            className += ' mouse-default';
-        }
-        else if (options.get(53 /* mouseStyle */) === 'copy') {
-            className += ' mouse-copy';
-        }
-        if (options.get(81 /* showUnused */)) {
-            className += ' showUnused';
-        }
-        return className;
-    };
-    return EditorClassName;
-}(ComputedEditorOption));
-//#endregion
-//#region emptySelectionClipboard
-var EditorEmptySelectionClipboard = /** @class */ (function (_super) {
-    __extends(EditorEmptySelectionClipboard, _super);
-    function EditorEmptySelectionClipboard() {
-        return _super.call(this, 24 /* emptySelectionClipboard */, 'emptySelectionClipboard', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('emptySelectionClipboard', "Controls whether copying without a selection copies the current line.") }) || this;
-    }
-    EditorEmptySelectionClipboard.prototype.compute = function (env, options, value) {
-        return value && env.emptySelectionClipboard;
-    };
-    return EditorEmptySelectionClipboard;
-}(EditorBooleanOption));
-var EditorFind = /** @class */ (function (_super) {
-    __extends(EditorFind, _super);
-    function EditorFind() {
-        var _this = this;
-        var defaults = {
-            seedSearchStringFromSelection: true,
-            autoFindInSelection: 'never',
-            globalFindClipboard: false,
-            addExtraSpaceOnTop: true
-        };
-        _this = _super.call(this, 27 /* find */, 'find', defaults, {
-            'editor.find.seedSearchStringFromSelection': {
-                type: 'boolean',
-                default: defaults.seedSearchStringFromSelection,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.seedSearchStringFromSelection', "Controls whether the search string in the Find Widget is seeded from the editor selection.")
-            },
-            'editor.find.autoFindInSelection': {
-                type: 'string',
-                enum: ['never', 'always', 'multiline'],
-                default: defaults.autoFindInSelection,
-                enumDescriptions: [
-                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.find.autoFindInSelection.never', 'Never turn on Find in selection automatically (default)'),
-                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.find.autoFindInSelection.always', 'Always turn on Find in selection automatically'),
-                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.find.autoFindInSelection.multiline', 'Turn on Find in selection automatically when multiple lines of content are selected.')
-                ],
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.autoFindInSelection', "Controls whether the find operation is carried out on selected text or the entire file in the editor.")
-            },
-            'editor.find.globalFindClipboard': {
-                type: 'boolean',
-                default: defaults.globalFindClipboard,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.globalFindClipboard', "Controls whether the Find Widget should read or modify the shared find clipboard on macOS."),
-                included: _base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"]
-            },
-            'editor.find.addExtraSpaceOnTop': {
-                type: 'boolean',
-                default: defaults.addExtraSpaceOnTop,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('find.addExtraSpaceOnTop', "Controls whether the Find Widget should add extra lines on top of the editor. When true, you can scroll beyond the first line when the Find Widget is visible.")
-            }
-        }) || this;
-        return _this;
-    }
-    EditorFind.prototype.validate = function (_input) {
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        return {
-            seedSearchStringFromSelection: EditorBooleanOption.boolean(input.seedSearchStringFromSelection, this.defaultValue.seedSearchStringFromSelection),
-            autoFindInSelection: typeof _input.autoFindInSelection === 'boolean'
-                ? (_input.autoFindInSelection ? 'always' : 'never')
-                : EditorStringEnumOption.stringSet(input.autoFindInSelection, this.defaultValue.autoFindInSelection, ['never', 'always', 'multiline']),
-            globalFindClipboard: EditorBooleanOption.boolean(input.globalFindClipboard, this.defaultValue.globalFindClipboard),
-            addExtraSpaceOnTop: EditorBooleanOption.boolean(input.addExtraSpaceOnTop, this.defaultValue.addExtraSpaceOnTop)
-        };
-    };
-    return EditorFind;
-}(BaseEditorOption));
-//#endregion
-//#region fontLigatures
-/**
- * @internal
- */
-var EditorFontLigatures = /** @class */ (function (_super) {
-    __extends(EditorFontLigatures, _super);
-    function EditorFontLigatures() {
-        return _super.call(this, 33 /* fontLigatures */, 'fontLigatures', EditorFontLigatures.OFF, {
-            anyOf: [
-                {
-                    type: 'boolean',
-                    description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontLigatures', "Enables/Disables font ligatures."),
-                },
-                {
-                    type: 'string',
-                    description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontFeatureSettings', "Explicit font-feature-settings.")
-                }
-            ],
-            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontLigaturesGeneral', "Configures font ligatures."),
-            default: false
-        }) || this;
-    }
-    EditorFontLigatures.prototype.validate = function (input) {
-        if (typeof input === 'undefined') {
-            return this.defaultValue;
-        }
-        if (typeof input === 'string') {
-            if (input === 'false') {
-                return EditorFontLigatures.OFF;
-            }
-            if (input === 'true') {
-                return EditorFontLigatures.ON;
-            }
-            return input;
-        }
-        if (Boolean(input)) {
-            return EditorFontLigatures.ON;
-        }
-        return EditorFontLigatures.OFF;
-    };
-    EditorFontLigatures.OFF = '"liga" off, "calt" off';
-    EditorFontLigatures.ON = '"liga" on, "calt" on';
-    return EditorFontLigatures;
-}(BaseEditorOption));
-
-//#endregion
-//#region fontInfo
-var EditorFontInfo = /** @class */ (function (_super) {
-    __extends(EditorFontInfo, _super);
-    function EditorFontInfo() {
-        return _super.call(this, 32 /* fontInfo */) || this;
-    }
-    EditorFontInfo.prototype.compute = function (env, options, _) {
-        return env.fontInfo;
-    };
-    return EditorFontInfo;
-}(ComputedEditorOption));
-//#endregion
-//#region fontSize
-var EditorFontSize = /** @class */ (function (_super) {
-    __extends(EditorFontSize, _super);
-    function EditorFontSize() {
-        return _super.call(this, 34 /* fontSize */, 'fontSize', EDITOR_FONT_DEFAULTS.fontSize, {
-            type: 'number',
-            minimum: 6,
-            maximum: 100,
-            default: EDITOR_FONT_DEFAULTS.fontSize,
-            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontSize', "Controls the font size in pixels.")
-        }) || this;
-    }
-    EditorFontSize.prototype.validate = function (input) {
-        var r = EditorFloatOption.float(input, this.defaultValue);
-        if (r === 0) {
-            return EDITOR_FONT_DEFAULTS.fontSize;
-        }
-        return EditorFloatOption.clamp(r, 6, 100);
-    };
-    EditorFontSize.prototype.compute = function (env, options, value) {
-        // The final fontSize respects the editor zoom level.
-        // So take the result from env.fontInfo
-        return env.fontInfo.fontSize;
-    };
-    return EditorFontSize;
-}(SimpleEditorOption));
-var EditorGoToLocation = /** @class */ (function (_super) {
-    __extends(EditorGoToLocation, _super);
-    function EditorGoToLocation() {
-        var _this = this;
-        var defaults = {
-            multiple: 'peek',
-            multipleDefinitions: 'peek',
-            multipleTypeDefinitions: 'peek',
-            multipleDeclarations: 'peek',
-            multipleImplementations: 'peek',
-            multipleReferences: 'peek',
-            alternativeDefinitionCommand: 'editor.action.goToReferences',
-            alternativeTypeDefinitionCommand: 'editor.action.goToReferences',
-            alternativeDeclarationCommand: 'editor.action.goToReferences',
-            alternativeImplementationCommand: '',
-            alternativeReferenceCommand: '',
-        };
-        var jsonSubset = {
-            type: 'string',
-            enum: ['peek', 'gotoAndPeek', 'goto'],
-            default: defaults.multiple,
-            enumDescriptions: [
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.peek', 'Show peek view of the results (default)'),
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.gotoAndPeek', 'Go to the primary result and show a peek view'),
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.goto', 'Go to the primary result and enable peek-less navigation to others')
-            ]
-        };
-        _this = _super.call(this, 39 /* gotoLocation */, 'gotoLocation', defaults, {
-            'editor.gotoLocation.multiple': {
-                deprecationMessage: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.gotoLocation.multiple.deprecated', "This setting is deprecated, please use separate settings like 'editor.editor.gotoLocation.multipleDefinitions' or 'editor.editor.gotoLocation.multipleImplementations' instead."),
-            },
-            'editor.gotoLocation.multipleDefinitions': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleDefinitions', "Controls the behavior the 'Go to Definition'-command when multiple target locations exist.") }, jsonSubset),
-            'editor.gotoLocation.multipleTypeDefinitions': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleTypeDefinitions', "Controls the behavior the 'Go to Type Definition'-command when multiple target locations exist.") }, jsonSubset),
-            'editor.gotoLocation.multipleDeclarations': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleDeclarations', "Controls the behavior the 'Go to Declaration'-command when multiple target locations exist.") }, jsonSubset),
-            'editor.gotoLocation.multipleImplementations': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleImplemenattions', "Controls the behavior the 'Go to Implementations'-command when multiple target locations exist.") }, jsonSubset),
-            'editor.gotoLocation.multipleReferences': __assign({ description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.editor.gotoLocation.multipleReferences', "Controls the behavior the 'Go to References'-command when multiple target locations exist.") }, jsonSubset),
-            'editor.gotoLocation.alternativeDefinitionCommand': {
-                type: 'string',
-                default: defaults.alternativeDefinitionCommand,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeDefinitionCommand', "Alternative command id that is being executed when the result of 'Go to Definition' is the current location.")
-            },
-            'editor.gotoLocation.alternativeTypeDefinitionCommand': {
-                type: 'string',
-                default: defaults.alternativeTypeDefinitionCommand,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeTypeDefinitionCommand', "Alternative command id that is being executed when the result of 'Go to Type Definition' is the current location.")
-            },
-            'editor.gotoLocation.alternativeDeclarationCommand': {
-                type: 'string',
-                default: defaults.alternativeDeclarationCommand,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeDeclarationCommand', "Alternative command id that is being executed when the result of 'Go to Declaration' is the current location.")
-            },
-            'editor.gotoLocation.alternativeImplementationCommand': {
-                type: 'string',
-                default: defaults.alternativeImplementationCommand,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeImplementationCommand', "Alternative command id that is being executed when the result of 'Go to Implementation' is the current location.")
-            },
-            'editor.gotoLocation.alternativeReferenceCommand': {
-                type: 'string',
-                default: defaults.alternativeReferenceCommand,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('alternativeReferenceCommand', "Alternative command id that is being executed when the result of 'Go to Reference' is the current location.")
-            },
-        }) || this;
-        return _this;
-    }
-    EditorGoToLocation.prototype.validate = function (_input) {
-        var _a, _b, _c, _d, _e;
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        return {
-            multiple: EditorStringEnumOption.stringSet(input.multiple, this.defaultValue.multiple, ['peek', 'gotoAndPeek', 'goto']),
-            multipleDefinitions: (_a = input.multipleDefinitions, (_a !== null && _a !== void 0 ? _a : EditorStringEnumOption.stringSet(input.multipleDefinitions, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
-            multipleTypeDefinitions: (_b = input.multipleTypeDefinitions, (_b !== null && _b !== void 0 ? _b : EditorStringEnumOption.stringSet(input.multipleTypeDefinitions, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
-            multipleDeclarations: (_c = input.multipleDeclarations, (_c !== null && _c !== void 0 ? _c : EditorStringEnumOption.stringSet(input.multipleDeclarations, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
-            multipleImplementations: (_d = input.multipleImplementations, (_d !== null && _d !== void 0 ? _d : EditorStringEnumOption.stringSet(input.multipleImplementations, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
-            multipleReferences: (_e = input.multipleReferences, (_e !== null && _e !== void 0 ? _e : EditorStringEnumOption.stringSet(input.multipleReferences, 'peek', ['peek', 'gotoAndPeek', 'goto']))),
-            alternativeDefinitionCommand: EditorStringOption.string(input.alternativeDefinitionCommand, this.defaultValue.alternativeDefinitionCommand),
-            alternativeTypeDefinitionCommand: EditorStringOption.string(input.alternativeTypeDefinitionCommand, this.defaultValue.alternativeTypeDefinitionCommand),
-            alternativeDeclarationCommand: EditorStringOption.string(input.alternativeDeclarationCommand, this.defaultValue.alternativeDeclarationCommand),
-            alternativeImplementationCommand: EditorStringOption.string(input.alternativeImplementationCommand, this.defaultValue.alternativeImplementationCommand),
-            alternativeReferenceCommand: EditorStringOption.string(input.alternativeReferenceCommand, this.defaultValue.alternativeReferenceCommand),
-        };
-    };
-    return EditorGoToLocation;
-}(BaseEditorOption));
-var EditorHover = /** @class */ (function (_super) {
-    __extends(EditorHover, _super);
-    function EditorHover() {
-        var _this = this;
-        var defaults = {
-            enabled: true,
-            delay: 300,
-            sticky: true
-        };
-        _this = _super.call(this, 42 /* hover */, 'hover', defaults, {
-            'editor.hover.enabled': {
-                type: 'boolean',
-                default: defaults.enabled,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hover.enabled', "Controls whether the hover is shown.")
-            },
-            'editor.hover.delay': {
-                type: 'number',
-                default: defaults.delay,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hover.delay', "Controls the delay in milliseconds after which the hover is shown.")
-            },
-            'editor.hover.sticky': {
-                type: 'boolean',
-                default: defaults.sticky,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hover.sticky', "Controls whether the hover should remain visible when mouse is moved over it.")
-            },
-        }) || this;
-        return _this;
-    }
-    EditorHover.prototype.validate = function (_input) {
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        return {
-            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled),
-            delay: EditorIntOption.clampedInt(input.delay, this.defaultValue.delay, 0, 10000),
-            sticky: EditorBooleanOption.boolean(input.sticky, this.defaultValue.sticky)
-        };
-    };
-    return EditorHover;
-}(BaseEditorOption));
-/**
- * @internal
- */
-var EditorLayoutInfoComputer = /** @class */ (function (_super) {
-    __extends(EditorLayoutInfoComputer, _super);
-    function EditorLayoutInfoComputer() {
-        return _super.call(this, 103 /* layoutInfo */, [38 /* glyphMargin */, 46 /* lineDecorationsWidth */, 29 /* folding */, 52 /* minimap */, 74 /* scrollbar */, 48 /* lineNumbers */]) || this;
-    }
-    EditorLayoutInfoComputer.prototype.compute = function (env, options, _) {
-        return EditorLayoutInfoComputer.computeLayout(options, {
-            outerWidth: env.outerWidth,
-            outerHeight: env.outerHeight,
-            lineHeight: env.fontInfo.lineHeight,
-            lineNumbersDigitCount: env.lineNumbersDigitCount,
-            typicalHalfwidthCharacterWidth: env.fontInfo.typicalHalfwidthCharacterWidth,
-            maxDigitWidth: env.fontInfo.maxDigitWidth,
-            pixelRatio: env.pixelRatio
-        });
-    };
-    EditorLayoutInfoComputer.computeLayout = function (options, env) {
-        var outerWidth = env.outerWidth | 0;
-        var outerHeight = env.outerHeight | 0;
-        var lineHeight = env.lineHeight | 0;
-        var lineNumbersDigitCount = env.lineNumbersDigitCount | 0;
-        var typicalHalfwidthCharacterWidth = env.typicalHalfwidthCharacterWidth;
-        var maxDigitWidth = env.maxDigitWidth;
-        var pixelRatio = env.pixelRatio;
-        var showGlyphMargin = options.get(38 /* glyphMargin */);
-        var showLineNumbers = (options.get(48 /* lineNumbers */).renderType !== 0 /* Off */);
-        var lineNumbersMinChars = options.get(49 /* lineNumbersMinChars */) | 0;
-        var minimap = options.get(52 /* minimap */);
-        var minimapEnabled = minimap.enabled;
-        var minimapSide = minimap.side;
-        var minimapRenderCharacters = minimap.renderCharacters;
-        var minimapScale = (pixelRatio >= 2 ? Math.round(minimap.scale * 2) : minimap.scale);
-        var minimapMaxColumn = minimap.maxColumn | 0;
-        var scrollbar = options.get(74 /* scrollbar */);
-        var verticalScrollbarWidth = scrollbar.verticalScrollbarSize | 0;
-        var verticalScrollbarHasArrows = scrollbar.verticalHasArrows;
-        var scrollbarArrowSize = scrollbar.arrowSize | 0;
-        var horizontalScrollbarHeight = scrollbar.horizontalScrollbarSize | 0;
-        var rawLineDecorationsWidth = options.get(46 /* lineDecorationsWidth */);
-        var folding = options.get(29 /* folding */);
-        var lineDecorationsWidth;
-        if (typeof rawLineDecorationsWidth === 'string' && /^\d+(\.\d+)?ch$/.test(rawLineDecorationsWidth)) {
-            var multiple = parseFloat(rawLineDecorationsWidth.substr(0, rawLineDecorationsWidth.length - 2));
-            lineDecorationsWidth = EditorIntOption.clampedInt(multiple * typicalHalfwidthCharacterWidth, 0, 0, 1000);
-        }
-        else {
-            lineDecorationsWidth = EditorIntOption.clampedInt(rawLineDecorationsWidth, 0, 0, 1000);
-        }
-        if (folding) {
-            lineDecorationsWidth += 16;
-        }
-        var lineNumbersWidth = 0;
-        if (showLineNumbers) {
-            var digitCount = Math.max(lineNumbersDigitCount, lineNumbersMinChars);
-            lineNumbersWidth = Math.round(digitCount * maxDigitWidth);
-        }
-        var glyphMarginWidth = 0;
-        if (showGlyphMargin) {
-            glyphMarginWidth = lineHeight;
-        }
-        var glyphMarginLeft = 0;
-        var lineNumbersLeft = glyphMarginLeft + glyphMarginWidth;
-        var decorationsLeft = lineNumbersLeft + lineNumbersWidth;
-        var contentLeft = decorationsLeft + lineDecorationsWidth;
-        var remainingWidth = outerWidth - glyphMarginWidth - lineNumbersWidth - lineDecorationsWidth;
-        var renderMinimap;
-        var minimapLeft;
-        var minimapWidth;
-        var contentWidth;
-        if (!minimapEnabled) {
-            minimapLeft = 0;
-            minimapWidth = 0;
-            renderMinimap = 0 /* None */;
-            contentWidth = remainingWidth;
-        }
-        else {
-            // The minimapScale is also the pixel width of each character. Adjust
-            // for the pixel ratio of the screen.
-            var minimapCharWidth = minimapScale / pixelRatio;
-            renderMinimap = minimapRenderCharacters ? 1 /* Text */ : 2 /* Blocks */;
-            // Given:
-            // (leaving 2px for the cursor to have space after the last character)
-            // viewportColumn = (contentWidth - verticalScrollbarWidth - 2) / typicalHalfwidthCharacterWidth
-            // minimapWidth = viewportColumn * minimapCharWidth
-            // contentWidth = remainingWidth - minimapWidth
-            // What are good values for contentWidth and minimapWidth ?
-            // minimapWidth = ((contentWidth - verticalScrollbarWidth - 2) / typicalHalfwidthCharacterWidth) * minimapCharWidth
-            // typicalHalfwidthCharacterWidth * minimapWidth = (contentWidth - verticalScrollbarWidth - 2) * minimapCharWidth
-            // typicalHalfwidthCharacterWidth * minimapWidth = (remainingWidth - minimapWidth - verticalScrollbarWidth - 2) * minimapCharWidth
-            // (typicalHalfwidthCharacterWidth + minimapCharWidth) * minimapWidth = (remainingWidth - verticalScrollbarWidth - 2) * minimapCharWidth
-            // minimapWidth = ((remainingWidth - verticalScrollbarWidth - 2) * minimapCharWidth) / (typicalHalfwidthCharacterWidth + minimapCharWidth)
-            minimapWidth = Math.max(0, Math.floor(((remainingWidth - verticalScrollbarWidth - 2) * minimapCharWidth) / (typicalHalfwidthCharacterWidth + minimapCharWidth))) + MINIMAP_GUTTER_WIDTH;
-            var minimapColumns = minimapWidth / minimapCharWidth;
-            if (minimapColumns > minimapMaxColumn) {
-                minimapWidth = Math.floor(minimapMaxColumn * minimapCharWidth);
-            }
-            contentWidth = remainingWidth - minimapWidth;
-            if (minimapSide === 'left') {
-                minimapLeft = 0;
-                glyphMarginLeft += minimapWidth;
-                lineNumbersLeft += minimapWidth;
-                decorationsLeft += minimapWidth;
-                contentLeft += minimapWidth;
-            }
-            else {
-                minimapLeft = outerWidth - minimapWidth - verticalScrollbarWidth;
-            }
-        }
-        // (leaving 2px for the cursor to have space after the last character)
-        var viewportColumn = Math.max(1, Math.floor((contentWidth - verticalScrollbarWidth - 2) / typicalHalfwidthCharacterWidth));
-        var verticalArrowSize = (verticalScrollbarHasArrows ? scrollbarArrowSize : 0);
-        return {
-            width: outerWidth,
-            height: outerHeight,
-            glyphMarginLeft: glyphMarginLeft,
-            glyphMarginWidth: glyphMarginWidth,
-            glyphMarginHeight: outerHeight,
-            lineNumbersLeft: lineNumbersLeft,
-            lineNumbersWidth: lineNumbersWidth,
-            lineNumbersHeight: outerHeight,
-            decorationsLeft: decorationsLeft,
-            decorationsWidth: lineDecorationsWidth,
-            decorationsHeight: outerHeight,
-            contentLeft: contentLeft,
-            contentWidth: contentWidth,
-            contentHeight: outerHeight,
-            renderMinimap: renderMinimap,
-            minimapLeft: minimapLeft,
-            minimapWidth: minimapWidth,
-            viewportColumn: viewportColumn,
-            verticalScrollbarWidth: verticalScrollbarWidth,
-            horizontalScrollbarHeight: horizontalScrollbarHeight,
-            overviewRuler: {
-                top: verticalArrowSize,
-                width: verticalScrollbarWidth,
-                height: (outerHeight - 2 * verticalArrowSize),
-                right: 0
-            }
-        };
-    };
-    return EditorLayoutInfoComputer;
-}(ComputedEditorOption));
-
-var EditorLightbulb = /** @class */ (function (_super) {
-    __extends(EditorLightbulb, _super);
-    function EditorLightbulb() {
-        var _this = this;
-        var defaults = { enabled: true };
-        _this = _super.call(this, 45 /* lightbulb */, 'lightbulb', defaults, {
-            'editor.lightbulb.enabled': {
-                type: 'boolean',
-                default: defaults.enabled,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('codeActions', "Enables the code action lightbulb in the editor.")
-            },
-        }) || this;
-        return _this;
-    }
-    EditorLightbulb.prototype.validate = function (_input) {
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        return {
-            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled)
-        };
-    };
-    return EditorLightbulb;
-}(BaseEditorOption));
-//#endregion
-//#region lineHeight
-var EditorLineHeight = /** @class */ (function (_super) {
-    __extends(EditorLineHeight, _super);
-    function EditorLineHeight() {
-        return _super.call(this, 47 /* lineHeight */, 'lineHeight', EDITOR_FONT_DEFAULTS.lineHeight, 0, 150, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineHeight', "Controls the line height. Use 0 to compute the line height from the font size.") }) || this;
-    }
-    EditorLineHeight.prototype.compute = function (env, options, value) {
-        // The lineHeight is computed from the fontSize if it is 0.
-        // Moreover, the final lineHeight respects the editor zoom level.
-        // So take the result from env.fontInfo
-        return env.fontInfo.lineHeight;
-    };
-    return EditorLineHeight;
-}(EditorIntOption));
-var EditorMinimap = /** @class */ (function (_super) {
-    __extends(EditorMinimap, _super);
-    function EditorMinimap() {
-        var _this = this;
-        var defaults = {
-            enabled: true,
-            side: 'right',
-            showSlider: 'mouseover',
-            renderCharacters: true,
-            maxColumn: 120,
-            scale: 1,
-        };
-        _this = _super.call(this, 52 /* minimap */, 'minimap', defaults, {
-            'editor.minimap.enabled': {
-                type: 'boolean',
-                default: defaults.enabled,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.enabled', "Controls whether the minimap is shown.")
-            },
-            'editor.minimap.side': {
-                type: 'string',
-                enum: ['left', 'right'],
-                default: defaults.side,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.side', "Controls the side where to render the minimap.")
-            },
-            'editor.minimap.showSlider': {
-                type: 'string',
-                enum: ['always', 'mouseover'],
-                default: defaults.showSlider,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.showSlider', "Controls when the minimap slider is shown.")
-            },
-            'editor.minimap.scale': {
-                type: 'number',
-                default: defaults.scale,
-                minimum: 1,
-                maximum: 3,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.scale', "Scale of content drawn in the minimap.")
-            },
-            'editor.minimap.renderCharacters': {
-                type: 'boolean',
-                default: defaults.renderCharacters,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.renderCharacters', "Render the actual characters on a line as opposed to color blocks.")
-            },
-            'editor.minimap.maxColumn': {
-                type: 'number',
-                default: defaults.maxColumn,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('minimap.maxColumn', "Limit the width of the minimap to render at most a certain number of columns.")
-            },
-        }) || this;
-        return _this;
-    }
-    EditorMinimap.prototype.validate = function (_input) {
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        return {
-            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled),
-            side: EditorStringEnumOption.stringSet(input.side, this.defaultValue.side, ['right', 'left']),
-            showSlider: EditorStringEnumOption.stringSet(input.showSlider, this.defaultValue.showSlider, ['always', 'mouseover']),
-            renderCharacters: EditorBooleanOption.boolean(input.renderCharacters, this.defaultValue.renderCharacters),
-            scale: EditorIntOption.clampedInt(input.scale, 1, 1, 3),
-            maxColumn: EditorIntOption.clampedInt(input.maxColumn, this.defaultValue.maxColumn, 1, 10000),
-        };
-    };
-    return EditorMinimap;
-}(BaseEditorOption));
-//#endregion
-//#region multiCursorModifier
-function _multiCursorModifierFromString(multiCursorModifier) {
-    if (multiCursorModifier === 'ctrlCmd') {
-        return (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"] ? 'metaKey' : 'ctrlKey');
-    }
-    return 'altKey';
-}
-var EditorParameterHints = /** @class */ (function (_super) {
-    __extends(EditorParameterHints, _super);
-    function EditorParameterHints() {
-        var _this = this;
-        var defaults = {
-            enabled: true,
-            cycle: false
-        };
-        _this = _super.call(this, 62 /* parameterHints */, 'parameterHints', defaults, {
-            'editor.parameterHints.enabled': {
-                type: 'boolean',
-                default: defaults.enabled,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('parameterHints.enabled', "Enables a pop-up that shows parameter documentation and type information as you type.")
-            },
-            'editor.parameterHints.cycle': {
-                type: 'boolean',
-                default: defaults.cycle,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('parameterHints.cycle', "Controls whether the parameter hints menu cycles or closes when reaching the end of the list.")
-            },
-        }) || this;
-        return _this;
-    }
-    EditorParameterHints.prototype.validate = function (_input) {
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        return {
-            enabled: EditorBooleanOption.boolean(input.enabled, this.defaultValue.enabled),
-            cycle: EditorBooleanOption.boolean(input.cycle, this.defaultValue.cycle)
-        };
-    };
-    return EditorParameterHints;
-}(BaseEditorOption));
-//#endregion
-//#region pixelRatio
-var EditorPixelRatio = /** @class */ (function (_super) {
-    __extends(EditorPixelRatio, _super);
-    function EditorPixelRatio() {
-        return _super.call(this, 101 /* pixelRatio */) || this;
-    }
-    EditorPixelRatio.prototype.compute = function (env, options, _) {
-        return env.pixelRatio;
-    };
-    return EditorPixelRatio;
-}(ComputedEditorOption));
-var EditorQuickSuggestions = /** @class */ (function (_super) {
-    __extends(EditorQuickSuggestions, _super);
-    function EditorQuickSuggestions() {
-        var _this = this;
-        var defaults = {
-            other: true,
-            comments: false,
-            strings: false
-        };
-        _this = _super.call(this, 63 /* quickSuggestions */, 'quickSuggestions', defaults, {
-            anyOf: [
-                {
-                    type: 'boolean',
-                },
-                {
-                    type: 'object',
-                    properties: {
-                        strings: {
-                            type: 'boolean',
-                            default: defaults.strings,
-                            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions.strings', "Enable quick suggestions inside strings.")
-                        },
-                        comments: {
-                            type: 'boolean',
-                            default: defaults.comments,
-                            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions.comments', "Enable quick suggestions inside comments.")
-                        },
-                        other: {
-                            type: 'boolean',
-                            default: defaults.other,
-                            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions.other', "Enable quick suggestions outside of strings and comments.")
-                        },
-                    }
-                }
-            ],
-            default: defaults,
-            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestions', "Controls whether suggestions should automatically show up while typing.")
-        }) || this;
-        _this.defaultValue = defaults;
-        return _this;
-    }
-    EditorQuickSuggestions.prototype.validate = function (_input) {
-        if (typeof _input === 'boolean') {
-            return _input;
-        }
-        if (typeof _input === 'object') {
-            var input = _input;
-            var opts = {
-                other: EditorBooleanOption.boolean(input.other, this.defaultValue.other),
-                comments: EditorBooleanOption.boolean(input.comments, this.defaultValue.comments),
-                strings: EditorBooleanOption.boolean(input.strings, this.defaultValue.strings),
-            };
-            if (opts.other && opts.comments && opts.strings) {
-                return true; // all on
-            }
-            else if (!opts.other && !opts.comments && !opts.strings) {
-                return false; // all off
-            }
-            else {
-                return opts;
-            }
-        }
-        return this.defaultValue;
-    };
-    return EditorQuickSuggestions;
-}(BaseEditorOption));
-var EditorRenderLineNumbersOption = /** @class */ (function (_super) {
-    __extends(EditorRenderLineNumbersOption, _super);
-    function EditorRenderLineNumbersOption() {
-        return _super.call(this, 48 /* lineNumbers */, 'lineNumbers', { renderType: 1 /* On */, renderFn: null }, {
-            type: 'string',
-            enum: ['off', 'on', 'relative', 'interval'],
-            enumDescriptions: [
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.off', "Line numbers are not rendered."),
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.on', "Line numbers are rendered as absolute number."),
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.relative', "Line numbers are rendered as distance in lines to cursor position."),
-                _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers.interval', "Line numbers are rendered every 10 lines.")
-            ],
-            default: 'on',
-            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('lineNumbers', "Controls the display of line numbers.")
-        }) || this;
-    }
-    EditorRenderLineNumbersOption.prototype.validate = function (lineNumbers) {
-        var renderType = this.defaultValue.renderType;
-        var renderFn = this.defaultValue.renderFn;
-        if (typeof lineNumbers !== 'undefined') {
-            if (typeof lineNumbers === 'function') {
-                renderType = 4 /* Custom */;
-                renderFn = lineNumbers;
-            }
-            else if (lineNumbers === 'interval') {
-                renderType = 3 /* Interval */;
-            }
-            else if (lineNumbers === 'relative') {
-                renderType = 2 /* Relative */;
-            }
-            else if (lineNumbers === 'on') {
-                renderType = 1 /* On */;
-            }
-            else {
-                renderType = 0 /* Off */;
-            }
-        }
-        return {
-            renderType: renderType,
-            renderFn: renderFn
-        };
-    };
-    return EditorRenderLineNumbersOption;
-}(BaseEditorOption));
-//#endregion
-//#region rulers
-var EditorRulers = /** @class */ (function (_super) {
-    __extends(EditorRulers, _super);
-    function EditorRulers() {
-        var _this = this;
-        var defaults = [];
-        _this = _super.call(this, 73 /* rulers */, 'rulers', defaults, {
-            type: 'array',
-            items: {
-                type: 'number'
-            },
-            default: defaults,
-            description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('rulers', "Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.")
-        }) || this;
-        return _this;
-    }
-    EditorRulers.prototype.validate = function (input) {
-        if (Array.isArray(input)) {
-            var rulers = [];
-            for (var _i = 0, input_1 = input; _i < input_1.length; _i++) {
-                var value = input_1[_i];
-                rulers.push(EditorIntOption.clampedInt(value, 0, 0, 10000));
-            }
-            rulers.sort(function (a, b) { return a - b; });
-            return rulers;
-        }
-        return this.defaultValue;
-    };
-    return EditorRulers;
-}(SimpleEditorOption));
-function _scrollbarVisibilityFromString(visibility, defaultValue) {
-    if (typeof visibility !== 'string') {
-        return defaultValue;
-    }
-    switch (visibility) {
-        case 'hidden': return 2 /* Hidden */;
-        case 'visible': return 3 /* Visible */;
-        default: return 1 /* Auto */;
-    }
-}
-var EditorScrollbar = /** @class */ (function (_super) {
-    __extends(EditorScrollbar, _super);
-    function EditorScrollbar() {
-        return _super.call(this, 74 /* scrollbar */, 'scrollbar', {
-            vertical: 1 /* Auto */,
-            horizontal: 1 /* Auto */,
-            arrowSize: 11,
-            useShadows: true,
-            verticalHasArrows: false,
-            horizontalHasArrows: false,
-            horizontalScrollbarSize: 10,
-            horizontalSliderSize: 10,
-            verticalScrollbarSize: 14,
-            verticalSliderSize: 14,
-            handleMouseWheel: true,
-            alwaysConsumeMouseWheel: true
-        }) || this;
-    }
-    EditorScrollbar.prototype.validate = function (_input) {
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        var horizontalScrollbarSize = EditorIntOption.clampedInt(input.horizontalScrollbarSize, this.defaultValue.horizontalScrollbarSize, 0, 1000);
-        var verticalScrollbarSize = EditorIntOption.clampedInt(input.verticalScrollbarSize, this.defaultValue.verticalScrollbarSize, 0, 1000);
-        return {
-            arrowSize: EditorIntOption.clampedInt(input.arrowSize, this.defaultValue.arrowSize, 0, 1000),
-            vertical: _scrollbarVisibilityFromString(input.vertical, this.defaultValue.vertical),
-            horizontal: _scrollbarVisibilityFromString(input.horizontal, this.defaultValue.horizontal),
-            useShadows: EditorBooleanOption.boolean(input.useShadows, this.defaultValue.useShadows),
-            verticalHasArrows: EditorBooleanOption.boolean(input.verticalHasArrows, this.defaultValue.verticalHasArrows),
-            horizontalHasArrows: EditorBooleanOption.boolean(input.horizontalHasArrows, this.defaultValue.horizontalHasArrows),
-            handleMouseWheel: EditorBooleanOption.boolean(input.handleMouseWheel, this.defaultValue.handleMouseWheel),
-            alwaysConsumeMouseWheel: EditorBooleanOption.boolean(input.alwaysConsumeMouseWheel, this.defaultValue.alwaysConsumeMouseWheel),
-            horizontalScrollbarSize: horizontalScrollbarSize,
-            horizontalSliderSize: EditorIntOption.clampedInt(input.horizontalSliderSize, horizontalScrollbarSize, 0, 1000),
-            verticalScrollbarSize: verticalScrollbarSize,
-            verticalSliderSize: EditorIntOption.clampedInt(input.verticalSliderSize, verticalScrollbarSize, 0, 1000),
-        };
-    };
-    return EditorScrollbar;
-}(BaseEditorOption));
-var EditorSuggest = /** @class */ (function (_super) {
-    __extends(EditorSuggest, _super);
-    function EditorSuggest() {
-        var _this = this;
-        var defaults = {
-            insertMode: 'insert',
-            insertHighlight: false,
-            filterGraceful: true,
-            snippetsPreventQuickSuggestions: true,
-            localityBonus: false,
-            shareSuggestSelections: false,
-            showIcons: true,
-            maxVisibleSuggestions: 12,
-            showMethods: true,
-            showFunctions: true,
-            showConstructors: true,
-            showFields: true,
-            showVariables: true,
-            showClasses: true,
-            showStructs: true,
-            showInterfaces: true,
-            showModules: true,
-            showProperties: true,
-            showEvents: true,
-            showOperators: true,
-            showUnits: true,
-            showValues: true,
-            showConstants: true,
-            showEnums: true,
-            showEnumMembers: true,
-            showKeywords: true,
-            showWords: true,
-            showColors: true,
-            showFiles: true,
-            showReferences: true,
-            showFolders: true,
-            showTypeParameters: true,
-            showSnippets: true,
-        };
-        _this = _super.call(this, 85 /* suggest */, 'suggest', defaults, {
-            'editor.suggest.insertMode': {
-                type: 'string',
-                enum: ['insert', 'replace'],
-                enumDescriptions: [
-                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertMode.insert', "Insert suggestion without overwriting text right of the cursor."),
-                    _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertMode.replace', "Insert suggestion and overwrite text right of the cursor."),
-                ],
-                default: defaults.insertMode,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertMode', "Controls whether words are overwritten when accepting completions. Note that this depends on extensions opting into this feature.")
-            },
-            'editor.suggest.insertHighlight': {
-                type: 'boolean',
-                default: defaults.insertHighlight,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.insertHighlight', "Controls whether unexpected text modifications while accepting completions should be highlighted, e.g `insertMode` is `replace` but the completion only supports `insert`.")
-            },
-            'editor.suggest.filterGraceful': {
-                type: 'boolean',
-                default: defaults.filterGraceful,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.filterGraceful', "Controls whether filtering and sorting suggestions accounts for small typos.")
-            },
-            'editor.suggest.localityBonus': {
-                type: 'boolean',
-                default: defaults.localityBonus,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.localityBonus', "Controls whether sorting favours words that appear close to the cursor.")
-            },
-            'editor.suggest.shareSuggestSelections': {
-                type: 'boolean',
-                default: defaults.shareSuggestSelections,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.shareSuggestSelections', "Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `#editor.suggestSelection#`).")
-            },
-            'editor.suggest.snippetsPreventQuickSuggestions': {
-                type: 'boolean',
-                default: defaults.snippetsPreventQuickSuggestions,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.snippetsPreventQuickSuggestions', "Control whether an active snippet prevents quick suggestions.")
-            },
-            'editor.suggest.showIcons': {
-                type: 'boolean',
-                default: defaults.showIcons,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.showIcons', "Controls whether to show or hide icons in suggestions.")
-            },
-            'editor.suggest.maxVisibleSuggestions': {
-                type: 'number',
-                default: defaults.maxVisibleSuggestions,
-                minimum: 1,
-                maximum: 15,
-                description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggest.maxVisibleSuggestions', "Controls how many suggestions IntelliSense will show before showing a scrollbar (maximum 15).")
-            },
-            'editor.suggest.filteredTypes': {
-                type: 'object',
-                deprecationMessage: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('deprecated', "This setting is deprecated, please use separate settings like 'editor.suggest.showKeywords' or 'editor.suggest.showSnippets' instead.")
-            },
-            'editor.suggest.showMethods': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showMethods', "When enabled IntelliSense shows `method`-suggestions.")
-            },
-            'editor.suggest.showFunctions': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFunctions', "When enabled IntelliSense shows `function`-suggestions.")
-            },
-            'editor.suggest.showConstructors': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showConstructors', "When enabled IntelliSense shows `constructor`-suggestions.")
-            },
-            'editor.suggest.showFields': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFields', "When enabled IntelliSense shows `field`-suggestions.")
-            },
-            'editor.suggest.showVariables': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showVariables', "When enabled IntelliSense shows `variable`-suggestions.")
-            },
-            'editor.suggest.showClasses': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showClasss', "When enabled IntelliSense shows `class`-suggestions.")
-            },
-            'editor.suggest.showStructs': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showStructs', "When enabled IntelliSense shows `struct`-suggestions.")
-            },
-            'editor.suggest.showInterfaces': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showInterfaces', "When enabled IntelliSense shows `interface`-suggestions.")
-            },
-            'editor.suggest.showModules': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showModules', "When enabled IntelliSense shows `module`-suggestions.")
-            },
-            'editor.suggest.showProperties': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showPropertys', "When enabled IntelliSense shows `property`-suggestions.")
-            },
-            'editor.suggest.showEvents': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showEvents', "When enabled IntelliSense shows `event`-suggestions.")
-            },
-            'editor.suggest.showOperators': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showOperators', "When enabled IntelliSense shows `operator`-suggestions.")
-            },
-            'editor.suggest.showUnits': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showUnits', "When enabled IntelliSense shows `unit`-suggestions.")
-            },
-            'editor.suggest.showValues': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showValues', "When enabled IntelliSense shows `value`-suggestions.")
-            },
-            'editor.suggest.showConstants': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showConstants', "When enabled IntelliSense shows `constant`-suggestions.")
-            },
-            'editor.suggest.showEnums': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showEnums', "When enabled IntelliSense shows `enum`-suggestions.")
-            },
-            'editor.suggest.showEnumMembers': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showEnumMembers', "When enabled IntelliSense shows `enumMember`-suggestions.")
-            },
-            'editor.suggest.showKeywords': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showKeywords', "When enabled IntelliSense shows `keyword`-suggestions.")
-            },
-            'editor.suggest.showWords': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showTexts', "When enabled IntelliSense shows `text`-suggestions.")
-            },
-            'editor.suggest.showColors': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showColors', "When enabled IntelliSense shows `color`-suggestions.")
-            },
-            'editor.suggest.showFiles': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFiles', "When enabled IntelliSense shows `file`-suggestions.")
-            },
-            'editor.suggest.showReferences': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showReferences', "When enabled IntelliSense shows `reference`-suggestions.")
-            },
-            'editor.suggest.showCustomcolors': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showCustomcolors', "When enabled IntelliSense shows `customcolor`-suggestions.")
-            },
-            'editor.suggest.showFolders': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showFolders', "When enabled IntelliSense shows `folder`-suggestions.")
-            },
-            'editor.suggest.showTypeParameters': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showTypeParameters', "When enabled IntelliSense shows `typeParameter`-suggestions.")
-            },
-            'editor.suggest.showSnippets': {
-                type: 'boolean',
-                default: true,
-                markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.suggest.showSnippets', "When enabled IntelliSense shows `snippet`-suggestions.")
-            },
-        }) || this;
-        return _this;
-    }
-    EditorSuggest.prototype.validate = function (_input) {
-        if (typeof _input !== 'object') {
-            return this.defaultValue;
-        }
-        var input = _input;
-        return {
-            insertMode: EditorStringEnumOption.stringSet(input.insertMode, this.defaultValue.insertMode, ['insert', 'replace']),
-            insertHighlight: EditorBooleanOption.boolean(input.insertHighlight, this.defaultValue.insertHighlight),
-            filterGraceful: EditorBooleanOption.boolean(input.filterGraceful, this.defaultValue.filterGraceful),
-            snippetsPreventQuickSuggestions: EditorBooleanOption.boolean(input.snippetsPreventQuickSuggestions, this.defaultValue.filterGraceful),
-            localityBonus: EditorBooleanOption.boolean(input.localityBonus, this.defaultValue.localityBonus),
-            shareSuggestSelections: EditorBooleanOption.boolean(input.shareSuggestSelections, this.defaultValue.shareSuggestSelections),
-            showIcons: EditorBooleanOption.boolean(input.showIcons, this.defaultValue.showIcons),
-            maxVisibleSuggestions: EditorIntOption.clampedInt(input.maxVisibleSuggestions, this.defaultValue.maxVisibleSuggestions, 1, 15),
-            showMethods: EditorBooleanOption.boolean(input.showMethods, this.defaultValue.showMethods),
-            showFunctions: EditorBooleanOption.boolean(input.showFunctions, this.defaultValue.showFunctions),
-            showConstructors: EditorBooleanOption.boolean(input.showConstructors, this.defaultValue.showConstructors),
-            showFields: EditorBooleanOption.boolean(input.showFields, this.defaultValue.showFields),
-            showVariables: EditorBooleanOption.boolean(input.showVariables, this.defaultValue.showVariables),
-            showClasses: EditorBooleanOption.boolean(input.showClasses, this.defaultValue.showClasses),
-            showStructs: EditorBooleanOption.boolean(input.showStructs, this.defaultValue.showStructs),
-            showInterfaces: EditorBooleanOption.boolean(input.showInterfaces, this.defaultValue.showInterfaces),
-            showModules: EditorBooleanOption.boolean(input.showModules, this.defaultValue.showModules),
-            showProperties: EditorBooleanOption.boolean(input.showProperties, this.defaultValue.showProperties),
-            showEvents: EditorBooleanOption.boolean(input.showEvents, this.defaultValue.showEvents),
-            showOperators: EditorBooleanOption.boolean(input.showOperators, this.defaultValue.showOperators),
-            showUnits: EditorBooleanOption.boolean(input.showUnits, this.defaultValue.showUnits),
-            showValues: EditorBooleanOption.boolean(input.showValues, this.defaultValue.showValues),
-            showConstants: EditorBooleanOption.boolean(input.showConstants, this.defaultValue.showConstants),
-            showEnums: EditorBooleanOption.boolean(input.showEnums, this.defaultValue.showEnums),
-            showEnumMembers: EditorBooleanOption.boolean(input.showEnumMembers, this.defaultValue.showEnumMembers),
-            showKeywords: EditorBooleanOption.boolean(input.showKeywords, this.defaultValue.showKeywords),
-            showWords: EditorBooleanOption.boolean(input.showWords, this.defaultValue.showWords),
-            showColors: EditorBooleanOption.boolean(input.showColors, this.defaultValue.showColors),
-            showFiles: EditorBooleanOption.boolean(input.showFiles, this.defaultValue.showFiles),
-            showReferences: EditorBooleanOption.boolean(input.showReferences, this.defaultValue.showReferences),
-            showFolders: EditorBooleanOption.boolean(input.showFolders, this.defaultValue.showFolders),
-            showTypeParameters: EditorBooleanOption.boolean(input.showTypeParameters, this.defaultValue.showTypeParameters),
-            showSnippets: EditorBooleanOption.boolean(input.showSnippets, this.defaultValue.showSnippets),
-        };
-    };
-    return EditorSuggest;
-}(BaseEditorOption));
-//#endregion
-//#region tabFocusMode
-var EditorTabFocusMode = /** @class */ (function (_super) {
-    __extends(EditorTabFocusMode, _super);
-    function EditorTabFocusMode() {
-        return _super.call(this, 102 /* tabFocusMode */, [65 /* readOnly */]) || this;
-    }
-    EditorTabFocusMode.prototype.compute = function (env, options, _) {
-        var readOnly = options.get(65 /* readOnly */);
-        return (readOnly ? true : env.tabFocusMode);
-    };
-    return EditorTabFocusMode;
-}(ComputedEditorOption));
-function _wrappingIndentFromString(wrappingIndent) {
-    switch (wrappingIndent) {
-        case 'none': return 0 /* None */;
-        case 'same': return 1 /* Same */;
-        case 'indent': return 2 /* Indent */;
-        case 'deepIndent': return 3 /* DeepIndent */;
-    }
-}
-var EditorWrappingInfoComputer = /** @class */ (function (_super) {
-    __extends(EditorWrappingInfoComputer, _super);
-    function EditorWrappingInfoComputer() {
-        return _super.call(this, 104 /* wrappingInfo */, [93 /* wordWrap */, 97 /* wordWrapColumn */, 98 /* wordWrapMinified */, 103 /* layoutInfo */, 2 /* accessibilitySupport */]) || this;
-    }
-    EditorWrappingInfoComputer.prototype.compute = function (env, options, _) {
-        var wordWrap = options.get(93 /* wordWrap */);
-        var wordWrapColumn = options.get(97 /* wordWrapColumn */);
-        var wordWrapMinified = options.get(98 /* wordWrapMinified */);
-        var layoutInfo = options.get(103 /* layoutInfo */);
-        var accessibilitySupport = options.get(2 /* accessibilitySupport */);
-        var bareWrappingInfo = null;
-        {
-            if (accessibilitySupport === 2 /* Enabled */) {
-                // See https://github.com/Microsoft/vscode/issues/27766
-                // Never enable wrapping when a screen reader is attached
-                // because arrow down etc. will not move the cursor in the way
-                // a screen reader expects.
-                bareWrappingInfo = {
-                    isWordWrapMinified: false,
-                    isViewportWrapping: false,
-                    wrappingColumn: -1
-                };
-            }
-            else if (wordWrapMinified && env.isDominatedByLongLines) {
-                // Force viewport width wrapping if model is dominated by long lines
-                bareWrappingInfo = {
-                    isWordWrapMinified: true,
-                    isViewportWrapping: true,
-                    wrappingColumn: Math.max(1, layoutInfo.viewportColumn)
-                };
-            }
-            else if (wordWrap === 'on') {
-                bareWrappingInfo = {
-                    isWordWrapMinified: false,
-                    isViewportWrapping: true,
-                    wrappingColumn: Math.max(1, layoutInfo.viewportColumn)
-                };
-            }
-            else if (wordWrap === 'bounded') {
-                bareWrappingInfo = {
-                    isWordWrapMinified: false,
-                    isViewportWrapping: true,
-                    wrappingColumn: Math.min(Math.max(1, layoutInfo.viewportColumn), wordWrapColumn)
-                };
-            }
-            else if (wordWrap === 'wordWrapColumn') {
-                bareWrappingInfo = {
-                    isWordWrapMinified: false,
-                    isViewportWrapping: false,
-                    wrappingColumn: wordWrapColumn
-                };
-            }
-            else {
-                bareWrappingInfo = {
-                    isWordWrapMinified: false,
-                    isViewportWrapping: false,
-                    wrappingColumn: -1
-                };
-            }
-        }
-        return {
-            isDominatedByLongLines: env.isDominatedByLongLines,
-            isWordWrapMinified: bareWrappingInfo.isWordWrapMinified,
-            isViewportWrapping: bareWrappingInfo.isViewportWrapping,
-            wrappingColumn: bareWrappingInfo.wrappingColumn,
-        };
-    };
-    return EditorWrappingInfoComputer;
-}(ComputedEditorOption));
-//#endregion
-var DEFAULT_WINDOWS_FONT_FAMILY = 'Consolas, \'Courier New\', monospace';
-var DEFAULT_MAC_FONT_FAMILY = 'Menlo, Monaco, \'Courier New\', monospace';
-var DEFAULT_LINUX_FONT_FAMILY = '\'Droid Sans Mono\', \'monospace\', monospace, \'Droid Sans Fallback\'';
-/**
- * @internal
- */
-var EDITOR_FONT_DEFAULTS = {
-    fontFamily: (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"] ? DEFAULT_MAC_FONT_FAMILY : (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isLinux */ "d"] ? DEFAULT_LINUX_FONT_FAMILY : DEFAULT_WINDOWS_FONT_FAMILY)),
-    fontWeight: 'normal',
-    fontSize: (_base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isMacintosh */ "e"] ? 12 : 14),
-    lineHeight: 0,
-    letterSpacing: 0,
-};
-/**
- * @internal
- */
-var EDITOR_MODEL_DEFAULTS = {
-    tabSize: 4,
-    indentSize: 4,
-    insertSpaces: true,
-    detectIndentation: true,
-    trimAutoWhitespace: true,
-    largeFileOptimizations: true
-};
-/**
- * @internal
- */
-var editorOptionsRegistry = [];
-function register(option) {
-    editorOptionsRegistry[option.id] = option;
-    return option;
-}
-/**
- * @internal
- */
-var EditorOptions = {
-    acceptSuggestionOnCommitCharacter: register(new EditorBooleanOption(0 /* acceptSuggestionOnCommitCharacter */, 'acceptSuggestionOnCommitCharacter', true, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('acceptSuggestionOnCommitCharacter', "Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.") })),
-    acceptSuggestionOnEnter: register(new EditorStringEnumOption(1 /* acceptSuggestionOnEnter */, 'acceptSuggestionOnEnter', 'on', ['on', 'smart', 'off'], {
-        markdownEnumDescriptions: [
-            '',
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('acceptSuggestionOnEnterSmart', "Only accept a suggestion with `Enter` when it makes a textual change."),
-            ''
-        ],
-        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('acceptSuggestionOnEnter', "Controls whether suggestions should be accepted on `Enter`, in addition to `Tab`. Helps to avoid ambiguity between inserting new lines or accepting suggestions.")
-    })),
-    accessibilitySupport: register(new EditorAccessibilitySupport()),
-    accessibilityPageSize: register(new EditorIntOption(3 /* accessibilityPageSize */, 'accessibilityPageSize', 10, 1, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('accessibilityPageSize', "Controls the number of lines in the editor that can be read out by a screen reader. Warning: this has a performance implication for numbers larger than the default.") })),
-    ariaLabel: register(new EditorStringOption(4 /* ariaLabel */, 'ariaLabel', _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editorViewAccessibleLabel', "Editor content"))),
-    autoClosingBrackets: register(new EditorStringEnumOption(5 /* autoClosingBrackets */, 'autoClosingBrackets', 'languageDefined', ['always', 'languageDefined', 'beforeWhitespace', 'never'], {
-        enumDescriptions: [
-            '',
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingBrackets.languageDefined', "Use language configurations to determine when to autoclose brackets."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingBrackets.beforeWhitespace', "Autoclose brackets only when the cursor is to the left of whitespace."),
-            '',
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoClosingBrackets', "Controls whether the editor should automatically close brackets after the user adds an opening bracket.")
-    })),
-    autoClosingOvertype: register(new EditorStringEnumOption(6 /* autoClosingOvertype */, 'autoClosingOvertype', 'auto', ['always', 'auto', 'never'], {
-        enumDescriptions: [
-            '',
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingOvertype.auto', "Type over closing quotes or brackets only if they were automatically inserted."),
-            '',
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoClosingOvertype', "Controls whether the editor should type over closing quotes or brackets.")
-    })),
-    autoClosingQuotes: register(new EditorStringEnumOption(7 /* autoClosingQuotes */, 'autoClosingQuotes', 'languageDefined', ['always', 'languageDefined', 'beforeWhitespace', 'never'], {
-        enumDescriptions: [
-            '',
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingQuotes.languageDefined', "Use language configurations to determine when to autoclose quotes."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoClosingQuotes.beforeWhitespace', "Autoclose quotes only when the cursor is to the left of whitespace."),
-            '',
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoClosingQuotes', "Controls whether the editor should automatically close quotes after the user adds an opening quote.")
-    })),
-    autoIndent: register(new EditorEnumOption(8 /* autoIndent */, 'autoIndent', 4 /* Full */, 'full', ['none', 'keep', 'brackets', 'advanced', 'full'], _autoIndentFromString, {
-        enumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.none', "The editor will not insert indentation automatically."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.keep', "The editor will keep the current line's indentation."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.brackets', "The editor will keep the current line's indentation and honor language defined brackets."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.advanced', "The editor will keep the current line's indentation, honor language defined brackets and invoke special onEnterRules defined by languages."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoIndent.full', "The editor will keep the current line's indentation, honor language defined brackets, invoke special onEnterRules defined by languages, and honor indentationRules defined by languages."),
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoIndent', "Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.")
-    })),
-    automaticLayout: register(new EditorBooleanOption(9 /* automaticLayout */, 'automaticLayout', false)),
-    autoSurround: register(new EditorStringEnumOption(10 /* autoSurround */, 'autoSurround', 'languageDefined', ['languageDefined', 'quotes', 'brackets', 'never'], {
-        enumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoSurround.languageDefined', "Use language configurations to determine when to automatically surround selections."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoSurround.quotes', "Surround with quotes but not brackets."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('editor.autoSurround.brackets', "Surround with brackets but not quotes."),
-            ''
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('autoSurround', "Controls whether the editor should automatically surround selections.")
-    })),
-    codeLens: register(new EditorBooleanOption(11 /* codeLens */, 'codeLens', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('codeLens', "Controls whether the editor shows CodeLens.") })),
-    colorDecorators: register(new EditorBooleanOption(12 /* colorDecorators */, 'colorDecorators', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('colorDecorators', "Controls whether the editor should render the inline color decorators and color picker.") })),
-    contextmenu: register(new EditorBooleanOption(13 /* contextmenu */, 'contextmenu', true)),
-    copyWithSyntaxHighlighting: register(new EditorBooleanOption(14 /* copyWithSyntaxHighlighting */, 'copyWithSyntaxHighlighting', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('copyWithSyntaxHighlighting', "Controls whether syntax highlighting should be copied into the clipboard.") })),
-    cursorBlinking: register(new EditorEnumOption(15 /* cursorBlinking */, 'cursorBlinking', 1 /* Blink */, 'blink', ['blink', 'smooth', 'phase', 'expand', 'solid'], _cursorBlinkingStyleFromString, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorBlinking', "Control the cursor animation style.") })),
-    cursorSmoothCaretAnimation: register(new EditorBooleanOption(16 /* cursorSmoothCaretAnimation */, 'cursorSmoothCaretAnimation', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSmoothCaretAnimation', "Controls whether the smooth caret animation should be enabled.") })),
-    cursorStyle: register(new EditorEnumOption(17 /* cursorStyle */, 'cursorStyle', TextEditorCursorStyle.Line, 'line', ['line', 'block', 'underline', 'line-thin', 'block-outline', 'underline-thin'], _cursorStyleFromString, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorStyle', "Controls the cursor style.") })),
-    cursorSurroundingLines: register(new EditorIntOption(18 /* cursorSurroundingLines */, 'cursorSurroundingLines', 0, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLines', "Controls the minimal number of visible leading and trailing lines surrounding the cursor. Known as 'scrollOff' or `scrollOffset` in some other editors.") })),
-    cursorSurroundingLinesStyle: register(new EditorStringEnumOption(19 /* cursorSurroundingLinesStyle */, 'cursorSurroundingLinesStyle', 'default', ['default', 'all'], {
-        enumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLinesStyle.default', "`cursorSurroundingLines` is enforced only when triggered via the keyboard or API."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLinesStyle.all', "`cursorSurroundingLines` is enforced always.")
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorSurroundingLinesStyle', "Controls when `cursorSurroundingLines` should be enforced.")
-    })),
-    cursorWidth: register(new EditorIntOption(20 /* cursorWidth */, 'cursorWidth', 0, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('cursorWidth', "Controls the width of the cursor when `#editor.cursorStyle#` is set to `line`.") })),
-    disableLayerHinting: register(new EditorBooleanOption(21 /* disableLayerHinting */, 'disableLayerHinting', false)),
-    disableMonospaceOptimizations: register(new EditorBooleanOption(22 /* disableMonospaceOptimizations */, 'disableMonospaceOptimizations', false)),
-    dragAndDrop: register(new EditorBooleanOption(23 /* dragAndDrop */, 'dragAndDrop', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('dragAndDrop', "Controls whether the editor should allow moving selections via drag and drop.") })),
-    emptySelectionClipboard: register(new EditorEmptySelectionClipboard()),
-    extraEditorClassName: register(new EditorStringOption(25 /* extraEditorClassName */, 'extraEditorClassName', '')),
-    fastScrollSensitivity: register(new EditorFloatOption(26 /* fastScrollSensitivity */, 'fastScrollSensitivity', 5, function (x) { return (x <= 0 ? 5 : x); }, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fastScrollSensitivity', "Scrolling speed multiplier when pressing `Alt`.") })),
-    find: register(new EditorFind()),
-    fixedOverflowWidgets: register(new EditorBooleanOption(28 /* fixedOverflowWidgets */, 'fixedOverflowWidgets', false)),
-    folding: register(new EditorBooleanOption(29 /* folding */, 'folding', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('folding', "Controls whether the editor has code folding enabled.") })),
-    foldingStrategy: register(new EditorStringEnumOption(30 /* foldingStrategy */, 'foldingStrategy', 'auto', ['auto', 'indentation'], { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('foldingStrategy', "Controls the strategy for computing folding ranges. `auto` uses a language specific folding strategy, if available. `indentation` uses the indentation based folding strategy.") })),
-    fontFamily: register(new EditorStringOption(31 /* fontFamily */, 'fontFamily', EDITOR_FONT_DEFAULTS.fontFamily, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontFamily', "Controls the font family.") })),
-    fontInfo: register(new EditorFontInfo()),
-    fontLigatures2: register(new EditorFontLigatures()),
-    fontSize: register(new EditorFontSize()),
-    fontWeight: register(new EditorStringOption(35 /* fontWeight */, 'fontWeight', EDITOR_FONT_DEFAULTS.fontWeight, {
-        enum: ['normal', 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900'],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('fontWeight', "Controls the font weight.")
-    })),
-    formatOnPaste: register(new EditorBooleanOption(36 /* formatOnPaste */, 'formatOnPaste', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('formatOnPaste', "Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.") })),
-    formatOnType: register(new EditorBooleanOption(37 /* formatOnType */, 'formatOnType', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('formatOnType', "Controls whether the editor should automatically format the line after typing.") })),
-    glyphMargin: register(new EditorBooleanOption(38 /* glyphMargin */, 'glyphMargin', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('glyphMargin', "Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.") })),
-    gotoLocation: register(new EditorGoToLocation()),
-    hideCursorInOverviewRuler: register(new EditorBooleanOption(40 /* hideCursorInOverviewRuler */, 'hideCursorInOverviewRuler', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('hideCursorInOverviewRuler', "Controls whether the cursor should be hidden in the overview ruler.") })),
-    highlightActiveIndentGuide: register(new EditorBooleanOption(41 /* highlightActiveIndentGuide */, 'highlightActiveIndentGuide', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('highlightActiveIndentGuide', "Controls whether the editor should highlight the active indent guide.") })),
-    hover: register(new EditorHover()),
-    inDiffEditor: register(new EditorBooleanOption(43 /* inDiffEditor */, 'inDiffEditor', false)),
-    letterSpacing: register(new EditorFloatOption(44 /* letterSpacing */, 'letterSpacing', EDITOR_FONT_DEFAULTS.letterSpacing, function (x) { return EditorFloatOption.clamp(x, -5, 20); }, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('letterSpacing', "Controls the letter spacing in pixels.") })),
-    lightbulb: register(new EditorLightbulb()),
-    lineDecorationsWidth: register(new SimpleEditorOption(46 /* lineDecorationsWidth */, 'lineDecorationsWidth', 10)),
-    lineHeight: register(new EditorLineHeight()),
-    lineNumbers: register(new EditorRenderLineNumbersOption()),
-    lineNumbersMinChars: register(new EditorIntOption(49 /* lineNumbersMinChars */, 'lineNumbersMinChars', 5, 1, 300)),
-    links: register(new EditorBooleanOption(50 /* links */, 'links', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('links', "Controls whether the editor should detect links and make them clickable.") })),
-    matchBrackets: register(new EditorStringEnumOption(51 /* matchBrackets */, 'matchBrackets', 'always', ['always', 'near', 'never'], { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('matchBrackets', "Highlight matching brackets.") })),
-    minimap: register(new EditorMinimap()),
-    mouseStyle: register(new EditorStringEnumOption(53 /* mouseStyle */, 'mouseStyle', 'text', ['text', 'default', 'copy'])),
-    mouseWheelScrollSensitivity: register(new EditorFloatOption(54 /* mouseWheelScrollSensitivity */, 'mouseWheelScrollSensitivity', 1, function (x) { return (x === 0 ? 1 : x); }, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('mouseWheelScrollSensitivity', "A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events.") })),
-    mouseWheelZoom: register(new EditorBooleanOption(55 /* mouseWheelZoom */, 'mouseWheelZoom', false, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('mouseWheelZoom', "Zoom the font of the editor when using mouse wheel and holding `Ctrl`.") })),
-    multiCursorMergeOverlapping: register(new EditorBooleanOption(56 /* multiCursorMergeOverlapping */, 'multiCursorMergeOverlapping', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorMergeOverlapping', "Merge multiple cursors when they are overlapping.") })),
-    multiCursorModifier: register(new EditorEnumOption(57 /* multiCursorModifier */, 'multiCursorModifier', 'altKey', 'alt', ['ctrlCmd', 'alt'], _multiCursorModifierFromString, {
-        markdownEnumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorModifier.ctrlCmd', "Maps to `Control` on Windows and Linux and to `Command` on macOS."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorModifier.alt', "Maps to `Alt` on Windows and Linux and to `Option` on macOS.")
-        ],
-        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
-            key: 'multiCursorModifier',
-            comment: [
-                '- `ctrlCmd` refers to a value the setting can take and should not be localized.',
-                '- `Control` and `Command` refer to the modifier keys Ctrl or Cmd on the keyboard and can be localized.'
-            ]
-        }, "The modifier to be used to add multiple cursors with the mouse. The Go To Definition and Open Link mouse gestures will adapt such that they do not conflict with the multicursor modifier. [Read more](https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier).")
-    })),
-    multiCursorPaste: register(new EditorStringEnumOption(58 /* multiCursorPaste */, 'multiCursorPaste', 'spread', ['spread', 'full'], {
-        markdownEnumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorPaste.spread', "Each cursor pastes a single line of the text."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorPaste.full', "Each cursor pastes the full text.")
-        ],
-        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('multiCursorPaste', "Controls pasting when the line count of the pasted text matches the cursor count.")
-    })),
-    occurrencesHighlight: register(new EditorBooleanOption(59 /* occurrencesHighlight */, 'occurrencesHighlight', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('occurrencesHighlight', "Controls whether the editor should highlight semantic symbol occurrences.") })),
-    overviewRulerBorder: register(new EditorBooleanOption(60 /* overviewRulerBorder */, 'overviewRulerBorder', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('overviewRulerBorder', "Controls whether a border should be drawn around the overview ruler.") })),
-    overviewRulerLanes: register(new EditorIntOption(61 /* overviewRulerLanes */, 'overviewRulerLanes', 3, 0, 3)),
-    parameterHints: register(new EditorParameterHints()),
-    quickSuggestions: register(new EditorQuickSuggestions()),
-    quickSuggestionsDelay: register(new EditorIntOption(64 /* quickSuggestionsDelay */, 'quickSuggestionsDelay', 10, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('quickSuggestionsDelay', "Controls the delay in milliseconds after which quick suggestions will show up.") })),
-    readOnly: register(new EditorBooleanOption(65 /* readOnly */, 'readOnly', false)),
-    renderControlCharacters: register(new EditorBooleanOption(66 /* renderControlCharacters */, 'renderControlCharacters', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderControlCharacters', "Controls whether the editor should render control characters.") })),
-    renderIndentGuides: register(new EditorBooleanOption(67 /* renderIndentGuides */, 'renderIndentGuides', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderIndentGuides', "Controls whether the editor should render indent guides.") })),
-    renderFinalNewline: register(new EditorBooleanOption(68 /* renderFinalNewline */, 'renderFinalNewline', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderFinalNewline', "Render last line number when the file ends with a newline.") })),
-    renderLineHighlight: register(new EditorStringEnumOption(69 /* renderLineHighlight */, 'renderLineHighlight', 'line', ['none', 'gutter', 'line', 'all'], {
-        enumDescriptions: [
-            '',
-            '',
-            '',
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderLineHighlight.all', "Highlights both the gutter and the current line."),
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderLineHighlight', "Controls how the editor should render the current line highlight.")
-    })),
-    renderWhitespace: register(new EditorStringEnumOption(70 /* renderWhitespace */, 'renderWhitespace', 'none', ['none', 'boundary', 'selection', 'all'], {
-        enumDescriptions: [
-            '',
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderWhitespace.boundary', "Render whitespace characters except for single spaces between words."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderWhitespace.selection', "Render whitespace characters only on selected text."),
-            ''
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('renderWhitespace', "Controls how the editor should render whitespace characters.")
-    })),
-    revealHorizontalRightPadding: register(new EditorIntOption(71 /* revealHorizontalRightPadding */, 'revealHorizontalRightPadding', 30, 0, 1000)),
-    roundedSelection: register(new EditorBooleanOption(72 /* roundedSelection */, 'roundedSelection', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('roundedSelection', "Controls whether selections should have rounded corners.") })),
-    rulers: register(new EditorRulers()),
-    scrollbar: register(new EditorScrollbar()),
-    scrollBeyondLastColumn: register(new EditorIntOption(75 /* scrollBeyondLastColumn */, 'scrollBeyondLastColumn', 5, 0, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('scrollBeyondLastColumn', "Controls the number of extra characters beyond which the editor will scroll horizontally.") })),
-    scrollBeyondLastLine: register(new EditorBooleanOption(76 /* scrollBeyondLastLine */, 'scrollBeyondLastLine', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('scrollBeyondLastLine', "Controls whether the editor will scroll beyond the last line.") })),
-    selectionClipboard: register(new EditorBooleanOption(77 /* selectionClipboard */, 'selectionClipboard', true, {
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('selectionClipboard', "Controls whether the Linux primary clipboard should be supported."),
-        included: _base_common_platform_js__WEBPACK_IMPORTED_MODULE_1__[/* isLinux */ "d"]
-    })),
-    selectionHighlight: register(new EditorBooleanOption(78 /* selectionHighlight */, 'selectionHighlight', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('selectionHighlight', "Controls whether the editor should highlight matches similar to the selection.") })),
-    selectOnLineNumbers: register(new EditorBooleanOption(79 /* selectOnLineNumbers */, 'selectOnLineNumbers', true)),
-    showFoldingControls: register(new EditorStringEnumOption(80 /* showFoldingControls */, 'showFoldingControls', 'mouseover', ['always', 'mouseover'], { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('showFoldingControls', "Controls whether the fold controls on the gutter are automatically hidden.") })),
-    showUnused: register(new EditorBooleanOption(81 /* showUnused */, 'showUnused', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('showUnused', "Controls fading out of unused code.") })),
-    snippetSuggestions: register(new EditorStringEnumOption(82 /* snippetSuggestions */, 'snippetSuggestions', 'inline', ['top', 'bottom', 'inline', 'none'], {
-        enumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.top', "Show snippet suggestions on top of other suggestions."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.bottom', "Show snippet suggestions below other suggestions."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.inline', "Show snippets suggestions with other suggestions."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions.none', "Do not show snippet suggestions."),
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('snippetSuggestions', "Controls whether snippets are shown with other suggestions and how they are sorted.")
-    })),
-    smoothScrolling: register(new EditorBooleanOption(83 /* smoothScrolling */, 'smoothScrolling', false, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('smoothScrolling', "Controls whether the editor will scroll using an animation.") })),
-    stopRenderingLineAfter: register(new EditorIntOption(84 /* stopRenderingLineAfter */, 'stopRenderingLineAfter', 10000, -1, 1073741824 /* MAX_SAFE_SMALL_INTEGER */)),
-    suggest: register(new EditorSuggest()),
-    suggestFontSize: register(new EditorIntOption(86 /* suggestFontSize */, 'suggestFontSize', 0, 0, 1000, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestFontSize', "Font size for the suggest widget. When set to `0`, the value of `#editor.fontSize#` is used.") })),
-    suggestLineHeight: register(new EditorIntOption(87 /* suggestLineHeight */, 'suggestLineHeight', 0, 0, 1000, { markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestLineHeight', "Line height for the suggest widget. When set to `0`, the value of `#editor.lineHeight#` is used.") })),
-    suggestOnTriggerCharacters: register(new EditorBooleanOption(88 /* suggestOnTriggerCharacters */, 'suggestOnTriggerCharacters', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestOnTriggerCharacters', "Controls whether suggestions should automatically show up when typing trigger characters.") })),
-    suggestSelection: register(new EditorStringEnumOption(89 /* suggestSelection */, 'suggestSelection', 'recentlyUsed', ['first', 'recentlyUsed', 'recentlyUsedByPrefix'], {
-        markdownEnumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection.first', "Always select the first suggestion."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection.recentlyUsed', "Select recent suggestions unless further typing selects one, e.g. `console.| -> console.log` because `log` has been completed recently."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection.recentlyUsedByPrefix', "Select suggestions based on previous prefixes that have completed those suggestions, e.g. `co -> console` and `con -> const`."),
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('suggestSelection', "Controls how suggestions are pre-selected when showing the suggest list.")
-    })),
-    tabCompletion: register(new EditorStringEnumOption(90 /* tabCompletion */, 'tabCompletion', 'off', ['on', 'off', 'onlySnippets'], {
-        enumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion.on', "Tab complete will insert the best matching suggestion when pressing tab."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion.off', "Disable tab completions."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion.onlySnippets', "Tab complete snippets when their prefix match. Works best when 'quickSuggestions' aren't enabled."),
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('tabCompletion', "Enables tab completions.")
-    })),
-    useTabStops: register(new EditorBooleanOption(91 /* useTabStops */, 'useTabStops', true, { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('useTabStops', "Inserting and deleting whitespace follows tab stops.") })),
-    wordSeparators: register(new EditorStringOption(92 /* wordSeparators */, 'wordSeparators', _model_wordHelper_js__WEBPACK_IMPORTED_MODULE_2__[/* USUAL_WORD_SEPARATORS */ "b"], { description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wordSeparators', "Characters that will be used as word separators when doing word related navigations or operations.") })),
-    wordWrap: register(new EditorStringEnumOption(93 /* wordWrap */, 'wordWrap', 'off', ['off', 'on', 'wordWrapColumn', 'bounded'], {
-        markdownEnumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wordWrap.off', "Lines will never wrap."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wordWrap.on', "Lines will wrap at the viewport width."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
-                key: 'wordWrap.wordWrapColumn',
-                comment: [
-                    '- `editor.wordWrapColumn` refers to a different setting and should not be localized.'
-                ]
-            }, "Lines will wrap at `#editor.wordWrapColumn#`."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
-                key: 'wordWrap.bounded',
-                comment: [
-                    '- viewport means the edge of the visible window size.',
-                    '- `editor.wordWrapColumn` refers to a different setting and should not be localized.'
-                ]
-            }, "Lines will wrap at the minimum of viewport and `#editor.wordWrapColumn#`."),
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
-            key: 'wordWrap',
-            comment: [
-                '- \'off\', \'on\', \'wordWrapColumn\' and \'bounded\' refer to values the setting can take and should not be localized.',
-                '- `editor.wordWrapColumn` refers to a different setting and should not be localized.'
-            ]
-        }, "Controls how lines should wrap.")
-    })),
-    wordWrapBreakAfterCharacters: register(new EditorStringOption(94 /* wordWrapBreakAfterCharacters */, 'wordWrapBreakAfterCharacters', ' \t})]?|/&,;¢°′″‰℃、。｡､￠，．：；？！％・･ゝゞヽヾーァィゥェォッャュョヮヵヶぁぃぅぇぉっゃゅょゎゕゖㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ々〻ｧｨｩｪｫｬｭｮｯｰ”〉》」』】〕）］｝｣')),
-    wordWrapBreakBeforeCharacters: register(new EditorStringOption(95 /* wordWrapBreakBeforeCharacters */, 'wordWrapBreakBeforeCharacters', '([{‘“〈《「『【〔（［｛｢£¥＄￡￥+＋')),
-    wordWrapBreakObtrusiveCharacters: register(new EditorStringOption(96 /* wordWrapBreakObtrusiveCharacters */, 'wordWrapBreakObtrusiveCharacters', '.')),
-    wordWrapColumn: register(new EditorIntOption(97 /* wordWrapColumn */, 'wordWrapColumn', 80, 1, 1073741824 /* MAX_SAFE_SMALL_INTEGER */, {
-        markdownDescription: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]({
-            key: 'wordWrapColumn',
-            comment: [
-                '- `editor.wordWrap` refers to a different setting and should not be localized.',
-                '- \'wordWrapColumn\' and \'bounded\' refer to values the different setting can take and should not be localized.'
-            ]
-        }, "Controls the wrapping column of the editor when `#editor.wordWrap#` is `wordWrapColumn` or `bounded`.")
-    })),
-    wordWrapMinified: register(new EditorBooleanOption(98 /* wordWrapMinified */, 'wordWrapMinified', true)),
-    wrappingIndent: register(new EditorEnumOption(99 /* wrappingIndent */, 'wrappingIndent', 1 /* Same */, 'same', ['none', 'same', 'indent', 'deepIndent'], _wrappingIndentFromString, {
-        enumDescriptions: [
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.none', "No indentation. Wrapped lines begin at column 1."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.same', "Wrapped lines get the same indentation as the parent."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.indent', "Wrapped lines get +1 indentation toward the parent."),
-            _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent.deepIndent', "Wrapped lines get +2 indentation toward the parent."),
-        ],
-        description: _nls_js__WEBPACK_IMPORTED_MODULE_0__[/* localize */ "a"]('wrappingIndent', "Controls the indentation of wrapped lines."),
-    })),
-    // Leave these at the end (because they have dependencies!)
-    editorClassName: register(new EditorClassName()),
-    pixelRatio: register(new EditorPixelRatio()),
-    tabFocusMode: register(new EditorTabFocusMode()),
-    layoutInfo: register(new EditorLayoutInfoComputer()),
-    wrappingInfo: register(new EditorWrappingInfoComputer()),
-};
-
-
-/***/ }),
 /* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -23728,7 +23769,7 @@ var embeddedCodeEditorWidget = __webpack_require__(173);
 var zoneWidget = __webpack_require__(369);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
-var sash = __webpack_require__(134);
+var sash = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/idGenerator.js
 var idGenerator = __webpack_require__(157);
@@ -23740,7 +23781,7 @@ var lifecycle = __webpack_require__(2);
 var core_range = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/zoneWidget.js
 /*---------------------------------------------------------------------------------------------
@@ -28906,13 +28947,13 @@ var ElementSizeObserver = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/commonEditorConfig.js
-var commonEditorConfig = __webpack_require__(138);
+var commonEditorConfig = __webpack_require__(137);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/editorOptions.js
-var editorOptions = __webpack_require__(29);
+var editorOptions = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/fontInfo.js
-var fontInfo = __webpack_require__(139);
+var fontInfo = __webpack_require__(138);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/config/configuration.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return clearAllFontInfos; });
@@ -30221,7 +30262,7 @@ var verticalScrollbar_VerticalScrollbar = /** @class */ (function (_super) {
 var common_event = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/scrollable.js
-var common_scrollable = __webpack_require__(180);
+var common_scrollable = __webpack_require__(181);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/scrollableElement.js
 /* unused harmony export MouseWheelClassifier */
@@ -37056,7 +37097,7 @@ var common_event = __webpack_require__(6);
 var lightBulbWidget = __webpack_require__(304);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -38228,7 +38269,7 @@ var codeActionCommands_AutoFixAction = /** @class */ (function (_super) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerSingleton; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getSingletonServiceDescriptors; });
-/* harmony import */ var _descriptors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(143);
+/* harmony import */ var _descriptors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(142);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -40872,7 +40913,7 @@ var cwd = safeProcess.cwd;
 var env = safeProcess.env;
 var platform = safeProcess.platform;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(185)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(186)))
 
 /***/ }),
 /* 117 */
@@ -40895,7 +40936,7 @@ var platform = safeProcess.platform;
 /* harmony import */ var _registry_common_platform_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(63);
 /* harmony import */ var _base_common_types_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
 /* harmony import */ var _base_common_strings_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
-/* harmony import */ var _jsonschemas_common_jsonContributionRegistry_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(177);
+/* harmony import */ var _jsonschemas_common_jsonContributionRegistry_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(178);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -41390,7 +41431,7 @@ var snippetSession = __webpack_require__(417);
 var editOperation = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/clipboard/common/clipboardService.js
 var common_clipboardService = __webpack_require__(147);
@@ -41441,7 +41482,7 @@ function toWorkspaceIdentifier(workspace) {
 //#endregion
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/labels.js
-var labels = __webpack_require__(140);
+var labels = __webpack_require__(139);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/snippet/snippetVariables.js
 /*---------------------------------------------------------------------------------------------
@@ -41737,7 +41778,7 @@ var themeService = __webpack_require__(17);
 var colorRegistry = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/label/common/label.js
-var label = __webpack_require__(135);
+var label = __webpack_require__(134);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/snippet/snippetSession.js
 /*---------------------------------------------------------------------------------------------
@@ -42857,7 +42898,7 @@ var ListError = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/list/listView.js + 2 modules
-var listView = __webpack_require__(142);
+var listView = __webpack_require__(141);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/color.js
 var color = __webpack_require__(13);
@@ -44644,7 +44685,7 @@ var LineDecorationsNormalizer = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HighlightedLabel; });
 /* harmony import */ var _common_objects_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(35);
-/* harmony import */ var _codiconLabel_codiconLabel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(133);
+/* harmony import */ var _codiconLabel_codiconLabel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(132);
 /* harmony import */ var _common_strings_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -45532,148 +45573,6 @@ var ShiftCommand = /** @class */ (function () {
 
 /***/ }),
 /* 132 */
-/***/ (function(module, exports, __webpack_require__) {
-
-self["MonacoEnvironment"] = (function (paths) {
-      function stripTrailingSlash(str) {
-        return str.replace(/\/$/, '');
-      }
-      return {
-        getWorkerUrl: function (moduleId, label) {
-          var pathPrefix =  true ? __webpack_require__.p : undefined;
-          var result = (pathPrefix ? stripTrailingSlash(pathPrefix) + '/' : '') + paths[label];
-          if (/^(http:)|(https:)|(file:)/.test(result)) {
-            var currentUrl = String(window.location);
-            var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
-            if (result.substring(0, currentOrigin.length) !== currentOrigin) {
-              var js = '/*' + label + '*/importScripts("' + result + '");';
-              return 'data:text/javascript;charset=utf-8,' + encodeURIComponent(js);
-            }
-          }
-          return result;
-        }
-      };
-    })({
-  "editorWorkerService": "editor.worker.js",
-  "css": "css.worker.js",
-  "html": "html.worker.js",
-  "json": "json.worker.js",
-  "typescript": "ts.worker.js",
-  "javascript": "ts.worker.js",
-  "less": "css.worker.js",
-  "scss": "css.worker.js",
-  "handlebars": "html.worker.js",
-  "razor": "html.worker.js"
-});
-__webpack_require__(186);
-__webpack_require__(187);
-__webpack_require__(277);
-__webpack_require__(188);
-__webpack_require__(189);
-__webpack_require__(272);
-__webpack_require__(166);
-__webpack_require__(275);
-__webpack_require__(278);
-__webpack_require__(83);
-__webpack_require__(190);
-__webpack_require__(279);
-__webpack_require__(145);
-__webpack_require__(269);
-__webpack_require__(191);
-__webpack_require__(273);
-__webpack_require__(151);
-__webpack_require__(192);
-__webpack_require__(168);
-__webpack_require__(167);
-__webpack_require__(270);
-__webpack_require__(193);
-__webpack_require__(280);
-__webpack_require__(194);
-__webpack_require__(271);
-__webpack_require__(281);
-__webpack_require__(195);
-__webpack_require__(274);
-__webpack_require__(196);
-__webpack_require__(276);
-__webpack_require__(197);
-__webpack_require__(282);
-__webpack_require__(283);
-__webpack_require__(120);
-__webpack_require__(268);
-__webpack_require__(198);
-__webpack_require__(150);
-__webpack_require__(199);
-__webpack_require__(200);
-__webpack_require__(136);
-__webpack_require__(201);
-module.exports = __webpack_require__(448);
-__webpack_require__(202);
-__webpack_require__(203);
-__webpack_require__(204);
-__webpack_require__(205);
-__webpack_require__(206);
-__webpack_require__(207);
-__webpack_require__(208);
-__webpack_require__(209);
-__webpack_require__(210);
-__webpack_require__(211);
-__webpack_require__(212);
-__webpack_require__(213);
-__webpack_require__(214);
-__webpack_require__(215);
-__webpack_require__(216);
-__webpack_require__(217);
-__webpack_require__(218);
-__webpack_require__(219);
-__webpack_require__(220);
-__webpack_require__(221);
-__webpack_require__(222);
-__webpack_require__(223);
-__webpack_require__(224);
-__webpack_require__(225);
-__webpack_require__(226);
-__webpack_require__(227);
-__webpack_require__(228);
-__webpack_require__(229);
-__webpack_require__(230);
-__webpack_require__(231);
-__webpack_require__(232);
-__webpack_require__(233);
-__webpack_require__(234);
-__webpack_require__(235);
-__webpack_require__(236);
-__webpack_require__(237);
-__webpack_require__(238);
-__webpack_require__(239);
-__webpack_require__(240);
-__webpack_require__(241);
-__webpack_require__(242);
-__webpack_require__(243);
-__webpack_require__(244);
-__webpack_require__(245);
-__webpack_require__(246);
-__webpack_require__(247);
-__webpack_require__(248);
-__webpack_require__(249);
-__webpack_require__(250);
-__webpack_require__(251);
-__webpack_require__(252);
-__webpack_require__(253);
-__webpack_require__(254);
-__webpack_require__(255);
-__webpack_require__(256);
-__webpack_require__(257);
-__webpack_require__(258);
-__webpack_require__(259);
-__webpack_require__(260);
-__webpack_require__(261);
-__webpack_require__(284);
-__webpack_require__(262);
-__webpack_require__(263);
-__webpack_require__(264);
-
-/***/ }),
-/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45701,7 +45600,7 @@ function renderCodicons(label) {
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46044,7 +45943,7 @@ var Sash = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46060,7 +45959,7 @@ var ILabelService = Object(_instantiation_common_instantiation_js__WEBPACK_IMPOR
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46104,7 +46003,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_editorContextKeys_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7);
 /* harmony import */ var _platform_accessibility_common_accessibility_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(71);
 /* harmony import */ var _platform_contextkey_common_contextkey_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
-/* harmony import */ var _common_config_editorOptions_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(29);
+/* harmony import */ var _common_config_editorOptions_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(26);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -46638,7 +46537,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49178,7 +49077,7 @@ var markdownRenderer_MarkdownRenderer = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49193,9 +49092,9 @@ var markdownRenderer_MarkdownRenderer = /** @class */ (function (_super) {
 /* harmony import */ var _base_common_lifecycle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 /* harmony import */ var _base_common_objects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(35);
 /* harmony import */ var _base_common_arrays_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(15);
-/* harmony import */ var _editorOptions_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(29);
+/* harmony import */ var _editorOptions_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(26);
 /* harmony import */ var _editorZoom_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(106);
-/* harmony import */ var _fontInfo_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(139);
+/* harmony import */ var _fontInfo_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(138);
 /* harmony import */ var _platform_configuration_common_configurationRegistry_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(117);
 /* harmony import */ var _platform_registry_common_platform_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(63);
 /* harmony import */ var _base_common_collections_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(102);
@@ -49724,7 +49623,7 @@ configurationRegistry.registerConfiguration(editorConfiguration);
 
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49853,7 +49752,7 @@ var FontInfo = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49961,7 +49860,7 @@ function tildify(path, userHome) {
 
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50021,7 +49920,7 @@ var browser_dnd = __webpack_require__(78);
 var arrays = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/list/listView.js + 2 modules
-var listView = __webpack_require__(142);
+var listView = __webpack_require__(141);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/event.js
 var browser_event = __webpack_require__(33);
@@ -54109,7 +54008,7 @@ listService_configurationRegistry.registerConfiguration({
 
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55364,7 +55263,7 @@ var listView_ListView = /** @class */ (function () {
 
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55381,6 +55280,148 @@ var SyncDescriptor = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+self["MonacoEnvironment"] = (function (paths) {
+      function stripTrailingSlash(str) {
+        return str.replace(/\/$/, '');
+      }
+      return {
+        getWorkerUrl: function (moduleId, label) {
+          var pathPrefix =  true ? __webpack_require__.p : undefined;
+          var result = (pathPrefix ? stripTrailingSlash(pathPrefix) + '/' : '') + paths[label];
+          if (/^(http:)|(https:)|(file:)/.test(result)) {
+            var currentUrl = String(window.location);
+            var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
+            if (result.substring(0, currentOrigin.length) !== currentOrigin) {
+              var js = '/*' + label + '*/importScripts("' + result + '");';
+              return 'data:text/javascript;charset=utf-8,' + encodeURIComponent(js);
+            }
+          }
+          return result;
+        }
+      };
+    })({
+  "editorWorkerService": "editor.worker.js",
+  "css": "css.worker.js",
+  "html": "html.worker.js",
+  "json": "json.worker.js",
+  "typescript": "ts.worker.js",
+  "javascript": "ts.worker.js",
+  "less": "css.worker.js",
+  "scss": "css.worker.js",
+  "handlebars": "html.worker.js",
+  "razor": "html.worker.js"
+});
+__webpack_require__(187);
+__webpack_require__(188);
+__webpack_require__(277);
+__webpack_require__(189);
+__webpack_require__(190);
+__webpack_require__(272);
+__webpack_require__(166);
+__webpack_require__(275);
+__webpack_require__(278);
+__webpack_require__(83);
+__webpack_require__(191);
+__webpack_require__(279);
+__webpack_require__(145);
+__webpack_require__(269);
+__webpack_require__(192);
+__webpack_require__(273);
+__webpack_require__(151);
+__webpack_require__(193);
+__webpack_require__(168);
+__webpack_require__(167);
+__webpack_require__(270);
+__webpack_require__(194);
+__webpack_require__(280);
+__webpack_require__(195);
+__webpack_require__(271);
+__webpack_require__(281);
+__webpack_require__(196);
+__webpack_require__(274);
+__webpack_require__(197);
+__webpack_require__(276);
+__webpack_require__(198);
+__webpack_require__(282);
+__webpack_require__(283);
+__webpack_require__(120);
+__webpack_require__(268);
+__webpack_require__(199);
+__webpack_require__(150);
+__webpack_require__(200);
+__webpack_require__(201);
+__webpack_require__(135);
+__webpack_require__(202);
+module.exports = __webpack_require__(448);
+__webpack_require__(203);
+__webpack_require__(204);
+__webpack_require__(205);
+__webpack_require__(206);
+__webpack_require__(207);
+__webpack_require__(208);
+__webpack_require__(209);
+__webpack_require__(210);
+__webpack_require__(211);
+__webpack_require__(212);
+__webpack_require__(213);
+__webpack_require__(214);
+__webpack_require__(215);
+__webpack_require__(216);
+__webpack_require__(217);
+__webpack_require__(218);
+__webpack_require__(219);
+__webpack_require__(220);
+__webpack_require__(221);
+__webpack_require__(222);
+__webpack_require__(223);
+__webpack_require__(224);
+__webpack_require__(225);
+__webpack_require__(226);
+__webpack_require__(227);
+__webpack_require__(228);
+__webpack_require__(229);
+__webpack_require__(230);
+__webpack_require__(231);
+__webpack_require__(232);
+__webpack_require__(233);
+__webpack_require__(234);
+__webpack_require__(235);
+__webpack_require__(236);
+__webpack_require__(237);
+__webpack_require__(238);
+__webpack_require__(239);
+__webpack_require__(240);
+__webpack_require__(241);
+__webpack_require__(242);
+__webpack_require__(243);
+__webpack_require__(244);
+__webpack_require__(245);
+__webpack_require__(246);
+__webpack_require__(247);
+__webpack_require__(248);
+__webpack_require__(249);
+__webpack_require__(250);
+__webpack_require__(251);
+__webpack_require__(252);
+__webpack_require__(253);
+__webpack_require__(254);
+__webpack_require__(255);
+__webpack_require__(256);
+__webpack_require__(257);
+__webpack_require__(258);
+__webpack_require__(259);
+__webpack_require__(260);
+__webpack_require__(261);
+__webpack_require__(262);
+__webpack_require__(284);
+__webpack_require__(263);
+__webpack_require__(264);
+__webpack_require__(265);
 
 /***/ }),
 /* 144 */
@@ -56125,7 +56166,7 @@ var viewLineRenderer = __webpack_require__(73);
 var common_themeService = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/editorOptions.js
-var editorOptions = __webpack_require__(29);
+var editorOptions = __webpack_require__(26);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLine.js
 /*---------------------------------------------------------------------------------------------
@@ -67534,7 +67575,7 @@ var cursor_CommandExecutor = /** @class */ (function () {
 }());
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/editorAction.js
-var editorAction = __webpack_require__(181);
+var editorAction = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/editorContextKeys.js
 var editorContextKeys = __webpack_require__(7);
@@ -67543,7 +67584,7 @@ var editorContextKeys = __webpack_require__(7);
 var textToHtmlTokenizer = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/scrollable.js
-var scrollable = __webpack_require__(180);
+var scrollable = __webpack_require__(181);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/viewLayout/linesLayout.js
 /*---------------------------------------------------------------------------------------------
@@ -68535,7 +68576,7 @@ var uint = __webpack_require__(112);
 var prefixSumComputer = __webpack_require__(156);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/viewModel/splitLinesCollection.js
 /*---------------------------------------------------------------------------------------------
@@ -72106,7 +72147,7 @@ var textModelSearch = __webpack_require__(89);
 var common_model = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/theme/common/colorRegistry.js
 var colorRegistry = __webpack_require__(4);
@@ -73860,7 +73901,7 @@ var findWidget = __webpack_require__(324);
 var aria = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
-var sash = __webpack_require__(134);
+var sash = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/errors.js
 var errors = __webpack_require__(12);
@@ -76964,7 +77005,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var _base_browser_ui_aria_aria_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(57);
 /* harmony import */ var _browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
-/* harmony import */ var _common_config_commonEditorConfig_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(138);
+/* harmony import */ var _common_config_commonEditorConfig_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(137);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -77070,7 +77111,7 @@ var color = __webpack_require__(13);
 var scrollableElement = __webpack_require__(79);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/labels.js
-var labels = __webpack_require__(140);
+var labels = __webpack_require__(139);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/arrays.js
 var arrays = __webpack_require__(15);
@@ -78837,7 +78878,7 @@ var editorQuickOpen = __webpack_require__(377);
 var editorExtensions = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -85537,7 +85578,7 @@ var embeddedCodeEditorWidget = __webpack_require__(173);
 var core_range = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/resolverService.js
 var resolverService = __webpack_require__(105);
@@ -85617,7 +85658,7 @@ var countBadge_CountBadge = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/label/common/label.js
-var label = __webpack_require__(135);
+var label = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/theme/common/themeService.js
 var common_themeService = __webpack_require__(17);
@@ -85626,7 +85667,7 @@ var common_themeService = __webpack_require__(17);
 var styler = __webpack_require__(118);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/labels.js
-var labels = __webpack_require__(140);
+var labels = __webpack_require__(139);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/keybinding/common/keybinding.js
 var keybinding = __webpack_require__(44);
@@ -85876,7 +85917,7 @@ var AriaProvider = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/list/browser/listService.js + 9 modules
-var browser_listService = __webpack_require__(141);
+var browser_listService = __webpack_require__(140);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/theme/common/colorRegistry.js
 var colorRegistry = __webpack_require__(4);
@@ -85897,7 +85938,7 @@ var numbers = __webpack_require__(104);
 var arrays = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
-var sash_sash = __webpack_require__(134);
+var sash_sash = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/event.js
 var browser_event = __webpack_require__(33);
@@ -87677,7 +87718,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5);
 /* harmony import */ var _browser_services_codeEditorService_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(36);
 /* harmony import */ var _common_core_range_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3);
-/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(28);
+/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(29);
 /* harmony import */ var _common_modes_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
 /* harmony import */ var _color_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(171);
 /* harmony import */ var _platform_configuration_common_configuration_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(42);
@@ -87945,7 +87986,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _platform_theme_common_colorRegistry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4);
 /* harmony import */ var _browser_core_editorState_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(81);
 /* harmony import */ var _goToCommands_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(168);
-/* harmony import */ var _clickLinkGesture_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(182);
+/* harmony import */ var _clickLinkGesture_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(183);
 /* harmony import */ var _common_core_position_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(9);
 /* harmony import */ var _base_common_types_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(21);
 /*---------------------------------------------------------------------------------------------
@@ -90178,6 +90219,148 @@ function revive(obj, depth) {
 
 /***/ }),
 /* 177 */
+/***/ (function(module, exports, __webpack_require__) {
+
+self["MonacoEnvironment"] = (function (paths) {
+      function stripTrailingSlash(str) {
+        return str.replace(/\/$/, '');
+      }
+      return {
+        getWorkerUrl: function (moduleId, label) {
+          var pathPrefix =  true ? __webpack_require__.p : undefined;
+          var result = (pathPrefix ? stripTrailingSlash(pathPrefix) + '/' : '') + paths[label];
+          if (/^(http:)|(https:)|(file:)/.test(result)) {
+            var currentUrl = String(window.location);
+            var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
+            if (result.substring(0, currentOrigin.length) !== currentOrigin) {
+              var js = '/*' + label + '*/importScripts("' + result + '");';
+              return 'data:text/javascript;charset=utf-8,' + encodeURIComponent(js);
+            }
+          }
+          return result;
+        }
+      };
+    })({
+  "editorWorkerService": "editor.worker.js",
+  "css": "css.worker.js",
+  "html": "html.worker.js",
+  "json": "json.worker.js",
+  "typescript": "ts.worker.js",
+  "javascript": "ts.worker.js",
+  "less": "css.worker.js",
+  "scss": "css.worker.js",
+  "handlebars": "html.worker.js",
+  "razor": "html.worker.js"
+});
+__webpack_require__(187);
+__webpack_require__(188);
+__webpack_require__(277);
+__webpack_require__(189);
+__webpack_require__(190);
+__webpack_require__(272);
+__webpack_require__(166);
+__webpack_require__(275);
+__webpack_require__(278);
+__webpack_require__(83);
+__webpack_require__(191);
+__webpack_require__(279);
+__webpack_require__(145);
+__webpack_require__(269);
+__webpack_require__(192);
+__webpack_require__(273);
+__webpack_require__(151);
+__webpack_require__(193);
+__webpack_require__(168);
+__webpack_require__(167);
+__webpack_require__(270);
+__webpack_require__(194);
+__webpack_require__(280);
+__webpack_require__(195);
+__webpack_require__(271);
+__webpack_require__(281);
+__webpack_require__(196);
+__webpack_require__(274);
+__webpack_require__(197);
+__webpack_require__(276);
+__webpack_require__(198);
+__webpack_require__(282);
+__webpack_require__(283);
+__webpack_require__(120);
+__webpack_require__(268);
+__webpack_require__(199);
+__webpack_require__(150);
+__webpack_require__(200);
+__webpack_require__(201);
+__webpack_require__(135);
+__webpack_require__(202);
+module.exports = __webpack_require__(421);
+__webpack_require__(203);
+__webpack_require__(204);
+__webpack_require__(205);
+__webpack_require__(206);
+__webpack_require__(207);
+__webpack_require__(208);
+__webpack_require__(209);
+__webpack_require__(210);
+__webpack_require__(211);
+__webpack_require__(212);
+__webpack_require__(213);
+__webpack_require__(214);
+__webpack_require__(215);
+__webpack_require__(216);
+__webpack_require__(217);
+__webpack_require__(218);
+__webpack_require__(219);
+__webpack_require__(220);
+__webpack_require__(221);
+__webpack_require__(222);
+__webpack_require__(223);
+__webpack_require__(224);
+__webpack_require__(225);
+__webpack_require__(226);
+__webpack_require__(227);
+__webpack_require__(228);
+__webpack_require__(229);
+__webpack_require__(230);
+__webpack_require__(231);
+__webpack_require__(232);
+__webpack_require__(233);
+__webpack_require__(234);
+__webpack_require__(235);
+__webpack_require__(236);
+__webpack_require__(237);
+__webpack_require__(238);
+__webpack_require__(239);
+__webpack_require__(240);
+__webpack_require__(241);
+__webpack_require__(242);
+__webpack_require__(243);
+__webpack_require__(244);
+__webpack_require__(245);
+__webpack_require__(246);
+__webpack_require__(247);
+__webpack_require__(248);
+__webpack_require__(249);
+__webpack_require__(250);
+__webpack_require__(251);
+__webpack_require__(252);
+__webpack_require__(253);
+__webpack_require__(254);
+__webpack_require__(255);
+__webpack_require__(256);
+__webpack_require__(257);
+__webpack_require__(258);
+__webpack_require__(259);
+__webpack_require__(260);
+__webpack_require__(261);
+__webpack_require__(262);
+__webpack_require__(284);
+__webpack_require__(263);
+__webpack_require__(264);
+__webpack_require__(265);
+
+/***/ }),
+/* 178 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90218,7 +90401,7 @@ _registry_common_platform_js__WEBPACK_IMPORTED_MODULE_0__[/* Registry */ "a"].ad
 
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90730,7 +90913,7 @@ function aggregateBasenameMatches(parsedPatterns, result) {
 
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91458,7 +91641,7 @@ function cleanMnemonic(label) {
 
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91788,7 +91971,7 @@ function easeOutCubic(t) {
 
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91822,7 +92005,7 @@ var InternalEditorAction = /** @class */ (function () {
 
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92001,7 +92184,7 @@ var ClickLinkGesture = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92016,7 +92199,7 @@ var IMarkerDecorationsService = Object(_platform_instantiation_common_instantiat
 
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92242,7 +92425,7 @@ var BracketSelectionRangeProvider = /** @class */ (function () {
 
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -92432,7 +92615,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92789,7 +92972,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_19__[/* r
 
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92806,7 +92989,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_core_selection_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(22);
 /* harmony import */ var _common_editorContextKeys_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7);
 /* harmony import */ var _common_model_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(46);
-/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(28);
+/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(29);
 /* harmony import */ var _common_view_editorColorRegistry_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(43);
 /* harmony import */ var _platform_theme_common_colorRegistry_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(4);
 /* harmony import */ var _platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(17);
@@ -93147,7 +93330,7 @@ _platform_actions_common_actions_js__WEBPACK_IMPORTED_MODULE_14__[/* MenuRegistr
 
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93389,7 +93572,7 @@ if (supportsCopyWithSyntaxHighlighting) {
 
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93413,7 +93596,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93574,7 +93757,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_2__[/* registerEdit
 
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93653,7 +93836,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_1__[/* registerEdit
 
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93830,7 +94013,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93936,7 +94119,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94246,7 +94429,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_10__[/* r
 
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94274,7 +94457,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_core_selection_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(22);
 /* harmony import */ var _common_editorContextKeys_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7);
 /* harmony import */ var _common_model_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(46);
-/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(28);
+/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(29);
 /* harmony import */ var _common_modes_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(11);
 /* harmony import */ var _find_findController_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(145);
 /* harmony import */ var _platform_theme_common_colorRegistry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4);
@@ -95242,7 +95425,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95394,7 +95577,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_5__[/* registerEdit
 
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95462,7 +95645,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95520,7 +95703,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95615,7 +95798,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_1__[/* registerEdit
 
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95631,7 +95814,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_core_range_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3);
 /* harmony import */ var _common_editorContextKeys_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7);
 /* harmony import */ var _common_model_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(46);
-/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(28);
+/* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(29);
 /* harmony import */ var _common_modes_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(11);
 /* harmony import */ var _platform_contextkey_common_contextkey_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(10);
 /* harmony import */ var _platform_theme_common_colorRegistry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4);
@@ -96206,7 +96389,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_14__[/* r
 
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96223,7 +96406,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_controller_cursorWordOperations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(114);
 /* harmony import */ var _common_core_range_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _common_editorContextKeys_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
-/* harmony import */ var _wordOperations_wordOperations_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(136);
+/* harmony import */ var _wordOperations_wordOperations_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(135);
 /* harmony import */ var _platform_commands_common_commands_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(34);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -96413,7 +96596,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96434,7 +96617,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96456,7 +96639,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96477,7 +96660,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96498,7 +96681,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96519,7 +96702,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96540,7 +96723,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96562,7 +96745,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96589,7 +96772,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96610,7 +96793,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96631,7 +96814,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96653,13 +96836,13 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LanguageServiceDefaultsImpl", function() { return LanguageServiceDefaultsImpl; });
-/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(132);
+/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(143);
 /* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__);
 
 /*---------------------------------------------------------------------------------------------
@@ -96780,7 +96963,7 @@ monaco.languages.onLanguage('css', function () {
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96802,7 +96985,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96823,7 +97006,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96844,7 +97027,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96866,7 +97049,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96888,7 +97071,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96910,13 +97093,13 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LanguageServiceDefaultsImpl", function() { return LanguageServiceDefaultsImpl; });
-/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(132);
+/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(143);
 /* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__);
 
 /*---------------------------------------------------------------------------------------------
@@ -97046,7 +97229,7 @@ monaco.languages.onLanguage(razorLanguageId, function () {
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97068,7 +97251,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97090,7 +97273,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97114,13 +97297,13 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LanguageServiceDefaultsImpl", function() { return LanguageServiceDefaultsImpl; });
-/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(132);
+/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(143);
 /* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__);
 
 /*---------------------------------------------------------------------------------------------
@@ -97219,7 +97402,7 @@ monaco.languages.onLanguage('json', function () {
 
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97241,7 +97424,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97263,7 +97446,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 227 */
+/* 228 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97284,7 +97467,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 228 */
+/* 229 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97305,7 +97488,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 229 */
+/* 230 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97327,7 +97510,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 230 */
+/* 231 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97348,7 +97531,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 231 */
+/* 232 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97369,7 +97552,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 232 */
+/* 233 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97390,7 +97573,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 233 */
+/* 234 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97412,7 +97595,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 234 */
+/* 235 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97433,7 +97616,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 235 */
+/* 236 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97454,7 +97637,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 236 */
+/* 237 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97475,7 +97658,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 237 */
+/* 238 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97497,7 +97680,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97518,7 +97701,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97539,7 +97722,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 240 */
+/* 241 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97560,7 +97743,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 241 */
+/* 242 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97581,7 +97764,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 242 */
+/* 243 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97603,7 +97786,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 243 */
+/* 244 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97624,7 +97807,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97646,7 +97829,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97667,7 +97850,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97688,7 +97871,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97709,7 +97892,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97731,7 +97914,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97752,7 +97935,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 250 */
+/* 251 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97773,7 +97956,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 251 */
+/* 252 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97794,7 +97977,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 252 */
+/* 253 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97816,7 +97999,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97837,7 +98020,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97858,7 +98041,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97879,7 +98062,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97900,7 +98083,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97921,7 +98104,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97943,7 +98126,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97964,7 +98147,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97986,7 +98169,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98008,7 +98191,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98029,7 +98212,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98052,7 +98235,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98074,7 +98257,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
 
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98223,7 +98406,7 @@ exports.isNextLineEmpty = isNextLineEmpty;
 //# sourceMappingURL=util.js.map
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98253,148 +98436,6 @@ function getAlternativeStringQuotemark(quotemark) {
 }
 exports.getAlternativeStringQuotemark = getAlternativeStringQuotemark;
 //# sourceMappingURL=options.js.map
-
-/***/ }),
-/* 267 */
-/***/ (function(module, exports, __webpack_require__) {
-
-self["MonacoEnvironment"] = (function (paths) {
-      function stripTrailingSlash(str) {
-        return str.replace(/\/$/, '');
-      }
-      return {
-        getWorkerUrl: function (moduleId, label) {
-          var pathPrefix =  true ? __webpack_require__.p : undefined;
-          var result = (pathPrefix ? stripTrailingSlash(pathPrefix) + '/' : '') + paths[label];
-          if (/^(http:)|(https:)|(file:)/.test(result)) {
-            var currentUrl = String(window.location);
-            var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
-            if (result.substring(0, currentOrigin.length) !== currentOrigin) {
-              var js = '/*' + label + '*/importScripts("' + result + '");';
-              return 'data:text/javascript;charset=utf-8,' + encodeURIComponent(js);
-            }
-          }
-          return result;
-        }
-      };
-    })({
-  "editorWorkerService": "editor.worker.js",
-  "css": "css.worker.js",
-  "html": "html.worker.js",
-  "json": "json.worker.js",
-  "typescript": "ts.worker.js",
-  "javascript": "ts.worker.js",
-  "less": "css.worker.js",
-  "scss": "css.worker.js",
-  "handlebars": "html.worker.js",
-  "razor": "html.worker.js"
-});
-__webpack_require__(186);
-__webpack_require__(187);
-__webpack_require__(277);
-__webpack_require__(188);
-__webpack_require__(189);
-__webpack_require__(272);
-__webpack_require__(166);
-__webpack_require__(275);
-__webpack_require__(278);
-__webpack_require__(83);
-__webpack_require__(190);
-__webpack_require__(279);
-__webpack_require__(145);
-__webpack_require__(269);
-__webpack_require__(191);
-__webpack_require__(273);
-__webpack_require__(151);
-__webpack_require__(192);
-__webpack_require__(168);
-__webpack_require__(167);
-__webpack_require__(270);
-__webpack_require__(193);
-__webpack_require__(280);
-__webpack_require__(194);
-__webpack_require__(271);
-__webpack_require__(281);
-__webpack_require__(195);
-__webpack_require__(274);
-__webpack_require__(196);
-__webpack_require__(276);
-__webpack_require__(197);
-__webpack_require__(282);
-__webpack_require__(283);
-__webpack_require__(120);
-__webpack_require__(268);
-__webpack_require__(198);
-__webpack_require__(150);
-__webpack_require__(199);
-__webpack_require__(200);
-__webpack_require__(136);
-__webpack_require__(201);
-module.exports = __webpack_require__(444);
-__webpack_require__(202);
-__webpack_require__(203);
-__webpack_require__(204);
-__webpack_require__(205);
-__webpack_require__(206);
-__webpack_require__(207);
-__webpack_require__(208);
-__webpack_require__(209);
-__webpack_require__(210);
-__webpack_require__(211);
-__webpack_require__(212);
-__webpack_require__(213);
-__webpack_require__(214);
-__webpack_require__(215);
-__webpack_require__(216);
-__webpack_require__(217);
-__webpack_require__(218);
-__webpack_require__(219);
-__webpack_require__(220);
-__webpack_require__(221);
-__webpack_require__(222);
-__webpack_require__(223);
-__webpack_require__(224);
-__webpack_require__(225);
-__webpack_require__(226);
-__webpack_require__(227);
-__webpack_require__(228);
-__webpack_require__(229);
-__webpack_require__(230);
-__webpack_require__(231);
-__webpack_require__(232);
-__webpack_require__(233);
-__webpack_require__(234);
-__webpack_require__(235);
-__webpack_require__(236);
-__webpack_require__(237);
-__webpack_require__(238);
-__webpack_require__(239);
-__webpack_require__(240);
-__webpack_require__(241);
-__webpack_require__(242);
-__webpack_require__(243);
-__webpack_require__(244);
-__webpack_require__(245);
-__webpack_require__(246);
-__webpack_require__(247);
-__webpack_require__(248);
-__webpack_require__(249);
-__webpack_require__(250);
-__webpack_require__(251);
-__webpack_require__(252);
-__webpack_require__(253);
-__webpack_require__(254);
-__webpack_require__(255);
-__webpack_require__(256);
-__webpack_require__(257);
-__webpack_require__(258);
-__webpack_require__(259);
-__webpack_require__(260);
-__webpack_require__(261);
-__webpack_require__(284);
-__webpack_require__(262);
-__webpack_require__(263);
-__webpack_require__(264);
 
 /***/ }),
 /* 268 */
@@ -99118,7 +99159,7 @@ var completionModel_CompletionModel = /** @class */ (function () {
 var cancellation = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/smartSelect/bracketSelections.js
-var bracketSelections = __webpack_require__(184);
+var bracketSelections = __webpack_require__(185);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/suggest/wordDistance.js
 /*---------------------------------------------------------------------------------------------
@@ -99780,7 +99821,7 @@ var suggestModel_SuggestModel = /** @class */ (function () {
 var media_suggest = __webpack_require__(419);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/codiconLabel/codiconLabel.js
-var codiconLabel = __webpack_require__(133);
+var codiconLabel = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/documentSymbols/outlineTree.js
 var outlineTree = __webpack_require__(288);
@@ -99810,7 +99851,7 @@ var common_themeService = __webpack_require__(17);
 var colorRegistry = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/markdown/markdownRenderer.js + 3 modules
-var markdown_markdownRenderer = __webpack_require__(137);
+var markdown_markdownRenderer = __webpack_require__(136);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/modeService.js
 var services_modeService = __webpack_require__(94);
@@ -102499,7 +102540,7 @@ function setCollapseStateForType(foldingModel, type, doCollapse) {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var model_textModel = __webpack_require__(28);
+var model_textModel = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/folding/foldingDecorations.js
 /*---------------------------------------------------------------------------------------------
@@ -103957,7 +103998,7 @@ var htmlContent = __webpack_require__(82);
 var core_position = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes.js + 3 modules
 var modes = __webpack_require__(11);
@@ -104774,7 +104815,7 @@ var hoverWidgets_GlyphHoverWidget = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/markdown/markdownRenderer.js + 3 modules
-var markdownRenderer = __webpack_require__(137);
+var markdownRenderer = __webpack_require__(136);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/markers/common/markers.js
 var markers = __webpack_require__(49);
@@ -105502,7 +105543,7 @@ var modesGlyphHover_ModesGlyphHoverWidget = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/markersDecorationService.js
-var markersDecorationService = __webpack_require__(183);
+var markersDecorationService = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/keybinding/common/keybinding.js
 var common_keybinding = __webpack_require__(44);
@@ -107618,13 +107659,13 @@ var codelensWidget = __webpack_require__(306);
 var dom = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/codiconLabel/codiconLabel.js
-var codiconLabel = __webpack_require__(133);
+var codiconLabel = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/range.js
 var core_range = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/view/editorColorRegistry.js
 var editorColorRegistry = __webpack_require__(43);
@@ -109412,7 +109453,7 @@ var parameterHints = __webpack_require__(407);
 var services_modeService = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/markdown/markdownRenderer.js + 3 modules
-var markdownRenderer = __webpack_require__(137);
+var markdownRenderer = __webpack_require__(136);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/async.js
 var common_async = __webpack_require__(16);
@@ -111008,7 +111049,7 @@ __webpack_require__.r(__webpack_exports__);
 var quickOutline = __webpack_require__(409);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/codiconLabel/codiconLabel.js
-var codiconLabel = __webpack_require__(133);
+var codiconLabel = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/documentSymbols/outlineTree.js
 var outlineTree = __webpack_require__(288);
@@ -111927,7 +111968,7 @@ var contextView = __webpack_require__(70);
 var common_keybinding = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/menu/menu.js
-var menu_menu = __webpack_require__(179);
+var menu_menu = __webpack_require__(180);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/contextmenu.js
 /*---------------------------------------------------------------------------------------------
@@ -112314,7 +112355,7 @@ var dragAndDropCommand_DragAndDropCommand = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/dnd/dnd.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DragAndDropController", function() { return dnd_DragAndDropController; });
@@ -112585,7 +112626,7 @@ var themeService = __webpack_require__(17);
 var editorColorRegistry = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/async.js
 var common_async = __webpack_require__(16);
@@ -112810,13 +112851,13 @@ var platform = __webpack_require__(14);
 var editorExtensions = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes.js + 3 modules
 var modes = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/link/clickLinkGesture.js
-var link_clickLinkGesture = __webpack_require__(182);
+var link_clickLinkGesture = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/uri.js
 var common_uri = __webpack_require__(24);
@@ -114231,7 +114272,7 @@ var wordSelections_WordSelectionRangeProvider = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/smartSelect/bracketSelections.js
-var bracketSelections = __webpack_require__(184);
+var bracketSelections = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/commands/common/commands.js
 var commands = __webpack_require__(34);
@@ -114584,7 +114625,7 @@ Object(editorExtensions["e" /* registerDefaultLanguageCommand */])('_executeSele
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: include-loader!./node_modules/monaco-editor/esm/vs/editor/editor.api.js
-var editor_api = __webpack_require__(132);
+var editor_api = __webpack_require__(143);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/typescript/lib/typescriptServicesMetadata.js
 var typescriptVersion = "3.7.3";
@@ -115007,7 +115048,7 @@ var DiffNavigator = /** @class */ (function (_super) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffEditor.css
-var media_diffEditor = __webpack_require__(426);
+var media_diffEditor = __webpack_require__(427);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -115019,7 +115060,7 @@ var dom = __webpack_require__(1);
 var fastDomNode = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
-var sash = __webpack_require__(134);
+var sash = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/async.js
 var common_async = __webpack_require__(16);
@@ -115046,7 +115087,7 @@ var services_codeEditorService = __webpack_require__(36);
 var codeEditorWidget = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffReview.css
-var diffReview = __webpack_require__(428);
+var diffReview = __webpack_require__(429);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.js
 var actionbar = __webpack_require__(87);
@@ -115061,7 +115102,7 @@ var common_actions = __webpack_require__(69);
 var editorExtensions = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/editorOptions.js
-var editorOptions = __webpack_require__(29);
+var editorOptions = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/lineTokens.js
 var core_lineTokens = __webpack_require__(90);
@@ -115802,7 +115843,7 @@ var stringBuilder = __webpack_require__(155);
 var editorCommon = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/editorWorkerService.js
 var services_editorWorkerService = __webpack_require__(80);
@@ -117771,7 +117812,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 /* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(328);
 
             content = content.__esModule ? content.default : content;
@@ -117785,7 +117826,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118146,13 +118187,47 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_3__[/* re
 
 /***/ }),
 /* 289 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _editor_all_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(449);
+/* harmony import */ var _standalone_browser_accessibilityHelp_accessibilityHelp_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(187);
+/* harmony import */ var _standalone_browser_iPadShowKeyboard_iPadShowKeyboard_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(194);
+/* harmony import */ var _standalone_browser_inspectTokens_inspectTokens_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(195);
+/* harmony import */ var _standalone_browser_quickOpen_gotoLine_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(193);
+/* harmony import */ var _standalone_browser_quickOpen_quickCommand_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(197);
+/* harmony import */ var _standalone_browser_quickOpen_quickOutline_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(276);
+/* harmony import */ var _standalone_browser_referenceSearch_standaloneReferenceSearch_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(198);
+/* harmony import */ var _standalone_browser_toggleHighContrast_toggleHighContrast_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(199);
+/* harmony import */ var _editor_api_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(143);
+/* harmony import */ var _editor_api_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_editor_api_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _editor_api_js__WEBPACK_IMPORTED_MODULE_9__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _editor_api_js__WEBPACK_IMPORTED_MODULE_9__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const docBuilder_1 = __webpack_require__(290);
-const util_1 = __webpack_require__(265);
+const docBuilder_1 = __webpack_require__(291);
+const util_1 = __webpack_require__(266);
 var CommentType;
 (function (CommentType) {
     CommentType[CommentType["Leading"] = 0] = "Leading";
@@ -118527,7 +118602,7 @@ function handleDanglingIfStatementsWithNoBodies(precedingNode, enclosingNode, co
 //# sourceMappingURL=comments.js.map
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -118598,56 +118673,29 @@ exports.isEmpty = isEmpty;
 //# sourceMappingURL=docBuilder.js.map
 
 /***/ }),
-/* 291 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _editor_all_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(449);
-/* harmony import */ var _standalone_browser_accessibilityHelp_accessibilityHelp_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(186);
-/* harmony import */ var _standalone_browser_iPadShowKeyboard_iPadShowKeyboard_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(193);
-/* harmony import */ var _standalone_browser_inspectTokens_inspectTokens_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(194);
-/* harmony import */ var _standalone_browser_quickOpen_gotoLine_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(192);
-/* harmony import */ var _standalone_browser_quickOpen_quickCommand_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(196);
-/* harmony import */ var _standalone_browser_quickOpen_quickOutline_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(276);
-/* harmony import */ var _standalone_browser_referenceSearch_standaloneReferenceSearch_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(197);
-/* harmony import */ var _standalone_browser_toggleHighContrast_toggleHighContrast_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(198);
-/* harmony import */ var _editor_api_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(132);
-/* harmony import */ var _editor_api_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_editor_api_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _editor_api_js__WEBPACK_IMPORTED_MODULE_9__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _editor_api_js__WEBPACK_IMPORTED_MODULE_9__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-/***/ }),
 /* 292 */,
 /* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var monaco = __webpack_require__(132);
-var lua = __webpack_require__(434);
-var formatter_1 = __webpack_require__(435);
+var monaco = __importStar(__webpack_require__(177));
+var lua = __importStar(__webpack_require__(436));
+var formatter_1 = __webpack_require__(437);
 var completionProvider_1 = __webpack_require__(446);
 var gmodInterface_1 = __webpack_require__(447);
 monaco.languages.register({
     id: "lua",
     extensions: [".lua"],
-    aliases: ["Lua", "lua"]
+    aliases: ["Lua", "lua"],
 });
 monaco.languages.setMonarchTokensProvider("lua", lua.language);
 monaco.languages.setLanguageConfiguration("lua", lua.conf);
@@ -118658,38 +118706,26 @@ var editor = monaco.editor.create(document.getElementById("container"), {
     language: "lua",
     theme: "vs-dark",
     minimap: {
-        enabled: false
+        enabled: false,
     },
     autoIndent: "full",
     formatOnPaste: true,
     formatOnType: true,
-    acceptSuggestionOnEnter: "off"
-    // snippetSuggestions
+    acceptSuggestionOnEnter: "off",
 });
 editor.focus();
 window.addEventListener("resize", function () { return editor.layout(); });
-gmodInterface_1.GmodInterface.SetEditor(editor);
-// override GmodInterface funcs with the lua ones we received
-if (globalThis.gmodinterface) {
-    // valid functions to copy over
-    var validFuncNames = ["OnCode", "OnReady"];
-    for (var _i = 0, validFuncNames_1 = validFuncNames; _i < validFuncNames_1.length; _i++) {
-        var funcName = validFuncNames_1[_i];
-        var luaDefinedFunc = globalThis.gmodinterface[funcName];
-        if (luaDefinedFunc) {
-            gmodInterface_1.GmodInterface[funcName] = luaDefinedFunc;
-        }
-    }
+if (gmodInterface_1.gmodInterface) {
+    gmodInterface_1.gmodInterface.SetEditor(editor);
+    gmodInterface_1.gmodInterface.OnReady();
 }
-globalThis.gmodinterface = gmodInterface_1.GmodInterface;
-gmodInterface_1.GmodInterface.OnReady();
 
 
 /***/ }),
 /* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(295);
 
             content = content.__esModule ? content.default : content;
@@ -118703,7 +118739,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118716,7 +118752,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .accessibilityHelpWidget {\r\n\tpadding: 10px;\r\n\tvertical-align: middle;\r\n\toverflow: scroll;\r\n}", ""]);
@@ -118728,7 +118764,7 @@ module.exports = exports;
 /* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(297);
 
             content = content.__esModule ? content.default : content;
@@ -118742,7 +118778,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118755,7 +118791,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-aria-container {\r\n\tposition: absolute; /* try to hide from window but not from screen readers */\r\n\tleft:-999em;\r\n}", ""]);
@@ -118767,7 +118803,7 @@ module.exports = exports;
 /* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(299);
 
             content = content.__esModule ? content.default : content;
@@ -118781,7 +118817,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118794,7 +118830,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .bracket-match {\r\n\tbox-sizing: border-box;\r\n}\r\n", ""]);
@@ -118806,7 +118842,7 @@ module.exports = exports;
 /* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(301);
 
             content = content.__esModule ? content.default : content;
@@ -118820,7 +118856,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118833,7 +118869,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label.hover {\r\n\tbackground-color: #EEE;\r\n}", ""]);
@@ -118845,7 +118881,7 @@ module.exports = exports;
 /* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(303);
 
             content = content.__esModule ? content.default : content;
@@ -118859,7 +118895,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118872,7 +118908,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .monaco-editor-overlaymessage {\r\n\tpadding-bottom: 8px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n\tfrom { opacity: 0; }\r\n\tto { opacity: 1; }\r\n}\r\n.monaco-editor .monaco-editor-overlaymessage.fadeIn {\r\n\tanimation: fadeIn 150ms ease-out;\r\n}\r\n\r\n@keyframes fadeOut {\r\n\tfrom { opacity: 1; }\r\n\tto { opacity: 0; }\r\n}\r\n.monaco-editor .monaco-editor-overlaymessage.fadeOut {\r\n\tanimation: fadeOut 100ms ease-out;\r\n}\r\n\r\n.monaco-editor .monaco-editor-overlaymessage .message {\r\n\tpadding: 1px 4px;\r\n}\r\n\r\n.monaco-editor .monaco-editor-overlaymessage .anchor {\r\n\twidth: 0 !important;\r\n\theight: 0 !important;\r\n\tborder-color: transparent;\r\n\tborder-style: solid;\r\n\tz-index: 1000;\r\n\tborder-width: 8px;\r\n\tposition: absolute;\r\n}\r\n", ""]);
@@ -118884,7 +118920,7 @@ module.exports = exports;
 /* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(305);
 
             content = content.__esModule ? content.default : content;
@@ -118898,7 +118934,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118911,7 +118947,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .lightbulb-glyph,\r\n.monaco-editor .codicon-lightbulb {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\theight: 16px;\r\n\twidth: 20px;\r\n\tpadding-left: 2px;\r\n}\r\n\r\n.monaco-editor .lightbulb-glyph:hover,\r\n.monaco-editor .codicon-lightbulb:hover {\r\n\tcursor: pointer;\r\n\t/* transform: scale(1.3, 1.3); */\r\n}\r\n", ""]);
@@ -118923,7 +118959,7 @@ module.exports = exports;
 /* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(307);
 
             content = content.__esModule ? content.default : content;
@@ -118937,7 +118973,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118950,7 +118986,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .codelens-decoration {\r\n\toverflow: hidden;\r\n\tdisplay: inline-block;\r\n\ttext-overflow: ellipsis;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > span,\r\n.monaco-editor .codelens-decoration > a {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n\twhite-space: nowrap;\r\n\tvertical-align: sub;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > a {\r\n\ttext-decoration: none;\r\n}\r\n\r\n.monaco-editor .codelens-decoration > a:hover {\r\n\ttext-decoration: underline;\r\n\tcursor: pointer;\r\n}\r\n\r\n@keyframes fadein {\r\n\t0% { opacity: 0; visibility: visible;}\r\n\t100% { opacity: 1; }\r\n}\r\n\r\n.monaco-editor .codelens-decoration.fadein {\r\n\tanimation: fadein 0.1s linear;\r\n}\r\n", ""]);
@@ -118962,7 +118998,7 @@ module.exports = exports;
 /* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(309);
 
             content = content.__esModule ? content.default : content;
@@ -118976,7 +119012,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -118989,7 +119025,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(310);
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(311);
 exports = ___CSS_LOADER_API_IMPORT___(false);
@@ -119052,7 +119088,7 @@ __webpack_require__.r(__webpack_exports__);
 /* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(313);
 
             content = content.__esModule ? content.default : content;
@@ -119066,7 +119102,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119079,7 +119115,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n@keyframes codicon-spin {\r\n\t100% {\r\n\t\ttransform:rotate(360deg);\r\n\t}\r\n}\r\n\r\n.codicon-animation-spin {\r\n\tanimation: codicon-spin 1.5s linear infinite;\r\n}\r\n", ""]);
@@ -119091,7 +119127,7 @@ module.exports = exports;
 /* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(315);
 
             content = content.__esModule ? content.default : content;
@@ -119105,7 +119141,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119118,7 +119154,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-action-bar {\r\n\ttext-align: right;\r\n\toverflow: hidden;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-action-bar .actions-container {\r\n\tdisplay: flex;\r\n\tmargin: 0 auto;\r\n\tpadding: 0;\r\n\twidth: 100%;\r\n\tjustify-content: flex-end;\r\n}\r\n\r\n.monaco-action-bar.vertical .actions-container {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-action-bar.reverse .actions-container {\r\n\tflex-direction: row-reverse;\r\n}\r\n\r\n.monaco-action-bar .action-item {\r\n\tcursor: pointer;\r\n\tdisplay: inline-block;\r\n\ttransition: transform 50ms ease;\r\n\tposition: relative;  /* DO NOT REMOVE - this is the key to preventing the ghosting icon bug in Chrome 42 */\r\n}\r\n\r\n.monaco-action-bar .action-item.disabled {\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-action-bar.animated .action-item.active {\r\n\ttransform: scale(1.272019649, 1.272019649); /* 1.272019649 = √φ */\r\n}\r\n\r\n.monaco-action-bar .action-item .icon,\r\n.monaco-action-bar .action-item .codicon {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-action-bar .action-label {\r\n\tfont-size: 11px;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-action-bar .action-item.disabled .action-label,\r\n.monaco-action-bar .action-item.disabled .action-label:hover {\r\n\topacity: 0.4;\r\n}\r\n\r\n/* Vertical actions */\r\n\r\n.monaco-action-bar.vertical {\r\n\ttext-align: left;\r\n}\r\n\r\n.monaco-action-bar.vertical .action-item {\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-action-bar.vertical .action-label.separator {\r\n\tdisplay: block;\r\n\tborder-bottom: 1px solid #bbb;\r\n\tpadding-top: 1px;\r\n\tmargin-left: .8em;\r\n\tmargin-right: .8em;\r\n}\r\n\r\n.monaco-action-bar.animated.vertical .action-item.active {\r\n\ttransform: translate(5px, 0);\r\n}\r\n\r\n.secondary-actions .monaco-action-bar .action-label {\r\n\tmargin-left: 6px;\r\n}\r\n\r\n/* Action Items */\r\n.monaco-action-bar .action-item.select-container {\r\n\toverflow: hidden; /* somehow the dropdown overflows its container, we prevent it here to not push */\r\n\tflex: 1;\r\n\tmax-width: 170px;\r\n\tmin-width: 60px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tmargin-right: 10px;\r\n}\r\n", ""]);
@@ -119130,7 +119166,7 @@ module.exports = exports;
 /* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(317);
 
             content = content.__esModule ? content.default : content;
@@ -119144,7 +119180,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119157,7 +119193,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-menu .monaco-action-bar.vertical {\r\n\tmargin-left: 0;\r\n\toverflow: visible;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .actions-container {\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tpadding: 0;\r\n\ttransform: none;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item.active {\r\n\ttransform: none;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-menu-item {\r\n\tflex: 1 1 auto;\r\n\tdisplay: flex;\r\n\theight: 2em;\r\n\talign-items: center;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label {\r\n\tflex: 1 1 auto;\r\n\ttext-decoration: none;\r\n\tpadding: 0 1em;\r\n\tbackground: none;\r\n\tfont-size: 12px;\r\n\tline-height: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .keybinding,\r\n.monaco-menu .monaco-action-bar.vertical .submenu-indicator {\r\n\tdisplay: inline-block;\r\n\tflex: 2 1 auto;\r\n\tpadding: 0 1em;\r\n\ttext-align: right;\r\n\tfont-size: 12px;\r\n\tline-height: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .submenu-indicator {\r\n\theight: 100%;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00LjUyMDUxIDEyLjM2NDNMOS44Nzc5MyA3TDQuNTIwNTEgMS42MzU3NDJMNS4xMzU3NCAxLjAyMDUwNzhMMTEuMTIyMSA3TDUuMTM1NzQgMTIuOTc5NUw0LjUyMDUxIDEyLjM2NDNaIiBmaWxsPSJibGFjayIvPg0KPC9zdmc+DQo=\") no-repeat 90% 50%/13px 13px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00LjUyMDUxIDEyLjM2NDNMOS44Nzc5MyA3TDQuNTIwNTEgMS42MzU3NDJMNS4xMzU3NCAxLjAyMDUwNzhMMTEuMTIyMSA3TDUuMTM1NzQgMTIuOTc5NUw0LjUyMDUxIDEyLjM2NDNaIiBmaWxsPSJibGFjayIvPg0KPC9zdmc+DQo=\") no-repeat 90% 50%/13px 13px;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item.disabled .keybinding,\r\n.monaco-menu .monaco-action-bar.vertical .action-item.disabled .submenu-indicator {\r\n\topacity: 0.4;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label:not(.separator) {\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tposition: static;\r\n\toverflow: visible;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item .monaco-submenu {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label.separator {\r\n\tpadding: 0.5em 0 0 0;\r\n\tmargin-bottom: 0.5em;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label.separator.text {\r\n\tpadding: 0.7em 1em 0.1em 1em;\r\n\tfont-weight: bold;\r\n\topacity: 1;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-label:hover {\r\n\tcolor: inherit;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .menu-item-check {\r\n\tposition: absolute;\r\n\tvisibility: hidden;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuNDMxNSAzLjMyMzJMNS45NjE1MSAxMy4zMjMyTDUuMTcwOCAxMy4yODc0TDEuODIwOCA4LjUxNzRMMi42MzkxNSA3Ljk0MjY4TDUuNjE2OTcgMTIuMTgyN0wxMy42Njg0IDIuNjc2ODhMMTQuNDMxNSAzLjMyMzJaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\") no-repeat 50% 56%/15px 15px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuNDMxNSAzLjMyMzJMNS45NjE1MSAxMy4zMjMyTDUuMTcwOCAxMy4yODc0TDEuODIwOCA4LjUxNzRMMi42MzkxNSA3Ljk0MjY4TDUuNjE2OTcgMTIuMTgyN0wxMy42Njg0IDIuNjc2ODhMMTQuNDMxNSAzLjMyMzJaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\") no-repeat 50% 56%/15px 15px;\r\n\twidth: 1em;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-menu-item.checked .menu-item-check {\r\n\tvisibility: visible;\r\n}\r\n\r\n/* Context Menu */\r\n\r\n.context-view.monaco-menu-container {\r\n\toutline: 0;\r\n\tborder: none;\r\n\tanimation: fadeIn 0.083s linear;\r\n}\r\n\r\n.context-view.monaco-menu-container :focus,\r\n.context-view.monaco-menu-container .monaco-action-bar.vertical:focus,\r\n.context-view.monaco-menu-container .monaco-action-bar.vertical :focus {\r\n\toutline: 0;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item {\r\n\tborder: thin solid transparent; /* prevents jumping behaviour on hover or focus */\r\n}\r\n\r\n\r\n/* High Contrast Theming */\r\n.hc-black .context-view.monaco-menu-container {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-menu .monaco-action-bar.vertical .action-item.focused {\r\n\tbackground: none;\r\n}\r\n\r\n/* Menubar styles */\r\n\r\n.menubar {\r\n\tdisplay: flex;\r\n\tflex-shrink: 1;\r\n\tbox-sizing: border-box;\r\n\theight: 30px;\r\n\toverflow: hidden;\r\n\tflex-wrap: wrap;\r\n}\r\n\r\n.fullscreen .menubar:not(.compact) {\r\n\tmargin: 0px;\r\n\tpadding: 0px 5px;\r\n}\r\n\r\n.menubar > .menubar-menu-button {\r\n\talign-items: center;\r\n\tbox-sizing: border-box;\r\n\tpadding: 0px 8px;\r\n\tcursor: default;\r\n\t-webkit-app-region: no-drag;\r\n\tzoom: 1;\r\n\twhite-space: nowrap;\r\n\toutline: 0;\r\n}\r\n\r\n.menubar.compact {\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.menubar.compact > .menubar-menu-button {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tpadding: 0px;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder {\r\n\tposition: absolute;\r\n\tleft: 0px;\r\n\topacity: 1;\r\n\tz-index: 2000;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder.monaco-menu-container {\r\n\toutline: 0;\r\n\tborder: none;\r\n}\r\n\r\n.menubar .menubar-menu-items-holder.monaco-menu-container :focus {\r\n\toutline: 0;\r\n}\r\n\r\n.menubar .toolbar-toggle-more {\r\n\tbackground-position: center;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 14px;\r\n\twidth: 20px;\r\n\theight: 100%;\r\n}\r\n\r\n.menubar.compact .toolbar-toggle-more {\r\n\tposition: absolute;\r\n\tleft: 0px;\r\n\ttop: 0px;\r\n\tbackground-position: center;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 16px;\r\n\tcursor: pointer;\r\n\twidth: 100%;\r\n}\r\n\r\n.menubar .toolbar-toggle-more {\r\n\tdisplay: inline-block;\r\n\tpadding: 0;\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00IDhDNCA4LjE5Nzc4IDMuOTQxMzUgOC4zOTExMiAzLjgzMTQ3IDguNTU1NTdDMy43MjE1OSA4LjcyMDAyIDMuNTY1NDEgOC44NDgxOSAzLjM4MjY4IDguOTIzODhDMy4xOTk5NiA4Ljk5OTU3IDIuOTk4ODkgOS4wMTkzNyAyLjgwNDkxIDguOTgwNzlDMi42MTA5MyA4Ljk0MjIgMi40MzI3NSA4Ljg0Njk2IDIuMjkyODkgOC43MDcxMUMyLjE1MzA0IDguNTY3MjUgMi4wNTc4IDguMzg5MDcgMi4wMTkyMiA4LjE5NTA5QzEuOTgwNjMgOC4wMDExMSAyLjAwMDQzIDcuODAwMDQgMi4wNzYxMiA3LjYxNzMyQzIuMTUxODEgNy40MzQ1OSAyLjI3OTk4IDcuMjc4NDEgMi40NDQ0MyA3LjE2ODUzQzIuNjA4ODggNy4wNTg2NSAyLjgwMjIyIDcgMyA3QzMuMjY1MjIgNyAzLjUxOTU3IDcuMTA1MzYgMy43MDcxMSA3LjI5Mjg5QzMuODk0NjQgNy40ODA0MyA0IDcuNzM0NzggNCA4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPHBhdGggZD0iTTkgOEM5IDguMTk3NzggOC45NDEzNSA4LjM5MTEyIDguODMxNDcgOC41NTU1N0M4LjcyMTU5IDguNzIwMDIgOC41NjU0MSA4Ljg0ODE5IDguMzgyNjggOC45MjM4OEM4LjE5OTk2IDguOTk5NTcgNy45OTg4OSA5LjAxOTM3IDcuODA0OTEgOC45ODA3OUM3LjYxMDkzIDguOTQyMiA3LjQzMjc1IDguODQ2OTYgNy4yOTI4OSA4LjcwNzExQzcuMTUzMDQgOC41NjcyNSA3LjA1NzggOC4zODkwNyA3LjAxOTIyIDguMTk1MDlDNi45ODA2MyA4LjAwMTExIDcuMDAwNDMgNy44MDAwNCA3LjA3NjEyIDcuNjE3MzJDNy4xNTE4MSA3LjQzNDU5IDcuMjc5OTggNy4yNzg0MSA3LjQ0NDQzIDcuMTY4NTNDNy42MDg4OCA3LjA1ODY1IDcuODAyMjIgNyA4IDdDOC4yNjUyMiA3IDguNTE5NTcgNy4xMDUzNiA4LjcwNzExIDcuMjkyODlDOC44OTQ2NCA3LjQ4MDQzIDkgNy43MzQ3OCA5IDhaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8cGF0aCBkPSJNMTQgOEMxNCA4LjE5Nzc4IDEzLjk0MTQgOC4zOTExMiAxMy44MzE1IDguNTU1NTdDMTMuNzIxNiA4LjcyMDAyIDEzLjU2NTQgOC44NDgxOSAxMy4zODI3IDguOTIzODhDMTMuMiA4Ljk5OTU3IDEyLjk5ODkgOS4wMTkzNyAxMi44MDQ5IDguOTgwNzlDMTIuNjEwOSA4Ljk0MjIgMTIuNDMyNyA4Ljg0Njk2IDEyLjI5MjkgOC43MDcxMUMxMi4xNTMgOC41NjcyNSAxMi4wNTc4IDguMzg5MDcgMTIuMDE5MiA4LjE5NTA5QzExLjk4MDYgOC4wMDExMSAxMi4wMDA0IDcuODAwMDQgMTIuMDc2MSA3LjYxNzMyQzEyLjE1MTggNy40MzQ1OSAxMi4yOCA3LjI3ODQxIDEyLjQ0NDQgNy4xNjg1M0MxMi42MDg5IDcuMDU4NjUgMTIuODAyMiA3IDEzIDdDMTMuMjY1MiA3IDEzLjUxOTYgNy4xMDUzNiAxMy43MDcxIDcuMjkyODlDMTMuODk0NiA3LjQ4MDQzIDE0IDcuNzM0NzggMTQgOFoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") no-repeat 50% 55%/14px 14px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik00IDhDNCA4LjE5Nzc4IDMuOTQxMzUgOC4zOTExMiAzLjgzMTQ3IDguNTU1NTdDMy43MjE1OSA4LjcyMDAyIDMuNTY1NDEgOC44NDgxOSAzLjM4MjY4IDguOTIzODhDMy4xOTk5NiA4Ljk5OTU3IDIuOTk4ODkgOS4wMTkzNyAyLjgwNDkxIDguOTgwNzlDMi42MTA5MyA4Ljk0MjIgMi40MzI3NSA4Ljg0Njk2IDIuMjkyODkgOC43MDcxMUMyLjE1MzA0IDguNTY3MjUgMi4wNTc4IDguMzg5MDcgMi4wMTkyMiA4LjE5NTA5QzEuOTgwNjMgOC4wMDExMSAyLjAwMDQzIDcuODAwMDQgMi4wNzYxMiA3LjYxNzMyQzIuMTUxODEgNy40MzQ1OSAyLjI3OTk4IDcuMjc4NDEgMi40NDQ0MyA3LjE2ODUzQzIuNjA4ODggNy4wNTg2NSAyLjgwMjIyIDcgMyA3QzMuMjY1MjIgNyAzLjUxOTU3IDcuMTA1MzYgMy43MDcxMSA3LjI5Mjg5QzMuODk0NjQgNy40ODA0MyA0IDcuNzM0NzggNCA4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPHBhdGggZD0iTTkgOEM5IDguMTk3NzggOC45NDEzNSA4LjM5MTEyIDguODMxNDcgOC41NTU1N0M4LjcyMTU5IDguNzIwMDIgOC41NjU0MSA4Ljg0ODE5IDguMzgyNjggOC45MjM4OEM4LjE5OTk2IDguOTk5NTcgNy45OTg4OSA5LjAxOTM3IDcuODA0OTEgOC45ODA3OUM3LjYxMDkzIDguOTQyMiA3LjQzMjc1IDguODQ2OTYgNy4yOTI4OSA4LjcwNzExQzcuMTUzMDQgOC41NjcyNSA3LjA1NzggOC4zODkwNyA3LjAxOTIyIDguMTk1MDlDNi45ODA2MyA4LjAwMTExIDcuMDAwNDMgNy44MDAwNCA3LjA3NjEyIDcuNjE3MzJDNy4xNTE4MSA3LjQzNDU5IDcuMjc5OTggNy4yNzg0MSA3LjQ0NDQzIDcuMTY4NTNDNy42MDg4OCA3LjA1ODY1IDcuODAyMjIgNyA4IDdDOC4yNjUyMiA3IDguNTE5NTcgNy4xMDUzNiA4LjcwNzExIDcuMjkyODlDOC44OTQ2NCA3LjQ4MDQzIDkgNy43MzQ3OCA5IDhaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8cGF0aCBkPSJNMTQgOEMxNCA4LjE5Nzc4IDEzLjk0MTQgOC4zOTExMiAxMy44MzE1IDguNTU1NTdDMTMuNzIxNiA4LjcyMDAyIDEzLjU2NTQgOC44NDgxOSAxMy4zODI3IDguOTIzODhDMTMuMiA4Ljk5OTU3IDEyLjk5ODkgOS4wMTkzNyAxMi44MDQ5IDguOTgwNzlDMTIuNjEwOSA4Ljk0MjIgMTIuNDMyNyA4Ljg0Njk2IDEyLjI5MjkgOC43MDcxMUMxMi4xNTMgOC41NjcyNSAxMi4wNTc4IDguMzg5MDcgMTIuMDE5MiA4LjE5NTA5QzExLjk4MDYgOC4wMDExMSAxMi4wMDA0IDcuODAwMDQgMTIuMDc2MSA3LjYxNzMyQzEyLjE1MTggNy40MzQ1OSAxMi4yOCA3LjI3ODQxIDEyLjQ0NDQgNy4xNjg1M0MxMi42MDg5IDcuMDU4NjUgMTIuODAyMiA3IDEzIDdDMTMuMjY1MiA3IDEzLjUxOTYgNy4xMDUzNiAxMy43MDcxIDcuMjkyODlDMTMuODk0NiA3LjQ4MDQzIDE0IDcuNzM0NzggMTQgOFoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") no-repeat 50% 55%/14px 14px;\r\n}\r\n\r\n.menubar.compact .toolbar-toggle-more {\r\n\tmask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOCA1LjYyNUgwVjQuNUgxOFY1LjYyNVpNMTggMTQuNjI1SDBWMTMuNUgxOFYxNC42MjVaTTE4IDEwLjExNjJIMFY5SDE4VjEwLjExNjJaIiBmaWxsPSJ3aGl0ZSIvPg0KPC9zdmc+DQo=\") no-repeat 50% 55%/16px 16px;\r\n\t-webkit-mask: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOCA1LjYyNUgwVjQuNUgxOFY1LjYyNVpNMTggMTQuNjI1SDBWMTMuNUgxOFYxNC42MjVaTTE4IDEwLjExNjJIMFY5SDE4VjEwLjExNjJaIiBmaWxsPSJ3aGl0ZSIvPg0KPC9zdmc+DQo=\") no-repeat 50% 55%/16px 16px;\r\n}\r\n", ""]);
@@ -119169,7 +119205,7 @@ module.exports = exports;
 /* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(319);
 
             content = content.__esModule ? content.default : content;
@@ -119183,7 +119219,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119196,7 +119232,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Arrows */\r\n.monaco-scrollable-element > .scrollbar > .up-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiIGZpbGw9IiM0MjQyNDIiLz48L3N2Zz4=\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .down-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCA1LjQ5MDQ1OTkxODk3NTgzLDUuODExNTAwMDcyNDc5MjQ4KSIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiLz48L3N2Zz4=\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .left-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDUuNDkwNDU5OTE4OTc1ODMxLDUuNDMxMzgyMTc5MjYwMjU0KSIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNDgwNDYsOC41ODEzOGwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n\tcursor: pointer;\r\n}\r\n.monaco-scrollable-element > .scrollbar > .right-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoOTAgNS42MTcxNjUwODg2NTM1NjQ1LDUuNTU4MDg5NzMzMTIzNzgpICIgZmlsbD0iIzQyNDI0MiIgZD0ibTkuNjA3MTcsOC43MDgwOWwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n\tcursor: pointer;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element > .scrollbar > .up-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .up-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiIGZpbGw9IiNFOEU4RTgiLz48L3N2Zz4=\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .down-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .down-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCA1LjQ5MDQ1OTkxODk3NTgzLDUuODExNTAwMDcyNDc5MjQ4KSIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNDgwNDYsOC45NjE1bDEuMjYsLTEuMjZsLTUuMDQsLTUuMDRsLTUuNDYsNS4wNGwxLjI2LDEuMjZsNC4yLC0zLjc4bDMuNzgsMy43OHoiLz48L3N2Zz4=\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .left-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .left-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMSI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDUuNDkwNDU5OTE4OTc1ODMxLDUuNDMxMzgyMTc5MjYwMjU0KSIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNDgwNDYsOC41ODEzOGwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .right-arrow,\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .right-arrow {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoOTAgNS42MTcxNjUwODg2NTM1NjQ1LDUuNTU4MDg5NzMzMTIzNzgpICIgZmlsbD0iI0U4RThFOCIgZD0ibTkuNjA3MTcsOC43MDgwOWwxLjI2LC0xLjI2bC01LjA0LC01LjA0bC01LjQ2LDUuMDRsMS4yNiwxLjI2bDQuMiwtMy43OGwzLjc4LDMuNzh6Ii8+PC9zdmc+\");\r\n}\r\n\r\n.monaco-scrollable-element > .visible {\r\n\topacity: 1;\r\n\r\n\t/* Background rule added for IE9 - to allow clicks on dom node */\r\n\tbackground:rgba(0,0,0,0);\r\n\r\n\ttransition: opacity 100ms linear;\r\n}\r\n.monaco-scrollable-element > .invisible {\r\n\topacity: 0;\r\n\tpointer-events: none;\r\n}\r\n.monaco-scrollable-element > .invisible.fade {\r\n\ttransition: opacity 800ms linear;\r\n}\r\n\r\n/* Scrollable Content Inset Shadow */\r\n.monaco-scrollable-element > .shadow {\r\n\tposition: absolute;\r\n\tdisplay: none;\r\n}\r\n.monaco-scrollable-element > .shadow.top {\r\n\tdisplay: block;\r\n\ttop: 0;\r\n\tleft: 3px;\r\n\theight: 3px;\r\n\twidth: 100%;\r\n\tbox-shadow: #DDD 0 6px 6px -6px inset;\r\n}\r\n.monaco-scrollable-element > .shadow.left {\r\n\tdisplay: block;\r\n\ttop: 3px;\r\n\tleft: 0;\r\n\theight: 100%;\r\n\twidth: 3px;\r\n\tbox-shadow: #DDD 6px 0 6px -6px inset;\r\n}\r\n.monaco-scrollable-element > .shadow.top-left-corner {\r\n\tdisplay: block;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 3px;\r\n\twidth: 3px;\r\n}\r\n.monaco-scrollable-element > .shadow.top.left {\r\n\tbox-shadow: #DDD 6px 6px 6px -6px inset;\r\n}\r\n\r\n/* ---------- Default Style ---------- */\r\n\r\n.vs .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(100, 100, 100, .4);\r\n}\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(121, 121, 121, .4);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider {\r\n\tbackground: rgba(111, 195, 223, .6);\r\n}\r\n\r\n.monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\tbackground: rgba(100, 100, 100, .7);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\tbackground: rgba(111, 195, 223, .8);\r\n}\r\n\r\n.monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(0, 0, 0, .6);\r\n}\r\n.vs-dark .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(191, 191, 191, .4);\r\n}\r\n.hc-black .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\tbackground: rgba(111, 195, 223, 1);\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.top {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.left {\r\n\tbox-shadow: #000 6px 0 6px -6px inset;\r\n}\r\n\r\n.vs-dark .monaco-scrollable-element .shadow.top.left {\r\n\tbox-shadow: #000 6px 6px 6px -6px inset;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.top {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.left {\r\n\tbox-shadow: none;\r\n}\r\n\r\n.hc-black .monaco-scrollable-element .shadow.top.left {\r\n\tbox-shadow: none;\r\n}", ""]);
@@ -119208,7 +119244,7 @@ module.exports = exports;
 /* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(321);
 
             content = content.__esModule ? content.default : content;
@@ -119222,7 +119258,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119235,7 +119271,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor.vs .dnd-target {\r\n\tborder-right: 2px dotted black;\r\n\tcolor: white; /* opposite of black */\r\n}\r\n.monaco-editor.vs-dark .dnd-target {\r\n\tborder-right: 2px dotted #AEAFAD;\r\n\tcolor: #51504f; /* opposite of #AEAFAD */\r\n}\r\n.monaco-editor.hc-black .dnd-target {\r\n\tborder-right: 2px dotted #fff;\r\n\tcolor: #000; /* opposite of #fff */\r\n}\r\n\r\n.monaco-editor.mouse-default .view-lines,\r\n.monaco-editor.vs-dark.mac.mouse-default .view-lines,\r\n.monaco-editor.hc-black.mac.mouse-default .view-lines {\r\n\tcursor: default;\r\n}\r\n.monaco-editor.mouse-copy .view-lines,\r\n.monaco-editor.vs-dark.mac.mouse-copy .view-lines,\r\n.monaco-editor.hc-black.mac.mouse-copy .view-lines {\r\n\tcursor: copy;\r\n}", ""]);
@@ -119247,7 +119283,7 @@ module.exports = exports;
 /* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(323);
 
             content = content.__esModule ? content.default : content;
@@ -119261,7 +119297,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119274,7 +119310,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-custom-checkbox {\r\n\tmargin-left: 2px;\r\n\tfloat: left;\r\n\tcursor: pointer;\r\n\toverflow: hidden;\r\n\topacity: 0.7;\r\n\twidth: 20px;\r\n\theight: 20px;\r\n\tborder: 1px solid transparent;\r\n\tpadding: 1px;\r\n\tbox-sizing:\tborder-box;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-custom-checkbox:hover,\r\n.monaco-custom-checkbox.checked {\r\n\topacity: 1;\r\n}\r\n\r\n.hc-black .monaco-custom-checkbox {\r\n\tbackground: none;\r\n}\r\n\r\n.hc-black .monaco-custom-checkbox:hover {\r\n\tbackground: none;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox {\r\n\theight: 18px;\r\n\twidth: 18px;\r\n\tborder: 1px solid transparent;\r\n\tborder-radius: 3px;\r\n\tmargin-right: 9px;\r\n\tmargin-left: 0px;\r\n\tpadding: 0px;\r\n\topacity: 1;\r\n\tbackground-size: 16px !important;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox.checked {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUgMy43NjM0NUw1LjgwNjg3IDExLjkzNTFMNS4wODU4NCAxMS44OTI3TDEgNy4yOTYxNEwxLjc2MzQ1IDYuNjE3NTJMNS41MDk5NyAxMC44MzI0TDE0LjMyMTQgM0wxNSAzLjc2MzQ1WiIgZmlsbD0iIzQyNDI0MiIvPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n}\r\n\r\n.monaco-custom-checkbox.monaco-simple-checkbox.checked {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUgMy43NjM0NUw1LjgwNjg3IDExLjkzNTFMNS4wODU4NCAxMS44OTI3TDEgNy4yOTYxNEwxLjc2MzQ1IDYuNjE3NTJMNS41MDk5NyAxMC44MzI0TDE0LjMyMTQgM0wxNSAzLjc2MzQ1WiIgZmlsbD0iI0M1QzVDNSIvPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n}\r\n", ""]);
@@ -119286,7 +119322,7 @@ module.exports = exports;
 /* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(325);
 
             content = content.__esModule ? content.default : content;
@@ -119300,7 +119336,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119313,7 +119349,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Find widget */\r\n.monaco-editor .find-widget {\r\n\tposition: absolute;\r\n\tz-index: 10;\r\n\theight: 33px;\r\n\toverflow: hidden;\r\n\tline-height: 19px;\r\n\ttransition: transform 200ms linear;\r\n\tpadding: 0 4px;\r\n\tbox-sizing: border-box;\r\n\ttransform: translateY(Calc(-100% - 10px)); /* shadow (10px) */\r\n}\r\n\r\n.monaco-editor .find-widget textarea {\r\n\tmargin: 0px;\r\n}\r\n\r\n.monaco-editor .find-widget.hiddenEditor {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Find widget when replace is toggled on */\r\n.monaco-editor .find-widget.replaceToggled > .replace-part {\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .find-widget.visible  {\r\n\ttransform: translateY(0);\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-inputbox.synthetic-focus {\r\n\toutline: 1px solid -webkit-focus-ring-color;\r\n\toutline-offset: -1px;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-inputbox .input {\r\n\tbackground-color: transparent;\r\n\tmin-height: 0;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .input {\r\n\tfont-size: 13px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part,\r\n.monaco-editor .find-widget > .replace-part {\r\n\tmargin: 4px 0 0 17px;\r\n\tfont-size: 12px;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox {\r\n\tmin-height: 25px;\r\n}\r\n\r\n\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .mirror {\r\n\tpadding-right: 22px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox > .wrapper > .input,\r\n.monaco-editor .find-widget > .find-part .monaco-inputbox > .wrapper > .mirror,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .input,\r\n.monaco-editor .find-widget > .replace-part .monaco-inputbox > .wrapper > .mirror {\r\n\tpadding-top: 2px;\r\n\tpadding-bottom: 2px;\r\n}\r\n\r\n.monaco-editor .find-widget > .find-part .find-actions {\r\n\theight: 25px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part .replace-actions {\r\n\theight: 25px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput {\r\n\tvertical-align: middle;\r\n\tdisplay: flex;\r\n\tflex:1;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .monaco-scrollable-element {\r\n\t/* Make sure textarea inherits the width correctly */\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-findInput .monaco-scrollable-element .scrollbar.vertical {\r\n\t/* Hide vertical scrollbar */\r\n\topacity: 0;\r\n}\r\n\r\n.monaco-editor .find-widget .matchesCount {\r\n\tdisplay: flex;\r\n\tflex: initial;\r\n\tmargin: 0 0 0 3px;\r\n\tpadding: 2px 0 0 2px;\r\n\theight: 25px;\r\n\tvertical-align: middle;\r\n\tbox-sizing: border-box;\r\n\ttext-align: center;\r\n\tline-height: 23px;\r\n}\r\n\r\n.monaco-editor .find-widget .button {\r\n\twidth: 20px;\r\n\theight: 20px;\r\n\tdisplay: flex;\r\n\tflex: initial;\r\n\tmargin-left: 3px;\r\n\tbackground-position: center center;\r\n\tbackground-repeat: no-repeat;\r\n\tcursor: pointer;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n}\r\n\r\n.monaco-editor .find-widget .button:not(.disabled):hover {\r\n\tbackground-color: rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.monaco-editor .find-widget .button.left {\r\n\tmargin-left: 0;\r\n\tmargin-right: 3px;\r\n}\r\n\r\n.monaco-editor .find-widget .button.wide {\r\n\twidth: auto;\r\n\tpadding: 1px 6px;\r\n\ttop: -1px;\r\n}\r\n\r\n.monaco-editor .find-widget .button.toggle {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 3px;\r\n\twidth: 18px;\r\n\theight: 100%;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .find-widget .button.toggle.disabled {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .find-widget .disabled {\r\n\topacity: 0.3;\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part > .monaco-findInput {\r\n\tposition: relative;\r\n\tdisplay: flex;\r\n\tvertical-align: middle;\r\n\tflex: auto;\r\n\tflex-grow: 0;\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.monaco-editor .find-widget > .replace-part > .monaco-findInput > .controls {\r\n\tposition: absolute;\r\n\ttop: 3px;\r\n\tright: 2px;\r\n}\r\n\r\n/* REDUCED */\r\n.monaco-editor .find-widget.reduced-find-widget .matchesCount {\r\n\tdisplay:none;\r\n}\r\n\r\n/* NARROW (SMALLER THAN REDUCED) */\r\n.monaco-editor .find-widget.narrow-find-widget {\r\n\tmax-width: 257px !important;\r\n}\r\n\r\n/* COLLAPSED (SMALLER THAN NARROW) */\r\n.monaco-editor .find-widget.collapsed-find-widget {\r\n\tmax-width: 170px !important;\r\n}\r\n\r\n.monaco-editor .find-widget.collapsed-find-widget .button.previous,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.next,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.replace,\r\n.monaco-editor .find-widget.collapsed-find-widget .button.replace-all,\r\n.monaco-editor .find-widget.collapsed-find-widget > .find-part .monaco-findInput .controls {\r\n\tdisplay:none;\r\n}\r\n\r\n.monaco-editor .findMatch {\r\n\tanimation-duration: 0;\r\n\tanimation-name: inherit !important;\r\n}\r\n\r\n.monaco-editor .find-widget .monaco-sash {\r\n\twidth: 2px !important;\r\n\tmargin-left: -4px;\r\n}\r\n\r\n.monaco-editor.hc-black .find-widget .button:not(.disabled):hover,\r\n.monaco-editor.vs-dark .find-widget .button:not(.disabled):hover {\r\n\tbackground-color: rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.monaco-editor.hc-black .find-widget .button:before {\r\n\tposition: relative;\r\n\ttop: 1px;\r\n\tleft: 2px;\r\n}\r\n", ""]);
@@ -119325,7 +119361,7 @@ module.exports = exports;
 /* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(327);
 
             content = content.__esModule ? content.default : content;
@@ -119339,7 +119375,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119352,7 +119388,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-sash {\r\n\tposition: absolute;\r\n\tz-index: 35;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-sash.disabled {\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-sash.vertical {\r\n\tcursor: ew-resize;\r\n\ttop: 0;\r\n\twidth: 4px;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-sash.mac.vertical {\r\n\tcursor: col-resize;\r\n}\r\n\r\n.monaco-sash.vertical.minimum {\r\n\tcursor: e-resize;\r\n}\r\n\r\n.monaco-sash.vertical.maximum {\r\n\tcursor: w-resize;\r\n}\r\n\r\n.monaco-sash.horizontal {\r\n\tcursor: ns-resize;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 4px;\r\n}\r\n\r\n.monaco-sash.mac.horizontal {\r\n\tcursor: row-resize;\r\n}\r\n\r\n.monaco-sash.horizontal.minimum {\r\n\tcursor: s-resize;\r\n}\r\n\r\n.monaco-sash.horizontal.maximum {\r\n\tcursor: n-resize;\r\n}\r\n\r\n.monaco-sash:not(.disabled).orthogonal-start::before,\r\n.monaco-sash:not(.disabled).orthogonal-end::after {\r\n\tcontent: ' ';\r\n\theight: 8px;\r\n\twidth: 8px;\r\n\tz-index: 100;\r\n\tdisplay: block;\r\n\tcursor: all-scroll;\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-sash.orthogonal-start.vertical::before {\r\n\tleft: -2px;\r\n\ttop: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-end.vertical::after {\r\n\tleft: -2px;\r\n\tbottom: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-start.horizontal::before {\r\n\ttop: -2px;\r\n\tleft: -4px;\r\n}\r\n\r\n.monaco-sash.orthogonal-end.horizontal::after {\r\n\ttop: -2px;\r\n\tright: -4px;\r\n}\r\n\r\n.monaco-sash.disabled {\r\n\tcursor: default !important;\r\n\tpointer-events: none !important;\r\n}\r\n\r\n/** Touch **/\r\n\r\n.monaco-sash.touch.vertical {\r\n\twidth: 20px;\r\n}\r\n\r\n.monaco-sash.touch.horizontal {\r\n\theight: 20px;\r\n}\r\n\r\n/** Debug **/\r\n\r\n.monaco-sash.debug {\r\n\tbackground: cyan;\r\n}\r\n\r\n.monaco-sash.debug.disabled {\r\n\tbackground: rgba(0, 255, 255, 0.2);\r\n}\r\n\r\n.monaco-sash.debug:not(.disabled).orthogonal-start::before,\r\n.monaco-sash.debug:not(.disabled).orthogonal-end::after {\r\n\tbackground: red;\r\n}", ""]);
@@ -119365,7 +119401,7 @@ module.exports = exports;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n/* ---------- Find input ---------- */\r\n\r\n.monaco-findInput {\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-findInput .monaco-inputbox {\r\n\tfont-size: 13px;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-findInput > .controls {\r\n\tposition: absolute;\r\n\ttop: 3px;\r\n\tright: 2px;\r\n}\r\n\r\n.vs .monaco-findInput.disabled {\r\n\tbackground-color: #E1E1E1;\r\n}\r\n\r\n/* Theming */\r\n.vs-dark .monaco-findInput.disabled {\r\n\tbackground-color: #333;\r\n}\r\n\r\n/* Highlighting */\r\n.monaco-findInput.highlight-0 .controls {\r\n\tanimation: monaco-findInput-highlight-0 100ms linear 0s;\r\n}\r\n.monaco-findInput.highlight-1 .controls {\r\n\tanimation: monaco-findInput-highlight-1 100ms linear 0s;\r\n}\r\n.hc-black .monaco-findInput.highlight-0 .controls,\r\n.vs-dark  .monaco-findInput.highlight-0 .controls {\r\n\tanimation: monaco-findInput-highlight-dark-0 100ms linear 0s;\r\n}\r\n.hc-black .monaco-findInput.highlight-1 .controls,\r\n.vs-dark  .monaco-findInput.highlight-1 .controls {\r\n\tanimation: monaco-findInput-highlight-dark-1 100ms linear 0s;\r\n}\r\n\r\n@keyframes monaco-findInput-highlight-0 {\r\n\t0% { background: rgba(253, 255, 0, 0.8); }\r\n\t100% { background: transparent; }\r\n}\r\n@keyframes monaco-findInput-highlight-1 {\r\n\t0% { background: rgba(253, 255, 0, 0.8); }\r\n\t/* Made intentionally different such that the CSS minifier does not collapse the two animations into a single one*/\r\n\t99% { background: transparent; }\r\n}\r\n\r\n@keyframes monaco-findInput-highlight-dark-0 {\r\n\t0% { background: rgba(255, 255, 255, 0.44); }\r\n\t100% { background: transparent; }\r\n}\r\n@keyframes monaco-findInput-highlight-dark-1 {\r\n\t0% { background: rgba(255, 255, 255, 0.44); }\r\n\t/* Made intentionally different such that the CSS minifier does not collapse the two animations into a single one*/\r\n\t99% { background: transparent; }\r\n}", ""]);
@@ -119377,7 +119413,7 @@ module.exports = exports;
 /* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(330);
 
             content = content.__esModule ? content.default : content;
@@ -119391,7 +119427,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119404,7 +119440,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-inputbox {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\tpadding: 0;\r\n\tbox-sizing:\tborder-box;\r\n\r\n\t/* Customizable */\r\n\tfont-size: inherit;\r\n}\r\n\r\n.monaco-inputbox.idle {\r\n\tborder: 1px solid transparent;\r\n}\r\n\r\n.monaco-inputbox > .wrapper > .input,\r\n.monaco-inputbox > .wrapper > .mirror {\r\n\r\n\t/* Customizable */\r\n\tpadding: 4px;\r\n}\r\n\r\n.monaco-inputbox > .wrapper {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-inputbox > .wrapper > .input {\r\n\tdisplay: inline-block;\r\n\tbox-sizing:\tborder-box;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tline-height: inherit;\r\n\tborder: none;\r\n\tfont-family: inherit;\r\n\tfont-size: inherit;\r\n\tresize: none;\r\n\tcolor: inherit;\r\n}\r\n\r\n.monaco-inputbox > .wrapper > input {\r\n\ttext-overflow: ellipsis;\r\n}\r\n\r\n.monaco-inputbox > .wrapper > textarea.input {\r\n\tdisplay: block;\r\n\t-ms-overflow-style: none; /* IE 10+: hide scrollbars */\r\n\tscrollbar-width: none; /* Firefox: hide scrollbars */\r\n\toutline: none;\r\n}\r\n\r\n.monaco-inputbox > .wrapper > textarea.input::-webkit-scrollbar {\r\n\tdisplay: none; /* Chrome + Safari: hide scrollbar */\r\n}\r\n\r\n.monaco-inputbox > .wrapper > textarea.input.empty {\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-inputbox > .wrapper > .mirror {\r\n\tposition: absolute;\r\n\tdisplay: inline-block;\r\n\twidth: 100%;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tbox-sizing: border-box;\r\n\twhite-space: pre-wrap;\r\n\tvisibility: hidden;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n/* Context view */\r\n\r\n.monaco-inputbox-container {\r\n\ttext-align: right;\r\n}\r\n\r\n.monaco-inputbox-container .monaco-inputbox-message {\r\n\tdisplay: inline-block;\r\n\toverflow: hidden;\r\n\ttext-align: left;\r\n\twidth: 100%;\r\n\tbox-sizing:\tborder-box;\r\n\tpadding: 0.4em;\r\n\tfont-size: 12px;\r\n\tline-height: 17px;\r\n\tmin-height: 34px;\r\n\tmargin-top: -1px;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n/* Action bar support */\r\n.monaco-inputbox .monaco-action-bar {\r\n\tposition: absolute;\r\n\tright: 2px;\r\n\ttop: 4px;\r\n}\r\n\r\n.monaco-inputbox .monaco-action-bar .action-item {\r\n\tmargin-left: 2px;\r\n}\r\n\r\n.monaco-inputbox .monaco-action-bar .action-item .codicon {\r\n\tbackground-repeat: no-repeat;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n}\r\n", ""]);
@@ -119416,7 +119452,7 @@ module.exports = exports;
 /* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(332);
 
             content = content.__esModule ? content.default : content;
@@ -119430,7 +119466,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119443,7 +119479,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .margin-view-overlays .codicon-chevron-right,\r\n.monaco-editor .margin-view-overlays .codicon-chevron-down {\r\n\tcursor: pointer;\r\n\topacity: 0;\r\n\ttransition: opacity 0.5s;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tfont-size: 140%;\r\n\tmargin-left: 2px;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays:hover .codicon,\r\n.monaco-editor .margin-view-overlays .codicon.codicon-chevron-right,\r\n.monaco-editor .margin-view-overlays .codicon.alwaysShowFoldIcons {\r\n\topacity: 1;\r\n}\r\n\r\n.monaco-editor .inline-folded:after {\r\n\tcolor: grey;\r\n\tmargin: 0.1em 0.2em 0 0.2em;\r\n\tcontent: \"⋯\";\r\n\tdisplay: inline;\r\n\tline-height: 1em;\r\n\tcursor: pointer;\r\n}\r\n", ""]);
@@ -119455,7 +119491,7 @@ module.exports = exports;
 /* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(334);
 
             content = content.__esModule ? content.default : content;
@@ -119469,7 +119505,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119482,7 +119518,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* marker zone */\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .severity-icon {\r\n\tdisplay: inline-block;\r\n\tvertical-align: text-top;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-editor .marker-widget {\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .marker-widget > .stale {\r\n\topacity: 0.6;\r\n\tfont-style: italic;\r\n}\r\n\r\n.monaco-editor .marker-widget .title {\r\n\tdisplay: inline-block;\r\n\tpadding-right: 5px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer {\r\n\tposition: absolute;\r\n\twhite-space: pre;\r\n\tuser-select: text;\r\n\t-webkit-user-select: text;\r\n\t-ms-user-select: text;\r\n\tpadding: 8px 12px 0px 20px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message .details {\r\n\tpadding-left: 6px;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .message .source,\r\n.monaco-editor .marker-widget .descriptioncontainer .message .code {\r\n\topacity: 0.6;\r\n}\r\n\r\n.monaco-editor .marker-widget .descriptioncontainer .filename {\r\n\tcursor: pointer;\r\n}\r\n", ""]);
@@ -119494,7 +119530,7 @@ module.exports = exports;
 /* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(336);
 
             content = content.__esModule ? content.default : content;
@@ -119508,7 +119544,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119521,7 +119557,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .peekview-widget .head {\r\n\tbox-sizing:\tborder-box;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tfont-size: 13px;\r\n\tmargin-left: 20px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .dirname:not(:empty) {\r\n\tfont-size: 0.9em;\r\n\tmargin-left: 0.5em;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .meta {\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .meta:not(:empty)::before {\r\n\tcontent: '-';\r\n\tpadding: 0 0.3em;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions {\r\n\tflex: 1;\r\n\ttext-align: right;\r\n\tpadding-right: 2px;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar,\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar > .actions-container {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-item {\r\n\tmargin-left: 4px;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-label {\r\n\twidth: 16px;\r\n\theight: 100%;\r\n\tmargin: 0;\r\n\tline-height: inherit;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: center center;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar .action-label.codicon {\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-editor .peekview-widget > .body {\r\n\tborder-top: 1px solid;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-editor .peekview-widget .head .peekview-title .codicon {\r\n\tmargin-right: 4px;\r\n}\r\n", ""]);
@@ -119533,7 +119569,7 @@ module.exports = exports;
 /* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(338);
 
             content = content.__esModule ? content.default : content;
@@ -119547,7 +119583,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119560,7 +119596,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* -------------------- IE10 remove auto clear button -------------------- */\r\n\r\n::-ms-clear {\r\n\tdisplay: none;\r\n}\r\n\r\n/* All widgets */\r\n/* I am not a big fan of this rule */\r\n.monaco-editor .editor-widget input {\r\n\tcolor: inherit;\r\n}\r\n\r\n/* -------------------- Editor -------------------- */\r\n\r\n.monaco-editor {\r\n\tposition: relative;\r\n\toverflow: visible;\r\n\t-webkit-text-size-adjust: 100%;\r\n}\r\n\r\n/* -------------------- Misc -------------------- */\r\n\r\n.monaco-editor .overflow-guard {\r\n\tposition: relative;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-editor .view-overlays {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n/*\r\n.monaco-editor .auto-closed-character {\r\n\topacity: 0.3;\r\n}\r\n*/\r\n", ""]);
@@ -119572,7 +119608,7 @@ module.exports = exports;
 /* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(340);
 
             content = content.__esModule ? content.default : content;
@@ -119586,7 +119622,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119599,7 +119635,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .inputarea {\r\n\tmin-width: 0;\r\n\tmin-height: 0;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tposition: absolute;\r\n\toutline: none !important;\r\n\tresize: none;\r\n\tborder: none;\r\n\toverflow: hidden;\r\n\tcolor: transparent;\r\n\tbackground-color: transparent;\r\n}\r\n/*.monaco-editor .inputarea {\r\n\tposition: fixed !important;\r\n\twidth: 800px !important;\r\n\theight: 500px !important;\r\n\ttop: initial !important;\r\n\tleft: initial !important;\r\n\tbottom: 0 !important;\r\n\tright: 0 !important;\r\n\tcolor: black !important;\r\n\tbackground: white !important;\r\n\tline-height: 15px !important;\r\n\tfont-size: 14px !important;\r\n}*/\r\n.monaco-editor .inputarea.ime-input {\r\n\tz-index: 10;\r\n}\r\n", ""]);
@@ -119611,7 +119647,7 @@ module.exports = exports;
 /* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(342);
 
             content = content.__esModule ? content.default : content;
@@ -119625,7 +119661,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119638,7 +119674,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers {\r\n\tposition: absolute;\r\n\ttext-align: right;\r\n\tdisplay: inline-block;\r\n\tvertical-align: middle;\r\n\tbox-sizing: border-box;\r\n\tcursor: default;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .relative-current-line-number {\r\n\ttext-align: left;\r\n\tdisplay: inline-block;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers {\r\n\tcursor: -webkit-image-set(\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIyNSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxNSAyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTUgMjU7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwIiBwb2ludHM9IjE0LjUsMS4yIDEuOSwxMy44IDcsMTMuOCAzLjIsMjEuNSA2LjMsMjIuNSAxMC4xLDE0LjkgMTQuNSwxOCIvPjwvc3ZnPg==\") 1x,\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzMCA1MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAgNTA7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyOyIgcG9pbnRzPSIyOSwyLjQgMy44LDI3LjYgMTQsMjcuNiA2LjQsNDMgMTIuNiw0NSAyMC4yLDI5LjggMjksMzYiLz48L3N2Zz4NCg==\") 2x\r\n\t) 30 0, default;\r\n}\r\n\r\n.monaco-editor.mac .margin-view-overlays .line-numbers {\r\n\tcursor: -webkit-image-set(\r\n\t\turl(\"data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTMgMTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEzIDE5OyIgd2lkdGg9IjEzIiBoZWlnaHQ9IjE5Ij48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+PHRpdGxlPmZsaXBwZWQtY3Vyc29yLW1hYzwvdGl0bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTUuMywxNi42bDEuNi00LjdIMi4xTDEyLjUsMS4ydjE0LjRMOS43LDEzbC0xLjYsNC42Yy0wLjIsMC41LTAuOCwwLjgtMS4zLDAuNkw2LDE3LjkgQzUuNCwxNy43LDUuMSwxNy4yLDUuMywxNi42eiIvPjwvc3ZnPg0K\") 1x,\r\n\t\turl(\"data:image/svg+xml;base64,DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAyNiAzOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjYgMzg7IiB3aWR0aD0iMjYiIGhlaWdodD0iMzgiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtzdHJva2U6I0ZGRkZGRjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9PC9zdHlsZT4JPHRpdGxlPmZsaXBwZWQtY3Vyc29yLW1hYzwvdGl0bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTEwLjYsMzMuMmwzLjItOS40SDQuMkwyNSwyLjR2MjguOEwxOS40LDI2bC0zLjIsOS4yYy0wLjQsMS0xLjYsMS42LTIuNiwxLjJMMTIsMzUuOCBDMTAuOCwzNS40LDEwLjIsMzQuNCwxMC42LDMzLjJ6Ii8+PC9zdmc+DQo=\") 2x\r\n\t) 24 3, default;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .line-numbers.lh-odd {\r\n\tmargin-top: 1px;\r\n}\r\n", ""]);
@@ -119650,7 +119686,7 @@ module.exports = exports;
 /* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(344);
 
             content = content.__esModule ? content.default : content;
@@ -119664,7 +119700,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119677,7 +119713,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .view-overlays .current-line {\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .current-line {\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor .margin-view-overlays .current-line.current-line-margin.current-line-margin-both {\r\n\tborder-right: 0;\r\n}\r\n", ""]);
@@ -119689,7 +119725,7 @@ module.exports = exports;
 /* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(346);
 
             content = content.__esModule ? content.default : content;
@@ -119703,7 +119739,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119716,7 +119752,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcdr = core decorations rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cdr {\r\n\tposition: absolute;\r\n}", ""]);
@@ -119728,7 +119764,7 @@ module.exports = exports;
 /* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(348);
 
             content = content.__esModule ? content.default : content;
@@ -119742,7 +119778,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119755,7 +119791,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .glyph-margin {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcgmr = core glyph margin rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cgmr {\r\n\tposition: absolute;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n}\r\n", ""]);
@@ -119767,7 +119803,7 @@ module.exports = exports;
 /* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(350);
 
             content = content.__esModule ? content.default : content;
@@ -119781,7 +119817,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119794,7 +119830,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcigr = core ident guides rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cigr {\r\n\tposition: absolute;\r\n}\r\n.monaco-editor .lines-content .cigra {\r\n\tposition: absolute;\r\n}\r\n", ""]);
@@ -119806,7 +119842,7 @@ module.exports = exports;
 /* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(352);
 
             content = content.__esModule ? content.default : content;
@@ -119820,7 +119856,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119833,7 +119869,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Uncomment to see lines flashing when they're painted */\r\n/*.monaco-editor .view-lines > .view-line {\r\n\tbackground-color: none;\r\n\tanimation-name: flash-background;\r\n\tanimation-duration: 800ms;\r\n}\r\n@keyframes flash-background {\r\n\t0%   { background-color: lightgreen; }\r\n\t100% { background-color: none }\r\n}*/\r\n\r\n.monaco-editor.no-user-select .lines-content,\r\n.monaco-editor.no-user-select .view-line,\r\n.monaco-editor.no-user-select .view-lines {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-editor .view-lines {\r\n\tcursor: text;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor.vs-dark.mac .view-lines,\r\n.monaco-editor.hc-black.mac .view-lines {\r\n\tcursor: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAL0lEQVQoz2NgCD3x//9/BhBYBWdhgFVAiVW4JBFKGIa4AqD0//9D3pt4I4tAdAMAHTQ/j5Zom30AAAAASUVORK5CYII=) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAz0lEQVRIx2NgYGBY/R8I/vx5eelX3n82IJ9FxGf6tksvf/8FiTMQAcAGQMDvSwu09abffY8QYSAScNk45G198eX//yev73/4///701eh//kZSARckrNBRvz//+8+6ZohwCzjGNjdgQxkAg7B9WADeBjIBqtJCbhRA0YNoIkBSNmaPEMoNmA0FkYNoFKhapJ6FGyAH3nauaSmPfwI0v/3OukVi0CIZ+F25KrtYcx/CTIy0e+rC7R1Z4KMICVTQQ14feVXIbR695u14+Ir4gwAAD49E54wc1kWAAAAAElFTkSuQmCC) 2x) 5 8, text;\r\n}\r\n\r\n.monaco-editor .view-line {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n}\r\n\r\n/* TODO@tokenization bootstrap fix */\r\n/*.monaco-editor .view-line > span > span {\r\n\tfloat: none;\r\n\tmin-height: inherit;\r\n\tmargin-left: inherit;\r\n}*/\r\n", ""]);
@@ -119845,7 +119881,7 @@ module.exports = exports;
 /* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(354);
 
             content = content.__esModule ? content.default : content;
@@ -119859,7 +119895,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119872,7 +119908,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .lines-decorations {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tbackground: white;\r\n}\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcldr = core lines decorations rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cldr {\r\n\tposition: absolute;\r\n\theight: 100%;\r\n}", ""]);
@@ -119884,7 +119920,7 @@ module.exports = exports;
 /* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(356);
 
             content = content.__esModule ? content.default : content;
@@ -119898,7 +119934,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119911,7 +119947,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcmdr = core margin decorations rendering (div)\r\n*/\r\n.monaco-editor .margin-view-overlays .cmdr {\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}", ""]);
@@ -119923,7 +119959,7 @@ module.exports = exports;
 /* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(358);
 
             content = content.__esModule ? content.default : content;
@@ -119937,7 +119973,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119950,7 +119986,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* START cover the case that slider is visible on mouseover */\r\n.monaco-editor .minimap.slider-mouseover .minimap-slider {\r\n\topacity: 0;\r\n\ttransition: opacity 100ms linear;\r\n}\r\n.monaco-editor .minimap.slider-mouseover:hover .minimap-slider {\r\n\topacity: 1;\r\n}\r\n.monaco-editor .minimap.slider-mouseover .minimap-slider.active {\r\n\topacity: 1;\r\n}\r\n/* END cover the case that slider is visible on mouseover */\r\n\r\n.monaco-editor .minimap-shadow-hidden {\r\n\tposition: absolute;\r\n\twidth: 0;\r\n}\r\n.monaco-editor .minimap-shadow-visible {\r\n\tposition: absolute;\r\n\tleft: -6px;\r\n\twidth: 6px;\r\n}\r\n", ""]);
@@ -119962,7 +119998,7 @@ module.exports = exports;
 /* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(360);
 
             content = content.__esModule ? content.default : content;
@@ -119976,7 +120012,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -119989,7 +120025,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .overlayWidgets {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft:0;\r\n}", ""]);
@@ -120001,7 +120037,7 @@ module.exports = exports;
 /* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(362);
 
             content = content.__esModule ? content.default : content;
@@ -120015,7 +120051,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120028,7 +120064,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .view-ruler {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}", ""]);
@@ -120040,7 +120076,7 @@ module.exports = exports;
 /* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(364);
 
             content = content.__esModule ? content.default : content;
@@ -120054,7 +120090,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120067,7 +120103,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .scroll-decoration {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 6px;\r\n}", ""]);
@@ -120079,7 +120115,7 @@ module.exports = exports;
 /* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(366);
 
             content = content.__esModule ? content.default : content;
@@ -120093,7 +120129,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120106,7 +120142,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/*\r\n\tKeeping name short for faster parsing.\r\n\tcslr = core selections layer rendering (div)\r\n*/\r\n.monaco-editor .lines-content .cslr {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-editor\t\t\t.top-left-radius\t\t{ border-top-left-radius: 3px; }\r\n.monaco-editor\t\t\t.bottom-left-radius\t\t{ border-bottom-left-radius: 3px; }\r\n.monaco-editor\t\t\t.top-right-radius\t\t{ border-top-right-radius: 3px; }\r\n.monaco-editor\t\t\t.bottom-right-radius\t{ border-bottom-right-radius: 3px; }\r\n\r\n.monaco-editor.hc-black .top-left-radius\t\t{ border-top-left-radius: 0; }\r\n.monaco-editor.hc-black .bottom-left-radius\t\t{ border-bottom-left-radius: 0; }\r\n.monaco-editor.hc-black .top-right-radius\t\t{ border-top-right-radius: 0; }\r\n.monaco-editor.hc-black .bottom-right-radius\t{ border-bottom-right-radius: 0; }\r\n", ""]);
@@ -120118,7 +120154,7 @@ module.exports = exports;
 /* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(368);
 
             content = content.__esModule ? content.default : content;
@@ -120132,7 +120168,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120145,7 +120181,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .cursors-layer {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n}\r\n\r\n.monaco-editor .cursors-layer > .cursor {\r\n\tposition: absolute;\r\n\tcursor: text;\r\n\toverflow: hidden;\r\n}\r\n\r\n/* -- smooth-caret-animation -- */\r\n.monaco-editor .cursors-layer.cursor-smooth-caret-animation > .cursor {\r\n\ttransition: all 80ms;\r\n}\r\n\r\n/* -- block-outline-style -- */\r\n.monaco-editor .cursors-layer.cursor-block-outline-style > .cursor {\r\n\tbox-sizing: border-box;\r\n\tbackground: transparent !important;\r\n\tborder-style: solid;\r\n\tborder-width: 1px;\r\n}\r\n\r\n/* -- underline-style -- */\r\n.monaco-editor .cursors-layer.cursor-underline-style > .cursor {\r\n\tborder-bottom-width: 2px;\r\n\tborder-bottom-style: solid;\r\n\tbackground: transparent !important;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n/* -- underline-thin-style -- */\r\n.monaco-editor .cursors-layer.cursor-underline-thin-style > .cursor {\r\n\tborder-bottom-width: 1px;\r\n\tborder-bottom-style: solid;\r\n\tbackground: transparent !important;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n@keyframes monaco-cursor-smooth {\r\n\t0%,\r\n\t20% {\r\n\t\topacity: 1;\r\n\t}\r\n\t60%,\r\n\t100% {\r\n\t\topacity: 0;\r\n\t}\r\n}\r\n\r\n@keyframes monaco-cursor-phase {\r\n\t0%,\r\n\t20% {\r\n\t\topacity: 1;\r\n\t}\r\n\t90%,\r\n\t100% {\r\n\t\topacity: 0;\r\n\t}\r\n}\r\n\r\n@keyframes monaco-cursor-expand {\r\n\t0%,\r\n\t20% {\r\n\t\ttransform: scaleY(1);\r\n\t}\r\n\t80%,\r\n\t100% {\r\n\t\ttransform: scaleY(0);\r\n\t}\r\n}\r\n\r\n.cursor-smooth {\r\n\tanimation: monaco-cursor-smooth 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n\r\n.cursor-phase {\r\n\tanimation: monaco-cursor-phase 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n\r\n.cursor-expand > .cursor {\r\n\tanimation: monaco-cursor-expand 0.5s ease-in-out 0s 20 alternate;\r\n}\r\n", ""]);
@@ -120157,7 +120193,7 @@ module.exports = exports;
 /* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(370);
 
             content = content.__esModule ? content.default : content;
@@ -120171,7 +120207,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120184,7 +120220,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .zone-widget {\r\n\tposition: absolute;\r\n\tz-index: 10;\r\n}\r\n\r\n\r\n.monaco-editor .zone-widget .zone-widget-container {\r\n\tborder-top-style: solid;\r\n\tborder-bottom-style: solid;\r\n\tborder-top-width: 0;\r\n\tborder-bottom-width: 0;\r\n\tposition: relative;\r\n}\r\n", ""]);
@@ -120196,7 +120232,7 @@ module.exports = exports;
 /* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(372);
 
             content = content.__esModule ? content.default : content;
@@ -120210,7 +120246,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120223,7 +120259,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tfont-size: 13px;\r\n}", ""]);
@@ -120235,7 +120271,7 @@ module.exports = exports;
 /* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(374);
 
             content = content.__esModule ? content.default : content;
@@ -120249,7 +120285,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120262,7 +120298,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* ---------- Icon label ---------- */\r\n\r\n.monaco-icon-label {\r\n\tdisplay: flex; /* required for icons support :before rule */\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n}\r\n\r\n.monaco-icon-label::before {\r\n\r\n\t/* svg icons rendered as background image */\r\n\tbackground-size: 16px;\r\n\tbackground-position: left center;\r\n\tbackground-repeat: no-repeat;\r\n\tpadding-right: 6px;\r\n\twidth: 16px;\r\n\theight: 22px;\r\n\tline-height: inherit !important;\r\n\tdisplay: inline-block;\r\n\r\n\t/* fonts icons */\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-osx-font-smoothing: grayscale;\r\n\tvertical-align: top;\r\n\r\n\tflex-shrink: 0; /* fix for https://github.com/Microsoft/vscode/issues/13787 */\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container {\r\n\tmin-width: 0;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-name-container > .label-name {\r\n\tcolor: inherit;\r\n\twhite-space: pre; /* enable to show labels that include multiple whitespaces */\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-name-container > .label-name > .label-separator {\r\n\tmargin: 0 2px;\r\n\topacity: 0.5;\r\n}\r\n\r\n.monaco-icon-label > .monaco-icon-label-container > .monaco-icon-description-container > .label-description {\r\n\topacity: .7;\r\n\tmargin-left: 0.5em;\r\n\tfont-size: 0.9em;\r\n\twhite-space: pre; /* enable to show labels that include multiple whitespaces */\r\n}\r\n\r\n.monaco-icon-label.italic > .monaco-icon-label-container > .monaco-icon-name-container > .label-name,\r\n.monaco-icon-label.italic > .monaco-icon-description-container > .label-description {\r\n\tfont-style: italic;\r\n}\r\n\r\n.monaco-icon-label::after {\r\n\topacity: 0.75;\r\n\tfont-size: 90%;\r\n\tfont-weight: 600;\r\n\tpadding: 0 16px 0 5px;\r\n\ttext-align: center;\r\n}\r\n\r\n/* make sure selection color wins when a label is being selected */\r\n.monaco-tree.focused .selected .monaco-icon-label, /* tree */\r\n.monaco-tree.focused .selected .monaco-icon-label::after,\r\n.monaco-list:focus .selected .monaco-icon-label, /* list */\r\n.monaco-list:focus .selected .monaco-icon-label::after\r\n{\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-tree-row.focused.selected .label-description,\r\n.monaco-tree-row.selected .label-description,\r\n.monaco-list-row.focused.selected .label-description,\r\n.monaco-list-row.selected .label-description {\r\n\topacity: .8;\r\n}\r\n", ""]);
@@ -120274,7 +120310,7 @@ module.exports = exports;
 /* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(376);
 
             content = content.__esModule ? content.default : content;
@@ -120288,7 +120324,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120301,7 +120337,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-keybinding {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tline-height: 10px;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key {\r\n\tdisplay: inline-block;\r\n\tborder: solid 1px rgba(204, 204, 204, 0.4);\r\n\tborder-bottom-color: rgba(187, 187, 187, 0.4);\r\n\tborder-radius: 3px;\r\n\tbox-shadow: inset 0 -1px 0 rgba(187, 187, 187, 0.4);\r\n\tbackground-color: rgba(221, 221, 221, 0.4);\r\n\tvertical-align: middle;\r\n\tcolor: #555;\r\n\tfont-size: 11px;\r\n\tpadding: 3px 5px;\r\n\tmargin: 0 2px;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key:first-child {\r\n\tmargin-left: 0;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key:last-child {\r\n\tmargin-right: 0;\r\n}\r\n\r\n.hc-black .monaco-keybinding > .monaco-keybinding-key,\r\n.vs-dark .monaco-keybinding > .monaco-keybinding-key {\r\n\tbackground-color: rgba(128, 128, 128, 0.17);\r\n\tcolor: #ccc;\r\n\tborder: solid 1px rgba(51, 51, 51, 0.6);\r\n\tborder-bottom-color: rgba(68, 68, 68, 0.6);\r\n\tbox-shadow: inset 0 -1px 0 rgba(68, 68, 68, 0.6);\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key-separator {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-keybinding > .monaco-keybinding-key-chord-separator {\r\n\twidth: 6px;\r\n}", ""]);
@@ -120313,7 +120349,7 @@ module.exports = exports;
 /* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(378);
 
             content = content.__esModule ? content.default : content;
@@ -120327,7 +120363,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120340,7 +120376,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #0066BF;\r\n}\r\n\r\n.vs-dark .monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.vs-dark .monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #0097fb;\r\n}\r\n\r\n.hc-black .monaco-quick-open-widget .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,\r\n.hc-black .monaco-quick-open-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {\r\n\tcolor: #F38518;\r\n}", ""]);
@@ -120352,7 +120388,7 @@ module.exports = exports;
 /* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(380);
 
             content = content.__esModule ? content.default : content;
@@ -120366,7 +120402,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120379,7 +120415,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tposition: absolute;\r\n\twidth: 600px;\r\n\tz-index: 2000;\r\n\tpadding-bottom: 6px;\r\n\tleft: 50%;\r\n\tmargin-left: -300px;\r\n}\r\n\r\n.monaco-quick-open-widget .monaco-progress-container {\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 38px;\r\n\tz-index: 1;\r\n\theight: 2px;\r\n}\r\n\r\n.monaco-quick-open-widget .monaco-progress-container .progress-bit {\r\n\theight: 2px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-input {\r\n\twidth: 588px;\r\n\tborder: none;\r\n\tmargin: 6px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-input .monaco-inputbox {\r\n\twidth: 100%;\r\n\theight: 25px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-result-count {\r\n\tposition: absolute;\r\n\tleft: -10000px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree {\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row  > .content > .sub-content {\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-quick-open-widget.content-changing .quick-open-tree .monaco-scrollable-element .slider {\r\n\tdisplay: none; /* scrollbar slider causes some hectic updates when input changes quickly, so hide it while quick open changes */\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry {\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry > .quick-open-row {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry .quick-open-entry-icon {\r\n\toverflow: hidden;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tmargin-right: 4px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tvertical-align: middle;\r\n\tflex-shrink: 0;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-icon-label,\r\n.monaco-quick-open-widget .quick-open-tree .monaco-icon-label .monaco-icon-label-description-container {\r\n\tflex: 1; /* make sure the icon label grows within the row */\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry .monaco-highlighted-label span {\r\n\topacity: 1;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry-meta {\r\n\topacity: 0.7;\r\n\tline-height: normal;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .content.has-group-label .quick-open-entry-keybinding {\r\n\tmargin-right: 8px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .quick-open-entry-keybinding .monaco-keybinding-key {\r\n\tvertical-align: text-bottom;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .results-group {\r\n\tmargin-right: 18px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row.focused > .content.has-actions > .results-group,\r\n.monaco-quick-open-widget .quick-open-tree .monaco-tree-row:hover:not(.highlighted) > .content.has-actions > .results-group,\r\n.monaco-quick-open-widget .quick-open-tree .focused .monaco-tree-row.focused > .content.has-actions > .results-group {\r\n\tmargin-right: 0px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .results-group-separator {\r\n\tborder-top-width: 1px;\r\n\tborder-top-style: solid;\r\n\tbox-sizing: border-box;\r\n\tmargin-left: -11px;\r\n\tpadding-left: 11px;\r\n}\r\n\r\n/* Actions in Quick Open Items */\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions {\r\n\tposition: relative;\r\n\tdisplay: flex;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .sub-content {\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions .action-item {\r\n\tmargin: 0;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar {\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar {\r\n\tdisplay: none;\r\n\tpadding: 0 0.8em 0 0.4em;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row.focused > .content.has-actions > .primary-action-bar {\r\n\twidth: 0; /* in order to support a11y with keyboard, we use width: 0 to hide the actions, which still allows to \"Tab\" into the actions */\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row:hover:not(.highlighted) > .content.has-actions > .primary-action-bar,\r\n.monaco-tree.focused .monaco-tree-row.focused > .content.has-actions > .primary-action-bar,\r\n.monaco-tree .monaco-tree-row > .content.has-actions.more > .primary-action-bar {\r\n\twidth: inherit;\r\n\tdisplay: block;\r\n}\r\n\r\n.monaco-tree .monaco-tree-row > .content.actions > .primary-action-bar .action-label {\r\n\tmargin-right: 0.4em;\r\n\tmargin-top: 4px;\r\n\tbackground-repeat: no-repeat;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n}\r\n\r\n.monaco-quick-open-widget .quick-open-tree .monaco-highlighted-label .highlight {\r\n\tfont-weight: bold;\r\n}\r\n", ""]);
@@ -120391,7 +120427,7 @@ module.exports = exports;
 /* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(382);
 
             content = content.__esModule ? content.default : content;
@@ -120405,7 +120441,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120418,7 +120454,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-tree {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\twhite-space: nowrap;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tree > .monaco-scrollable-element {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree > .monaco-scrollable-element > .monaco-tree-wrapper {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row {\r\n\tbox-sizing:\tborder-box;\r\n\tcursor: pointer;\r\n\toverflow: hidden;\r\n\twidth: 100%;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row > .content {\r\n\tposition: relative;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tree-drag-image {\r\n\tdisplay: inline-block;\r\n\tpadding: 1px 7px;\r\n\tborder-radius: 10px;\r\n\tfont-size: 12px;\r\n\tposition: absolute;\r\n}\r\n\r\n/* for OS X ballistic scrolling */\r\n.monaco-tree .monaco-tree-rows > .monaco-tree-row.scrolling {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Highlighted */\r\n\r\n.monaco-tree.highlighted .monaco-tree-rows > .monaco-tree-row:not(.highlighted) {\r\n\topacity: 0.3;\r\n}\r\n", ""]);
@@ -120430,7 +120466,7 @@ module.exports = exports;
 /* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(384);
 
             content = content.__esModule ? content.default : content;
@@ -120444,7 +120480,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120457,7 +120493,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-progress-container {\r\n\twidth: 100%;\r\n\theight: 5px;\r\n\toverflow: hidden; /* keep progress bit in bounds */\r\n}\r\n\r\n.monaco-progress-container .progress-bit {\r\n\twidth: 2%;\r\n\theight: 5px;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-progress-container.active .progress-bit {\r\n\tdisplay: inherit;\r\n}\r\n\r\n.monaco-progress-container.discrete .progress-bit {\r\n\tleft: 0;\r\n\ttransition: width 100ms linear;\r\n}\r\n\r\n.monaco-progress-container.discrete.done .progress-bit {\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-progress-container.infinite .progress-bit {\r\n\tanimation-name: progress;\r\n\tanimation-duration: 4s;\r\n\tanimation-iteration-count: infinite;\r\n\tanimation-timing-function: linear;\r\n\ttransform: translate3d(0px, 0px, 0px);\r\n}\r\n\r\n/**\r\n * The progress bit has a width: 2% (1/50) of the parent container. The animation moves it from 0% to 100% of\r\n * that container. Since translateX is relative to the progress bit size, we have to multiple it with\r\n * its relative size to the parent container:\r\n *  50%: 50 * 50 = 2500%\r\n * 100%: 50 * 100 - 50 (do not overflow): 4950%\r\n */\r\n@keyframes progress { from { transform: translateX(0%) scaleX(1) } 50% { transform: translateX(2500%) scaleX(3) } to { transform: translateX(4950%) scaleX(1) } }\r\n", ""]);
@@ -120469,7 +120505,7 @@ module.exports = exports;
 /* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(386);
 
             content = content.__esModule ? content.default : content;
@@ -120483,7 +120519,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120496,7 +120532,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* -- zone widget */\r\n.monaco-editor .zone-widget .zone-widget-container.reference-zone-widget {\r\n\tborder-top-width: 1px;\r\n\tborder-bottom-width: 1px;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .inline {\r\n\tdisplay: inline-block;\r\n\tvertical-align: top;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .messages {\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tpadding: 3em 0;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree {\r\n\tline-height: 23px;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference {\r\n\ttext-overflow: ellipsis;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference-file {\r\n\tdisplay: inline-flex;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .selected .reference-file {\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-editor .reference-zone-widget .ref-tree .reference-file .count {\r\n\tmargin-right: 12px;\r\n\tmargin-left: auto;\r\n}\r\n\r\n/* High Contrast Theming */\r\n\r\n.monaco-editor.hc-black .reference-zone-widget .ref-tree .reference-file {\r\n\tfont-weight: bold;\r\n}\r\n", ""]);
@@ -120508,7 +120544,7 @@ module.exports = exports;
 /* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(388);
 
             content = content.__esModule ? content.default : content;
@@ -120522,7 +120558,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120535,7 +120571,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-count-badge {\r\n\tpadding: 3px 5px;\r\n\tborder-radius: 11px;\r\n\tfont-size: 11px;\r\n\tmin-width: 18px;\r\n\tmin-height: 18px;\r\n\tline-height: 11px;\r\n\tfont-weight: normal;\r\n\ttext-align: center;\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n}", ""]);
@@ -120547,7 +120583,7 @@ module.exports = exports;
 /* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(390);
 
             content = content.__esModule ? content.default : content;
@@ -120561,7 +120597,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120574,7 +120610,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-list {\r\n\tposition: relative;\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-list.mouse-support {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-list > .monaco-scrollable-element {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-list-rows {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-list.horizontal-scrolling .monaco-list-rows {\r\n\twidth: auto;\r\n\tmin-width: 100%;\r\n}\r\n\r\n.monaco-list-row {\r\n\tposition: absolute;\r\n\tbox-sizing:\tborder-box;\r\n\toverflow: hidden;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-list.mouse-support .monaco-list-row {\r\n\tcursor: pointer;\r\n\ttouch-action: none;\r\n}\r\n\r\n/* for OS X ballistic scrolling */\r\n.monaco-list-row.scrolling {\r\n\tdisplay: none !important;\r\n}\r\n\r\n/* Focus */\r\n.monaco-list.element-focused, .monaco-list.selection-single, .monaco-list.selection-multiple {\r\n\toutline: 0 !important;\r\n}\r\n\r\n.monaco-list:focus .monaco-list-row.selected .codicon {\r\n\tcolor: inherit;\r\n}\r\n\r\n/* Dnd */\r\n.monaco-drag-image {\r\n\tdisplay: inline-block;\r\n\tpadding: 1px 7px;\r\n\tborder-radius: 10px;\r\n\tfont-size: 12px;\r\n\tposition: absolute;\r\n}\r\n\r\n/* Type filter */\r\n\r\n.monaco-list-type-filter {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tposition: absolute;\r\n\tborder-radius: 2px;\r\n\tpadding: 0px 3px;\r\n\tmax-width: calc(100% - 10px);\r\n\ttext-overflow: ellipsis;\r\n\toverflow: hidden;\r\n\ttext-align: right;\r\n\tbox-sizing: border-box;\r\n\tcursor: all-scroll;\r\n\tfont-size: 13px;\r\n\tline-height: 18px;\r\n\theight: 20px;\r\n\tz-index: 1;\r\n\ttop: 4px;\r\n}\r\n\r\n.monaco-list-type-filter.dragging {\r\n\ttransition: top 0.2s, left 0.2s;\r\n}\r\n\r\n.monaco-list-type-filter.ne {\r\n\tright: 4px;\r\n}\r\n\r\n.monaco-list-type-filter.nw {\r\n\tleft: 4px;\r\n}\r\n\r\n.monaco-list-type-filter > .controls {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tbox-sizing: border-box;\r\n\ttransition: width 0.2s;\r\n\twidth: 0;\r\n}\r\n\r\n.monaco-list-type-filter.dragging > .controls,\r\n.monaco-list-type-filter:hover > .controls {\r\n\twidth: 36px;\r\n}\r\n\r\n.monaco-list-type-filter > .controls > * {\r\n\tborder: none;\r\n\tbox-sizing: border-box;\r\n\t-webkit-appearance: none;\r\n\t-moz-appearance: none;\r\n\tbackground: none;\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tflex-shrink: 0;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-list-type-filter > .controls > .filter:checked::before {\r\n\tcontent: \"\\eb83\" !important; /* codicon-list-filter */\r\n}\r\n\r\n.monaco-list-type-filter > .controls > .filter {\r\n\tmargin-left: 4px;\r\n}\r\n\r\n.monaco-list-type-filter-message {\r\n\tposition: absolute;\r\n\tbox-sizing: border-box;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tpadding: 40px 1em 1em 1em;\r\n\ttext-align: center;\r\n\twhite-space: normal;\r\n\topacity: 0.7;\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-list-type-filter-message:empty {\r\n\tdisplay: none;\r\n}\r\n\r\n/* Electron */\r\n\r\n.monaco-list-type-filter {\r\n\tcursor: grab;\r\n}\r\n\r\n.monaco-list-type-filter.dragging {\r\n\tcursor: grabbing;\r\n}\r\n", ""]);
@@ -120586,7 +120622,7 @@ module.exports = exports;
 /* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(392);
 
             content = content.__esModule ? content.default : content;
@@ -120600,7 +120636,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120613,7 +120649,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-tl-row {\r\n\tdisplay: flex;\r\n\theight: 100%;\r\n\talign-items: center;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-tl-indent {\r\n\theight: 100%;\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 16px;\r\n\tpointer-events: none;\r\n}\r\n\r\n.hide-arrows .monaco-tl-indent {\r\n\tleft: 12px;\r\n}\r\n\r\n.monaco-tl-indent > .indent-guide {\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n\theight: 100%;\r\n\tborder-left: 1px solid transparent;\r\n}\r\n\r\n.monaco-tl-indent > .indent-guide {\r\n\ttransition: border-color 0.1s linear;\r\n}\r\n\r\n.monaco-tl-twistie,\r\n.monaco-tl-contents {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-tl-twistie {\r\n\tfont-size: 10px;\r\n\ttext-align: right;\r\n\tpadding-right: 6px;\r\n\tflex-shrink: 0;\r\n\twidth: 16px;\r\n\tdisplay: flex !important;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tcolor: inherit !important;\r\n\ttransform: translateX(3px);\r\n}\r\n\r\n.monaco-tl-contents {\r\n\tflex: 1;\r\n\toverflow: hidden;\r\n}\r\n\r\n.monaco-tl-twistie.collapsed::before {\r\n\ttransform: rotate(-90deg);\r\n}\r\n\r\n.monaco-tl-twistie.codicon-loading::before {\r\n\tanimation: codicon-spin 1.25s linear infinite;\r\n}\r\n", ""]);
@@ -120625,7 +120661,7 @@ module.exports = exports;
 /* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(394);
 
             content = content.__esModule ? content.default : content;
@@ -120639,7 +120675,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120652,7 +120688,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-split-view2 {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-split-view2 > .sash-container {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tpointer-events: none;\r\n}\r\n\r\n.monaco-split-view2 > .sash-container > .monaco-sash {\r\n\tpointer-events: initial;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\twhite-space: nowrap;\r\n\tposition: relative;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container > .split-view-view {\r\n\twhite-space: initial;\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-split-view2 > .split-view-container > .split-view-view:not(.visible) {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-split-view2.vertical > .split-view-container > .split-view-view {\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-split-view2.horizontal > .split-view-container > .split-view-view {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-split-view2.separator-border > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\tcontent: ' ';\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tz-index: 5;\r\n\tpointer-events: none;\r\n\tbackground-color: var(--separator-border);\r\n}\r\n\r\n.monaco-split-view2.separator-border.horizontal > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\theight: 100%;\r\n\twidth: 1px;\r\n}\r\n\r\n.monaco-split-view2.separator-border.vertical > .split-view-container > .split-view-view:not(:first-child)::before {\r\n\theight: 1px;\r\n\twidth: 100%;\r\n}\r\n", ""]);
@@ -120664,7 +120700,7 @@ module.exports = exports;
 /* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(396);
 
             content = content.__esModule ? content.default : content;
@@ -120678,7 +120714,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120691,7 +120727,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .goto-definition-link {\r\n\ttext-decoration: underline;\r\n\tcursor: pointer;\r\n}", ""]);
@@ -120703,7 +120739,7 @@ module.exports = exports;
 /* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(398);
 
             content = content.__esModule ? content.default : content;
@@ -120717,7 +120753,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120730,7 +120766,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor-hover {\r\n\tcursor: default;\r\n\tposition: absolute;\r\n\toverflow: hidden;\r\n\tz-index: 50;\r\n\tuser-select: text;\r\n\t-webkit-user-select: text;\r\n\t-ms-user-select: text;\r\n\tbox-sizing: initial;\r\n\tanimation: fadein 100ms linear;\r\n\tline-height: 1.5em;\r\n}\r\n\r\n.monaco-editor-hover.hidden {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor-hover .hover-contents {\r\n\tpadding: 4px 8px;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover > .hover-contents:not(.code-hover-contents) {\r\n\tmax-width: 500px;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover > .hover-contents:not(.code-hover-contents) hr {\r\n\tmin-width: 100vw;\r\n}\r\n\r\n.monaco-editor-hover p,\r\n.monaco-editor-hover ul {\r\n\tmargin: 8px 0;\r\n}\r\n\r\n.monaco-editor-hover code {\r\n\tfont-family: var(--monaco-monospace-font);\r\n}\r\n\r\n.monaco-editor-hover hr {\r\n\tmargin-top: 4px;\r\n\tmargin-bottom: -6px;\r\n\tmargin-left: -10px;\r\n\tmargin-right: -10px;\r\n\theight: 1px;\r\n}\r\n\r\n.monaco-editor-hover p:first-child,\r\n.monaco-editor-hover ul:first-child {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor-hover p:last-child,\r\n.monaco-editor-hover ul:last-child {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n/* MarkupContent Layout */\r\n.monaco-editor-hover ul {\r\n\tpadding-left: 20px;\r\n}\r\n.monaco-editor-hover ol {\r\n\tpadding-left: 20px;\r\n}\r\n\r\n.monaco-editor-hover li > p {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.monaco-editor-hover li > ul {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor-hover code {\r\n\tborder-radius: 3px;\r\n\tpadding: 0 0.4em;\r\n}\r\n\r\n.monaco-editor-hover .monaco-tokenized-source {\r\n\twhite-space: pre-wrap;\r\n\tword-break: break-all;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar {\r\n\tfont-size: 12px;\r\n\tline-height: 22px;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions {\r\n\tdisplay: flex;\r\n\tpadding: 0px 8px;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions .action-container {\r\n\tmargin-right: 16px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor-hover .hover-row.status-bar .actions .action-container .action .icon {\r\n\tpadding-right: 4px;\r\n}\r\n\r\n.monaco-editor-hover .markdown-hover .hover-contents .codicon {\r\n\tcolor: inherit;\r\n\tfont-size: inherit;\r\n\tvertical-align: middle;\r\n}\r\n", ""]);
@@ -120742,7 +120778,7 @@ module.exports = exports;
 /* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(400);
 
             content = content.__esModule ? content.default : content;
@@ -120756,7 +120792,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120769,7 +120805,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.colorpicker-widget {\r\n\theight: 190px;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-editor .colorpicker-hover:focus {\r\n\toutline: none;\r\n}\r\n\r\n\r\n/* Header */\r\n\r\n.colorpicker-header {\r\n\tdisplay: flex;\r\n\theight: 24px;\r\n\tposition: relative;\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=\");\r\n\tbackground-size: 9px 9px;\r\n\timage-rendering: pixelated;\r\n}\r\n\r\n.colorpicker-header .picked-color {\r\n\twidth: 216px;\r\n\ttext-align: center;\r\n\tline-height: 24px;\r\n\tcursor: pointer;\r\n\tcolor: white;\r\n\tflex: 1;\r\n\ttext-align: center;\r\n}\r\n\r\n.colorpicker-header .picked-color.light {\r\n\tcolor: black;\r\n}\r\n\r\n.colorpicker-header .original-color {\r\n\twidth: 74px;\r\n\tz-index: inherit;\r\n\tcursor: pointer;\r\n}\r\n\r\n\r\n/* Body */\r\n\r\n.colorpicker-body {\r\n\tdisplay: flex;\r\n\tpadding: 8px;\r\n\tposition: relative;\r\n}\r\n\r\n.colorpicker-body .saturation-wrap {\r\n\toverflow: hidden;\r\n\theight: 150px;\r\n\tposition: relative;\r\n\tmin-width: 220px;\r\n\tflex: 1;\r\n}\r\n\r\n.colorpicker-body .saturation-box {\r\n\theight: 150px;\r\n\tposition: absolute;\r\n}\r\n\r\n.colorpicker-body .saturation-selection {\r\n\twidth: 9px;\r\n\theight: 9px;\r\n\tmargin: -5px 0 0 -5px;\r\n\tborder: 1px solid rgb(255, 255, 255);\r\n\tborder-radius: 100%;\r\n\tbox-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);\r\n\tposition: absolute;\r\n}\r\n\r\n.colorpicker-body .strip {\r\n\twidth: 25px;\r\n\theight: 150px;\r\n}\r\n\r\n.colorpicker-body .hue-strip {\r\n\tposition: relative;\r\n\tmargin-left: 8px;\r\n\tcursor: grab;\r\n\tbackground: linear-gradient(to bottom, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);\r\n}\r\n\r\n.colorpicker-body .opacity-strip {\r\n\tposition: relative;\r\n\tmargin-left: 8px;\r\n\tcursor: grab;\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=\");\r\n\tbackground-size: 9px 9px;\r\n\timage-rendering: pixelated;\r\n}\r\n\r\n.colorpicker-body .strip.grabbing {\r\n\tcursor: grabbing;\r\n}\r\n\r\n.colorpicker-body .slider {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: -2px;\r\n\twidth: calc(100% + 4px);\r\n\theight: 4px;\r\n\tbox-sizing: border-box;\r\n\tborder: 1px solid rgba(255, 255, 255, 0.71);\r\n\tbox-shadow: 0px 0px 1px rgba(0, 0, 0, 0.85);\r\n}\r\n\r\n.colorpicker-body .strip .overlay {\r\n\theight: 150px;\r\n\tpointer-events: none;\r\n}\r\n", ""]);
@@ -120781,7 +120817,7 @@ module.exports = exports;
 /* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(402);
 
             content = content.__esModule ? content.default : content;
@@ -120795,7 +120831,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120808,7 +120844,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .iPadShowKeyboard {\r\n\twidth: 58px;\r\n\tmin-width: 0;\r\n\theight: 36px;\r\n\tmin-height: 0;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tposition: absolute;\r\n\tresize: none;\r\n\toverflow: hidden;\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCA1MyAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00OC4wMzY0IDQuMDEwNDJINC4wMDc3OUw0LjAwNzc5IDMyLjAyODZINDguMDM2NFY0LjAxMDQyWk00LjAwNzc5IDAuMDA3ODEyNUMxLjc5NzIxIDAuMDA3ODEyNSAwLjAwNTE4Nzk5IDEuNzk5ODQgMC4wMDUxODc5OSA0LjAxMDQyVjMyLjAyODZDMC4wMDUxODc5OSAzNC4yMzkyIDEuNzk3MjEgMzYuMDMxMiA0LjAwNzc5IDM2LjAzMTJINDguMDM2NEM1MC4yNDcgMzYuMDMxMiA1Mi4wMzkgMzQuMjM5MiA1Mi4wMzkgMzIuMDI4NlY0LjAxMDQyQzUyLjAzOSAxLjc5OTg0IDUwLjI0NyAwLjAwNzgxMjUgNDguMDM2NCAwLjAwNzgxMjVINC4wMDc3OVpNOC4wMTA0MiA4LjAxMzAySDEyLjAxM1YxMi4wMTU2SDguMDEwNDJWOC4wMTMwMlpNMjAuMDE4MiA4LjAxMzAySDE2LjAxNTZWMTIuMDE1NkgyMC4wMTgyVjguMDEzMDJaTTI0LjAyMDggOC4wMTMwMkgyOC4wMjM0VjEyLjAxNTZIMjQuMDIwOFY4LjAxMzAyWk0zNi4wMjg2IDguMDEzMDJIMzIuMDI2VjEyLjAxNTZIMzYuMDI4NlY4LjAxMzAyWk00MC4wMzEyIDguMDEzMDJINDQuMDMzOVYxMi4wMTU2SDQwLjAzMTJWOC4wMTMwMlpNMTYuMDE1NiAxNi4wMTgySDguMDEwNDJWMjAuMDIwOEgxNi4wMTU2VjE2LjAxODJaTTIwLjAxODIgMTYuMDE4MkgyNC4wMjA4VjIwLjAyMDhIMjAuMDE4MlYxNi4wMTgyWk0zMi4wMjYgMTYuMDE4MkgyOC4wMjM0VjIwLjAyMDhIMzIuMDI2VjE2LjAxODJaTTQ0LjAzMzkgMTYuMDE4MlYyMC4wMjA4SDM2LjAyODZWMTYuMDE4Mkg0NC4wMzM5Wk0xMi4wMTMgMjQuMDIzNEg4LjAxMDQyVjI4LjAyNkgxMi4wMTNWMjQuMDIzNFpNMTYuMDE1NiAyNC4wMjM0SDM2LjAyODZWMjguMDI2SDE2LjAxNTZWMjQuMDIzNFpNNDQuMDMzOSAyNC4wMjM0SDQwLjAzMTJWMjguMDI2SDQ0LjAzMzlWMjQuMDIzNFoiIGZpbGw9IiM0MjQyNDIiLz4NCjwvZz4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJjbGlwMCI+DQo8cmVjdCB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIGZpbGw9IndoaXRlIi8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n\tborder: 4px solid #F6F6F6;\r\n\tborder-radius: 4px;\r\n}\r\n\r\n.monaco-editor.vs-dark .iPadShowKeyboard {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCA1MyAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00OC4wMzY0IDQuMDEwNDJINC4wMDc3OUw0LjAwNzc5IDMyLjAyODZINDguMDM2NFY0LjAxMDQyWk00LjAwNzc5IDAuMDA3ODEyNUMxLjc5NzIxIDAuMDA3ODEyNSAwLjAwNTE4Nzk5IDEuNzk5ODQgMC4wMDUxODc5OSA0LjAxMDQyVjMyLjAyODZDMC4wMDUxODc5OSAzNC4yMzkyIDEuNzk3MjEgMzYuMDMxMiA0LjAwNzc5IDM2LjAzMTJINDguMDM2NEM1MC4yNDcgMzYuMDMxMiA1Mi4wMzkgMzQuMjM5MiA1Mi4wMzkgMzIuMDI4NlY0LjAxMDQyQzUyLjAzOSAxLjc5OTg0IDUwLjI0NyAwLjAwNzgxMjUgNDguMDM2NCAwLjAwNzgxMjVINC4wMDc3OVpNOC4wMTA0MiA4LjAxMzAySDEyLjAxM1YxMi4wMTU2SDguMDEwNDJWOC4wMTMwMlpNMjAuMDE4MiA4LjAxMzAySDE2LjAxNTZWMTIuMDE1NkgyMC4wMTgyVjguMDEzMDJaTTI0LjAyMDggOC4wMTMwMkgyOC4wMjM0VjEyLjAxNTZIMjQuMDIwOFY4LjAxMzAyWk0zNi4wMjg2IDguMDEzMDJIMzIuMDI2VjEyLjAxNTZIMzYuMDI4NlY4LjAxMzAyWk00MC4wMzEyIDguMDEzMDJINDQuMDMzOVYxMi4wMTU2SDQwLjAzMTJWOC4wMTMwMlpNMTYuMDE1NiAxNi4wMTgySDguMDEwNDJWMjAuMDIwOEgxNi4wMTU2VjE2LjAxODJaTTIwLjAxODIgMTYuMDE4MkgyNC4wMjA4VjIwLjAyMDhIMjAuMDE4MlYxNi4wMTgyWk0zMi4wMjYgMTYuMDE4MkgyOC4wMjM0VjIwLjAyMDhIMzIuMDI2VjE2LjAxODJaTTQ0LjAzMzkgMTYuMDE4MlYyMC4wMjA4SDM2LjAyODZWMTYuMDE4Mkg0NC4wMzM5Wk0xMi4wMTMgMjQuMDIzNEg4LjAxMDQyVjI4LjAyNkgxMi4wMTNWMjQuMDIzNFpNMTYuMDE1NiAyNC4wMjM0SDM2LjAyODZWMjguMDI2SDE2LjAxNTZWMjQuMDIzNFpNNDQuMDMzOSAyNC4wMjM0SDQwLjAzMTJWMjguMDI2SDQ0LjAzMzlWMjQuMDIzNFoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvZz4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJjbGlwMCI+DQo8cmVjdCB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIGZpbGw9IndoaXRlIi8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPC9zdmc+DQo=\") center center no-repeat;\r\n\tborder: 4px solid #252526;\r\n}", ""]);
@@ -120820,7 +120856,7 @@ module.exports = exports;
 /* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(404);
 
             content = content.__esModule ? content.default : content;
@@ -120834,7 +120870,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120847,7 +120883,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .tokens-inspect-widget {\r\n\tz-index: 50;\r\n\tuser-select: text;\r\n\t-webkit-user-select: text;\r\n\t-ms-user-select: text;\r\n\tpadding: 10px;\r\n}\r\n\r\n.tokens-inspect-separator {\r\n\theight: 1px;\r\n\tborder: 0;\r\n}\r\n\r\n.monaco-editor .tokens-inspect-widget .tm-token {\r\n\tfont-family: monospace;\r\n}\r\n\r\n.monaco-editor .tokens-inspect-widget .tm-token-length {\r\n\tfont-weight: normal;\r\n\tfont-size: 60%;\r\n\tfloat: right;\r\n}\r\n\r\n.monaco-editor .tokens-inspect-widget .tm-metadata-table {\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .tokens-inspect-widget .tm-metadata-value {\r\n\tfont-family: monospace;\r\n\ttext-align: right;\r\n}\r\n\r\n.monaco-editor .tokens-inspect-widget .tm-token-type {\r\n\tfont-family: monospace;\r\n}\r\n", ""]);
@@ -120859,7 +120895,7 @@ module.exports = exports;
 /* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(406);
 
             content = content.__esModule ? content.default : content;
@@ -120873,7 +120909,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120886,7 +120922,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n.monaco-editor .detected-link,\r\n.monaco-editor .detected-link-active {\r\n\ttext-decoration: underline;\r\n\ttext-underline-position: under;\r\n}\r\n\r\n.monaco-editor .detected-link-active {\r\n\tcursor: pointer;\r\n}\r\n", ""]);
@@ -120898,7 +120934,7 @@ module.exports = exports;
 /* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(408);
 
             content = content.__esModule ? content.default : content;
@@ -120912,7 +120948,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120925,7 +120961,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .parameter-hints-widget {\r\n\tz-index: 10;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tline-height: 1.5em;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget > .wrapper {\r\n\tmax-width: 440px;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget.multiple {\r\n\tmin-height: 3.3em;\r\n\tpadding: 0;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget.visible {\r\n\ttransition: left .05s ease-in-out;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget p,\r\n.monaco-editor .parameter-hints-widget ul {\r\n\tmargin: 8px 0;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .monaco-scrollable-element,\r\n.monaco-editor .parameter-hints-widget .body {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tmin-height: 100%;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .signature {\r\n\tpadding: 4px 5px;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .docs {\r\n\tpadding: 0 10px 0 5px;\r\n\twhite-space: pre-wrap;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .docs.empty {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .docs .markdown-docs {\r\n\twhite-space: initial;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .docs .code {\r\n\twhite-space: pre-wrap;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .docs code {\r\n\tborder-radius: 3px;\r\n\tpadding: 0 0.4em;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .controls {\r\n\tdisplay: none;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tmin-width: 22px;\r\n\tjustify-content: flex-end;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget.multiple .controls {\r\n\tdisplay: flex;\r\n\tpadding: 0 2px;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget.multiple .button {\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tbackground-repeat: no-repeat;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .button.previous {\r\n\tbottom: 24px;\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbD0iIzQyNDI0MiIgZD0iTTEwLjggOS41bC45LS45TDguMSA1IDQuMiA4LjZsLjkuOSAzLTIuNyAyLjcgMi43eiIvPjwvc3ZnPg==\");\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .button.next {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbD0iIzQyNDI0MiIgZD0iTTUuMSA1bC0uOS45IDMuNiAzLjYgMy45LTMuNi0xLS45LTMgMi43TDUuMSA1eiIvPjwvc3ZnPg==\");\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .overloads {\r\n\ttext-align: center;\r\n\theight: 12px;\r\n\tline-height: 12px;\r\n\topacity: 0.5;\r\n\tfont-family: var(--monaco-monospace-font);\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .signature .parameter.active {\r\n\tfont-weight: bold;\r\n\ttext-decoration: underline;\r\n}\r\n\r\n.monaco-editor .parameter-hints-widget .documentation-parameter > .parameter {\r\n\tfont-weight: bold;\r\n\tmargin-right: 0.5em;\r\n}\r\n\r\n/*** VS Dark & High Contrast*/\r\n\r\n.monaco-editor.hc-black .parameter-hints-widget .button.previous,\r\n.monaco-editor.vs-dark .parameter-hints-widget .button.previous {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbD0iI0U4RThFOCIgZD0iTTEwLjggOS41bC45LS45TDguMSA1IDQuMiA4LjZsLjkuOSAzLTIuNyAyLjcgMi43eiIvPjwvc3ZnPg==\");\r\n}\r\n\r\n.monaco-editor.hc-black .parameter-hints-widget .button.next,\r\n.monaco-editor.vs-dark .parameter-hints-widget .button.next {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbD0iI0U4RThFOCIgZD0iTTUuMSA1bC0uOS45IDMuNiAzLjYgMy45LTMuNi0xLS45LTMgMi43TDUuMSA1eiIvPjwvc3ZnPg==\");\r\n}\r\n", ""]);
@@ -120937,7 +120973,7 @@ module.exports = exports;
 /* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(410);
 
             content = content.__esModule ? content.default : content;
@@ -120951,7 +120987,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -120964,7 +121000,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-quick-open-widget {\r\n\tfont-size: 13px;\r\n}\r\n", ""]);
@@ -120976,7 +121012,7 @@ module.exports = exports;
 /* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(412);
 
             content = content.__esModule ? content.default : content;
@@ -120990,7 +121026,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121003,7 +121039,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-list .monaco-list-row.focused.selected .outline-element .monaco-highlighted-label,\r\n.monaco-list .monaco-list-row.focused.selected .outline-element-decoration {\r\n\t/* make sure selection color wins when a label is being selected */\r\n\tcolor: inherit !important;\r\n}\r\n\r\n.monaco-list .outline-element {\r\n\tdisplay: flex;\r\n\tflex: 1;\r\n\tflex-flow: row nowrap;\r\n\talign-items: center;\r\n}\r\n\r\n.monaco-list .outline-element .monaco-highlighted-label {\r\n\tcolor: var(--outline-element-color);\r\n}\r\n\r\n.monaco-tree .monaco-tree-row.focused .outline-element .outline-element-detail {\r\n\tvisibility: inherit;\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-decoration {\r\n\topacity: 0.75;\r\n\tfont-size: 90%;\r\n\tfont-weight: 600;\r\n\tpadding: 0 12px 0 5px;\r\n\tmargin-left: auto;\r\n\ttext-align: center;\r\n\tcolor: var(--outline-element-color);\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-decoration.bubble {\r\n\tfont-family: codicon;\r\n\tfont-size: 14px;\r\n\topacity: 0.4;\r\n}\r\n\r\n.monaco-list .outline-element .outline-element-icon {\r\n\tmargin-right: 4px;\r\n}\r\n", ""]);
@@ -121015,7 +121051,7 @@ module.exports = exports;
 /* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(414);
 
             content = content.__esModule ? content.default : content;
@@ -121029,7 +121065,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121042,7 +121078,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-workbench .monaco-icon-label.deprecated {\r\n\ttext-decoration: line-through;\r\n\topacity: 0.66;\r\n}\r\n\r\n.monaco-workbench .symbol-icon.inline {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tpadding-left: 0;\r\n}\r\n\r\n.monaco-workbench .symbol-icon.block {\r\n\tdisplay: inline-block;\r\n\theight: 14px;\r\n\twidth: 16px;\r\n\tmin-height: 14px;\r\n\tmin-width: 16px;\r\n\tbackground-position: center;\r\n}\r\n", ""]);
@@ -121054,7 +121090,7 @@ module.exports = exports;
 /* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(416);
 
             content = content.__esModule ? content.default : content;
@@ -121068,7 +121104,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121081,7 +121117,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .rename-box {\r\n\tz-index: 100;\r\n\tcolor: inherit;\r\n}\r\n\r\n.monaco-editor .rename-box .rename-input {\r\n\tpadding: 4px;\r\n}\r\n", ""]);
@@ -121093,7 +121129,7 @@ module.exports = exports;
 /* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(418);
 
             content = content.__esModule ? content.default : content;
@@ -121107,7 +121143,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121120,7 +121156,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-editor .snippet-placeholder {\r\n\tmin-width: 2px;\r\n\toutline-style: solid;\r\n\toutline-width: 1px;\r\n}\r\n\r\n.monaco-editor .finish-snippet-placeholder {\r\n\toutline-style: solid;\r\n\toutline-width: 1px;\r\n}\r\n", ""]);
@@ -121132,7 +121168,7 @@ module.exports = exports;
 /* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
+var api = __webpack_require__(27);
             var content = __webpack_require__(420);
 
             content = content.__esModule ? content.default : content;
@@ -121146,7 +121182,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121159,7 +121195,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n/* Suggest widget*/\r\n.monaco-editor .suggest-widget {\r\n\tz-index: 40;\r\n}\r\n\r\n/** Initial widths **/\r\n\r\n.monaco-editor .suggest-widget {\r\n\twidth: 430px;\r\n}\r\n\r\n.monaco-editor .suggest-widget > .message,\r\n.monaco-editor .suggest-widget > .tree,\r\n.monaco-editor .suggest-widget > .details {\r\n\twidth: 100%;\r\n\tborder-style: solid;\r\n\tborder-width: 1px;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.monaco-editor.hc-black .suggest-widget > .message,\r\n.monaco-editor.hc-black .suggest-widget > .tree,\r\n.monaco-editor.hc-black .suggest-widget > .details {\r\n\tborder-width: 2px;\r\n}\r\n\r\n/** Adjust width when docs are expanded to the side **/\r\n.monaco-editor .suggest-widget.docs-side {\r\n\twidth: 660px;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-side > .tree,\r\n.monaco-editor .suggest-widget.docs-side > .details {\r\n\twidth: 50%;\r\n\tfloat: left;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-side.list-right > .tree,\r\n.monaco-editor .suggest-widget.docs-side.list-right > .details  {\r\n\tfloat: right;\r\n}\r\n\r\n/* MarkupContent Layout */\r\n.monaco-editor .suggest-widget > .details ul {\r\n\tpadding-left: 20px;\r\n}\r\n.monaco-editor .suggest-widget > .details ol {\r\n\tpadding-left: 20px;\r\n}\r\n\r\n.monaco-editor .suggest-widget > .details p code {\r\n\tfont-family: var(--monaco-monospace-font);\r\n}\r\n\r\n/* Styles for Message element for when widget is loading or is empty */\r\n.monaco-editor .suggest-widget > .message {\r\n\tpadding-left: 22px;\r\n}\r\n\r\n/** Styles for the list element **/\r\n.monaco-editor .suggest-widget > .tree {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list {\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n/** Styles for each row in the list element **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row {\r\n\tdisplay: flex;\r\n\t-mox-box-sizing: border-box;\r\n\tbox-sizing: border-box;\r\n\tpadding-right: 10px;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: 2px 2px;\r\n\twhite-space: nowrap;\r\n\tcursor: pointer;\r\n\ttouch-action: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents {\r\n\tflex: 1;\r\n\theight: 100%;\r\n\toverflow: hidden;\r\n\tpadding-left: 2px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main {\r\n\tdisplay: flex;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: pre;\r\n}\r\n\r\n.monaco-editor .suggest-widget:not(.frozen) .monaco-highlighted-label .highlight {\r\n\tfont-weight: bold;\r\n}\r\n\r\n/** Icon styles **/\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore::before {\r\n\tcolor: inherit;\r\n\topacity: 0.6;\r\n\tfont-size: 14px;\r\n\tmargin-left: 4px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close {\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tright: 2px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .codicon-close:hover,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore:hover {\r\n\topacity: 1;\r\n}\r\n\r\n/** Type Info and icon next to the label in the focused completion item **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label {\r\n\tmargin-left: 0.8em;\r\n\tflex: 1;\r\n\ttext-align: right;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\topacity: 0.7;\r\n\twhite-space: nowrap;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label > .monaco-tokenized-source {\r\n\tdisplay: inline;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row > .contents > .main > .type-label,\r\n.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row.focused > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row.focused > .contents > .main > .type-label,\r\n.monaco-editor .suggest-widget.docs-below .monaco-list .monaco-list-row.focused > .contents > .main > .readMore {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused > .contents > .main > .readMore,\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused > .contents > .main > .type-label {\r\n\tdisplay: inline;\r\n}\r\n\r\n/** Styles for each row in the list **/\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated {\r\n\topacity: 0.66;\r\n\ttext-decoration: unset;\r\n}\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated > .monaco-icon-label-description-container {\r\n\ttext-decoration: line-through;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label::before {\r\n\theight: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon {\r\n\tdisplay: block;\r\n\theight: 16px;\r\n\twidth: 16px;\r\n\tmargin-left: 2px;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-size: 80%;\r\n\tbackground-position: center;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.hide {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .suggest-icon {\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tmargin-right: 4px;\r\n}\r\n\r\n.monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .icon,\r\n.monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .suggest-icon::before {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.customcolor .colorspan {\r\n\tmargin: 0 0 0 0.3em;\r\n\tborder: 0.1em solid #000;\r\n\twidth: 0.7em;\r\n\theight: 0.7em;\r\n\tdisplay: inline-block;\r\n}\r\n\r\n/** Styles for the docs of the completion item in focus **/\r\n.monaco-editor .suggest-widget .details {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tcursor: default;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details.no-docs {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget.docs-below .details {\r\n\tborder-top-width: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element {\r\n\tflex: 1;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body {\r\n\tposition: absolute;\r\n\tbox-sizing: border-box;\r\n\theight: 100%;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .header > .type {\r\n\tflex: 2;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\topacity: 0.7;\r\n\tword-break: break-all;\r\n\tmargin: 0 24px 0 0;\r\n\tpadding: 4px 0 12px 5px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs {\r\n\tmargin: 0;\r\n\tpadding: 4px 5px;\r\n\twhite-space: pre-wrap;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs {\r\n\tpadding: 0;\r\n\twhite-space: initial;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div,\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > span:not(:empty) {\r\n\tpadding: 4px 5px;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div > p:first-child {\r\n\tmargin-top: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs.markdown-docs > div > p:last-child\t {\r\n\tmargin-bottom: 0;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > .docs .code {\r\n\twhite-space: pre-wrap;\r\n\tword-wrap: break-word;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details > .monaco-scrollable-element > .body > p:empty {\r\n\tdisplay: none;\r\n}\r\n\r\n.monaco-editor .suggest-widget .details code {\r\n\tborder-radius: 3px;\r\n\tpadding: 0 0.4em;\r\n}\r\n\r\n\r\n/* replace/insert decorations */\r\n\r\n.monaco-editor .suggest-insert-unexpected {\r\n\tfont-style: italic;\r\n}\r\n\r\n", ""]);
@@ -121169,6 +121205,27 @@ module.exports = exports;
 
 /***/ }),
 /* 421 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _language_typescript_monaco_contribution__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(284);
+/* harmony import */ var _language_css_monaco_contribution__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(214);
+/* harmony import */ var _language_json_monaco_contribution__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(225);
+/* harmony import */ var _language_html_monaco_contribution__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(221);
+/* harmony import */ var _basic_languages_monaco_contribution__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(435);
+/* harmony import */ var _edcore_main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(289);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _edcore_main__WEBPACK_IMPORTED_MODULE_5__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _edcore_main__WEBPACK_IMPORTED_MODULE_5__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+
+
+
+
+
+
+/***/ }),
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(setImmediate, global) {/*!
@@ -121462,10 +121519,10 @@ Copyright (c) 2014 Forbes Lindesay
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(422).setImmediate, __webpack_require__(165)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(423).setImmediate, __webpack_require__(165)))
 
 /***/ }),
-/* 422 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -121521,7 +121578,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(423);
+__webpack_require__(424);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -121535,7 +121592,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(165)))
 
 /***/ }),
-/* 423 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -121725,14 +121782,14 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(165), __webpack_require__(185)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(165), __webpack_require__(186)))
 
 /***/ }),
-/* 424 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
-            var content = __webpack_require__(425);
+var api = __webpack_require__(27);
+            var content = __webpack_require__(426);
 
             content = content.__esModule ? content.default : content;
 
@@ -121745,7 +121802,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121754,11 +121811,11 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 425 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n\r\n/* Default standalone editor font */\r\n.monaco-editor {\r\n\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe WPC\", \"Segoe UI\", \"HelveticaNeue-Light\", \"Ubuntu\", \"Droid Sans\", sans-serif;\r\n}\r\n\r\n.monaco-menu .monaco-action-bar.vertical .action-item .action-menu-item:focus .action-label {\r\n\tstroke-width: 1.2px;\r\n}\r\n\r\n.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label,\r\n.monaco-editor.hc-black .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label {\r\n\tstroke-width: 1.2px;\r\n}\r\n\r\n.monaco-editor-hover p {\r\n\tmargin: 0;\r\n}\r\n\r\n/* The hc-black theme is already high contrast optimized */\r\n.monaco-editor.hc-black {\r\n\t-ms-high-contrast-adjust: none;\r\n}\r\n/* In case the browser goes into high contrast mode and the editor is not configured with the hc-black theme */\r\n@media screen and (-ms-high-contrast:active) {\r\n\r\n\t/* current line highlight */\r\n\t.monaco-editor.vs .view-overlays .current-line,\r\n\t.monaco-editor.vs-dark .view-overlays .current-line {\r\n\t\tborder-color: windowtext !important;\r\n\t\tborder-left: 0;\r\n\t\tborder-right: 0;\r\n\t}\r\n\r\n\t/* view cursors */\r\n\t.monaco-editor.vs .cursor,\r\n\t.monaco-editor.vs-dark .cursor {\r\n\t\tbackground-color: windowtext !important;\r\n\t}\r\n\t/* dnd target */\r\n\t.monaco-editor.vs .dnd-target,\r\n\t.monaco-editor.vs-dark .dnd-target {\r\n\t\tborder-color: windowtext !important;\r\n\t}\r\n\r\n\t/* selected text background */\r\n\t.monaco-editor.vs .selected-text,\r\n\t.monaco-editor.vs-dark .selected-text {\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\r\n\t/* allow the text to have a transparent background. */\r\n\t.monaco-editor.vs .view-line,\r\n\t.monaco-editor.vs-dark .view-line {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t}\r\n\r\n\t/* text color */\r\n\t.monaco-editor.vs .view-line span,\r\n\t.monaco-editor.vs-dark .view-line span {\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t/* selected text color */\r\n\t.monaco-editor.vs .view-line span.inline-selected-text,\r\n\t.monaco-editor.vs-dark .view-line span.inline-selected-text {\r\n\t\tcolor: highlighttext !important;\r\n\t}\r\n\r\n\t/* allow decorations */\r\n\t.monaco-editor.vs .view-overlays,\r\n\t.monaco-editor.vs-dark .view-overlays {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t}\r\n\r\n\t/* various decorations */\r\n\t.monaco-editor.vs .selectionHighlight,\r\n\t.monaco-editor.vs-dark .selectionHighlight,\r\n\t.monaco-editor.vs .wordHighlight,\r\n\t.monaco-editor.vs-dark .wordHighlight,\r\n\t.monaco-editor.vs .wordHighlightStrong,\r\n\t.monaco-editor.vs-dark .wordHighlightStrong,\r\n\t.monaco-editor.vs .reference-decoration,\r\n\t.monaco-editor.vs-dark .reference-decoration {\r\n\t\tborder: 2px dotted highlight !important;\r\n\t\tbackground: transparent !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .rangeHighlight,\r\n\t.monaco-editor.vs-dark .rangeHighlight {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px dotted activeborder !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .bracket-match,\r\n\t.monaco-editor.vs-dark .bracket-match {\r\n\t\tborder-color: windowtext !important;\r\n\t\tbackground: transparent !important;\r\n\t}\r\n\r\n\t/* find widget */\r\n\t.monaco-editor.vs .findMatch,\r\n\t.monaco-editor.vs-dark .findMatch,\r\n\t.monaco-editor.vs .currentFindMatch,\r\n\t.monaco-editor.vs-dark .currentFindMatch {\r\n\t\tborder: 2px dotted activeborder !important;\r\n\t\tbackground: transparent !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .find-widget,\r\n\t.monaco-editor.vs-dark .find-widget {\r\n\t\tborder: 1px solid windowtext;\r\n\t}\r\n\r\n\t/* list - used by suggest widget */\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row.focused,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row.focused {\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-list .monaco-list-row:hover,\r\n\t.monaco-editor.vs-dark .monaco-list .monaco-list-row:hover {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* tree */\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row.selected,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row.selected,\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row.focused,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row.focused {\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-tree .monaco-tree-row:hover,\r\n\t.monaco-editor.vs-dark .monaco-tree .monaco-tree-row:hover {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* scrollbars */\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tbackground: background !important;\r\n\t\tborder: 1px solid windowtext;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider {\r\n\t\tbackground: windowtext !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider:hover,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider:hover {\r\n\t\tbackground: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-scrollable-element > .scrollbar > .slider.active,\r\n\t.monaco-editor.vs-dark .monaco-scrollable-element > .scrollbar > .slider.active {\r\n\t\tbackground: highlight !important;\r\n\t}\r\n\r\n\t/* overview ruler */\r\n\t.monaco-editor.vs .decorationsOverviewRuler,\r\n\t.monaco-editor.vs-dark .decorationsOverviewRuler {\r\n\t\topacity: 0;\r\n\t}\r\n\r\n\t/* minimap */\r\n\t.monaco-editor.vs .minimap,\r\n\t.monaco-editor.vs-dark .minimap {\r\n\t\tdisplay: none;\r\n\t}\r\n\r\n\t/* squiggles */\r\n\t.monaco-editor.vs .squiggly-d-error,\r\n\t.monaco-editor.vs-dark .squiggly-d-error {\r\n\t\tbackground: transparent !important;\r\n\t\tborder-bottom: 4px double #E47777;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-c-warning,\r\n\t.monaco-editor.vs-dark .squiggly-c-warning {\r\n\t\tborder-bottom: 4px double #71B771;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-b-info,\r\n\t.monaco-editor.vs-dark .squiggly-b-info {\r\n\t\tborder-bottom: 4px double #71B771;\r\n\t}\r\n\t.monaco-editor.vs .squiggly-a-hint,\r\n\t.monaco-editor.vs-dark .squiggly-a-hint {\r\n\t\tborder-bottom: 4px double #6c6c6c;\r\n\t}\r\n\r\n\t/* contextmenu */\r\n\t.monaco-editor.vs .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label,\r\n\t.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:focus .action-label {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tcolor: highlighttext !important;\r\n\t\tbackground-color: highlight !important;\r\n\t}\r\n\t.monaco-editor.vs .monaco-menu .monaco-action-bar.vertical .action-menu-item:hover .action-label,\r\n\t.monaco-editor.vs-dark .monaco-menu .monaco-action-bar.vertical .action-menu-item:hover .action-label {\r\n\t\t-ms-high-contrast-adjust: none;\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\r\n\t/* diff editor */\r\n\t.monaco-diff-editor.vs .diffOverviewRuler,\r\n\t.monaco-diff-editor.vs-dark .diffOverviewRuler {\r\n\t\tdisplay: none;\r\n\t}\r\n\t.monaco-editor.vs .line-insert,\r\n\t.monaco-editor.vs-dark .line-insert,\r\n\t.monaco-editor.vs .line-delete,\r\n\t.monaco-editor.vs-dark .line-delete {\r\n\t\tbackground: transparent !important;\r\n\t\tborder: 1px solid highlight !important;\r\n\t\tbox-sizing: border-box;\r\n\t}\r\n\t.monaco-editor.vs .char-insert,\r\n\t.monaco-editor.vs-dark .char-insert,\r\n\t.monaco-editor.vs .char-delete,\r\n\t.monaco-editor.vs-dark .char-delete {\r\n\t\tbackground: transparent !important;\r\n\t}\r\n}\r\n\r\n/*.monaco-editor.vs [tabindex=\"0\"]:focus {\r\n\toutline: 1px solid rgba(0, 122, 204, 0.4);\r\n\toutline-offset: -1px;\r\n\topacity: 1 !important;\r\n}\r\n\r\n.monaco-editor.vs-dark [tabindex=\"0\"]:focus {\r\n\toutline: 1px solid rgba(14, 99, 156, 0.6);\r\n\toutline-offset: -1px;\r\n\topacity: 1 !important;\r\n}*/\r\n", ""]);
@@ -121767,11 +121824,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 426 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
-            var content = __webpack_require__(427);
+var api = __webpack_require__(27);
+            var content = __webpack_require__(428);
 
             content = content.__esModule ? content.default : content;
 
@@ -121784,7 +121841,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121793,11 +121850,11 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 427 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n/* ---------- DiffEditor ---------- */\r\n\r\n.monaco-diff-editor .diffOverview {\r\n\tz-index: 9;\r\n}\r\n\r\n/* colors not externalized: using transparancy on background */\r\n.monaco-diff-editor.vs\t\t\t.diffOverview { background: rgba(0, 0, 0, 0.03); }\r\n.monaco-diff-editor.vs-dark\t\t.diffOverview { background: rgba(255, 255, 255, 0.01); }\r\n\r\n.monaco-diff-editor .diffViewport {\r\n\tbox-shadow: inset 0px 0px 1px 0px #B9B9B9;\r\n\tbackground: rgba(0, 0, 0, 0.10);\r\n}\r\n\r\n.monaco-diff-editor.vs-dark .diffViewport,\r\n.monaco-diff-editor.hc-black .diffViewport {\r\n\tbackground: rgba(255, 255, 255, 0.10);\r\n}\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.vs\t\t.scrollbar { background: rgba(0,0,0,0); }\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.vs-dark\t.scrollbar { background: rgba(0,0,0,0); }\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor.hc-black\t.scrollbar { background: none; }\r\n\r\n.monaco-scrollable-element.modified-in-monaco-diff-editor .slider {\r\n\tz-index: 10;\r\n}\r\n.modified-in-monaco-diff-editor\t\t\t\t.slider.active { background: rgba(171, 171, 171, .4); }\r\n.modified-in-monaco-diff-editor.hc-black\t.slider.active { background: none; }\r\n\r\n/* ---------- Diff ---------- */\r\n\r\n.monaco-editor .insert-sign,\r\n.monaco-diff-editor .insert-sign,\r\n.monaco-editor .delete-sign,\r\n.monaco-diff-editor .delete-sign {\r\n\tbackground-size: 60%;\r\n\topacity: 0.7;\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-position: 75% center;\r\n\tbackground-size: 11px 11px;\r\n}\r\n.monaco-editor.hc-black .insert-sign,\r\n.monaco-diff-editor.hc-black .insert-sign,\r\n.monaco-editor.hc-black .delete-sign,\r\n.monaco-diff-editor.hc-black .delete-sign {\r\n\topacity: 1;\r\n}\r\n.monaco-editor .insert-sign,\r\n.monaco-diff-editor .insert-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNCA3VjhIOFYxNEg3VjhIMVY3SDdWMUg4VjdIMTRaIiBmaWxsPSIjNDI0MjQyIi8+DQo8L3N2Zz4NCg==\");\r\n}\r\n.monaco-editor .delete-sign,\r\n.monaco-diff-editor .delete-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNSA4SDFWN0gxNVY4WiIgZmlsbD0iIzQyNDI0MiIvPg0KPC9zdmc+DQo=\");\r\n}\r\n\r\n.monaco-editor.vs-dark .insert-sign,\r\n.monaco-diff-editor.vs-dark .insert-sign,\r\n.monaco-editor.hc-black .insert-sign,\r\n.monaco-diff-editor.hc-black .insert-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNCA3VjhIOFYxNEg3VjhIMVY3SDdWMUg4VjdIMTRaIiBmaWxsPSIjQzVDNUM1Ii8+DQo8L3N2Zz4NCg==\");\r\n}\r\n.monaco-editor.vs-dark .delete-sign,\r\n.monaco-diff-editor.vs-dark .delete-sign,\r\n.monaco-editor.hc-black .delete-sign,\r\n.monaco-diff-editor.hc-black .delete-sign {\r\n\tbackground-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNSA4SDFWN0gxNVY4WiIgZmlsbD0iI0M1QzVDNSIvPg0KPC9zdmc+DQo=\");\r\n}\r\n\r\n.monaco-editor .inline-deleted-margin-view-zone {\r\n\ttext-align: right;\r\n}\r\n.monaco-editor .inline-added-margin-view-zone {\r\n\ttext-align: right;\r\n}\r\n\r\n.monaco-editor .diagonal-fill {\r\n\tbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAChJREFUKFNjOH/+fAMDDgCSu3Dhwn9c8gwwBTgNGR4KQP4HhQOhsAIAZCBTkhtqePcAAAAASUVORK5CYII=\");\r\n}\r\n.monaco-editor.vs-dark .diagonal-fill {\r\n\topacity: 0.2;\r\n}\r\n.monaco-editor.hc-black .diagonal-fill {\r\n\tbackground: none;\r\n}\r\n\r\n/* ---------- Inline Diff ---------- */\r\n\r\n.monaco-editor .view-zones .view-lines .view-line span {\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-editor .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiM0MjQyNDIiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiM0MjQyNDIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n\r\n.monaco-editor.vs-dark .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph,\r\n.monaco-editor.hc-dark .margin-view-zones .inline-deleted-margin-view-zone .lightbulb-glyph {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNjcwOCA4LjY1ODA2QzExLjMzMTkgOC45OTE2IDExLjA3MTYgOS4zNjI3OCAxMC44ODg2IDkuNzcxNzJDMTAuNzEwNSAxMC4xNzkyIDEwLjYyMSAxMC42MjE5IDEwLjYyMSAxMS4xMDA5VjEyLjcwMTJDMTAuNjIxIDEyLjg4MDcgMTAuNTg3MiAxMy4wNTAzIDEwLjUxODkgMTMuMjA5MUMxMC40NTEzIDEzLjM2NjEgMTAuMzU4NiAxMy41MDM4IDEwLjI0MDcgMTMuNjIxM0MxMC4xMjI4IDEzLjczODggOS45ODQ2NCAxMy44MzExIDkuODI3MjMgMTMuODk4NEM5LjY2ODA2IDEzLjk2NjMgOS40OTgwNiAxNCA5LjMxODIzIDE0SDcuNzEyMDVDNy41MzIyMyAxNCA3LjM2MjIzIDEzLjk2NjMgNy4yMDMwNiAxMy44OTg0QzcuMDQ1NjQgMTMuODMxMSA2LjkwNzUzIDEzLjczODggNi43ODk2MSAxMy42MjEzQzYuNjcxNjggMTMuNTAzOCA2LjU3ODk1IDEzLjM2NjEgNi41MTE0MSAxMy4yMDkxQzYuNDQzMTEgMTMuMDUwMyA2LjQwOTI3IDEyLjg4MDcgNi40MDkyNyAxMi43MDEyVjExLjEwMDlDNi40MDkyNyAxMC42MjIgNi4zMTc3MiAxMC4xNzk1IDYuMTM1NTMgOS43NzIwOUM1Ljk1NjgzIDkuMzYzMzYgNS42OTgzMiA4Ljk5MTU2IDUuMzU5NTMgOC42NTgwNkM0LjkyNDY4IDguMjI5MDMgNC41ODg5NiA3Ljc1MDAzIDQuMzUzNjEgNy4yMjEzNEM0LjExNzU2IDYuNjkxMDcgNCA2LjExNjcyIDQgNS40OTk1M0M0IDUuMDg2NjQgNC4wNTM0MiA0LjY4ODAyIDQuMTYwNDggNC4zMDM5N0M0LjI2NzI4IDMuOTIwODkgNC40MTkwNyAzLjU2Mjg2IDQuNjE1OTUgMy4yMzAxOEM0LjgxMjU3IDIuODkzNzcgNS4wNDc3NyAyLjU4OTExIDUuMzIxNDYgMi4zMTY0MUM1LjU5NTAzIDIuMDQzODMgNS44OTg1OCAxLjgwOTUzIDYuMjMxOTUgMS42MTM2NEM2LjU2OTc5IDEuNDE3NjQgNi45MzE0NiAxLjI2NjIgNy4zMTU3OCAxLjE1OTgzQzcuNzAxMDYgMS4wNTMyIDguMTAwOTQgMSA4LjUxNTE0IDFDOC45MjkzNCAxIDkuMzI5MjMgMS4wNTMyIDkuNzE0NTEgMS4xNTk4M0MxMC4wOTg4IDEuMjY2MiAxMC40NTggMS40MTczOSAxMC43OTE4IDEuNjEzNTFDMTEuMTI5NCAxLjgwOTM4IDExLjQzNTEgMi4wNDM3IDExLjcwODggMi4zMTY0MUMxMS45ODI1IDIuNTg5MSAxMi4yMTc3IDIuODkzNzYgMTIuNDE0MyAzLjIzMDE2QzEyLjYxMTIgMy41NjI4NSAxMi43NjMgMy45MjA4OCAxMi44Njk4IDQuMzAzOTdDMTIuOTc2OSA0LjY4ODAyIDEzLjAzMDMgNS4wODY2NCAxMy4wMzAzIDUuNDk5NTNDMTMuMDMwMyA2LjExNjcyIDEyLjkxMjcgNi42OTEwNyAxMi42NzY3IDcuMjIxMzRDMTIuNDQxMyA3Ljc1MDAzIDEyLjEwNTYgOC4yMjkwMyAxMS42NzA4IDguNjU4MDZaTTkuNjIxNjIgMTAuNUg3LjQwODY3VjEyLjcwMTJDNy40MDg2NyAxMi43ODIzIDcuNDM3MiAxMi44NTEyIDcuNDk4ODggMTIuOTEyN0M3LjU2MDU4IDEyLjk3NDEgNy42MzAwNyAxMy4wMDI4IDcuNzEyMDUgMTMuMDAyOEg5LjMxODIzQzkuNDAwMjIgMTMuMDAyOCA5LjQ2OTcxIDEyLjk3NDEgOS41MzE0IDEyLjkxMjdDOS41OTMwOSAxMi44NTEyIDkuNjIxNjIgMTIuNzgyMyA5LjYyMTYyIDEyLjcwMTJWMTAuNVoiIGZpbGw9IiNDMkMyQzIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n\r\n.monaco-editor .margin-view-zones .lightbulb-glyph:hover {\r\n\tcursor: pointer;\r\n}\r\n", ""]);
@@ -121806,11 +121863,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 428 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
-            var content = __webpack_require__(429);
+var api = __webpack_require__(27);
+            var content = __webpack_require__(430);
 
             content = content.__esModule ? content.default : content;
 
@@ -121823,7 +121880,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121832,11 +121889,11 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 429 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.monaco-diff-editor .diff-review-line-number {\r\n\ttext-align: right;\r\n\tdisplay: inline-block;\r\n}\r\n\r\n.monaco-diff-editor .diff-review {\r\n\tposition: absolute;\r\n\tuser-select: none;\r\n\t-webkit-user-select: none;\r\n\t-ms-user-select: none;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-summary {\r\n\tpadding-left: 10px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-shadow {\r\n\tposition: absolute;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-row {\r\n\twhite-space: pre;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-table {\r\n\tdisplay: table;\r\n\tmin-width: 100%;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-row {\r\n\tdisplay: table-row;\r\n\twidth: 100%;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-cell {\r\n\tdisplay: table-cell;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-spacer {\r\n\tdisplay: inline-block;\r\n\twidth: 10px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-actions {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tright: 10px;\r\n\ttop: 2px;\r\n}\r\n\r\n.monaco-diff-editor .diff-review-actions .action-label {\r\n\twidth: 16px;\r\n\theight: 16px;\r\n\tmargin: 2px 0;\r\n}\r\n.monaco-diff-editor .action-label.icon.close-diff-review {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOC4wMDAwMSA4LjcwNzExTDExLjY0NjUgMTIuMzUzNkwxMi4zNTM2IDExLjY0NjVMOC43MDcxMSA4LjAwMDAxTDEyLjM1MzYgNC4zNTM1NkwxMS42NDY1IDMuNjQ2NDVMOC4wMDAwMSA3LjI5MjlMNC4zNTM1NiAzLjY0NjQ1TDMuNjQ2NDUgNC4zNTM1Nkw3LjI5MjkgOC4wMDAwMUwzLjY0NjQ1IDExLjY0NjVMNC4zNTM1NiAxMi4zNTM2TDguMDAwMDEgOC43MDcxMVoiIGZpbGw9IiM0MjQyNDIiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n.monaco-diff-editor.hc-black .action-label.icon.close-diff-review,\r\n.monaco-diff-editor.vs-dark .action-label.icon.close-diff-review {\r\n\tbackground: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOC4wMDAwMSA4LjcwNzExTDExLjY0NjUgMTIuMzUzNkwxMi4zNTM2IDExLjY0NjVMOC43MDcxMSA4LjAwMDAxTDEyLjM1MzYgNC4zNTM1NkwxMS42NDY1IDMuNjQ2NDVMOC4wMDAwMSA3LjI5MjlMNC4zNTM1NiAzLjY0NjQ1TDMuNjQ2NDUgNC4zNTM1Nkw3LjI5MjkgOC4wMDAwMUwzLjY0NjQ1IDExLjY0NjVMNC4zNTM1NiAxMi4zNTM2TDguMDAwMDEgOC43MDcxMVoiIGZpbGw9IiNDNUM1QzUiLz4NCjwvc3ZnPg0K\") center center no-repeat;\r\n}\r\n", ""]);
@@ -121845,11 +121902,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 430 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
-            var content = __webpack_require__(431);
+var api = __webpack_require__(27);
+            var content = __webpack_require__(432);
 
             content = content.__esModule ? content.default : content;
 
@@ -121862,7 +121919,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121871,11 +121928,11 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 431 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.context-view .monaco-menu {\r\n\tmin-width: 130px;\r\n}\r\n\r\n.context-view-block {\r\n\tposition: fixed;\r\n\tleft:0;\r\n\ttop:0;\r\n\tz-index: -1;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}", ""]);
@@ -121884,11 +121941,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 432 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(26);
-            var content = __webpack_require__(433);
+var api = __webpack_require__(27);
+            var content = __webpack_require__(434);
 
             content = content.__esModule ? content.default : content;
 
@@ -121901,7 +121958,7 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = api(module.i, content, options);
+var update = api(content, options);
 
 var exported = content.locals ? content.locals : {};
 
@@ -121910,11 +121967,11 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 433 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(27);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\n.context-view {\r\n\tposition: absolute;\r\n\tz-index: 2000;\r\n}", ""]);
@@ -121923,7 +121980,142 @@ module.exports = exports;
 
 
 /***/ }),
-/* 434 */
+/* 435 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(143);
+/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _abap_abap_contribution_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(203);
+/* harmony import */ var _apex_apex_contribution_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(204);
+/* harmony import */ var _azcli_azcli_contribution_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(205);
+/* harmony import */ var _bat_bat_contribution_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(206);
+/* harmony import */ var _cameligo_cameligo_contribution_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(207);
+/* harmony import */ var _clojure_clojure_contribution_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(208);
+/* harmony import */ var _coffee_coffee_contribution_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(209);
+/* harmony import */ var _cpp_cpp_contribution_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(210);
+/* harmony import */ var _csharp_csharp_contribution_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(211);
+/* harmony import */ var _csp_csp_contribution_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(212);
+/* harmony import */ var _css_css_contribution_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(213);
+/* harmony import */ var _dockerfile_dockerfile_contribution_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(215);
+/* harmony import */ var _fsharp_fsharp_contribution_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(216);
+/* harmony import */ var _go_go_contribution_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(217);
+/* harmony import */ var _graphql_graphql_contribution_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(218);
+/* harmony import */ var _handlebars_handlebars_contribution_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(219);
+/* harmony import */ var _html_html_contribution_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(220);
+/* harmony import */ var _ini_ini_contribution_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(222);
+/* harmony import */ var _java_java_contribution_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(223);
+/* harmony import */ var _javascript_javascript_contribution_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(224);
+/* harmony import */ var _kotlin_kotlin_contribution_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(226);
+/* harmony import */ var _less_less_contribution_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(227);
+/* harmony import */ var _lua_lua_contribution_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(228);
+/* harmony import */ var _markdown_markdown_contribution_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(229);
+/* harmony import */ var _mips_mips_contribution_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(230);
+/* harmony import */ var _msdax_msdax_contribution_js__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(231);
+/* harmony import */ var _mysql_mysql_contribution_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(232);
+/* harmony import */ var _objective_c_objective_c_contribution_js__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(233);
+/* harmony import */ var _pascal_pascal_contribution_js__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(234);
+/* harmony import */ var _pascaligo_pascaligo_contribution_js__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(235);
+/* harmony import */ var _perl_perl_contribution_js__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(236);
+/* harmony import */ var _pgsql_pgsql_contribution_js__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(237);
+/* harmony import */ var _php_php_contribution_js__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(238);
+/* harmony import */ var _postiats_postiats_contribution_js__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(239);
+/* harmony import */ var _powerquery_powerquery_contribution_js__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(240);
+/* harmony import */ var _powershell_powershell_contribution_js__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(241);
+/* harmony import */ var _pug_pug_contribution_js__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(242);
+/* harmony import */ var _python_python_contribution_js__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(243);
+/* harmony import */ var _r_r_contribution_js__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(244);
+/* harmony import */ var _razor_razor_contribution_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(245);
+/* harmony import */ var _redis_redis_contribution_js__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(246);
+/* harmony import */ var _redshift_redshift_contribution_js__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(247);
+/* harmony import */ var _restructuredtext_restructuredtext_contribution_js__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(248);
+/* harmony import */ var _ruby_ruby_contribution_js__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(249);
+/* harmony import */ var _rust_rust_contribution_js__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(250);
+/* harmony import */ var _sb_sb_contribution_js__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(251);
+/* harmony import */ var _scheme_scheme_contribution_js__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(252);
+/* harmony import */ var _scss_scss_contribution_js__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(253);
+/* harmony import */ var _shell_shell_contribution_js__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(254);
+/* harmony import */ var _solidity_solidity_contribution_js__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(255);
+/* harmony import */ var _sophia_sophia_contribution_js__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(256);
+/* harmony import */ var _sql_sql_contribution_js__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(257);
+/* harmony import */ var _st_st_contribution_js__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(258);
+/* harmony import */ var _swift_swift_contribution_js__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(259);
+/* harmony import */ var _tcl_tcl_contribution_js__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(260);
+/* harmony import */ var _twig_twig_contribution_js__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(261);
+/* harmony import */ var _typescript_typescript_contribution_js__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(262);
+/* harmony import */ var _vb_vb_contribution_js__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(263);
+/* harmony import */ var _xml_xml_contribution_js__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(264);
+/* harmony import */ var _yaml_yaml_contribution_js__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(265);
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+'use strict';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -121932,31 +122124,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.conf = {
     comments: {
         lineComment: "--",
-        blockComment: ["--[[", "]]"]
+        blockComment: ["--[[", "]]"],
     },
     brackets: [
         ["{", "}"],
         ["[", "]"],
-        ["(", ")"]
+        ["(", ")"],
     ],
     autoClosingPairs: [
         { open: "{", close: "}" },
         { open: "[", close: "]" },
         { open: "(", close: ")" },
         { open: '"', close: '"', notIn: ["string"] },
-        { open: "'", close: "'", notIn: ["string"] }
+        { open: "'", close: "'", notIn: ["string"] },
     ],
     surroundingPairs: [
         { open: "{", close: "}" },
         { open: "[", close: "]" },
         { open: "(", close: ")" },
         { open: '"', close: '"' },
-        { open: "'", close: "'" }
+        { open: "'", close: "'" },
     ],
     indentationRules: {
         increaseIndentPattern: new RegExp("^((?!(\\-\\-)).)*((\\b(else|function|then|do|repeat)\\b((?!\\b(end|until)\\b).)*)|(\\{\\s*))$"),
-        decreaseIndentPattern: new RegExp("^\\s*((\\b(elseif|else|end|until)\\b)|(\\})|(\\)))")
-    }
+        decreaseIndentPattern: new RegExp("^\\s*((\\b(elseif|else|end|until)\\b)|(\\})|(\\)))"),
+    },
 };
 exports.language = {
     defaultToken: "",
@@ -121985,12 +122177,12 @@ exports.language = {
         "true",
         "until",
         "while",
-        "continue"
+        "continue",
     ],
     brackets: [
         { token: "delimiter.bracket", open: "{", close: "}" },
         { token: "delimiter.array", open: "[", close: "]" },
-        { token: "delimiter.parenthesis", open: "(", close: ")" }
+        { token: "delimiter.parenthesis", open: "(", close: ")" },
     ],
     operators: [
         "+",
@@ -122016,7 +122208,7 @@ exports.language = {
         "&&",
         "!",
         "!=",
-        "||"
+        "||",
     ],
     // we include these common regular expressions
     symbols: /[=><!~?:&|+\-*\/\^%]+/,
@@ -122030,20 +122222,20 @@ exports.language = {
                 {
                     cases: {
                         "@keywords": { token: "keyword.$0" },
-                        "@default": "identifier"
-                    }
-                }
+                        "@default": "identifier",
+                    },
+                },
             ],
             // whitespace
             { include: "@whitespace" },
             // keys
             [
                 /(,)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/,
-                ["delimiter", "", "key", "", "delimiter"]
+                ["delimiter", "", "key", "", "delimiter"],
             ],
             [
                 /({)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/,
-                ["@brackets", "", "key", "", "delimiter"]
+                ["@brackets", "", "key", "", "delimiter"],
             ],
             // delimiters and operators
             [/[{}()\[\]]/, "@brackets"],
@@ -122052,9 +122244,9 @@ exports.language = {
                 {
                     cases: {
                         "@operators": "delimiter",
-                        "@default": ""
-                    }
-                }
+                        "@default": "",
+                    },
+                },
             ],
             // numbers
             [/\d*\.\d+([eE][\-+]?\d+)?/, "number.float"],
@@ -122066,14 +122258,14 @@ exports.language = {
             [/"([^"\\]|\\.)*$/, "string.invalid"],
             [/'([^'\\]|\\.)*$/, "string.invalid"],
             [/"/, "string", '@string."'],
-            [/'/, "string", "@string.'"]
+            [/'/, "string", "@string.'"],
         ],
         whitespace: [
             [/[ \t\r\n]+/, ""],
             [/\/\*/, "comment", "@comment"],
             [/\/\/.*$/, "comment"],
             [/--\[([=]*)\[/, "comment", "@comment.$1"],
-            [/--.*$/, "comment"]
+            [/--.*$/, "comment"],
         ],
         comment: [
             [/[^\/*]+/, "comment"],
@@ -122086,11 +122278,11 @@ exports.language = {
                 {
                     cases: {
                         "$1==$S2": { token: "comment", next: "@pop" },
-                        "@default": "comment"
-                    }
-                }
+                        "@default": "comment",
+                    },
+                },
             ],
-            [/./, "comment"]
+            [/./, "comment"],
         ],
         string: [
             [/[^\\"']+/, "string"],
@@ -122101,24 +122293,31 @@ exports.language = {
                 {
                     cases: {
                         "$#==$S2": { token: "string", next: "@pop" },
-                        "@default": "string"
-                    }
-                }
-            ]
-        ]
-    }
+                        "@default": "string",
+                    },
+                },
+            ],
+        ],
+    },
 };
 
 
 /***/ }),
-/* 435 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var lua_fmt_1 = __webpack_require__(436);
-var monaco = __webpack_require__(267);
+var monaco = __importStar(__webpack_require__(177));
+var lua_fmt_1 = __webpack_require__(438);
 var LuaFormatter = /** @class */ (function () {
     function LuaFormatter() {
     }
@@ -122131,9 +122330,9 @@ var LuaFormatter = /** @class */ (function () {
                 text: lua_fmt_1.formatText(code, {
                     useTabs: !options.insertSpaces,
                     indentCount: options.tabSize,
-                    quotemark: "double"
-                })
-            }
+                    quotemark: "double",
+                }),
+            },
         ];
     };
     return LuaFormatter;
@@ -122142,20 +122341,20 @@ exports.LuaFormatter = LuaFormatter;
 
 
 /***/ }),
-/* 436 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 if (false) {}
-const comments_1 = __webpack_require__(289);
-const printer_1 = __webpack_require__(437);
-const docPrinter_1 = __webpack_require__(440);
-const options_1 = __webpack_require__(266);
-const luaparse_1 = __webpack_require__(441);
-const diff_1 = __webpack_require__(443);
-var options_2 = __webpack_require__(266);
+const comments_1 = __webpack_require__(290);
+const printer_1 = __webpack_require__(439);
+const docPrinter_1 = __webpack_require__(442);
+const options_1 = __webpack_require__(267);
+const luaparse_1 = __webpack_require__(443);
+const diff_1 = __webpack_require__(445);
+var options_2 = __webpack_require__(267);
 exports.defaultOptions = options_2.defaultOptions;
 exports.WriteMode = options_2.WriteMode;
 function formatText(text, userOptions) {
@@ -122183,18 +122382,18 @@ exports.producePatch = producePatch;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 437 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const fastPath_1 = __webpack_require__(438);
-const docBuilder_1 = __webpack_require__(290);
-const docUtils_1 = __webpack_require__(439);
-const comments_1 = __webpack_require__(289);
-const util_1 = __webpack_require__(265);
-const options_1 = __webpack_require__(266);
+const fastPath_1 = __webpack_require__(440);
+const docBuilder_1 = __webpack_require__(291);
+const docUtils_1 = __webpack_require__(441);
+const comments_1 = __webpack_require__(290);
+const util_1 = __webpack_require__(266);
+const options_1 = __webpack_require__(267);
 function printStatementSequence(path, options, print) {
     const printed = [];
     path.forEach((statementPath) => {
@@ -122583,13 +122782,13 @@ exports.buildDocFromAst = buildDocFromAst;
 //# sourceMappingURL=printer.js.map
 
 /***/ }),
-/* 438 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const util_1 = __webpack_require__(265);
+const util_1 = __webpack_require__(266);
 class FastPath {
     constructor(ast) {
         this.stack = [ast];
@@ -122683,7 +122882,7 @@ exports.FastPath = FastPath;
 //# sourceMappingURL=fastPath.js.map
 
 /***/ }),
-/* 439 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122786,7 +122985,7 @@ exports.propagateBreaks = propagateBreaks;
 //# sourceMappingURL=docUtils.js.map
 
 /***/ }),
-/* 440 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122920,7 +123119,7 @@ function printDocToStringWithState(doc, state) {
 //# sourceMappingURL=docPrinter.js.map
 
 /***/ }),
-/* 441 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global exports:true, module:true, require:true, define:true, global:true */
@@ -125211,10 +125410,10 @@ function printDocToStringWithState(doc, state) {
 }));
 /* vim: set sw=2 ts=2 et tw=79 : */
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(442)(module), __webpack_require__(165)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(444)(module), __webpack_require__(165)))
 
 /***/ }),
-/* 442 */
+/* 444 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -125242,7 +125441,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 443 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -127085,162 +127284,6 @@ return /******/ (function(modules) { // webpackBootstrap
 ;
 
 /***/ }),
-/* 444 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _language_typescript_monaco_contribution__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(284);
-/* harmony import */ var _language_css_monaco_contribution__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(213);
-/* harmony import */ var _language_json_monaco_contribution__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(224);
-/* harmony import */ var _language_html_monaco_contribution__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(220);
-/* harmony import */ var _basic_languages_monaco_contribution__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(445);
-/* harmony import */ var _edcore_main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(291);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _edcore_main__WEBPACK_IMPORTED_MODULE_5__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _edcore_main__WEBPACK_IMPORTED_MODULE_5__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-
-
-
-
-
-
-/***/ }),
-/* 445 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(132);
-/* harmony import */ var _editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_editor_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _abap_abap_contribution_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(202);
-/* harmony import */ var _apex_apex_contribution_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(203);
-/* harmony import */ var _azcli_azcli_contribution_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(204);
-/* harmony import */ var _bat_bat_contribution_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(205);
-/* harmony import */ var _cameligo_cameligo_contribution_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(206);
-/* harmony import */ var _clojure_clojure_contribution_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(207);
-/* harmony import */ var _coffee_coffee_contribution_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(208);
-/* harmony import */ var _cpp_cpp_contribution_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(209);
-/* harmony import */ var _csharp_csharp_contribution_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(210);
-/* harmony import */ var _csp_csp_contribution_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(211);
-/* harmony import */ var _css_css_contribution_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(212);
-/* harmony import */ var _dockerfile_dockerfile_contribution_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(214);
-/* harmony import */ var _fsharp_fsharp_contribution_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(215);
-/* harmony import */ var _go_go_contribution_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(216);
-/* harmony import */ var _graphql_graphql_contribution_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(217);
-/* harmony import */ var _handlebars_handlebars_contribution_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(218);
-/* harmony import */ var _html_html_contribution_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(219);
-/* harmony import */ var _ini_ini_contribution_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(221);
-/* harmony import */ var _java_java_contribution_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(222);
-/* harmony import */ var _javascript_javascript_contribution_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(223);
-/* harmony import */ var _kotlin_kotlin_contribution_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(225);
-/* harmony import */ var _less_less_contribution_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(226);
-/* harmony import */ var _lua_lua_contribution_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(227);
-/* harmony import */ var _markdown_markdown_contribution_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(228);
-/* harmony import */ var _mips_mips_contribution_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(229);
-/* harmony import */ var _msdax_msdax_contribution_js__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(230);
-/* harmony import */ var _mysql_mysql_contribution_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(231);
-/* harmony import */ var _objective_c_objective_c_contribution_js__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(232);
-/* harmony import */ var _pascal_pascal_contribution_js__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(233);
-/* harmony import */ var _pascaligo_pascaligo_contribution_js__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(234);
-/* harmony import */ var _perl_perl_contribution_js__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(235);
-/* harmony import */ var _pgsql_pgsql_contribution_js__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(236);
-/* harmony import */ var _php_php_contribution_js__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(237);
-/* harmony import */ var _postiats_postiats_contribution_js__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(238);
-/* harmony import */ var _powerquery_powerquery_contribution_js__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(239);
-/* harmony import */ var _powershell_powershell_contribution_js__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(240);
-/* harmony import */ var _pug_pug_contribution_js__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(241);
-/* harmony import */ var _python_python_contribution_js__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(242);
-/* harmony import */ var _r_r_contribution_js__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(243);
-/* harmony import */ var _razor_razor_contribution_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(244);
-/* harmony import */ var _redis_redis_contribution_js__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(245);
-/* harmony import */ var _redshift_redshift_contribution_js__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(246);
-/* harmony import */ var _restructuredtext_restructuredtext_contribution_js__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(247);
-/* harmony import */ var _ruby_ruby_contribution_js__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(248);
-/* harmony import */ var _rust_rust_contribution_js__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(249);
-/* harmony import */ var _sb_sb_contribution_js__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(250);
-/* harmony import */ var _scheme_scheme_contribution_js__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(251);
-/* harmony import */ var _scss_scss_contribution_js__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(252);
-/* harmony import */ var _shell_shell_contribution_js__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(253);
-/* harmony import */ var _solidity_solidity_contribution_js__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(254);
-/* harmony import */ var _sophia_sophia_contribution_js__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(255);
-/* harmony import */ var _sql_sql_contribution_js__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(256);
-/* harmony import */ var _st_st_contribution_js__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(257);
-/* harmony import */ var _swift_swift_contribution_js__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(258);
-/* harmony import */ var _tcl_tcl_contribution_js__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(259);
-/* harmony import */ var _twig_twig_contribution_js__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(260);
-/* harmony import */ var _typescript_typescript_contribution_js__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(261);
-/* harmony import */ var _vb_vb_contribution_js__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(262);
-/* harmony import */ var _xml_xml_contribution_js__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(263);
-/* harmony import */ var _yaml_yaml_contribution_js__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(264);
-
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-'use strict';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***/ }),
 /* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -127282,13 +127325,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var monaco = __webpack_require__(267);
-var LookupItem = /** @class */ (function () {
-    function LookupItem() {
-    }
-    return LookupItem;
-}());
+var monaco = __importStar(__webpack_require__(177));
 var LuaCompletionProvider = /** @class */ (function () {
     function LuaCompletionProvider() {
         this.suggestionList = [];
@@ -127296,7 +127341,7 @@ var LuaCompletionProvider = /** @class */ (function () {
         this.isCachingSuggestionList = false;
     }
     LuaCompletionProvider.prototype.hasSuggestionListCached = function () {
-        return this.suggestionListAttempts >= 3 || this.suggestionList.length > 0;
+        return (this.suggestionListAttempts >= 3 || this.suggestionList.length > 0);
     };
     LuaCompletionProvider.prototype.cacheSuggestionList = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -127324,7 +127369,7 @@ var LuaCompletionProvider = /** @class */ (function () {
                                 label: "[" + item.scope + "] " + item.title,
                                 insertText: item.title,
                                 description: item.html,
-                                range: new monaco.Range(0, 0, 0, 0)
+                                range: new monaco.Range(0, 0, 0, 0),
                             };
                         });
                         return [3 /*break*/, 6];
@@ -127355,16 +127400,16 @@ var LuaCompletionProvider = /** @class */ (function () {
         return {
             suggestions: this.suggestionList
                 .filter(function (item) {
-                return item.label.indexOf(word.word) !== -1;
+                return word && item.label.indexOf(word.word) !== -1;
             })
                 .map(function (item) {
                 return {
                     kind: item.kind,
                     label: item.label,
                     insertText: item.insertText,
-                    range: { insert: insert, replace: replace }
+                    range: { insert: insert, replace: replace },
                 };
-            })
+            }),
         };
     };
     return LuaCompletionProvider;
@@ -127378,46 +127423,61 @@ exports.LuaCompletionProvider = LuaCompletionProvider;
 
 "use strict";
 
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var monaco = __webpack_require__(267);
-var GmodInterface = /** @class */ (function () {
-    function GmodInterface() {
-    }
-    GmodInterface.SetEditor = function (editor) {
-        var _this = this;
-        this.editor = editor;
-        editor.getModel().onDidChangeContent(function (_) {
-            _this.OnCode(editor.getValue());
-        });
-    };
-    GmodInterface.SetCode = function (code) {
-        this.editor.setValue(code);
-    };
-    GmodInterface.GotoLine = function (line) {
-        this.editor.revealLineInCenter(line, monaco.editor.ScrollType.Smooth);
-    };
-    // the LuaReport object must be passed from the gmod lua state :v
-    GmodInterface.SubmitLuaReport = function (report) {
-        var markers = report.events.map(function (e) {
-            return {
-                message: e.message,
-                endColumn: e.endColumn,
-                startColumn: e.startColumn,
-                startLineNumber: e.line,
-                endLineNumber: e.line,
-                severity: e.isError
-                    ? monaco.MarkerSeverity.Error
-                    : monaco.MarkerSeverity.Warning
-            };
-        });
-        monaco.editor.setModelMarkers(this.editor.getModel(), "luacheck", markers);
-    };
-    // to override from gmod lua state
-    GmodInterface.OnReady = function () { };
-    GmodInterface.OnCode = function (code) { };
-    return GmodInterface;
-}());
-exports.GmodInterface = GmodInterface;
+var monaco = __importStar(__webpack_require__(177));
+var maybeGmodInterface;
+if (globalThis.gmodinterface) {
+    maybeGmodInterface = __assign(__assign({}, globalThis.gmodinterface), { SetEditor: function (editor) {
+            var _this = this;
+            this.editor = editor;
+            editor.getModel().onDidChangeContent(function () {
+                _this.OnCode(editor.getValue());
+            });
+        },
+        SetCode: function (code) {
+            this.editor.setValue(code);
+        },
+        GotoLine: function (line) {
+            this.editor.revealLineInCenter(line, monaco.editor.ScrollType.Smooth);
+        },
+        // the LuaReport object must be passed from the gmod lua state :v
+        SubmitLuaReport: function (report) {
+            var markers = report.events.map(function (e) {
+                return {
+                    message: e.message,
+                    endColumn: e.endColumn,
+                    startColumn: e.startColumn,
+                    startLineNumber: e.line,
+                    endLineNumber: e.line,
+                    severity: e.isError
+                        ? monaco.MarkerSeverity.Error
+                        : monaco.MarkerSeverity.Warning,
+                };
+            });
+            monaco.editor.setModelMarkers(this.editor.getModel(), "luacheck", markers);
+        } });
+    // give gmod access to the extended interface
+    globalThis.gmodinterface = maybeGmodInterface;
+}
+exports.gmodInterface = maybeGmodInterface;
 
 
 /***/ }),
@@ -127428,10 +127488,10 @@ exports.GmodInterface = GmodInterface;
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/editorOptions.js
-var editorOptions = __webpack_require__(29);
+var editorOptions = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/standalone/promise-polyfill/polyfill.js
-var polyfill = __webpack_require__(421);
+var polyfill = __webpack_require__(422);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/cancellation.js
 var cancellation = __webpack_require__(30);
@@ -127463,18 +127523,328 @@ var core_token = __webpack_require__(97);
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 // THIS IS A GENERATED FILE. DO NOT EDIT DIRECTLY.
-var MarkerTag;
-(function (MarkerTag) {
-    MarkerTag[MarkerTag["Unnecessary"] = 1] = "Unnecessary";
-    MarkerTag[MarkerTag["Deprecated"] = 2] = "Deprecated";
-})(MarkerTag || (MarkerTag = {}));
-var MarkerSeverity;
-(function (MarkerSeverity) {
-    MarkerSeverity[MarkerSeverity["Hint"] = 1] = "Hint";
-    MarkerSeverity[MarkerSeverity["Info"] = 2] = "Info";
-    MarkerSeverity[MarkerSeverity["Warning"] = 4] = "Warning";
-    MarkerSeverity[MarkerSeverity["Error"] = 8] = "Error";
-})(MarkerSeverity || (MarkerSeverity = {}));
+var AccessibilitySupport;
+(function (AccessibilitySupport) {
+    /**
+     * This should be the browser case where it is not known if a screen reader is attached or no.
+     */
+    AccessibilitySupport[AccessibilitySupport["Unknown"] = 0] = "Unknown";
+    AccessibilitySupport[AccessibilitySupport["Disabled"] = 1] = "Disabled";
+    AccessibilitySupport[AccessibilitySupport["Enabled"] = 2] = "Enabled";
+})(AccessibilitySupport || (AccessibilitySupport = {}));
+var CompletionItemInsertTextRule;
+(function (CompletionItemInsertTextRule) {
+    /**
+     * Adjust whitespace/indentation of multiline insert texts to
+     * match the current line indentation.
+     */
+    CompletionItemInsertTextRule[CompletionItemInsertTextRule["KeepWhitespace"] = 1] = "KeepWhitespace";
+    /**
+     * `insertText` is a snippet.
+     */
+    CompletionItemInsertTextRule[CompletionItemInsertTextRule["InsertAsSnippet"] = 4] = "InsertAsSnippet";
+})(CompletionItemInsertTextRule || (CompletionItemInsertTextRule = {}));
+var CompletionItemKind;
+(function (CompletionItemKind) {
+    CompletionItemKind[CompletionItemKind["Method"] = 0] = "Method";
+    CompletionItemKind[CompletionItemKind["Function"] = 1] = "Function";
+    CompletionItemKind[CompletionItemKind["Constructor"] = 2] = "Constructor";
+    CompletionItemKind[CompletionItemKind["Field"] = 3] = "Field";
+    CompletionItemKind[CompletionItemKind["Variable"] = 4] = "Variable";
+    CompletionItemKind[CompletionItemKind["Class"] = 5] = "Class";
+    CompletionItemKind[CompletionItemKind["Struct"] = 6] = "Struct";
+    CompletionItemKind[CompletionItemKind["Interface"] = 7] = "Interface";
+    CompletionItemKind[CompletionItemKind["Module"] = 8] = "Module";
+    CompletionItemKind[CompletionItemKind["Property"] = 9] = "Property";
+    CompletionItemKind[CompletionItemKind["Event"] = 10] = "Event";
+    CompletionItemKind[CompletionItemKind["Operator"] = 11] = "Operator";
+    CompletionItemKind[CompletionItemKind["Unit"] = 12] = "Unit";
+    CompletionItemKind[CompletionItemKind["Value"] = 13] = "Value";
+    CompletionItemKind[CompletionItemKind["Constant"] = 14] = "Constant";
+    CompletionItemKind[CompletionItemKind["Enum"] = 15] = "Enum";
+    CompletionItemKind[CompletionItemKind["EnumMember"] = 16] = "EnumMember";
+    CompletionItemKind[CompletionItemKind["Keyword"] = 17] = "Keyword";
+    CompletionItemKind[CompletionItemKind["Text"] = 18] = "Text";
+    CompletionItemKind[CompletionItemKind["Color"] = 19] = "Color";
+    CompletionItemKind[CompletionItemKind["File"] = 20] = "File";
+    CompletionItemKind[CompletionItemKind["Reference"] = 21] = "Reference";
+    CompletionItemKind[CompletionItemKind["Customcolor"] = 22] = "Customcolor";
+    CompletionItemKind[CompletionItemKind["Folder"] = 23] = "Folder";
+    CompletionItemKind[CompletionItemKind["TypeParameter"] = 24] = "TypeParameter";
+    CompletionItemKind[CompletionItemKind["Snippet"] = 25] = "Snippet";
+})(CompletionItemKind || (CompletionItemKind = {}));
+var CompletionItemTag;
+(function (CompletionItemTag) {
+    CompletionItemTag[CompletionItemTag["Deprecated"] = 1] = "Deprecated";
+})(CompletionItemTag || (CompletionItemTag = {}));
+/**
+ * How a suggest provider was triggered.
+ */
+var CompletionTriggerKind;
+(function (CompletionTriggerKind) {
+    CompletionTriggerKind[CompletionTriggerKind["Invoke"] = 0] = "Invoke";
+    CompletionTriggerKind[CompletionTriggerKind["TriggerCharacter"] = 1] = "TriggerCharacter";
+    CompletionTriggerKind[CompletionTriggerKind["TriggerForIncompleteCompletions"] = 2] = "TriggerForIncompleteCompletions";
+})(CompletionTriggerKind || (CompletionTriggerKind = {}));
+/**
+ * A positioning preference for rendering content widgets.
+ */
+var ContentWidgetPositionPreference;
+(function (ContentWidgetPositionPreference) {
+    /**
+     * Place the content widget exactly at a position
+     */
+    ContentWidgetPositionPreference[ContentWidgetPositionPreference["EXACT"] = 0] = "EXACT";
+    /**
+     * Place the content widget above a position
+     */
+    ContentWidgetPositionPreference[ContentWidgetPositionPreference["ABOVE"] = 1] = "ABOVE";
+    /**
+     * Place the content widget below a position
+     */
+    ContentWidgetPositionPreference[ContentWidgetPositionPreference["BELOW"] = 2] = "BELOW";
+})(ContentWidgetPositionPreference || (ContentWidgetPositionPreference = {}));
+/**
+ * Describes the reason the cursor has changed its position.
+ */
+var CursorChangeReason;
+(function (CursorChangeReason) {
+    /**
+     * Unknown or not set.
+     */
+    CursorChangeReason[CursorChangeReason["NotSet"] = 0] = "NotSet";
+    /**
+     * A `model.setValue()` was called.
+     */
+    CursorChangeReason[CursorChangeReason["ContentFlush"] = 1] = "ContentFlush";
+    /**
+     * The `model` has been changed outside of this cursor and the cursor recovers its position from associated markers.
+     */
+    CursorChangeReason[CursorChangeReason["RecoverFromMarkers"] = 2] = "RecoverFromMarkers";
+    /**
+     * There was an explicit user gesture.
+     */
+    CursorChangeReason[CursorChangeReason["Explicit"] = 3] = "Explicit";
+    /**
+     * There was a Paste.
+     */
+    CursorChangeReason[CursorChangeReason["Paste"] = 4] = "Paste";
+    /**
+     * There was an Undo.
+     */
+    CursorChangeReason[CursorChangeReason["Undo"] = 5] = "Undo";
+    /**
+     * There was a Redo.
+     */
+    CursorChangeReason[CursorChangeReason["Redo"] = 6] = "Redo";
+})(CursorChangeReason || (CursorChangeReason = {}));
+/**
+ * The default end of line to use when instantiating models.
+ */
+var DefaultEndOfLine;
+(function (DefaultEndOfLine) {
+    /**
+     * Use line feed (\n) as the end of line character.
+     */
+    DefaultEndOfLine[DefaultEndOfLine["LF"] = 1] = "LF";
+    /**
+     * Use carriage return and line feed (\r\n) as the end of line character.
+     */
+    DefaultEndOfLine[DefaultEndOfLine["CRLF"] = 2] = "CRLF";
+})(DefaultEndOfLine || (DefaultEndOfLine = {}));
+/**
+ * A document highlight kind.
+ */
+var DocumentHighlightKind;
+(function (DocumentHighlightKind) {
+    /**
+     * A textual occurrence.
+     */
+    DocumentHighlightKind[DocumentHighlightKind["Text"] = 0] = "Text";
+    /**
+     * Read-access of a symbol, like reading a variable.
+     */
+    DocumentHighlightKind[DocumentHighlightKind["Read"] = 1] = "Read";
+    /**
+     * Write-access of a symbol, like writing to a variable.
+     */
+    DocumentHighlightKind[DocumentHighlightKind["Write"] = 2] = "Write";
+})(DocumentHighlightKind || (DocumentHighlightKind = {}));
+/**
+ * Configuration options for auto indentation in the editor
+ */
+var EditorAutoIndentStrategy;
+(function (EditorAutoIndentStrategy) {
+    EditorAutoIndentStrategy[EditorAutoIndentStrategy["None"] = 0] = "None";
+    EditorAutoIndentStrategy[EditorAutoIndentStrategy["Keep"] = 1] = "Keep";
+    EditorAutoIndentStrategy[EditorAutoIndentStrategy["Brackets"] = 2] = "Brackets";
+    EditorAutoIndentStrategy[EditorAutoIndentStrategy["Advanced"] = 3] = "Advanced";
+    EditorAutoIndentStrategy[EditorAutoIndentStrategy["Full"] = 4] = "Full";
+})(EditorAutoIndentStrategy || (EditorAutoIndentStrategy = {}));
+var EditorOption;
+(function (EditorOption) {
+    EditorOption[EditorOption["acceptSuggestionOnCommitCharacter"] = 0] = "acceptSuggestionOnCommitCharacter";
+    EditorOption[EditorOption["acceptSuggestionOnEnter"] = 1] = "acceptSuggestionOnEnter";
+    EditorOption[EditorOption["accessibilitySupport"] = 2] = "accessibilitySupport";
+    EditorOption[EditorOption["accessibilityPageSize"] = 3] = "accessibilityPageSize";
+    EditorOption[EditorOption["ariaLabel"] = 4] = "ariaLabel";
+    EditorOption[EditorOption["autoClosingBrackets"] = 5] = "autoClosingBrackets";
+    EditorOption[EditorOption["autoClosingOvertype"] = 6] = "autoClosingOvertype";
+    EditorOption[EditorOption["autoClosingQuotes"] = 7] = "autoClosingQuotes";
+    EditorOption[EditorOption["autoIndent"] = 8] = "autoIndent";
+    EditorOption[EditorOption["automaticLayout"] = 9] = "automaticLayout";
+    EditorOption[EditorOption["autoSurround"] = 10] = "autoSurround";
+    EditorOption[EditorOption["codeLens"] = 11] = "codeLens";
+    EditorOption[EditorOption["colorDecorators"] = 12] = "colorDecorators";
+    EditorOption[EditorOption["contextmenu"] = 13] = "contextmenu";
+    EditorOption[EditorOption["copyWithSyntaxHighlighting"] = 14] = "copyWithSyntaxHighlighting";
+    EditorOption[EditorOption["cursorBlinking"] = 15] = "cursorBlinking";
+    EditorOption[EditorOption["cursorSmoothCaretAnimation"] = 16] = "cursorSmoothCaretAnimation";
+    EditorOption[EditorOption["cursorStyle"] = 17] = "cursorStyle";
+    EditorOption[EditorOption["cursorSurroundingLines"] = 18] = "cursorSurroundingLines";
+    EditorOption[EditorOption["cursorSurroundingLinesStyle"] = 19] = "cursorSurroundingLinesStyle";
+    EditorOption[EditorOption["cursorWidth"] = 20] = "cursorWidth";
+    EditorOption[EditorOption["disableLayerHinting"] = 21] = "disableLayerHinting";
+    EditorOption[EditorOption["disableMonospaceOptimizations"] = 22] = "disableMonospaceOptimizations";
+    EditorOption[EditorOption["dragAndDrop"] = 23] = "dragAndDrop";
+    EditorOption[EditorOption["emptySelectionClipboard"] = 24] = "emptySelectionClipboard";
+    EditorOption[EditorOption["extraEditorClassName"] = 25] = "extraEditorClassName";
+    EditorOption[EditorOption["fastScrollSensitivity"] = 26] = "fastScrollSensitivity";
+    EditorOption[EditorOption["find"] = 27] = "find";
+    EditorOption[EditorOption["fixedOverflowWidgets"] = 28] = "fixedOverflowWidgets";
+    EditorOption[EditorOption["folding"] = 29] = "folding";
+    EditorOption[EditorOption["foldingStrategy"] = 30] = "foldingStrategy";
+    EditorOption[EditorOption["fontFamily"] = 31] = "fontFamily";
+    EditorOption[EditorOption["fontInfo"] = 32] = "fontInfo";
+    EditorOption[EditorOption["fontLigatures"] = 33] = "fontLigatures";
+    EditorOption[EditorOption["fontSize"] = 34] = "fontSize";
+    EditorOption[EditorOption["fontWeight"] = 35] = "fontWeight";
+    EditorOption[EditorOption["formatOnPaste"] = 36] = "formatOnPaste";
+    EditorOption[EditorOption["formatOnType"] = 37] = "formatOnType";
+    EditorOption[EditorOption["glyphMargin"] = 38] = "glyphMargin";
+    EditorOption[EditorOption["gotoLocation"] = 39] = "gotoLocation";
+    EditorOption[EditorOption["hideCursorInOverviewRuler"] = 40] = "hideCursorInOverviewRuler";
+    EditorOption[EditorOption["highlightActiveIndentGuide"] = 41] = "highlightActiveIndentGuide";
+    EditorOption[EditorOption["hover"] = 42] = "hover";
+    EditorOption[EditorOption["inDiffEditor"] = 43] = "inDiffEditor";
+    EditorOption[EditorOption["letterSpacing"] = 44] = "letterSpacing";
+    EditorOption[EditorOption["lightbulb"] = 45] = "lightbulb";
+    EditorOption[EditorOption["lineDecorationsWidth"] = 46] = "lineDecorationsWidth";
+    EditorOption[EditorOption["lineHeight"] = 47] = "lineHeight";
+    EditorOption[EditorOption["lineNumbers"] = 48] = "lineNumbers";
+    EditorOption[EditorOption["lineNumbersMinChars"] = 49] = "lineNumbersMinChars";
+    EditorOption[EditorOption["links"] = 50] = "links";
+    EditorOption[EditorOption["matchBrackets"] = 51] = "matchBrackets";
+    EditorOption[EditorOption["minimap"] = 52] = "minimap";
+    EditorOption[EditorOption["mouseStyle"] = 53] = "mouseStyle";
+    EditorOption[EditorOption["mouseWheelScrollSensitivity"] = 54] = "mouseWheelScrollSensitivity";
+    EditorOption[EditorOption["mouseWheelZoom"] = 55] = "mouseWheelZoom";
+    EditorOption[EditorOption["multiCursorMergeOverlapping"] = 56] = "multiCursorMergeOverlapping";
+    EditorOption[EditorOption["multiCursorModifier"] = 57] = "multiCursorModifier";
+    EditorOption[EditorOption["multiCursorPaste"] = 58] = "multiCursorPaste";
+    EditorOption[EditorOption["occurrencesHighlight"] = 59] = "occurrencesHighlight";
+    EditorOption[EditorOption["overviewRulerBorder"] = 60] = "overviewRulerBorder";
+    EditorOption[EditorOption["overviewRulerLanes"] = 61] = "overviewRulerLanes";
+    EditorOption[EditorOption["parameterHints"] = 62] = "parameterHints";
+    EditorOption[EditorOption["quickSuggestions"] = 63] = "quickSuggestions";
+    EditorOption[EditorOption["quickSuggestionsDelay"] = 64] = "quickSuggestionsDelay";
+    EditorOption[EditorOption["readOnly"] = 65] = "readOnly";
+    EditorOption[EditorOption["renderControlCharacters"] = 66] = "renderControlCharacters";
+    EditorOption[EditorOption["renderIndentGuides"] = 67] = "renderIndentGuides";
+    EditorOption[EditorOption["renderFinalNewline"] = 68] = "renderFinalNewline";
+    EditorOption[EditorOption["renderLineHighlight"] = 69] = "renderLineHighlight";
+    EditorOption[EditorOption["renderWhitespace"] = 70] = "renderWhitespace";
+    EditorOption[EditorOption["revealHorizontalRightPadding"] = 71] = "revealHorizontalRightPadding";
+    EditorOption[EditorOption["roundedSelection"] = 72] = "roundedSelection";
+    EditorOption[EditorOption["rulers"] = 73] = "rulers";
+    EditorOption[EditorOption["scrollbar"] = 74] = "scrollbar";
+    EditorOption[EditorOption["scrollBeyondLastColumn"] = 75] = "scrollBeyondLastColumn";
+    EditorOption[EditorOption["scrollBeyondLastLine"] = 76] = "scrollBeyondLastLine";
+    EditorOption[EditorOption["selectionClipboard"] = 77] = "selectionClipboard";
+    EditorOption[EditorOption["selectionHighlight"] = 78] = "selectionHighlight";
+    EditorOption[EditorOption["selectOnLineNumbers"] = 79] = "selectOnLineNumbers";
+    EditorOption[EditorOption["showFoldingControls"] = 80] = "showFoldingControls";
+    EditorOption[EditorOption["showUnused"] = 81] = "showUnused";
+    EditorOption[EditorOption["snippetSuggestions"] = 82] = "snippetSuggestions";
+    EditorOption[EditorOption["smoothScrolling"] = 83] = "smoothScrolling";
+    EditorOption[EditorOption["stopRenderingLineAfter"] = 84] = "stopRenderingLineAfter";
+    EditorOption[EditorOption["suggest"] = 85] = "suggest";
+    EditorOption[EditorOption["suggestFontSize"] = 86] = "suggestFontSize";
+    EditorOption[EditorOption["suggestLineHeight"] = 87] = "suggestLineHeight";
+    EditorOption[EditorOption["suggestOnTriggerCharacters"] = 88] = "suggestOnTriggerCharacters";
+    EditorOption[EditorOption["suggestSelection"] = 89] = "suggestSelection";
+    EditorOption[EditorOption["tabCompletion"] = 90] = "tabCompletion";
+    EditorOption[EditorOption["useTabStops"] = 91] = "useTabStops";
+    EditorOption[EditorOption["wordSeparators"] = 92] = "wordSeparators";
+    EditorOption[EditorOption["wordWrap"] = 93] = "wordWrap";
+    EditorOption[EditorOption["wordWrapBreakAfterCharacters"] = 94] = "wordWrapBreakAfterCharacters";
+    EditorOption[EditorOption["wordWrapBreakBeforeCharacters"] = 95] = "wordWrapBreakBeforeCharacters";
+    EditorOption[EditorOption["wordWrapBreakObtrusiveCharacters"] = 96] = "wordWrapBreakObtrusiveCharacters";
+    EditorOption[EditorOption["wordWrapColumn"] = 97] = "wordWrapColumn";
+    EditorOption[EditorOption["wordWrapMinified"] = 98] = "wordWrapMinified";
+    EditorOption[EditorOption["wrappingIndent"] = 99] = "wrappingIndent";
+    EditorOption[EditorOption["editorClassName"] = 100] = "editorClassName";
+    EditorOption[EditorOption["pixelRatio"] = 101] = "pixelRatio";
+    EditorOption[EditorOption["tabFocusMode"] = 102] = "tabFocusMode";
+    EditorOption[EditorOption["layoutInfo"] = 103] = "layoutInfo";
+    EditorOption[EditorOption["wrappingInfo"] = 104] = "wrappingInfo";
+})(EditorOption || (EditorOption = {}));
+/**
+ * End of line character preference.
+ */
+var EndOfLinePreference;
+(function (EndOfLinePreference) {
+    /**
+     * Use the end of line character identified in the text buffer.
+     */
+    EndOfLinePreference[EndOfLinePreference["TextDefined"] = 0] = "TextDefined";
+    /**
+     * Use line feed (\n) as the end of line character.
+     */
+    EndOfLinePreference[EndOfLinePreference["LF"] = 1] = "LF";
+    /**
+     * Use carriage return and line feed (\r\n) as the end of line character.
+     */
+    EndOfLinePreference[EndOfLinePreference["CRLF"] = 2] = "CRLF";
+})(EndOfLinePreference || (EndOfLinePreference = {}));
+/**
+ * End of line character preference.
+ */
+var EndOfLineSequence;
+(function (EndOfLineSequence) {
+    /**
+     * Use line feed (\n) as the end of line character.
+     */
+    EndOfLineSequence[EndOfLineSequence["LF"] = 0] = "LF";
+    /**
+     * Use carriage return and line feed (\r\n) as the end of line character.
+     */
+    EndOfLineSequence[EndOfLineSequence["CRLF"] = 1] = "CRLF";
+})(EndOfLineSequence || (EndOfLineSequence = {}));
+/**
+ * Describes what to do with the indentation when pressing Enter.
+ */
+var IndentAction;
+(function (IndentAction) {
+    /**
+     * Insert new line and copy the previous line's indentation.
+     */
+    IndentAction[IndentAction["None"] = 0] = "None";
+    /**
+     * Insert new line and indent once (relative to the previous line's indentation).
+     */
+    IndentAction[IndentAction["Indent"] = 1] = "Indent";
+    /**
+     * Insert two new lines:
+     *  - the first one indented which will hold the cursor
+     *  - the second one at the same indentation level
+     */
+    IndentAction[IndentAction["IndentOutdent"] = 2] = "IndentOutdent";
+    /**
+     * Insert new line and outdent once (relative to the previous line's indentation).
+     */
+    IndentAction[IndentAction["Outdent"] = 3] = "Outdent";
+})(IndentAction || (IndentAction = {}));
 /**
  * Virtual Key Codes, the value does not hold any inherent meaning.
  * Inspired somewhat from https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
@@ -127656,36 +128026,18 @@ var KeyCode;
      */
     KeyCode[KeyCode["MAX_VALUE"] = 112] = "MAX_VALUE";
 })(KeyCode || (KeyCode = {}));
-/**
- * The direction of a selection.
- */
-var SelectionDirection;
-(function (SelectionDirection) {
-    /**
-     * The selection starts above where it ends.
-     */
-    SelectionDirection[SelectionDirection["LTR"] = 0] = "LTR";
-    /**
-     * The selection starts below where it ends.
-     */
-    SelectionDirection[SelectionDirection["RTL"] = 1] = "RTL";
-})(SelectionDirection || (SelectionDirection = {}));
-var ScrollbarVisibility;
-(function (ScrollbarVisibility) {
-    ScrollbarVisibility[ScrollbarVisibility["Auto"] = 1] = "Auto";
-    ScrollbarVisibility[ScrollbarVisibility["Hidden"] = 2] = "Hidden";
-    ScrollbarVisibility[ScrollbarVisibility["Visible"] = 3] = "Visible";
-})(ScrollbarVisibility || (ScrollbarVisibility = {}));
-/**
- * Vertical Lane in the overview ruler of the editor.
- */
-var OverviewRulerLane;
-(function (OverviewRulerLane) {
-    OverviewRulerLane[OverviewRulerLane["Left"] = 1] = "Left";
-    OverviewRulerLane[OverviewRulerLane["Center"] = 2] = "Center";
-    OverviewRulerLane[OverviewRulerLane["Right"] = 4] = "Right";
-    OverviewRulerLane[OverviewRulerLane["Full"] = 7] = "Full";
-})(OverviewRulerLane || (OverviewRulerLane = {}));
+var MarkerSeverity;
+(function (MarkerSeverity) {
+    MarkerSeverity[MarkerSeverity["Hint"] = 1] = "Hint";
+    MarkerSeverity[MarkerSeverity["Info"] = 2] = "Info";
+    MarkerSeverity[MarkerSeverity["Warning"] = 4] = "Warning";
+    MarkerSeverity[MarkerSeverity["Error"] = 8] = "Error";
+})(MarkerSeverity || (MarkerSeverity = {}));
+var MarkerTag;
+(function (MarkerTag) {
+    MarkerTag[MarkerTag["Unnecessary"] = 1] = "Unnecessary";
+    MarkerTag[MarkerTag["Deprecated"] = 2] = "Deprecated";
+})(MarkerTag || (MarkerTag = {}));
 /**
  * Position in the minimap to render the decoration.
  */
@@ -127694,144 +128046,6 @@ var MinimapPosition;
     MinimapPosition[MinimapPosition["Inline"] = 1] = "Inline";
     MinimapPosition[MinimapPosition["Gutter"] = 2] = "Gutter";
 })(MinimapPosition || (MinimapPosition = {}));
-/**
- * End of line character preference.
- */
-var EndOfLinePreference;
-(function (EndOfLinePreference) {
-    /**
-     * Use the end of line character identified in the text buffer.
-     */
-    EndOfLinePreference[EndOfLinePreference["TextDefined"] = 0] = "TextDefined";
-    /**
-     * Use line feed (\n) as the end of line character.
-     */
-    EndOfLinePreference[EndOfLinePreference["LF"] = 1] = "LF";
-    /**
-     * Use carriage return and line feed (\r\n) as the end of line character.
-     */
-    EndOfLinePreference[EndOfLinePreference["CRLF"] = 2] = "CRLF";
-})(EndOfLinePreference || (EndOfLinePreference = {}));
-/**
- * The default end of line to use when instantiating models.
- */
-var DefaultEndOfLine;
-(function (DefaultEndOfLine) {
-    /**
-     * Use line feed (\n) as the end of line character.
-     */
-    DefaultEndOfLine[DefaultEndOfLine["LF"] = 1] = "LF";
-    /**
-     * Use carriage return and line feed (\r\n) as the end of line character.
-     */
-    DefaultEndOfLine[DefaultEndOfLine["CRLF"] = 2] = "CRLF";
-})(DefaultEndOfLine || (DefaultEndOfLine = {}));
-/**
- * End of line character preference.
- */
-var EndOfLineSequence;
-(function (EndOfLineSequence) {
-    /**
-     * Use line feed (\n) as the end of line character.
-     */
-    EndOfLineSequence[EndOfLineSequence["LF"] = 0] = "LF";
-    /**
-     * Use carriage return and line feed (\r\n) as the end of line character.
-     */
-    EndOfLineSequence[EndOfLineSequence["CRLF"] = 1] = "CRLF";
-})(EndOfLineSequence || (EndOfLineSequence = {}));
-/**
- * Describes the behavior of decorations when typing/editing near their edges.
- * Note: Please do not edit the values, as they very carefully match `DecorationRangeBehavior`
- */
-var TrackedRangeStickiness;
-(function (TrackedRangeStickiness) {
-    TrackedRangeStickiness[TrackedRangeStickiness["AlwaysGrowsWhenTypingAtEdges"] = 0] = "AlwaysGrowsWhenTypingAtEdges";
-    TrackedRangeStickiness[TrackedRangeStickiness["NeverGrowsWhenTypingAtEdges"] = 1] = "NeverGrowsWhenTypingAtEdges";
-    TrackedRangeStickiness[TrackedRangeStickiness["GrowsOnlyWhenTypingBefore"] = 2] = "GrowsOnlyWhenTypingBefore";
-    TrackedRangeStickiness[TrackedRangeStickiness["GrowsOnlyWhenTypingAfter"] = 3] = "GrowsOnlyWhenTypingAfter";
-})(TrackedRangeStickiness || (TrackedRangeStickiness = {}));
-var ScrollType;
-(function (ScrollType) {
-    ScrollType[ScrollType["Smooth"] = 0] = "Smooth";
-    ScrollType[ScrollType["Immediate"] = 1] = "Immediate";
-})(ScrollType || (ScrollType = {}));
-/**
- * Describes the reason the cursor has changed its position.
- */
-var CursorChangeReason;
-(function (CursorChangeReason) {
-    /**
-     * Unknown or not set.
-     */
-    CursorChangeReason[CursorChangeReason["NotSet"] = 0] = "NotSet";
-    /**
-     * A `model.setValue()` was called.
-     */
-    CursorChangeReason[CursorChangeReason["ContentFlush"] = 1] = "ContentFlush";
-    /**
-     * The `model` has been changed outside of this cursor and the cursor recovers its position from associated markers.
-     */
-    CursorChangeReason[CursorChangeReason["RecoverFromMarkers"] = 2] = "RecoverFromMarkers";
-    /**
-     * There was an explicit user gesture.
-     */
-    CursorChangeReason[CursorChangeReason["Explicit"] = 3] = "Explicit";
-    /**
-     * There was a Paste.
-     */
-    CursorChangeReason[CursorChangeReason["Paste"] = 4] = "Paste";
-    /**
-     * There was an Undo.
-     */
-    CursorChangeReason[CursorChangeReason["Undo"] = 5] = "Undo";
-    /**
-     * There was a Redo.
-     */
-    CursorChangeReason[CursorChangeReason["Redo"] = 6] = "Redo";
-})(CursorChangeReason || (CursorChangeReason = {}));
-var RenderMinimap;
-(function (RenderMinimap) {
-    RenderMinimap[RenderMinimap["None"] = 0] = "None";
-    RenderMinimap[RenderMinimap["Text"] = 1] = "Text";
-    RenderMinimap[RenderMinimap["Blocks"] = 2] = "Blocks";
-})(RenderMinimap || (RenderMinimap = {}));
-/**
- * A positioning preference for rendering content widgets.
- */
-var ContentWidgetPositionPreference;
-(function (ContentWidgetPositionPreference) {
-    /**
-     * Place the content widget exactly at a position
-     */
-    ContentWidgetPositionPreference[ContentWidgetPositionPreference["EXACT"] = 0] = "EXACT";
-    /**
-     * Place the content widget above a position
-     */
-    ContentWidgetPositionPreference[ContentWidgetPositionPreference["ABOVE"] = 1] = "ABOVE";
-    /**
-     * Place the content widget below a position
-     */
-    ContentWidgetPositionPreference[ContentWidgetPositionPreference["BELOW"] = 2] = "BELOW";
-})(ContentWidgetPositionPreference || (ContentWidgetPositionPreference = {}));
-/**
- * A positioning preference for rendering overlay widgets.
- */
-var OverlayWidgetPositionPreference;
-(function (OverlayWidgetPositionPreference) {
-    /**
-     * Position the overlay widget in the top right corner
-     */
-    OverlayWidgetPositionPreference[OverlayWidgetPositionPreference["TOP_RIGHT_CORNER"] = 0] = "TOP_RIGHT_CORNER";
-    /**
-     * Position the overlay widget in the bottom right corner
-     */
-    OverlayWidgetPositionPreference[OverlayWidgetPositionPreference["BOTTOM_RIGHT_CORNER"] = 1] = "BOTTOM_RIGHT_CORNER";
-    /**
-     * Position the overlay widget in the top center
-     */
-    OverlayWidgetPositionPreference[OverlayWidgetPositionPreference["TOP_CENTER"] = 2] = "TOP_CENTER";
-})(OverlayWidgetPositionPreference || (OverlayWidgetPositionPreference = {}));
 /**
  * Type of hit element with the mouse in the editor.
  */
@@ -127895,107 +128109,78 @@ var MouseTargetType;
     MouseTargetType[MouseTargetType["OUTSIDE_EDITOR"] = 13] = "OUTSIDE_EDITOR";
 })(MouseTargetType || (MouseTargetType = {}));
 /**
- * Describes what to do with the indentation when pressing Enter.
+ * A positioning preference for rendering overlay widgets.
  */
-var IndentAction;
-(function (IndentAction) {
+var OverlayWidgetPositionPreference;
+(function (OverlayWidgetPositionPreference) {
     /**
-     * Insert new line and copy the previous line's indentation.
+     * Position the overlay widget in the top right corner
      */
-    IndentAction[IndentAction["None"] = 0] = "None";
+    OverlayWidgetPositionPreference[OverlayWidgetPositionPreference["TOP_RIGHT_CORNER"] = 0] = "TOP_RIGHT_CORNER";
     /**
-     * Insert new line and indent once (relative to the previous line's indentation).
+     * Position the overlay widget in the bottom right corner
      */
-    IndentAction[IndentAction["Indent"] = 1] = "Indent";
+    OverlayWidgetPositionPreference[OverlayWidgetPositionPreference["BOTTOM_RIGHT_CORNER"] = 1] = "BOTTOM_RIGHT_CORNER";
     /**
-     * Insert two new lines:
-     *  - the first one indented which will hold the cursor
-     *  - the second one at the same indentation level
+     * Position the overlay widget in the top center
      */
-    IndentAction[IndentAction["IndentOutdent"] = 2] = "IndentOutdent";
-    /**
-     * Insert new line and outdent once (relative to the previous line's indentation).
-     */
-    IndentAction[IndentAction["Outdent"] = 3] = "Outdent";
-})(IndentAction || (IndentAction = {}));
-var CompletionItemKind;
-(function (CompletionItemKind) {
-    CompletionItemKind[CompletionItemKind["Method"] = 0] = "Method";
-    CompletionItemKind[CompletionItemKind["Function"] = 1] = "Function";
-    CompletionItemKind[CompletionItemKind["Constructor"] = 2] = "Constructor";
-    CompletionItemKind[CompletionItemKind["Field"] = 3] = "Field";
-    CompletionItemKind[CompletionItemKind["Variable"] = 4] = "Variable";
-    CompletionItemKind[CompletionItemKind["Class"] = 5] = "Class";
-    CompletionItemKind[CompletionItemKind["Struct"] = 6] = "Struct";
-    CompletionItemKind[CompletionItemKind["Interface"] = 7] = "Interface";
-    CompletionItemKind[CompletionItemKind["Module"] = 8] = "Module";
-    CompletionItemKind[CompletionItemKind["Property"] = 9] = "Property";
-    CompletionItemKind[CompletionItemKind["Event"] = 10] = "Event";
-    CompletionItemKind[CompletionItemKind["Operator"] = 11] = "Operator";
-    CompletionItemKind[CompletionItemKind["Unit"] = 12] = "Unit";
-    CompletionItemKind[CompletionItemKind["Value"] = 13] = "Value";
-    CompletionItemKind[CompletionItemKind["Constant"] = 14] = "Constant";
-    CompletionItemKind[CompletionItemKind["Enum"] = 15] = "Enum";
-    CompletionItemKind[CompletionItemKind["EnumMember"] = 16] = "EnumMember";
-    CompletionItemKind[CompletionItemKind["Keyword"] = 17] = "Keyword";
-    CompletionItemKind[CompletionItemKind["Text"] = 18] = "Text";
-    CompletionItemKind[CompletionItemKind["Color"] = 19] = "Color";
-    CompletionItemKind[CompletionItemKind["File"] = 20] = "File";
-    CompletionItemKind[CompletionItemKind["Reference"] = 21] = "Reference";
-    CompletionItemKind[CompletionItemKind["Customcolor"] = 22] = "Customcolor";
-    CompletionItemKind[CompletionItemKind["Folder"] = 23] = "Folder";
-    CompletionItemKind[CompletionItemKind["TypeParameter"] = 24] = "TypeParameter";
-    CompletionItemKind[CompletionItemKind["Snippet"] = 25] = "Snippet";
-})(CompletionItemKind || (CompletionItemKind = {}));
-var CompletionItemTag;
-(function (CompletionItemTag) {
-    CompletionItemTag[CompletionItemTag["Deprecated"] = 1] = "Deprecated";
-})(CompletionItemTag || (CompletionItemTag = {}));
-var CompletionItemInsertTextRule;
-(function (CompletionItemInsertTextRule) {
-    /**
-     * Adjust whitespace/indentation of multiline insert texts to
-     * match the current line indentation.
-     */
-    CompletionItemInsertTextRule[CompletionItemInsertTextRule["KeepWhitespace"] = 1] = "KeepWhitespace";
-    /**
-     * `insertText` is a snippet.
-     */
-    CompletionItemInsertTextRule[CompletionItemInsertTextRule["InsertAsSnippet"] = 4] = "InsertAsSnippet";
-})(CompletionItemInsertTextRule || (CompletionItemInsertTextRule = {}));
+    OverlayWidgetPositionPreference[OverlayWidgetPositionPreference["TOP_CENTER"] = 2] = "TOP_CENTER";
+})(OverlayWidgetPositionPreference || (OverlayWidgetPositionPreference = {}));
 /**
- * How a suggest provider was triggered.
+ * Vertical Lane in the overview ruler of the editor.
  */
-var CompletionTriggerKind;
-(function (CompletionTriggerKind) {
-    CompletionTriggerKind[CompletionTriggerKind["Invoke"] = 0] = "Invoke";
-    CompletionTriggerKind[CompletionTriggerKind["TriggerCharacter"] = 1] = "TriggerCharacter";
-    CompletionTriggerKind[CompletionTriggerKind["TriggerForIncompleteCompletions"] = 2] = "TriggerForIncompleteCompletions";
-})(CompletionTriggerKind || (CompletionTriggerKind = {}));
+var OverviewRulerLane;
+(function (OverviewRulerLane) {
+    OverviewRulerLane[OverviewRulerLane["Left"] = 1] = "Left";
+    OverviewRulerLane[OverviewRulerLane["Center"] = 2] = "Center";
+    OverviewRulerLane[OverviewRulerLane["Right"] = 4] = "Right";
+    OverviewRulerLane[OverviewRulerLane["Full"] = 7] = "Full";
+})(OverviewRulerLane || (OverviewRulerLane = {}));
+var RenderLineNumbersType;
+(function (RenderLineNumbersType) {
+    RenderLineNumbersType[RenderLineNumbersType["Off"] = 0] = "Off";
+    RenderLineNumbersType[RenderLineNumbersType["On"] = 1] = "On";
+    RenderLineNumbersType[RenderLineNumbersType["Relative"] = 2] = "Relative";
+    RenderLineNumbersType[RenderLineNumbersType["Interval"] = 3] = "Interval";
+    RenderLineNumbersType[RenderLineNumbersType["Custom"] = 4] = "Custom";
+})(RenderLineNumbersType || (RenderLineNumbersType = {}));
+var RenderMinimap;
+(function (RenderMinimap) {
+    RenderMinimap[RenderMinimap["None"] = 0] = "None";
+    RenderMinimap[RenderMinimap["Text"] = 1] = "Text";
+    RenderMinimap[RenderMinimap["Blocks"] = 2] = "Blocks";
+})(RenderMinimap || (RenderMinimap = {}));
+var ScrollType;
+(function (ScrollType) {
+    ScrollType[ScrollType["Smooth"] = 0] = "Smooth";
+    ScrollType[ScrollType["Immediate"] = 1] = "Immediate";
+})(ScrollType || (ScrollType = {}));
+var ScrollbarVisibility;
+(function (ScrollbarVisibility) {
+    ScrollbarVisibility[ScrollbarVisibility["Auto"] = 1] = "Auto";
+    ScrollbarVisibility[ScrollbarVisibility["Hidden"] = 2] = "Hidden";
+    ScrollbarVisibility[ScrollbarVisibility["Visible"] = 3] = "Visible";
+})(ScrollbarVisibility || (ScrollbarVisibility = {}));
+/**
+ * The direction of a selection.
+ */
+var SelectionDirection;
+(function (SelectionDirection) {
+    /**
+     * The selection starts above where it ends.
+     */
+    SelectionDirection[SelectionDirection["LTR"] = 0] = "LTR";
+    /**
+     * The selection starts below where it ends.
+     */
+    SelectionDirection[SelectionDirection["RTL"] = 1] = "RTL";
+})(SelectionDirection || (SelectionDirection = {}));
 var SignatureHelpTriggerKind;
 (function (SignatureHelpTriggerKind) {
     SignatureHelpTriggerKind[SignatureHelpTriggerKind["Invoke"] = 1] = "Invoke";
     SignatureHelpTriggerKind[SignatureHelpTriggerKind["TriggerCharacter"] = 2] = "TriggerCharacter";
     SignatureHelpTriggerKind[SignatureHelpTriggerKind["ContentChange"] = 3] = "ContentChange";
 })(SignatureHelpTriggerKind || (SignatureHelpTriggerKind = {}));
-/**
- * A document highlight kind.
- */
-var DocumentHighlightKind;
-(function (DocumentHighlightKind) {
-    /**
-     * A textual occurrence.
-     */
-    DocumentHighlightKind[DocumentHighlightKind["Text"] = 0] = "Text";
-    /**
-     * Read-access of a symbol, like reading a variable.
-     */
-    DocumentHighlightKind[DocumentHighlightKind["Read"] = 1] = "Read";
-    /**
-     * Write-access of a symbol, like writing to a variable.
-     */
-    DocumentHighlightKind[DocumentHighlightKind["Write"] = 2] = "Write";
-})(DocumentHighlightKind || (DocumentHighlightKind = {}));
 /**
  * A symbol kind.
  */
@@ -128032,6 +128217,99 @@ var SymbolTag;
 (function (SymbolTag) {
     SymbolTag[SymbolTag["Deprecated"] = 1] = "Deprecated";
 })(SymbolTag || (SymbolTag = {}));
+/**
+ * The kind of animation in which the editor's cursor should be rendered.
+ */
+var TextEditorCursorBlinkingStyle;
+(function (TextEditorCursorBlinkingStyle) {
+    /**
+     * Hidden
+     */
+    TextEditorCursorBlinkingStyle[TextEditorCursorBlinkingStyle["Hidden"] = 0] = "Hidden";
+    /**
+     * Blinking
+     */
+    TextEditorCursorBlinkingStyle[TextEditorCursorBlinkingStyle["Blink"] = 1] = "Blink";
+    /**
+     * Blinking with smooth fading
+     */
+    TextEditorCursorBlinkingStyle[TextEditorCursorBlinkingStyle["Smooth"] = 2] = "Smooth";
+    /**
+     * Blinking with prolonged filled state and smooth fading
+     */
+    TextEditorCursorBlinkingStyle[TextEditorCursorBlinkingStyle["Phase"] = 3] = "Phase";
+    /**
+     * Expand collapse animation on the y axis
+     */
+    TextEditorCursorBlinkingStyle[TextEditorCursorBlinkingStyle["Expand"] = 4] = "Expand";
+    /**
+     * No-Blinking
+     */
+    TextEditorCursorBlinkingStyle[TextEditorCursorBlinkingStyle["Solid"] = 5] = "Solid";
+})(TextEditorCursorBlinkingStyle || (TextEditorCursorBlinkingStyle = {}));
+/**
+ * The style in which the editor's cursor should be rendered.
+ */
+var TextEditorCursorStyle;
+(function (TextEditorCursorStyle) {
+    /**
+     * As a vertical line (sitting between two characters).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["Line"] = 1] = "Line";
+    /**
+     * As a block (sitting on top of a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["Block"] = 2] = "Block";
+    /**
+     * As a horizontal line (sitting under a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["Underline"] = 3] = "Underline";
+    /**
+     * As a thin vertical line (sitting between two characters).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["LineThin"] = 4] = "LineThin";
+    /**
+     * As an outlined block (sitting on top of a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["BlockOutline"] = 5] = "BlockOutline";
+    /**
+     * As a thin horizontal line (sitting under a character).
+     */
+    TextEditorCursorStyle[TextEditorCursorStyle["UnderlineThin"] = 6] = "UnderlineThin";
+})(TextEditorCursorStyle || (TextEditorCursorStyle = {}));
+/**
+ * Describes the behavior of decorations when typing/editing near their edges.
+ * Note: Please do not edit the values, as they very carefully match `DecorationRangeBehavior`
+ */
+var TrackedRangeStickiness;
+(function (TrackedRangeStickiness) {
+    TrackedRangeStickiness[TrackedRangeStickiness["AlwaysGrowsWhenTypingAtEdges"] = 0] = "AlwaysGrowsWhenTypingAtEdges";
+    TrackedRangeStickiness[TrackedRangeStickiness["NeverGrowsWhenTypingAtEdges"] = 1] = "NeverGrowsWhenTypingAtEdges";
+    TrackedRangeStickiness[TrackedRangeStickiness["GrowsOnlyWhenTypingBefore"] = 2] = "GrowsOnlyWhenTypingBefore";
+    TrackedRangeStickiness[TrackedRangeStickiness["GrowsOnlyWhenTypingAfter"] = 3] = "GrowsOnlyWhenTypingAfter";
+})(TrackedRangeStickiness || (TrackedRangeStickiness = {}));
+/**
+ * Describes how to indent wrapped lines.
+ */
+var WrappingIndent;
+(function (WrappingIndent) {
+    /**
+     * No indentation => wrapped lines begin at column 1.
+     */
+    WrappingIndent[WrappingIndent["None"] = 0] = "None";
+    /**
+     * Same => wrapped lines get the same indentation as the parent.
+     */
+    WrappingIndent[WrappingIndent["Same"] = 1] = "Same";
+    /**
+     * Indent => wrapped lines get +1 indentation toward the parent.
+     */
+    WrappingIndent[WrappingIndent["Indent"] = 2] = "Indent";
+    /**
+     * DeepIndent => wrapped lines get +2 indentation toward the parent.
+     */
+    WrappingIndent[WrappingIndent["DeepIndent"] = 3] = "DeepIndent";
+})(WrappingIndent || (WrappingIndent = {}));
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/standalone/standaloneBase.js
 /*---------------------------------------------------------------------------------------------
@@ -128081,7 +128359,7 @@ function createMonacoBaseAPI() {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/standalone-tokens.css
-var standalone_tokens = __webpack_require__(424);
+var standalone_tokens = __webpack_require__(425);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/services/codeEditorService.js
 var services_codeEditorService = __webpack_require__(36);
@@ -128425,7 +128703,7 @@ var openerService_OpenerService = /** @class */ (function () {
 var diffNavigator = __webpack_require__(285);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/fontInfo.js
-var fontInfo = __webpack_require__(139);
+var fontInfo = __webpack_require__(138);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/editorCommon.js
 var editorCommon = __webpack_require__(40);
@@ -131958,7 +132236,7 @@ var common_severity = __webpack_require__(76);
 var editorBrowser = __webpack_require__(103);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/commonEditorConfig.js
-var commonEditorConfig = __webpack_require__(138);
+var commonEditorConfig = __webpack_require__(137);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/editOperation.js
 var editOperation = __webpack_require__(59);
@@ -133430,7 +133708,7 @@ var codeEditorWidget = __webpack_require__(144);
 var diffEditorWidget = __webpack_require__(286);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/editorAction.js
-var editorAction = __webpack_require__(181);
+var editorAction = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/common/standaloneThemeService.js
 var common_standaloneThemeService = __webpack_require__(110);
@@ -133772,7 +134050,7 @@ var FrankensteinMode = /** @class */ (function () {
 var common_path = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/glob.js
-var glob = __webpack_require__(178);
+var glob = __webpack_require__(179);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/common/mime.js
 /*---------------------------------------------------------------------------------------------
@@ -134325,7 +134603,7 @@ var modeServiceImpl_ModeServiceImpl = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
-var textModel = __webpack_require__(28);
+var textModel = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/tokensStore.js
 var tokensStore = __webpack_require__(113);
@@ -136711,13 +136989,13 @@ commands["a" /* CommandsRegistry */].registerCommand(contextkey["e" /* SET_CONTE
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/contextview/browser/contextMenuHandler.css
-var contextMenuHandler = __webpack_require__(430);
+var contextMenuHandler = __webpack_require__(431);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/actions.js
 var base_common_actions = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/menu/menu.js
-var menu_menu = __webpack_require__(179);
+var menu_menu = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/theme/common/styler.js
 var styler = __webpack_require__(118);
@@ -136914,7 +137192,7 @@ var contextMenuService_ContextMenuService = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.css
-var contextview = __webpack_require__(432);
+var contextview = __webpack_require__(433);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/range.js
 var common_range = __webpack_require__(85);
@@ -137277,7 +137555,7 @@ var graph_Graph = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/instantiation/common/descriptors.js
-var descriptors = __webpack_require__(143);
+var descriptors = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/instantiation/common/serviceCollection.js
 var serviceCollection = __webpack_require__(122);
@@ -137599,10 +137877,10 @@ var Trace = /** @class */ (function () {
 //#endregion
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/label/common/label.js
-var common_label = __webpack_require__(135);
+var common_label = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/list/browser/listService.js + 9 modules
-var listService = __webpack_require__(141);
+var listService = __webpack_require__(140);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/markers/common/markers.js
 var common_markers = __webpack_require__(49);
@@ -138041,7 +138319,7 @@ var menuService_Menu = /** @class */ (function () {
 }());
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/markersDecorationService.js
-var markersDecorationService = __webpack_require__(183);
+var markersDecorationService = __webpack_require__(184);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/markerDecorationsServiceImpl.js
 /*---------------------------------------------------------------------------------------------
@@ -138869,19 +139147,26 @@ function createMonacoEditorAPI() {
         setTheme: setTheme,
         remeasureFonts: remeasureFonts,
         // enums
-        ScrollbarVisibility: ScrollbarVisibility,
-        OverviewRulerLane: OverviewRulerLane,
-        MinimapPosition: MinimapPosition,
-        EndOfLinePreference: EndOfLinePreference,
-        DefaultEndOfLine: DefaultEndOfLine,
-        EndOfLineSequence: EndOfLineSequence,
-        TrackedRangeStickiness: TrackedRangeStickiness,
-        CursorChangeReason: CursorChangeReason,
-        MouseTargetType: MouseTargetType,
+        AccessibilitySupport: AccessibilitySupport,
         ContentWidgetPositionPreference: ContentWidgetPositionPreference,
+        CursorChangeReason: CursorChangeReason,
+        DefaultEndOfLine: DefaultEndOfLine,
+        EditorAutoIndentStrategy: EditorAutoIndentStrategy,
+        EditorOption: EditorOption,
+        EndOfLinePreference: EndOfLinePreference,
+        EndOfLineSequence: EndOfLineSequence,
+        MinimapPosition: MinimapPosition,
+        MouseTargetType: MouseTargetType,
         OverlayWidgetPositionPreference: OverlayWidgetPositionPreference,
+        OverviewRulerLane: OverviewRulerLane,
+        RenderLineNumbersType: RenderLineNumbersType,
         RenderMinimap: RenderMinimap,
+        ScrollbarVisibility: ScrollbarVisibility,
         ScrollType: ScrollType,
+        TextEditorCursorBlinkingStyle: TextEditorCursorBlinkingStyle,
+        TextEditorCursorStyle: TextEditorCursorStyle,
+        TrackedRangeStickiness: TrackedRangeStickiness,
+        WrappingIndent: WrappingIndent,
         // classes
         ConfigurationChangedEvent: editorOptions["a" /* ConfigurationChangedEvent */],
         BareFontInfo: fontInfo["a" /* BareFontInfo */],
@@ -138890,6 +139175,7 @@ function createMonacoEditorAPI() {
         FindMatch: common_model["b" /* FindMatch */],
         // vars
         EditorType: editorCommon["a" /* EditorType */],
+        EditorOptions: editorOptions["e" /* EditorOptions */]
     };
 }
 
@@ -139885,19 +140171,19 @@ var diffEditorWidget = __webpack_require__(286);
 var diffNavigator = __webpack_require__(285);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/bracketMatching/bracketMatching.js
-var bracketMatching = __webpack_require__(187);
+var bracketMatching = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/caretOperations/caretOperations.js + 1 modules
 var caretOperations = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/caretOperations/transpose.js
-var transpose = __webpack_require__(199);
+var transpose = __webpack_require__(200);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/clipboard/clipboard.js
-var clipboard = __webpack_require__(188);
+var clipboard = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/codeActionContributions.js
-var codeActionContributions = __webpack_require__(189);
+var codeActionContributions = __webpack_require__(190);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codelens/codelensController.js + 3 modules
 var codelensController = __webpack_require__(272);
@@ -139912,7 +140198,7 @@ var comment = __webpack_require__(275);
 var contextmenu = __webpack_require__(278);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/cursorUndo/cursorUndo.js
-var cursorUndo = __webpack_require__(190);
+var cursorUndo = __webpack_require__(191);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/dnd/dnd.js + 1 modules
 var dnd = __webpack_require__(279);
@@ -139924,7 +140210,7 @@ var findController = __webpack_require__(145);
 var folding = __webpack_require__(269);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/fontZoom/fontZoom.js
-var fontZoom = __webpack_require__(191);
+var fontZoom = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/format/formatActions.js + 3 modules
 var formatActions = __webpack_require__(273);
@@ -139951,7 +140237,7 @@ var linesOperations = __webpack_require__(271);
 var links = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/multicursor/multicursor.js
-var multicursor = __webpack_require__(195);
+var multicursor = __webpack_require__(196);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/parameterHints.js + 3 modules
 var parameterHints = __webpack_require__(274);
@@ -140027,13 +140313,13 @@ Object(editorExtensions["f" /* registerEditorAction */])(tokenization_ForceRetok
 var toggleTabFocusMode = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/wordHighlighter/wordHighlighter.js
-var wordHighlighter = __webpack_require__(200);
+var wordHighlighter = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/wordOperations/wordOperations.js
-var wordOperations = __webpack_require__(136);
+var wordOperations = __webpack_require__(135);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/wordPartOperations/wordPartOperations.js
-var wordPartOperations = __webpack_require__(201);
+var wordPartOperations = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/standaloneStrings.js
 var standaloneStrings = __webpack_require__(31);
