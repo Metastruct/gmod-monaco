@@ -33,7 +33,7 @@ let editor = monaco.editor.create(document.getElementById("container"), {
   autoIndent: "full",
   formatOnPaste: true,
   formatOnType: true,
-  acceptSuggestionOnEnter: "smart"
+  acceptSuggestionOnEnter: "off"
 
   // snippetSuggestions
 });
