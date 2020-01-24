@@ -64,8 +64,34 @@ export class LuaCompletionProvider
       return { suggestions: [] };
     }
 
+    let word: monaco.editor.IWordAtPosition = model.getWordAtPosition(position);
+    let replace: monaco.Range = word
+      ? new monaco.Range(
+          position.lineNumber,
+          word.startColumn,
+          position.lineNumber,
+          word.endColumn
+        )
+      : monaco.Range.fromPositions(position);
+    let insert: monaco.Range = replace.setEndPosition(
+      position.lineNumber,
+      position.column
+    );
+
     return {
-      suggestions: [] //this.suggestionList
+      suggestions: this.suggestionList
+        .filter(
+          (item: monaco.languages.CompletionItem) =>
+            item.label.indexOf(word.word) !== -1
+        )
+        .map((item: monaco.languages.CompletionItem) => {
+          return {
+            kind: item.kind,
+            label: item.label,
+            insertText: item.insertText,
+            range: { insert, replace }
+          };
+        })
     };
   }
 }
