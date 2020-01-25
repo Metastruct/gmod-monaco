@@ -127404,9 +127404,12 @@ var LuaCompletionProvider = /** @class */ (function () {
             return { suggestions: [] };
         }
         // TODO handle ctrl-space? show everything?
-        var textUntilPosition = model.getLineContent(position.lineNumber);
+        var lineContent = model.getLineContent(position.lineNumber);
+        var lineUntilPosition = lineContent
+            .substr(0, position.column - 1)
+            .toLowerCase();
         // regex for matching how much to replace
-        var match = textUntilPosition.match(/([a-z0-9.]+)$/);
+        var match = lineUntilPosition.match(/([a-z0-9.]+)$/);
         if (!match) {
             return { suggestions: [] };
         }
