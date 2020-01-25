@@ -66,34 +66,33 @@ export class LuaCompletionProvider
             return { suggestions: [] };
         }
 
-        let word = model.getWordAtPosition(position);
-        let replace: monaco.Range = word
-            ? new monaco.Range(
-                  position.lineNumber,
-                  word.startColumn,
-                  position.lineNumber,
-                  word.endColumn
-              )
-            : monaco.Range.fromPositions(position);
-        let insert: monaco.Range = replace.setEndPosition(
-            position.lineNumber,
-            position.column
-        );
+        // TODO handle ctrl-space? show everything?
+
+        const textUntilPosition = model.getLineContent(position.lineNumber);
+
+        // regex for matching how much to replace
+        const match = textUntilPosition.match(/([a-z0-9.]+)$/);
+
+        if (!match) {
+            return { suggestions: [] };
+        }
+
+        // first capture group
+        const word = match[1];
+
+        // range tells the engine how much to replace
+        const range = {
+            startLineNumber: position.lineNumber,
+            endLineNumber: position.lineNumber,
+            startColumn: position.column - word.length,
+            endColumn: position.column,
+        };
 
         return {
-            suggestions: this.suggestionList
-                .filter(
-                    (item: monaco.languages.CompletionItem) =>
-                        word && item.label.indexOf(word.word) !== -1
-                )
-                .map((item: monaco.languages.CompletionItem) => {
-                    return {
-                        kind: item.kind,
-                        label: item.label,
-                        insertText: item.insertText,
-                        range: { insert, replace },
-                    };
-                }),
+            suggestions: this.suggestionList.map(suggestion => ({
+                ...suggestion,
+                range,
+            })),
         };
     }
 }
