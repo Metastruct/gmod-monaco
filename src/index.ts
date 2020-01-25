@@ -22,7 +22,7 @@ monaco.languages.registerCompletionItemProvider(
 );
 
 const editor = monaco.editor.create(document.getElementById("container")!, {
-    value: ["do", "\tlua()", "end"].join("\n"),
+    value: "",
     language: "lua",
 
     theme: "vs-dark",
@@ -34,8 +34,6 @@ const editor = monaco.editor.create(document.getElementById("container")!, {
     formatOnPaste: true,
     formatOnType: true,
     acceptSuggestionOnEnter: "off",
-
-    // snippetSuggestions
 });
 
 editor.focus();
