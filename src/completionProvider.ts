@@ -68,10 +68,13 @@ export class LuaCompletionProvider
 
         // TODO handle ctrl-space? show everything?
 
-        const textUntilPosition = model.getLineContent(position.lineNumber);
+        const lineContent = model.getLineContent(position.lineNumber);
+        const lineUntilPosition = lineContent
+            .substr(0, position.column - 1)
+            .toLowerCase();
 
         // regex for matching how much to replace
-        const match = textUntilPosition.match(/([a-z0-9.]+)$/);
+        const match = lineUntilPosition.match(/([a-z0-9.]+)$/);
 
         if (!match) {
             return { suggestions: [] };
