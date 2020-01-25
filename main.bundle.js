@@ -118702,7 +118702,7 @@ monaco.languages.setLanguageConfiguration("lua", lua.conf);
 monaco.languages.registerDocumentFormattingEditProvider("lua", new formatter_1.LuaFormatter());
 monaco.languages.registerCompletionItemProvider("lua", new completionProvider_1.LuaCompletionProvider());
 var editor = monaco.editor.create(document.getElementById("container"), {
-    value: ["do", "\tlua()", "end"].join("\n"),
+    value: "",
     language: "lua",
     theme: "vs-dark",
     minimap: {
@@ -127289,6 +127289,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -127392,24 +127403,24 @@ var LuaCompletionProvider = /** @class */ (function () {
             // return an empty completion list, we dont have the data yet anyway
             return { suggestions: [] };
         }
-        var word = model.getWordAtPosition(position);
-        var replace = word
-            ? new monaco.Range(position.lineNumber, word.startColumn, position.lineNumber, word.endColumn)
-            : monaco.Range.fromPositions(position);
-        var insert = replace.setEndPosition(position.lineNumber, position.column);
+        // TODO handle ctrl-space? show everything?
+        var textUntilPosition = model.getLineContent(position.lineNumber);
+        // regex for matching how much to replace
+        var match = textUntilPosition.match(/([a-z0-9.]+)$/);
+        if (!match) {
+            return { suggestions: [] };
+        }
+        // first capture group
+        var word = match[1];
+        // range tells the engine how much to replace
+        var range = {
+            startLineNumber: position.lineNumber,
+            endLineNumber: position.lineNumber,
+            startColumn: position.column - word.length,
+            endColumn: position.column,
+        };
         return {
-            suggestions: this.suggestionList
-                .filter(function (item) {
-                return word && item.label.indexOf(word.word) !== -1;
-            })
-                .map(function (item) {
-                return {
-                    kind: item.kind,
-                    label: item.label,
-                    insertText: item.insertText,
-                    range: { insert: insert, replace: replace },
-                };
-            }),
+            suggestions: this.suggestionList.map(function (suggestion) { return (__assign(__assign({}, suggestion), { range: range })); }),
         };
     };
     return LuaCompletionProvider;
