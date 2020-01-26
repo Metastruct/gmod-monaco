@@ -2,6 +2,7 @@ import * as monaco from "monaco-editor";
 import * as lua from "./lua";
 import { LuaFormatter } from "./formatter";
 import { LuaCompletionProvider } from "./completionProvider";
+import { LuaQuickFixActionProvider } from "./quickFixActionProvider";
 import { gmodInterface } from "./gmodInterface";
 
 monaco.languages.register({
@@ -20,6 +21,7 @@ monaco.languages.registerCompletionItemProvider(
     "lua",
     new LuaCompletionProvider()
 );
+monaco.languages.registerCodeActionProvider("lua", new LuaQuickFixActionProvider());
 
 const editor = monaco.editor.create(document.getElementById("container")!, {
     value: "",
