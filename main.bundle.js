@@ -55357,7 +55357,7 @@ __webpack_require__(200);
 __webpack_require__(201);
 __webpack_require__(135);
 __webpack_require__(202);
-module.exports = __webpack_require__(448);
+module.exports = __webpack_require__(449);
 __webpack_require__(203);
 __webpack_require__(204);
 __webpack_require__(205);
@@ -96612,7 +96612,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'abap',
     extensions: ['.abap'],
     aliases: ['abap', 'ABAP'],
-    loader: function () { return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 451)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 452)); }
 });
 
 
@@ -96634,7 +96634,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.cls'],
     aliases: ['Apex', 'apex'],
     mimetypes: ['text/x-apex-source', 'text/x-apex'],
-    loader: function () { return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 452)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 453)); }
 });
 
 
@@ -96655,7 +96655,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'azcli',
     extensions: ['.azcli'],
     aliases: ['Azure CLI', 'azcli'],
-    loader: function () { return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 453)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 454)); }
 });
 
 
@@ -96676,7 +96676,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'bat',
     extensions: ['.bat', '.cmd'],
     aliases: ['Batch', 'bat'],
-    loader: function () { return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, 454)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, 455)); }
 });
 
 
@@ -96697,7 +96697,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'cameligo',
     extensions: ['.mligo'],
     aliases: ['Cameligo'],
-    loader: function () { return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, 455)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, 456)); }
 });
 
 
@@ -96718,7 +96718,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'clojure',
     extensions: ['.clj', '.cljs', '.cljc', '.edn'],
     aliases: ['clojure', 'Clojure'],
-    loader: function () { return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 456)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 457)); }
 });
 
 
@@ -96740,7 +96740,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.coffee'],
     aliases: ['CoffeeScript', 'coffeescript', 'coffee'],
     mimetypes: ['text/x-coffeescript', 'text/coffeescript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 12).then(__webpack_require__.bind(null, 457)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 12).then(__webpack_require__.bind(null, 458)); }
 });
 
 
@@ -96788,7 +96788,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'csharp',
     extensions: ['.cs', '.csx', '.cake'],
     aliases: ['C#', 'csharp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 458)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 459)); }
 });
 
 
@@ -96809,7 +96809,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'csp',
     extensions: [],
     aliases: ['CSP', 'csp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 14).then(__webpack_require__.bind(null, 459)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 14).then(__webpack_require__.bind(null, 460)); }
 });
 
 
@@ -96831,7 +96831,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.css'],
     aliases: ['CSS', 'css'],
     mimetypes: ['text/css'],
-    loader: function () { return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 460)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 461)); }
 });
 
 
@@ -96949,7 +96949,7 @@ function createAPI() {
 monaco.languages.css = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 509));
+    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 510));
 }
 monaco.languages.onLanguage('less', function () {
     getMode().then(function (mode) { return mode.setupMode(lessDefaults); });
@@ -96980,7 +96980,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.dockerfile'],
     filenames: ['Dockerfile'],
     aliases: ['Dockerfile'],
-    loader: function () { return __webpack_require__.e(/* import() */ 16).then(__webpack_require__.bind(null, 461)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 16).then(__webpack_require__.bind(null, 462)); }
 });
 
 
@@ -97001,7 +97001,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'fsharp',
     extensions: ['.fs', '.fsi', '.ml', '.mli', '.fsx', '.fsscript'],
     aliases: ['F#', 'FSharp', 'fsharp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 17).then(__webpack_require__.bind(null, 462)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 17).then(__webpack_require__.bind(null, 463)); }
 });
 
 
@@ -97022,7 +97022,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'go',
     extensions: ['.go'],
     aliases: ['Go'],
-    loader: function () { return __webpack_require__.e(/* import() */ 18).then(__webpack_require__.bind(null, 463)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 18).then(__webpack_require__.bind(null, 464)); }
 });
 
 
@@ -97044,7 +97044,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.graphql', '.gql'],
     aliases: ['GraphQL', 'graphql', 'gql'],
     mimetypes: ['application/graphql'],
-    loader: function () { return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 464)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 465)); }
 });
 
 
@@ -97066,7 +97066,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.handlebars', '.hbs'],
     aliases: ['Handlebars', 'handlebars'],
     mimetypes: ['text/x-handlebars-template'],
-    loader: function () { return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 465)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 466)); }
 });
 
 
@@ -97088,7 +97088,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.html', '.htm', '.shtml', '.xhtml', '.mdoc', '.jsp', '.asp', '.aspx', '.jshtm'],
     aliases: ['HTML', 'htm', 'html', 'xhtml'],
     mimetypes: ['text/html', 'text/x-jshtm', 'text/template', 'text/ng-template'],
-    loader: function () { return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, 466)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, 467)); }
 });
 
 
@@ -97215,7 +97215,7 @@ function createAPI() {
 monaco.languages.html = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 510));
+    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 511));
 }
 monaco.languages.onLanguage(htmlLanguageId, function () {
     getMode().then(function (mode) { return mode.setupMode(htmlDefaults); });
@@ -97246,7 +97246,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.ini', '.properties', '.gitconfig'],
     filenames: ['config', '.gitattributes', '.gitconfig', '.editorconfig'],
     aliases: ['Ini', 'ini'],
-    loader: function () { return __webpack_require__.e(/* import() */ 22).then(__webpack_require__.bind(null, 467)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 22).then(__webpack_require__.bind(null, 468)); }
 });
 
 
@@ -97268,7 +97268,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.java', '.jav'],
     aliases: ['Java', 'java'],
     mimetypes: ['text/x-java-source', 'text/x-java'],
-    loader: function () { return __webpack_require__.e(/* import() */ 23).then(__webpack_require__.bind(null, 468)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 23).then(__webpack_require__.bind(null, 469)); }
 });
 
 
@@ -97292,7 +97292,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     filenames: ['jakefile'],
     aliases: ['JavaScript', 'javascript', 'js'],
     mimetypes: ['text/javascript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 469)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 470)); }
 });
 
 
@@ -97388,7 +97388,7 @@ function createAPI() {
 monaco.languages.json = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 511));
+    return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 512));
 }
 monaco.languages.register({
     id: 'json',
@@ -97419,7 +97419,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.kt'],
     aliases: ['Kotlin', 'kotlin'],
     mimetypes: ['text/x-kotlin-source', 'text/x-kotlin'],
-    loader: function () { return __webpack_require__.e(/* import() */ 24).then(__webpack_require__.bind(null, 470)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 24).then(__webpack_require__.bind(null, 471)); }
 });
 
 
@@ -97441,7 +97441,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.less'],
     aliases: ['Less', 'less'],
     mimetypes: ['text/x-less', 'text/less'],
-    loader: function () { return __webpack_require__.e(/* import() */ 25).then(__webpack_require__.bind(null, 471)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 25).then(__webpack_require__.bind(null, 472)); }
 });
 
 
@@ -97462,7 +97462,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'lua',
     extensions: ['.lua'],
     aliases: ['Lua', 'lua'],
-    loader: function () { return __webpack_require__.e(/* import() */ 26).then(__webpack_require__.bind(null, 472)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 26).then(__webpack_require__.bind(null, 473)); }
 });
 
 
@@ -97483,7 +97483,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'markdown',
     extensions: ['.md', '.markdown', '.mdown', '.mkdn', '.mkd', '.mdwn', '.mdtxt', '.mdtext'],
     aliases: ['Markdown', 'markdown'],
-    loader: function () { return __webpack_require__.e(/* import() */ 27).then(__webpack_require__.bind(null, 473)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 27).then(__webpack_require__.bind(null, 474)); }
 });
 
 
@@ -97505,7 +97505,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.s'],
     aliases: ['MIPS', 'MIPS-V'],
     mimetypes: ['text/x-mips', 'text/mips', 'text/plaintext'],
-    loader: function () { return __webpack_require__.e(/* import() */ 28).then(__webpack_require__.bind(null, 474)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 28).then(__webpack_require__.bind(null, 475)); }
 });
 
 
@@ -97526,7 +97526,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'msdax',
     extensions: ['.dax', '.msdax'],
     aliases: ['DAX', 'MSDAX'],
-    loader: function () { return __webpack_require__.e(/* import() */ 29).then(__webpack_require__.bind(null, 475)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 29).then(__webpack_require__.bind(null, 476)); }
 });
 
 
@@ -97547,7 +97547,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'mysql',
     extensions: [],
     aliases: ['MySQL', 'mysql'],
-    loader: function () { return __webpack_require__.e(/* import() */ 30).then(__webpack_require__.bind(null, 476)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 30).then(__webpack_require__.bind(null, 477)); }
 });
 
 
@@ -97568,7 +97568,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'objective-c',
     extensions: ['.m'],
     aliases: ['Objective-C'],
-    loader: function () { return __webpack_require__.e(/* import() */ 31).then(__webpack_require__.bind(null, 477)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 31).then(__webpack_require__.bind(null, 478)); }
 });
 
 
@@ -97590,7 +97590,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.pas', '.p', '.pp'],
     aliases: ['Pascal', 'pas'],
     mimetypes: ['text/x-pascal-source', 'text/x-pascal'],
-    loader: function () { return __webpack_require__.e(/* import() */ 32).then(__webpack_require__.bind(null, 478)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 32).then(__webpack_require__.bind(null, 479)); }
 });
 
 
@@ -97611,7 +97611,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'pascaligo',
     extensions: ['.ligo'],
     aliases: ['Pascaligo', 'ligo'],
-    loader: function () { return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, 479)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, 480)); }
 });
 
 
@@ -97632,7 +97632,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'perl',
     extensions: ['.pl'],
     aliases: ['Perl', 'pl'],
-    loader: function () { return __webpack_require__.e(/* import() */ 34).then(__webpack_require__.bind(null, 480)); },
+    loader: function () { return __webpack_require__.e(/* import() */ 34).then(__webpack_require__.bind(null, 481)); },
 });
 
 
@@ -97653,7 +97653,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'pgsql',
     extensions: [],
     aliases: ['PostgreSQL', 'postgres', 'pg', 'postgre'],
-    loader: function () { return __webpack_require__.e(/* import() */ 35).then(__webpack_require__.bind(null, 481)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 35).then(__webpack_require__.bind(null, 482)); }
 });
 
 
@@ -97675,7 +97675,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.php', '.php4', '.php5', '.phtml', '.ctp'],
     aliases: ['PHP', 'php'],
     mimetypes: ['application/x-php'],
-    loader: function () { return __webpack_require__.e(/* import() */ 36).then(__webpack_require__.bind(null, 482)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 36).then(__webpack_require__.bind(null, 483)); }
 });
 
 
@@ -97696,7 +97696,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'postiats',
     extensions: ['.dats', '.sats', '.hats'],
     aliases: ['ATS', 'ATS/Postiats'],
-    loader: function () { return __webpack_require__.e(/* import() */ 37).then(__webpack_require__.bind(null, 483)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 37).then(__webpack_require__.bind(null, 484)); }
 });
 
 
@@ -97717,7 +97717,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'powerquery',
     extensions: ['.pq', '.pqm'],
     aliases: ['PQ', 'M', 'Power Query', 'Power Query M'],
-    loader: function () { return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, 484)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, 485)); }
 });
 
 
@@ -97738,7 +97738,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'powershell',
     extensions: ['.ps1', '.psm1', '.psd1'],
     aliases: ['PowerShell', 'powershell', 'ps', 'ps1'],
-    loader: function () { return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, 485)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, 486)); }
 });
 
 
@@ -97759,7 +97759,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'pug',
     extensions: ['.jade', '.pug'],
     aliases: ['Pug', 'Jade', 'jade'],
-    loader: function () { return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, 486)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, 487)); }
 });
 
 
@@ -97781,7 +97781,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.py', '.rpy', '.pyw', '.cpy', '.gyp', '.gypi'],
     aliases: ['Python', 'py'],
     firstLine: '^#!/.*\\bpython[0-9.-]*\\b',
-    loader: function () { return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, 487)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, 488)); }
 });
 
 
@@ -97802,7 +97802,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'r',
     extensions: ['.r', '.rhistory', '.rprofile', '.rt'],
     aliases: ['R', 'r'],
-    loader: function () { return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, 488)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, 489)); }
 });
 
 
@@ -97824,7 +97824,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.cshtml'],
     aliases: ['Razor', 'razor'],
     mimetypes: ['text/x-cshtml'],
-    loader: function () { return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, 489)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, 490)); }
 });
 
 
@@ -97845,7 +97845,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'redis',
     extensions: ['.redis'],
     aliases: ['redis'],
-    loader: function () { return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, 490)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, 491)); }
 });
 
 
@@ -97866,7 +97866,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'redshift',
     extensions: [],
     aliases: ['Redshift', 'redshift'],
-    loader: function () { return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, 491)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, 492)); }
 });
 
 
@@ -97887,7 +97887,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'restructuredtext',
     extensions: ['.rst'],
     aliases: ['reStructuredText', 'restructuredtext'],
-    loader: function () { return __webpack_require__.e(/* import() */ 46).then(__webpack_require__.bind(null, 492)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 46).then(__webpack_require__.bind(null, 493)); }
 });
 
 
@@ -97909,7 +97909,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.rb', '.rbx', '.rjs', '.gemspec', '.pp'],
     filenames: ['rakefile'],
     aliases: ['Ruby', 'rb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 47).then(__webpack_require__.bind(null, 493)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 47).then(__webpack_require__.bind(null, 494)); }
 });
 
 
@@ -97930,7 +97930,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'rust',
     extensions: ['.rs', '.rlib'],
     aliases: ['Rust', 'rust'],
-    loader: function () { return __webpack_require__.e(/* import() */ 48).then(__webpack_require__.bind(null, 494)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 48).then(__webpack_require__.bind(null, 495)); }
 });
 
 
@@ -97951,7 +97951,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'sb',
     extensions: ['.sb'],
     aliases: ['Small Basic', 'sb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 49).then(__webpack_require__.bind(null, 495)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 49).then(__webpack_require__.bind(null, 496)); }
 });
 
 
@@ -97972,7 +97972,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'scheme',
     extensions: ['.scm', '.ss', '.sch', '.rkt'],
     aliases: ['scheme', 'Scheme'],
-    loader: function () { return __webpack_require__.e(/* import() */ 50).then(__webpack_require__.bind(null, 496)); },
+    loader: function () { return __webpack_require__.e(/* import() */ 50).then(__webpack_require__.bind(null, 497)); },
 });
 
 
@@ -97994,7 +97994,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.scss'],
     aliases: ['Sass', 'sass', 'scss'],
     mimetypes: ['text/x-scss', 'text/scss'],
-    loader: function () { return __webpack_require__.e(/* import() */ 51).then(__webpack_require__.bind(null, 497)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 51).then(__webpack_require__.bind(null, 498)); }
 });
 
 
@@ -98015,7 +98015,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'shell',
     extensions: ['.sh', '.bash'],
     aliases: ['Shell', 'sh'],
-    loader: function () { return __webpack_require__.e(/* import() */ 52).then(__webpack_require__.bind(null, 498)); },
+    loader: function () { return __webpack_require__.e(/* import() */ 52).then(__webpack_require__.bind(null, 499)); },
 });
 
 
@@ -98036,7 +98036,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'sol',
     extensions: ['.sol'],
     aliases: ['sol', 'solidity', 'Solidity'],
-    loader: function () { return __webpack_require__.e(/* import() */ 53).then(__webpack_require__.bind(null, 499)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 53).then(__webpack_require__.bind(null, 500)); }
 });
 
 
@@ -98057,7 +98057,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'aes',
     extensions: ['.aes'],
     aliases: ['aes', 'sophia', 'Sophia'],
-    loader: function () { return __webpack_require__.e(/* import() */ 54).then(__webpack_require__.bind(null, 500)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 54).then(__webpack_require__.bind(null, 501)); }
 });
 
 
@@ -98078,7 +98078,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'sql',
     extensions: ['.sql'],
     aliases: ['SQL'],
-    loader: function () { return __webpack_require__.e(/* import() */ 55).then(__webpack_require__.bind(null, 501)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 55).then(__webpack_require__.bind(null, 502)); }
 });
 
 
@@ -98099,7 +98099,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'st',
     extensions: ['.st', '.iecst', '.iecplc', '.lc3lib'],
     aliases: ['StructuredText', 'scl', 'stl'],
-    loader: function () { return __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(null, 502)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(null, 503)); }
 });
 
 
@@ -98121,7 +98121,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     aliases: ['Swift', 'swift'],
     extensions: ['.swift'],
     mimetypes: ['text/swift'],
-    loader: function () { return __webpack_require__.e(/* import() */ 57).then(__webpack_require__.bind(null, 503)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 57).then(__webpack_require__.bind(null, 504)); }
 });
 
 
@@ -98142,7 +98142,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'tcl',
     extensions: ['.tcl'],
     aliases: ['tcl', 'Tcl', 'tcltk', 'TclTk', 'tcl/tk', 'Tcl/Tk'],
-    loader: function () { return __webpack_require__.e(/* import() */ 58).then(__webpack_require__.bind(null, 504)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 58).then(__webpack_require__.bind(null, 505)); }
 });
 
 
@@ -98164,7 +98164,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.twig'],
     aliases: ['Twig', 'twig'],
     mimetypes: ['text/x-twig'],
-    loader: function () { return __webpack_require__.e(/* import() */ 59).then(__webpack_require__.bind(null, 505)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 59).then(__webpack_require__.bind(null, 506)); }
 });
 
 
@@ -98186,7 +98186,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.ts', '.tsx'],
     aliases: ['TypeScript', 'ts', 'typescript'],
     mimetypes: ['text/typescript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 60).then(__webpack_require__.bind(null, 450)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 60).then(__webpack_require__.bind(null, 451)); }
 });
 
 
@@ -98207,7 +98207,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'vb',
     extensions: ['.vb'],
     aliases: ['Visual Basic', 'vb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 61).then(__webpack_require__.bind(null, 506)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 61).then(__webpack_require__.bind(null, 507)); }
 });
 
 
@@ -98230,7 +98230,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     firstLine: '(\\<\\?xml.*)|(\\<svg)|(\\<\\!doctype\\s+svg)',
     aliases: ['XML', 'xml'],
     mimetypes: ['text/xml', 'application/xml', 'application/xaml+xml', 'application/xml-dtd'],
-    loader: function () { return __webpack_require__.e(/* import() */ 62).then(__webpack_require__.bind(null, 507)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 62).then(__webpack_require__.bind(null, 508)); }
 });
 
 
@@ -98252,7 +98252,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.yaml', '.yml'],
     aliases: ['YAML', 'yaml', 'YML', 'yml'],
     mimetypes: ['application/x-yaml'],
-    loader: function () { return __webpack_require__.e(/* import() */ 63).then(__webpack_require__.bind(null, 508)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 63).then(__webpack_require__.bind(null, 509)); }
 });
 
 
@@ -114828,7 +114828,7 @@ function createAPI() {
 monaco.languages.typescript = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 64).then(__webpack_require__.bind(null, 515));
+    return __webpack_require__.e(/* import() */ 64).then(__webpack_require__.bind(null, 516));
 }
 monaco.languages.onLanguage('typescript', function () {
     return getMode().then(function (mode) { return mode.setupTypeScript(typescriptDefaults); });
@@ -118191,7 +118191,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_3__[/* re
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _editor_all_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(449);
+/* harmony import */ var _editor_all_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(450);
 /* harmony import */ var _standalone_browser_accessibilityHelp_accessibilityHelp_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(187);
 /* harmony import */ var _standalone_browser_iPadShowKeyboard_iPadShowKeyboard_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(194);
 /* harmony import */ var _standalone_browser_inspectTokens_inspectTokens_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(195);
@@ -118691,7 +118691,8 @@ var monaco = __importStar(__webpack_require__(177));
 var lua = __importStar(__webpack_require__(436));
 var formatter_1 = __webpack_require__(437);
 var completionProvider_1 = __webpack_require__(446);
-var gmodInterface_1 = __webpack_require__(447);
+var quickFixActionProvider_1 = __webpack_require__(447);
+var gmodInterface_1 = __webpack_require__(448);
 monaco.languages.register({
     id: "lua",
     extensions: [".lua"],
@@ -118701,6 +118702,7 @@ monaco.languages.setMonarchTokensProvider("lua", lua.language);
 monaco.languages.setLanguageConfiguration("lua", lua.conf);
 monaco.languages.registerDocumentFormattingEditProvider("lua", new formatter_1.LuaFormatter());
 monaco.languages.registerCompletionItemProvider("lua", new completionProvider_1.LuaCompletionProvider());
+monaco.languages.registerCodeActionProvider("lua", new quickFixActionProvider_1.LuaQuickFixActionProvider());
 var editor = monaco.editor.create(document.getElementById("container"), {
     value: "",
     language: "lua",
@@ -127437,6 +127439,67 @@ exports.LuaCompletionProvider = LuaCompletionProvider;
 
 "use strict";
 
+Object.defineProperty(exports, "__esModule", { value: true });
+var quickFixActions = {
+// we probably need an AST parser for these, you can add simple quickfix actions though, if you're brave enough
+/*["211"]: ( // unused local variable
+    model: monaco.editor.ITextModel,
+    markerData: monaco.editor.IMarkerData
+) => {
+    let beforeText: string = model.getLineContent(markerData.startLineNumber).substring(0, markerData.startColumn);
+    let afterText: string = model.getLineContent(markerData.startLineNumber).substring(markerData.endColumn + 1);
+    if (beforeText.match("local\s+$") && afterText.match("^\s+= ")) {
+
+    }
+
+    //markerData.startLineNumber
+    return {
+        title: "Remove",
+        diagnostic: [markerData],
+        kind: "quickfix",
+        edit: {
+            edits: [
+                {
+                    resource: model.uri,
+                    edits: [
+                        {
+                            range: markerData,
+                            text: "",
+                        },
+                    ],
+                },
+            ],
+        },
+    };
+},*/
+};
+var LuaQuickFixActionProvider = /** @class */ (function () {
+    function LuaQuickFixActionProvider() {
+    }
+    LuaQuickFixActionProvider.prototype.provideCodeActions = function (model, range, context, token) {
+        var actions = [];
+        for (var _i = 0, _a = context.markers; _i < _a.length; _i++) {
+            var markerData = _a[_i];
+            if (markerData.code && quickFixActions[markerData.code]) {
+                actions.push(quickFixActions[markerData.code](model, markerData));
+            }
+        }
+        return {
+            actions: actions,
+            dispose: function () { },
+        };
+    };
+    return LuaQuickFixActionProvider;
+}());
+exports.LuaQuickFixActionProvider = LuaQuickFixActionProvider;
+
+
+/***/ }),
+/* 448 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -127495,7 +127558,7 @@ exports.gmodInterface = maybeGmodInterface;
 
 
 /***/ }),
-/* 448 */
+/* 449 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -140167,7 +140230,7 @@ if (typeof global.require !== 'undefined' && typeof global.require.config === 'f
 
 
 /***/ }),
-/* 449 */
+/* 450 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
