@@ -4,6 +4,7 @@ interface LuaReportEvent {
     line: number;
     startColumn: number;
     endColumn: number;
+    luacheckCode: string;
 }
 
 export interface LuaReport {
