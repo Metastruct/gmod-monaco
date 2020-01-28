@@ -118701,7 +118701,7 @@ var quickFixActionProvider_1 = __webpack_require__(448);
 var gmodInterface_1 = __webpack_require__(449);
 var themeLoader_1 = __webpack_require__(450);
 var themeLoader = new themeLoader_1.ThemeLoader();
-themeLoader.loadThemes();
+var themePromise = themeLoader.loadThemes();
 monaco.languages.register({
     id: "lua",
     extensions: [".lua"],
@@ -118726,10 +118726,14 @@ var editor = monaco.editor.create(document.getElementById("container"), {
 });
 editor.focus();
 window.addEventListener("resize", function () { return editor.layout(); });
-if (gmodInterface_1.gmodInterface) {
-    gmodInterface_1.gmodInterface.SetEditor(editor);
-    gmodInterface_1.gmodInterface.OnReady();
-}
+// so all themes are available to gmod when OnReady is fired
+// this prevents any loading order issue
+themePromise.finally(function () {
+    if (gmodInterface_1.gmodInterface) {
+        gmodInterface_1.gmodInterface.SetEditor(editor);
+        gmodInterface_1.gmodInterface.OnReady();
+    }
+});
 
 
 /***/ }),
@@ -127540,6 +127544,9 @@ if (globalThis.gmodinterface) {
         },
         SetCode: function (code) {
             this.editor.setValue(code);
+        },
+        SetTheme: function (themeName) {
+            monaco.editor.setTheme(themeName);
         },
         GotoLine: function (line) {
             this.editor.revealLineInCenter(line, monaco.editor.ScrollType.Smooth);
