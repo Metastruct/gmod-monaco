@@ -112,3 +112,4 @@ temp/
 
 !dist/index.html
 !dist/glua_wiki_dump.json
+package-lock.json
