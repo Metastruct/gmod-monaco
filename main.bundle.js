@@ -196,7 +196,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 293);
+/******/ 	return __webpack_require__(__webpack_require__.s = 294);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -6502,7 +6502,7 @@ var setImmediate = (function defineSetImmediate() {
 })();
 var OS = (_isMacintosh ? 2 /* Macintosh */ : (_isWindows ? 1 /* Windows */ : 3 /* Linux */));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(186), __webpack_require__(165)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(186), __webpack_require__(166)))
 
 /***/ }),
 /* 15 */
@@ -20288,7 +20288,7 @@ var Handler = {
 /* unused harmony export originalFSPath */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return relativePath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataUri; });
-/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(170);
+/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(171);
 /* harmony import */ var _path_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
 /* harmony import */ var _uri_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _strings_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
@@ -20750,7 +20750,7 @@ var IKeybindingService = Object(_instantiation_common_instantiation_js__WEBPACK_
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DragMouseEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return StandardWheelEvent; });
 /* harmony import */ var _browser_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
-/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(169);
+/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(170);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -23736,7 +23736,7 @@ var Gesture = /** @class */ (function (_super) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/peekView/media/peekViewWidget.css
-var peekViewWidget = __webpack_require__(335);
+var peekViewWidget = __webpack_require__(336);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -23763,10 +23763,10 @@ var strings = __webpack_require__(8);
 var codeEditorService = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/embeddedCodeEditorWidget.js
-var embeddedCodeEditorWidget = __webpack_require__(173);
+var embeddedCodeEditorWidget = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/zoneWidget.css
-var zoneWidget = __webpack_require__(369);
+var zoneWidget = __webpack_require__(370);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
 var sash = __webpack_require__(133);
@@ -25194,7 +25194,7 @@ var LRUCache = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return setARIAContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return alert; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return status; });
-/* harmony import */ var _aria_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296);
+/* harmony import */ var _aria_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(297);
 /* harmony import */ var _aria_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_aria_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
@@ -29498,7 +29498,7 @@ var StaticDND = {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/media/scrollbars.css
-var scrollbars = __webpack_require__(318);
+var scrollbars = __webpack_require__(319);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/browser.js
 var browser = __webpack_require__(23);
@@ -31309,7 +31309,7 @@ var cursorColumnSelection_ColumnSelection = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorDeleteOperations.js
-var cursorDeleteOperations = __webpack_require__(172);
+var cursorDeleteOperations = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorMoveCommands.js
 var cursorMoveCommands = __webpack_require__(74);
@@ -32907,7 +32907,7 @@ registerOverwritableCommand(editorCommon["b" /* Handler */].Cut);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalMouseMoveMonitor; });
 /* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
-/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(169);
+/* harmony import */ var _iframe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(170);
 /* harmony import */ var _mouseEvent_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(45);
 /* harmony import */ var _common_lifecycle_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2);
 /* harmony import */ var _canIUse_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(109);
@@ -33164,7 +33164,7 @@ var InMemoryStorageService = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Separator; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ActionViewItem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionBar; });
-/* harmony import */ var _actionbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(314);
+/* harmony import */ var _actionbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(315);
 /* harmony import */ var _actionbar_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_actionbar_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _common_platform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
@@ -37094,7 +37094,7 @@ var globalMouseMoveMonitor = __webpack_require__(84);
 var common_event = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/lightBulbWidget.css
-var lightBulbWidget = __webpack_require__(304);
+var lightBulbWidget = __webpack_require__(305);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js + 9 modules
 var textModel = __webpack_require__(29);
@@ -41425,7 +41425,7 @@ var log = __webpack_require__(148);
 var arrays = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/snippet/snippetSession.css
-var snippetSession = __webpack_require__(417);
+var snippetSession = __webpack_require__(418);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/editOperation.js
 var editOperation = __webpack_require__(59);
@@ -42591,7 +42591,7 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new CommandCtor({
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageController; });
-/* harmony import */ var _messageController_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(302);
+/* harmony import */ var _messageController_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(303);
 /* harmony import */ var _messageController_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_messageController_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_common_async_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
@@ -42828,7 +42828,7 @@ var ServiceCollection = /** @class */ (function () {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/list/list.css
-var list_list = __webpack_require__(389);
+var list_list = __webpack_require__(390);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -44821,13 +44821,13 @@ var highlightedLabel = __webpack_require__(129);
 var dom = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.css
-var keybindingLabel = __webpack_require__(375);
+var keybindingLabel = __webpack_require__(376);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/objects.js
 var objects = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/keybindingLabels.js
-var keybindingLabels = __webpack_require__(175);
+var keybindingLabels = __webpack_require__(176);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.js
 /*---------------------------------------------------------------------------------------------
@@ -45577,9 +45577,9 @@ var ShiftCommand = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return renderCodicons; });
-/* harmony import */ var _codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(308);
+/* harmony import */ var _codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(309);
 /* harmony import */ var _codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_codicon_codicon_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(312);
+/* harmony import */ var _codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(313);
 /* harmony import */ var _codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_codicon_codicon_animations_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _common_strings_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
 /*---------------------------------------------------------------------------------------------
@@ -45605,7 +45605,7 @@ function renderCodicons(label) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sash; });
-/* harmony import */ var _sash_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(326);
+/* harmony import */ var _sash_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(327);
 /* harmony import */ var _sash_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sash_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _common_lifecycle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _browser_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
@@ -48750,7 +48750,7 @@ var insane = __insane_func;
 // ESM-uncomment-end
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/marshalling.js
-var marshalling = __webpack_require__(176);
+var marshalling = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/objects.js
 var objects = __webpack_require__(35);
@@ -48953,7 +48953,7 @@ var common_opener = __webpack_require__(68);
 var modeService = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes/textToHtmlTokenizer.js
-var textToHtmlTokenizer = __webpack_require__(174);
+var textToHtmlTokenizer = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/instantiation/common/instantiation.js
 var instantiation = __webpack_require__(18);
@@ -49905,7 +49905,7 @@ var common_themeService = __webpack_require__(17);
 var InputFocusedContextKey = 'inputFocus';
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/tree/media/tree.css
-var media_tree = __webpack_require__(391);
+var media_tree = __webpack_require__(392);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/event.js
 var common_event = __webpack_require__(6);
@@ -55322,7 +55322,7 @@ __webpack_require__(277);
 __webpack_require__(189);
 __webpack_require__(190);
 __webpack_require__(272);
-__webpack_require__(166);
+__webpack_require__(167);
 __webpack_require__(275);
 __webpack_require__(278);
 __webpack_require__(83);
@@ -55334,8 +55334,8 @@ __webpack_require__(192);
 __webpack_require__(273);
 __webpack_require__(151);
 __webpack_require__(193);
+__webpack_require__(169);
 __webpack_require__(168);
-__webpack_require__(167);
 __webpack_require__(270);
 __webpack_require__(194);
 __webpack_require__(280);
@@ -55357,7 +55357,7 @@ __webpack_require__(200);
 __webpack_require__(201);
 __webpack_require__(135);
 __webpack_require__(202);
-module.exports = __webpack_require__(449);
+module.exports = __webpack_require__(501);
 __webpack_require__(203);
 __webpack_require__(204);
 __webpack_require__(205);
@@ -55430,7 +55430,7 @@ __webpack_require__(265);
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/editor.css
-var media_editor = __webpack_require__(337);
+var media_editor = __webpack_require__(338);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -58271,7 +58271,7 @@ var pointerHandler_PointerHandler = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/controller/textAreaHandler.css
-var textAreaHandler = __webpack_require__(339);
+var textAreaHandler = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/strings.js
 var strings = __webpack_require__(8);
@@ -58283,7 +58283,7 @@ var textAreaInput = __webpack_require__(163);
 var textAreaState = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lineNumbers/lineNumbers.css
-var lineNumbers_lineNumbers = __webpack_require__(341);
+var lineNumbers_lineNumbers = __webpack_require__(342);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/view/dynamicViewOverlay.js
 /*---------------------------------------------------------------------------------------------
@@ -60789,7 +60789,7 @@ var contentWidgets_Widget = /** @class */ (function () {
 }());
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight.css
-var currentLineHighlight = __webpack_require__(343);
+var currentLineHighlight = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/arrays.js
 var arrays = __webpack_require__(15);
@@ -60988,7 +60988,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.css
-var decorations_decorations = __webpack_require__(345);
+var decorations_decorations = __webpack_require__(346);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.js
 /*---------------------------------------------------------------------------------------------
@@ -61353,7 +61353,7 @@ var editorScrollbar_EditorScrollbar = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.css
-var glyphMargin = __webpack_require__(347);
+var glyphMargin = __webpack_require__(348);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.js
 /*---------------------------------------------------------------------------------------------
@@ -61537,7 +61537,7 @@ var GlyphMarginOverlay = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.css
-var indentGuides = __webpack_require__(349);
+var indentGuides = __webpack_require__(350);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.js
 /*---------------------------------------------------------------------------------------------
@@ -61698,7 +61698,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.css
-var viewLines = __webpack_require__(351);
+var viewLines = __webpack_require__(352);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.js
 /*---------------------------------------------------------------------------------------------
@@ -62265,7 +62265,7 @@ var viewLines_ViewLines = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.css
-var linesDecorations = __webpack_require__(353);
+var linesDecorations = __webpack_require__(354);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.js
 /*---------------------------------------------------------------------------------------------
@@ -62377,7 +62377,7 @@ var linesDecorations_LinesDecorationsOverlay = /** @class */ (function (_super) 
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.css
-var marginDecorations = __webpack_require__(355);
+var marginDecorations = __webpack_require__(356);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.js
 /*---------------------------------------------------------------------------------------------
@@ -62478,7 +62478,7 @@ var marginDecorations_MarginViewLineDecorationsOverlay = /** @class */ (function
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/minimap/minimap.css
-var minimap_minimap = __webpack_require__(357);
+var minimap_minimap = __webpack_require__(358);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/rgba.js
 /*---------------------------------------------------------------------------------------------
@@ -63709,7 +63709,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.css
-var overlayWidgets = __webpack_require__(359);
+var overlayWidgets = __webpack_require__(360);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.js
 /*---------------------------------------------------------------------------------------------
@@ -64351,7 +64351,7 @@ var overviewRuler_OverviewRuler = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.css
-var rulers_rulers = __webpack_require__(361);
+var rulers_rulers = __webpack_require__(362);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.js
 /*---------------------------------------------------------------------------------------------
@@ -64454,7 +64454,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.css
-var scrollDecoration_scrollDecoration = __webpack_require__(363);
+var scrollDecoration_scrollDecoration = __webpack_require__(364);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.js
 /*---------------------------------------------------------------------------------------------
@@ -64551,7 +64551,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.css
-var selections_selections = __webpack_require__(365);
+var selections_selections = __webpack_require__(366);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.js
 /*---------------------------------------------------------------------------------------------
@@ -64920,7 +64920,7 @@ function abs(n) {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursors.css
-var viewCursors = __webpack_require__(367);
+var viewCursors = __webpack_require__(368);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursor.js
 /*---------------------------------------------------------------------------------------------
@@ -66641,7 +66641,7 @@ var cursorCollection_CursorCollection = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorDeleteOperations.js
-var cursorDeleteOperations = __webpack_require__(172);
+var cursorDeleteOperations = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorTypeOperations.js + 1 modules
 var cursorTypeOperations = __webpack_require__(99);
@@ -67581,7 +67581,7 @@ var editorAction = __webpack_require__(182);
 var editorContextKeys = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes/textToHtmlTokenizer.js
-var textToHtmlTokenizer = __webpack_require__(174);
+var textToHtmlTokenizer = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/scrollable.js
 var scrollable = __webpack_require__(181);
@@ -73229,7 +73229,7 @@ var findModel_FindModelBoundToEditorModel = /** @class */ (function () {
 var dom = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/checkbox/checkbox.css
-var checkbox_checkbox = __webpack_require__(322);
+var checkbox_checkbox = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/widget.js
 var ui_widget = __webpack_require__(66);
@@ -73895,7 +73895,7 @@ var findState_FindReplaceState = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/find/findWidget.css
-var findWidget = __webpack_require__(324);
+var findWidget = __webpack_require__(325);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js
 var aria = __webpack_require__(57);
@@ -77096,7 +77096,7 @@ var themeService = __webpack_require__(17);
 var editorContextKeys = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/media/gotoErrorWidget.css
-var gotoErrorWidget = __webpack_require__(333);
+var gotoErrorWidget = __webpack_require__(334);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -78490,7 +78490,7 @@ var defaultGenerator = new IdGenerator('id#');
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IconLabel; });
-/* harmony import */ var _iconlabel_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(373);
+/* harmony import */ var _iconlabel_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(374);
 /* harmony import */ var _iconlabel_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_iconlabel_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var _highlightedlabel_highlightedLabel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(129);
@@ -78872,7 +78872,7 @@ var WorkspaceFolder = /** @class */ (function () {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/editorQuickOpen.css
-var editorQuickOpen = __webpack_require__(377);
+var editorQuickOpen = __webpack_require__(378);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/editorExtensions.js
 var editorExtensions = __webpack_require__(5);
@@ -78884,7 +78884,7 @@ var textModel = __webpack_require__(29);
 var dom = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/parts/quickopen/browser/quickopen.css
-var quickopen = __webpack_require__(379);
+var quickopen = __webpack_require__(380);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -79022,7 +79022,7 @@ var Renderer = /** @class */ (function () {
 var inputBox = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/parts/tree/browser/tree.css
-var browser_tree = __webpack_require__(381);
+var browser_tree = __webpack_require__(382);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/errors.js
 var errors = __webpack_require__(12);
@@ -82392,7 +82392,7 @@ var treeImpl_Tree = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.css
-var progressbar = __webpack_require__(383);
+var progressbar = __webpack_require__(384);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.js
 /*---------------------------------------------------------------------------------------------
@@ -83436,7 +83436,7 @@ Object(editorExtensions["h" /* registerEditorContribution */])(editorQuickOpen_Q
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.css
-var inputBox = __webpack_require__(329);
+var inputBox = __webpack_require__(330);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -85554,7 +85554,7 @@ var storage = __webpack_require__(86);
 var referencesModel = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/peek/referencesWidget.css
-var referencesWidget = __webpack_require__(385);
+var referencesWidget = __webpack_require__(386);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -85572,7 +85572,7 @@ var network = __webpack_require__(37);
 var resources = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/embeddedCodeEditorWidget.js
-var embeddedCodeEditorWidget = __webpack_require__(173);
+var embeddedCodeEditorWidget = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/core/range.js
 var core_range = __webpack_require__(3);
@@ -85587,7 +85587,7 @@ var resolverService = __webpack_require__(105);
 var iconLabel = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/countBadge/countBadge.css
-var countBadge = __webpack_require__(387);
+var countBadge = __webpack_require__(388);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/strings.js
 var strings = __webpack_require__(8);
@@ -85926,7 +85926,7 @@ var colorRegistry = __webpack_require__(4);
 var peekView = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/splitview/splitview.css
-var splitview = __webpack_require__(393);
+var splitview = __webpack_require__(394);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/types.js
 var types = __webpack_require__(21);
@@ -87679,6 +87679,148 @@ keybindingsRegistry["a" /* KeybindingsRegistry */].registerCommandAndKeybindingR
 
 /***/ }),
 /* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+self["MonacoEnvironment"] = (function (paths) {
+      function stripTrailingSlash(str) {
+        return str.replace(/\/$/, '');
+      }
+      return {
+        getWorkerUrl: function (moduleId, label) {
+          var pathPrefix =  true ? __webpack_require__.p : undefined;
+          var result = (pathPrefix ? stripTrailingSlash(pathPrefix) + '/' : '') + paths[label];
+          if (/^(http:)|(https:)|(file:)/.test(result)) {
+            var currentUrl = String(window.location);
+            var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
+            if (result.substring(0, currentOrigin.length) !== currentOrigin) {
+              var js = '/*' + label + '*/importScripts("' + result + '");';
+              return 'data:text/javascript;charset=utf-8,' + encodeURIComponent(js);
+            }
+          }
+          return result;
+        }
+      };
+    })({
+  "editorWorkerService": "editor.worker.js",
+  "css": "css.worker.js",
+  "html": "html.worker.js",
+  "json": "json.worker.js",
+  "typescript": "ts.worker.js",
+  "javascript": "ts.worker.js",
+  "less": "css.worker.js",
+  "scss": "css.worker.js",
+  "handlebars": "html.worker.js",
+  "razor": "html.worker.js"
+});
+__webpack_require__(187);
+__webpack_require__(188);
+__webpack_require__(277);
+__webpack_require__(189);
+__webpack_require__(190);
+__webpack_require__(272);
+__webpack_require__(167);
+__webpack_require__(275);
+__webpack_require__(278);
+__webpack_require__(83);
+__webpack_require__(191);
+__webpack_require__(279);
+__webpack_require__(145);
+__webpack_require__(269);
+__webpack_require__(192);
+__webpack_require__(273);
+__webpack_require__(151);
+__webpack_require__(193);
+__webpack_require__(169);
+__webpack_require__(168);
+__webpack_require__(270);
+__webpack_require__(194);
+__webpack_require__(280);
+__webpack_require__(195);
+__webpack_require__(271);
+__webpack_require__(281);
+__webpack_require__(196);
+__webpack_require__(274);
+__webpack_require__(197);
+__webpack_require__(276);
+__webpack_require__(198);
+__webpack_require__(282);
+__webpack_require__(283);
+__webpack_require__(120);
+__webpack_require__(268);
+__webpack_require__(199);
+__webpack_require__(150);
+__webpack_require__(200);
+__webpack_require__(201);
+__webpack_require__(135);
+__webpack_require__(202);
+module.exports = __webpack_require__(422);
+__webpack_require__(203);
+__webpack_require__(204);
+__webpack_require__(205);
+__webpack_require__(206);
+__webpack_require__(207);
+__webpack_require__(208);
+__webpack_require__(209);
+__webpack_require__(210);
+__webpack_require__(211);
+__webpack_require__(212);
+__webpack_require__(213);
+__webpack_require__(214);
+__webpack_require__(215);
+__webpack_require__(216);
+__webpack_require__(217);
+__webpack_require__(218);
+__webpack_require__(219);
+__webpack_require__(220);
+__webpack_require__(221);
+__webpack_require__(222);
+__webpack_require__(223);
+__webpack_require__(224);
+__webpack_require__(225);
+__webpack_require__(226);
+__webpack_require__(227);
+__webpack_require__(228);
+__webpack_require__(229);
+__webpack_require__(230);
+__webpack_require__(231);
+__webpack_require__(232);
+__webpack_require__(233);
+__webpack_require__(234);
+__webpack_require__(235);
+__webpack_require__(236);
+__webpack_require__(237);
+__webpack_require__(238);
+__webpack_require__(239);
+__webpack_require__(240);
+__webpack_require__(241);
+__webpack_require__(242);
+__webpack_require__(243);
+__webpack_require__(244);
+__webpack_require__(245);
+__webpack_require__(246);
+__webpack_require__(247);
+__webpack_require__(248);
+__webpack_require__(249);
+__webpack_require__(250);
+__webpack_require__(251);
+__webpack_require__(252);
+__webpack_require__(253);
+__webpack_require__(254);
+__webpack_require__(255);
+__webpack_require__(256);
+__webpack_require__(257);
+__webpack_require__(258);
+__webpack_require__(259);
+__webpack_require__(260);
+__webpack_require__(261);
+__webpack_require__(262);
+__webpack_require__(284);
+__webpack_require__(263);
+__webpack_require__(264);
+__webpack_require__(265);
+
+/***/ }),
+/* 166 */
 /***/ (function(module, exports) {
 
 var g;
@@ -87704,7 +87846,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -87720,7 +87862,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_core_range_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3);
 /* harmony import */ var _common_model_textModel_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(29);
 /* harmony import */ var _common_modes_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
-/* harmony import */ var _color_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(171);
+/* harmony import */ var _color_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(172);
 /* harmony import */ var _platform_configuration_common_configuration_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(42);
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -87963,13 +88105,13 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_5__[/* registerEdit
 
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GotoDefinitionAtPositionEditorContribution", function() { return GotoDefinitionAtPositionEditorContribution; });
-/* harmony import */ var _goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(395);
+/* harmony import */ var _goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(396);
 /* harmony import */ var _goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_goToDefinitionAtPosition_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_common_async_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
@@ -87985,7 +88127,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(17);
 /* harmony import */ var _platform_theme_common_colorRegistry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4);
 /* harmony import */ var _browser_core_editorState_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(81);
-/* harmony import */ var _goToCommands_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(168);
+/* harmony import */ var _goToCommands_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(169);
 /* harmony import */ var _clickLinkGesture_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(183);
 /* harmony import */ var _common_core_position_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(9);
 /* harmony import */ var _base_common_types_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(21);
@@ -88289,7 +88431,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_12__[/* r
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89420,7 +89562,7 @@ commands["a" /* CommandsRegistry */].registerCommandAlias('editor.action.showRef
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89538,7 +89680,7 @@ var IframeUtils = /** @class */ (function () {
 
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89593,7 +89735,7 @@ function isWindowsDriveLetter(char0) {
 
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89680,7 +89822,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_3__[/* registerLang
 
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89876,7 +90018,7 @@ var DeleteOperations = /** @class */ (function () {
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89962,7 +90104,7 @@ var EmbeddedCodeEditorWidget = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90070,7 +90212,7 @@ function _tokenizeToString(text, tokenizationSupport) {
 
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90179,7 +90321,7 @@ function _simpleAsString(modifiers, key, labels) {
 
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90216,148 +90358,6 @@ function revive(obj, depth) {
     return obj;
 }
 
-
-/***/ }),
-/* 177 */
-/***/ (function(module, exports, __webpack_require__) {
-
-self["MonacoEnvironment"] = (function (paths) {
-      function stripTrailingSlash(str) {
-        return str.replace(/\/$/, '');
-      }
-      return {
-        getWorkerUrl: function (moduleId, label) {
-          var pathPrefix =  true ? __webpack_require__.p : undefined;
-          var result = (pathPrefix ? stripTrailingSlash(pathPrefix) + '/' : '') + paths[label];
-          if (/^(http:)|(https:)|(file:)/.test(result)) {
-            var currentUrl = String(window.location);
-            var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
-            if (result.substring(0, currentOrigin.length) !== currentOrigin) {
-              var js = '/*' + label + '*/importScripts("' + result + '");';
-              return 'data:text/javascript;charset=utf-8,' + encodeURIComponent(js);
-            }
-          }
-          return result;
-        }
-      };
-    })({
-  "editorWorkerService": "editor.worker.js",
-  "css": "css.worker.js",
-  "html": "html.worker.js",
-  "json": "json.worker.js",
-  "typescript": "ts.worker.js",
-  "javascript": "ts.worker.js",
-  "less": "css.worker.js",
-  "scss": "css.worker.js",
-  "handlebars": "html.worker.js",
-  "razor": "html.worker.js"
-});
-__webpack_require__(187);
-__webpack_require__(188);
-__webpack_require__(277);
-__webpack_require__(189);
-__webpack_require__(190);
-__webpack_require__(272);
-__webpack_require__(166);
-__webpack_require__(275);
-__webpack_require__(278);
-__webpack_require__(83);
-__webpack_require__(191);
-__webpack_require__(279);
-__webpack_require__(145);
-__webpack_require__(269);
-__webpack_require__(192);
-__webpack_require__(273);
-__webpack_require__(151);
-__webpack_require__(193);
-__webpack_require__(168);
-__webpack_require__(167);
-__webpack_require__(270);
-__webpack_require__(194);
-__webpack_require__(280);
-__webpack_require__(195);
-__webpack_require__(271);
-__webpack_require__(281);
-__webpack_require__(196);
-__webpack_require__(274);
-__webpack_require__(197);
-__webpack_require__(276);
-__webpack_require__(198);
-__webpack_require__(282);
-__webpack_require__(283);
-__webpack_require__(120);
-__webpack_require__(268);
-__webpack_require__(199);
-__webpack_require__(150);
-__webpack_require__(200);
-__webpack_require__(201);
-__webpack_require__(135);
-__webpack_require__(202);
-module.exports = __webpack_require__(421);
-__webpack_require__(203);
-__webpack_require__(204);
-__webpack_require__(205);
-__webpack_require__(206);
-__webpack_require__(207);
-__webpack_require__(208);
-__webpack_require__(209);
-__webpack_require__(210);
-__webpack_require__(211);
-__webpack_require__(212);
-__webpack_require__(213);
-__webpack_require__(214);
-__webpack_require__(215);
-__webpack_require__(216);
-__webpack_require__(217);
-__webpack_require__(218);
-__webpack_require__(219);
-__webpack_require__(220);
-__webpack_require__(221);
-__webpack_require__(222);
-__webpack_require__(223);
-__webpack_require__(224);
-__webpack_require__(225);
-__webpack_require__(226);
-__webpack_require__(227);
-__webpack_require__(228);
-__webpack_require__(229);
-__webpack_require__(230);
-__webpack_require__(231);
-__webpack_require__(232);
-__webpack_require__(233);
-__webpack_require__(234);
-__webpack_require__(235);
-__webpack_require__(236);
-__webpack_require__(237);
-__webpack_require__(238);
-__webpack_require__(239);
-__webpack_require__(240);
-__webpack_require__(241);
-__webpack_require__(242);
-__webpack_require__(243);
-__webpack_require__(244);
-__webpack_require__(245);
-__webpack_require__(246);
-__webpack_require__(247);
-__webpack_require__(248);
-__webpack_require__(249);
-__webpack_require__(250);
-__webpack_require__(251);
-__webpack_require__(252);
-__webpack_require__(253);
-__webpack_require__(254);
-__webpack_require__(255);
-__webpack_require__(256);
-__webpack_require__(257);
-__webpack_require__(258);
-__webpack_require__(259);
-__webpack_require__(260);
-__webpack_require__(261);
-__webpack_require__(262);
-__webpack_require__(284);
-__webpack_require__(263);
-__webpack_require__(264);
-__webpack_require__(265);
 
 /***/ }),
 /* 178 */
@@ -90411,7 +90411,7 @@ _registry_common_platform_js__WEBPACK_IMPORTED_MODULE_0__[/* Registry */ "a"].ad
 /* unused harmony export isRelativePattern */
 /* harmony import */ var _arrays_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 /* harmony import */ var _strings_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
-/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(170);
+/* harmony import */ var _extpath_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(171);
 /* harmony import */ var _path_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(51);
 /* harmony import */ var _map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(56);
 /* harmony import */ var _async_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(16);
@@ -90923,7 +90923,7 @@ function aggregateBasenameMatches(parsedPatterns, result) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SubmenuAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Menu; });
 /* unused harmony export cleanMnemonic */
-/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(316);
+/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(317);
 /* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _common_strings_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
@@ -92620,7 +92620,7 @@ process.umask = function() { return 0; };
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(294);
+/* harmony import */ var _accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(295);
 /* harmony import */ var _accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_accessibilityHelp_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_browser_browser_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
 /* harmony import */ var _base_browser_dom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
@@ -92978,7 +92978,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_19__[/* r
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BracketMatchingController", function() { return BracketMatchingController; });
-/* harmony import */ var _bracketMatching_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(298);
+/* harmony import */ var _bracketMatching_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(299);
 /* harmony import */ var _bracketMatching_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bracketMatching_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_common_async_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
@@ -93335,7 +93335,7 @@ _platform_actions_common_actions_js__WEBPACK_IMPORTED_MODULE_14__[/* MenuRegistr
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _clipboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(300);
+/* harmony import */ var _clipboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(301);
 /* harmony import */ var _clipboard_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_clipboard_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var _base_browser_browser_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
@@ -93843,7 +93843,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_1__[/* registerEdit
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GotoLineEntry", function() { return GotoLineEntry; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GotoLineAction", function() { return GotoLineAction; });
-/* harmony import */ var _gotoLine_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(371);
+/* harmony import */ var _gotoLine_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(372);
 /* harmony import */ var _gotoLine_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_gotoLine_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_common_strings_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 /* harmony import */ var _base_parts_quickopen_browser_quickOpenModel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(130);
@@ -94019,7 +94019,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IPadShowKeyboard", function() { return IPadShowKeyboard; });
-/* harmony import */ var _iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(401);
+/* harmony import */ var _iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(402);
 /* harmony import */ var _iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_iPadShowKeyboard_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_browser_browser_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
 /* harmony import */ var _base_browser_dom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
@@ -94124,7 +94124,7 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_4__[/* registerEdit
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _inspectTokens_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(403);
+/* harmony import */ var _inspectTokens_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(404);
 /* harmony import */ var _inspectTokens_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_inspectTokens_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _base_common_color_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 /* harmony import */ var _base_common_lifecycle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
@@ -96612,7 +96612,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'abap',
     extensions: ['.abap'],
     aliases: ['abap', 'ABAP'],
-    loader: function () { return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 452)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 504)); }
 });
 
 
@@ -96634,7 +96634,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.cls'],
     aliases: ['Apex', 'apex'],
     mimetypes: ['text/x-apex-source', 'text/x-apex'],
-    loader: function () { return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 453)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 505)); }
 });
 
 
@@ -96655,7 +96655,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'azcli',
     extensions: ['.azcli'],
     aliases: ['Azure CLI', 'azcli'],
-    loader: function () { return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 454)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 506)); }
 });
 
 
@@ -96676,7 +96676,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'bat',
     extensions: ['.bat', '.cmd'],
     aliases: ['Batch', 'bat'],
-    loader: function () { return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, 455)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, 507)); }
 });
 
 
@@ -96697,7 +96697,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'cameligo',
     extensions: ['.mligo'],
     aliases: ['Cameligo'],
-    loader: function () { return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, 456)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, 508)); }
 });
 
 
@@ -96718,7 +96718,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'clojure',
     extensions: ['.clj', '.cljs', '.cljc', '.edn'],
     aliases: ['clojure', 'Clojure'],
-    loader: function () { return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 457)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 509)); }
 });
 
 
@@ -96740,7 +96740,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.coffee'],
     aliases: ['CoffeeScript', 'coffeescript', 'coffee'],
     mimetypes: ['text/x-coffeescript', 'text/coffeescript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 12).then(__webpack_require__.bind(null, 458)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 12).then(__webpack_require__.bind(null, 510)); }
 });
 
 
@@ -96761,13 +96761,13 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'c',
     extensions: ['.c', '.h'],
     aliases: ['C', 'c'],
-    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 292)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 293)); }
 });
 Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"])({
     id: 'cpp',
     extensions: ['.cpp', '.cc', '.cxx', '.hpp', '.hh', '.hxx'],
     aliases: ['C++', 'Cpp', 'cpp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 292)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 0).then(__webpack_require__.bind(null, 293)); }
 });
 
 
@@ -96788,7 +96788,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'csharp',
     extensions: ['.cs', '.csx', '.cake'],
     aliases: ['C#', 'csharp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 459)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 511)); }
 });
 
 
@@ -96809,7 +96809,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'csp',
     extensions: [],
     aliases: ['CSP', 'csp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 14).then(__webpack_require__.bind(null, 460)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 14).then(__webpack_require__.bind(null, 512)); }
 });
 
 
@@ -96831,7 +96831,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.css'],
     aliases: ['CSS', 'css'],
     mimetypes: ['text/css'],
-    loader: function () { return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 461)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 513)); }
 });
 
 
@@ -96949,7 +96949,7 @@ function createAPI() {
 monaco.languages.css = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 510));
+    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 562));
 }
 monaco.languages.onLanguage('less', function () {
     getMode().then(function (mode) { return mode.setupMode(lessDefaults); });
@@ -96980,7 +96980,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.dockerfile'],
     filenames: ['Dockerfile'],
     aliases: ['Dockerfile'],
-    loader: function () { return __webpack_require__.e(/* import() */ 16).then(__webpack_require__.bind(null, 462)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 16).then(__webpack_require__.bind(null, 514)); }
 });
 
 
@@ -97001,7 +97001,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'fsharp',
     extensions: ['.fs', '.fsi', '.ml', '.mli', '.fsx', '.fsscript'],
     aliases: ['F#', 'FSharp', 'fsharp'],
-    loader: function () { return __webpack_require__.e(/* import() */ 17).then(__webpack_require__.bind(null, 463)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 17).then(__webpack_require__.bind(null, 515)); }
 });
 
 
@@ -97022,7 +97022,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'go',
     extensions: ['.go'],
     aliases: ['Go'],
-    loader: function () { return __webpack_require__.e(/* import() */ 18).then(__webpack_require__.bind(null, 464)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 18).then(__webpack_require__.bind(null, 516)); }
 });
 
 
@@ -97044,7 +97044,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.graphql', '.gql'],
     aliases: ['GraphQL', 'graphql', 'gql'],
     mimetypes: ['application/graphql'],
-    loader: function () { return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 465)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 517)); }
 });
 
 
@@ -97066,7 +97066,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.handlebars', '.hbs'],
     aliases: ['Handlebars', 'handlebars'],
     mimetypes: ['text/x-handlebars-template'],
-    loader: function () { return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 466)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 518)); }
 });
 
 
@@ -97088,7 +97088,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.html', '.htm', '.shtml', '.xhtml', '.mdoc', '.jsp', '.asp', '.aspx', '.jshtm'],
     aliases: ['HTML', 'htm', 'html', 'xhtml'],
     mimetypes: ['text/html', 'text/x-jshtm', 'text/template', 'text/ng-template'],
-    loader: function () { return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, 467)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, 519)); }
 });
 
 
@@ -97215,7 +97215,7 @@ function createAPI() {
 monaco.languages.html = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 511));
+    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 563));
 }
 monaco.languages.onLanguage(htmlLanguageId, function () {
     getMode().then(function (mode) { return mode.setupMode(htmlDefaults); });
@@ -97246,7 +97246,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.ini', '.properties', '.gitconfig'],
     filenames: ['config', '.gitattributes', '.gitconfig', '.editorconfig'],
     aliases: ['Ini', 'ini'],
-    loader: function () { return __webpack_require__.e(/* import() */ 22).then(__webpack_require__.bind(null, 468)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 22).then(__webpack_require__.bind(null, 520)); }
 });
 
 
@@ -97268,7 +97268,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.java', '.jav'],
     aliases: ['Java', 'java'],
     mimetypes: ['text/x-java-source', 'text/x-java'],
-    loader: function () { return __webpack_require__.e(/* import() */ 23).then(__webpack_require__.bind(null, 469)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 23).then(__webpack_require__.bind(null, 521)); }
 });
 
 
@@ -97292,7 +97292,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     filenames: ['jakefile'],
     aliases: ['JavaScript', 'javascript', 'js'],
     mimetypes: ['text/javascript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 470)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 522)); }
 });
 
 
@@ -97388,7 +97388,7 @@ function createAPI() {
 monaco.languages.json = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 512));
+    return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 564));
 }
 monaco.languages.register({
     id: 'json',
@@ -97419,7 +97419,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.kt'],
     aliases: ['Kotlin', 'kotlin'],
     mimetypes: ['text/x-kotlin-source', 'text/x-kotlin'],
-    loader: function () { return __webpack_require__.e(/* import() */ 24).then(__webpack_require__.bind(null, 471)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 24).then(__webpack_require__.bind(null, 523)); }
 });
 
 
@@ -97441,7 +97441,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.less'],
     aliases: ['Less', 'less'],
     mimetypes: ['text/x-less', 'text/less'],
-    loader: function () { return __webpack_require__.e(/* import() */ 25).then(__webpack_require__.bind(null, 472)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 25).then(__webpack_require__.bind(null, 524)); }
 });
 
 
@@ -97462,7 +97462,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'lua',
     extensions: ['.lua'],
     aliases: ['Lua', 'lua'],
-    loader: function () { return __webpack_require__.e(/* import() */ 26).then(__webpack_require__.bind(null, 473)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 26).then(__webpack_require__.bind(null, 525)); }
 });
 
 
@@ -97483,7 +97483,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'markdown',
     extensions: ['.md', '.markdown', '.mdown', '.mkdn', '.mkd', '.mdwn', '.mdtxt', '.mdtext'],
     aliases: ['Markdown', 'markdown'],
-    loader: function () { return __webpack_require__.e(/* import() */ 27).then(__webpack_require__.bind(null, 474)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 27).then(__webpack_require__.bind(null, 526)); }
 });
 
 
@@ -97505,7 +97505,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.s'],
     aliases: ['MIPS', 'MIPS-V'],
     mimetypes: ['text/x-mips', 'text/mips', 'text/plaintext'],
-    loader: function () { return __webpack_require__.e(/* import() */ 28).then(__webpack_require__.bind(null, 475)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 28).then(__webpack_require__.bind(null, 527)); }
 });
 
 
@@ -97526,7 +97526,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'msdax',
     extensions: ['.dax', '.msdax'],
     aliases: ['DAX', 'MSDAX'],
-    loader: function () { return __webpack_require__.e(/* import() */ 29).then(__webpack_require__.bind(null, 476)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 29).then(__webpack_require__.bind(null, 528)); }
 });
 
 
@@ -97547,7 +97547,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'mysql',
     extensions: [],
     aliases: ['MySQL', 'mysql'],
-    loader: function () { return __webpack_require__.e(/* import() */ 30).then(__webpack_require__.bind(null, 477)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 30).then(__webpack_require__.bind(null, 529)); }
 });
 
 
@@ -97568,7 +97568,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'objective-c',
     extensions: ['.m'],
     aliases: ['Objective-C'],
-    loader: function () { return __webpack_require__.e(/* import() */ 31).then(__webpack_require__.bind(null, 478)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 31).then(__webpack_require__.bind(null, 530)); }
 });
 
 
@@ -97590,7 +97590,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.pas', '.p', '.pp'],
     aliases: ['Pascal', 'pas'],
     mimetypes: ['text/x-pascal-source', 'text/x-pascal'],
-    loader: function () { return __webpack_require__.e(/* import() */ 32).then(__webpack_require__.bind(null, 479)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 32).then(__webpack_require__.bind(null, 531)); }
 });
 
 
@@ -97611,7 +97611,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'pascaligo',
     extensions: ['.ligo'],
     aliases: ['Pascaligo', 'ligo'],
-    loader: function () { return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, 480)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, 532)); }
 });
 
 
@@ -97632,7 +97632,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'perl',
     extensions: ['.pl'],
     aliases: ['Perl', 'pl'],
-    loader: function () { return __webpack_require__.e(/* import() */ 34).then(__webpack_require__.bind(null, 481)); },
+    loader: function () { return __webpack_require__.e(/* import() */ 34).then(__webpack_require__.bind(null, 533)); },
 });
 
 
@@ -97653,7 +97653,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'pgsql',
     extensions: [],
     aliases: ['PostgreSQL', 'postgres', 'pg', 'postgre'],
-    loader: function () { return __webpack_require__.e(/* import() */ 35).then(__webpack_require__.bind(null, 482)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 35).then(__webpack_require__.bind(null, 534)); }
 });
 
 
@@ -97675,7 +97675,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.php', '.php4', '.php5', '.phtml', '.ctp'],
     aliases: ['PHP', 'php'],
     mimetypes: ['application/x-php'],
-    loader: function () { return __webpack_require__.e(/* import() */ 36).then(__webpack_require__.bind(null, 483)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 36).then(__webpack_require__.bind(null, 535)); }
 });
 
 
@@ -97696,7 +97696,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'postiats',
     extensions: ['.dats', '.sats', '.hats'],
     aliases: ['ATS', 'ATS/Postiats'],
-    loader: function () { return __webpack_require__.e(/* import() */ 37).then(__webpack_require__.bind(null, 484)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 37).then(__webpack_require__.bind(null, 536)); }
 });
 
 
@@ -97717,7 +97717,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'powerquery',
     extensions: ['.pq', '.pqm'],
     aliases: ['PQ', 'M', 'Power Query', 'Power Query M'],
-    loader: function () { return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, 485)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, 537)); }
 });
 
 
@@ -97738,7 +97738,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'powershell',
     extensions: ['.ps1', '.psm1', '.psd1'],
     aliases: ['PowerShell', 'powershell', 'ps', 'ps1'],
-    loader: function () { return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, 486)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, 538)); }
 });
 
 
@@ -97759,7 +97759,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'pug',
     extensions: ['.jade', '.pug'],
     aliases: ['Pug', 'Jade', 'jade'],
-    loader: function () { return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, 487)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, 539)); }
 });
 
 
@@ -97781,7 +97781,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.py', '.rpy', '.pyw', '.cpy', '.gyp', '.gypi'],
     aliases: ['Python', 'py'],
     firstLine: '^#!/.*\\bpython[0-9.-]*\\b',
-    loader: function () { return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, 488)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, 540)); }
 });
 
 
@@ -97802,7 +97802,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'r',
     extensions: ['.r', '.rhistory', '.rprofile', '.rt'],
     aliases: ['R', 'r'],
-    loader: function () { return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, 489)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, 541)); }
 });
 
 
@@ -97824,7 +97824,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.cshtml'],
     aliases: ['Razor', 'razor'],
     mimetypes: ['text/x-cshtml'],
-    loader: function () { return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, 490)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, 542)); }
 });
 
 
@@ -97845,7 +97845,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'redis',
     extensions: ['.redis'],
     aliases: ['redis'],
-    loader: function () { return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, 491)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, 543)); }
 });
 
 
@@ -97866,7 +97866,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'redshift',
     extensions: [],
     aliases: ['Redshift', 'redshift'],
-    loader: function () { return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, 492)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, 544)); }
 });
 
 
@@ -97887,7 +97887,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'restructuredtext',
     extensions: ['.rst'],
     aliases: ['reStructuredText', 'restructuredtext'],
-    loader: function () { return __webpack_require__.e(/* import() */ 46).then(__webpack_require__.bind(null, 493)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 46).then(__webpack_require__.bind(null, 545)); }
 });
 
 
@@ -97909,7 +97909,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.rb', '.rbx', '.rjs', '.gemspec', '.pp'],
     filenames: ['rakefile'],
     aliases: ['Ruby', 'rb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 47).then(__webpack_require__.bind(null, 494)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 47).then(__webpack_require__.bind(null, 546)); }
 });
 
 
@@ -97930,7 +97930,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'rust',
     extensions: ['.rs', '.rlib'],
     aliases: ['Rust', 'rust'],
-    loader: function () { return __webpack_require__.e(/* import() */ 48).then(__webpack_require__.bind(null, 495)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 48).then(__webpack_require__.bind(null, 547)); }
 });
 
 
@@ -97951,7 +97951,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'sb',
     extensions: ['.sb'],
     aliases: ['Small Basic', 'sb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 49).then(__webpack_require__.bind(null, 496)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 49).then(__webpack_require__.bind(null, 548)); }
 });
 
 
@@ -97972,7 +97972,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'scheme',
     extensions: ['.scm', '.ss', '.sch', '.rkt'],
     aliases: ['scheme', 'Scheme'],
-    loader: function () { return __webpack_require__.e(/* import() */ 50).then(__webpack_require__.bind(null, 497)); },
+    loader: function () { return __webpack_require__.e(/* import() */ 50).then(__webpack_require__.bind(null, 549)); },
 });
 
 
@@ -97994,7 +97994,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.scss'],
     aliases: ['Sass', 'sass', 'scss'],
     mimetypes: ['text/x-scss', 'text/scss'],
-    loader: function () { return __webpack_require__.e(/* import() */ 51).then(__webpack_require__.bind(null, 498)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 51).then(__webpack_require__.bind(null, 550)); }
 });
 
 
@@ -98015,7 +98015,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'shell',
     extensions: ['.sh', '.bash'],
     aliases: ['Shell', 'sh'],
-    loader: function () { return __webpack_require__.e(/* import() */ 52).then(__webpack_require__.bind(null, 499)); },
+    loader: function () { return __webpack_require__.e(/* import() */ 52).then(__webpack_require__.bind(null, 551)); },
 });
 
 
@@ -98036,7 +98036,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'sol',
     extensions: ['.sol'],
     aliases: ['sol', 'solidity', 'Solidity'],
-    loader: function () { return __webpack_require__.e(/* import() */ 53).then(__webpack_require__.bind(null, 500)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 53).then(__webpack_require__.bind(null, 552)); }
 });
 
 
@@ -98057,7 +98057,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'aes',
     extensions: ['.aes'],
     aliases: ['aes', 'sophia', 'Sophia'],
-    loader: function () { return __webpack_require__.e(/* import() */ 54).then(__webpack_require__.bind(null, 501)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 54).then(__webpack_require__.bind(null, 553)); }
 });
 
 
@@ -98078,7 +98078,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'sql',
     extensions: ['.sql'],
     aliases: ['SQL'],
-    loader: function () { return __webpack_require__.e(/* import() */ 55).then(__webpack_require__.bind(null, 502)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 55).then(__webpack_require__.bind(null, 554)); }
 });
 
 
@@ -98099,7 +98099,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'st',
     extensions: ['.st', '.iecst', '.iecplc', '.lc3lib'],
     aliases: ['StructuredText', 'scl', 'stl'],
-    loader: function () { return __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(null, 503)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(null, 555)); }
 });
 
 
@@ -98121,7 +98121,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     aliases: ['Swift', 'swift'],
     extensions: ['.swift'],
     mimetypes: ['text/swift'],
-    loader: function () { return __webpack_require__.e(/* import() */ 57).then(__webpack_require__.bind(null, 504)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 57).then(__webpack_require__.bind(null, 556)); }
 });
 
 
@@ -98142,7 +98142,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'tcl',
     extensions: ['.tcl'],
     aliases: ['tcl', 'Tcl', 'tcltk', 'TclTk', 'tcl/tk', 'Tcl/Tk'],
-    loader: function () { return __webpack_require__.e(/* import() */ 58).then(__webpack_require__.bind(null, 505)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 58).then(__webpack_require__.bind(null, 557)); }
 });
 
 
@@ -98164,7 +98164,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.twig'],
     aliases: ['Twig', 'twig'],
     mimetypes: ['text/x-twig'],
-    loader: function () { return __webpack_require__.e(/* import() */ 59).then(__webpack_require__.bind(null, 506)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 59).then(__webpack_require__.bind(null, 558)); }
 });
 
 
@@ -98186,7 +98186,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.ts', '.tsx'],
     aliases: ['TypeScript', 'ts', 'typescript'],
     mimetypes: ['text/typescript'],
-    loader: function () { return __webpack_require__.e(/* import() */ 60).then(__webpack_require__.bind(null, 451)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 60).then(__webpack_require__.bind(null, 503)); }
 });
 
 
@@ -98207,7 +98207,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     id: 'vb',
     extensions: ['.vb'],
     aliases: ['Visual Basic', 'vb'],
-    loader: function () { return __webpack_require__.e(/* import() */ 61).then(__webpack_require__.bind(null, 507)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 61).then(__webpack_require__.bind(null, 559)); }
 });
 
 
@@ -98230,7 +98230,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     firstLine: '(\\<\\?xml.*)|(\\<svg)|(\\<\\!doctype\\s+svg)',
     aliases: ['XML', 'xml'],
     mimetypes: ['text/xml', 'application/xml', 'application/xaml+xml', 'application/xml-dtd'],
-    loader: function () { return __webpack_require__.e(/* import() */ 62).then(__webpack_require__.bind(null, 508)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 62).then(__webpack_require__.bind(null, 560)); }
 });
 
 
@@ -98252,7 +98252,7 @@ Object(_contribution_js__WEBPACK_IMPORTED_MODULE_0__[/* registerLanguage */ "a"]
     extensions: ['.yaml', '.yml'],
     aliases: ['YAML', 'yaml', 'YML', 'yml'],
     mimetypes: ['application/x-yaml'],
-    loader: function () { return __webpack_require__.e(/* import() */ 63).then(__webpack_require__.bind(null, 509)); }
+    loader: function () { return __webpack_require__.e(/* import() */ 63).then(__webpack_require__.bind(null, 561)); }
 });
 
 
@@ -99818,7 +99818,7 @@ var suggestModel_SuggestModel = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/suggest/media/suggest.css
-var media_suggest = __webpack_require__(419);
+var media_suggest = __webpack_require__(420);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/codiconLabel/codiconLabel.js
 var codiconLabel = __webpack_require__(132);
@@ -101987,7 +101987,7 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new SuggestCommand({
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/folding/folding.css
-var folding = __webpack_require__(331);
+var folding = __webpack_require__(332);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -103959,7 +103959,7 @@ for (var folding_i = 1; folding_i <= 7; folding_i++) {
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/hover/hover.css
-var hover = __webpack_require__(397);
+var hover = __webpack_require__(398);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -104004,10 +104004,10 @@ var textModel = __webpack_require__(29);
 var modes = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/color.js
-var colorPicker_color = __webpack_require__(171);
+var colorPicker_color = __webpack_require__(172);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/colorDetector.js
-var colorPicker_colorDetector = __webpack_require__(166);
+var colorPicker_colorDetector = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/event.js
 var common_event = __webpack_require__(6);
@@ -104086,7 +104086,7 @@ var colorPickerModel_ColorPickerModel = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/colorPicker.css
-var colorPicker = __webpack_require__(399);
+var colorPicker = __webpack_require__(400);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/browser.js
 var browser = __webpack_require__(23);
@@ -105549,7 +105549,7 @@ var markersDecorationService = __webpack_require__(184);
 var common_keybinding = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/link/goToDefinitionAtPosition.js
-var goToDefinitionAtPosition = __webpack_require__(167);
+var goToDefinitionAtPosition = __webpack_require__(168);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/hover/hover.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModesHoverController", function() { return hover_ModesHoverController; });
@@ -107653,7 +107653,7 @@ Object(editorExtensions["j" /* registerLanguageCommand */])('_executeCodeLensPro
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codelens/codelensWidget.css
-var codelensWidget = __webpack_require__(306);
+var codelensWidget = __webpack_require__(307);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -109447,7 +109447,7 @@ var scrollableElement = __webpack_require__(79);
 var common_event = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/parameterHints.css
-var parameterHints = __webpack_require__(407);
+var parameterHints = __webpack_require__(408);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/services/modeService.js
 var services_modeService = __webpack_require__(94);
@@ -111046,7 +111046,7 @@ Object(editorExtensions["f" /* registerEditorAction */])(comment_BlockCommentAct
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/quickOutline.css
-var quickOutline = __webpack_require__(409);
+var quickOutline = __webpack_require__(410);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/codiconLabel/codiconLabel.js
 var codiconLabel = __webpack_require__(132);
@@ -112268,7 +112268,7 @@ Object(editorExtensions["f" /* registerEditorAction */])(contextmenu_ShowContext
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/dnd/dnd.css
-var dnd = __webpack_require__(320);
+var dnd = __webpack_require__(321);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/lifecycle.js
 var lifecycle = __webpack_require__(2);
@@ -112824,7 +112824,7 @@ Object(themeService["e" /* registerThemingParticipant */])(function (theme, coll
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/links/links.css
-var links_links = __webpack_require__(405);
+var links_links = __webpack_require__(406);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -113566,7 +113566,7 @@ var editorExtensions = __webpack_require__(5);
 var editorContextKeys = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/rename/renameInputField.css
-var renameInputField = __webpack_require__(415);
+var renameInputField = __webpack_require__(416);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/lifecycle.js
 var lifecycle = __webpack_require__(2);
@@ -114828,7 +114828,7 @@ function createAPI() {
 monaco.languages.typescript = createAPI();
 // --- Registration to monaco editor ---
 function getMode() {
-    return __webpack_require__.e(/* import() */ 64).then(__webpack_require__.bind(null, 516));
+    return __webpack_require__.e(/* import() */ 64).then(__webpack_require__.bind(null, 568));
 }
 monaco.languages.onLanguage('typescript', function () {
     return getMode().then(function (mode) { return mode.setupTypeScript(typescriptDefaults); });
@@ -115048,7 +115048,7 @@ var DiffNavigator = /** @class */ (function (_super) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffEditor.css
-var media_diffEditor = __webpack_require__(427);
+var media_diffEditor = __webpack_require__(428);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -115087,7 +115087,7 @@ var services_codeEditorService = __webpack_require__(36);
 var codeEditorWidget = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffReview.css
-var diffReview = __webpack_require__(429);
+var diffReview = __webpack_require__(430);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.js
 var actionbar = __webpack_require__(87);
@@ -117813,7 +117813,7 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(328);
+            var content = __webpack_require__(329);
 
             content = content.__esModule ? content.default : content;
 
@@ -117872,9 +117872,9 @@ module.exports = exported;
 /* unused harmony export SYMBOL_ICON_TYPEPARAMETER_FOREGROUND */
 /* unused harmony export SYMBOL_ICON_UNIT_FOREGROUND */
 /* unused harmony export SYMBOL_ICON_VARIABLE_FOREGROUND */
-/* harmony import */ var _media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(411);
+/* harmony import */ var _media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(412);
 /* harmony import */ var _media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_media_outlineTree_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(413);
+/* harmony import */ var _media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(414);
 /* harmony import */ var _media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_media_symbol_icons_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _nls_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var _platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
@@ -118191,7 +118191,7 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_3__[/* re
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _editor_all_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(450);
+/* harmony import */ var _editor_all_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(502);
 /* harmony import */ var _standalone_browser_accessibilityHelp_accessibilityHelp_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(187);
 /* harmony import */ var _standalone_browser_iPadShowKeyboard_iPadShowKeyboard_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(194);
 /* harmony import */ var _standalone_browser_inspectTokens_inspectTokens_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(195);
@@ -118673,8 +118673,14 @@ exports.isEmpty = isEmpty;
 //# sourceMappingURL=docBuilder.js.map
 
 /***/ }),
-/* 292 */,
-/* 293 */
+/* 292 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"active4d\":\"Active4D\",\"all-hallows-eve\":\"All Hallows Eve\",\"amy\":\"Amy\",\"birds-of-paradise\":\"Birds of Paradise\",\"blackboard\":\"Blackboard\",\"brilliance-black\":\"Brilliance Black\",\"brilliance-dull\":\"Brilliance Dull\",\"chrome-devtools\":\"Chrome DevTools\",\"clouds-midnight\":\"Clouds Midnight\",\"clouds\":\"Clouds\",\"cobalt\":\"Cobalt\",\"dawn\":\"Dawn\",\"dreamweaver\":\"Dreamweaver\",\"eiffel\":\"Eiffel\",\"espresso-libre\":\"Espresso Libre\",\"github\":\"GitHub\",\"idle\":\"IDLE\",\"katzenmilch\":\"Katzenmilch\",\"kuroir-theme\":\"Kuroir Theme\",\"lazy\":\"LAZY\",\"magicwb--amiga-\":\"MagicWB (Amiga)\",\"merbivore-soft\":\"Merbivore Soft\",\"merbivore\":\"Merbivore\",\"monokai-bright\":\"Monokai Bright\",\"monokai\":\"Monokai\",\"night-owl\":\"Night Owl\",\"oceanic-next\":\"Oceanic Next\",\"pastels-on-dark\":\"Pastels on Dark\",\"slush-and-poppies\":\"Slush and Poppies\",\"solarized-dark\":\"Solarized-dark\",\"solarized-light\":\"Solarized-light\",\"spacecadet\":\"SpaceCadet\",\"sunburst\":\"Sunburst\",\"textmate--mac-classic-\":\"Textmate (Mac Classic)\",\"tomorrow-night-blue\":\"Tomorrow-Night-Blue\",\"tomorrow-night-bright\":\"Tomorrow-Night-Bright\",\"tomorrow-night-eighties\":\"Tomorrow-Night-Eighties\",\"tomorrow-night\":\"Tomorrow-Night\",\"tomorrow\":\"Tomorrow\",\"twilight\":\"Twilight\",\"upstream-sunburst\":\"Upstream Sunburst\",\"vibrant-ink\":\"Vibrant Ink\",\"xcode-default\":\"Xcode_default\",\"zenburnesque\":\"Zenburnesque\",\"iplastic\":\"iPlastic\",\"idlefingers\":\"idleFingers\",\"krtheme\":\"krTheme\",\"monoindustrial\":\"monoindustrial\"}");
+
+/***/ }),
+/* 293 */,
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -118687,12 +118693,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var monaco = __importStar(__webpack_require__(177));
-var lua = __importStar(__webpack_require__(436));
-var formatter_1 = __webpack_require__(437);
-var completionProvider_1 = __webpack_require__(446);
-var quickFixActionProvider_1 = __webpack_require__(447);
-var gmodInterface_1 = __webpack_require__(448);
+var monaco = __importStar(__webpack_require__(165));
+var lua = __importStar(__webpack_require__(437));
+var formatter_1 = __webpack_require__(438);
+var completionProvider_1 = __webpack_require__(447);
+var quickFixActionProvider_1 = __webpack_require__(448);
+var gmodInterface_1 = __webpack_require__(449);
+var themeLoader_1 = __webpack_require__(450);
+var themeLoader = new themeLoader_1.ThemeLoader();
+themeLoader.loadThemes();
 monaco.languages.register({
     id: "lua",
     extensions: [".lua"],
@@ -118724,11 +118733,11 @@ if (gmodInterface_1.gmodInterface) {
 
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(295);
+            var content = __webpack_require__(296);
 
             content = content.__esModule ? content.default : content;
 
@@ -118750,7 +118759,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -118763,11 +118772,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(297);
+            var content = __webpack_require__(298);
 
             content = content.__esModule ? content.default : content;
 
@@ -118789,7 +118798,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -118802,11 +118811,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(299);
+            var content = __webpack_require__(300);
 
             content = content.__esModule ? content.default : content;
 
@@ -118828,7 +118837,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -118841,11 +118850,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(301);
+            var content = __webpack_require__(302);
 
             content = content.__esModule ? content.default : content;
 
@@ -118867,7 +118876,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -118880,11 +118889,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(303);
+            var content = __webpack_require__(304);
 
             content = content.__esModule ? content.default : content;
 
@@ -118906,7 +118915,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -118919,11 +118928,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(305);
+            var content = __webpack_require__(306);
 
             content = content.__esModule ? content.default : content;
 
@@ -118945,7 +118954,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -118958,11 +118967,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(307);
+            var content = __webpack_require__(308);
 
             content = content.__esModule ? content.default : content;
 
@@ -118984,7 +118993,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -118997,11 +119006,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(309);
+            var content = __webpack_require__(310);
 
             content = content.__esModule ? content.default : content;
 
@@ -119023,13 +119032,13 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(28);
-var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(310);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(311);
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(311);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(312);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -119039,7 +119048,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -119079,7 +119088,7 @@ module.exports = function (url, options) {
 };
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -119087,11 +119096,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "35bb8d560db5205616671eab8c4d0303.ttf");
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(313);
+            var content = __webpack_require__(314);
 
             content = content.__esModule ? content.default : content;
 
@@ -119113,7 +119122,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119126,11 +119135,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(315);
+            var content = __webpack_require__(316);
 
             content = content.__esModule ? content.default : content;
 
@@ -119152,7 +119161,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119165,11 +119174,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(317);
+            var content = __webpack_require__(318);
 
             content = content.__esModule ? content.default : content;
 
@@ -119191,7 +119200,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119204,11 +119213,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(319);
+            var content = __webpack_require__(320);
 
             content = content.__esModule ? content.default : content;
 
@@ -119230,7 +119239,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119243,11 +119252,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(321);
+            var content = __webpack_require__(322);
 
             content = content.__esModule ? content.default : content;
 
@@ -119269,7 +119278,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119282,11 +119291,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(323);
+            var content = __webpack_require__(324);
 
             content = content.__esModule ? content.default : content;
 
@@ -119308,7 +119317,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119321,11 +119330,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(325);
+            var content = __webpack_require__(326);
 
             content = content.__esModule ? content.default : content;
 
@@ -119347,7 +119356,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119360,11 +119369,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(327);
+            var content = __webpack_require__(328);
 
             content = content.__esModule ? content.default : content;
 
@@ -119386,7 +119395,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119399,7 +119408,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 328 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119412,11 +119421,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 329 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(330);
+            var content = __webpack_require__(331);
 
             content = content.__esModule ? content.default : content;
 
@@ -119438,7 +119447,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 330 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119451,11 +119460,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 331 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(332);
+            var content = __webpack_require__(333);
 
             content = content.__esModule ? content.default : content;
 
@@ -119477,7 +119486,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 332 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119490,11 +119499,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 333 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(334);
+            var content = __webpack_require__(335);
 
             content = content.__esModule ? content.default : content;
 
@@ -119516,7 +119525,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 334 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119529,11 +119538,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 335 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(336);
+            var content = __webpack_require__(337);
 
             content = content.__esModule ? content.default : content;
 
@@ -119555,7 +119564,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 336 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119568,11 +119577,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 337 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(338);
+            var content = __webpack_require__(339);
 
             content = content.__esModule ? content.default : content;
 
@@ -119594,7 +119603,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 338 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119607,11 +119616,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 339 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(340);
+            var content = __webpack_require__(341);
 
             content = content.__esModule ? content.default : content;
 
@@ -119633,7 +119642,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 340 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119646,11 +119655,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 341 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(342);
+            var content = __webpack_require__(343);
 
             content = content.__esModule ? content.default : content;
 
@@ -119672,7 +119681,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 342 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119685,11 +119694,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 343 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(344);
+            var content = __webpack_require__(345);
 
             content = content.__esModule ? content.default : content;
 
@@ -119711,7 +119720,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 344 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119724,11 +119733,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 345 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(346);
+            var content = __webpack_require__(347);
 
             content = content.__esModule ? content.default : content;
 
@@ -119750,7 +119759,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 346 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119763,11 +119772,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 347 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(348);
+            var content = __webpack_require__(349);
 
             content = content.__esModule ? content.default : content;
 
@@ -119789,7 +119798,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 348 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119802,11 +119811,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 349 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(350);
+            var content = __webpack_require__(351);
 
             content = content.__esModule ? content.default : content;
 
@@ -119828,7 +119837,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 350 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119841,11 +119850,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 351 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(352);
+            var content = __webpack_require__(353);
 
             content = content.__esModule ? content.default : content;
 
@@ -119867,7 +119876,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 352 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119880,11 +119889,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 353 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(354);
+            var content = __webpack_require__(355);
 
             content = content.__esModule ? content.default : content;
 
@@ -119906,7 +119915,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 354 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119919,11 +119928,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 355 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(356);
+            var content = __webpack_require__(357);
 
             content = content.__esModule ? content.default : content;
 
@@ -119945,7 +119954,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 356 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119958,11 +119967,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 357 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(358);
+            var content = __webpack_require__(359);
 
             content = content.__esModule ? content.default : content;
 
@@ -119984,7 +119993,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 358 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -119997,11 +120006,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 359 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(360);
+            var content = __webpack_require__(361);
 
             content = content.__esModule ? content.default : content;
 
@@ -120023,7 +120032,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 360 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120036,11 +120045,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 361 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(362);
+            var content = __webpack_require__(363);
 
             content = content.__esModule ? content.default : content;
 
@@ -120062,7 +120071,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 362 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120075,11 +120084,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 363 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(364);
+            var content = __webpack_require__(365);
 
             content = content.__esModule ? content.default : content;
 
@@ -120101,7 +120110,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 364 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120114,11 +120123,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 365 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(366);
+            var content = __webpack_require__(367);
 
             content = content.__esModule ? content.default : content;
 
@@ -120140,7 +120149,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 366 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120153,11 +120162,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 367 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(368);
+            var content = __webpack_require__(369);
 
             content = content.__esModule ? content.default : content;
 
@@ -120179,7 +120188,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 368 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120192,11 +120201,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 369 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(370);
+            var content = __webpack_require__(371);
 
             content = content.__esModule ? content.default : content;
 
@@ -120218,7 +120227,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 370 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120231,11 +120240,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 371 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(372);
+            var content = __webpack_require__(373);
 
             content = content.__esModule ? content.default : content;
 
@@ -120257,7 +120266,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 372 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120270,11 +120279,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 373 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(374);
+            var content = __webpack_require__(375);
 
             content = content.__esModule ? content.default : content;
 
@@ -120296,7 +120305,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 374 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120309,11 +120318,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 375 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(376);
+            var content = __webpack_require__(377);
 
             content = content.__esModule ? content.default : content;
 
@@ -120335,7 +120344,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 376 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120348,11 +120357,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(378);
+            var content = __webpack_require__(379);
 
             content = content.__esModule ? content.default : content;
 
@@ -120374,7 +120383,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120387,11 +120396,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(380);
+            var content = __webpack_require__(381);
 
             content = content.__esModule ? content.default : content;
 
@@ -120413,7 +120422,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120426,11 +120435,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(382);
+            var content = __webpack_require__(383);
 
             content = content.__esModule ? content.default : content;
 
@@ -120452,7 +120461,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120465,11 +120474,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(384);
+            var content = __webpack_require__(385);
 
             content = content.__esModule ? content.default : content;
 
@@ -120491,7 +120500,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 384 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120504,11 +120513,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(386);
+            var content = __webpack_require__(387);
 
             content = content.__esModule ? content.default : content;
 
@@ -120530,7 +120539,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120543,11 +120552,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(388);
+            var content = __webpack_require__(389);
 
             content = content.__esModule ? content.default : content;
 
@@ -120569,7 +120578,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120582,11 +120591,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(390);
+            var content = __webpack_require__(391);
 
             content = content.__esModule ? content.default : content;
 
@@ -120608,7 +120617,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120621,11 +120630,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(392);
+            var content = __webpack_require__(393);
 
             content = content.__esModule ? content.default : content;
 
@@ -120647,7 +120656,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120660,11 +120669,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(394);
+            var content = __webpack_require__(395);
 
             content = content.__esModule ? content.default : content;
 
@@ -120686,7 +120695,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 394 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120699,11 +120708,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 395 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(396);
+            var content = __webpack_require__(397);
 
             content = content.__esModule ? content.default : content;
 
@@ -120725,7 +120734,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 396 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120738,11 +120747,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 397 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(398);
+            var content = __webpack_require__(399);
 
             content = content.__esModule ? content.default : content;
 
@@ -120764,7 +120773,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 398 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120777,11 +120786,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 399 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(400);
+            var content = __webpack_require__(401);
 
             content = content.__esModule ? content.default : content;
 
@@ -120803,7 +120812,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 400 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120816,11 +120825,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 401 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(402);
+            var content = __webpack_require__(403);
 
             content = content.__esModule ? content.default : content;
 
@@ -120842,7 +120851,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 402 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120855,11 +120864,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 403 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(404);
+            var content = __webpack_require__(405);
 
             content = content.__esModule ? content.default : content;
 
@@ -120881,7 +120890,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 404 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120894,11 +120903,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 405 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(406);
+            var content = __webpack_require__(407);
 
             content = content.__esModule ? content.default : content;
 
@@ -120920,7 +120929,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 406 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120933,11 +120942,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 407 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(408);
+            var content = __webpack_require__(409);
 
             content = content.__esModule ? content.default : content;
 
@@ -120959,7 +120968,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 408 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -120972,11 +120981,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 409 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(410);
+            var content = __webpack_require__(411);
 
             content = content.__esModule ? content.default : content;
 
@@ -120998,7 +121007,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 410 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121011,11 +121020,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 411 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(412);
+            var content = __webpack_require__(413);
 
             content = content.__esModule ? content.default : content;
 
@@ -121037,7 +121046,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 412 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121050,11 +121059,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 413 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(414);
+            var content = __webpack_require__(415);
 
             content = content.__esModule ? content.default : content;
 
@@ -121076,7 +121085,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 414 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121089,11 +121098,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 415 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(416);
+            var content = __webpack_require__(417);
 
             content = content.__esModule ? content.default : content;
 
@@ -121115,7 +121124,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 416 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121128,11 +121137,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 417 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(418);
+            var content = __webpack_require__(419);
 
             content = content.__esModule ? content.default : content;
 
@@ -121154,7 +121163,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 418 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121167,11 +121176,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 419 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(420);
+            var content = __webpack_require__(421);
 
             content = content.__esModule ? content.default : content;
 
@@ -121193,7 +121202,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 420 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121206,7 +121215,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 421 */
+/* 422 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121215,7 +121224,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _language_css_monaco_contribution__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(214);
 /* harmony import */ var _language_json_monaco_contribution__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(225);
 /* harmony import */ var _language_html_monaco_contribution__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(221);
-/* harmony import */ var _basic_languages_monaco_contribution__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(435);
+/* harmony import */ var _basic_languages_monaco_contribution__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(436);
 /* harmony import */ var _edcore_main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(289);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _edcore_main__WEBPACK_IMPORTED_MODULE_5__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _edcore_main__WEBPACK_IMPORTED_MODULE_5__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -121227,7 +121236,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 422 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(setImmediate, global) {/*!
@@ -121521,10 +121530,10 @@ Copyright (c) 2014 Forbes Lindesay
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(423).setImmediate, __webpack_require__(165)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(424).setImmediate, __webpack_require__(166)))
 
 /***/ }),
-/* 423 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -121580,7 +121589,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(424);
+__webpack_require__(425);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -121591,10 +121600,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(165)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(166)))
 
 /***/ }),
-/* 424 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -121784,14 +121793,14 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(165), __webpack_require__(186)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(166), __webpack_require__(186)))
 
 /***/ }),
-/* 425 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(426);
+            var content = __webpack_require__(427);
 
             content = content.__esModule ? content.default : content;
 
@@ -121813,7 +121822,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 426 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121826,11 +121835,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 427 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(428);
+            var content = __webpack_require__(429);
 
             content = content.__esModule ? content.default : content;
 
@@ -121852,7 +121861,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 428 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121865,11 +121874,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 429 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(430);
+            var content = __webpack_require__(431);
 
             content = content.__esModule ? content.default : content;
 
@@ -121891,7 +121900,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 430 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121904,11 +121913,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 431 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(432);
+            var content = __webpack_require__(433);
 
             content = content.__esModule ? content.default : content;
 
@@ -121930,7 +121939,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 432 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121943,11 +121952,11 @@ module.exports = exports;
 
 
 /***/ }),
-/* 433 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(434);
+            var content = __webpack_require__(435);
 
             content = content.__esModule ? content.default : content;
 
@@ -121969,7 +121978,7 @@ var exported = content.locals ? content.locals : {};
 module.exports = exported;
 
 /***/ }),
-/* 434 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -121982,7 +121991,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 435 */
+/* 436 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122117,7 +122126,7 @@ module.exports = exports;
 
 
 /***/ }),
-/* 436 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122305,7 +122314,7 @@ exports.language = {
 
 
 /***/ }),
-/* 437 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122318,8 +122327,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var monaco = __importStar(__webpack_require__(177));
-var lua_fmt_1 = __webpack_require__(438);
+var monaco = __importStar(__webpack_require__(165));
+var lua_fmt_1 = __webpack_require__(439);
 var LuaFormatter = /** @class */ (function () {
     function LuaFormatter() {
     }
@@ -122343,7 +122352,7 @@ exports.LuaFormatter = LuaFormatter;
 
 
 /***/ }),
-/* 438 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122351,11 +122360,11 @@ exports.LuaFormatter = LuaFormatter;
 Object.defineProperty(exports, "__esModule", { value: true });
 if (false) {}
 const comments_1 = __webpack_require__(290);
-const printer_1 = __webpack_require__(439);
-const docPrinter_1 = __webpack_require__(442);
+const printer_1 = __webpack_require__(440);
+const docPrinter_1 = __webpack_require__(443);
 const options_1 = __webpack_require__(267);
-const luaparse_1 = __webpack_require__(443);
-const diff_1 = __webpack_require__(445);
+const luaparse_1 = __webpack_require__(444);
+const diff_1 = __webpack_require__(446);
 var options_2 = __webpack_require__(267);
 exports.defaultOptions = options_2.defaultOptions;
 exports.WriteMode = options_2.WriteMode;
@@ -122384,15 +122393,15 @@ exports.producePatch = producePatch;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 439 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const fastPath_1 = __webpack_require__(440);
+const fastPath_1 = __webpack_require__(441);
 const docBuilder_1 = __webpack_require__(291);
-const docUtils_1 = __webpack_require__(441);
+const docUtils_1 = __webpack_require__(442);
 const comments_1 = __webpack_require__(290);
 const util_1 = __webpack_require__(266);
 const options_1 = __webpack_require__(267);
@@ -122784,7 +122793,7 @@ exports.buildDocFromAst = buildDocFromAst;
 //# sourceMappingURL=printer.js.map
 
 /***/ }),
-/* 440 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122884,7 +122893,7 @@ exports.FastPath = FastPath;
 //# sourceMappingURL=fastPath.js.map
 
 /***/ }),
-/* 441 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122987,7 +122996,7 @@ exports.propagateBreaks = propagateBreaks;
 //# sourceMappingURL=docUtils.js.map
 
 /***/ }),
-/* 442 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -123121,7 +123130,7 @@ function printDocToStringWithState(doc, state) {
 //# sourceMappingURL=docPrinter.js.map
 
 /***/ }),
-/* 443 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global exports:true, module:true, require:true, define:true, global:true */
@@ -125412,10 +125421,10 @@ function printDocToStringWithState(doc, state) {
 }));
 /* vim: set sw=2 ts=2 et tw=79 : */
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(444)(module), __webpack_require__(165)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(445)(module), __webpack_require__(166)))
 
 /***/ }),
-/* 444 */
+/* 445 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -125443,7 +125452,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 445 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -127286,7 +127295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 ;
 
 /***/ }),
-/* 446 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -127346,7 +127355,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var monaco = __importStar(__webpack_require__(177));
+var monaco = __importStar(__webpack_require__(165));
 var LuaCompletionProvider = /** @class */ (function () {
     function LuaCompletionProvider() {
         this.suggestionList = [];
@@ -127434,7 +127443,7 @@ exports.LuaCompletionProvider = LuaCompletionProvider;
 
 
 /***/ }),
-/* 447 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -127495,7 +127504,7 @@ exports.LuaQuickFixActionProvider = LuaQuickFixActionProvider;
 
 
 /***/ }),
-/* 448 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -127519,7 +127528,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var monaco = __importStar(__webpack_require__(177));
+var monaco = __importStar(__webpack_require__(165));
 var maybeGmodInterface;
 if (globalThis.gmodinterface) {
     maybeGmodInterface = __assign(__assign({}, globalThis.gmodinterface), { SetEditor: function (editor) {
@@ -127558,7 +127567,477 @@ exports.gmodInterface = maybeGmodInterface;
 
 
 /***/ }),
-/* 449 */
+/* 450 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var monaco = __importStar(__webpack_require__(165));
+var ThemeLoader = /** @class */ (function () {
+    function ThemeLoader() {
+    }
+    ThemeLoader.prototype.loadThemes = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var data, themeNames, _i, themeNames_1, themeName, themeData, name_1, err_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 6, , 7]);
+                        return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(__webpack_require__(292)); })];
+                    case 1:
+                        data = (_a.sent());
+                        themeNames = Object.values(data);
+                        _i = 0, themeNames_1 = themeNames;
+                        _a.label = 2;
+                    case 2:
+                        if (!(_i < themeNames_1.length)) return [3 /*break*/, 5];
+                        themeName = themeNames_1[_i];
+                        if (typeof themeName !== "string")
+                            return [3 /*break*/, 4];
+                        return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(__webpack_require__(451)("./" + themeName + ".json")); })];
+                    case 3:
+                        themeData = _a.sent();
+                        name_1 = themeName
+                            .replace(/(\s|_)/g, "-")
+                            .replace(/(\(|\))/g, "")
+                            .toLowerCase();
+                        monaco.editor.defineTheme(name_1, themeData);
+                        _a.label = 4;
+                    case 4:
+                        _i++;
+                        return [3 /*break*/, 2];
+                    case 5: return [3 /*break*/, 7];
+                    case 6:
+                        err_1 = _a.sent();
+                        console.warn("Could not load custom themes?!: ", err_1);
+                        return [3 /*break*/, 7];
+                    case 7: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return ThemeLoader;
+}());
+exports.ThemeLoader = ThemeLoader;
+
+
+/***/ }),
+/* 451 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./Active4D.json": 452,
+	"./All Hallows Eve.json": 453,
+	"./Amy.json": 454,
+	"./Birds of Paradise.json": 455,
+	"./Blackboard.json": 456,
+	"./Brilliance Black.json": 457,
+	"./Brilliance Dull.json": 458,
+	"./Chrome DevTools.json": 459,
+	"./Clouds Midnight.json": 460,
+	"./Clouds.json": 461,
+	"./Cobalt.json": 462,
+	"./Dawn.json": 463,
+	"./Dominion Day.json": 464,
+	"./Dreamweaver.json": 465,
+	"./Eiffel.json": 466,
+	"./Espresso Libre.json": 467,
+	"./GitHub.json": 468,
+	"./IDLE.json": 469,
+	"./Katzenmilch.json": 470,
+	"./Kuroir Theme.json": 471,
+	"./LAZY.json": 472,
+	"./MagicWB (Amiga).json": 473,
+	"./Merbivore Soft.json": 474,
+	"./Merbivore.json": 475,
+	"./Monokai Bright.json": 476,
+	"./Monokai.json": 477,
+	"./Night Owl.json": 478,
+	"./Oceanic Next.json": 479,
+	"./Pastels on Dark.json": 480,
+	"./Slush and Poppies.json": 481,
+	"./Solarized-dark.json": 482,
+	"./Solarized-light.json": 483,
+	"./SpaceCadet.json": 484,
+	"./Sunburst.json": 485,
+	"./Textmate (Mac Classic).json": 486,
+	"./Tomorrow-Night-Blue.json": 487,
+	"./Tomorrow-Night-Bright.json": 488,
+	"./Tomorrow-Night-Eighties.json": 489,
+	"./Tomorrow-Night.json": 490,
+	"./Tomorrow.json": 491,
+	"./Twilight.json": 492,
+	"./Upstream Sunburst.json": 493,
+	"./Vibrant Ink.json": 494,
+	"./Xcode_default.json": 495,
+	"./Zenburnesque.json": 496,
+	"./iPlastic.json": 497,
+	"./idleFingers.json": 498,
+	"./krTheme.json": 499,
+	"./monoindustrial.json": 500,
+	"./themelist.json": 292
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 451;
+
+/***/ }),
+/* 452 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"background\":\"e2e9ff5e\",\"token\":\"text.html source.active4d\"},{\"foreground\":\"000000\",\"token\":\"text.xml\"},{\"foreground\":\"af82d4\",\"token\":\"comment.line\"},{\"foreground\":\"af82d4\",\"token\":\"comment.block\"},{\"foreground\":\"666666\",\"token\":\"string\"},{\"foreground\":\"66ccff\",\"fontStyle\":\"bold\",\"token\":\"string.interpolated variable\"},{\"foreground\":\"a8017e\",\"token\":\"constant.numeric\"},{\"foreground\":\"66ccff\",\"fontStyle\":\"bold\",\"token\":\"constant.other.date\"},{\"foreground\":\"66ccff\",\"fontStyle\":\"bold\",\"token\":\"constant.other.time\"},{\"foreground\":\"a535ae\",\"token\":\"constant.language\"},{\"foreground\":\"6392ff\",\"fontStyle\":\"bold\",\"token\":\"variable.other.local\"},{\"foreground\":\"0053ff\",\"fontStyle\":\"bold\",\"token\":\"variable\"},{\"foreground\":\"6988ae\",\"token\":\"variable.other.table-field\"},{\"foreground\":\"006699\",\"fontStyle\":\"bold\",\"token\":\"keyword\"},{\"foreground\":\"ff5600\",\"token\":\"storage\"},{\"foreground\":\"21439c\",\"token\":\"entity.name.type\"},{\"foreground\":\"21439c\",\"token\":\"entity.name.function\"},{\"foreground\":\"7a7a7a\",\"token\":\"meta.tag\"},{\"foreground\":\"016cff\",\"token\":\"entity.name.tag\"},{\"foreground\":\"963dff\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"45ae34\",\"fontStyle\":\"bold\",\"token\":\"support.function\"},{\"foreground\":\"b7734c\",\"token\":\"support.constant\"},{\"foreground\":\"a535ae\",\"token\":\"support.type\"},{\"foreground\":\"a535ae\",\"token\":\"support.class\"},{\"foreground\":\"a535ae\",\"token\":\"support.variable\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"foreground\":\"ffffff\",\"background\":\"656565\",\"token\":\"meta.diff\"},{\"foreground\":\"ffffff\",\"background\":\"1b63ff\",\"token\":\"meta.diff.range\"},{\"foreground\":\"000000\",\"background\":\"ff7880\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"000000\",\"background\":\"98ff9a\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"5e5e5e\",\"token\":\"source.diff\"}],\"colors\":{\"editor.foreground\":\"#3B3B3B\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#BAD6FD\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 453 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"ffffff\",\"background\":\"434242\",\"token\":\"text\"},{\"foreground\":\"ffffff\",\"background\":\"000000\",\"token\":\"source\"},{\"foreground\":\"9933cc\",\"token\":\"comment\"},{\"foreground\":\"3387cc\",\"token\":\"constant\"},{\"foreground\":\"cc7833\",\"token\":\"keyword\"},{\"foreground\":\"d0d0ff\",\"token\":\"meta.preprocessor.c\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"ffffff\",\"background\":\"9b9b9b\",\"token\":\"source comment.block\"},{\"foreground\":\"66cc33\",\"token\":\"string\"},{\"foreground\":\"aaaaaa\",\"token\":\"string constant.character.escape\"},{\"foreground\":\"000000\",\"background\":\"cccc33\",\"token\":\"string.interpolated\"},{\"foreground\":\"cccc33\",\"token\":\"string.regexp\"},{\"foreground\":\"cccc33\",\"token\":\"string.literal\"},{\"foreground\":\"555555\",\"token\":\"string.interpolated constant.character.escape\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"fontStyle\":\"italic underline\",\"token\":\"entity.other.inherited-class\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.tag\"},{\"foreground\":\"c83730\",\"token\":\"support.function\"}],\"colors\":{\"editor.foreground\":\"#FFFFFF\",\"editor.background\":\"#000000\",\"editor.selectionBackground\":\"#73597EE0\",\"editor.lineHighlightBackground\":\"#333300\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#404040\"}}");
+
+/***/ }),
+/* 454 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"404080\",\"background\":\"200020\",\"fontStyle\":\"italic\",\"token\":\"comment.block\"},{\"foreground\":\"999999\",\"token\":\"string\"},{\"foreground\":\"707090\",\"token\":\"constant.language\"},{\"foreground\":\"7090b0\",\"token\":\"constant.numeric\"},{\"fontStyle\":\"bold\",\"token\":\"constant.numeric.integer.int32\"},{\"fontStyle\":\"italic\",\"token\":\"constant.numeric.integer.int64\"},{\"fontStyle\":\"bold italic\",\"token\":\"constant.numeric.integer.nativeint\"},{\"fontStyle\":\"underline\",\"token\":\"constant.numeric.floating-point.ocaml\"},{\"foreground\":\"666666\",\"token\":\"constant.character\"},{\"foreground\":\"8080a0\",\"token\":\"constant.language.boolean\"},{\"foreground\":\"008080\",\"token\":\"variable.language\"},{\"foreground\":\"008080\",\"token\":\"variable.other\"},{\"foreground\":\"a080ff\",\"token\":\"keyword\"},{\"foreground\":\"a0a0ff\",\"token\":\"keyword.operator\"},{\"foreground\":\"d0d0ff\",\"token\":\"keyword.other.decorator\"},{\"fontStyle\":\"underline\",\"token\":\"keyword.operator.infix.floating-point.ocaml\"},{\"fontStyle\":\"underline\",\"token\":\"keyword.operator.prefix.floating-point.ocaml\"},{\"foreground\":\"c080c0\",\"token\":\"keyword.other.directive\"},{\"foreground\":\"c080c0\",\"fontStyle\":\"underline\",\"token\":\"keyword.other.directive.line-number\"},{\"foreground\":\"80a0ff\",\"token\":\"keyword.control\"},{\"foreground\":\"b0fff0\",\"token\":\"storage\"},{\"foreground\":\"60b0ff\",\"token\":\"entity.name.type.variant\"},{\"foreground\":\"60b0ff\",\"fontStyle\":\"italic\",\"token\":\"storage.type.variant.polymorphic\"},{\"foreground\":\"60b0ff\",\"fontStyle\":\"italic\",\"token\":\"entity.name.type.variant.polymorphic\"},{\"foreground\":\"b000b0\",\"token\":\"entity.name.type.module\"},{\"foreground\":\"b000b0\",\"fontStyle\":\"underline\",\"token\":\"entity.name.type.module-type.ocaml\"},{\"foreground\":\"a00050\",\"token\":\"support.other\"},{\"foreground\":\"70e080\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"70e0a0\",\"token\":\"entity.name.type.class-type\"},{\"foreground\":\"50a0a0\",\"token\":\"entity.name.function\"},{\"foreground\":\"80b0b0\",\"token\":\"variable.parameter\"},{\"foreground\":\"3080a0\",\"token\":\"entity.name.type.token\"},{\"foreground\":\"3cb0d0\",\"token\":\"entity.name.type.token.reference\"},{\"foreground\":\"90e0e0\",\"token\":\"entity.name.function.non-terminal\"},{\"foreground\":\"c0f0f0\",\"token\":\"entity.name.function.non-terminal.reference\"},{\"foreground\":\"009090\",\"token\":\"entity.name.tag\"},{\"background\":\"200020\",\"token\":\"support.constant\"},{\"foreground\":\"400080\",\"background\":\"ffff00\",\"fontStyle\":\"bold\",\"token\":\"invalid.illegal\"},{\"foreground\":\"200020\",\"background\":\"cc66ff\",\"token\":\"invalid.deprecated\"},{\"background\":\"40008054\",\"token\":\"source.camlp4.embedded\"},{\"foreground\":\"805080\",\"token\":\"punctuation\"}],\"colors\":{\"editor.foreground\":\"#D0D0FF\",\"editor.background\":\"#200020\",\"editor.selectionBackground\":\"#80000080\",\"editor.lineHighlightBackground\":\"#80000040\",\"editorCursor.foreground\":\"#7070FF\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 455 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"e6e1c4\",\"background\":\"322323\",\"token\":\"source\"},{\"foreground\":\"6b4e32\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"ef5d32\",\"token\":\"keyword\"},{\"foreground\":\"ef5d32\",\"token\":\"storage\"},{\"foreground\":\"efac32\",\"token\":\"entity.name.function\"},{\"foreground\":\"efac32\",\"token\":\"keyword.other.name-of-parameter.objc\"},{\"foreground\":\"efac32\",\"fontStyle\":\"bold\",\"token\":\"entity.name\"},{\"foreground\":\"6c99bb\",\"token\":\"constant.numeric\"},{\"foreground\":\"7daf9c\",\"token\":\"variable.language\"},{\"foreground\":\"7daf9c\",\"token\":\"variable.other\"},{\"foreground\":\"6c99bb\",\"token\":\"constant\"},{\"foreground\":\"efac32\",\"token\":\"variable.other.constant\"},{\"foreground\":\"6c99bb\",\"token\":\"constant.language\"},{\"foreground\":\"d9d762\",\"token\":\"string\"},{\"foreground\":\"efac32\",\"token\":\"support.function\"},{\"foreground\":\"efac32\",\"token\":\"support.type\"},{\"foreground\":\"6c99bb\",\"token\":\"support.constant\"},{\"foreground\":\"efcb43\",\"token\":\"meta.tag\"},{\"foreground\":\"efcb43\",\"token\":\"declaration.tag\"},{\"foreground\":\"efcb43\",\"token\":\"entity.name.tag\"},{\"foreground\":\"efcb43\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"foreground\":\"7daf9c\",\"token\":\"constant.character.escaped\"},{\"foreground\":\"7daf9c\",\"token\":\"constant.character.escape\"},{\"foreground\":\"7daf9c\",\"token\":\"string source\"},{\"foreground\":\"7daf9c\",\"token\":\"string source.ruby\"},{\"foreground\":\"e6e1dc\",\"background\":\"144212\",\"token\":\"markup.inserted\"},{\"foreground\":\"e6e1dc\",\"background\":\"660000\",\"token\":\"markup.deleted\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.header\"},{\"background\":\"2f33ab\",\"token\":\"meta.separator.diff\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.index\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#E6E1C4\",\"editor.background\":\"#372725\",\"editor.selectionBackground\":\"#16120E\",\"editor.lineHighlightBackground\":\"#1F1611\",\"editorCursor.foreground\":\"#E6E1C4\",\"editorWhitespace.foreground\":\"#42302D\"}}");
+
+/***/ }),
+/* 456 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"aeaeae\",\"token\":\"comment\"},{\"foreground\":\"d8fa3c\",\"token\":\"constant\"},{\"foreground\":\"ff6400\",\"token\":\"entity\"},{\"foreground\":\"fbde2d\",\"token\":\"keyword\"},{\"foreground\":\"fbde2d\",\"token\":\"storage\"},{\"foreground\":\"61ce3c\",\"token\":\"string\"},{\"foreground\":\"61ce3c\",\"token\":\"meta.verbatim\"},{\"foreground\":\"8da6ce\",\"token\":\"support\"},{\"foreground\":\"ab2a1d\",\"fontStyle\":\"italic\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"f8f8f8\",\"background\":\"9d1e15\",\"token\":\"invalid.illegal\"},{\"foreground\":\"ff6400\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"ff6400\",\"token\":\"string constant.other.placeholder\"},{\"foreground\":\"becde6\",\"token\":\"meta.function-call.py\"},{\"foreground\":\"7f90aa\",\"token\":\"meta.tag\"},{\"foreground\":\"7f90aa\",\"token\":\"meta.tag entity\"},{\"foreground\":\"ffffff\",\"token\":\"entity.name.section\"},{\"foreground\":\"d5e0f3\",\"token\":\"keyword.type.variant\"},{\"foreground\":\"f8f8f8\",\"token\":\"source.ocaml keyword.operator.symbol\"},{\"foreground\":\"8da6ce\",\"token\":\"source.ocaml keyword.operator.symbol.infix\"},{\"foreground\":\"8da6ce\",\"token\":\"source.ocaml keyword.operator.symbol.prefix\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.infix.floating-point\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.prefix.floating-point\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml constant.numeric.floating-point\"},{\"background\":\"ffffff08\",\"token\":\"text.tex.latex meta.function.environment\"},{\"background\":\"7a96fa08\",\"token\":\"text.tex.latex meta.function.environment meta.function.environment\"},{\"foreground\":\"fbde2d\",\"token\":\"text.tex.latex support.function\"},{\"foreground\":\"ffffff\",\"token\":\"source.plist string.unquoted\"},{\"foreground\":\"ffffff\",\"token\":\"source.plist keyword.operator\"}],\"colors\":{\"editor.foreground\":\"#F8F8F8\",\"editor.background\":\"#0C1021\",\"editor.selectionBackground\":\"#253B76\",\"editor.lineHighlightBackground\":\"#FFFFFF0F\",\"editorCursor.foreground\":\"#FFFFFFA6\",\"editorWhitespace.foreground\":\"#FFFFFF40\"}}");
+
+/***/ }),
+/* 457 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"000000\",\"background\":\"ffffff\",\"fontStyle\":\"bold\",\"token\":\"meta.thomas_aylott\"},{\"foreground\":\"555555\",\"background\":\"ffffff\",\"fontStyle\":\"underline\",\"token\":\"meta.subtlegradient\"},{\"foreground\":\"fffc80\",\"background\":\"803d0033\",\"token\":\"string -meta.tag -meta.doctype -string.regexp -string.literal -string.interpolated -string.quoted.literal -string.unquoted\"},{\"foreground\":\"fffc80\",\"background\":\"803d0033\",\"token\":\"variable.parameter.misc.css\"},{\"foreground\":\"fffc80\",\"background\":\"803d0033\",\"token\":\"text string source string\"},{\"foreground\":\"fffc80\",\"background\":\"803d0033\",\"token\":\"string.unquoted string\"},{\"foreground\":\"fffc80\",\"background\":\"803d0033\",\"token\":\"string.regexp string\"},{\"foreground\":\"fffc80\",\"background\":\"803d0033\",\"token\":\"string.interpolated string\"},{\"foreground\":\"fffc80\",\"background\":\"803d0033\",\"token\":\"meta.tag source string\"},{\"foreground\":\"803d00\",\"token\":\"punctuation.definition.string -meta.tag\"},{\"foreground\":\"fff80033\",\"token\":\"string.regexp punctuation.definition.string\"},{\"foreground\":\"fff80033\",\"token\":\"string.quoted.literal punctuation.definition.string\"},{\"foreground\":\"fff80033\",\"token\":\"string.quoted.double.ruby.mod punctuation.definition.string\"},{\"foreground\":\"fff800\",\"background\":\"43800033\",\"token\":\"string.quoted.literal\"},{\"foreground\":\"fff800\",\"background\":\"43800033\",\"token\":\"string.quoted.double.ruby.mod\"},{\"foreground\":\"ffbc80\",\"token\":\"string.unquoted -string.unquoted.embedded\"},{\"foreground\":\"ffbc80\",\"token\":\"string.quoted.double.multiline\"},{\"foreground\":\"ffbc80\",\"token\":\"meta.scope.heredoc\"},{\"foreground\":\"fffc80\",\"background\":\"1a1a1a\",\"token\":\"string.interpolated\"},{\"foreground\":\"fff800\",\"background\":\"43800033\",\"token\":\"string.regexp\"},{\"background\":\"43800033\",\"token\":\"string.regexp.group\"},{\"foreground\":\"ffffff66\",\"background\":\"43800033\",\"token\":\"string.regexp.group string.regexp.group\"},{\"foreground\":\"ffffff66\",\"background\":\"43800033\",\"token\":\"string.regexp.group string.regexp.group string.regexp.group\"},{\"foreground\":\"ffffff66\",\"background\":\"43800033\",\"token\":\"string.regexp.group string.regexp.group string.regexp.group string.regexp.group\"},{\"foreground\":\"86ff00\",\"background\":\"43800033\",\"token\":\"string.regexp.character-class\"},{\"foreground\":\"00fff8\",\"background\":\"43800033\",\"token\":\"string.regexp.arbitrary-repitition\"},{\"foreground\":\"803d00\",\"token\":\"string.regexp punctuation.definition.string keyword.other\"},{\"background\":\"0086ff33\",\"token\":\"meta.group.assertion.regexp\"},{\"foreground\":\"0086ff\",\"token\":\"meta.assertion\"},{\"foreground\":\"0086ff\",\"token\":\"meta.group.assertion keyword.control.group.regexp\"},{\"foreground\":\"0086ff\",\"token\":\"meta.group.assertion punctuation.definition.group\"},{\"foreground\":\"c6ff00\",\"token\":\"constant.numeric\"},{\"foreground\":\"86ff00\",\"token\":\"constant.character\"},{\"foreground\":\"07ff00\",\"token\":\"constant.language\"},{\"foreground\":\"07ff00\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"07ff00\",\"token\":\"constant.other.java\"},{\"foreground\":\"07ff00\",\"token\":\"constant.other.unit\"},{\"foreground\":\"07ff00\",\"background\":\"04800033\",\"token\":\"constant.language.pseudo-variable\"},{\"foreground\":\"00ff79\",\"token\":\"constant.other\"},{\"foreground\":\"00ff79\",\"token\":\"constant.block\"},{\"foreground\":\"00fff8\",\"token\":\"support.constant\"},{\"foreground\":\"00fff8\",\"token\":\"constant.name\"},{\"foreground\":\"00ff79\",\"background\":\"00807c33\",\"token\":\"variable.other.readwrite.global.pre-defined\"},{\"foreground\":\"00ff79\",\"background\":\"00807c33\",\"token\":\"variable.language\"},{\"foreground\":\"00fff8\",\"token\":\"variable.other.constant\"},{\"foreground\":\"00fff8\",\"background\":\"00807c33\",\"token\":\"support.variable\"},{\"foreground\":\"00807c\",\"background\":\"00438033\",\"token\":\"variable.other.readwrite.global\"},{\"foreground\":\"31a6ff\",\"token\":\"variable.other\"},{\"foreground\":\"31a6ff\",\"token\":\"variable.js\"},{\"foreground\":\"31a6ff\",\"token\":\"punctuation.separator.variable\"},{\"foreground\":\"0086ff\",\"background\":\"0008ff33\",\"token\":\"variable.other.readwrite.class\"},{\"foreground\":\"406180\",\"token\":\"variable.other.readwrite.instance\"},{\"foreground\":\"406180\",\"token\":\"variable.other.php\"},{\"foreground\":\"406180\",\"token\":\"variable.other.normal\"},{\"foreground\":\"00000080\",\"token\":\"punctuation.definition\"},{\"foreground\":\"00000080\",\"token\":\"punctuation.separator.variable\"},{\"foreground\":\"7e0080\",\"token\":\"storage -storage.modifier\"},{\"background\":\"803d0033\",\"token\":\"other.preprocessor\"},{\"background\":\"803d0033\",\"token\":\"entity.name.preprocessor\"},{\"foreground\":\"666666\",\"token\":\"variable.language.this.js\"},{\"foreground\":\"803d00\",\"token\":\"storage.modifier\"},{\"foreground\":\"ff0000\",\"token\":\"entity.name.class\"},{\"foreground\":\"ff0000\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"ff0000\",\"token\":\"entity.name.type.module\"},{\"foreground\":\"870000\",\"background\":\"ff000033\",\"token\":\"meta.class -meta.class.instance\"},{\"foreground\":\"870000\",\"background\":\"ff000033\",\"token\":\"declaration.class\"},{\"foreground\":\"870000\",\"background\":\"ff000033\",\"token\":\"meta.definition.class\"},{\"foreground\":\"870000\",\"background\":\"ff000033\",\"token\":\"declaration.module\"},{\"foreground\":\"ff0000\",\"background\":\"87000033\",\"token\":\"support.type\"},{\"foreground\":\"ff0000\",\"background\":\"87000033\",\"token\":\"support.class\"},{\"foreground\":\"ff3d44\",\"token\":\"entity.name.instance\"},{\"foreground\":\"ff3d44\",\"token\":\"entity.name.type.instance\"},{\"background\":\"831e5133\",\"token\":\"meta.class.instance.constructor\"},{\"foreground\":\"ff0086\",\"background\":\"80000433\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"ff0086\",\"background\":\"80000433\",\"token\":\"entity.name.module\"},{\"foreground\":\"ff0086\",\"token\":\"meta.definition.method\"},{\"foreground\":\"ff0086\",\"token\":\"entity.name.function\"},{\"foreground\":\"ff0086\",\"token\":\"entity.name.preprocessor\"},{\"foreground\":\"9799ff\",\"token\":\"variable.parameter.function\"},{\"foreground\":\"9799ff\",\"token\":\"variable.parameter -variable.parameter.misc.css\"},{\"foreground\":\"9799ff\",\"token\":\"meta.definition.method  meta.definition.param-list\"},{\"foreground\":\"9799ff\",\"token\":\"meta.function.method.with-arguments variable.parameter.function\"},{\"foreground\":\"800004\",\"token\":\"punctuation.definition.parameters\"},{\"foreground\":\"800004\",\"token\":\"variable.parameter.function punctuation.separator.object\"},{\"foreground\":\"782ec1\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"782ec1\",\"token\":\"meta.function-call entity.name.function -(meta.function-call meta.function)\"},{\"foreground\":\"782ec1\",\"token\":\"support.function - variable\"},{\"foreground\":\"9d3eff\",\"token\":\"meta.function-call support.function - variable\"},{\"foreground\":\"603f80\",\"background\":\"603f8033\",\"token\":\"support.function\"},{\"foreground\":\"bc80ff\",\"token\":\"punctuation.section.function\"},{\"foreground\":\"bc80ff\",\"token\":\"meta.brace.curly.function\"},{\"foreground\":\"bc80ff\",\"token\":\"meta.function-call punctuation.section.scope.ruby\"},{\"foreground\":\"bc80ff\",\"token\":\"meta.function-call punctuation.separator.object\"},{\"foreground\":\"bc80ff\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.round punctuation.section.scope\"},{\"foreground\":\"bc80ff\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.round meta.delimiter.object.comma\"},{\"foreground\":\"bc80ff\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.curly.function meta.delimiter.object.comma\"},{\"foreground\":\"bc80ff\",\"fontStyle\":\"bold\",\"token\":\"meta.brace.round\"},{\"foreground\":\"a88fc0\",\"token\":\"meta.function-call.method.without-arguments\"},{\"foreground\":\"a88fc0\",\"token\":\"meta.function-call.method.without-arguments entity.name.function\"},{\"foreground\":\"f800ff\",\"token\":\"keyword.control\"},{\"foreground\":\"7900ff\",\"token\":\"keyword.other\"},{\"foreground\":\"0000ce\",\"token\":\"keyword.operator\"},{\"foreground\":\"0000ce\",\"token\":\"declaration.function.operator\"},{\"foreground\":\"0000ce\",\"token\":\"meta.preprocessor.c.include\"},{\"foreground\":\"0000ce\",\"token\":\"punctuation.separator.operator\"},{\"foreground\":\"0000ce\",\"background\":\"00009a33\",\"token\":\"keyword.operator.assignment\"},{\"foreground\":\"2136ce\",\"token\":\"keyword.operator.arithmetic\"},{\"foreground\":\"3759ff\",\"background\":\"00009a33\",\"token\":\"keyword.operator.logical\"},{\"foreground\":\"7c88ff\",\"token\":\"keyword.operator.comparison\"},{\"foreground\":\"800043\",\"token\":\"meta.class.instance.constructor keyword.operator.new\"},{\"foreground\":\"cccccc\",\"background\":\"333333\",\"token\":\"meta.doctype\"},{\"foreground\":\"cccccc\",\"background\":\"333333\",\"token\":\"meta.tag.sgml-declaration.doctype\"},{\"foreground\":\"cccccc\",\"background\":\"333333\",\"token\":\"meta.tag.sgml.doctype\"},{\"foreground\":\"333333\",\"token\":\"meta.tag\"},{\"foreground\":\"666666\",\"background\":\"333333bf\",\"token\":\"meta.tag.structure\"},{\"foreground\":\"666666\",\"background\":\"333333bf\",\"token\":\"meta.tag.segment\"},{\"foreground\":\"4c4c4c\",\"background\":\"4c4c4c33\",\"token\":\"meta.tag.block\"},{\"foreground\":\"4c4c4c\",\"background\":\"4c4c4c33\",\"token\":\"meta.tag.xml\"},{\"foreground\":\"4c4c4c\",\"background\":\"4c4c4c33\",\"token\":\"meta.tag.key\"},{\"foreground\":\"ff7900\",\"background\":\"803d0033\",\"token\":\"meta.tag.inline\"},{\"background\":\"803d0033\",\"token\":\"meta.tag.inline source\"},{\"foreground\":\"ff0007\",\"background\":\"80000433\",\"token\":\"meta.tag.other\"},{\"foreground\":\"ff0007\",\"background\":\"80000433\",\"token\":\"entity.name.tag.style\"},{\"foreground\":\"ff0007\",\"background\":\"80000433\",\"token\":\"entity.name.tag.script\"},{\"foreground\":\"ff0007\",\"background\":\"80000433\",\"token\":\"meta.tag.block.script\"},{\"foreground\":\"ff0007\",\"background\":\"80000433\",\"token\":\"source.js.embedded punctuation.definition.tag.html\"},{\"foreground\":\"ff0007\",\"background\":\"80000433\",\"token\":\"source.css.embedded punctuation.definition.tag.html\"},{\"foreground\":\"0086ff\",\"background\":\"00438033\",\"token\":\"meta.tag.form\"},{\"foreground\":\"0086ff\",\"background\":\"00438033\",\"token\":\"meta.tag.block.form\"},{\"foreground\":\"f800ff\",\"background\":\"3c008033\",\"token\":\"meta.tag.meta\"},{\"background\":\"121212\",\"token\":\"meta.section.html.head\"},{\"background\":\"0043801a\",\"token\":\"meta.section.html.form\"},{\"foreground\":\"666666\",\"token\":\"meta.tag.xml\"},{\"foreground\":\"ffffff4d\",\"token\":\"entity.name.tag\"},{\"foreground\":\"ffffff33\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"ffffff33\",\"token\":\"meta.tag punctuation.definition.string\"},{\"foreground\":\"ffffff66\",\"token\":\"meta.tag string -source -punctuation\"},{\"foreground\":\"ffffff66\",\"token\":\"text source text meta.tag string -punctuation\"},{\"foreground\":\"999999\",\"token\":\"text meta.paragraph\"},{\"foreground\":\"fff800\",\"background\":\"33333333\",\"token\":\"markup markup -(markup meta.paragraph.list)\"},{\"foreground\":\"000000\",\"background\":\"ffffff\",\"token\":\"markup.hr\"},{\"foreground\":\"ffffff\",\"token\":\"markup.heading\"},{\"foreground\":\"95d4ff80\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"0086ff\",\"token\":\"meta.reference\"},{\"foreground\":\"0086ff\",\"token\":\"markup.underline.link\"},{\"foreground\":\"00fff8\",\"background\":\"00438033\",\"token\":\"entity.name.reference\"},{\"foreground\":\"00fff8\",\"fontStyle\":\"underline\",\"token\":\"meta.reference.list markup.underline.link\"},{\"foreground\":\"00fff8\",\"fontStyle\":\"underline\",\"token\":\"text.html.textile markup.underline.link\"},{\"background\":\"80808040\",\"token\":\"markup.raw.block\"},{\"background\":\"ffffff1a\",\"token\":\"markup.quote\"},{\"foreground\":\"ffffff\",\"token\":\"markup.list meta.paragraph\"},{\"foreground\":\"000000\",\"background\":\"ffffff\",\"token\":\"text.html.markdown\"},{\"foreground\":\"000000\",\"token\":\"text.html.markdown meta.paragraph\"},{\"foreground\":\"555555\",\"token\":\"text.html.markdown markup.list meta.paragraph\"},{\"foreground\":\"000000\",\"fontStyle\":\"bold\",\"token\":\"text.html.markdown markup.heading\"},{\"foreground\":\"8a5420\",\"token\":\"text.html.markdown string\"},{\"foreground\":\"666666\",\"token\":\"meta.selector\"},{\"foreground\":\"006680\",\"token\":\"source.css meta.scope.property-list meta.property-value punctuation.definition.arguments\"},{\"foreground\":\"006680\",\"token\":\"source.css meta.scope.property-list meta.property-value punctuation.separator.arguments\"},{\"foreground\":\"4f00ff\",\"token\":\"entity.other.attribute-name.pseudo-element\"},{\"foreground\":\"7900ff\",\"token\":\"entity.other.attribute-name.pseudo-class\"},{\"foreground\":\"7900ff\",\"token\":\"entity.other.attribute-name.tag.pseudo-class\"},{\"foreground\":\"f800ff\",\"token\":\"meta.selector entity.other.attribute-name.class\"},{\"foreground\":\"ff0086\",\"token\":\"meta.selector entity.other.attribute-name.id\"},{\"foreground\":\"ff0007\",\"token\":\"meta.selector entity.name.tag\"},{\"foreground\":\"ff7900\",\"fontStyle\":\"bold\",\"token\":\"entity.name.tag.wildcard\"},{\"foreground\":\"ff7900\",\"fontStyle\":\"bold\",\"token\":\"entity.other.attribute-name.universal\"},{\"foreground\":\"c25a00\",\"token\":\"source.css entity.other.attribute-name.attribute\"},{\"foreground\":\"673000\",\"token\":\"source.css meta.attribute-selector keyword.operator.comparison\"},{\"foreground\":\"333333\",\"fontStyle\":\"bold\",\"token\":\"meta.scope.property-list\"},{\"foreground\":\"999999\",\"token\":\"meta.property-name\"},{\"foreground\":\"ffffff\",\"background\":\"0d0d0d\",\"token\":\"support.type.property-name\"},{\"foreground\":\"999999\",\"background\":\"19191980\",\"token\":\"meta.property-value\"},{\"background\":\"000000\",\"token\":\"text.latex markup.raw\"},{\"foreground\":\"bc80ff\",\"token\":\"text.latex support.function -support.function.textit -support.function.emph\"},{\"foreground\":\"ffffffbf\",\"token\":\"text.latex support.function.section\"},{\"foreground\":\"000000\",\"background\":\"ffffff\",\"token\":\"text.latex entity.name.section -meta.group -keyword.operator.braces\"},{\"background\":\"00000080\",\"token\":\"text.latex keyword.operator.delimiter\"},{\"foreground\":\"999999\",\"token\":\"text.latex keyword.operator.brackets\"},{\"foreground\":\"666666\",\"token\":\"text.latex keyword.operator.braces\"},{\"foreground\":\"0008ff4d\",\"background\":\"00008033\",\"token\":\"meta.footnote\"},{\"background\":\"ffffff0d\",\"token\":\"text.latex meta.label.reference\"},{\"foreground\":\"ff0007\",\"background\":\"260001\",\"token\":\"text.latex keyword.control.ref\"},{\"foreground\":\"ffbc80\",\"background\":\"400002\",\"token\":\"text.latex variable.parameter.label.reference\"},{\"foreground\":\"ff0086\",\"background\":\"260014\",\"token\":\"text.latex keyword.control.cite\"},{\"foreground\":\"ffbfe1\",\"background\":\"400022\",\"token\":\"variable.parameter.cite\"},{\"foreground\":\"ffffff80\",\"token\":\"text.latex variable.parameter.label\"},{\"foreground\":\"cdcdcd\",\"token\":\"meta.function markup\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.group.braces\"},{\"foreground\":\"33333333\",\"background\":\"00000080\",\"token\":\"text.latex meta.environment.list\"},{\"foreground\":\"33333333\",\"background\":\"00000080\",\"token\":\"text.latex meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"background\":\"000000\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"000000\",\"background\":\"cccccc\",\"token\":\"text.latex meta.end-document\"},{\"foreground\":\"000000\",\"background\":\"cccccc\",\"token\":\"text.latex meta.begin-document\"},{\"foreground\":\"000000\",\"background\":\"cccccc\",\"token\":\"meta.end-document.latex support.function\"},{\"foreground\":\"000000\",\"background\":\"cccccc\",\"token\":\"meta.end-document.latex variable.parameter\"},{\"foreground\":\"000000\",\"background\":\"cccccc\",\"token\":\"meta.begin-document.latex support.function\"},{\"foreground\":\"000000\",\"background\":\"cccccc\",\"token\":\"meta.begin-document.latex variable.parameter\"},{\"foreground\":\"00ffaa\",\"background\":\"00805533\",\"token\":\"meta.brace.erb.return-value\"},{\"background\":\"8080801a\",\"token\":\"source.ruby.rails.embedded.return-value.one-line\"},{\"foreground\":\"00fff8\",\"background\":\"00fff81a\",\"token\":\"punctuation.section.embedded -(source string source punctuation.section.embedded)\"},{\"foreground\":\"00fff8\",\"background\":\"00fff81a\",\"token\":\"meta.brace.erb.html\"},{\"background\":\"00fff81a\",\"token\":\"source.ruby.rails.embedded.one-line\"},{\"foreground\":\"406180\",\"token\":\"source string source punctuation.section.embedded\"},{\"background\":\"0d0d0d\",\"token\":\"source.js.embedded\"},{\"background\":\"000000\",\"token\":\"meta.brace.erb\"},{\"foreground\":\"ffffff\",\"background\":\"33333380\",\"token\":\"source string source\"},{\"foreground\":\"999999\",\"background\":\"00000099\",\"token\":\"source string.interpolated source\"},{\"background\":\"3333331a\",\"token\":\"source source\"},{\"background\":\"3333331a\",\"token\":\"source.java.embedded\"},{\"foreground\":\"ffffff\",\"token\":\"text -text.xml.strict\"},{\"foreground\":\"cccccc\",\"background\":\"000000\",\"token\":\"text source\"},{\"foreground\":\"cccccc\",\"background\":\"000000\",\"token\":\"meta.scope.django.template\"},{\"foreground\":\"999999\",\"token\":\"text string source\"},{\"foreground\":\"330004\",\"background\":\"ff0007\",\"fontStyle\":\"bold\",\"token\":\"invalid -invalid.SOMETHING\"},{\"foreground\":\"ff3600\",\"fontStyle\":\"underline\",\"token\":\"invalid.SOMETHING\"},{\"foreground\":\"333333\",\"token\":\"meta.syntax\"},{\"foreground\":\"4c4c4c\",\"background\":\"33333333\",\"token\":\"comment -comment.line\"},{\"foreground\":\"4c4c4c\",\"fontStyle\":\"italic\",\"token\":\"comment.line\"},{\"fontStyle\":\"italic\",\"token\":\"text comment.block -source\"},{\"foreground\":\"40ff9a\",\"background\":\"00401e\",\"token\":\"markup.inserted\"},{\"foreground\":\"ff40a3\",\"background\":\"400022\",\"token\":\"markup.deleted\"},{\"foreground\":\"ffff55\",\"background\":\"803d00\",\"token\":\"markup.changed\"},{\"foreground\":\"ffffff\",\"background\":\"000000\",\"token\":\"text.subversion-commit meta.scope.changed-files\"},{\"foreground\":\"ffffff\",\"background\":\"000000\",\"token\":\"text.subversion-commit meta.scope.changed-files.svn meta.diff.separator\"},{\"foreground\":\"000000\",\"background\":\"ffffff\",\"token\":\"text.subversion-commit\"},{\"foreground\":\"7f7f7f\",\"background\":\"ffffff03\",\"fontStyle\":\"bold\",\"token\":\"punctuation.terminator\"},{\"foreground\":\"7f7f7f\",\"background\":\"ffffff03\",\"fontStyle\":\"bold\",\"token\":\"meta.delimiter\"},{\"foreground\":\"7f7f7f\",\"background\":\"ffffff03\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.method\"},{\"background\":\"00000080\",\"token\":\"punctuation.terminator.statement\"},{\"background\":\"00000080\",\"token\":\"meta.delimiter.statement.js\"},{\"background\":\"00000040\",\"token\":\"meta.delimiter.object.js\"},{\"foreground\":\"803d00\",\"fontStyle\":\"bold\",\"token\":\"string.quoted.single.brace\"},{\"foreground\":\"803d00\",\"fontStyle\":\"bold\",\"token\":\"string.quoted.double.brace\"},{\"foreground\":\"333333\",\"background\":\"dcdcdc\",\"token\":\"text.blog\"},{\"foreground\":\"333333\",\"background\":\"dcdcdc\",\"token\":\"text.mail\"},{\"foreground\":\"cccccc\",\"background\":\"000000\",\"token\":\"text.blog text\"},{\"foreground\":\"cccccc\",\"background\":\"000000\",\"token\":\"text.mail text\"},{\"foreground\":\"06403e\",\"background\":\"00fff81a\",\"token\":\"meta.header.blog keyword.other\"},{\"foreground\":\"06403e\",\"background\":\"00fff81a\",\"token\":\"meta.header.mail keyword.other\"},{\"foreground\":\"803d00\",\"background\":\"ffff551a\",\"token\":\"meta.header.blog string.unquoted.blog\"},{\"foreground\":\"803d00\",\"background\":\"ffff551a\",\"token\":\"meta.header.mail string.unquoted\"},{\"foreground\":\"ff0000\",\"token\":\"source.ocaml entity.name.type.module\"},{\"foreground\":\"ff0000\",\"background\":\"83000033\",\"token\":\"source.ocaml support.other.module\"},{\"foreground\":\"00fff8\",\"token\":\"entity.name.type.variant\"},{\"foreground\":\"00ff79\",\"token\":\"source.ocaml entity.name.tag\"},{\"foreground\":\"00ff79\",\"token\":\"source.ocaml meta.record.definition\"},{\"foreground\":\"ffffff\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.parameters\"},{\"foreground\":\"4c4c4c\",\"background\":\"33333333\",\"token\":\"meta.brace.pipe\"},{\"foreground\":\"666666\",\"fontStyle\":\"bold\",\"token\":\"meta.brace.erb\"},{\"foreground\":\"666666\",\"fontStyle\":\"bold\",\"token\":\"source.ruby.embedded.source.brace\"},{\"foreground\":\"666666\",\"fontStyle\":\"bold\",\"token\":\"punctuation.section.dictionary\"},{\"foreground\":\"666666\",\"fontStyle\":\"bold\",\"token\":\"punctuation.terminator.dictionary\"},{\"foreground\":\"666666\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.object\"},{\"foreground\":\"666666\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.statement\"},{\"foreground\":\"666666\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.key-value.css\"},{\"foreground\":\"999999\",\"fontStyle\":\"bold\",\"token\":\"punctuation.section.scope.curly\"},{\"foreground\":\"999999\",\"fontStyle\":\"bold\",\"token\":\"punctuation.section.scope\"},{\"foreground\":\"0c823b\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.objects\"},{\"foreground\":\"0c823b\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.curly meta.delimiter.object.comma\"},{\"foreground\":\"0c823b\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.key-value -meta.tag\"},{\"foreground\":\"0c823b\",\"fontStyle\":\"bold\",\"token\":\"source.ocaml punctuation.separator.match-definition\"},{\"foreground\":\"800043\",\"token\":\"punctuation.separator.parameters.function.js\"},{\"foreground\":\"800043\",\"token\":\"punctuation.definition.function\"},{\"foreground\":\"800043\",\"token\":\"punctuation.separator.function-return\"},{\"foreground\":\"800043\",\"token\":\"punctuation.separator.function-definition\"},{\"foreground\":\"800043\",\"token\":\"punctuation.definition.arguments\"},{\"foreground\":\"800043\",\"token\":\"punctuation.separator.arguments\"},{\"foreground\":\"7f5e40\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.square punctuation.section.scope\"},{\"foreground\":\"7f5e40\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.square meta.delimiter.object.comma\"},{\"foreground\":\"7f5e40\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"meta.brace.square\"},{\"foreground\":\"7f5e40\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.array\"},{\"foreground\":\"7f5e40\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"punctuation.section.array\"},{\"foreground\":\"7f5e40\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"punctuation.definition.array\"},{\"foreground\":\"7f5e40\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"punctuation.definition.constant.range\"},{\"background\":\"803d001a\",\"token\":\"meta.structure.array -punctuation.definition.array\"},{\"background\":\"803d001a\",\"token\":\"meta.definition.range -punctuation.definition.constant.range\"},{\"background\":\"00000080\",\"token\":\"meta.brace.curly meta.group.css\"},{\"foreground\":\"666666\",\"background\":\"00000080\",\"token\":\"meta.source.embedded\"},{\"foreground\":\"666666\",\"background\":\"00000080\",\"token\":\"entity.other.django.tagbraces\"},{\"background\":\"00000080\",\"token\":\"source.ruby meta.even-tab\"},{\"background\":\"00000080\",\"token\":\"source.ruby meta.even-tab.group2\"},{\"background\":\"00000080\",\"token\":\"source.ruby meta.even-tab.group4\"},{\"background\":\"00000080\",\"token\":\"source.ruby meta.even-tab.group6\"},{\"background\":\"00000080\",\"token\":\"source.ruby meta.even-tab.group8\"},{\"background\":\"00000080\",\"token\":\"source.ruby meta.even-tab.group10\"},{\"background\":\"00000080\",\"token\":\"source.ruby meta.even-tab.group12\"},{\"foreground\":\"666666\",\"token\":\"meta.block.slate\"},{\"foreground\":\"cccccc\",\"token\":\"meta.block.content.slate\"},{\"background\":\"0a0a0a\",\"token\":\"meta.odd-tab.group1\"},{\"background\":\"0a0a0a\",\"token\":\"meta.group.braces\"},{\"background\":\"0a0a0a\",\"token\":\"meta.block.slate\"},{\"background\":\"0a0a0a\",\"token\":\"text.xml.strict meta.tag\"},{\"background\":\"0a0a0a\",\"token\":\"meta.paren-group\"},{\"background\":\"0a0a0a\",\"token\":\"meta.section\"},{\"background\":\"0e0e0e\",\"token\":\"meta.even-tab.group2\"},{\"background\":\"0e0e0e\",\"token\":\"meta.group.braces meta.group.braces\"},{\"background\":\"0e0e0e\",\"token\":\"meta.block.slate meta.block.slate\"},{\"background\":\"0e0e0e\",\"token\":\"text.xml.strict meta.tag meta.tag\"},{\"background\":\"0e0e0e\",\"token\":\"meta.group.braces meta.group.braces\"},{\"background\":\"0e0e0e\",\"token\":\"meta.paren-group meta.paren-group\"},{\"background\":\"0e0e0e\",\"token\":\"meta.section meta.section\"},{\"background\":\"111111\",\"token\":\"meta.odd-tab.group3\"},{\"background\":\"111111\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"111111\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"111111\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag\"},{\"background\":\"111111\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"111111\",\"token\":\"meta.paren-group meta.paren-group meta.paren-group\"},{\"background\":\"111111\",\"token\":\"meta.section meta.section meta.section\"},{\"background\":\"151515\",\"token\":\"meta.even-tab.group4\"},{\"background\":\"151515\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"151515\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"151515\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"151515\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"151515\",\"token\":\"meta.paren-group meta.paren-group meta.paren-group meta.paren-group\"},{\"background\":\"151515\",\"token\":\"meta.section meta.section meta.section meta.section\"},{\"background\":\"191919\",\"token\":\"meta.odd-tab.group5\"},{\"background\":\"191919\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"191919\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"191919\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"191919\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"191919\",\"token\":\"meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group\"},{\"background\":\"191919\",\"token\":\"meta.section meta.section meta.section meta.section meta.section\"},{\"background\":\"1c1c1c\",\"token\":\"meta.even-tab.group6\"},{\"background\":\"1c1c1c\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1c1c1c\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"1c1c1c\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"1c1c1c\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1c1c1c\",\"token\":\"meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group\"},{\"background\":\"1c1c1c\",\"token\":\"meta.section meta.section meta.section meta.section meta.section meta.section\"},{\"background\":\"1f1f1f\",\"token\":\"meta.odd-tab.group7\"},{\"background\":\"1f1f1f\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1f1f1f\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"1f1f1f\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"1f1f1f\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1f1f1f\",\"token\":\"meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group\"},{\"background\":\"1f1f1f\",\"token\":\"meta.section meta.section meta.section meta.section meta.section meta.section meta.section\"},{\"background\":\"212121\",\"token\":\"meta.even-tab.group8\"},{\"background\":\"212121\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"212121\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"212121\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"212121\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"212121\",\"token\":\"meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group\"},{\"background\":\"212121\",\"token\":\"meta.section meta.section meta.section meta.section meta.section meta.section meta.section meta.section\"},{\"background\":\"242424\",\"token\":\"meta.odd-tab.group9\"},{\"background\":\"242424\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"242424\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"242424\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"242424\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"242424\",\"token\":\"meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group\"},{\"background\":\"242424\",\"token\":\"meta.section meta.section meta.section meta.section meta.section meta.section meta.section meta.section meta.section\"},{\"background\":\"1f1f1f\",\"token\":\"meta.even-tab.group10\"},{\"background\":\"151515\",\"token\":\"meta.odd-tab.group11\"},{\"foreground\":\"1b95e2\",\"token\":\"meta.property.vendor.microsoft.trident.4\"},{\"foreground\":\"1b95e2\",\"token\":\"meta.property.vendor.microsoft.trident.4 support.type.property-name\"},{\"foreground\":\"1b95e2\",\"token\":\"meta.property.vendor.microsoft.trident.4 punctuation.terminator.rule\"},{\"foreground\":\"f5c034\",\"token\":\"meta.property.vendor.microsoft.trident.5\"},{\"foreground\":\"f5c034\",\"token\":\"meta.property.vendor.microsoft.trident.5 support.type.property-name\"},{\"foreground\":\"f5c034\",\"token\":\"meta.property.vendor.microsoft.trident.5 punctuation.separator.key-value\"},{\"foreground\":\"f5c034\",\"token\":\"meta.property.vendor.microsoft.trident.5 punctuation.terminator.rule\"}],\"colors\":{\"editor.foreground\":\"#EEEEEE\",\"editor.background\":\"#0D0D0DFA\",\"editor.selectionBackground\":\"#0010B499\",\"editor.lineHighlightBackground\":\"#00008033\",\"editorCursor.foreground\":\"#3333FF\",\"editorWhitespace.foreground\":\"#CCCCCC1A\"}}");
+
+/***/ }),
+/* 458 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"000000\",\"background\":\"ffffff\",\"fontStyle\":\"bold\",\"token\":\"meta.thomas_aylott\"},{\"foreground\":\"555555\",\"background\":\"ffffff\",\"fontStyle\":\"underline\",\"token\":\"meta.subtlegradient\"},{\"foreground\":\"e6e6e6\",\"background\":\"ffffff\",\"token\":\"meta.subtlegradient\"},{\"foreground\":\"d2d1ab\",\"background\":\"803d0033\",\"token\":\"string -meta.tag -meta.doctype -string.regexp -string.literal -string.interpolated -string.quoted.literal -string.unquoted\"},{\"foreground\":\"d2d1ab\",\"background\":\"803d0033\",\"token\":\"variable.parameter.misc.css\"},{\"foreground\":\"d2d1ab\",\"background\":\"803d0033\",\"token\":\"text string source string\"},{\"foreground\":\"d2d1ab\",\"background\":\"803d0033\",\"token\":\"string.unquoted string\"},{\"foreground\":\"d2d1ab\",\"background\":\"803d0033\",\"token\":\"string.regexp string\"},{\"foreground\":\"533f2c\",\"token\":\"punctuation.definition.string -meta.tag\"},{\"foreground\":\"fff80033\",\"token\":\"string.regexp punctuation.definition.string\"},{\"foreground\":\"fff80033\",\"token\":\"string.quoted.literal punctuation.definition.string\"},{\"foreground\":\"fff80033\",\"token\":\"string.quoted.double.ruby.mod punctuation.definition.string\"},{\"foreground\":\"a6a458\",\"background\":\"43800033\",\"token\":\"string.quoted.literal\"},{\"foreground\":\"a6a458\",\"background\":\"43800033\",\"token\":\"string.quoted.double.ruby.mod\"},{\"foreground\":\"d2beab\",\"token\":\"string.unquoted -string.unquoted.embedded\"},{\"foreground\":\"d2beab\",\"token\":\"string.quoted.double.multiline\"},{\"foreground\":\"d2beab\",\"token\":\"meta.scope.heredoc\"},{\"foreground\":\"d2d1ab\",\"background\":\"1a1a1a\",\"token\":\"string.interpolated\"},{\"foreground\":\"a6a458\",\"background\":\"43800033\",\"token\":\"string.regexp\"},{\"background\":\"43800033\",\"token\":\"string.regexp.group\"},{\"foreground\":\"ffffff66\",\"background\":\"43800033\",\"token\":\"string.regexp.group string.regexp.group\"},{\"foreground\":\"ffffff66\",\"background\":\"43800033\",\"token\":\"string.regexp.group string.regexp.group string.regexp.group\"},{\"foreground\":\"ffffff66\",\"background\":\"43800033\",\"token\":\"string.regexp.group string.regexp.group string.regexp.group string.regexp.group\"},{\"foreground\":\"80a659\",\"background\":\"43800033\",\"token\":\"string.regexp.character-class\"},{\"foreground\":\"56a5a4\",\"background\":\"43800033\",\"token\":\"string.regexp.arbitrary-repitition\"},{\"foreground\":\"a75980\",\"token\":\"source.regexp keyword.operator\"},{\"foreground\":\"ffffff\",\"fontStyle\":\"italic\",\"token\":\"string.regexp comment\"},{\"background\":\"0086ff33\",\"token\":\"meta.group.assertion.regexp\"},{\"foreground\":\"5780a6\",\"token\":\"meta.assertion\"},{\"foreground\":\"5780a6\",\"token\":\"meta.group.assertion keyword.control.group.regexp\"},{\"foreground\":\"95a658\",\"token\":\"constant.numeric\"},{\"foreground\":\"80a659\",\"token\":\"constant.character\"},{\"foreground\":\"59a559\",\"token\":\"constant.language\"},{\"foreground\":\"59a559\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"59a559\",\"token\":\"constant.other.java\"},{\"foreground\":\"59a559\",\"token\":\"constant.other.unit\"},{\"foreground\":\"59a559\",\"background\":\"04800033\",\"token\":\"constant.language.pseudo-variable\"},{\"foreground\":\"57a57d\",\"token\":\"constant.other\"},{\"foreground\":\"57a57d\",\"token\":\"constant.block\"},{\"foreground\":\"56a5a4\",\"token\":\"support.constant\"},{\"foreground\":\"56a5a4\",\"token\":\"constant.name\"},{\"foreground\":\"5e6b6b\",\"token\":\"variable.language\"},{\"foreground\":\"5e6b6b\",\"token\":\"variable.other.readwrite.global.pre-defined\"},{\"foreground\":\"56a5a4\",\"token\":\"variable.other.constant\"},{\"foreground\":\"56a5a4\",\"background\":\"00807c33\",\"token\":\"support.variable\"},{\"foreground\":\"2b5252\",\"background\":\"00438033\",\"token\":\"variable.other.readwrite.global\"},{\"foreground\":\"5780a6\",\"token\":\"variable.other\"},{\"foreground\":\"5780a6\",\"token\":\"variable.js\"},{\"foreground\":\"5780a6\",\"background\":\"0007ff33\",\"token\":\"variable.other.readwrite.class\"},{\"foreground\":\"555f69\",\"token\":\"variable.other.readwrite.instance\"},{\"foreground\":\"555f69\",\"token\":\"variable.other.php\"},{\"foreground\":\"555f69\",\"token\":\"variable.other.normal\"},{\"foreground\":\"00000080\",\"token\":\"punctuation.definition -punctuation.definition.comment\"},{\"foreground\":\"00000080\",\"token\":\"punctuation.separator.variable\"},{\"foreground\":\"a77d58\",\"token\":\"storage -storage.modifier\"},{\"background\":\"803d0033\",\"token\":\"other.preprocessor\"},{\"background\":\"803d0033\",\"token\":\"entity.name.preprocessor\"},{\"foreground\":\"666666\",\"token\":\"variable.language.this.js\"},{\"foreground\":\"533f2c\",\"token\":\"storage.modifier\"},{\"foreground\":\"a7595a\",\"token\":\"entity.name.class\"},{\"foreground\":\"a7595a\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"a7595a\",\"token\":\"entity.name.type.module\"},{\"foreground\":\"532d2d\",\"background\":\"29161780\",\"token\":\"meta.class -meta.class.instance\"},{\"foreground\":\"532d2d\",\"background\":\"29161780\",\"token\":\"declaration.class\"},{\"foreground\":\"532d2d\",\"background\":\"29161780\",\"token\":\"meta.definition.class\"},{\"foreground\":\"532d2d\",\"background\":\"29161780\",\"token\":\"declaration.module\"},{\"foreground\":\"a7595a\",\"background\":\"80000433\",\"token\":\"support.type\"},{\"foreground\":\"a7595a\",\"background\":\"80000433\",\"token\":\"support.class\"},{\"foreground\":\"a7595a\",\"token\":\"entity.name.instance\"},{\"background\":\"80004333\",\"token\":\"meta.class.instance.constructor\"},{\"foreground\":\"a75980\",\"background\":\"80000433\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"a75980\",\"background\":\"80000433\",\"token\":\"entity.name.module\"},{\"foreground\":\"a75980\",\"token\":\"object.property.function\"},{\"foreground\":\"a75980\",\"token\":\"meta.definition.method\"},{\"foreground\":\"532d40\",\"background\":\"80004333\",\"token\":\"meta.function -(meta.tell-block)\"},{\"foreground\":\"532d40\",\"background\":\"80004333\",\"token\":\"meta.property.function\"},{\"foreground\":\"532d40\",\"background\":\"80004333\",\"token\":\"declaration.function\"},{\"foreground\":\"a75980\",\"token\":\"entity.name.function\"},{\"foreground\":\"a75980\",\"token\":\"entity.name.preprocessor\"},{\"foreground\":\"a459a5\",\"token\":\"keyword\"},{\"foreground\":\"a459a5\",\"background\":\"3c008033\",\"token\":\"keyword.control\"},{\"foreground\":\"8d809d\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"8d809d\",\"token\":\"meta.function-call entity.name.function -(meta.function-call meta.function)\"},{\"foreground\":\"8d809d\",\"token\":\"support.function - variable\"},{\"foreground\":\"634683\",\"token\":\"support.function - variable\"},{\"foreground\":\"7979b7\",\"fontStyle\":\"bold\",\"token\":\"keyword.operator\"},{\"foreground\":\"7979b7\",\"fontStyle\":\"bold\",\"token\":\"declaration.function.operator\"},{\"foreground\":\"7979b7\",\"fontStyle\":\"bold\",\"token\":\"meta.preprocessor.c.include\"},{\"foreground\":\"9899c8\",\"token\":\"keyword.operator.comparison\"},{\"foreground\":\"abacd2\",\"background\":\"3c008033\",\"token\":\"variable.parameter -variable.parameter.misc.css\"},{\"foreground\":\"abacd2\",\"background\":\"3c008033\",\"token\":\"meta.definition.method  meta.definition.param-list\"},{\"foreground\":\"abacd2\",\"background\":\"3c008033\",\"token\":\"meta.function.method.with-arguments variable.parameter.function\"},{\"foreground\":\"cdcdcd\",\"background\":\"333333\",\"token\":\"meta.doctype\"},{\"foreground\":\"cdcdcd\",\"background\":\"333333\",\"token\":\"meta.tag.sgml-declaration.doctype\"},{\"foreground\":\"cdcdcd\",\"background\":\"333333\",\"token\":\"meta.tag.sgml.doctype\"},{\"foreground\":\"333333\",\"token\":\"meta.tag\"},{\"foreground\":\"666666\",\"background\":\"333333bf\",\"token\":\"meta.tag.structure\"},{\"foreground\":\"666666\",\"background\":\"333333bf\",\"token\":\"meta.tag.segment\"},{\"foreground\":\"4c4c4c\",\"background\":\"4c4c4c33\",\"token\":\"meta.tag.block\"},{\"foreground\":\"4c4c4c\",\"background\":\"4c4c4c33\",\"token\":\"meta.tag.xml\"},{\"foreground\":\"4c4c4c\",\"background\":\"4c4c4c33\",\"token\":\"meta.tag.key\"},{\"foreground\":\"a77d58\",\"background\":\"803d0033\",\"token\":\"meta.tag.inline\"},{\"background\":\"803d0033\",\"token\":\"meta.tag.inline source\"},{\"foreground\":\"a7595a\",\"background\":\"80000433\",\"token\":\"meta.tag.other\"},{\"foreground\":\"a7595a\",\"background\":\"80000433\",\"token\":\"entity.name.tag.style\"},{\"foreground\":\"a7595a\",\"background\":\"80000433\",\"token\":\"source entity.other.attribute-name -text.html.basic.embedded\"},{\"foreground\":\"a7595a\",\"background\":\"80000433\",\"token\":\"entity.name.tag.script\"},{\"foreground\":\"a7595a\",\"background\":\"80000433\",\"token\":\"meta.tag.block.script\"},{\"foreground\":\"5780a6\",\"background\":\"00438033\",\"token\":\"meta.tag.form\"},{\"foreground\":\"5780a6\",\"background\":\"00438033\",\"token\":\"meta.tag.block.form\"},{\"foreground\":\"a459a5\",\"background\":\"3c008033\",\"token\":\"meta.tag.meta\"},{\"background\":\"121212\",\"token\":\"meta.section.html.head\"},{\"background\":\"0043801a\",\"token\":\"meta.section.html.form\"},{\"foreground\":\"666666\",\"token\":\"meta.tag.xml\"},{\"foreground\":\"ffffff4d\",\"token\":\"entity.name.tag\"},{\"foreground\":\"ffffff33\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"ffffff33\",\"token\":\"meta.tag punctuation.definition.string\"},{\"foreground\":\"ffffff66\",\"token\":\"meta.tag string -source -punctuation\"},{\"foreground\":\"ffffff66\",\"token\":\"text source text meta.tag string -punctuation\"},{\"foreground\":\"a6a458\",\"background\":\"33333333\",\"token\":\"markup markup -(markup meta.paragraph.list)\"},{\"foreground\":\"000000\",\"background\":\"ffffff\",\"token\":\"markup.hr\"},{\"foreground\":\"666666\",\"background\":\"33333380\",\"token\":\"markup.heading\"},{\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"5780a6\",\"token\":\"meta.reference\"},{\"foreground\":\"5780a6\",\"token\":\"markup.underline.link\"},{\"foreground\":\"56a5a4\",\"background\":\"00438033\",\"token\":\"entity.name.reference\"},{\"foreground\":\"56a5a4\",\"fontStyle\":\"underline\",\"token\":\"meta.reference.list markup.underline.link\"},{\"foreground\":\"56a5a4\",\"fontStyle\":\"underline\",\"token\":\"text.html.textile markup.underline.link\"},{\"foreground\":\"999999\",\"background\":\"000000\",\"token\":\"markup.raw.block\"},{\"background\":\"ffffff1a\",\"token\":\"markup.quote\"},{\"foreground\":\"666666\",\"background\":\"00000080\",\"token\":\"meta.selector\"},{\"foreground\":\"575aa6\",\"background\":\"00048033\",\"token\":\"meta.attribute-match.css\"},{\"foreground\":\"7c58a5\",\"token\":\"entity.other.attribute-name.pseudo-class\"},{\"foreground\":\"7c58a5\",\"token\":\"entity.other.attribute-name.tag.pseudo-class\"},{\"foreground\":\"a459a5\",\"token\":\"meta.selector entity.other.attribute-name.class\"},{\"foreground\":\"a75980\",\"token\":\"meta.selector entity.other.attribute-name.id\"},{\"foreground\":\"a7595a\",\"token\":\"meta.selector entity.name.tag\"},{\"foreground\":\"a77d58\",\"fontStyle\":\"bold\",\"token\":\"entity.name.tag.wildcard\"},{\"foreground\":\"a77d58\",\"fontStyle\":\"bold\",\"token\":\"entity.other.attribute-name.universal\"},{\"foreground\":\"333333\",\"fontStyle\":\"bold\",\"token\":\"meta.scope.property-list\"},{\"foreground\":\"999999\",\"token\":\"meta.property-name\"},{\"foreground\":\"ffffff\",\"background\":\"000000\",\"token\":\"support.type.property-name\"},{\"foreground\":\"999999\",\"background\":\"0d0d0d\",\"token\":\"meta.property-value\"},{\"background\":\"000000\",\"token\":\"text.latex markup.raw\"},{\"foreground\":\"bdabd1\",\"token\":\"text.latex support.function -support.function.textit -support.function.emph\"},{\"foreground\":\"ffffffbf\",\"token\":\"text.latex support.function.section\"},{\"foreground\":\"000000\",\"background\":\"ffffff\",\"token\":\"text.latex entity.name.section -meta.group -keyword.operator.braces\"},{\"background\":\"00000080\",\"token\":\"text.latex keyword.operator.delimiter\"},{\"foreground\":\"999999\",\"token\":\"text.latex keyword.operator.brackets\"},{\"foreground\":\"666666\",\"token\":\"text.latex keyword.operator.braces\"},{\"foreground\":\"0008ff4d\",\"background\":\"00048033\",\"token\":\"meta.footnote\"},{\"background\":\"ffffff0d\",\"token\":\"text.latex meta.label.reference\"},{\"foreground\":\"a7595a\",\"background\":\"180d0c\",\"token\":\"text.latex keyword.control.ref\"},{\"foreground\":\"d2beab\",\"background\":\"291616\",\"token\":\"text.latex variable.parameter.label.reference\"},{\"foreground\":\"a75980\",\"background\":\"180d12\",\"token\":\"text.latex keyword.control.cite\"},{\"foreground\":\"e8d5de\",\"background\":\"29161f\",\"token\":\"variable.parameter.cite\"},{\"foreground\":\"ffffff80\",\"token\":\"text.latex variable.parameter.label\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.group.braces\"},{\"foreground\":\"33333333\",\"background\":\"00000080\",\"token\":\"text.latex meta.environment.list\"},{\"foreground\":\"33333333\",\"background\":\"00000080\",\"token\":\"text.latex meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"background\":\"000000\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"33333333\",\"token\":\"text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list\"},{\"foreground\":\"000000\",\"background\":\"cdcdcd\",\"token\":\"text.latex meta.end-document\"},{\"foreground\":\"000000\",\"background\":\"cdcdcd\",\"token\":\"text.latex meta.begin-document\"},{\"foreground\":\"000000\",\"background\":\"cdcdcd\",\"token\":\"meta.end-document.latex support.function\"},{\"foreground\":\"000000\",\"background\":\"cdcdcd\",\"token\":\"meta.end-document.latex variable.parameter\"},{\"foreground\":\"000000\",\"background\":\"cdcdcd\",\"token\":\"meta.begin-document.latex support.function\"},{\"foreground\":\"000000\",\"background\":\"cdcdcd\",\"token\":\"meta.begin-document.latex variable.parameter\"},{\"foreground\":\"596b61\",\"background\":\"45815d33\",\"token\":\"meta.brace.erb.return-value\"},{\"background\":\"66666633\",\"token\":\"source.ruby.rails.embedded.return-value.one-line\"},{\"foreground\":\"56a5a4\",\"background\":\"00fff81a\",\"token\":\"punctuation.section.embedded -(source string source punctuation.section.embedded)\"},{\"foreground\":\"56a5a4\",\"background\":\"00fff81a\",\"token\":\"meta.brace.erb.html\"},{\"background\":\"00fff81a\",\"token\":\"source.ruby.rails.embedded.one-line\"},{\"foreground\":\"555f69\",\"token\":\"source string source punctuation.section.embedded\"},{\"background\":\"000000\",\"token\":\"source\"},{\"background\":\"000000\",\"token\":\"meta.brace.erb\"},{\"foreground\":\"ffffff\",\"background\":\"33333380\",\"token\":\"source string source\"},{\"foreground\":\"999999\",\"background\":\"00000099\",\"token\":\"source string.interpolated source\"},{\"background\":\"3333331a\",\"token\":\"source.java.embedded\"},{\"foreground\":\"ffffff\",\"token\":\"text -text.xml.strict\"},{\"foreground\":\"cccccc\",\"background\":\"000000\",\"token\":\"text source\"},{\"foreground\":\"cccccc\",\"background\":\"000000\",\"token\":\"meta.scope.django.template\"},{\"foreground\":\"999999\",\"token\":\"text string source\"},{\"foreground\":\"333333\",\"token\":\"meta.syntax\"},{\"foreground\":\"211211\",\"background\":\"a7595a\",\"fontStyle\":\"bold\",\"token\":\"invalid\"},{\"foreground\":\"8f8fc3\",\"background\":\"0000ff1a\",\"fontStyle\":\"italic\",\"token\":\"0comment\"},{\"foreground\":\"0000ff1a\",\"fontStyle\":\"bold\",\"token\":\"comment punctuation\"},{\"foreground\":\"333333\",\"token\":\"comment\"},{\"foreground\":\"262626\",\"background\":\"8080800d\",\"fontStyle\":\"bold italic\",\"token\":\"comment punctuation\"},{\"fontStyle\":\"italic\",\"token\":\"text comment.block -source\"},{\"foreground\":\"81bb9e\",\"background\":\"15281f\",\"token\":\"markup.inserted\"},{\"foreground\":\"bc839f\",\"background\":\"400021\",\"token\":\"markup.deleted\"},{\"foreground\":\"c3c38f\",\"background\":\"533f2c\",\"token\":\"markup.changed\"},{\"foreground\":\"ffffff\",\"background\":\"000000\",\"token\":\"text.subversion-commit meta.scope.changed-files\"},{\"foreground\":\"ffffff\",\"background\":\"000000\",\"token\":\"text.subversion-commit meta.scope.changed-files.svn meta.diff.separator\"},{\"foreground\":\"000000\",\"background\":\"ffffff\",\"token\":\"text.subversion-commit\"},{\"foreground\":\"ffffff\",\"background\":\"ffffff03\",\"fontStyle\":\"bold\",\"token\":\"punctuation.terminator\"},{\"foreground\":\"ffffff\",\"background\":\"ffffff03\",\"fontStyle\":\"bold\",\"token\":\"meta.delimiter\"},{\"foreground\":\"ffffff\",\"background\":\"ffffff03\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.method\"},{\"background\":\"000000bf\",\"token\":\"punctuation.terminator.statement\"},{\"background\":\"000000bf\",\"token\":\"meta.delimiter.statement.js\"},{\"background\":\"00000040\",\"token\":\"meta.delimiter.object.js\"},{\"foreground\":\"533f2c\",\"fontStyle\":\"bold\",\"token\":\"string.quoted.single.brace\"},{\"foreground\":\"533f2c\",\"fontStyle\":\"bold\",\"token\":\"string.quoted.double.brace\"},{\"background\":\"ffffff\",\"token\":\"text.blog -(text.blog text)\"},{\"foreground\":\"666666\",\"background\":\"ffffff\",\"token\":\"meta.headers.blog\"},{\"foreground\":\"192b2a\",\"background\":\"00fff81a\",\"token\":\"meta.headers.blog keyword.other.blog\"},{\"foreground\":\"533f2c\",\"background\":\"ffff551a\",\"token\":\"meta.headers.blog string.unquoted.blog\"},{\"foreground\":\"4c4c4c\",\"background\":\"33333333\",\"token\":\"meta.brace.pipe\"},{\"foreground\":\"4c4c4c\",\"fontStyle\":\"bold\",\"token\":\"meta.brace.erb\"},{\"foreground\":\"4c4c4c\",\"fontStyle\":\"bold\",\"token\":\"source.ruby.embedded.source.brace\"},{\"foreground\":\"4c4c4c\",\"fontStyle\":\"bold\",\"token\":\"punctuation.section.dictionary\"},{\"foreground\":\"4c4c4c\",\"fontStyle\":\"bold\",\"token\":\"punctuation.terminator.dictionary\"},{\"foreground\":\"4c4c4c\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.object\"},{\"foreground\":\"ffffff\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.curly punctuation.section.scope\"},{\"foreground\":\"ffffff\",\"fontStyle\":\"bold\",\"token\":\"meta.brace.curly\"},{\"foreground\":\"345743\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.objects\"},{\"foreground\":\"345743\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.curly meta.delimiter.object.comma\"},{\"foreground\":\"345743\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.key-value -meta.tag\"},{\"foreground\":\"695f55\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.square punctuation.section.scope\"},{\"foreground\":\"695f55\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.square meta.delimiter.object.comma\"},{\"foreground\":\"695f55\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"meta.brace.square\"},{\"foreground\":\"695f55\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"punctuation.separator.array\"},{\"foreground\":\"695f55\",\"background\":\"803d001a\",\"fontStyle\":\"bold\",\"token\":\"punctuation.section.array\"},{\"foreground\":\"cdcdcd\",\"background\":\"00000080\",\"token\":\"meta.brace.curly meta.group\"},{\"foreground\":\"532d40\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.round punctuation.section.scope\"},{\"foreground\":\"532d40\",\"fontStyle\":\"bold\",\"token\":\"meta.group.braces.round meta.delimiter.object.comma\"},{\"foreground\":\"532d40\",\"fontStyle\":\"bold\",\"token\":\"meta.brace.round\"},{\"foreground\":\"abacd2\",\"background\":\"3c008033\",\"token\":\"punctuation.section.function\"},{\"foreground\":\"abacd2\",\"background\":\"3c008033\",\"token\":\"meta.brace.curly.function\"},{\"foreground\":\"abacd2\",\"background\":\"3c008033\",\"token\":\"meta.function-call punctuation.section.scope.ruby\"},{\"foreground\":\"666666\",\"background\":\"00000080\",\"token\":\"meta.source.embedded\"},{\"foreground\":\"666666\",\"background\":\"00000080\",\"token\":\"entity.other.django.tagbraces\"},{\"background\":\"0a0a0a\",\"token\":\"meta.odd-tab.group1\"},{\"background\":\"0a0a0a\",\"token\":\"meta.group.braces\"},{\"background\":\"0a0a0a\",\"token\":\"meta.block.slate\"},{\"background\":\"0a0a0a\",\"token\":\"text.xml.strict meta.tag\"},{\"background\":\"0a0a0a\",\"token\":\"meta.tell-block meta.tell-block\"},{\"background\":\"0e0e0e\",\"token\":\"meta.even-tab.group2\"},{\"background\":\"0e0e0e\",\"token\":\"meta.group.braces meta.group.braces\"},{\"background\":\"0e0e0e\",\"token\":\"meta.block.slate meta.block.slate\"},{\"background\":\"0e0e0e\",\"token\":\"text.xml.strict meta.tag meta.tag\"},{\"background\":\"0e0e0e\",\"token\":\"meta.group.braces meta.group.braces\"},{\"background\":\"0e0e0e\",\"token\":\"meta.tell-block meta.tell-block\"},{\"background\":\"111111\",\"token\":\"meta.odd-tab.group3\"},{\"background\":\"111111\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"111111\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"111111\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag\"},{\"background\":\"111111\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"111111\",\"token\":\"meta.tell-block meta.tell-block meta.tell-block\"},{\"background\":\"151515\",\"token\":\"meta.even-tab.group4\"},{\"background\":\"151515\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"151515\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"151515\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"151515\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"151515\",\"token\":\"meta.tell-block meta.tell-block meta.tell-block meta.tell-block\"},{\"background\":\"191919\",\"token\":\"meta.odd-tab.group5\"},{\"background\":\"191919\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"191919\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"191919\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"191919\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"191919\",\"token\":\"meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block\"},{\"background\":\"1c1c1c\",\"token\":\"meta.even-tab.group6\"},{\"background\":\"1c1c1c\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1c1c1c\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"1c1c1c\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"1c1c1c\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1c1c1c\",\"token\":\"meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block\"},{\"background\":\"1f1f1f\",\"token\":\"meta.odd-tab.group7\"},{\"background\":\"1f1f1f\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1f1f1f\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"1f1f1f\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"1f1f1f\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"1f1f1f\",\"token\":\"meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block\"},{\"background\":\"212121\",\"token\":\"meta.even-tab.group8\"},{\"background\":\"212121\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"212121\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"212121\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"212121\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"212121\",\"token\":\"meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block\"},{\"background\":\"242424\",\"token\":\"meta.odd-tab.group11\"},{\"background\":\"242424\",\"token\":\"meta.odd-tab.group10\"},{\"background\":\"242424\",\"token\":\"meta.odd-tab.group9\"},{\"background\":\"242424\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"242424\",\"token\":\"meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate\"},{\"background\":\"242424\",\"token\":\"text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag\"},{\"background\":\"242424\",\"token\":\"meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces\"},{\"background\":\"242424\",\"token\":\"meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block meta.tell-block\"},{\"foreground\":\"666666\",\"token\":\"meta.block.slate\"},{\"foreground\":\"cdcdcd\",\"token\":\"meta.block.content.slate\"}],\"colors\":{\"editor.foreground\":\"#CDCDCD\",\"editor.background\":\"#050505FA\",\"editor.selectionBackground\":\"#2E2EE64D\",\"editor.lineHighlightBackground\":\"#0000801A\",\"editorCursor.foreground\":\"#7979B7\",\"editorWhitespace.foreground\":\"#CDCDCD1A\"}}");
+
+/***/ }),
+/* 459 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"c41a16\",\"token\":\"string\"},{\"foreground\":\"1c00cf\",\"token\":\"constant.numeric\"},{\"foreground\":\"aa0d91\",\"token\":\"keyword\"},{\"foreground\":\"000000\",\"token\":\"keyword.operator\"},{\"foreground\":\"aa0d91\",\"token\":\"constant.language\"},{\"foreground\":\"990000\",\"token\":\"support.class.exception\"},{\"foreground\":\"000000\",\"token\":\"entity.name.function\"},{\"fontStyle\":\"bold underline\",\"token\":\"entity.name.type\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"007400\",\"token\":\"comment\"},{\"foreground\":\"ff0000\",\"token\":\"invalid\"},{\"background\":\"e71a1100\",\"token\":\"invalid.deprecated.trailing-whitespace\"},{\"foreground\":\"000000\",\"background\":\"fafafafc\",\"token\":\"text source\"},{\"foreground\":\"aa0d91\",\"token\":\"meta.tag\"},{\"foreground\":\"aa0d91\",\"token\":\"declaration.tag\"},{\"foreground\":\"000000\",\"fontStyle\":\"bold\",\"token\":\"support\"},{\"foreground\":\"aa0d91\",\"token\":\"storage\"},{\"fontStyle\":\"bold underline\",\"token\":\"entity.name.section\"},{\"foreground\":\"000000\",\"fontStyle\":\"bold\",\"token\":\"entity.name.function.frame\"},{\"foreground\":\"333333\",\"token\":\"meta.tag.preprocessor.xml\"},{\"foreground\":\"994500\",\"fontStyle\":\"italic\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"881280\",\"token\":\"entity.name.tag\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#BAD6FD\",\"editor.lineHighlightBackground\":\"#0000001A\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#B3B3B3F4\"}}");
+
+/***/ }),
+/* 460 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"3c403b\",\"token\":\"comment\"},{\"foreground\":\"5d90cd\",\"token\":\"string\"},{\"foreground\":\"46a609\",\"token\":\"constant.numeric\"},{\"foreground\":\"39946a\",\"token\":\"constant.language\"},{\"foreground\":\"927c5d\",\"token\":\"keyword\"},{\"foreground\":\"927c5d\",\"token\":\"support.constant.property-value\"},{\"foreground\":\"927c5d\",\"token\":\"constant.other.color\"},{\"foreground\":\"366f1a\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"a46763\",\"token\":\"entity.other.attribute-name.html\"},{\"foreground\":\"4b4b4b\",\"token\":\"keyword.operator\"},{\"foreground\":\"e92e2e\",\"token\":\"storage\"},{\"foreground\":\"858585\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"606060\",\"token\":\"entity.name.tag\"},{\"foreground\":\"a165ac\",\"token\":\"constant.character.entity\"},{\"foreground\":\"a165ac\",\"token\":\"support.class.js\"},{\"foreground\":\"606060\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"e92e2e\",\"token\":\"meta.selector.css\"},{\"foreground\":\"e92e2e\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"e92e2e\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"e92e2e\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"616161\",\"token\":\"meta.property-name.css\"},{\"foreground\":\"e92e2e\",\"token\":\"support.function\"},{\"foreground\":\"ffffff\",\"background\":\"e92e2e\",\"token\":\"invalid\"},{\"foreground\":\"e92e2e\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"606060\",\"token\":\"punctuation.definition.tag\"},{\"foreground\":\"a165ac\",\"token\":\"constant.other.color.rgb-value.css\"},{\"foreground\":\"a165ac\",\"token\":\"support.constant.property-value.css\"}],\"colors\":{\"editor.foreground\":\"#929292\",\"editor.background\":\"#191919\",\"editor.selectionBackground\":\"#000000\",\"editor.lineHighlightBackground\":\"#D7D7D708\",\"editorCursor.foreground\":\"#7DA5DC\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 461 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"bcc8ba\",\"token\":\"comment\"},{\"foreground\":\"5d90cd\",\"token\":\"string\"},{\"foreground\":\"46a609\",\"token\":\"constant.numeric\"},{\"foreground\":\"39946a\",\"token\":\"constant.language\"},{\"foreground\":\"af956f\",\"token\":\"keyword\"},{\"foreground\":\"af956f\",\"token\":\"support.constant.property-value\"},{\"foreground\":\"af956f\",\"token\":\"constant.other.color\"},{\"foreground\":\"96dc5f\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"484848\",\"token\":\"keyword.operator\"},{\"foreground\":\"c52727\",\"token\":\"storage\"},{\"foreground\":\"858585\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"606060\",\"token\":\"entity.name.tag\"},{\"foreground\":\"bf78cc\",\"token\":\"constant.character.entity\"},{\"foreground\":\"bf78cc\",\"token\":\"support.class.js\"},{\"foreground\":\"606060\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"c52727\",\"token\":\"meta.selector.css\"},{\"foreground\":\"c52727\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"c52727\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"c52727\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"484848\",\"token\":\"meta.property-name.css\"},{\"foreground\":\"c52727\",\"token\":\"support.function\"},{\"background\":\"ff002a\",\"token\":\"invalid\"},{\"foreground\":\"c52727\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"606060\",\"token\":\"punctuation.definition.tag\"},{\"foreground\":\"bf78cc\",\"token\":\"constant.other.color.rgb-value.css\"},{\"foreground\":\"bf78cc\",\"token\":\"support.constant.property-value.css\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#BDD5FC\",\"editor.lineHighlightBackground\":\"#FFFBD1\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 462 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"e1efff\",\"token\":\"punctuation - (punctuation.definition.string || punctuation.definition.comment)\"},{\"foreground\":\"ff628c\",\"token\":\"constant\"},{\"foreground\":\"ffdd00\",\"token\":\"entity\"},{\"foreground\":\"ff9d00\",\"token\":\"keyword\"},{\"foreground\":\"ffee80\",\"token\":\"storage\"},{\"foreground\":\"3ad900\",\"token\":\"string -string.unquoted.old-plist -string.unquoted.heredoc\"},{\"foreground\":\"3ad900\",\"token\":\"string.unquoted.heredoc string\"},{\"foreground\":\"0088ff\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"80ffbb\",\"token\":\"support\"},{\"foreground\":\"cccccc\",\"token\":\"variable\"},{\"foreground\":\"ff80e1\",\"token\":\"variable.language\"},{\"foreground\":\"ffee80\",\"token\":\"meta.function-call\"},{\"foreground\":\"f8f8f8\",\"background\":\"800f00\",\"token\":\"invalid\"},{\"foreground\":\"ffffff\",\"background\":\"223545\",\"token\":\"text source\"},{\"foreground\":\"ffffff\",\"background\":\"223545\",\"token\":\"string.unquoted.heredoc\"},{\"foreground\":\"ffffff\",\"background\":\"223545\",\"token\":\"source source\"},{\"foreground\":\"80fcff\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"9eff80\",\"token\":\"string.quoted source\"},{\"foreground\":\"80ff82\",\"token\":\"string constant\"},{\"foreground\":\"80ffc2\",\"token\":\"string.regexp\"},{\"foreground\":\"edef7d\",\"token\":\"string variable\"},{\"foreground\":\"ffb054\",\"token\":\"support.function\"},{\"foreground\":\"eb939a\",\"token\":\"support.constant\"},{\"foreground\":\"ff1e00\",\"token\":\"support.type.exception\"},{\"foreground\":\"8996a8\",\"token\":\"meta.preprocessor.c\"},{\"foreground\":\"afc4db\",\"token\":\"meta.preprocessor.c keyword\"},{\"foreground\":\"73817d\",\"token\":\"meta.sgml.html meta.doctype\"},{\"foreground\":\"73817d\",\"token\":\"meta.sgml.html meta.doctype entity\"},{\"foreground\":\"73817d\",\"token\":\"meta.sgml.html meta.doctype string\"},{\"foreground\":\"73817d\",\"token\":\"meta.xml-processing\"},{\"foreground\":\"73817d\",\"token\":\"meta.xml-processing entity\"},{\"foreground\":\"73817d\",\"token\":\"meta.xml-processing string\"},{\"foreground\":\"9effff\",\"token\":\"meta.tag\"},{\"foreground\":\"9effff\",\"token\":\"meta.tag entity\"},{\"foreground\":\"9effff\",\"token\":\"meta.selector.css entity.name.tag\"},{\"foreground\":\"ffb454\",\"token\":\"meta.selector.css entity.other.attribute-name.id\"},{\"foreground\":\"5fe461\",\"token\":\"meta.selector.css entity.other.attribute-name.class\"},{\"foreground\":\"9df39f\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"f6f080\",\"token\":\"meta.property-group support.constant.property-value.css\"},{\"foreground\":\"f6f080\",\"token\":\"meta.property-value support.constant.property-value.css\"},{\"foreground\":\"f6aa11\",\"token\":\"meta.preprocessor.at-rule keyword.control.at-rule\"},{\"foreground\":\"edf080\",\"token\":\"meta.property-value support.constant.named-color.css\"},{\"foreground\":\"edf080\",\"token\":\"meta.property-value constant\"},{\"foreground\":\"eb939a\",\"token\":\"meta.constructor.argument.css\"},{\"foreground\":\"f8f8f8\",\"background\":\"000e1a\",\"token\":\"meta.diff\"},{\"foreground\":\"f8f8f8\",\"background\":\"000e1a\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f8f8f8\",\"background\":\"4c0900\",\"token\":\"markup.deleted\"},{\"foreground\":\"f8f8f8\",\"background\":\"806f00\",\"token\":\"markup.changed\"},{\"foreground\":\"f8f8f8\",\"background\":\"154f00\",\"token\":\"markup.inserted\"},{\"background\":\"8fddf630\",\"token\":\"markup.raw\"},{\"background\":\"004480\",\"token\":\"markup.quote\"},{\"background\":\"130d26\",\"token\":\"markup.list\"},{\"foreground\":\"c1afff\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"b8ffd9\",\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"foreground\":\"c8e4fd\",\"background\":\"001221\",\"fontStyle\":\"bold\",\"token\":\"markup.heading\"}],\"colors\":{\"editor.foreground\":\"#FFFFFF\",\"editor.background\":\"#002240\",\"editor.selectionBackground\":\"#B36539BF\",\"editor.lineHighlightBackground\":\"#00000059\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#FFFFFF26\"}}");
+
+/***/ }),
+/* 463 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"5a525f\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"811f24\",\"fontStyle\":\"bold\",\"token\":\"constant\"},{\"foreground\":\"bf4f24\",\"token\":\"entity\"},{\"foreground\":\"794938\",\"token\":\"keyword\"},{\"foreground\":\"a71d5d\",\"fontStyle\":\"italic\",\"token\":\"storage\"},{\"foreground\":\"0b6125\",\"token\":\"string | punctuation.definition.string\"},{\"foreground\":\"691c97\",\"token\":\"support\"},{\"foreground\":\"234a97\",\"token\":\"variable\"},{\"foreground\":\"794938\",\"token\":\"punctuation.separator\"},{\"foreground\":\"b52a1d\",\"fontStyle\":\"bold italic underline\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"f8f8f8\",\"background\":\"b52a1d\",\"fontStyle\":\"italic underline\",\"token\":\"invalid.illegal\"},{\"foreground\":\"080808\",\"background\":\"6f8bba26\",\"token\":\"string source\"},{\"foreground\":\"696969\",\"fontStyle\":\"bold\",\"token\":\"string constant\"},{\"foreground\":\"234a97\",\"token\":\"string variable\"},{\"foreground\":\"cf5628\",\"token\":\"string.regexp\"},{\"foreground\":\"cf5628\",\"fontStyle\":\"bold italic\",\"token\":\"string.regexp.character-class\"},{\"foreground\":\"cf5628\",\"fontStyle\":\"bold italic\",\"token\":\"string.regexp constant.character.escaped\"},{\"foreground\":\"cf5628\",\"fontStyle\":\"bold italic\",\"token\":\"string.regexp source.ruby.embedded\"},{\"foreground\":\"cf5628\",\"fontStyle\":\"bold italic\",\"token\":\"string.regexp string.regexp.arbitrary-repitition\"},{\"foreground\":\"811f24\",\"fontStyle\":\"bold\",\"token\":\"string.regexp constant.character.escape\"},{\"background\":\"6f8bba26\",\"token\":\"text source\"},{\"foreground\":\"693a17\",\"token\":\"support.function\"},{\"foreground\":\"b4371f\",\"token\":\"support.constant\"},{\"foreground\":\"234a97\",\"token\":\"support.variable\"},{\"foreground\":\"693a17\",\"token\":\"markup.list\"},{\"foreground\":\"19356d\",\"fontStyle\":\"bold\",\"token\":\"markup.heading | markup.heading entity.name\"},{\"foreground\":\"0b6125\",\"background\":\"bbbbbb30\",\"fontStyle\":\"italic\",\"token\":\"markup.quote\"},{\"foreground\":\"080808\",\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"foreground\":\"080808\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"080808\",\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"234a97\",\"fontStyle\":\"italic underline\",\"token\":\"markup.link\"},{\"foreground\":\"234a97\",\"background\":\"bbbbbb30\",\"token\":\"markup.raw\"},{\"foreground\":\"b52a1d\",\"token\":\"markup.deleted\"},{\"foreground\":\"19356d\",\"background\":\"dcdcdc\",\"fontStyle\":\"bold\",\"token\":\"meta.separator\"}],\"colors\":{\"editor.foreground\":\"#080808\",\"editor.background\":\"#F9F9F9\",\"editor.selectionBackground\":\"#275FFF4D\",\"editor.lineHighlightBackground\":\"#2463B41F\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#4B4B7E80\"}}");
+
+/***/ }),
+/* 464 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"e6e1c4\",\"background\":\"322323\",\"token\":\"source\"},{\"foreground\":\"6b4e32\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"ef5d32\",\"token\":\"keyword\"},{\"foreground\":\"ef5d32\",\"token\":\"storage\"},{\"foreground\":\"efac32\",\"token\":\"entity.name.function\"},{\"foreground\":\"efac32\",\"token\":\"keyword.other.name-of-parameter.objc\"},{\"foreground\":\"efac32\",\"fontStyle\":\"bold\",\"token\":\"entity.name\"},{\"foreground\":\"6c99bb\",\"token\":\"constant.numeric\"},{\"foreground\":\"7daf9c\",\"token\":\"variable.language\"},{\"foreground\":\"7daf9c\",\"token\":\"variable.other\"},{\"foreground\":\"6c99bb\",\"token\":\"constant\"},{\"foreground\":\"efac32\",\"token\":\"variable.other.constant\"},{\"foreground\":\"6c99bb\",\"token\":\"constant.language\"},{\"foreground\":\"d9d762\",\"token\":\"string\"},{\"foreground\":\"efac32\",\"token\":\"support.function\"},{\"foreground\":\"efac32\",\"token\":\"support.type\"},{\"foreground\":\"6c99bb\",\"token\":\"support.constant\"},{\"foreground\":\"efcb43\",\"token\":\"meta.tag\"},{\"foreground\":\"efcb43\",\"token\":\"declaration.tag\"},{\"foreground\":\"efcb43\",\"token\":\"entity.name.tag\"},{\"foreground\":\"efcb43\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"foreground\":\"7daf9c\",\"token\":\"constant.character.escaped\"},{\"foreground\":\"7daf9c\",\"token\":\"constant.character.escape\"},{\"foreground\":\"7daf9c\",\"token\":\"string source\"},{\"foreground\":\"7daf9c\",\"token\":\"string source.ruby\"},{\"foreground\":\"e6e1dc\",\"background\":\"144212\",\"token\":\"markup.inserted\"},{\"foreground\":\"e6e1dc\",\"background\":\"660000\",\"token\":\"markup.deleted\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.header\"},{\"background\":\"2f33ab\",\"token\":\"meta.separator.diff\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.index\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#E6E1C4\",\"editor.background\":\"#372725\",\"editor.selectionBackground\":\"#16120E\",\"editor.lineHighlightBackground\":\"#1F1611\",\"editorCursor.foreground\":\"#E6E1C4\",\"editorWhitespace.foreground\":\"#42302D\"}}");
+
+/***/ }),
+/* 465 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"000000\",\"token\":\"text\"},{\"foreground\":\"ee000b\",\"token\":\"constant.numeric - source.css\"},{\"foreground\":\"9a9a9a\",\"token\":\"comment\"},{\"foreground\":\"00359e\",\"token\":\"text.html meta.tag\"},{\"foreground\":\"001eff\",\"token\":\"text.html.basic meta.tag string.quoted - source\"},{\"foreground\":\"000000\",\"fontStyle\":\"bold\",\"token\":\"text.html.basic constant.character.entity.html\"},{\"foreground\":\"106800\",\"token\":\"text.html meta.tag.a - string\"},{\"foreground\":\"6d232e\",\"token\":\"text.html meta.tag.img - string\"},{\"foreground\":\"ff9700\",\"token\":\"text.html meta.tag.form - string\"},{\"foreground\":\"009079\",\"token\":\"text.html meta.tag.table - string\"},{\"foreground\":\"842b44\",\"token\":\"source.js.embedded.html punctuation.definition.tag - source.php\"},{\"foreground\":\"842b44\",\"token\":\"source.js.embedded.html entity.name.tag.script\"},{\"foreground\":\"842b44\",\"token\":\"source.js.embedded entity.other.attribute-name - source.js string\"},{\"foreground\":\"9a9a9a\",\"token\":\"source.js comment - source.php\"},{\"foreground\":\"000000\",\"token\":\"source.js meta.function - source.php\"},{\"foreground\":\"24c696\",\"token\":\"source.js meta.class - source.php\"},{\"foreground\":\"24c696\",\"token\":\"source.js support.function - source.php\"},{\"foreground\":\"0035ff\",\"token\":\"source.js string - source.php\"},{\"foreground\":\"0035ff\",\"token\":\"source.js keyword.operator\"},{\"foreground\":\"7e00b7\",\"token\":\"source.js support.class\"},{\"foreground\":\"000000\",\"fontStyle\":\"bold\",\"token\":\"source.js storage\"},{\"foreground\":\"05208c\",\"fontStyle\":\"bold\",\"token\":\"source.js storage - storage.type.function - source.php\"},{\"foreground\":\"05208c\",\"fontStyle\":\"bold\",\"token\":\"source.js constant - source.php\"},{\"foreground\":\"05208c\",\"fontStyle\":\"bold\",\"token\":\"source.js keyword - source.php\"},{\"foreground\":\"05208c\",\"fontStyle\":\"bold\",\"token\":\"source.js variable.language\"},{\"foreground\":\"05208c\",\"fontStyle\":\"bold\",\"token\":\"source.js meta.brace\"},{\"foreground\":\"05208c\",\"fontStyle\":\"bold\",\"token\":\"source.js punctuation.definition.parameters.begin\"},{\"foreground\":\"05208c\",\"fontStyle\":\"bold\",\"token\":\"source.js punctuation.definition.parameters.end\"},{\"foreground\":\"106800\",\"token\":\"source.js string.regexp\"},{\"foreground\":\"106800\",\"token\":\"source.js string.regexp constant\"},{\"foreground\":\"8d00b7\",\"token\":\"source.css.embedded.html punctuation.definition.tag\"},{\"foreground\":\"8d00b7\",\"token\":\"source.css.embedded.html entity.name.tag.style\"},{\"foreground\":\"8d00b7\",\"token\":\"source.css.embedded entity.other.attribute-name - meta.selector\"},{\"foreground\":\"009c7f\",\"fontStyle\":\"bold\",\"token\":\"source.css meta.at-rule.import.css\"},{\"foreground\":\"ee000b\",\"fontStyle\":\"bold\",\"token\":\"source.css keyword.other.important\"},{\"foreground\":\"430303\",\"fontStyle\":\"bold\",\"token\":\"source.css meta.at-rule.media\"},{\"foreground\":\"106800\",\"token\":\"source.css string\"},{\"foreground\":\"da29ff\",\"token\":\"source.css meta.selector\"},{\"foreground\":\"da29ff\",\"token\":\"source.css meta.property-list\"},{\"foreground\":\"da29ff\",\"token\":\"source.css meta.at-rule\"},{\"foreground\":\"da29ff\",\"fontStyle\":\"bold\",\"token\":\"source.css punctuation.separator - source.php\"},{\"foreground\":\"da29ff\",\"fontStyle\":\"bold\",\"token\":\"source.css punctuation.terminator - source.php\"},{\"foreground\":\"05208c\",\"token\":\"source.css meta.property-name\"},{\"foreground\":\"0035ff\",\"token\":\"source.css meta.property-value\"},{\"foreground\":\"ee000b\",\"fontStyle\":\"bold\",\"token\":\"source.php punctuation.section.embedded.begin\"},{\"foreground\":\"ee000b\",\"fontStyle\":\"bold\",\"token\":\"source.php punctuation.section.embedded.end\"},{\"foreground\":\"000000\",\"token\":\"source.php - punctuation.section\"},{\"foreground\":\"000000\",\"token\":\"source.php variable\"},{\"foreground\":\"000000\",\"token\":\"source.php meta.function.arguments\"},{\"foreground\":\"05208c\",\"token\":\"source.php punctuation - string - variable - meta.function\"},{\"foreground\":\"24bf96\",\"token\":\"source.php storage.type\"},{\"foreground\":\"009714\",\"token\":\"source.php keyword - comment\"},{\"foreground\":\"009714\",\"token\":\"source.php storage.type.class\"},{\"foreground\":\"009714\",\"token\":\"source.php storage.type.interface\"},{\"foreground\":\"009714\",\"token\":\"source.php storage.modifier\"},{\"foreground\":\"009714\",\"token\":\"source.php constant.language\"},{\"foreground\":\"0035ff\",\"token\":\"source.php support\"},{\"foreground\":\"0035ff\",\"token\":\"source.php storage\"},{\"foreground\":\"0035ff\",\"token\":\"source.php keyword.operator\"},{\"foreground\":\"0035ff\",\"token\":\"source.php storage.type.function\"},{\"foreground\":\"0092f2\",\"token\":\"source.php variable.other.global\"},{\"foreground\":\"551d02\",\"token\":\"source.php support.constant\"},{\"foreground\":\"551d02\",\"token\":\"source.php constant.language.php\"},{\"foreground\":\"e20000\",\"token\":\"source.php string\"},{\"foreground\":\"e20000\",\"token\":\"source.php string keyword.operator\"},{\"foreground\":\"ff6200\",\"token\":\"source.php string.quoted.double variable\"},{\"foreground\":\"ff9404\",\"token\":\"source.php comment\"},{\"foreground\":\"ee000b\",\"background\":\"efff8a\",\"fontStyle\":\"bold\",\"token\":\"invalid\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#5EA0FF\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 466 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"00b418\",\"token\":\"comment\"},{\"foreground\":\"0206ff\",\"fontStyle\":\"italic\",\"token\":\"variable\"},{\"foreground\":\"0100b6\",\"fontStyle\":\"bold\",\"token\":\"keyword\"},{\"foreground\":\"cd0000\",\"fontStyle\":\"italic\",\"token\":\"constant.numeric\"},{\"foreground\":\"c5060b\",\"fontStyle\":\"italic\",\"token\":\"constant\"},{\"foreground\":\"585cf6\",\"fontStyle\":\"italic\",\"token\":\"constant.language\"},{\"foreground\":\"d80800\",\"token\":\"string\"},{\"foreground\":\"26b31a\",\"token\":\"constant.character.escape\"},{\"foreground\":\"26b31a\",\"token\":\"string source\"},{\"foreground\":\"1a921c\",\"token\":\"meta.preprocessor\"},{\"foreground\":\"0c450d\",\"fontStyle\":\"bold\",\"token\":\"keyword.control.import\"},{\"foreground\":\"0000a2\",\"fontStyle\":\"bold\",\"token\":\"entity.name.function\"},{\"foreground\":\"0000a2\",\"fontStyle\":\"bold\",\"token\":\"keyword.other.name-of-parameter.objc\"},{\"fontStyle\":\"italic\",\"token\":\"entity.name.type\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"70727e\",\"token\":\"storage.type.method\"},{\"fontStyle\":\"italic\",\"token\":\"meta.section entity.name.section\"},{\"fontStyle\":\"italic\",\"token\":\"declaration.section entity.name.section\"},{\"foreground\":\"3c4c72\",\"fontStyle\":\"bold\",\"token\":\"support.function\"},{\"foreground\":\"6d79de\",\"fontStyle\":\"bold\",\"token\":\"support.class\"},{\"foreground\":\"6d79de\",\"fontStyle\":\"bold\",\"token\":\"support.type\"},{\"foreground\":\"06960e\",\"fontStyle\":\"bold\",\"token\":\"support.constant\"},{\"foreground\":\"21439c\",\"fontStyle\":\"bold\",\"token\":\"support.variable\"},{\"foreground\":\"687687\",\"token\":\"keyword.operator.js\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"background\":\"ffd0d0\",\"token\":\"invalid.deprecated.trailing-whitespace\"},{\"background\":\"427ff530\",\"token\":\"text source\"},{\"background\":\"427ff530\",\"token\":\"string.unquoted\"},{\"foreground\":\"68685b\",\"token\":\"meta.xml-processing\"},{\"foreground\":\"68685b\",\"token\":\"declaration.xml-processing\"},{\"foreground\":\"888888\",\"token\":\"meta.doctype\"},{\"foreground\":\"888888\",\"token\":\"declaration.doctype\"},{\"fontStyle\":\"italic\",\"token\":\"meta.doctype.DTD\"},{\"fontStyle\":\"italic\",\"token\":\"declaration.doctype.DTD\"},{\"foreground\":\"1c02ff\",\"token\":\"meta.tag\"},{\"foreground\":\"1c02ff\",\"token\":\"declaration.tag\"},{\"fontStyle\":\"bold\",\"token\":\"entity.name.tag\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"0c07ff\",\"fontStyle\":\"bold\",\"token\":\"markup.heading\"},{\"foreground\":\"000000\",\"fontStyle\":\"italic\",\"token\":\"markup.quote\"},{\"foreground\":\"b90690\",\"token\":\"markup.list\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#C3DCFF\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 467 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"0066ff\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"43a8ed\",\"fontStyle\":\"bold\",\"token\":\"keyword\"},{\"foreground\":\"43a8ed\",\"fontStyle\":\"bold\",\"token\":\"storage\"},{\"foreground\":\"44aa43\",\"token\":\"constant.numeric\"},{\"foreground\":\"c5656b\",\"fontStyle\":\"bold\",\"token\":\"constant\"},{\"foreground\":\"585cf6\",\"fontStyle\":\"bold\",\"token\":\"constant.language\"},{\"foreground\":\"318495\",\"token\":\"variable.language\"},{\"foreground\":\"318495\",\"token\":\"variable.other\"},{\"foreground\":\"049b0a\",\"token\":\"string\"},{\"foreground\":\"2fe420\",\"token\":\"constant.character.escape\"},{\"foreground\":\"2fe420\",\"token\":\"string source\"},{\"foreground\":\"1a921c\",\"token\":\"meta.preprocessor\"},{\"foreground\":\"9aff87\",\"fontStyle\":\"bold\",\"token\":\"keyword.control.import\"},{\"foreground\":\"ff9358\",\"fontStyle\":\"bold\",\"token\":\"entity.name.function\"},{\"foreground\":\"ff9358\",\"fontStyle\":\"bold\",\"token\":\"keyword.other.name-of-parameter.objc\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"8b8e9c\",\"token\":\"storage.type.method\"},{\"fontStyle\":\"italic\",\"token\":\"meta.section entity.name.section\"},{\"fontStyle\":\"italic\",\"token\":\"declaration.section entity.name.section\"},{\"foreground\":\"7290d9\",\"fontStyle\":\"bold\",\"token\":\"support.function\"},{\"foreground\":\"6d79de\",\"fontStyle\":\"bold\",\"token\":\"support.class\"},{\"foreground\":\"6d79de\",\"fontStyle\":\"bold\",\"token\":\"support.type\"},{\"foreground\":\"00af0e\",\"fontStyle\":\"bold\",\"token\":\"support.constant\"},{\"foreground\":\"2f5fe0\",\"fontStyle\":\"bold\",\"token\":\"support.variable\"},{\"foreground\":\"687687\",\"token\":\"keyword.operator.js\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"background\":\"ffd0d0\",\"token\":\"invalid.deprecated.trailing-whitespace\"},{\"background\":\"f5aa7730\",\"token\":\"text source\"},{\"background\":\"f5aa7730\",\"token\":\"string.unquoted\"},{\"foreground\":\"8f7e65\",\"token\":\"meta.tag.preprocessor.xml\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.sgml.doctype\"},{\"fontStyle\":\"italic\",\"token\":\"string.quoted.docinfo.doctype.DTD\"},{\"foreground\":\"43a8ed\",\"token\":\"meta.tag\"},{\"foreground\":\"43a8ed\",\"token\":\"declaration.tag\"},{\"fontStyle\":\"bold\",\"token\":\"entity.name.tag\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.attribute-name\"}],\"colors\":{\"editor.foreground\":\"#BDAE9D\",\"editor.background\":\"#2A211C\",\"editor.selectionBackground\":\"#C3DCFF\",\"editor.lineHighlightBackground\":\"#3A312C\",\"editorCursor.foreground\":\"#889AFF\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 468 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"999988\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"999999\",\"fontStyle\":\"bold\",\"token\":\"comment.block.preprocessor\"},{\"foreground\":\"999999\",\"fontStyle\":\"bold italic\",\"token\":\"comment.documentation\"},{\"foreground\":\"999999\",\"fontStyle\":\"bold italic\",\"token\":\"comment.block.documentation\"},{\"foreground\":\"a61717\",\"background\":\"e3d2d2\",\"token\":\"invalid.illegal\"},{\"fontStyle\":\"bold\",\"token\":\"keyword\"},{\"fontStyle\":\"bold\",\"token\":\"storage\"},{\"fontStyle\":\"bold\",\"token\":\"keyword.operator\"},{\"fontStyle\":\"bold\",\"token\":\"constant.language\"},{\"fontStyle\":\"bold\",\"token\":\"support.constant\"},{\"foreground\":\"445588\",\"fontStyle\":\"bold\",\"token\":\"storage.type\"},{\"foreground\":\"445588\",\"fontStyle\":\"bold\",\"token\":\"support.type\"},{\"foreground\":\"008080\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"0086b3\",\"token\":\"variable.other\"},{\"foreground\":\"999999\",\"token\":\"variable.language\"},{\"foreground\":\"445588\",\"fontStyle\":\"bold\",\"token\":\"entity.name.type\"},{\"foreground\":\"445588\",\"fontStyle\":\"bold\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"445588\",\"fontStyle\":\"bold\",\"token\":\"support.class\"},{\"foreground\":\"008080\",\"token\":\"variable.other.constant\"},{\"foreground\":\"800080\",\"token\":\"constant.character.entity\"},{\"foreground\":\"990000\",\"token\":\"entity.name.exception\"},{\"foreground\":\"990000\",\"token\":\"entity.name.function\"},{\"foreground\":\"990000\",\"token\":\"support.function\"},{\"foreground\":\"990000\",\"token\":\"keyword.other.name-of-parameter\"},{\"foreground\":\"555555\",\"token\":\"entity.name.section\"},{\"foreground\":\"000080\",\"token\":\"entity.name.tag\"},{\"foreground\":\"008080\",\"token\":\"variable.parameter\"},{\"foreground\":\"008080\",\"token\":\"support.variable\"},{\"foreground\":\"009999\",\"token\":\"constant.numeric\"},{\"foreground\":\"009999\",\"token\":\"constant.other\"},{\"foreground\":\"dd1144\",\"token\":\"string - string source\"},{\"foreground\":\"dd1144\",\"token\":\"constant.character\"},{\"foreground\":\"009926\",\"token\":\"string.regexp\"},{\"foreground\":\"990073\",\"token\":\"constant.other.symbol\"},{\"fontStyle\":\"bold\",\"token\":\"punctuation\"},{\"foreground\":\"000000\",\"background\":\"ffdddd\",\"token\":\"markup.deleted\"},{\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"foreground\":\"aa0000\",\"token\":\"markup.error\"},{\"foreground\":\"999999\",\"token\":\"markup.heading.1\"},{\"foreground\":\"000000\",\"background\":\"ddffdd\",\"token\":\"markup.inserted\"},{\"foreground\":\"888888\",\"token\":\"markup.output\"},{\"foreground\":\"888888\",\"token\":\"markup.raw\"},{\"foreground\":\"555555\",\"token\":\"markup.prompt\"},{\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"aaaaaa\",\"token\":\"markup.heading\"},{\"foreground\":\"aa0000\",\"token\":\"markup.traceback\"},{\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"999999\",\"background\":\"eaf2f5\",\"token\":\"meta.diff.range\"},{\"foreground\":\"999999\",\"background\":\"eaf2f5\",\"token\":\"meta.diff.index\"},{\"foreground\":\"999999\",\"background\":\"eaf2f5\",\"token\":\"meta.separator\"},{\"foreground\":\"999999\",\"background\":\"ffdddd\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"999999\",\"background\":\"ddffdd\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"4183c4\",\"token\":\"meta.link\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#F8F8FF\",\"editor.selectionBackground\":\"#B4D5FE\",\"editor.lineHighlightBackground\":\"#FFFEEB\",\"editorCursor.foreground\":\"#666666\",\"editorWhitespace.foreground\":\"#BBBBBB\"}}");
+
+/***/ }),
+/* 469 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"919191\",\"token\":\"comment\"},{\"foreground\":\"00a33f\",\"token\":\"string\"},{\"foreground\":\"a535ae\",\"token\":\"constant.language\"},{\"foreground\":\"ff5600\",\"token\":\"keyword\"},{\"foreground\":\"ff5600\",\"token\":\"storage\"},{\"foreground\":\"21439c\",\"token\":\"entity.name.type\"},{\"foreground\":\"21439c\",\"token\":\"entity.name.function\"},{\"foreground\":\"a535ae\",\"token\":\"support.function\"},{\"foreground\":\"a535ae\",\"token\":\"support.constant\"},{\"foreground\":\"a535ae\",\"token\":\"support.type\"},{\"foreground\":\"a535ae\",\"token\":\"support.class\"},{\"foreground\":\"a535ae\",\"token\":\"support.variable\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"foreground\":\"990000\",\"token\":\"constant.other.placeholder.py\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#BAD6FD\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 470 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"949494e8\",\"background\":\"dcdcdc8f\",\"token\":\"comment\"},{\"foreground\":\"a54776\",\"background\":\"e9d6dc85\",\"token\":\"comment.line.region\"},{\"foreground\":\"668d68\",\"background\":\"e9e4be\",\"token\":\"comment.line.marker.php\"},{\"foreground\":\"456e48\",\"background\":\"d9eab8\",\"token\":\"comment.line.todo.php\"},{\"foreground\":\"880006\",\"background\":\"e1d0ca\",\"token\":\"comment.line.fixme.php\"},{\"foreground\":\"cd6839\",\"token\":\"constant\"},{\"foreground\":\"8b4726\",\"background\":\"e8e9e8\",\"token\":\"entity\"},{\"foreground\":\"a52a2a\",\"token\":\"storage\"},{\"foreground\":\"cd3700\",\"token\":\"keyword.control\"},{\"foreground\":\"b03060\",\"token\":\"support.function - variable\"},{\"foreground\":\"b03060\",\"token\":\"keyword.other.special-method.ruby\"},{\"foreground\":\"b83126\",\"token\":\"keyword.operator.comparison\"},{\"foreground\":\"b83126\",\"token\":\"keyword.operator.logical\"},{\"foreground\":\"639300\",\"token\":\"string\"},{\"foreground\":\"007e69\",\"token\":\"string.quoted.double.ruby source.ruby.embedded.source\"},{\"foreground\":\"104e8b\",\"token\":\"support\"},{\"foreground\":\"009acd\",\"token\":\"variable\"},{\"foreground\":\"fd1732\",\"background\":\"e8e9e8\",\"fontStyle\":\"italic underline\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"fd1224\",\"background\":\"ff060026\",\"token\":\"invalid.illegal\"},{\"foreground\":\"7b211a\",\"background\":\"77ade900\",\"token\":\"text source\"},{\"foreground\":\"005273\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"417e00\",\"background\":\"c9d4be\",\"token\":\"string.regexp\"},{\"foreground\":\"005273\",\"token\":\"support.function\"},{\"foreground\":\"cf6a4c\",\"token\":\"support.constant\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"foreground\":\"676767\",\"fontStyle\":\"italic\",\"token\":\"meta.cast\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype entity\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype string\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing entity\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing string\"},{\"foreground\":\"005273\",\"token\":\"meta.tag\"},{\"foreground\":\"005273\",\"token\":\"meta.tag entity\"},{\"foreground\":\"005273\",\"token\":\"source entity.name.tag\"},{\"foreground\":\"005273\",\"token\":\"source entity.other.attribute-name\"},{\"foreground\":\"005273\",\"token\":\"meta.tag.inline\"},{\"foreground\":\"005273\",\"token\":\"meta.tag.inline entity\"},{\"foreground\":\"b85423\",\"token\":\"entity.name.tag.namespace\"},{\"foreground\":\"b85423\",\"token\":\"entity.other.attribute-name.namespace\"},{\"foreground\":\"b83126\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"b12e25\",\"token\":\"meta.selector.css entity.other.attribute-name.tag.pseudo-class\"},{\"foreground\":\"b8002d\",\"token\":\"meta.selector.css entity.other.attribute-name.id\"},{\"foreground\":\"b8002d\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"b8012d\",\"token\":\"meta.selector.css entity.other.attribute-name.class\"},{\"foreground\":\"b8012d\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"005273\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"005273\",\"token\":\"meta.property-name\"},{\"foreground\":\"8693a5\",\"token\":\"meta.preprocessor.at-rule keyword.control.at-rule\"},{\"foreground\":\"417e00\",\"token\":\"meta.property-value\"},{\"foreground\":\"b8860b\",\"token\":\"constant.other.color\"},{\"foreground\":\"ee3a8c\",\"token\":\"keyword.other.important\"},{\"foreground\":\"ee3a8c\",\"token\":\"keyword.other.default\"},{\"foreground\":\"417e00\",\"token\":\"meta.property-value support.constant.named-color.css\"},{\"foreground\":\"417e00\",\"token\":\"meta.property-value constant\"},{\"foreground\":\"417e00\",\"token\":\"meta.constructor.argument.css\"},{\"foreground\":\"9a5925\",\"token\":\"constant.numeric\"},{\"foreground\":\"9f5e3d\",\"token\":\"keyword.other\"},{\"foreground\":\"1b76b0\",\"token\":\"source.scss support.function.misc\"},{\"foreground\":\"f8bebe\",\"background\":\"82000e\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"f8bebe\",\"background\":\"82000e\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f8f8f8\",\"background\":\"420e09\",\"token\":\"markup.deleted\"},{\"foreground\":\"f8f8f8\",\"background\":\"4a410d\",\"token\":\"markup.changed\"},{\"foreground\":\"f8f8f8\",\"background\":\"253b22\",\"token\":\"markup.inserted\"},{\"foreground\":\"cd2626\",\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"foreground\":\"8b1a1a\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"e18964\",\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"8b7765\",\"background\":\"fee09c12\",\"fontStyle\":\"italic\",\"token\":\"markup.quote\"},{\"foreground\":\"b8012d\",\"background\":\"bf61330d\",\"token\":\"markup.heading\"},{\"foreground\":\"b8012d\",\"background\":\"bf61330d\",\"token\":\"markup.heading entity\"},{\"foreground\":\"8f5b26\",\"token\":\"markup.list\"},{\"foreground\":\"578bb3\",\"background\":\"b1b3ba08\",\"token\":\"markup.raw\"},{\"foreground\":\"f67b37\",\"fontStyle\":\"italic\",\"token\":\"markup comment\"},{\"foreground\":\"60a633\",\"background\":\"242424\",\"token\":\"meta.separator\"},{\"foreground\":\"578bb3\",\"background\":\"b1b3ba08\",\"token\":\"markup.other\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.entry.logfile\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.exit.logfile\"},{\"background\":\"751012\",\"token\":\"meta.line.error.logfile\"},{\"background\":\"dcdcdc8f\",\"token\":\"punctuation.definition.end\"},{\"foreground\":\"629f9e\",\"token\":\"entity.other.attribute-name.html\"},{\"foreground\":\"79a316\",\"token\":\"string.quoted.double.js\"},{\"foreground\":\"79a316\",\"token\":\"string.quoted.single.js\"},{\"foreground\":\"488c45\",\"fontStyle\":\"italic\",\"token\":\"entity.name.function.js\"},{\"foreground\":\"666666\",\"token\":\"source.js.embedded.html\"},{\"foreground\":\"bb3182\",\"token\":\"storage.type.js\"},{\"foreground\":\"338fd5\",\"token\":\"support.class.js\"},{\"foreground\":\"a99904\",\"fontStyle\":\"italic\",\"token\":\"keyword.control.js\"},{\"foreground\":\"a99904\",\"fontStyle\":\"italic\",\"token\":\"keyword.operator.js\"},{\"foreground\":\"616838\",\"background\":\"d7d7a7\",\"token\":\"entity.name.class\"},{\"background\":\"968f96\",\"token\":\"active_guide\"},{\"background\":\"cbdc2f38\",\"token\":\"highlight_matching_word\"}],\"colors\":{\"editor.foreground\":\"#363636\",\"editor.background\":\"#E8E9E8\",\"editor.selectionBackground\":\"#F5AA0091\",\"editor.lineHighlightBackground\":\"#CBDC2F38\",\"editorCursor.foreground\":\"#202020\",\"editorWhitespace.foreground\":\"#0000004A\",\"editorIndentGuide.background\":\"#8F8F8F\",\"editorIndentGuide.activeBackground\":\"#FA2828\"}}");
+
+/***/ }),
+/* 471 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"949494e8\",\"background\":\"dcdcdc8f\",\"token\":\"comment\"},{\"foreground\":\"a54776\",\"background\":\"e9d6dc85\",\"token\":\"comment.line.region\"},{\"foreground\":\"668d68\",\"background\":\"e9e4be\",\"token\":\"comment.line.marker.php\"},{\"foreground\":\"456e48\",\"background\":\"d9eab8\",\"token\":\"comment.line.todo.php\"},{\"foreground\":\"880006\",\"background\":\"e1d0ca\",\"token\":\"comment.line.fixme.php\"},{\"foreground\":\"cd6839\",\"token\":\"constant\"},{\"foreground\":\"8b4726\",\"background\":\"e8e9e8\",\"token\":\"entity\"},{\"foreground\":\"a52a2a\",\"token\":\"storage\"},{\"foreground\":\"cd3700\",\"token\":\"keyword.control\"},{\"foreground\":\"b03060\",\"token\":\"support.function - variable\"},{\"foreground\":\"b03060\",\"token\":\"keyword.other.special-method.ruby\"},{\"foreground\":\"b83126\",\"token\":\"keyword.operator.comparison\"},{\"foreground\":\"b83126\",\"token\":\"keyword.operator.logical\"},{\"foreground\":\"639300\",\"token\":\"string\"},{\"foreground\":\"007e69\",\"token\":\"string.quoted.double.ruby source.ruby.embedded.source\"},{\"foreground\":\"104e8b\",\"token\":\"support\"},{\"foreground\":\"009acd\",\"token\":\"variable\"},{\"foreground\":\"fd1732\",\"background\":\"e8e9e8\",\"fontStyle\":\"italic underline\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"fd1224\",\"background\":\"ff060026\",\"token\":\"invalid.illegal\"},{\"foreground\":\"7b211a\",\"background\":\"77ade900\",\"token\":\"text source\"},{\"foreground\":\"005273\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"417e00\",\"background\":\"c9d4be\",\"token\":\"string.regexp\"},{\"foreground\":\"005273\",\"token\":\"support.function\"},{\"foreground\":\"cf6a4c\",\"token\":\"support.constant\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"foreground\":\"676767\",\"fontStyle\":\"italic\",\"token\":\"meta.cast\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype entity\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype string\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing entity\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing string\"},{\"foreground\":\"005273\",\"token\":\"meta.tag\"},{\"foreground\":\"005273\",\"token\":\"meta.tag entity\"},{\"foreground\":\"005273\",\"token\":\"source entity.name.tag\"},{\"foreground\":\"005273\",\"token\":\"source entity.other.attribute-name\"},{\"foreground\":\"005273\",\"token\":\"meta.tag.inline\"},{\"foreground\":\"005273\",\"token\":\"meta.tag.inline entity\"},{\"foreground\":\"b85423\",\"token\":\"entity.name.tag.namespace\"},{\"foreground\":\"b85423\",\"token\":\"entity.other.attribute-name.namespace\"},{\"foreground\":\"b83126\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"b12e25\",\"token\":\"meta.selector.css entity.other.attribute-name.tag.pseudo-class\"},{\"foreground\":\"b8002d\",\"token\":\"meta.selector.css entity.other.attribute-name.id\"},{\"foreground\":\"b8002d\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"b8012d\",\"token\":\"meta.selector.css entity.other.attribute-name.class\"},{\"foreground\":\"b8012d\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"005273\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"005273\",\"token\":\"meta.property-name\"},{\"foreground\":\"8693a5\",\"token\":\"meta.preprocessor.at-rule keyword.control.at-rule\"},{\"foreground\":\"417e00\",\"token\":\"meta.property-value\"},{\"foreground\":\"b8860b\",\"token\":\"constant.other.color\"},{\"foreground\":\"ee3a8c\",\"token\":\"keyword.other.important\"},{\"foreground\":\"ee3a8c\",\"token\":\"keyword.other.default\"},{\"foreground\":\"417e00\",\"token\":\"meta.property-value support.constant.named-color.css\"},{\"foreground\":\"417e00\",\"token\":\"meta.property-value constant\"},{\"foreground\":\"417e00\",\"token\":\"meta.constructor.argument.css\"},{\"foreground\":\"9a5925\",\"token\":\"constant.numeric\"},{\"foreground\":\"9f5e3d\",\"token\":\"keyword.other\"},{\"foreground\":\"1b76b0\",\"token\":\"source.scss support.function.misc\"},{\"foreground\":\"f8bebe\",\"background\":\"82000e\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"f8bebe\",\"background\":\"82000e\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f8f8f8\",\"background\":\"420e09\",\"token\":\"markup.deleted\"},{\"foreground\":\"f8f8f8\",\"background\":\"4a410d\",\"token\":\"markup.changed\"},{\"foreground\":\"f8f8f8\",\"background\":\"253b22\",\"token\":\"markup.inserted\"},{\"foreground\":\"cd2626\",\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"foreground\":\"8b1a1a\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"e18964\",\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"8b7765\",\"background\":\"fee09c12\",\"fontStyle\":\"italic\",\"token\":\"markup.quote\"},{\"foreground\":\"b8012d\",\"background\":\"bf61330d\",\"token\":\"markup.heading\"},{\"foreground\":\"b8012d\",\"background\":\"bf61330d\",\"token\":\"markup.heading entity\"},{\"foreground\":\"8f5b26\",\"token\":\"markup.list\"},{\"foreground\":\"578bb3\",\"background\":\"b1b3ba08\",\"token\":\"markup.raw\"},{\"foreground\":\"f67b37\",\"fontStyle\":\"italic\",\"token\":\"markup comment\"},{\"foreground\":\"60a633\",\"background\":\"242424\",\"token\":\"meta.separator\"},{\"foreground\":\"578bb3\",\"background\":\"b1b3ba08\",\"token\":\"markup.other\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.entry.logfile\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.exit.logfile\"},{\"background\":\"751012\",\"token\":\"meta.line.error.logfile\"},{\"background\":\"dcdcdc8f\",\"token\":\"punctuation.definition.end\"},{\"foreground\":\"629f9e\",\"token\":\"entity.other.attribute-name.html\"},{\"foreground\":\"79a316\",\"token\":\"string.quoted.double.js\"},{\"foreground\":\"79a316\",\"token\":\"string.quoted.single.js\"},{\"foreground\":\"488c45\",\"fontStyle\":\"italic\",\"token\":\"entity.name.function.js\"},{\"foreground\":\"666666\",\"token\":\"source.js.embedded.html\"},{\"foreground\":\"bb3182\",\"token\":\"storage.type.js\"},{\"foreground\":\"338fd5\",\"token\":\"support.class.js\"},{\"foreground\":\"a99904\",\"fontStyle\":\"italic\",\"token\":\"keyword.control.js\"},{\"foreground\":\"a99904\",\"fontStyle\":\"italic\",\"token\":\"keyword.operator.js\"},{\"foreground\":\"616838\",\"background\":\"d7d7a7\",\"token\":\"entity.name.class\"},{\"background\":\"968f96\",\"token\":\"active_guide\"},{\"background\":\"cbdc2f38\",\"token\":\"highlight_matching_word\"}],\"colors\":{\"editor.foreground\":\"#363636\",\"editor.background\":\"#E8E9E8\",\"editor.selectionBackground\":\"#F5AA0091\",\"editor.lineHighlightBackground\":\"#CBDC2F38\",\"editorCursor.foreground\":\"#202020\",\"editorWhitespace.foreground\":\"#0000004A\",\"editorIndentGuide.background\":\"#8F8F8F\",\"editorIndentGuide.activeBackground\":\"#FA2828\"}}");
+
+/***/ }),
+/* 472 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"8c868f\",\"token\":\"comment\"},{\"foreground\":\"3b5bb5\",\"token\":\"constant\"},{\"foreground\":\"3b5bb5\",\"token\":\"entity\"},{\"foreground\":\"d62a28\",\"token\":\"text.tex.latex entity\"},{\"foreground\":\"ff7800\",\"token\":\"keyword\"},{\"foreground\":\"ff7800\",\"token\":\"storage\"},{\"foreground\":\"409b1c\",\"token\":\"string\"},{\"foreground\":\"409b1c\",\"token\":\"meta.verbatim\"},{\"foreground\":\"3b5bb5\",\"token\":\"support\"},{\"foreground\":\"990000\",\"fontStyle\":\"italic\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"f8f8f8\",\"background\":\"9d1e15\",\"token\":\"invalid.illegal\"},{\"foreground\":\"3b5bb5\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"671ebb\",\"token\":\"string constant.other.placeholder\"},{\"foreground\":\"3e4558\",\"token\":\"meta.function-call.py\"},{\"foreground\":\"3a4a64\",\"token\":\"meta.tag\"},{\"foreground\":\"3a4a64\",\"token\":\"meta.tag entity\"},{\"foreground\":\"7f90aa\",\"token\":\"keyword.type.variant\"},{\"foreground\":\"000000\",\"token\":\"source.ocaml keyword.operator\"},{\"foreground\":\"3b5bb5\",\"token\":\"source.ocaml keyword.operator.symbol.infix\"},{\"foreground\":\"3b5bb5\",\"token\":\"source.ocaml keyword.operator.symbol.prefix\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.infix.floating-point\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.prefix.floating-point\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml constant.numeric.floating-point\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#E3FC8D\",\"editor.lineHighlightBackground\":\"#EFFCA68F\",\"editorCursor.foreground\":\"#7C7C7C\",\"editorWhitespace.foreground\":\"#B6B6B6\"}}");
+
+/***/ }),
+/* 473 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"8d2e75\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"ffffff\",\"background\":\"ff000033\",\"token\":\"string\"},{\"foreground\":\"ffffff\",\"token\":\"constant.numeric\"},{\"foreground\":\"ffa995\",\"fontStyle\":\"bold\",\"token\":\"constant.language\"},{\"foreground\":\"ffa995\",\"background\":\"0000ff33\",\"token\":\"constant.character\"},{\"foreground\":\"ffa995\",\"background\":\"0000ff33\",\"token\":\"constant.other\"},{\"foreground\":\"ffa995\",\"token\":\"variable.language\"},{\"foreground\":\"ffa995\",\"token\":\"variable.other\"},{\"fontStyle\":\"bold\",\"token\":\"keyword\"},{\"foreground\":\"3a68a3\",\"fontStyle\":\"bold\",\"token\":\"storage\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"ffa995\",\"token\":\"entity.name.function\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"0000ff\",\"fontStyle\":\"bold\",\"token\":\"entity.name\"},{\"foreground\":\"3a68a3\",\"fontStyle\":\"italic\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"e5b3ff\",\"token\":\"support.function\"},{\"foreground\":\"000000\",\"token\":\"support.function.any-method\"},{\"fontStyle\":\"italic\",\"token\":\"support.function.any-method - punctuation\"},{\"foreground\":\"ffffff\",\"token\":\"support.constant\"},{\"foreground\":\"ffa995\",\"token\":\"support.type\"},{\"foreground\":\"ffa995\",\"token\":\"support.class\"},{\"foreground\":\"3a68a3\",\"token\":\"support.variable\"},{\"foreground\":\"ffffff\",\"background\":\"797979\",\"token\":\"invalid\"},{\"foreground\":\"ffa995\",\"background\":\"969696\",\"fontStyle\":\"italic\",\"token\":\"string.quoted.other.lt-gt.include\"},{\"foreground\":\"ffa995\",\"background\":\"969696\",\"token\":\"string.quoted.double.include\"},{\"foreground\":\"4d4e60\",\"token\":\"markup.list\"},{\"foreground\":\"ffffff\",\"background\":\"0000ff\",\"token\":\"markup.raw\"},{\"foreground\":\"00f0c9\",\"token\":\"markup.quote\"},{\"foreground\":\"4c457e\",\"token\":\"markup.quote markup.quote\"},{\"background\":\"8a9ecb\",\"token\":\"text.html source\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#969696\",\"editor.selectionBackground\":\"#B1B1B1\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#FF38FF\"}}");
+
+/***/ }),
+/* 474 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"ad2ea4\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"fc6f09\",\"token\":\"keyword\"},{\"foreground\":\"fc6f09\",\"token\":\"storage\"},{\"foreground\":\"fc83ff\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"58c554\",\"token\":\"constant.numeric\"},{\"foreground\":\"1edafb\",\"token\":\"constant\"},{\"foreground\":\"8dff0a\",\"token\":\"constant.library\"},{\"foreground\":\"fc6f09\",\"token\":\"support.function\"},{\"foreground\":\"fdc251\",\"token\":\"constant.language\"},{\"foreground\":\"8dff0a\",\"token\":\"string\"},{\"foreground\":\"1edafb\",\"token\":\"support.type\"},{\"foreground\":\"8dff0a\",\"token\":\"support.constant\"},{\"foreground\":\"fc6f09\",\"token\":\"meta.tag\"},{\"foreground\":\"fc6f09\",\"token\":\"declaration.tag\"},{\"foreground\":\"fc6f09\",\"token\":\"entity.name.tag\"},{\"foreground\":\"ffff89\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"foreground\":\"519f50\",\"token\":\"constant.character.escaped\"},{\"foreground\":\"519f50\",\"token\":\"constant.character.escape\"},{\"foreground\":\"519f50\",\"token\":\"string source\"},{\"foreground\":\"519f50\",\"token\":\"string source.ruby\"},{\"foreground\":\"e6e1dc\",\"background\":\"144212\",\"token\":\"markup.inserted\"},{\"foreground\":\"e6e1dc\",\"background\":\"660000\",\"token\":\"markup.deleted\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.header\"},{\"background\":\"2f33ab\",\"token\":\"meta.separator.diff\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.index\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#E6E1DC\",\"editor.background\":\"#161616\",\"editor.selectionBackground\":\"#454545\",\"editor.lineHighlightBackground\":\"#333435\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#404040\"}}");
+
+/***/ }),
+/* 475 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"ad2ea4\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"fc6f09\",\"token\":\"keyword\"},{\"foreground\":\"fc6f09\",\"token\":\"storage\"},{\"foreground\":\"fc83ff\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"58c554\",\"token\":\"constant.numeric\"},{\"foreground\":\"1edafb\",\"token\":\"constant\"},{\"foreground\":\"8dff0a\",\"token\":\"constant.library\"},{\"foreground\":\"fc6f09\",\"token\":\"support.function\"},{\"foreground\":\"fdc251\",\"token\":\"constant.language\"},{\"foreground\":\"8dff0a\",\"token\":\"string\"},{\"foreground\":\"1edafb\",\"token\":\"support.type\"},{\"foreground\":\"8dff0a\",\"token\":\"support.constant\"},{\"foreground\":\"fc6f09\",\"token\":\"meta.tag\"},{\"foreground\":\"fc6f09\",\"token\":\"declaration.tag\"},{\"foreground\":\"fc6f09\",\"token\":\"entity.name.tag\"},{\"foreground\":\"ffff89\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"foreground\":\"519f50\",\"token\":\"constant.character.escaped\"},{\"foreground\":\"519f50\",\"token\":\"constant.character.escape\"},{\"foreground\":\"519f50\",\"token\":\"string source\"},{\"foreground\":\"519f50\",\"token\":\"string source.ruby\"},{\"foreground\":\"e6e1dc\",\"background\":\"144212\",\"token\":\"markup.inserted\"},{\"foreground\":\"e6e1dc\",\"background\":\"660000\",\"token\":\"markup.deleted\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.header\"},{\"background\":\"2f33ab\",\"token\":\"meta.separator.diff\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.index\"},{\"background\":\"2f33ab\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#E6E1DC\",\"editor.background\":\"#161616\",\"editor.selectionBackground\":\"#454545\",\"editor.lineHighlightBackground\":\"#333435\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#404040\"}}");
+
+/***/ }),
+/* 476 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"75715e\",\"token\":\"comment\"},{\"foreground\":\"e6db74\",\"token\":\"string\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.numeric\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.language\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.character\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.other\"},{\"foreground\":\"f92672\",\"token\":\"keyword\"},{\"foreground\":\"f92672\",\"token\":\"variable.other.dollar.only.js\"},{\"foreground\":\"f92672\",\"token\":\"storage\"},{\"foreground\":\"66d9ef\",\"fontStyle\":\"italic\",\"token\":\"storage.type\"},{\"foreground\":\"a6e22e\",\"fontStyle\":\"underline\",\"token\":\"entity.name.class\"},{\"foreground\":\"a6e22e\",\"fontStyle\":\"italic underline\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"a6e22e\",\"token\":\"entity.name.function\"},{\"foreground\":\"fd971f\",\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"f92672\",\"token\":\"entity.name.tag\"},{\"foreground\":\"a6e22e\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"66d9ef\",\"token\":\"support.function\"},{\"foreground\":\"66d9ef\",\"token\":\"support.constant\"},{\"foreground\":\"66d9ef\",\"fontStyle\":\"italic\",\"token\":\"support.type\"},{\"foreground\":\"66d9ef\",\"fontStyle\":\"italic\",\"token\":\"support.class\"},{\"foreground\":\"f8f8f0\",\"background\":\"f92672\",\"token\":\"invalid\"},{\"foreground\":\"f8f8f0\",\"background\":\"ae81ff\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"cfcfc2\",\"token\":\"meta.structure.dictionary.json string.quoted.double.json\"},{\"foreground\":\"75715e\",\"token\":\"meta.diff\"},{\"foreground\":\"75715e\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f92672\",\"token\":\"markup.deleted\"},{\"foreground\":\"a6e22e\",\"token\":\"markup.inserted\"},{\"foreground\":\"e6db74\",\"token\":\"markup.changed\"},{\"foreground\":\"ae81ffa0\",\"token\":\"constant.numeric.line-number.find-in-files - match\"},{\"foreground\":\"e6db74\",\"token\":\"entity.name.filename.find-in-files\"}],\"colors\":{\"editor.foreground\":\"#F8F8F2\",\"editor.background\":\"#272822\",\"editor.selectionBackground\":\"#9D550F\",\"editor.inactiveSelectionBackground\":\"#bbbbbb\",\"editor.lineHighlightBackground\":\"#3E3D32\",\"editorCursor.foreground\":\"#F8F8F0\",\"editorWhitespace.foreground\":\"#3B3A32\",\"editorIndentGuide.activeBackground\":\"#9D550FB0\"}}");
+
+/***/ }),
+/* 477 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"75715e\",\"token\":\"comment\"},{\"foreground\":\"e6db74\",\"token\":\"string\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.numeric\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.language\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.character\"},{\"foreground\":\"ae81ff\",\"token\":\"constant.other\"},{\"foreground\":\"f92672\",\"token\":\"keyword\"},{\"foreground\":\"f92672\",\"token\":\"storage\"},{\"foreground\":\"66d9ef\",\"fontStyle\":\"italic\",\"token\":\"storage.type\"},{\"foreground\":\"a6e22e\",\"fontStyle\":\"underline\",\"token\":\"entity.name.class\"},{\"foreground\":\"a6e22e\",\"fontStyle\":\"italic underline\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"a6e22e\",\"token\":\"entity.name.function\"},{\"foreground\":\"fd971f\",\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"f92672\",\"token\":\"entity.name.tag\"},{\"foreground\":\"a6e22e\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"66d9ef\",\"token\":\"support.function\"},{\"foreground\":\"66d9ef\",\"token\":\"support.constant\"},{\"foreground\":\"66d9ef\",\"fontStyle\":\"italic\",\"token\":\"support.type\"},{\"foreground\":\"66d9ef\",\"fontStyle\":\"italic\",\"token\":\"support.class\"},{\"foreground\":\"f8f8f0\",\"background\":\"f92672\",\"token\":\"invalid\"},{\"foreground\":\"f8f8f0\",\"background\":\"ae81ff\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"cfcfc2\",\"token\":\"meta.structure.dictionary.json string.quoted.double.json\"},{\"foreground\":\"75715e\",\"token\":\"meta.diff\"},{\"foreground\":\"75715e\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f92672\",\"token\":\"markup.deleted\"},{\"foreground\":\"a6e22e\",\"token\":\"markup.inserted\"},{\"foreground\":\"e6db74\",\"token\":\"markup.changed\"},{\"foreground\":\"ae81ffa0\",\"token\":\"constant.numeric.line-number.find-in-files - match\"},{\"foreground\":\"e6db74\",\"token\":\"entity.name.filename.find-in-files\"}],\"colors\":{\"editor.foreground\":\"#F8F8F2\",\"editor.background\":\"#272822\",\"editor.selectionBackground\":\"#49483E\",\"editor.lineHighlightBackground\":\"#3E3D32\",\"editorCursor.foreground\":\"#F8F8F0\",\"editorWhitespace.foreground\":\"#3B3A32\",\"editorIndentGuide.activeBackground\":\"#9D550FB0\",\"editor.selectionHighlightBorder\":\"#222218\"}}");
+
+/***/ }),
+/* 478 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"637777\",\"token\":\"comment\"},{\"foreground\":\"addb67\",\"token\":\"string\"},{\"foreground\":\"ecc48d\",\"token\":\"vstring.quoted\"},{\"foreground\":\"ecc48d\",\"token\":\"variable.other.readwrite.js\"},{\"foreground\":\"5ca7e4\",\"token\":\"string.regexp\"},{\"foreground\":\"5ca7e4\",\"token\":\"string.regexp keyword.other\"},{\"foreground\":\"5f7e97\",\"token\":\"meta.function punctuation.separator.comma\"},{\"foreground\":\"f78c6c\",\"token\":\"constant.numeric\"},{\"foreground\":\"f78c6c\",\"token\":\"constant.character.numeric\"},{\"foreground\":\"addb67\",\"token\":\"variable\"},{\"foreground\":\"c792ea\",\"token\":\"keyword\"},{\"foreground\":\"c792ea\",\"token\":\"punctuation.accessor\"},{\"foreground\":\"c792ea\",\"token\":\"storage\"},{\"foreground\":\"c792ea\",\"token\":\"meta.var.expr\"},{\"foreground\":\"c792ea\",\"token\":\"meta.class meta.method.declaration meta.var.expr storage.type.jsm\"},{\"foreground\":\"c792ea\",\"token\":\"storage.type.property.js\"},{\"foreground\":\"c792ea\",\"token\":\"storage.type.property.ts\"},{\"foreground\":\"c792ea\",\"token\":\"storage.type.property.tsx\"},{\"foreground\":\"82aaff\",\"token\":\"storage.type\"},{\"foreground\":\"ffcb8b\",\"token\":\"entity.name.class\"},{\"foreground\":\"ffcb8b\",\"token\":\"meta.class entity.name.type.class\"},{\"foreground\":\"addb67\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"82aaff\",\"token\":\"entity.name.function\"},{\"foreground\":\"addb67\",\"token\":\"punctuation.definition.variable\"},{\"foreground\":\"d3423e\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"d6deeb\",\"token\":\"punctuation.terminator.expression\"},{\"foreground\":\"d6deeb\",\"token\":\"punctuation.definition.arguments\"},{\"foreground\":\"d6deeb\",\"token\":\"punctuation.definition.array\"},{\"foreground\":\"d6deeb\",\"token\":\"punctuation.section.array\"},{\"foreground\":\"d6deeb\",\"token\":\"meta.array\"},{\"foreground\":\"d9f5dd\",\"token\":\"punctuation.definition.list.begin\"},{\"foreground\":\"d9f5dd\",\"token\":\"punctuation.definition.list.end\"},{\"foreground\":\"d9f5dd\",\"token\":\"punctuation.separator.arguments\"},{\"foreground\":\"d9f5dd\",\"token\":\"punctuation.definition.list\"},{\"foreground\":\"d3423e\",\"token\":\"string.template meta.template.expression\"},{\"foreground\":\"d6deeb\",\"token\":\"string.template punctuation.definition.string\"},{\"foreground\":\"c792ea\",\"fontStyle\":\"italic\",\"token\":\"italic\"},{\"foreground\":\"addb67\",\"fontStyle\":\"bold\",\"token\":\"bold\"},{\"foreground\":\"82aaff\",\"token\":\"constant.language\"},{\"foreground\":\"82aaff\",\"token\":\"punctuation.definition.constant\"},{\"foreground\":\"82aaff\",\"token\":\"variable.other.constant\"},{\"foreground\":\"7fdbca\",\"token\":\"support.function.construct\"},{\"foreground\":\"7fdbca\",\"token\":\"keyword.other.new\"},{\"foreground\":\"82aaff\",\"token\":\"constant.character\"},{\"foreground\":\"82aaff\",\"token\":\"constant.other\"},{\"foreground\":\"f78c6c\",\"token\":\"constant.character.escape\"},{\"foreground\":\"addb67\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"d7dbe0\",\"token\":\"variable.parameter\"},{\"foreground\":\"7fdbca\",\"token\":\"entity.name.tag\"},{\"foreground\":\"cc2996\",\"token\":\"punctuation.definition.tag.html\"},{\"foreground\":\"cc2996\",\"token\":\"punctuation.definition.tag.begin\"},{\"foreground\":\"cc2996\",\"token\":\"punctuation.definition.tag.end\"},{\"foreground\":\"addb67\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"addb67\",\"token\":\"entity.name.tag.custom\"},{\"foreground\":\"82aaff\",\"token\":\"support.function\"},{\"foreground\":\"82aaff\",\"token\":\"support.constant\"},{\"foreground\":\"7fdbca\",\"token\":\"upport.constant.meta.property-value\"},{\"foreground\":\"addb67\",\"token\":\"support.type\"},{\"foreground\":\"addb67\",\"token\":\"support.class\"},{\"foreground\":\"addb67\",\"token\":\"support.variable.dom\"},{\"foreground\":\"7fdbca\",\"token\":\"support.constant\"},{\"foreground\":\"7fdbca\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"7fdbca\",\"token\":\"keyword.other.new\"},{\"foreground\":\"7fdbca\",\"token\":\"keyword.other.debugger\"},{\"foreground\":\"7fdbca\",\"token\":\"keyword.control\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.operator.comparison\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.flow.js\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.flow.ts\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.flow.tsx\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.ruby\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.module.ruby\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.class.ruby\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.def.ruby\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.loop.js\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.loop.ts\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.import.js\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.import.ts\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.import.tsx\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.from.js\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.from.ts\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.control.from.tsx\"},{\"foreground\":\"ffffff\",\"background\":\"ff2c83\",\"token\":\"invalid\"},{\"foreground\":\"ffffff\",\"background\":\"d3423e\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"7fdbca\",\"token\":\"keyword.operator\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.operator.relational\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.operator.assignement\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.operator.arithmetic\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.operator.bitwise\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.operator.increment\"},{\"foreground\":\"c792ea\",\"token\":\"keyword.operator.ternary\"},{\"foreground\":\"637777\",\"token\":\"comment.line.double-slash\"},{\"foreground\":\"cdebf7\",\"token\":\"object\"},{\"foreground\":\"ff5874\",\"token\":\"constant.language.null\"},{\"foreground\":\"d6deeb\",\"token\":\"meta.brace\"},{\"foreground\":\"c792ea\",\"token\":\"meta.delimiter.period\"},{\"foreground\":\"d9f5dd\",\"token\":\"punctuation.definition.string\"},{\"foreground\":\"ff5874\",\"token\":\"constant.language.boolean\"},{\"foreground\":\"ffffff\",\"token\":\"object.comma\"},{\"foreground\":\"7fdbca\",\"token\":\"variable.parameter.function\"},{\"foreground\":\"80cbc4\",\"token\":\"support.type.vendor.property-name\"},{\"foreground\":\"80cbc4\",\"token\":\"support.constant.vendor.property-value\"},{\"foreground\":\"80cbc4\",\"token\":\"support.type.property-name\"},{\"foreground\":\"80cbc4\",\"token\":\"meta.property-list entity.name.tag\"},{\"foreground\":\"57eaf1\",\"token\":\"meta.property-list entity.name.tag.reference\"},{\"foreground\":\"f78c6c\",\"token\":\"constant.other.color.rgb-value punctuation.definition.constant\"},{\"foreground\":\"ffeb95\",\"token\":\"constant.other.color\"},{\"foreground\":\"ffeb95\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"c792ea\",\"token\":\"meta.selector\"},{\"foreground\":\"fad430\",\"token\":\"entity.other.attribute-name.id\"},{\"foreground\":\"80cbc4\",\"token\":\"meta.property-name\"},{\"foreground\":\"c792ea\",\"token\":\"entity.name.tag.doctype\"},{\"foreground\":\"c792ea\",\"token\":\"meta.tag.sgml.doctype\"},{\"foreground\":\"d9f5dd\",\"token\":\"punctuation.definition.parameters\"},{\"foreground\":\"ecc48d\",\"token\":\"string.quoted\"},{\"foreground\":\"ecc48d\",\"token\":\"string.quoted.double\"},{\"foreground\":\"ecc48d\",\"token\":\"string.quoted.single\"},{\"foreground\":\"addb67\",\"token\":\"support.constant.math\"},{\"foreground\":\"addb67\",\"token\":\"support.type.property-name.json\"},{\"foreground\":\"addb67\",\"token\":\"support.constant.json\"},{\"foreground\":\"c789d6\",\"token\":\"meta.structure.dictionary.value.json string.quoted.double\"},{\"foreground\":\"80cbc4\",\"token\":\"string.quoted.double.json punctuation.definition.string.json\"},{\"foreground\":\"ff5874\",\"token\":\"meta.structure.dictionary.json meta.structure.dictionary.value constant.language\"},{\"foreground\":\"d6deeb\",\"token\":\"variable.other.ruby\"},{\"foreground\":\"ecc48d\",\"token\":\"entity.name.type.class.ruby\"},{\"foreground\":\"ecc48d\",\"token\":\"keyword.control.class.ruby\"},{\"foreground\":\"ecc48d\",\"token\":\"meta.class.ruby\"},{\"foreground\":\"7fdbca\",\"token\":\"constant.language.symbol.hashkey.ruby\"},{\"foreground\":\"e0eddd\",\"background\":\"a57706\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"e0eddd\",\"background\":\"a57706\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"ef535090\",\"fontStyle\":\"italic\",\"token\":\"markup.deleted\"},{\"foreground\":\"a2bffc\",\"fontStyle\":\"italic\",\"token\":\"markup.changed\"},{\"foreground\":\"a2bffc\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header.git\"},{\"foreground\":\"a2bffc\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"a2bffc\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"219186\",\"background\":\"eae3ca\",\"token\":\"markup.inserted\"},{\"foreground\":\"d3201f\",\"token\":\"other.package.exclude\"},{\"foreground\":\"d3201f\",\"token\":\"other.remove\"},{\"foreground\":\"269186\",\"token\":\"other.add\"},{\"foreground\":\"ff5874\",\"token\":\"constant.language.python\"},{\"foreground\":\"82aaff\",\"token\":\"variable.parameter.function.python\"},{\"foreground\":\"82aaff\",\"token\":\"meta.function-call.arguments.python\"},{\"foreground\":\"b2ccd6\",\"token\":\"meta.function-call.python\"},{\"foreground\":\"b2ccd6\",\"token\":\"meta.function-call.generic.python\"},{\"foreground\":\"d6deeb\",\"token\":\"punctuation.python\"},{\"foreground\":\"addb67\",\"token\":\"entity.name.function.decorator.python\"},{\"foreground\":\"8eace3\",\"token\":\"source.python variable.language.special\"},{\"foreground\":\"82b1ff\",\"token\":\"markup.heading.markdown\"},{\"foreground\":\"c792ea\",\"fontStyle\":\"italic\",\"token\":\"markup.italic.markdown\"},{\"foreground\":\"addb67\",\"fontStyle\":\"bold\",\"token\":\"markup.bold.markdown\"},{\"foreground\":\"697098\",\"token\":\"markup.quote.markdown\"},{\"foreground\":\"80cbc4\",\"token\":\"markup.inline.raw.markdown\"},{\"foreground\":\"ff869a\",\"token\":\"markup.underline.link.markdown\"},{\"foreground\":\"ff869a\",\"token\":\"markup.underline.link.image.markdown\"},{\"foreground\":\"d6deeb\",\"token\":\"string.other.link.title.markdown\"},{\"foreground\":\"d6deeb\",\"token\":\"string.other.link.description.markdown\"},{\"foreground\":\"82b1ff\",\"token\":\"punctuation.definition.string.markdown\"},{\"foreground\":\"82b1ff\",\"token\":\"punctuation.definition.string.begin.markdown\"},{\"foreground\":\"82b1ff\",\"token\":\"punctuation.definition.string.end.markdown\"},{\"foreground\":\"82b1ff\",\"token\":\"meta.link.inline.markdown punctuation.definition.string\"},{\"foreground\":\"7fdbca\",\"token\":\"punctuation.definition.metadata.markdown\"},{\"foreground\":\"82b1ff\",\"token\":\"beginning.punctuation.definition.list.markdown\"}],\"colors\":{\"editor.foreground\":\"#d6deeb\",\"editor.background\":\"#011627\",\"editor.selectionBackground\":\"#5f7e9779\",\"editor.lineHighlightBackground\":\"#010E17\",\"editorCursor.foreground\":\"#80a4c2\",\"editorWhitespace.foreground\":\"#2e2040\",\"editorIndentGuide.background\":\"#5e81ce52\",\"editor.selectionHighlightBorder\":\"#122d42\"}}");
+
+/***/ }),
+/* 479 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"65737e\",\"token\":\"comment\"},{\"foreground\":\"65737e\",\"token\":\"punctuation.definition.comment\"},{\"foreground\":\"cdd3de\",\"token\":\"variable\"},{\"foreground\":\"c594c5\",\"token\":\"keyword\"},{\"foreground\":\"c594c5\",\"token\":\"storage.type\"},{\"foreground\":\"c594c5\",\"token\":\"storage.modifier\"},{\"foreground\":\"5fb3b3\",\"token\":\"keyword.operator\"},{\"foreground\":\"5fb3b3\",\"token\":\"constant.other.color\"},{\"foreground\":\"5fb3b3\",\"token\":\"punctuation\"},{\"foreground\":\"5fb3b3\",\"token\":\"meta.tag\"},{\"foreground\":\"5fb3b3\",\"token\":\"punctuation.definition.tag\"},{\"foreground\":\"5fb3b3\",\"token\":\"punctuation.separator.inheritance.php\"},{\"foreground\":\"5fb3b3\",\"token\":\"punctuation.definition.tag.html\"},{\"foreground\":\"5fb3b3\",\"token\":\"punctuation.definition.tag.begin.html\"},{\"foreground\":\"5fb3b3\",\"token\":\"punctuation.definition.tag.end.html\"},{\"foreground\":\"5fb3b3\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"5fb3b3\",\"token\":\"keyword.other.template\"},{\"foreground\":\"5fb3b3\",\"token\":\"keyword.other.substitution\"},{\"foreground\":\"eb606b\",\"token\":\"entity.name.tag\"},{\"foreground\":\"eb606b\",\"token\":\"meta.tag.sgml\"},{\"foreground\":\"eb606b\",\"token\":\"markup.deleted.git_gutter\"},{\"foreground\":\"6699cc\",\"token\":\"entity.name.function\"},{\"foreground\":\"6699cc\",\"token\":\"meta.function-call\"},{\"foreground\":\"6699cc\",\"token\":\"variable.function\"},{\"foreground\":\"6699cc\",\"token\":\"support.function\"},{\"foreground\":\"6699cc\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"6699cc\",\"token\":\"meta.block-level\"},{\"foreground\":\"f2777a\",\"token\":\"support.other.variable\"},{\"foreground\":\"f2777a\",\"token\":\"string.other.link\"},{\"foreground\":\"f99157\",\"token\":\"constant.numeric\"},{\"foreground\":\"f99157\",\"token\":\"constant.language\"},{\"foreground\":\"f99157\",\"token\":\"support.constant\"},{\"foreground\":\"f99157\",\"token\":\"constant.character\"},{\"foreground\":\"f99157\",\"token\":\"variable.parameter\"},{\"foreground\":\"f99157\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"99c794\",\"fontStyle\":\"normal\",\"token\":\"string\"},{\"foreground\":\"99c794\",\"fontStyle\":\"normal\",\"token\":\"constant.other.symbol\"},{\"foreground\":\"99c794\",\"fontStyle\":\"normal\",\"token\":\"constant.other.key\"},{\"foreground\":\"99c794\",\"fontStyle\":\"normal\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"99c794\",\"fontStyle\":\"normal\",\"token\":\"markup.heading\"},{\"foreground\":\"99c794\",\"fontStyle\":\"normal\",\"token\":\"markup.inserted.git_gutter\"},{\"foreground\":\"99c794\",\"fontStyle\":\"normal\",\"token\":\"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js\"},{\"foreground\":\"fac863\",\"token\":\"entity.name.class\"},{\"foreground\":\"fac863\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"fac863\",\"token\":\"support.type\"},{\"foreground\":\"fac863\",\"token\":\"support.class\"},{\"foreground\":\"fac863\",\"token\":\"support.orther.namespace.use.php\"},{\"foreground\":\"fac863\",\"token\":\"meta.use.php\"},{\"foreground\":\"fac863\",\"token\":\"support.other.namespace.php\"},{\"foreground\":\"fac863\",\"token\":\"markup.changed.git_gutter\"},{\"foreground\":\"ec5f67\",\"token\":\"entity.name.module.js\"},{\"foreground\":\"ec5f67\",\"token\":\"variable.import.parameter.js\"},{\"foreground\":\"ec5f67\",\"token\":\"variable.other.class.js\"},{\"foreground\":\"ec5f67\",\"fontStyle\":\"italic\",\"token\":\"variable.language\"},{\"foreground\":\"cdd3de\",\"token\":\"meta.group.braces.curly.js constant.other.object.key.js string.unquoted.label.js\"},{\"foreground\":\"d8dee9\",\"token\":\"meta.class-method.js entity.name.function.js\"},{\"foreground\":\"d8dee9\",\"token\":\"variable.function.constructor\"},{\"foreground\":\"d8dee9\",\"token\":\"meta.class.js meta.class.property.js meta.method.js string.unquoted.js entity.name.function.js\"},{\"foreground\":\"bb80b3\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"99c794\",\"token\":\"markup.inserted\"},{\"foreground\":\"ec5f67\",\"token\":\"markup.deleted\"},{\"foreground\":\"bb80b3\",\"token\":\"markup.changed\"},{\"foreground\":\"5fb3b3\",\"token\":\"string.regexp\"},{\"foreground\":\"5fb3b3\",\"token\":\"constant.character.escape\"},{\"fontStyle\":\"underline\",\"token\":\"*url*\"},{\"fontStyle\":\"underline\",\"token\":\"*link*\"},{\"fontStyle\":\"underline\",\"token\":\"*uri*\"},{\"foreground\":\"ab7967\",\"token\":\"constant.numeric.line-number.find-in-files - match\"},{\"foreground\":\"99c794\",\"token\":\"entity.name.filename.find-in-files\"},{\"foreground\":\"6699cc\",\"fontStyle\":\"italic\",\"token\":\"tag.decorator.js entity.name.tag.js\"},{\"foreground\":\"6699cc\",\"fontStyle\":\"italic\",\"token\":\"tag.decorator.js punctuation.definition.tag.js\"},{\"foreground\":\"ec5f67\",\"fontStyle\":\"italic\",\"token\":\"source.js constant.other.object.key.js string.unquoted.label.js\"},{\"foreground\":\"fac863\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json string.quoted.double.json - meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"fac863\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json punctuation.definition.string - meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"c594c5\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json string.quoted.double.json - meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"c594c5\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json punctuation.definition.string - meta meta meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"d8dee9\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json string.quoted.double.json - meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"d8dee9\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json punctuation.definition.string - meta meta meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"6699cc\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json string.quoted.double.json - meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"6699cc\",\"token\":\"source.json meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json punctuation.definition.string - meta meta meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"ab7967\",\"token\":\"source.json meta meta meta meta meta meta meta meta.structure.dictionary.json string.quoted.double.json - meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"ab7967\",\"token\":\"source.json meta meta meta meta meta meta meta meta.structure.dictionary.json punctuation.definition.string - meta meta meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"ec5f67\",\"token\":\"source.json meta meta meta meta meta meta.structure.dictionary.json string.quoted.double.json - meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"ec5f67\",\"token\":\"source.json meta meta meta meta meta meta.structure.dictionary.json punctuation.definition.string - meta meta meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"f99157\",\"token\":\"source.json meta meta meta meta.structure.dictionary.json string.quoted.double.json - meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"f99157\",\"token\":\"source.json meta meta meta meta.structure.dictionary.json punctuation.definition.string - meta meta meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"fac863\",\"token\":\"source.json meta meta.structure.dictionary.json string.quoted.double.json - meta meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"fac863\",\"token\":\"source.json meta meta.structure.dictionary.json punctuation.definition.string - meta meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"},{\"foreground\":\"c594c5\",\"token\":\"source.json meta.structure.dictionary.json string.quoted.double.json - meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json\"},{\"foreground\":\"c594c5\",\"token\":\"source.json meta.structure.dictionary.json punctuation.definition.string - meta.structure.dictionary.json meta.structure.dictionary.value.json punctuation.definition.string\"}],\"colors\":{\"editor.foreground\":\"#CDD3DE\",\"editor.background\":\"#1B2B34\",\"editor.selectionBackground\":\"#4f5b66\",\"editor.lineHighlightBackground\":\"#65737e55\",\"editorCursor.foreground\":\"#c0c5ce\",\"editorWhitespace.foreground\":\"#65737e\",\"editorIndentGuide.background\":\"#65737F\",\"editorIndentGuide.activeBackground\":\"#FBC95A\"}}");
+
+/***/ }),
+/* 480 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"555555\",\"token\":\"comment\"},{\"foreground\":\"555555\",\"token\":\"comment.block\"},{\"foreground\":\"ad9361\",\"token\":\"string\"},{\"foreground\":\"cccccc\",\"token\":\"constant.numeric\"},{\"foreground\":\"a1a1ff\",\"token\":\"keyword\"},{\"foreground\":\"2f006e\",\"token\":\"meta.preprocessor\"},{\"fontStyle\":\"bold\",\"token\":\"keyword.control.import\"},{\"foreground\":\"a1a1ff\",\"token\":\"support.function\"},{\"foreground\":\"0000ff\",\"token\":\"declaration.function function-result\"},{\"fontStyle\":\"bold\",\"token\":\"declaration.function function-name\"},{\"fontStyle\":\"bold\",\"token\":\"declaration.function argument-name\"},{\"foreground\":\"0000ff\",\"token\":\"declaration.function function-arg-type\"},{\"fontStyle\":\"italic\",\"token\":\"declaration.function function-argument\"},{\"fontStyle\":\"underline\",\"token\":\"declaration.class class-name\"},{\"fontStyle\":\"italic underline\",\"token\":\"declaration.class class-inheritance\"},{\"foreground\":\"fff9f9\",\"background\":\"ff0000\",\"fontStyle\":\"bold\",\"token\":\"invalid\"},{\"background\":\"ffd0d0\",\"token\":\"invalid.deprecated.trailing-whitespace\"},{\"fontStyle\":\"italic\",\"token\":\"declaration.section section-name\"},{\"foreground\":\"c10006\",\"token\":\"string.interpolation\"},{\"foreground\":\"666666\",\"token\":\"string.regexp\"},{\"foreground\":\"c1c144\",\"token\":\"variable\"},{\"foreground\":\"6782d3\",\"token\":\"constant\"},{\"foreground\":\"afa472\",\"token\":\"constant.character\"},{\"foreground\":\"de8e30\",\"fontStyle\":\"bold\",\"token\":\"constant.language\"},{\"fontStyle\":\"underline\",\"token\":\"embedded\"},{\"foreground\":\"858ef4\",\"token\":\"keyword.markup.element-name\"},{\"foreground\":\"9b456f\",\"token\":\"keyword.markup.attribute-name\"},{\"foreground\":\"9b456f\",\"token\":\"meta.attribute-with-value\"},{\"foreground\":\"c82255\",\"fontStyle\":\"bold\",\"token\":\"keyword.exception\"},{\"foreground\":\"47b8d6\",\"token\":\"keyword.operator\"},{\"foreground\":\"6969fa\",\"fontStyle\":\"bold\",\"token\":\"keyword.control\"},{\"foreground\":\"68685b\",\"token\":\"meta.tag.preprocessor.xml\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.sgml.doctype\"},{\"fontStyle\":\"italic\",\"token\":\"string.quoted.docinfo.doctype.DTD\"},{\"foreground\":\"909090\",\"token\":\"comment.other.server-side-include.xhtml\"},{\"foreground\":\"909090\",\"token\":\"comment.other.server-side-include.html\"},{\"foreground\":\"858ef4\",\"token\":\"text.html declaration.tag\"},{\"foreground\":\"858ef4\",\"token\":\"text.html meta.tag\"},{\"foreground\":\"858ef4\",\"token\":\"text.html entity.name.tag.xhtml\"},{\"foreground\":\"9b456f\",\"token\":\"keyword.markup.attribute-name\"},{\"foreground\":\"777777\",\"token\":\"keyword.other.phpdoc.php\"},{\"foreground\":\"c82255\",\"token\":\"keyword.other.include.php\"},{\"foreground\":\"de8e20\",\"fontStyle\":\"bold\",\"token\":\"support.constant.core.php\"},{\"foreground\":\"de8e10\",\"fontStyle\":\"bold\",\"token\":\"support.constant.std.php\"},{\"foreground\":\"b72e1d\",\"token\":\"variable.other.global.php\"},{\"foreground\":\"00ff00\",\"token\":\"variable.other.global.safer.php\"},{\"foreground\":\"bfa36d\",\"token\":\"string.quoted.single.php\"},{\"foreground\":\"6969fa\",\"token\":\"keyword.storage.php\"},{\"foreground\":\"ad9361\",\"token\":\"string.quoted.double.php\"},{\"foreground\":\"ec9e00\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"b8cd06\",\"fontStyle\":\"bold\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"edca06\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"2e759c\",\"token\":\"entity.other.attribute-name.pseudo-class.css\"},{\"foreground\":\"ffffff\",\"background\":\"ff0000\",\"token\":\"invalid.bad-comma.css\"},{\"foreground\":\"9b2e4d\",\"token\":\"support.constant.property-value.css\"},{\"foreground\":\"e1c96b\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"666633\",\"token\":\"constant.other.rgb-value.css\"},{\"foreground\":\"666633\",\"token\":\"support.constant.font-name.css\"},{\"foreground\":\"7171f3\",\"token\":\"support.constant.tm-language-def\"},{\"foreground\":\"7171f3\",\"token\":\"support.constant.name.tm-language-def\"},{\"foreground\":\"6969fa\",\"token\":\"keyword.other.unit.css\"}],\"colors\":{\"editor.foreground\":\"#DADADA\",\"editor.background\":\"#211E1E\",\"editor.selectionBackground\":\"#73597E80\",\"editor.lineHighlightBackground\":\"#353030\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#4F4D4D\"}}");
+
+/***/ }),
+/* 481 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"406040\",\"token\":\"comment\"},{\"foreground\":\"c03030\",\"token\":\"string\"},{\"foreground\":\"0080a0\",\"token\":\"constant.numeric\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml constant.numeric.floating-point\"},{\"foreground\":\"800000\",\"token\":\"constant.character\"},{\"foreground\":\"2060a0\",\"token\":\"keyword\"},{\"foreground\":\"2060a0\",\"token\":\"keyword.operator\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.prefix.floating-point\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.infix.floating-point\"},{\"foreground\":\"0080ff\",\"token\":\"entity.name.module\"},{\"foreground\":\"0080ff\",\"token\":\"support.other.module\"},{\"foreground\":\"a08000\",\"token\":\"storage.type\"},{\"foreground\":\"008080\",\"token\":\"storage\"},{\"foreground\":\"c08060\",\"token\":\"entity.name.class.variant\"},{\"fontStyle\":\"bold\",\"token\":\"keyword.other.directive\"},{\"foreground\":\"800000\",\"token\":\"entity.name.function\"},{\"foreground\":\"800080\",\"token\":\"storage.type.user-defined\"},{\"foreground\":\"8000c0\",\"token\":\"entity.name.type.class.type\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#F1F1F1\",\"editor.selectionBackground\":\"#B0B0FF\",\"editor.lineHighlightBackground\":\"#00000026\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 482 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"586e75\",\"token\":\"comment\"},{\"foreground\":\"2aa198\",\"token\":\"string\"},{\"foreground\":\"586e75\",\"token\":\"string\"},{\"foreground\":\"dc322f\",\"token\":\"string.regexp\"},{\"foreground\":\"d33682\",\"token\":\"constant.numeric\"},{\"foreground\":\"268bd2\",\"token\":\"variable.language\"},{\"foreground\":\"268bd2\",\"token\":\"variable.other\"},{\"foreground\":\"859900\",\"token\":\"keyword\"},{\"foreground\":\"859900\",\"token\":\"storage\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.class\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.function\"},{\"foreground\":\"859900\",\"token\":\"punctuation.definition.variable\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.embedded.begin\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.embedded.end\"},{\"foreground\":\"b58900\",\"token\":\"constant.language\"},{\"foreground\":\"b58900\",\"token\":\"meta.preprocessor\"},{\"foreground\":\"dc322f\",\"token\":\"support.function.construct\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.other.new\"},{\"foreground\":\"cb4b16\",\"token\":\"constant.character\"},{\"foreground\":\"cb4b16\",\"token\":\"constant.other\"},{\"foreground\":\"268bd2\",\"fontStyle\":\"bold\",\"token\":\"entity.name.tag\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.tag.html\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.tag.begin\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.tag.end\"},{\"foreground\":\"93a1a1\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"268bd2\",\"token\":\"support.function\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.separator.continuation\"},{\"foreground\":\"859900\",\"token\":\"support.type\"},{\"foreground\":\"859900\",\"token\":\"support.class\"},{\"foreground\":\"cb4b16\",\"token\":\"support.type.exception\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"2aa198\",\"token\":\"string.quoted.double\"},{\"foreground\":\"2aa198\",\"token\":\"string.quoted.single\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.begin\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.end\"},{\"foreground\":\"b58900\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"b58900\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"b58900\",\"token\":\"meta.property-name.css\"},{\"foreground\":\"dc322f\",\"token\":\"source.css\"},{\"foreground\":\"586e75\",\"token\":\"meta.selector.css\"},{\"foreground\":\"6c71c4\",\"token\":\"punctuation.section.property-list.css\"},{\"foreground\":\"2aa198\",\"token\":\"meta.property-value.css constant.numeric.css\"},{\"foreground\":\"2aa198\",\"token\":\"keyword.other.unit.css\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.color.rgb-value.css\"},{\"foreground\":\"2aa198\",\"token\":\"meta.property-value.css\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.other.important.css\"},{\"foreground\":\"2aa198\",\"token\":\"support.constant.color\"},{\"foreground\":\"859900\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.separator.key-value.css\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.terminator.rule.css\"},{\"foreground\":\"268bd2\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"cb4b16\",\"token\":\"entity.other.attribute-name.pseudo-element.css\"},{\"foreground\":\"cb4b16\",\"token\":\"entity.other.attribute-name.pseudo-class.css\"},{\"foreground\":\"268bd2\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"b58900\",\"token\":\"meta.function.js\"},{\"foreground\":\"b58900\",\"token\":\"entity.name.function.js\"},{\"foreground\":\"b58900\",\"token\":\"support.function.dom.js\"},{\"foreground\":\"b58900\",\"token\":\"text.html.basic source.js.embedded.html\"},{\"foreground\":\"268bd2\",\"token\":\"storage.type.function.js\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.js\"},{\"foreground\":\"268bd2\",\"token\":\"meta.brace.square.js\"},{\"foreground\":\"268bd2\",\"token\":\"storage.type.js\"},{\"foreground\":\"93a1a1\",\"token\":\"meta.brace.round\"},{\"foreground\":\"93a1a1\",\"token\":\"punctuation.definition.parameters.begin.js\"},{\"foreground\":\"93a1a1\",\"token\":\"punctuation.definition.parameters.end.js\"},{\"foreground\":\"268bd2\",\"token\":\"meta.brace.curly.js\"},{\"foreground\":\"93a1a1\",\"fontStyle\":\"italic\",\"token\":\"entity.name.tag.doctype.html\"},{\"foreground\":\"93a1a1\",\"fontStyle\":\"italic\",\"token\":\"meta.tag.sgml.html\"},{\"foreground\":\"93a1a1\",\"fontStyle\":\"italic\",\"token\":\"string.quoted.double.doctype.identifiers-and-DTDs.html\"},{\"foreground\":\"839496\",\"fontStyle\":\"italic\",\"token\":\"comment.block.html\"},{\"fontStyle\":\"italic\",\"token\":\"entity.name.tag.script.html\"},{\"foreground\":\"2aa198\",\"token\":\"source.css.embedded.html string.quoted.double.html\"},{\"foreground\":\"cb4b16\",\"fontStyle\":\"bold\",\"token\":\"text.html.ruby\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.other.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.any.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.block.any\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.inline.any\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.structure.any.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic source.js.embedded.html\"},{\"foreground\":\"657b83\",\"token\":\"punctuation.separator.key-value.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic entity.other.attribute-name.html\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.basic meta.tag.structure.any.html punctuation.definition.string.begin.html\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.begin.html\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.end.html\"},{\"foreground\":\"268bd2\",\"fontStyle\":\"bold\",\"token\":\"entity.name.tag.block.any.html\"},{\"fontStyle\":\"italic\",\"token\":\"source.css.embedded.html entity.name.tag.style.html\"},{\"foreground\":\"839496\",\"fontStyle\":\"italic\",\"token\":\"source.css.embedded.html\"},{\"foreground\":\"839496\",\"fontStyle\":\"italic\",\"token\":\"comment.block.html\"},{\"foreground\":\"268bd2\",\"token\":\"punctuation.definition.variable.ruby\"},{\"foreground\":\"657b83\",\"token\":\"meta.function.method.with-arguments.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"variable.language.ruby\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.function.ruby\"},{\"foreground\":\"859900\",\"fontStyle\":\"bold\",\"token\":\"keyword.control.ruby\"},{\"foreground\":\"859900\",\"fontStyle\":\"bold\",\"token\":\"keyword.control.def.ruby\"},{\"foreground\":\"859900\",\"token\":\"keyword.control.class.ruby\"},{\"foreground\":\"859900\",\"token\":\"meta.class.ruby\"},{\"foreground\":\"b58900\",\"token\":\"entity.name.type.class.ruby\"},{\"foreground\":\"859900\",\"token\":\"keyword.control.ruby\"},{\"foreground\":\"b58900\",\"token\":\"support.class.ruby\"},{\"foreground\":\"859900\",\"token\":\"keyword.other.special-method.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"constant.language.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.ruby\"},{\"foreground\":\"b58900\",\"token\":\"variable.other.constant.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.symbol.ruby\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.embedded.ruby\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.begin.ruby\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.end.ruby\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.special-method.ruby\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.include.php\"},{\"foreground\":\"839496\",\"token\":\"text.html.ruby meta.tag.inline.any.html\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.ruby punctuation.definition.string.begin\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.ruby punctuation.definition.string.end\"},{\"foreground\":\"839496\",\"token\":\"punctuation.definition.string.begin\"},{\"foreground\":\"839496\",\"token\":\"punctuation.definition.string.end\"},{\"foreground\":\"839496\",\"token\":\"support.class.php\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.operator.index-start.php\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.operator.index-end.php\"},{\"foreground\":\"586e75\",\"token\":\"meta.array.php\"},{\"foreground\":\"b58900\",\"token\":\"meta.array.php support.function.construct.php\"},{\"foreground\":\"b58900\",\"token\":\"meta.array.empty.php support.function.construct.php\"},{\"foreground\":\"b58900\",\"token\":\"support.function.construct.php\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.array.begin\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.array.end\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.php\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.new.php\"},{\"foreground\":\"839496\",\"token\":\"keyword.operator.class\"},{\"foreground\":\"93a1a1\",\"token\":\"variable.other.property.php\"},{\"foreground\":\"b58900\",\"token\":\"storage.modifier.extends.php\"},{\"foreground\":\"b58900\",\"token\":\"storage.type.class.php\"},{\"foreground\":\"b58900\",\"token\":\"keyword.operator.class.php\"},{\"foreground\":\"839496\",\"token\":\"punctuation.terminator.expression.php\"},{\"foreground\":\"586e75\",\"token\":\"meta.other.inherited-class.php\"},{\"foreground\":\"859900\",\"token\":\"storage.type.php\"},{\"foreground\":\"93a1a1\",\"token\":\"entity.name.function.php\"},{\"foreground\":\"859900\",\"token\":\"support.function.construct.php\"},{\"foreground\":\"839496\",\"token\":\"entity.name.type.class.php\"},{\"foreground\":\"839496\",\"token\":\"meta.function-call.php\"},{\"foreground\":\"839496\",\"token\":\"meta.function-call.static.php\"},{\"foreground\":\"839496\",\"token\":\"meta.function-call.object.php\"},{\"foreground\":\"93a1a1\",\"token\":\"keyword.other.phpdoc\"},{\"foreground\":\"cb4b16\",\"token\":\"source.php.embedded.block.html\"},{\"foreground\":\"cb4b16\",\"token\":\"storage.type.function.php\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.c\"},{\"foreground\":\"cb4b16\",\"token\":\"meta.preprocessor.c.include\"},{\"foreground\":\"cb4b16\",\"token\":\"meta.preprocessor.macro.c\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.define.c\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.include.c\"},{\"foreground\":\"cb4b16\",\"token\":\"entity.name.function.preprocessor.c\"},{\"foreground\":\"2aa198\",\"token\":\"meta.preprocessor.c.include string.quoted.other.lt-gt.include.c\"},{\"foreground\":\"2aa198\",\"token\":\"meta.preprocessor.c.include punctuation.definition.string.begin.c\"},{\"foreground\":\"2aa198\",\"token\":\"meta.preprocessor.c.include punctuation.definition.string.end.c\"},{\"foreground\":\"586e75\",\"token\":\"support.function.C99.c\"},{\"foreground\":\"586e75\",\"token\":\"support.function.any-method.c\"},{\"foreground\":\"586e75\",\"token\":\"entity.name.function.c\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.begin.c\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.end.c\"},{\"foreground\":\"b58900\",\"token\":\"storage.type.c\"},{\"foreground\":\"e0eddd\",\"background\":\"b58900\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"e0eddd\",\"background\":\"b58900\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"dc322f\",\"background\":\"eee8d5\",\"token\":\"markup.deleted\"},{\"foreground\":\"cb4b16\",\"background\":\"eee8d5\",\"token\":\"markup.changed\"},{\"foreground\":\"219186\",\"background\":\"eee8d5\",\"token\":\"markup.inserted\"},{\"foreground\":\"e0eddd\",\"background\":\"b58900\",\"token\":\"text.html.markdown meta.dummy.line-break\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.markdown markup.raw.inline\"},{\"foreground\":\"2aa198\",\"token\":\"text.restructuredtext markup.raw\"},{\"foreground\":\"dc322f\",\"token\":\"other.package.exclude\"},{\"foreground\":\"dc322f\",\"token\":\"other.remove\"},{\"foreground\":\"2aa198\",\"token\":\"other.add\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.group.tex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.arguments.begin.latex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.arguments.end.latex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.arguments.latex\"},{\"foreground\":\"b58900\",\"token\":\"meta.group.braces.tex\"},{\"foreground\":\"b58900\",\"token\":\"string.other.math.tex\"},{\"foreground\":\"cb4b16\",\"token\":\"variable.parameter.function.latex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.constant.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"text.tex.latex constant.other.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.general.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.general.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"constant.character.math.tex\"},{\"foreground\":\"b58900\",\"token\":\"string.other.math.tex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.begin.tex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.end.tex\"},{\"foreground\":\"2aa198\",\"token\":\"keyword.control.label.latex\"},{\"foreground\":\"2aa198\",\"token\":\"text.tex.latex constant.other.general.math.tex\"},{\"foreground\":\"dc322f\",\"token\":\"variable.parameter.definition.label.latex\"},{\"foreground\":\"859900\",\"token\":\"support.function.be.latex\"},{\"foreground\":\"cb4b16\",\"token\":\"support.function.section.latex\"},{\"foreground\":\"2aa198\",\"token\":\"support.function.general.tex\"},{\"fontStyle\":\"italic\",\"token\":\"punctuation.definition.comment.tex\"},{\"fontStyle\":\"italic\",\"token\":\"comment.line.percentage.tex\"},{\"foreground\":\"2aa198\",\"token\":\"keyword.control.ref.latex\"},{\"foreground\":\"586e75\",\"token\":\"string.quoted.double.block.python\"},{\"foreground\":\"859900\",\"token\":\"storage.type.class.python\"},{\"foreground\":\"859900\",\"token\":\"storage.type.function.python\"},{\"foreground\":\"859900\",\"token\":\"storage.modifier.global.python\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.python\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.from.python\"},{\"foreground\":\"b58900\",\"token\":\"support.type.exception.python\"},{\"foreground\":\"859900\",\"token\":\"support.function.builtin.shell\"},{\"foreground\":\"cb4b16\",\"token\":\"variable.other.normal.shell\"},{\"foreground\":\"268bd2\",\"token\":\"source.shell\"},{\"foreground\":\"586e75\",\"token\":\"meta.scope.for-in-loop.shell\"},{\"foreground\":\"586e75\",\"token\":\"variable.other.loop.shell\"},{\"foreground\":\"859900\",\"token\":\"punctuation.definition.string.end.shell\"},{\"foreground\":\"859900\",\"token\":\"punctuation.definition.string.begin.shell\"},{\"foreground\":\"586e75\",\"token\":\"meta.scope.case-block.shell\"},{\"foreground\":\"586e75\",\"token\":\"meta.scope.case-body.shell\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.logical-expression.shell\"},{\"fontStyle\":\"italic\",\"token\":\"comment.line.number-sign.shell\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.import.java\"},{\"foreground\":\"586e75\",\"token\":\"storage.modifier.import.java\"},{\"foreground\":\"b58900\",\"token\":\"meta.class.java storage.modifier.java\"},{\"foreground\":\"586e75\",\"token\":\"source.java comment.block\"},{\"foreground\":\"586e75\",\"token\":\"comment.block meta.documentation.tag.param.javadoc keyword.other.documentation.param.javadoc\"},{\"foreground\":\"b58900\",\"token\":\"punctuation.definition.variable.perl\"},{\"foreground\":\"b58900\",\"token\":\"variable.other.readwrite.global.perl\"},{\"foreground\":\"b58900\",\"token\":\"variable.other.predefined.perl\"},{\"foreground\":\"b58900\",\"token\":\"keyword.operator.comparison.perl\"},{\"foreground\":\"859900\",\"token\":\"support.function.perl\"},{\"foreground\":\"586e75\",\"fontStyle\":\"italic\",\"token\":\"comment.line.number-sign.perl\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.begin.perl\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.end.perl\"},{\"foreground\":\"dc322f\",\"token\":\"constant.character.escape.perl\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.1.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.2.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.3.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.4.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.5.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.6.markdown\"},{\"foreground\":\"839496\",\"fontStyle\":\"bold\",\"token\":\"markup.bold.markdown\"},{\"foreground\":\"839496\",\"fontStyle\":\"italic\",\"token\":\"markup.italic.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.bold.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.italic.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.raw.markdown\"},{\"foreground\":\"b58900\",\"token\":\"markup.list.unnumbered.markdown\"},{\"foreground\":\"859900\",\"token\":\"markup.list.numbered.markdown\"},{\"foreground\":\"2aa198\",\"token\":\"markup.raw.block.markdown\"},{\"foreground\":\"2aa198\",\"token\":\"markup.raw.inline.markdown\"},{\"foreground\":\"6c71c4\",\"token\":\"markup.quote.markdown\"},{\"foreground\":\"6c71c4\",\"token\":\"punctuation.definition.blockquote.markdown\"},{\"foreground\":\"d33682\",\"token\":\"meta.separator.markdown\"},{\"foreground\":\"586e75\",\"fontStyle\":\"italic\",\"token\":\"meta.image.inline.markdown\"},{\"foreground\":\"586e75\",\"fontStyle\":\"italic\",\"token\":\"markup.underline.link.markdown\"},{\"foreground\":\"93a1a1\",\"token\":\"string.other.link.title.markdown\"},{\"foreground\":\"93a1a1\",\"token\":\"string.other.link.description.markdown\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.link.markdown\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.metadata.markdown\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.string.begin.markdown\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.string.end.markdown\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.definition.constant.markdown\"},{\"foreground\":\"eee8d5\",\"background\":\"eee8d5\",\"token\":\"sublimelinter.notes\"},{\"foreground\":\"93a1a1\",\"background\":\"93a1a1\",\"token\":\"sublimelinter.outline.illegal\"},{\"background\":\"dc322f\",\"token\":\"sublimelinter.underline.illegal\"},{\"foreground\":\"839496\",\"background\":\"839496\",\"token\":\"sublimelinter.outline.warning\"},{\"background\":\"b58900\",\"token\":\"sublimelinter.underline.warning\"},{\"foreground\":\"657b83\",\"background\":\"657b83\",\"token\":\"sublimelinter.outline.violation\"},{\"background\":\"cb4b16\",\"token\":\"sublimelinter.underline.violation\"}],\"colors\":{\"editor.foreground\":\"#839496\",\"editor.background\":\"#002B36\",\"editor.selectionBackground\":\"#073642\",\"editor.lineHighlightBackground\":\"#073642\",\"editorCursor.foreground\":\"#819090\",\"editorWhitespace.foreground\":\"#073642\"}}");
+
+/***/ }),
+/* 483 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"93a1a1\",\"token\":\"comment\"},{\"foreground\":\"2aa198\",\"token\":\"string\"},{\"foreground\":\"586e75\",\"token\":\"string\"},{\"foreground\":\"dc322f\",\"token\":\"string.regexp\"},{\"foreground\":\"d33682\",\"token\":\"constant.numeric\"},{\"foreground\":\"268bd2\",\"token\":\"variable.language\"},{\"foreground\":\"268bd2\",\"token\":\"variable.other\"},{\"foreground\":\"859900\",\"token\":\"keyword\"},{\"foreground\":\"073642\",\"fontStyle\":\"bold\",\"token\":\"storage\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.class\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.function\"},{\"foreground\":\"859900\",\"token\":\"punctuation.definition.variable\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.embedded.begin\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.embedded.end\"},{\"foreground\":\"b58900\",\"token\":\"constant.language\"},{\"foreground\":\"b58900\",\"token\":\"meta.preprocessor\"},{\"foreground\":\"dc322f\",\"token\":\"support.function.construct\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.other.new\"},{\"foreground\":\"cb4b16\",\"token\":\"constant.character\"},{\"foreground\":\"cb4b16\",\"token\":\"constant.other\"},{\"foreground\":\"268bd2\",\"fontStyle\":\"bold\",\"token\":\"entity.name.tag\"},{\"foreground\":\"93a1a1\",\"token\":\"punctuation.definition.tag.html\"},{\"foreground\":\"93a1a1\",\"token\":\"punctuation.definition.tag.begin\"},{\"foreground\":\"93a1a1\",\"token\":\"punctuation.definition.tag.end\"},{\"foreground\":\"93a1a1\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"268bd2\",\"token\":\"support.function\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.separator.continuation\"},{\"foreground\":\"859900\",\"token\":\"support.type\"},{\"foreground\":\"859900\",\"token\":\"support.class\"},{\"foreground\":\"cb4b16\",\"token\":\"support.type.exception\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"2aa198\",\"token\":\"string.quoted.double\"},{\"foreground\":\"2aa198\",\"token\":\"string.quoted.single\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.begin\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.end\"},{\"foreground\":\"b58900\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"b58900\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"b58900\",\"token\":\"meta.property-name.css\"},{\"foreground\":\"dc322f\",\"token\":\"source.css\"},{\"foreground\":\"586e75\",\"token\":\"meta.selector.css\"},{\"foreground\":\"6c71c4\",\"token\":\"punctuation.section.property-list.css\"},{\"foreground\":\"2aa198\",\"token\":\"meta.property-value.css constant.numeric.css\"},{\"foreground\":\"2aa198\",\"token\":\"keyword.other.unit.css\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.color.rgb-value.css\"},{\"foreground\":\"2aa198\",\"token\":\"meta.property-value.css\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.other.important.css\"},{\"foreground\":\"2aa198\",\"token\":\"support.constant.color\"},{\"foreground\":\"859900\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.separator.key-value.css\"},{\"foreground\":\"586e75\",\"token\":\"punctuation.terminator.rule.css\"},{\"foreground\":\"268bd2\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"cb4b16\",\"token\":\"entity.other.attribute-name.pseudo-element.css\"},{\"foreground\":\"cb4b16\",\"token\":\"entity.other.attribute-name.pseudo-class.css\"},{\"foreground\":\"268bd2\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"b58900\",\"token\":\"meta.function.js\"},{\"foreground\":\"b58900\",\"token\":\"entity.name.function.js\"},{\"foreground\":\"b58900\",\"token\":\"support.function.dom.js\"},{\"foreground\":\"b58900\",\"token\":\"text.html.basic source.js.embedded.html\"},{\"foreground\":\"268bd2\",\"token\":\"storage.type.function.js\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.js\"},{\"foreground\":\"268bd2\",\"token\":\"meta.brace.square.js\"},{\"foreground\":\"268bd2\",\"token\":\"storage.type.js\"},{\"foreground\":\"93a1a1\",\"token\":\"meta.brace.round\"},{\"foreground\":\"93a1a1\",\"token\":\"punctuation.definition.parameters.begin.js\"},{\"foreground\":\"93a1a1\",\"token\":\"punctuation.definition.parameters.end.js\"},{\"foreground\":\"268bd2\",\"token\":\"meta.brace.curly.js\"},{\"foreground\":\"93a1a1\",\"fontStyle\":\"italic\",\"token\":\"entity.name.tag.doctype.html\"},{\"foreground\":\"93a1a1\",\"fontStyle\":\"italic\",\"token\":\"meta.tag.sgml.html\"},{\"foreground\":\"93a1a1\",\"fontStyle\":\"italic\",\"token\":\"string.quoted.double.doctype.identifiers-and-DTDs.html\"},{\"foreground\":\"839496\",\"fontStyle\":\"italic\",\"token\":\"comment.block.html\"},{\"fontStyle\":\"italic\",\"token\":\"entity.name.tag.script.html\"},{\"foreground\":\"2aa198\",\"token\":\"source.css.embedded.html string.quoted.double.html\"},{\"foreground\":\"cb4b16\",\"fontStyle\":\"bold\",\"token\":\"text.html.ruby\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.other.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.any.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.block.any\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.inline.any\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic meta.tag.structure.any.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic source.js.embedded.html\"},{\"foreground\":\"657b83\",\"token\":\"punctuation.separator.key-value.html\"},{\"foreground\":\"657b83\",\"token\":\"text.html.basic entity.other.attribute-name.html\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.basic meta.tag.structure.any.html punctuation.definition.string.begin.html\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.begin.html\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.end.html\"},{\"foreground\":\"268bd2\",\"fontStyle\":\"bold\",\"token\":\"entity.name.tag.block.any.html\"},{\"fontStyle\":\"italic\",\"token\":\"source.css.embedded.html entity.name.tag.style.html\"},{\"foreground\":\"839496\",\"fontStyle\":\"italic\",\"token\":\"source.css.embedded.html\"},{\"foreground\":\"839496\",\"fontStyle\":\"italic\",\"token\":\"comment.block.html\"},{\"foreground\":\"268bd2\",\"token\":\"punctuation.definition.variable.ruby\"},{\"foreground\":\"657b83\",\"token\":\"meta.function.method.with-arguments.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"variable.language.ruby\"},{\"foreground\":\"268bd2\",\"token\":\"entity.name.function.ruby\"},{\"foreground\":\"859900\",\"fontStyle\":\"bold\",\"token\":\"keyword.control.ruby\"},{\"foreground\":\"859900\",\"fontStyle\":\"bold\",\"token\":\"keyword.control.def.ruby\"},{\"foreground\":\"859900\",\"token\":\"keyword.control.class.ruby\"},{\"foreground\":\"859900\",\"token\":\"meta.class.ruby\"},{\"foreground\":\"b58900\",\"token\":\"entity.name.type.class.ruby\"},{\"foreground\":\"859900\",\"token\":\"keyword.control.ruby\"},{\"foreground\":\"b58900\",\"token\":\"support.class.ruby\"},{\"foreground\":\"859900\",\"token\":\"keyword.other.special-method.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"constant.language.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.ruby\"},{\"foreground\":\"b58900\",\"token\":\"variable.other.constant.ruby\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.symbol.ruby\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.embedded.ruby\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.begin.ruby\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.end.ruby\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.special-method.ruby\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.include.php\"},{\"foreground\":\"839496\",\"token\":\"text.html.ruby meta.tag.inline.any.html\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.ruby punctuation.definition.string.begin\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.ruby punctuation.definition.string.end\"},{\"foreground\":\"839496\",\"token\":\"punctuation.definition.string.begin\"},{\"foreground\":\"839496\",\"token\":\"punctuation.definition.string.end\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.operator.index-start.php\"},{\"foreground\":\"dc322f\",\"token\":\"keyword.operator.index-end.php\"},{\"foreground\":\"586e75\",\"token\":\"meta.array.php\"},{\"foreground\":\"b58900\",\"token\":\"meta.array.php support.function.construct.php\"},{\"foreground\":\"b58900\",\"token\":\"meta.array.empty.php support.function.construct.php\"},{\"foreground\":\"b58900\",\"token\":\"support.function.construct.php\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.array.begin\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.array.end\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.php\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.new.php\"},{\"foreground\":\"586e75\",\"token\":\"support.class.php\"},{\"foreground\":\"586e75\",\"token\":\"keyword.operator.class\"},{\"foreground\":\"93a1a1\",\"token\":\"variable.other.property.php\"},{\"foreground\":\"b58900\",\"token\":\"storage.modifier.extends.php\"},{\"foreground\":\"b58900\",\"token\":\"storage.type.class.php\"},{\"foreground\":\"b58900\",\"token\":\"keyword.operator.class.php\"},{\"foreground\":\"586e75\",\"token\":\"meta.other.inherited-class.php\"},{\"foreground\":\"859900\",\"token\":\"storage.type.php\"},{\"foreground\":\"93a1a1\",\"token\":\"entity.name.function.php\"},{\"foreground\":\"859900\",\"token\":\"support.function.construct.php\"},{\"foreground\":\"839496\",\"token\":\"entity.name.type.class.php\"},{\"foreground\":\"839496\",\"token\":\"meta.function-call.php\"},{\"foreground\":\"839496\",\"token\":\"meta.function-call.static.php\"},{\"foreground\":\"839496\",\"token\":\"meta.function-call.object.php\"},{\"foreground\":\"93a1a1\",\"token\":\"keyword.other.phpdoc\"},{\"foreground\":\"cb4b16\",\"token\":\"source.php.embedded.block.html\"},{\"foreground\":\"cb4b16\",\"token\":\"storage.type.function.php\"},{\"foreground\":\"2aa198\",\"token\":\"constant.numeric.c\"},{\"foreground\":\"cb4b16\",\"token\":\"meta.preprocessor.c.include\"},{\"foreground\":\"cb4b16\",\"token\":\"meta.preprocessor.macro.c\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.define.c\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.include.c\"},{\"foreground\":\"cb4b16\",\"token\":\"entity.name.function.preprocessor.c\"},{\"foreground\":\"2aa198\",\"token\":\"meta.preprocessor.c.include string.quoted.other.lt-gt.include.c\"},{\"foreground\":\"2aa198\",\"token\":\"meta.preprocessor.c.include punctuation.definition.string.begin.c\"},{\"foreground\":\"2aa198\",\"token\":\"meta.preprocessor.c.include punctuation.definition.string.end.c\"},{\"foreground\":\"586e75\",\"token\":\"support.function.C99.c\"},{\"foreground\":\"586e75\",\"token\":\"support.function.any-method.c\"},{\"foreground\":\"586e75\",\"token\":\"entity.name.function.c\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.begin.c\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.end.c\"},{\"foreground\":\"b58900\",\"token\":\"storage.type.c\"},{\"foreground\":\"e0eddd\",\"background\":\"b58900\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"e0eddd\",\"background\":\"b58900\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"dc322f\",\"background\":\"eee8d5\",\"token\":\"markup.deleted\"},{\"foreground\":\"cb4b16\",\"background\":\"eee8d5\",\"token\":\"markup.changed\"},{\"foreground\":\"219186\",\"background\":\"eee8d5\",\"token\":\"markup.inserted\"},{\"foreground\":\"e0eddd\",\"background\":\"a57706\",\"token\":\"text.html.markdown meta.dummy.line-break\"},{\"foreground\":\"2aa198\",\"token\":\"text.html.markdown markup.raw.inline\"},{\"foreground\":\"2aa198\",\"token\":\"text.restructuredtext markup.raw\"},{\"foreground\":\"dc322f\",\"token\":\"other.package.exclude\"},{\"foreground\":\"dc322f\",\"token\":\"other.remove\"},{\"foreground\":\"2aa198\",\"token\":\"other.add\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.section.group.tex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.arguments.begin.latex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.arguments.end.latex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.arguments.latex\"},{\"foreground\":\"b58900\",\"token\":\"meta.group.braces.tex\"},{\"foreground\":\"b58900\",\"token\":\"string.other.math.tex\"},{\"foreground\":\"cb4b16\",\"token\":\"variable.parameter.function.latex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.constant.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"text.tex.latex constant.other.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.general.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"constant.other.general.math.tex\"},{\"foreground\":\"2aa198\",\"token\":\"constant.character.math.tex\"},{\"foreground\":\"b58900\",\"token\":\"string.other.math.tex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.begin.tex\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.end.tex\"},{\"foreground\":\"2aa198\",\"token\":\"keyword.control.label.latex\"},{\"foreground\":\"2aa198\",\"token\":\"text.tex.latex constant.other.general.math.tex\"},{\"foreground\":\"dc322f\",\"token\":\"variable.parameter.definition.label.latex\"},{\"foreground\":\"859900\",\"token\":\"support.function.be.latex\"},{\"foreground\":\"cb4b16\",\"token\":\"support.function.section.latex\"},{\"foreground\":\"2aa198\",\"token\":\"support.function.general.tex\"},{\"fontStyle\":\"italic\",\"token\":\"punctuation.definition.comment.tex\"},{\"fontStyle\":\"italic\",\"token\":\"comment.line.percentage.tex\"},{\"foreground\":\"2aa198\",\"token\":\"keyword.control.ref.latex\"},{\"foreground\":\"586e75\",\"token\":\"string.quoted.double.block.python\"},{\"foreground\":\"859900\",\"token\":\"storage.type.class.python\"},{\"foreground\":\"859900\",\"token\":\"storage.type.function.python\"},{\"foreground\":\"859900\",\"token\":\"storage.modifier.global.python\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.python\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.control.import.from.python\"},{\"foreground\":\"b58900\",\"token\":\"support.type.exception.python\"},{\"foreground\":\"859900\",\"token\":\"support.function.builtin.shell\"},{\"foreground\":\"cb4b16\",\"token\":\"variable.other.normal.shell\"},{\"foreground\":\"268bd2\",\"token\":\"source.shell\"},{\"foreground\":\"586e75\",\"token\":\"meta.scope.for-in-loop.shell\"},{\"foreground\":\"586e75\",\"token\":\"variable.other.loop.shell\"},{\"foreground\":\"859900\",\"token\":\"punctuation.definition.string.end.shell\"},{\"foreground\":\"859900\",\"token\":\"punctuation.definition.string.begin.shell\"},{\"foreground\":\"586e75\",\"token\":\"meta.scope.case-block.shell\"},{\"foreground\":\"586e75\",\"token\":\"meta.scope.case-body.shell\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.logical-expression.shell\"},{\"fontStyle\":\"italic\",\"token\":\"comment.line.number-sign.shell\"},{\"foreground\":\"cb4b16\",\"token\":\"keyword.other.import.java\"},{\"foreground\":\"586e75\",\"token\":\"storage.modifier.import.java\"},{\"foreground\":\"b58900\",\"token\":\"meta.class.java storage.modifier.java\"},{\"foreground\":\"586e75\",\"token\":\"source.java comment.block\"},{\"foreground\":\"586e75\",\"token\":\"comment.block meta.documentation.tag.param.javadoc keyword.other.documentation.param.javadoc\"},{\"foreground\":\"b58900\",\"token\":\"punctuation.definition.variable.perl\"},{\"foreground\":\"b58900\",\"token\":\"variable.other.readwrite.global.perl\"},{\"foreground\":\"b58900\",\"token\":\"variable.other.predefined.perl\"},{\"foreground\":\"b58900\",\"token\":\"keyword.operator.comparison.perl\"},{\"foreground\":\"859900\",\"token\":\"support.function.perl\"},{\"foreground\":\"586e75\",\"fontStyle\":\"italic\",\"token\":\"comment.line.number-sign.perl\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.begin.perl\"},{\"foreground\":\"2aa198\",\"token\":\"punctuation.definition.string.end.perl\"},{\"foreground\":\"dc322f\",\"token\":\"constant.character.escape.perl\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.1.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.2.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.3.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.4.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.5.markdown\"},{\"foreground\":\"268bd2\",\"token\":\"markup.heading.6.markdown\"},{\"foreground\":\"586e75\",\"fontStyle\":\"bold\",\"token\":\"markup.bold.markdown\"},{\"foreground\":\"586e75\",\"fontStyle\":\"italic\",\"token\":\"markup.italic.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.bold.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.italic.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.raw.markdown\"},{\"foreground\":\"b58900\",\"token\":\"markup.list.unnumbered.markdown\"},{\"foreground\":\"859900\",\"token\":\"markup.list.numbered.markdown\"},{\"foreground\":\"2aa198\",\"token\":\"markup.raw.block.markdown\"},{\"foreground\":\"2aa198\",\"token\":\"markup.raw.inline.markdown\"},{\"foreground\":\"6c71c4\",\"token\":\"markup.quote.markdown\"},{\"foreground\":\"6c71c4\",\"token\":\"punctuation.definition.blockquote.markdown\"},{\"foreground\":\"d33682\",\"token\":\"meta.separator.markdown\"},{\"foreground\":\"839496\",\"token\":\"markup.underline.link.markdown\"},{\"foreground\":\"839496\",\"token\":\"markup.underline.link.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"meta.link.inet.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"meta.link.email.lt-gt.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.begin.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.string.end.markdown\"},{\"foreground\":\"dc322f\",\"token\":\"punctuation.definition.link.markdown\"},{\"foreground\":\"6a8187\",\"token\":\"text.plain\"},{\"foreground\":\"eee8d5\",\"background\":\"eee8d5\",\"token\":\"sublimelinter.notes\"},{\"foreground\":\"93a1a1\",\"background\":\"93a1a1\",\"token\":\"sublimelinter.outline.illegal\"},{\"background\":\"dc322f\",\"token\":\"sublimelinter.underline.illegal\"},{\"foreground\":\"839496\",\"background\":\"839496\",\"token\":\"sublimelinter.outline.warning\"},{\"background\":\"b58900\",\"token\":\"sublimelinter.underline.warning\"},{\"foreground\":\"657b83\",\"background\":\"657b83\",\"token\":\"sublimelinter.outline.violation\"},{\"background\":\"cb4b16\",\"token\":\"sublimelinter.underline.violation\"}],\"colors\":{\"editor.foreground\":\"#586E75\",\"editor.background\":\"#FDF6E3\",\"editor.selectionBackground\":\"#EEE8D5\",\"editor.lineHighlightBackground\":\"#EEE8D5\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#EAE3C9\"}}");
+
+/***/ }),
+/* 484 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"473c45\",\"token\":\"comment\"},{\"foreground\":\"805978\",\"token\":\"string\"},{\"foreground\":\"a8885a\",\"token\":\"constant\"},{\"foreground\":\"596380\",\"token\":\"variable.parameter\"},{\"foreground\":\"596380\",\"token\":\"variable.other\"},{\"foreground\":\"728059\",\"token\":\"keyword - keyword.operator\"},{\"foreground\":\"728059\",\"token\":\"keyword.operator.logical\"},{\"foreground\":\"9ebf60\",\"token\":\"storage\"},{\"foreground\":\"6078bf\",\"token\":\"entity\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"8a4b66\",\"token\":\"support\"},{\"foreground\":\"893062\",\"token\":\"support.type.exception\"},{\"background\":\"5f0047\",\"token\":\"invalid\"},{\"background\":\"371d28\",\"token\":\"meta.function.section\"}],\"colors\":{\"editor.foreground\":\"#DDE6CF\",\"editor.background\":\"#0D0D0D\",\"editor.selectionBackground\":\"#40002F\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#7F005D\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 485 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"aeaeae\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"3387cc\",\"token\":\"constant\"},{\"foreground\":\"89bdff\",\"token\":\"entity\"},{\"foreground\":\"e28964\",\"token\":\"keyword\"},{\"foreground\":\"99cf50\",\"token\":\"storage\"},{\"foreground\":\"65b042\",\"token\":\"string\"},{\"foreground\":\"9b859d\",\"token\":\"support\"},{\"foreground\":\"3e87e3\",\"token\":\"variable\"},{\"foreground\":\"fd5ff1\",\"fontStyle\":\"italic underline\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"fd5ff1\",\"background\":\"562d56bf\",\"token\":\"invalid.illegal\"},{\"background\":\"b1b3ba08\",\"token\":\"text source\"},{\"foreground\":\"9b5c2e\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"daefa3\",\"token\":\"string.quoted source\"},{\"foreground\":\"ddf2a4\",\"token\":\"string constant\"},{\"foreground\":\"e9c062\",\"token\":\"string.regexp\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp constant.character.escape\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp source.ruby.embedded\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp string.regexp.arbitrary-repitition\"},{\"foreground\":\"8a9a95\",\"token\":\"string variable\"},{\"foreground\":\"dad085\",\"token\":\"support.function\"},{\"foreground\":\"cf6a4c\",\"token\":\"support.constant\"},{\"foreground\":\"8996a8\",\"token\":\"meta.preprocessor.c\"},{\"foreground\":\"afc4db\",\"token\":\"meta.preprocessor.c keyword\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"foreground\":\"676767\",\"fontStyle\":\"italic\",\"token\":\"meta.cast\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype entity\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype string\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing entity\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing string\"},{\"foreground\":\"89bdff\",\"token\":\"meta.tag\"},{\"foreground\":\"89bdff\",\"token\":\"meta.tag entity\"},{\"foreground\":\"e0c589\",\"token\":\"source entity.name.tag\"},{\"foreground\":\"e0c589\",\"token\":\"source entity.other.attribute-name\"},{\"foreground\":\"e0c589\",\"token\":\"meta.tag.inline\"},{\"foreground\":\"e0c589\",\"token\":\"meta.tag.inline entity\"},{\"foreground\":\"e18964\",\"token\":\"entity.name.tag.namespace\"},{\"foreground\":\"e18964\",\"token\":\"entity.other.attribute-name.namespace\"},{\"foreground\":\"cda869\",\"token\":\"meta.selector.css entity.name.tag\"},{\"foreground\":\"8f9d6a\",\"token\":\"meta.selector.css entity.other.attribute-name.tag.pseudo-class\"},{\"foreground\":\"8b98ab\",\"token\":\"meta.selector.css entity.other.attribute-name.id\"},{\"foreground\":\"9b703f\",\"token\":\"meta.selector.css entity.other.attribute-name.class\"},{\"foreground\":\"c5af75\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"f9ee98\",\"token\":\"meta.property-group support.constant.property-value.css\"},{\"foreground\":\"f9ee98\",\"token\":\"meta.property-value support.constant.property-value.css\"},{\"foreground\":\"8693a5\",\"token\":\"meta.preprocessor.at-rule keyword.control.at-rule\"},{\"foreground\":\"dd7b3b\",\"token\":\"meta.property-value support.constant.named-color.css\"},{\"foreground\":\"dd7b3b\",\"token\":\"meta.property-value constant\"},{\"foreground\":\"8f9d6a\",\"token\":\"meta.constructor.argument.css\"},{\"foreground\":\"f8f8f8\",\"background\":\"0e2231\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"f8f8f8\",\"background\":\"0e2231\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f8f8f8\",\"background\":\"420e09\",\"token\":\"markup.deleted\"},{\"foreground\":\"f8f8f8\",\"background\":\"4a410d\",\"token\":\"markup.changed\"},{\"foreground\":\"f8f8f8\",\"background\":\"253b22\",\"token\":\"markup.inserted\"},{\"foreground\":\"e9c062\",\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"foreground\":\"e9c062\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"e18964\",\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"e1d4b9\",\"background\":\"fee09c12\",\"fontStyle\":\"italic\",\"token\":\"markup.quote\"},{\"foreground\":\"fedcc5\",\"background\":\"632d04\",\"token\":\"markup.heading\"},{\"foreground\":\"fedcc5\",\"background\":\"632d04\",\"token\":\"markup.heading entity\"},{\"foreground\":\"e1d4b9\",\"token\":\"markup.list\"},{\"foreground\":\"578bb3\",\"background\":\"b1b3ba08\",\"token\":\"markup.raw\"},{\"foreground\":\"f67b37\",\"fontStyle\":\"italic\",\"token\":\"markup comment\"},{\"foreground\":\"60a633\",\"background\":\"242424\",\"token\":\"meta.separator\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.entry.logfile\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.exit.logfile\"},{\"background\":\"751012\",\"token\":\"meta.line.error.logfile\"}],\"colors\":{\"editor.foreground\":\"#F8F8F8\",\"editor.background\":\"#000000\",\"editor.selectionBackground\":\"#DDF0FF33\",\"editor.lineHighlightBackground\":\"#FFFFFF0D\",\"editorCursor.foreground\":\"#A7A7A7\",\"editorWhitespace.foreground\":\"#CAE2FB3D\"}}");
+
+/***/ }),
+/* 486 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"0066ff\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"bfbfbf\",\"token\":\"deco.folding\"},{\"foreground\":\"0000ff\",\"fontStyle\":\"bold\",\"token\":\"keyword\"},{\"foreground\":\"0000ff\",\"fontStyle\":\"bold\",\"token\":\"storage\"},{\"foreground\":\"0000cd\",\"token\":\"constant.numeric\"},{\"foreground\":\"c5060b\",\"fontStyle\":\"bold\",\"token\":\"constant\"},{\"foreground\":\"585cf6\",\"fontStyle\":\"bold\",\"token\":\"constant.language\"},{\"foreground\":\"318495\",\"token\":\"variable.language\"},{\"foreground\":\"318495\",\"token\":\"variable.other\"},{\"foreground\":\"036a07\",\"token\":\"string\"},{\"foreground\":\"26b31a\",\"token\":\"constant.character.escape\"},{\"foreground\":\"26b31a\",\"token\":\"string meta.embedded\"},{\"foreground\":\"1a921c\",\"token\":\"meta.preprocessor\"},{\"foreground\":\"0c450d\",\"fontStyle\":\"bold\",\"token\":\"keyword.control.import\"},{\"foreground\":\"0000a2\",\"fontStyle\":\"bold\",\"token\":\"entity.name.function\"},{\"foreground\":\"0000a2\",\"fontStyle\":\"bold\",\"token\":\"support.function.any-method\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"70727e\",\"token\":\"storage.type.method\"},{\"fontStyle\":\"italic\",\"token\":\"meta.section entity.name.section\"},{\"fontStyle\":\"italic\",\"token\":\"declaration.section entity.name.section\"},{\"foreground\":\"3c4c72\",\"fontStyle\":\"bold\",\"token\":\"support.function\"},{\"foreground\":\"6d79de\",\"fontStyle\":\"bold\",\"token\":\"support.class\"},{\"foreground\":\"6d79de\",\"fontStyle\":\"bold\",\"token\":\"support.type\"},{\"foreground\":\"06960e\",\"fontStyle\":\"bold\",\"token\":\"support.constant\"},{\"foreground\":\"21439c\",\"fontStyle\":\"bold\",\"token\":\"support.variable\"},{\"foreground\":\"687687\",\"token\":\"keyword.operator.js\"},{\"foreground\":\"ffffff\",\"background\":\"990000\",\"token\":\"invalid\"},{\"background\":\"ffd0d0\",\"token\":\"invalid.deprecated.trailing-whitespace\"},{\"background\":\"0000000d\",\"token\":\"text source\"},{\"background\":\"0000000d\",\"token\":\"string.unquoted\"},{\"background\":\"0000000d\",\"token\":\"meta.embedded\"},{\"background\":\"0000000f\",\"token\":\"text source string.unquoted\"},{\"background\":\"0000000f\",\"token\":\"text source text source\"},{\"foreground\":\"68685b\",\"token\":\"meta.tag.preprocessor.xml\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.metadata.doctype\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.metadata.doctype entity\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.metadata.doctype string\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.metadata.processing.xml\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.metadata.processing.xml entity\"},{\"foreground\":\"888888\",\"token\":\"meta.tag.metadata.processing.xml string\"},{\"fontStyle\":\"italic\",\"token\":\"meta.tag.metadata.doctype string.quoted\"},{\"foreground\":\"1c02ff\",\"token\":\"meta.tag\"},{\"foreground\":\"1c02ff\",\"token\":\"declaration.tag\"},{\"fontStyle\":\"bold\",\"token\":\"entity.name.tag\"},{\"fontStyle\":\"italic\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"0c07ff\",\"fontStyle\":\"bold\",\"token\":\"markup.heading\"},{\"foreground\":\"000000\",\"fontStyle\":\"italic\",\"token\":\"markup.quote\"},{\"foreground\":\"b90690\",\"token\":\"markup.list\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#4D97FF54\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 487 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"7285b7\",\"token\":\"comment\"},{\"foreground\":\"ffffff\",\"token\":\"keyword.operator.class\"},{\"foreground\":\"ffffff\",\"token\":\"keyword.operator\"},{\"foreground\":\"ffffff\",\"token\":\"constant.other\"},{\"foreground\":\"ffffff\",\"token\":\"source.php.embedded.line\"},{\"foreground\":\"ff9da4\",\"token\":\"variable\"},{\"foreground\":\"ff9da4\",\"token\":\"support.other.variable\"},{\"foreground\":\"ff9da4\",\"token\":\"string.other.link\"},{\"foreground\":\"ff9da4\",\"token\":\"string.regexp\"},{\"foreground\":\"ff9da4\",\"token\":\"entity.name.tag\"},{\"foreground\":\"ff9da4\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"ff9da4\",\"token\":\"meta.tag\"},{\"foreground\":\"ff9da4\",\"token\":\"declaration.tag\"},{\"foreground\":\"ff9da4\",\"token\":\"markup.deleted.git_gutter\"},{\"foreground\":\"ffc58f\",\"token\":\"constant.numeric\"},{\"foreground\":\"ffc58f\",\"token\":\"constant.language\"},{\"foreground\":\"ffc58f\",\"token\":\"support.constant\"},{\"foreground\":\"ffc58f\",\"token\":\"constant.character\"},{\"foreground\":\"ffc58f\",\"token\":\"variable.parameter\"},{\"foreground\":\"ffc58f\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"ffc58f\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"ffeead\",\"token\":\"entity.name.class\"},{\"foreground\":\"ffeead\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"ffeead\",\"token\":\"support.type\"},{\"foreground\":\"ffeead\",\"token\":\"support.class\"},{\"foreground\":\"d1f1a9\",\"token\":\"string\"},{\"foreground\":\"d1f1a9\",\"token\":\"constant.other.symbol\"},{\"foreground\":\"d1f1a9\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"d1f1a9\",\"token\":\"markup.heading\"},{\"foreground\":\"d1f1a9\",\"token\":\"markup.inserted.git_gutter\"},{\"foreground\":\"99ffff\",\"token\":\"keyword.operator\"},{\"foreground\":\"99ffff\",\"token\":\"constant.other.color\"},{\"foreground\":\"bbdaff\",\"token\":\"entity.name.function\"},{\"foreground\":\"bbdaff\",\"token\":\"meta.function-call\"},{\"foreground\":\"bbdaff\",\"token\":\"support.function\"},{\"foreground\":\"bbdaff\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"bbdaff\",\"token\":\"meta.block-level\"},{\"foreground\":\"bbdaff\",\"token\":\"markup.changed.git_gutter\"},{\"foreground\":\"ebbbff\",\"token\":\"keyword\"},{\"foreground\":\"ebbbff\",\"token\":\"storage\"},{\"foreground\":\"ebbbff\",\"token\":\"storage.type\"},{\"foreground\":\"ebbbff\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"ffffff\",\"background\":\"f99da5\",\"token\":\"invalid\"},{\"foreground\":\"ffffff\",\"background\":\"bbdafe\",\"token\":\"meta.separator\"},{\"foreground\":\"ffffff\",\"background\":\"ebbbff\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"ffffff\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"718c00\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"718c00\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"c82829\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"c82829\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"3e999f\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#FFFFFF\",\"editor.background\":\"#002451\",\"editor.selectionBackground\":\"#003F8E\",\"editor.lineHighlightBackground\":\"#00346E\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#404F7D\"}}");
+
+/***/ }),
+/* 488 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"969896\",\"token\":\"comment\"},{\"foreground\":\"eeeeee\",\"token\":\"keyword.operator.class\"},{\"foreground\":\"eeeeee\",\"token\":\"constant.other\"},{\"foreground\":\"eeeeee\",\"token\":\"source.php.embedded.line\"},{\"foreground\":\"d54e53\",\"token\":\"variable\"},{\"foreground\":\"d54e53\",\"token\":\"support.other.variable\"},{\"foreground\":\"d54e53\",\"token\":\"string.other.link\"},{\"foreground\":\"d54e53\",\"token\":\"string.regexp\"},{\"foreground\":\"d54e53\",\"token\":\"entity.name.tag\"},{\"foreground\":\"d54e53\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"d54e53\",\"token\":\"meta.tag\"},{\"foreground\":\"d54e53\",\"token\":\"declaration.tag\"},{\"foreground\":\"d54e53\",\"token\":\"markup.deleted.git_gutter\"},{\"foreground\":\"e78c45\",\"token\":\"constant.numeric\"},{\"foreground\":\"e78c45\",\"token\":\"constant.language\"},{\"foreground\":\"e78c45\",\"token\":\"support.constant\"},{\"foreground\":\"e78c45\",\"token\":\"constant.character\"},{\"foreground\":\"e78c45\",\"token\":\"variable.parameter\"},{\"foreground\":\"e78c45\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"e78c45\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"e7c547\",\"token\":\"entity.name.class\"},{\"foreground\":\"e7c547\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"e7c547\",\"token\":\"support.type\"},{\"foreground\":\"e7c547\",\"token\":\"support.class\"},{\"foreground\":\"b9ca4a\",\"token\":\"string\"},{\"foreground\":\"b9ca4a\",\"token\":\"constant.other.symbol\"},{\"foreground\":\"b9ca4a\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"b9ca4a\",\"token\":\"markup.heading\"},{\"foreground\":\"b9ca4a\",\"token\":\"markup.inserted.git_gutter\"},{\"foreground\":\"70c0b1\",\"token\":\"keyword.operator\"},{\"foreground\":\"70c0b1\",\"token\":\"constant.other.color\"},{\"foreground\":\"7aa6da\",\"token\":\"entity.name.function\"},{\"foreground\":\"7aa6da\",\"token\":\"meta.function-call\"},{\"foreground\":\"7aa6da\",\"token\":\"support.function\"},{\"foreground\":\"7aa6da\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"7aa6da\",\"token\":\"meta.block-level\"},{\"foreground\":\"7aa6da\",\"token\":\"markup.changed.git_gutter\"},{\"foreground\":\"c397d8\",\"token\":\"keyword\"},{\"foreground\":\"c397d8\",\"token\":\"storage\"},{\"foreground\":\"c397d8\",\"token\":\"storage.type\"},{\"foreground\":\"c397d8\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"ced2cf\",\"background\":\"df5f5f\",\"token\":\"invalid\"},{\"foreground\":\"ced2cf\",\"background\":\"82a3bf\",\"token\":\"meta.separator\"},{\"foreground\":\"ced2cf\",\"background\":\"b798bf\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"ffffff\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"718c00\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"718c00\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"c82829\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"c82829\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"3e999f\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#DEDEDE\",\"editor.background\":\"#000000\",\"editor.selectionBackground\":\"#424242\",\"editor.lineHighlightBackground\":\"#2A2A2A\",\"editorCursor.foreground\":\"#9F9F9F\",\"editorWhitespace.foreground\":\"#343434\"}}");
+
+/***/ }),
+/* 489 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"999999\",\"token\":\"comment\"},{\"foreground\":\"cccccc\",\"token\":\"keyword.operator.class\"},{\"foreground\":\"cccccc\",\"token\":\"constant.other\"},{\"foreground\":\"cccccc\",\"token\":\"source.php.embedded.line\"},{\"foreground\":\"f2777a\",\"token\":\"variable\"},{\"foreground\":\"f2777a\",\"token\":\"support.other.variable\"},{\"foreground\":\"f2777a\",\"token\":\"string.other.link\"},{\"foreground\":\"f2777a\",\"token\":\"entity.name.tag\"},{\"foreground\":\"f2777a\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"f2777a\",\"token\":\"meta.tag\"},{\"foreground\":\"f2777a\",\"token\":\"declaration.tag\"},{\"foreground\":\"f2777a\",\"token\":\"markup.deleted.git_gutter\"},{\"foreground\":\"f99157\",\"token\":\"constant.numeric\"},{\"foreground\":\"f99157\",\"token\":\"constant.language\"},{\"foreground\":\"f99157\",\"token\":\"support.constant\"},{\"foreground\":\"f99157\",\"token\":\"constant.character\"},{\"foreground\":\"f99157\",\"token\":\"variable.parameter\"},{\"foreground\":\"f99157\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"f99157\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"ffcc66\",\"token\":\"entity.name.class\"},{\"foreground\":\"ffcc66\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"ffcc66\",\"token\":\"support.type\"},{\"foreground\":\"ffcc66\",\"token\":\"support.class\"},{\"foreground\":\"99cc99\",\"token\":\"string\"},{\"foreground\":\"99cc99\",\"token\":\"constant.other.symbol\"},{\"foreground\":\"99cc99\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"99cc99\",\"token\":\"markup.heading\"},{\"foreground\":\"99cc99\",\"token\":\"markup.inserted.git_gutter\"},{\"foreground\":\"66cccc\",\"token\":\"keyword.operator\"},{\"foreground\":\"66cccc\",\"token\":\"constant.other.color\"},{\"foreground\":\"6699cc\",\"token\":\"entity.name.function\"},{\"foreground\":\"6699cc\",\"token\":\"meta.function-call\"},{\"foreground\":\"6699cc\",\"token\":\"support.function\"},{\"foreground\":\"6699cc\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"6699cc\",\"token\":\"meta.block-level\"},{\"foreground\":\"6699cc\",\"token\":\"markup.changed.git_gutter\"},{\"foreground\":\"cc99cc\",\"token\":\"keyword\"},{\"foreground\":\"cc99cc\",\"token\":\"storage\"},{\"foreground\":\"cc99cc\",\"token\":\"storage.type\"},{\"foreground\":\"cc99cc\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"cdcdcd\",\"background\":\"f2777a\",\"token\":\"invalid\"},{\"foreground\":\"cdcdcd\",\"background\":\"99cccc\",\"token\":\"meta.separator\"},{\"foreground\":\"cdcdcd\",\"background\":\"cc99cc\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"ffffff\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"718c00\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"718c00\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"c82829\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"c82829\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"3e999f\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#CCCCCC\",\"editor.background\":\"#2D2D2D\",\"editor.selectionBackground\":\"#515151\",\"editor.lineHighlightBackground\":\"#393939\",\"editorCursor.foreground\":\"#CCCCCC\",\"editorWhitespace.foreground\":\"#6A6A6A\"}}");
+
+/***/ }),
+/* 490 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"969896\",\"token\":\"comment\"},{\"foreground\":\"ced1cf\",\"token\":\"keyword.operator.class\"},{\"foreground\":\"ced1cf\",\"token\":\"constant.other\"},{\"foreground\":\"ced1cf\",\"token\":\"source.php.embedded.line\"},{\"foreground\":\"cc6666\",\"token\":\"variable\"},{\"foreground\":\"cc6666\",\"token\":\"support.other.variable\"},{\"foreground\":\"cc6666\",\"token\":\"string.other.link\"},{\"foreground\":\"cc6666\",\"token\":\"string.regexp\"},{\"foreground\":\"cc6666\",\"token\":\"entity.name.tag\"},{\"foreground\":\"cc6666\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"cc6666\",\"token\":\"meta.tag\"},{\"foreground\":\"cc6666\",\"token\":\"declaration.tag\"},{\"foreground\":\"cc6666\",\"token\":\"markup.deleted.git_gutter\"},{\"foreground\":\"de935f\",\"token\":\"constant.numeric\"},{\"foreground\":\"de935f\",\"token\":\"constant.language\"},{\"foreground\":\"de935f\",\"token\":\"support.constant\"},{\"foreground\":\"de935f\",\"token\":\"constant.character\"},{\"foreground\":\"de935f\",\"token\":\"variable.parameter\"},{\"foreground\":\"de935f\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"de935f\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"f0c674\",\"token\":\"entity.name.class\"},{\"foreground\":\"f0c674\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"f0c674\",\"token\":\"support.type\"},{\"foreground\":\"f0c674\",\"token\":\"support.class\"},{\"foreground\":\"b5bd68\",\"token\":\"string\"},{\"foreground\":\"b5bd68\",\"token\":\"constant.other.symbol\"},{\"foreground\":\"b5bd68\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"b5bd68\",\"token\":\"markup.heading\"},{\"foreground\":\"b5bd68\",\"token\":\"markup.inserted.git_gutter\"},{\"foreground\":\"8abeb7\",\"token\":\"keyword.operator\"},{\"foreground\":\"8abeb7\",\"token\":\"constant.other.color\"},{\"foreground\":\"81a2be\",\"token\":\"entity.name.function\"},{\"foreground\":\"81a2be\",\"token\":\"meta.function-call\"},{\"foreground\":\"81a2be\",\"token\":\"support.function\"},{\"foreground\":\"81a2be\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"81a2be\",\"token\":\"meta.block-level\"},{\"foreground\":\"81a2be\",\"token\":\"markup.changed.git_gutter\"},{\"foreground\":\"b294bb\",\"token\":\"keyword\"},{\"foreground\":\"b294bb\",\"token\":\"storage\"},{\"foreground\":\"b294bb\",\"token\":\"storage.type\"},{\"foreground\":\"b294bb\",\"token\":\"entity.name.tag.css\"},{\"foreground\":\"ced2cf\",\"background\":\"df5f5f\",\"token\":\"invalid\"},{\"foreground\":\"ced2cf\",\"background\":\"82a3bf\",\"token\":\"meta.separator\"},{\"foreground\":\"ced2cf\",\"background\":\"b798bf\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"ffffff\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"718c00\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"718c00\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"c82829\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"c82829\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"3e999f\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#C5C8C6\",\"editor.background\":\"#1D1F21\",\"editor.selectionBackground\":\"#373B41\",\"editor.lineHighlightBackground\":\"#282A2E\",\"editorCursor.foreground\":\"#AEAFAD\",\"editorWhitespace.foreground\":\"#4B4E55\"}}");
+
+/***/ }),
+/* 491 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"8e908c\",\"token\":\"comment\"},{\"foreground\":\"666969\",\"token\":\"keyword.operator.class\"},{\"foreground\":\"666969\",\"token\":\"constant.other\"},{\"foreground\":\"666969\",\"token\":\"source.php.embedded.line\"},{\"foreground\":\"c82829\",\"token\":\"variable\"},{\"foreground\":\"c82829\",\"token\":\"support.other.variable\"},{\"foreground\":\"c82829\",\"token\":\"string.other.link\"},{\"foreground\":\"c82829\",\"token\":\"string.regexp\"},{\"foreground\":\"c82829\",\"token\":\"entity.name.tag\"},{\"foreground\":\"c82829\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"c82829\",\"token\":\"meta.tag\"},{\"foreground\":\"c82829\",\"token\":\"declaration.tag\"},{\"foreground\":\"c82829\",\"token\":\"markup.deleted.git_gutter\"},{\"foreground\":\"f5871f\",\"token\":\"constant.numeric\"},{\"foreground\":\"f5871f\",\"token\":\"constant.language\"},{\"foreground\":\"f5871f\",\"token\":\"support.constant\"},{\"foreground\":\"f5871f\",\"token\":\"constant.character\"},{\"foreground\":\"f5871f\",\"token\":\"variable.parameter\"},{\"foreground\":\"f5871f\",\"token\":\"punctuation.section.embedded\"},{\"foreground\":\"f5871f\",\"token\":\"keyword.other.unit\"},{\"foreground\":\"c99e00\",\"token\":\"entity.name.class\"},{\"foreground\":\"c99e00\",\"token\":\"entity.name.type.class\"},{\"foreground\":\"c99e00\",\"token\":\"support.type\"},{\"foreground\":\"c99e00\",\"token\":\"support.class\"},{\"foreground\":\"718c00\",\"token\":\"string\"},{\"foreground\":\"718c00\",\"token\":\"constant.other.symbol\"},{\"foreground\":\"718c00\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"718c00\",\"token\":\"markup.heading\"},{\"foreground\":\"718c00\",\"token\":\"markup.inserted.git_gutter\"},{\"foreground\":\"3e999f\",\"token\":\"keyword.operator\"},{\"foreground\":\"3e999f\",\"token\":\"constant.other.color\"},{\"foreground\":\"4271ae\",\"token\":\"entity.name.function\"},{\"foreground\":\"4271ae\",\"token\":\"meta.function-call\"},{\"foreground\":\"4271ae\",\"token\":\"support.function\"},{\"foreground\":\"4271ae\",\"token\":\"keyword.other.special-method\"},{\"foreground\":\"4271ae\",\"token\":\"meta.block-level\"},{\"foreground\":\"4271ae\",\"token\":\"markup.changed.git_gutter\"},{\"foreground\":\"8959a8\",\"token\":\"keyword\"},{\"foreground\":\"8959a8\",\"token\":\"storage\"},{\"foreground\":\"8959a8\",\"token\":\"storage.type\"},{\"foreground\":\"ffffff\",\"background\":\"c82829\",\"token\":\"invalid\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.separator\"},{\"foreground\":\"ffffff\",\"background\":\"8959a8\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"ffffff\",\"token\":\"markup.inserted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"markup.deleted.diff\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"ffffff\",\"token\":\"meta.diff.header.from-file\"},{\"background\":\"718c00\",\"token\":\"markup.inserted.diff\"},{\"background\":\"718c00\",\"token\":\"meta.diff.header.to-file\"},{\"background\":\"c82829\",\"token\":\"markup.deleted.diff\"},{\"background\":\"c82829\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.from-file\"},{\"foreground\":\"ffffff\",\"background\":\"4271ae\",\"token\":\"meta.diff.header.to-file\"},{\"foreground\":\"3e999f\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.range\"}],\"colors\":{\"editor.foreground\":\"#4D4D4C\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#D6D6D6\",\"editor.lineHighlightBackground\":\"#EFEFEF\",\"editorCursor.foreground\":\"#AEAFAD\",\"editorWhitespace.foreground\":\"#D1D1D1\"}}");
+
+/***/ }),
+/* 492 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"5f5a60\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"cf6a4c\",\"token\":\"constant\"},{\"foreground\":\"9b703f\",\"token\":\"entity\"},{\"foreground\":\"cda869\",\"token\":\"keyword\"},{\"foreground\":\"f9ee98\",\"token\":\"storage\"},{\"foreground\":\"8f9d6a\",\"token\":\"string\"},{\"foreground\":\"9b859d\",\"token\":\"support\"},{\"foreground\":\"7587a6\",\"token\":\"variable\"},{\"foreground\":\"d2a8a1\",\"fontStyle\":\"italic underline\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"f8f8f8\",\"background\":\"562d56bf\",\"token\":\"invalid.illegal\"},{\"background\":\"b0b3ba14\",\"token\":\"text source\"},{\"background\":\"b1b3ba21\",\"token\":\"text.html.ruby source\"},{\"foreground\":\"9b5c2e\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"daefa3\",\"token\":\"string source\"},{\"foreground\":\"ddf2a4\",\"token\":\"string constant\"},{\"foreground\":\"e9c062\",\"token\":\"string.regexp\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp constant.character.escape\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp source.ruby.embedded\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp string.regexp.arbitrary-repitition\"},{\"foreground\":\"8a9a95\",\"token\":\"string variable\"},{\"foreground\":\"dad085\",\"token\":\"support.function\"},{\"foreground\":\"cf6a4c\",\"token\":\"support.constant\"},{\"foreground\":\"8996a8\",\"token\":\"meta.preprocessor.c\"},{\"foreground\":\"afc4db\",\"token\":\"meta.preprocessor.c keyword\"},{\"foreground\":\"494949\",\"token\":\"meta.tag.sgml.doctype\"},{\"foreground\":\"494949\",\"token\":\"meta.tag.sgml.doctype entity\"},{\"foreground\":\"494949\",\"token\":\"meta.tag.sgml.doctype string\"},{\"foreground\":\"494949\",\"token\":\"meta.tag.preprocessor.xml\"},{\"foreground\":\"494949\",\"token\":\"meta.tag.preprocessor.xml entity\"},{\"foreground\":\"494949\",\"token\":\"meta.tag.preprocessor.xml string\"},{\"foreground\":\"ac885b\",\"token\":\"declaration.tag\"},{\"foreground\":\"ac885b\",\"token\":\"declaration.tag entity\"},{\"foreground\":\"ac885b\",\"token\":\"meta.tag\"},{\"foreground\":\"ac885b\",\"token\":\"meta.tag entity\"},{\"foreground\":\"e0c589\",\"token\":\"declaration.tag.inline\"},{\"foreground\":\"e0c589\",\"token\":\"declaration.tag.inline entity\"},{\"foreground\":\"e0c589\",\"token\":\"source entity.name.tag\"},{\"foreground\":\"e0c589\",\"token\":\"source entity.other.attribute-name\"},{\"foreground\":\"e0c589\",\"token\":\"meta.tag.inline\"},{\"foreground\":\"e0c589\",\"token\":\"meta.tag.inline entity\"},{\"foreground\":\"cda869\",\"token\":\"meta.selector.css entity.name.tag\"},{\"foreground\":\"8f9d6a\",\"token\":\"meta.selector.css entity.other.attribute-name.tag.pseudo-class\"},{\"foreground\":\"8b98ab\",\"token\":\"meta.selector.css entity.other.attribute-name.id\"},{\"foreground\":\"9b703f\",\"token\":\"meta.selector.css entity.other.attribute-name.class\"},{\"foreground\":\"c5af75\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"f9ee98\",\"token\":\"meta.property-group support.constant.property-value.css\"},{\"foreground\":\"f9ee98\",\"token\":\"meta.property-value support.constant.property-value.css\"},{\"foreground\":\"8693a5\",\"token\":\"meta.preprocessor.at-rule keyword.control.at-rule\"},{\"foreground\":\"ca7840\",\"token\":\"meta.property-value support.constant.named-color.css\"},{\"foreground\":\"ca7840\",\"token\":\"meta.property-value constant\"},{\"foreground\":\"8f9d6a\",\"token\":\"meta.constructor.argument.css\"},{\"foreground\":\"f8f8f8\",\"background\":\"0e2231\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"f8f8f8\",\"background\":\"0e2231\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f8f8f8\",\"background\":\"0e2231\",\"fontStyle\":\"italic\",\"token\":\"meta.separator\"},{\"foreground\":\"f8f8f8\",\"background\":\"420e09\",\"token\":\"markup.deleted\"},{\"foreground\":\"f8f8f8\",\"background\":\"4a410d\",\"token\":\"markup.changed\"},{\"foreground\":\"f8f8f8\",\"background\":\"253b22\",\"token\":\"markup.inserted\"},{\"foreground\":\"f9ee98\",\"token\":\"markup.list\"},{\"foreground\":\"cf6a4c\",\"token\":\"markup.heading\"}],\"colors\":{\"editor.foreground\":\"#F8F8F8\",\"editor.background\":\"#141414\",\"editor.selectionBackground\":\"#DDF0FF33\",\"editor.lineHighlightBackground\":\"#FFFFFF08\",\"editorCursor.foreground\":\"#A7A7A7\",\"editorWhitespace.foreground\":\"#FFFFFF40\"}}");
+
+/***/ }),
+/* 493 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"3d3d3d\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"259adb\",\"token\":\"constant\"},{\"foreground\":\"b2d72c\",\"token\":\"constant.numeric\"},{\"foreground\":\"89725b\",\"token\":\"keyword\"},{\"foreground\":\"89725b\",\"token\":\"keyword.control\"},{\"foreground\":\"ffffff\",\"token\":\"keyword.operator\"},{\"foreground\":\"89725b\",\"token\":\"storage\"},{\"foreground\":\"b2d72c\",\"token\":\"string\"},{\"foreground\":\"9b859d\",\"token\":\"support\"},{\"foreground\":\"259adb\",\"token\":\"variable\"},{\"foreground\":\"fd5ff1\",\"fontStyle\":\"italic underline\",\"token\":\"invalid.deprecated\"},{\"foreground\":\"fd5ff1\",\"background\":\"562d56bf\",\"token\":\"invalid.illegal\"},{\"background\":\"b1b3ba08\",\"token\":\"text source\"},{\"foreground\":\"9b5c2e\",\"fontStyle\":\"italic\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"daefa3\",\"token\":\"string.quoted source\"},{\"foreground\":\"ddf2a4\",\"token\":\"string constant\"},{\"foreground\":\"e9c062\",\"token\":\"string.regexp\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp constant.character.escape\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp source.ruby.embedded\"},{\"foreground\":\"cf7d34\",\"token\":\"string.regexp string.regexp.arbitrary-repitition\"},{\"foreground\":\"8a9a95\",\"token\":\"string variable\"},{\"foreground\":\"dad085\",\"token\":\"support.function\"},{\"foreground\":\"cf6a4c\",\"token\":\"support.constant\"},{\"foreground\":\"8996a8\",\"token\":\"meta.preprocessor.c\"},{\"foreground\":\"afc4db\",\"token\":\"meta.preprocessor.c keyword\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.type\"},{\"foreground\":\"676767\",\"fontStyle\":\"italic\",\"token\":\"meta.cast\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype entity\"},{\"foreground\":\"494949\",\"token\":\"meta.sgml.html meta.doctype string\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing entity\"},{\"foreground\":\"494949\",\"token\":\"meta.xml-processing string\"},{\"foreground\":\"259adb\",\"token\":\"meta.tag\"},{\"foreground\":\"259adb\",\"token\":\"meta.tag entity\"},{\"foreground\":\"259adb\",\"token\":\"meta.tag entity\"},{\"foreground\":\"259adb\",\"token\":\"source entity.name.tag\"},{\"foreground\":\"259adb\",\"token\":\"source entity.other.attribute-name\"},{\"foreground\":\"259adb\",\"token\":\"meta.tag.inline\"},{\"foreground\":\"259adb\",\"token\":\"meta.tag.inline entity\"},{\"foreground\":\"e18964\",\"token\":\"entity.name.tag.namespace\"},{\"foreground\":\"e18964\",\"token\":\"entity.other.attribute-name.namespace\"},{\"foreground\":\"259adb\",\"token\":\"meta.selector.css entity.name.tag\"},{\"foreground\":\"8f9d6a\",\"token\":\"meta.selector.css entity.other.attribute-name.tag.pseudo-class\"},{\"foreground\":\"259adb\",\"token\":\"meta.selector.css entity.other.attribute-name.id\"},{\"foreground\":\"259adb\",\"token\":\"meta.selector.css entity.other.attribute-name.class\"},{\"foreground\":\"e1f5b1\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"b2d72c\",\"token\":\"meta.property-group support.constant.property-value.css\"},{\"foreground\":\"b2d72c\",\"token\":\"meta.property-value support.constant.property-value.css\"},{\"foreground\":\"8693a5\",\"token\":\"meta.preprocessor.at-rule keyword.control.at-rule\"},{\"foreground\":\"b2d72c\",\"token\":\"meta.property-value support.constant.named-color.css\"},{\"foreground\":\"b2d72c\",\"token\":\"meta.property-value constant\"},{\"foreground\":\"8f9d6a\",\"token\":\"meta.constructor.argument.css\"},{\"foreground\":\"f8f8f8\",\"background\":\"0e2231\",\"fontStyle\":\"italic\",\"token\":\"meta.diff\"},{\"foreground\":\"f8f8f8\",\"background\":\"0e2231\",\"fontStyle\":\"italic\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f8f8f8\",\"background\":\"420e09\",\"token\":\"markup.deleted\"},{\"foreground\":\"f8f8f8\",\"background\":\"4a410d\",\"token\":\"markup.changed\"},{\"foreground\":\"f8f8f8\",\"background\":\"253b22\",\"token\":\"markup.inserted\"},{\"foreground\":\"e9c062\",\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"foreground\":\"e9c062\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"e18964\",\"fontStyle\":\"underline\",\"token\":\"markup.underline\"},{\"foreground\":\"e1d4b9\",\"background\":\"fee09c12\",\"fontStyle\":\"italic\",\"token\":\"markup.quote\"},{\"foreground\":\"fedcc5\",\"background\":\"632d04\",\"token\":\"markup.heading\"},{\"foreground\":\"fedcc5\",\"background\":\"632d04\",\"token\":\"markup.heading entity\"},{\"foreground\":\"e1d4b9\",\"token\":\"markup.list\"},{\"foreground\":\"578bb3\",\"background\":\"b1b3ba08\",\"token\":\"markup.raw\"},{\"foreground\":\"f67b37\",\"fontStyle\":\"italic\",\"token\":\"markup comment\"},{\"foreground\":\"60a633\",\"background\":\"242424\",\"token\":\"meta.separator\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.entry.logfile\"},{\"background\":\"eeeeee29\",\"token\":\"meta.line.exit.logfile\"},{\"background\":\"751012\",\"token\":\"meta.line.error.logfile\"}],\"colors\":{\"editor.foreground\":\"#F8F8F8\",\"editor.background\":\"#000000F7\",\"editor.selectionBackground\":\"#668CDB9C\",\"editor.lineHighlightBackground\":\"#F2ECFF1F\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#616D793D\"}}");
+
+/***/ }),
+/* 494 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"ffffff\",\"background\":\"0f0f0f\",\"token\":\"text\"},{\"background\":\"000000\",\"token\":\"source.ruby.rails.embedded.html\"},{\"foreground\":\"ffffff\",\"background\":\"101010\",\"token\":\"text.html.ruby\"},{\"foreground\":\"ccff33\",\"token\":\"constant.numeric.ruby\"},{\"foreground\":\"ffffff\",\"background\":\"000000\",\"token\":\"source\"},{\"foreground\":\"9933cc\",\"token\":\"comment\"},{\"foreground\":\"339999\",\"token\":\"constant\"},{\"foreground\":\"ff6600\",\"token\":\"keyword\"},{\"foreground\":\"edf8f9\",\"token\":\"keyword.preprocessor\"},{\"foreground\":\"ffffff\",\"token\":\"keyword.preprocessor directive\"},{\"foreground\":\"ffcc00\",\"token\":\"entity.name.function\"},{\"foreground\":\"ffcc00\",\"token\":\"storage.type.function.js\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"772cb7\",\"background\":\"070707\",\"token\":\"source comment.block\"},{\"foreground\":\"ffffff\",\"token\":\"variable.other\"},{\"foreground\":\"999966\",\"token\":\"support.function.activerecord.rails\"},{\"foreground\":\"66ff00\",\"token\":\"string\"},{\"foreground\":\"aaaaaa\",\"token\":\"string constant.character.escape\"},{\"foreground\":\"000000\",\"background\":\"cccc33\",\"token\":\"string.interpolated\"},{\"foreground\":\"44b4cc\",\"token\":\"string.regexp\"},{\"foreground\":\"cccc33\",\"token\":\"string.literal\"},{\"foreground\":\"555555\",\"token\":\"string.interpolated constant.character.escape\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.class\"},{\"fontStyle\":\"underline\",\"token\":\"support.class.js\"},{\"fontStyle\":\"italic underline\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"ff6600\",\"token\":\"meta.tag.inline.any.html\"},{\"foreground\":\"ff6600\",\"token\":\"meta.tag.block.any.html\"},{\"foreground\":\"99cc99\",\"fontStyle\":\"italic\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"dde93d\",\"token\":\"keyword.other\"},{\"foreground\":\"ff6600\",\"token\":\"meta.selector.css\"},{\"foreground\":\"ff6600\",\"token\":\"entity.other.attribute-name.pseudo-class.css\"},{\"foreground\":\"ff6600\",\"token\":\"entity.name.tag.wildcard.css\"},{\"foreground\":\"ff6600\",\"token\":\"entity.other.attribute-name.id.css\"},{\"foreground\":\"ff6600\",\"token\":\"entity.other.attribute-name.class.css\"},{\"foreground\":\"999966\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"ffffff\",\"token\":\"keyword.other.unit.css\"},{\"foreground\":\"ffffff\",\"token\":\"constant.other.rgb-value.css\"},{\"foreground\":\"ffffff\",\"token\":\"constant.numeric.css\"},{\"foreground\":\"ffffff\",\"token\":\"support.function.event-handler.js\"},{\"foreground\":\"ffffff\",\"token\":\"keyword.operator.js\"},{\"foreground\":\"cccc66\",\"token\":\"keyword.control.js\"},{\"foreground\":\"ffffff\",\"token\":\"support.class.prototype.js\"},{\"foreground\":\"ff6600\",\"token\":\"object.property.function.prototype.js\"}],\"colors\":{\"editor.foreground\":\"#FFFFFF\",\"editor.background\":\"#000000\",\"editor.selectionBackground\":\"#35493CE0\",\"editor.lineHighlightBackground\":\"#333300\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#404040\"}}");
+
+/***/ }),
+/* 495 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"008e00\",\"token\":\"comment\"},{\"foreground\":\"7d4726\",\"token\":\"meta.preprocessor\"},{\"foreground\":\"7d4726\",\"token\":\"keyword.control.import\"},{\"foreground\":\"df0002\",\"token\":\"string\"},{\"foreground\":\"3a00dc\",\"token\":\"constant.numeric\"},{\"foreground\":\"c800a4\",\"token\":\"constant.language\"},{\"foreground\":\"275a5e\",\"token\":\"constant.character\"},{\"foreground\":\"275a5e\",\"token\":\"constant.other\"},{\"foreground\":\"c800a4\",\"token\":\"variable.language\"},{\"foreground\":\"c800a4\",\"token\":\"variable.other\"},{\"foreground\":\"c800a4\",\"token\":\"keyword\"},{\"foreground\":\"c900a4\",\"token\":\"storage\"},{\"foreground\":\"438288\",\"token\":\"entity.name.class\"},{\"foreground\":\"790ead\",\"token\":\"entity.name.tag\"},{\"foreground\":\"450084\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"450084\",\"token\":\"support.function\"},{\"foreground\":\"450084\",\"token\":\"support.constant\"},{\"foreground\":\"790ead\",\"token\":\"support.type\"},{\"foreground\":\"790ead\",\"token\":\"support.class\"},{\"foreground\":\"790ead\",\"token\":\"support.other.variable\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#FFFFFF\",\"editor.selectionBackground\":\"#B5D5FF\",\"editor.lineHighlightBackground\":\"#00000012\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#BFBFBF\"}}");
+
+/***/ }),
+/* 496 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"709070\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"fontStyle\":\"bold\",\"token\":\"keyword.other.directive\"},{\"fontStyle\":\"underline\",\"token\":\"keyword.other.directive.line-number\"},{\"foreground\":\"ff8080\",\"token\":\"constant.character\"},{\"foreground\":\"ff2020\",\"token\":\"string\"},{\"foreground\":\"22c0ff\",\"token\":\"constant.numeric\"},{\"fontStyle\":\"underline\",\"token\":\"constant.numeric.floating-point\"},{\"foreground\":\"ffffa0\",\"token\":\"keyword\"},{\"foreground\":\"ff8000\",\"fontStyle\":\"bold\",\"token\":\"entity.name.module\"},{\"foreground\":\"ff8000\",\"fontStyle\":\"bold\",\"token\":\"support.other.module\"},{\"foreground\":\"ffffa0\",\"token\":\"keyword.operator\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.infix.floating-point\"},{\"fontStyle\":\"underline\",\"token\":\"source.ocaml keyword.operator.symbol.prefix.floating-point\"},{\"foreground\":\"6080ff\",\"token\":\"storage.type\"},{\"foreground\":\"4080a0\",\"token\":\"entity.name.class.variant\"},{\"foreground\":\"f09040\",\"token\":\"entity.name.type\"},{\"foreground\":\"ffcc66\",\"fontStyle\":\"bold\",\"token\":\"entity.name.function\"},{\"foreground\":\"ffe000\",\"token\":\"storage.type.user-defined\"},{\"foreground\":\"f4a020\",\"token\":\"entity.name.type.class.type\"}],\"colors\":{\"editor.foreground\":\"#DEDEDE\",\"editor.background\":\"#404040\",\"editor.selectionBackground\":\"#A0A0C0\",\"editor.lineHighlightBackground\":\"#A0804026\",\"editorCursor.foreground\":\"#FFFF66\",\"editorWhitespace.foreground\":\"#A8A8A8\"}}");
+
+/***/ }),
+/* 497 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs\",\"inherit\":true,\"rules\":[{\"foreground\":\"009933\",\"token\":\"string\"},{\"foreground\":\"0066ff\",\"token\":\"constant.numeric\"},{\"foreground\":\"ff0080\",\"token\":\"string.regexp\"},{\"foreground\":\"0000ff\",\"token\":\"keyword\"},{\"foreground\":\"9700cc\",\"token\":\"constant.language\"},{\"foreground\":\"990000\",\"token\":\"support.class.exception\"},{\"foreground\":\"ff8000\",\"token\":\"entity.name.function\"},{\"fontStyle\":\"bold underline\",\"token\":\"entity.name.type\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"0066ff\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"ff0000\",\"background\":\"e71a114d\",\"token\":\"invalid\"},{\"background\":\"e71a1100\",\"token\":\"invalid.deprecated.trailing-whitespace\"},{\"foreground\":\"000000\",\"background\":\"fafafafc\",\"token\":\"text source\"},{\"foreground\":\"0033cc\",\"token\":\"meta.tag\"},{\"foreground\":\"0033cc\",\"token\":\"declaration.tag\"},{\"foreground\":\"6782d3\",\"token\":\"constant\"},{\"foreground\":\"6782d3\",\"token\":\"support.constant\"},{\"foreground\":\"3333ff\",\"fontStyle\":\"bold\",\"token\":\"support\"},{\"fontStyle\":\"bold\",\"token\":\"storage\"},{\"fontStyle\":\"bold underline\",\"token\":\"entity.name.section\"},{\"foreground\":\"000000\",\"fontStyle\":\"bold\",\"token\":\"entity.name.function.frame\"},{\"foreground\":\"333333\",\"token\":\"meta.tag.preprocessor.xml\"},{\"foreground\":\"3366cc\",\"fontStyle\":\"italic\",\"token\":\"entity.other.attribute-name\"},{\"fontStyle\":\"bold\",\"token\":\"entity.name.tag\"}],\"colors\":{\"editor.foreground\":\"#000000\",\"editor.background\":\"#EEEEEEEB\",\"editor.selectionBackground\":\"#BAD6FD\",\"editor.lineHighlightBackground\":\"#0000001A\",\"editorCursor.foreground\":\"#000000\",\"editorWhitespace.foreground\":\"#B3B3B3F4\"}}");
+
+/***/ }),
+/* 498 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"ffffff\",\"token\":\"text\"},{\"foreground\":\"cdcdcd\",\"background\":\"282828\",\"token\":\"source\"},{\"foreground\":\"bc9458\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"ffe5bb\",\"token\":\"meta.tag\"},{\"foreground\":\"ffe5bb\",\"token\":\"declaration.tag\"},{\"foreground\":\"ffe5bb\",\"token\":\"meta.doctype\"},{\"foreground\":\"ffc66d\",\"token\":\"entity.name\"},{\"foreground\":\"fff980\",\"token\":\"source.ruby entity.name\"},{\"foreground\":\"b7dff8\",\"token\":\"variable.other\"},{\"foreground\":\"cccc33\",\"token\":\"support.class.ruby\"},{\"foreground\":\"6c99bb\",\"token\":\"constant\"},{\"foreground\":\"6c99bb\",\"token\":\"support.constant\"},{\"foreground\":\"cc7833\",\"token\":\"keyword\"},{\"foreground\":\"d0d0ff\",\"token\":\"other.preprocessor.c\"},{\"fontStyle\":\"italic\",\"token\":\"variable.parameter\"},{\"foreground\":\"ffffff\",\"background\":\"575757\",\"token\":\"source comment.block\"},{\"foreground\":\"a5c261\",\"token\":\"string\"},{\"foreground\":\"aaaaaa\",\"token\":\"string constant.character.escape\"},{\"foreground\":\"000000\",\"background\":\"cccc33\",\"token\":\"string.interpolated\"},{\"foreground\":\"cccc33\",\"token\":\"string.regexp\"},{\"foreground\":\"cccc33\",\"token\":\"string.literal\"},{\"foreground\":\"787878\",\"token\":\"string.interpolated constant.character.escape\"},{\"fontStyle\":\"underline\",\"token\":\"entity.name.class\"},{\"fontStyle\":\"italic underline\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"b83426\",\"token\":\"support.function\"},{\"foreground\":\"6ea533\",\"token\":\"markup.list.unnumbered.textile\"},{\"foreground\":\"6ea533\",\"token\":\"markup.list.numbered.textile\"},{\"foreground\":\"c2c2c2\",\"fontStyle\":\"bold\",\"token\":\"markup.bold.textile\"},{\"foreground\":\"ffffff\",\"background\":\"ff0000\",\"token\":\"invalid\"},{\"foreground\":\"323232\",\"background\":\"fff980\",\"token\":\"collab.user1\"}],\"colors\":{\"editor.foreground\":\"#FFFFFF\",\"editor.background\":\"#323232\",\"editor.selectionBackground\":\"#5A647EE0\",\"editor.lineHighlightBackground\":\"#353637\",\"editorCursor.foreground\":\"#91FF00\",\"editorWhitespace.foreground\":\"#404040\"}}");
+
+/***/ }),
+/* 499 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"d27518c2\",\"token\":\"constant\"},{\"foreground\":\"a89100b5\",\"token\":\"entity\"},{\"foreground\":\"ba6912\",\"token\":\"entity.other\"},{\"foreground\":\"949c8b\",\"token\":\"keyword\"},{\"foreground\":\"ffee80\",\"token\":\"storage\"},{\"foreground\":\"c7a4a1b5\",\"token\":\"string -string.unquoted.old-plist -string.unquoted.heredoc\"},{\"foreground\":\"c7a4a1b5\",\"token\":\"string.unquoted.heredoc string\"},{\"foreground\":\"706d5b\",\"fontStyle\":\"italic\",\"token\":\"comment\"},{\"foreground\":\"9fc28a\",\"token\":\"support\"},{\"foreground\":\"d1a796\",\"token\":\"variable\"},{\"foreground\":\"ff80e1\",\"token\":\"variable.language\"},{\"foreground\":\"ffee80\",\"token\":\"meta.function-call\"},{\"foreground\":\"f8f8f8\",\"background\":\"a41300\",\"token\":\"invalid\"},{\"foreground\":\"d9d59f\",\"background\":\"24231d4d\",\"token\":\"text source\"},{\"foreground\":\"d9d59f\",\"background\":\"24231d4d\",\"token\":\"string.unquoted.heredoc\"},{\"foreground\":\"d9d59f\",\"background\":\"24231d4d\",\"token\":\"source source\"},{\"foreground\":\"7efcff\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"439740ba\",\"token\":\"string.quoted source\"},{\"foreground\":\"60db5dba\",\"token\":\"string constant\"},{\"foreground\":\"7dffc0a6\",\"token\":\"string.regexp\"},{\"foreground\":\"b8b960\",\"token\":\"string variable\"},{\"foreground\":\"85873a\",\"token\":\"support.function\"},{\"foreground\":\"c27e66\",\"token\":\"support.constant\"},{\"foreground\":\"ff1e00\",\"token\":\"support.class.exception\"},{\"foreground\":\"8996a8\",\"token\":\"meta.preprocessor.c\"},{\"foreground\":\"afc4db\",\"token\":\"meta.preprocessor.c keyword\"},{\"foreground\":\"73817d\",\"token\":\"meta.sgml.html meta.doctype\"},{\"foreground\":\"73817d\",\"token\":\"meta.sgml.html meta.doctype entity\"},{\"foreground\":\"73817d\",\"token\":\"meta.sgml.html meta.doctype string\"},{\"foreground\":\"73817d\",\"token\":\"meta.xml-processing\"},{\"foreground\":\"73817d\",\"token\":\"meta.xml-processing entity\"},{\"foreground\":\"73817d\",\"token\":\"meta.xml-processing string\"},{\"foreground\":\"babd9c\",\"token\":\"meta.tag\"},{\"foreground\":\"babd9c\",\"token\":\"meta.tag entity\"},{\"foreground\":\"99a190\",\"token\":\"meta.selector.css entity.name.tag\"},{\"foreground\":\"cc8844\",\"token\":\"meta.selector.css entity.other.attribute-name.id\"},{\"foreground\":\"cfb958\",\"token\":\"meta.selector.css entity.other.attribute-name.class\"},{\"foreground\":\"e0ddad\",\"token\":\"support.type.property-name.css\"},{\"foreground\":\"aeb14b\",\"token\":\"meta.property-group support.constant.property-value.css\"},{\"foreground\":\"aeb14b\",\"token\":\"meta.property-value support.constant.property-value.css\"},{\"foreground\":\"ffb010\",\"token\":\"meta.preprocessor.at-rule keyword.control.at-rule\"},{\"foreground\":\"999179\",\"token\":\"meta.property-value support.constant.named-color.css\"},{\"foreground\":\"999179\",\"token\":\"meta.property-value constant\"},{\"foreground\":\"eb939a\",\"token\":\"meta.constructor.argument.css\"},{\"foreground\":\"f8f8f8\",\"background\":\"000e1a\",\"token\":\"meta.diff\"},{\"foreground\":\"f8f8f8\",\"background\":\"000e1a\",\"token\":\"meta.diff.header\"},{\"foreground\":\"f8f8f8\",\"background\":\"800f00\",\"token\":\"markup.deleted\"},{\"foreground\":\"f8f8f8\",\"background\":\"806f00\",\"token\":\"markup.changed\"},{\"foreground\":\"f8f8f8\",\"background\":\"228000\",\"token\":\"markup.inserted\"},{\"background\":\"8fddf630\",\"token\":\"markup.raw\"},{\"background\":\"005baa\",\"token\":\"markup.quote\"},{\"background\":\"0f0040\",\"token\":\"markup.list\"},{\"foreground\":\"9d80ff\",\"fontStyle\":\"bold\",\"token\":\"markup.bold\"},{\"foreground\":\"80ffbb\",\"fontStyle\":\"italic\",\"token\":\"markup.italic\"},{\"fontStyle\":\"bold\",\"token\":\"markup.heading\"}],\"colors\":{\"editor.foreground\":\"#FCFFE0\",\"editor.background\":\"#0B0A09\",\"editor.selectionBackground\":\"#AA00FF73\",\"editor.lineHighlightBackground\":\"#38403D\",\"editorCursor.foreground\":\"#FF9900\",\"editorWhitespace.foreground\":\"#FFB16F52\"}}");
+
+/***/ }),
+/* 500 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{\"foreground\":\"666c68\",\"background\":\"151c19\",\"token\":\"comment\"},{\"foreground\":\"c23b00\",\"token\":\"storage\"},{\"foreground\":\"c23b00\",\"token\":\"support.type\"},{\"foreground\":\"ffffff\",\"background\":\"151c19\",\"token\":\"string.unquoted.embedded\"},{\"foreground\":\"ffffff\",\"background\":\"151c19\",\"token\":\"text source\"},{\"foreground\":\"ffffff\",\"background\":\"151c19\",\"token\":\"string.unquoted\"},{\"foreground\":\"e9470000\",\"background\":\"1a0700\",\"token\":\"constant.character.escaped\"},{\"foreground\":\"e9470000\",\"background\":\"1a0700\",\"token\":\"string source - string.unquoted.embedded\"},{\"foreground\":\"e9470000\",\"background\":\"1a0700\",\"token\":\"string string source\"},{\"foreground\":\"c23800\",\"background\":\"1a0700\",\"token\":\"string - string source\"},{\"foreground\":\"c23800\",\"background\":\"1a0700\",\"token\":\"string source string\"},{\"foreground\":\"c23800\",\"background\":\"1a0700\",\"token\":\"meta.scope.heredoc\"},{\"foreground\":\"e98800\",\"token\":\"constant.numeric\"},{\"foreground\":\"648bd2\",\"token\":\"variable.language\"},{\"foreground\":\"648bd2\",\"token\":\"variable.other\"},{\"foreground\":\"e98800\",\"token\":\"constant\"},{\"foreground\":\"a8b3ab\",\"background\":\"161d1a\",\"token\":\"other.preprocessor\"},{\"foreground\":\"a8b3ab\",\"background\":\"161d1a\",\"token\":\"entity.name.preprocessor\"},{\"foreground\":\"a8b3ab\",\"token\":\"entity.name.function\"},{\"foreground\":\"a8b3ab\",\"token\":\"keyword.operator\"},{\"foreground\":\"a8b3ab\",\"token\":\"keyword.other.name-of-parameter\"},{\"foreground\":\"9a2f00\",\"token\":\"entity.name.class\"},{\"foreground\":\"648bd2\",\"token\":\"variable.parameter\"},{\"foreground\":\"666c68\",\"token\":\"storage.type.method\"},{\"foreground\":\"a39e64\",\"token\":\"keyword\"},{\"foreground\":\"a39e64\",\"token\":\"storage.type.function.php\"},{\"foreground\":\"ffffff\",\"background\":\"990000ad\",\"token\":\"invalid\"},{\"foreground\":\"000000\",\"background\":\"ffd0d0\",\"token\":\"invalid.trailing-whitespace\"},{\"foreground\":\"588e60\",\"token\":\"support.function\"},{\"foreground\":\"5778b6\",\"token\":\"support.class\"},{\"foreground\":\"5778b6\",\"token\":\"support.type\"},{\"foreground\":\"5778b6\",\"token\":\"entity.name\"},{\"foreground\":\"c87500\",\"token\":\"support.constant\"},{\"foreground\":\"5879b7\",\"token\":\"support.other.variable\"},{\"foreground\":\"68685b\",\"token\":\"declaration.xml-processing\"},{\"foreground\":\"888888\",\"token\":\"declaration.doctype\"},{\"foreground\":\"888888\",\"token\":\"declaration.doctype.DTD\"},{\"foreground\":\"a65eff\",\"token\":\"declaration.tag\"},{\"foreground\":\"a65eff\",\"token\":\"entity.name.tag\"},{\"foreground\":\"909993\",\"token\":\"entity.other.attribute-name\"},{\"foreground\":\"90999380\",\"token\":\"punctuation\"},{\"foreground\":\"7642b7\",\"token\":\"entity.other.inherited-class\"},{\"foreground\":\"ffffff\",\"background\":\"00000059\",\"token\":\"meta.scope.changed-files.svn\"},{\"foreground\":\"ffffff\",\"background\":\"00000059\",\"token\":\"markup.inserted.svn\"},{\"foreground\":\"ffffff\",\"background\":\"00000059\",\"token\":\"markup.changed.svn\"},{\"foreground\":\"ffffff\",\"background\":\"00000059\",\"token\":\"markup.deleted.svn\"},{\"background\":\"78807b0a\",\"token\":\"meta.section\"},{\"background\":\"78807b0a\",\"token\":\"meta.section meta.section\"},{\"background\":\"78807b0a\",\"token\":\"meta.section meta.section meta.section\"}],\"colors\":{\"editor.foreground\":\"#FFFFFF\",\"editor.background\":\"#222C28\",\"editor.selectionBackground\":\"#91999466\",\"editor.lineHighlightBackground\":\"#0C0D0C40\",\"editorCursor.foreground\":\"#FFFFFF\",\"editorWhitespace.foreground\":\"#666C6880\"}}");
+
+/***/ }),
+/* 501 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127568,7 +128047,7 @@ __webpack_require__.r(__webpack_exports__);
 var editorOptions = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/standalone/promise-polyfill/polyfill.js
-var polyfill = __webpack_require__(422);
+var polyfill = __webpack_require__(423);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/cancellation.js
 var cancellation = __webpack_require__(30);
@@ -128436,7 +128915,7 @@ function createMonacoBaseAPI() {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/standalone-tokens.css
-var standalone_tokens = __webpack_require__(425);
+var standalone_tokens = __webpack_require__(426);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/services/codeEditorService.js
 var services_codeEditorService = __webpack_require__(36);
@@ -128448,7 +128927,7 @@ var dom = __webpack_require__(1);
 var linkedList = __webpack_require__(92);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/marshalling.js
-var marshalling = __webpack_require__(176);
+var marshalling = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/network.js
 var network = __webpack_require__(37);
@@ -133135,7 +133614,7 @@ function removeElementsAfterNulls(arr) {
 }
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/keybindingLabels.js
-var keybindingLabels = __webpack_require__(175);
+var keybindingLabels = __webpack_require__(176);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/platform/keybinding/common/baseResolvedKeybinding.js
 /*---------------------------------------------------------------------------------------------
@@ -137066,7 +137545,7 @@ commands["a" /* CommandsRegistry */].registerCommand(contextkey["e" /* SET_CONTE
 });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/platform/contextview/browser/contextMenuHandler.css
-var contextMenuHandler = __webpack_require__(431);
+var contextMenuHandler = __webpack_require__(432);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/actions.js
 var base_common_actions = __webpack_require__(69);
@@ -137269,7 +137748,7 @@ var contextMenuService_ContextMenuService = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.css
-var contextview = __webpack_require__(433);
+var contextview = __webpack_require__(434);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/range.js
 var common_range = __webpack_require__(85);
@@ -140230,7 +140709,7 @@ if (typeof global.require !== 'undefined' && typeof global.require.config === 'f
 
 
 /***/ }),
-/* 450 */
+/* 502 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -140266,7 +140745,7 @@ var codeActionContributions = __webpack_require__(190);
 var codelensController = __webpack_require__(272);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/colorDetector.js
-var colorDetector = __webpack_require__(166);
+var colorDetector = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/comment/comment.js + 2 modules
 var comment = __webpack_require__(275);
@@ -140293,10 +140772,10 @@ var fontZoom = __webpack_require__(192);
 var formatActions = __webpack_require__(273);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/goToCommands.js + 1 modules
-var goToCommands = __webpack_require__(168);
+var goToCommands = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/link/goToDefinitionAtPosition.js
-var goToDefinitionAtPosition = __webpack_require__(167);
+var goToDefinitionAtPosition = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/gotoError.js + 2 modules
 var gotoError = __webpack_require__(151);
