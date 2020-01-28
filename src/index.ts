@@ -7,7 +7,7 @@ import { gmodInterface } from "./gmodInterface";
 import { ThemeLoader } from "./themeLoader";
 
 const themeLoader: ThemeLoader = new ThemeLoader();
-themeLoader.loadThemes();
+const themePromise: Promise<void> = themeLoader.loadThemes();
 
 monaco.languages.register({
     id: "lua",
@@ -48,7 +48,11 @@ const editor = monaco.editor.create(document.getElementById("container")!, {
 editor.focus();
 window.addEventListener("resize", () => editor.layout());
 
-if (gmodInterface) {
-    gmodInterface.SetEditor(editor);
-    gmodInterface.OnReady();
-}
+// so all themes are available to gmod when OnReady is fired
+// this prevents any loading order issue
+themePromise.finally(() => {
+    if (gmodInterface) {
+        gmodInterface.SetEditor(editor);
+        gmodInterface.OnReady();
+    }
+});
