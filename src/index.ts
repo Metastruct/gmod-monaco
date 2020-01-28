@@ -4,6 +4,10 @@ import { LuaFormatter } from "./formatter";
 import { LuaCompletionProvider } from "./completionProvider";
 import { LuaQuickFixActionProvider } from "./quickFixActionProvider";
 import { gmodInterface } from "./gmodInterface";
+import { ThemeLoader } from "./themeLoader";
+
+const themeLoader: ThemeLoader = new ThemeLoader();
+themeLoader.loadThemes();
 
 monaco.languages.register({
     id: "lua",
@@ -21,7 +25,10 @@ monaco.languages.registerCompletionItemProvider(
     "lua",
     new LuaCompletionProvider()
 );
-monaco.languages.registerCodeActionProvider("lua", new LuaQuickFixActionProvider());
+monaco.languages.registerCodeActionProvider(
+    "lua",
+    new LuaQuickFixActionProvider()
+);
 
 const editor = monaco.editor.create(document.getElementById("container")!, {
     value: "",
