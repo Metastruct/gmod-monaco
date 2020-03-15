@@ -983,7 +983,11 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "initialize", function() { return /* binding */ initialize; });
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/common/errors.js
 /*---------------------------------------------------------------------------------------------
@@ -9172,7 +9176,6 @@ if (typeof importScripts === 'function') {
 }
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/editor.worker.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialize", function() { return initialize; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

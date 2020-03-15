@@ -4,7 +4,14 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "setupTypeScript", function() { return /* binding */ setupTypeScript; });
+__webpack_require__.d(__webpack_exports__, "setupJavaScript", function() { return /* binding */ setupJavaScript; });
+__webpack_require__.d(__webpack_exports__, "getJavaScriptWorker", function() { return /* binding */ getJavaScriptWorker; });
+__webpack_require__.d(__webpack_exports__, "getTypeScriptWorker", function() { return /* binding */ getTypeScriptWorker; });
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/typescript/workerManager.js
 /*---------------------------------------------------------------------------------------------
@@ -1111,10 +1118,6 @@ var RenameAdapter = /** @class */ (function (_super) {
 
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/typescript/tsMode.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupTypeScript", function() { return setupTypeScript; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupJavaScript", function() { return setupJavaScript; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getJavaScriptWorker", function() { return getJavaScriptWorker; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTypeScriptWorker", function() { return getTypeScriptWorker; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

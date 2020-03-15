@@ -4,7 +4,11 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "setupMode", function() { return /* binding */ setupMode; });
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/json/workerManager.js
 /*---------------------------------------------------------------------------------------------
@@ -8159,7 +8163,6 @@ function tokenize(comments, line, state, offsetDelta, stopAtOffset) {
 }
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/json/jsonMode.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupMode", function() { return setupMode; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
