@@ -5040,6 +5040,40 @@ var SET_CONTEXT_COMMAND_ID = 'setContext';
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "p", function() { return /* binding */ LanguageIdentifier; });
+__webpack_require__.d(__webpack_exports__, "z", function() { return /* binding */ TokenMetadata; });
+__webpack_require__.d(__webpack_exports__, "D", function() { return /* binding */ completionKindToCssClass; });
+__webpack_require__.d(__webpack_exports__, "C", function() { return /* binding */ completionKindFromString; });
+__webpack_require__.d(__webpack_exports__, "x", function() { return /* binding */ SignatureHelpTriggerKind; });
+__webpack_require__.d(__webpack_exports__, "h", function() { return /* binding */ DocumentHighlightKind; });
+__webpack_require__.d(__webpack_exports__, "E", function() { return /* binding */ isLocationLink; });
+__webpack_require__.d(__webpack_exports__, "y", function() { return /* binding */ SymbolKinds; });
+__webpack_require__.d(__webpack_exports__, "l", function() { return /* binding */ FoldingRangeKind; });
+__webpack_require__.d(__webpack_exports__, "F", function() { return /* binding */ isResourceTextEdit; });
+__webpack_require__.d(__webpack_exports__, "s", function() { return /* binding */ ReferenceProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "t", function() { return /* binding */ RenameProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "d", function() { return /* binding */ CompletionProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "w", function() { return /* binding */ SignatureHelpProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "n", function() { return /* binding */ HoverProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "k", function() { return /* binding */ DocumentSymbolProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "i", function() { return /* binding */ DocumentHighlightProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "f", function() { return /* binding */ DefinitionProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "e", function() { return /* binding */ DeclarationProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "o", function() { return /* binding */ ImplementationProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "B", function() { return /* binding */ TypeDefinitionProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ CodeLensProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ CodeActionProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "g", function() { return /* binding */ DocumentFormattingEditProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "j", function() { return /* binding */ DocumentRangeFormattingEditProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "r", function() { return /* binding */ OnTypeFormattingEditProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "q", function() { return /* binding */ LinkProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ ColorProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "u", function() { return /* binding */ SelectionRangeRegistry; });
+__webpack_require__.d(__webpack_exports__, "m", function() { return /* binding */ FoldingRangeProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "v", function() { return /* binding */ SemanticTokensProviderRegistry; });
+__webpack_require__.d(__webpack_exports__, "A", function() { return /* binding */ TokenizationRegistry; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/types.js
 var types = __webpack_require__(21);
 
@@ -5393,38 +5427,6 @@ var tokenizationRegistry_TokenizationRegistryImpl = /** @class */ (function () {
 
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return LanguageIdentifier; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return TokenMetadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return completionKindToCssClass; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return completionKindFromString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return SignatureHelpTriggerKind; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return DocumentHighlightKind; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return isLocationLink; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return SymbolKinds; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return FoldingRangeKind; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return isResourceTextEdit; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return ReferenceProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return RenameProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return CompletionProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return SignatureHelpProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return HoverProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return DocumentSymbolProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return DocumentHighlightProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return DefinitionProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return DeclarationProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return ImplementationProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return TypeDefinitionProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CodeLensProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CodeActionProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return DocumentFormattingEditProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return DocumentRangeFormattingEditProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return OnTypeFormattingEditProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return LinkProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ColorProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return SelectionRangeRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return FoldingRangeProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return SemanticTokensProviderRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return TokenizationRegistry; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11351,6 +11353,12 @@ function toComment(sourceMap) {
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ textModel_TextModel; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ textModel_ModelDecorationOptions; });
+
+// UNUSED EXPORTS: createTextBufferFactory, createTextBuffer, LONG_LINE_BOUNDARY, ModelDecorationOverviewRulerOptions, ModelDecorationMinimapOptions, DidChangeDecorationsEmitter, DidChangeContentEmitter
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/errors.js
 var errors = __webpack_require__(12);
 
@@ -15558,15 +15566,6 @@ var types = __webpack_require__(21);
 var common_color = __webpack_require__(13);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/model/textModel.js
-/* unused harmony export createTextBufferFactory */
-/* unused harmony export createTextBuffer */
-/* unused harmony export LONG_LINE_BOUNDARY */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return textModel_TextModel; });
-/* unused harmony export ModelDecorationOverviewRulerOptions */
-/* unused harmony export ModelDecorationMinimapOptions */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return textModel_ModelDecorationOptions; });
-/* unused harmony export DidChangeDecorationsEmitter */
-/* unused harmony export DidChangeContentEmitter */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -18300,6 +18299,11 @@ var SimpleServicesNLS;
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ LanguageConfigurationRegistry; });
+
+// UNUSED EXPORTS: RichEditSupport, LanguageConfigurationChangeEvent, LanguageConfigurationRegistryImpl
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/event.js
 var common_event = __webpack_require__(6);
 
@@ -18601,10 +18605,6 @@ var onEnter_OnEnterSupport = /** @class */ (function () {
 
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/modes/languageConfigurationRegistry.js
-/* unused harmony export RichEditSupport */
-/* unused harmony export LanguageConfigurationChangeEvent */
-/* unused harmony export LanguageConfigurationRegistryImpl */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LanguageConfigurationRegistry; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -23735,6 +23735,26 @@ var Gesture = /** @class */ (function (_super) {
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ IPeekViewService; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ peekView_PeekContext; });
+__webpack_require__.d(__webpack_exports__, "d", function() { return /* binding */ getOuterEditor; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ peekView_PeekViewWidget; });
+__webpack_require__.d(__webpack_exports__, "p", function() { return /* binding */ peekViewTitleBackground; });
+__webpack_require__.d(__webpack_exports__, "q", function() { return /* binding */ peekViewTitleForeground; });
+__webpack_require__.d(__webpack_exports__, "r", function() { return /* binding */ peekViewTitleInfoForeground; });
+__webpack_require__.d(__webpack_exports__, "e", function() { return /* binding */ peekViewBorder; });
+__webpack_require__.d(__webpack_exports__, "j", function() { return /* binding */ peekViewResultsBackground; });
+__webpack_require__.d(__webpack_exports__, "l", function() { return /* binding */ peekViewResultsMatchForeground; });
+__webpack_require__.d(__webpack_exports__, "k", function() { return /* binding */ peekViewResultsFileForeground; });
+__webpack_require__.d(__webpack_exports__, "n", function() { return /* binding */ peekViewResultsSelectionBackground; });
+__webpack_require__.d(__webpack_exports__, "o", function() { return /* binding */ peekViewResultsSelectionForeground; });
+__webpack_require__.d(__webpack_exports__, "f", function() { return /* binding */ peekViewEditorBackground; });
+__webpack_require__.d(__webpack_exports__, "g", function() { return /* binding */ peekViewEditorGutterBackground; });
+__webpack_require__.d(__webpack_exports__, "m", function() { return /* binding */ peekViewResultsMatchHighlight; });
+__webpack_require__.d(__webpack_exports__, "h", function() { return /* binding */ peekViewEditorMatchHighlight; });
+__webpack_require__.d(__webpack_exports__, "i", function() { return /* binding */ peekViewEditorMatchHighlightBorder; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/peekView/media/peekViewWidget.css
 var peekViewWidget = __webpack_require__(336);
 
@@ -24224,24 +24244,6 @@ var editorExtensions = __webpack_require__(5);
 var colorRegistry = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/peekView/peekView.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IPeekViewService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return peekView_PeekContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getOuterEditor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return peekView_PeekViewWidget; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return peekViewTitleBackground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return peekViewTitleForeground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return peekViewTitleInfoForeground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return peekViewBorder; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return peekViewResultsBackground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return peekViewResultsMatchForeground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return peekViewResultsFileForeground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return peekViewResultsSelectionBackground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return peekViewResultsSelectionForeground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return peekViewEditorBackground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return peekViewEditorGutterBackground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return peekViewResultsMatchHighlight; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return peekViewEditorMatchHighlight; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return peekViewEditorMatchHighlightBorder; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -28733,6 +28735,10 @@ var CursorMove;
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ clearAllFontInfos; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ configuration_Configuration; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/browser.js
 var browser = __webpack_require__(23);
 
@@ -28956,8 +28962,6 @@ var editorOptions = __webpack_require__(26);
 var fontInfo = __webpack_require__(138);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/config/configuration.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return clearAllFontInfos; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return configuration_Configuration; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -29496,6 +29500,13 @@ var StaticDND = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ scrollableElement_ScrollableElement; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ SmoothScrollableElement; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ DomScrollableElement; });
+
+// UNUSED EXPORTS: MouseWheelClassifier, AbstractScrollableElement
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/media/scrollbars.css
 var scrollbars = __webpack_require__(319);
@@ -30265,11 +30276,6 @@ var common_event = __webpack_require__(6);
 var common_scrollable = __webpack_require__(181);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/scrollableElement.js
-/* unused harmony export MouseWheelClassifier */
-/* unused harmony export AbstractScrollableElement */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return scrollableElement_ScrollableElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return SmoothScrollableElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DomScrollableElement; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -30767,6 +30773,12 @@ var IEditorWorkerService = Object(_platform_instantiation_common_instantiation_j
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ editorState_EditorState; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ editorState_EditorStateCancellationTokenSource; });
+__webpack_require__.d(__webpack_exports__, "d", function() { return /* binding */ TextModelCancellationTokenSource; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ StableEditorScrollState; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/strings.js
 var strings = __webpack_require__(8);
 
@@ -30891,10 +30903,6 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new /** @class */ (fun
 }(editorExtensions["c" /* EditorCommand */])));
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/core/editorState.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return editorState_EditorState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return editorState_EditorStateCancellationTokenSource; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TextModelCancellationTokenSource; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return StableEditorScrollState; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -31189,7 +31197,15 @@ function parseHrefAndDimensions(href) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "CoreEditorCommand", function() { return /* binding */ CoreEditorCommand; });
+__webpack_require__.d(__webpack_exports__, "EditorScroll_", function() { return /* binding */ coreCommands_EditorScroll_; });
+__webpack_require__.d(__webpack_exports__, "RevealLine_", function() { return /* binding */ coreCommands_RevealLine_; });
+__webpack_require__.d(__webpack_exports__, "CoreNavigationCommands", function() { return /* binding */ coreCommands_CoreNavigationCommands; });
+__webpack_require__.d(__webpack_exports__, "CoreEditingCommands", function() { return /* binding */ coreCommands_CoreEditingCommands; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -31327,11 +31343,6 @@ var editorContextKeys = __webpack_require__(7);
 var contextkey = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/controller/coreCommands.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreEditorCommand", function() { return CoreEditorCommand; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditorScroll_", function() { return coreCommands_EditorScroll_; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RevealLine_", function() { return coreCommands_RevealLine_; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreNavigationCommands", function() { return coreCommands_CoreNavigationCommands; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreEditingCommands", function() { return coreCommands_CoreEditingCommands; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -35432,6 +35443,10 @@ function ignoreBracketsInToken(standardTokenType) {
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ cursorTypeOperations_TypeOperations; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ cursorTypeOperations_TypeWithAutoClosingCommand; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/errors.js
 var errors = __webpack_require__(12);
 
@@ -35490,8 +35505,6 @@ var languageConfiguration = __webpack_require__(58);
 var languageConfigurationRegistry = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/controller/cursorTypeOperations.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cursorTypeOperations_TypeOperations; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return cursorTypeOperations_TypeWithAutoClosingCommand; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -36759,6 +36772,18 @@ var EditorZoom = new /** @class */ (function () {
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "f", function() { return /* binding */ codeActionCommands_QuickFixController; });
+__webpack_require__.d(__webpack_exports__, "e", function() { return /* binding */ codeActionCommands_QuickFixAction; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ codeActionCommands_CodeActionCommand; });
+__webpack_require__.d(__webpack_exports__, "g", function() { return /* binding */ codeActionCommands_RefactorAction; });
+__webpack_require__.d(__webpack_exports__, "h", function() { return /* binding */ codeActionCommands_SourceAction; });
+__webpack_require__.d(__webpack_exports__, "d", function() { return /* binding */ codeActionCommands_OrganizeImportsAction; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ codeActionCommands_FixAllAction; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ codeActionCommands_AutoFixAction; });
+
+// UNUSED EXPORTS: applyCodeAction
+
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/common/lazy.js
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -37802,15 +37827,6 @@ var codeActionModel_CodeActionModel = /** @class */ (function (_super) {
 
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/codeActionCommands.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return codeActionCommands_QuickFixController; });
-/* unused harmony export applyCodeAction */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return codeActionCommands_QuickFixAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return codeActionCommands_CodeActionCommand; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return codeActionCommands_RefactorAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return codeActionCommands_SourceAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return codeActionCommands_OrganizeImportsAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return codeActionCommands_FixAllAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return codeActionCommands_AutoFixAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -41392,7 +41408,11 @@ _languageConfigurationRegistry_js__WEBPACK_IMPORTED_MODULE_3__[/* LanguageConfig
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "SnippetController2", function() { return /* binding */ snippetController2_SnippetController2; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/lifecycle.js
 var lifecycle = __webpack_require__(2);
@@ -42339,7 +42359,6 @@ var snippetSession_SnippetSession = /** @class */ (function () {
 
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/snippet/snippetController2.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SnippetController2", function() { return snippetController2_SnippetController2; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -42827,6 +42846,14 @@ var ServiceCollection = /** @class */ (function () {
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ DefaultKeyboardNavigationDelegate; });
+__webpack_require__.d(__webpack_exports__, "f", function() { return /* binding */ isSelectionSingleChangeEvent; });
+__webpack_require__.d(__webpack_exports__, "e", function() { return /* binding */ isSelectionRangeChangeEvent; });
+__webpack_require__.d(__webpack_exports__, "d", function() { return /* binding */ listWidget_MouseController; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ listWidget_DefaultStyleController; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ listWidget_List; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/list/list.css
 var list_list = __webpack_require__(390);
 
@@ -42929,12 +42956,6 @@ var numbers = __webpack_require__(104);
 var filters = __webpack_require__(65);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/list/listWidget.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DefaultKeyboardNavigationDelegate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return isSelectionSingleChangeEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return isSelectionRangeChangeEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return listWidget_MouseController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return listWidget_DefaultStyleController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return listWidget_List; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44802,6 +44823,11 @@ var HighlightedLabel = /** @class */ (function () {
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ quickOpenModel_QuickOpenEntry; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ QuickOpenEntryGroup; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ quickOpenModel_QuickOpenModel; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
 
@@ -44920,9 +44946,6 @@ var platform = __webpack_require__(14);
 var arrays = __webpack_require__(15);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/parts/quickopen/browser/quickOpenModel.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return quickOpenModel_QuickOpenEntry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return QuickOpenEntryGroup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return quickOpenModel_QuickOpenModel; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -46541,6 +46564,9 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_0__[/* registerEdit
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ markdownRenderer_MarkdownRenderer; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -48968,7 +48994,6 @@ var lifecycle = __webpack_require__(2);
 var modes = __webpack_require__(11);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/markdown/markdownRenderer.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return markdownRenderer_MarkdownRenderer; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -49864,6 +49889,14 @@ function tildify(path, userHome) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ IListService; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ listService_ListService; });
+__webpack_require__.d(__webpack_exports__, "d", function() { return /* binding */ WorkbenchListFocusContextKey; });
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ listService_WorkbenchAsyncDataTree; });
+
+// UNUSED EXPORTS: WorkbenchListSupportsMultiSelectContextKey, WorkbenchListHasSelectionOrFocus, WorkbenchListDoubleSelection, WorkbenchListMultiSelection, WorkbenchListSupportsKeyboardNavigation, WorkbenchListAutomaticKeyboardNavigationKey, WorkbenchListAutomaticKeyboardNavigation, didBindWorkbenchListAutomaticKeyboardNavigation, multiSelectModifierSettingKey, openModeSettingKey, horizontalScrollingKey, keyboardNavigationSettingKey, automaticKeyboardNavigationSettingKey, WorkbenchObjectTree, WorkbenchDataTree, WorkbenchCompressibleAsyncDataTree
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/dom.js
 var dom = __webpack_require__(1);
@@ -53497,26 +53530,6 @@ var dataTree_DataTree = /** @class */ (function (_super) {
 var accessibility = __webpack_require__(71);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/platform/list/browser/listService.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IListService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return listService_ListService; });
-/* unused harmony export WorkbenchListSupportsMultiSelectContextKey */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return WorkbenchListFocusContextKey; });
-/* unused harmony export WorkbenchListHasSelectionOrFocus */
-/* unused harmony export WorkbenchListDoubleSelection */
-/* unused harmony export WorkbenchListMultiSelection */
-/* unused harmony export WorkbenchListSupportsKeyboardNavigation */
-/* unused harmony export WorkbenchListAutomaticKeyboardNavigationKey */
-/* unused harmony export WorkbenchListAutomaticKeyboardNavigation */
-/* unused harmony export didBindWorkbenchListAutomaticKeyboardNavigation */
-/* unused harmony export multiSelectModifierSettingKey */
-/* unused harmony export openModeSettingKey */
-/* unused harmony export horizontalScrollingKey */
-/* unused harmony export keyboardNavigationSettingKey */
-/* unused harmony export automaticKeyboardNavigationSettingKey */
-/* unused harmony export WorkbenchObjectTree */
-/* unused harmony export WorkbenchDataTree */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return listService_WorkbenchAsyncDataTree; });
-/* unused harmony export WorkbenchCompressibleAsyncDataTree */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54013,6 +54026,12 @@ listService_configurationRegistry.registerConfiguration({
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ ElementsDragAndDropData; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ listView_ListView; });
+
+// UNUSED EXPORTS: ExternalElementsDragAndDropData, DesktopDragAndDropData
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/objects.js
 var objects = __webpack_require__(35);
 
@@ -54305,10 +54324,6 @@ var common_async = __webpack_require__(16);
 var browser = __webpack_require__(23);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/list/listView.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElementsDragAndDropData; });
-/* unused harmony export ExternalElementsDragAndDropData */
-/* unused harmony export DesktopDragAndDropData */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return listView_ListView; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55428,6 +55443,11 @@ __webpack_require__(265);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ codeEditorWidget_CodeEditorWidget; });
+
+// UNUSED EXPORTS: BooleanEventEmitter, EditorModeContext
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/editor.css
 var media_editor = __webpack_require__(338);
@@ -70706,9 +70726,6 @@ var accessibility = __webpack_require__(71);
 var types = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/codeEditorWidget.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return codeEditorWidget_CodeEditorWidget; });
-/* unused harmony export BooleanEventEmitter */
-/* unused harmony export EditorModeContext */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -72108,7 +72125,24 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "getSelectionSearchString", function() { return /* binding */ getSelectionSearchString; });
+__webpack_require__.d(__webpack_exports__, "CommonFindController", function() { return /* binding */ findController_CommonFindController; });
+__webpack_require__.d(__webpack_exports__, "FindController", function() { return /* binding */ findController_FindController; });
+__webpack_require__.d(__webpack_exports__, "StartFindAction", function() { return /* binding */ findController_StartFindAction; });
+__webpack_require__.d(__webpack_exports__, "StartFindWithSelectionAction", function() { return /* binding */ findController_StartFindWithSelectionAction; });
+__webpack_require__.d(__webpack_exports__, "MatchFindAction", function() { return /* binding */ MatchFindAction; });
+__webpack_require__.d(__webpack_exports__, "NextMatchFindAction", function() { return /* binding */ findController_NextMatchFindAction; });
+__webpack_require__.d(__webpack_exports__, "NextMatchFindAction2", function() { return /* binding */ findController_NextMatchFindAction2; });
+__webpack_require__.d(__webpack_exports__, "PreviousMatchFindAction", function() { return /* binding */ findController_PreviousMatchFindAction; });
+__webpack_require__.d(__webpack_exports__, "PreviousMatchFindAction2", function() { return /* binding */ findController_PreviousMatchFindAction2; });
+__webpack_require__.d(__webpack_exports__, "SelectionMatchFindAction", function() { return /* binding */ SelectionMatchFindAction; });
+__webpack_require__.d(__webpack_exports__, "NextSelectionMatchFindAction", function() { return /* binding */ findController_NextSelectionMatchFindAction; });
+__webpack_require__.d(__webpack_exports__, "PreviousSelectionMatchFindAction", function() { return /* binding */ findController_PreviousSelectionMatchFindAction; });
+__webpack_require__.d(__webpack_exports__, "StartFindReplaceAction", function() { return /* binding */ findController_StartFindReplaceAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -75751,20 +75785,6 @@ var storage = __webpack_require__(86);
 var notification = __webpack_require__(48);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/find/findController.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSelectionSearchString", function() { return getSelectionSearchString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommonFindController", function() { return findController_CommonFindController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindController", function() { return findController_FindController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StartFindAction", function() { return findController_StartFindAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StartFindWithSelectionAction", function() { return findController_StartFindWithSelectionAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchFindAction", function() { return MatchFindAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NextMatchFindAction", function() { return findController_NextMatchFindAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NextMatchFindAction2", function() { return findController_NextMatchFindAction2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PreviousMatchFindAction", function() { return findController_PreviousMatchFindAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PreviousMatchFindAction2", function() { return findController_PreviousMatchFindAction2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectionMatchFindAction", function() { return SelectionMatchFindAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NextSelectionMatchFindAction", function() { return findController_NextSelectionMatchFindAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PreviousSelectionMatchFindAction", function() { return findController_PreviousSelectionMatchFindAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StartFindReplaceAction", function() { return findController_StartFindReplaceAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -77066,7 +77086,12 @@ Object(_browser_editorExtensions_js__WEBPACK_IMPORTED_MODULE_2__[/* registerEdit
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "MarkerController", function() { return /* binding */ gotoError_MarkerController; });
+__webpack_require__.d(__webpack_exports__, "NextMarkerAction", function() { return /* binding */ gotoError_NextMarkerAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -77469,8 +77494,6 @@ var base_common_actions = __webpack_require__(69);
 var keybinding = __webpack_require__(44);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/gotoError.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MarkerController", function() { return gotoError_MarkerController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NextMarkerAction", function() { return gotoError_NextMarkerAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -78870,6 +78893,11 @@ var WorkspaceFolder = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ BaseEditorQuickOpenAction; });
+
+// UNUSED EXPORTS: QuickOpenController
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/editorQuickOpen.css
 var editorQuickOpen = __webpack_require__(378);
@@ -83285,8 +83313,6 @@ var quickOpenEditorWidget_QuickOpenEditorWidget = /** @class */ (function () {
 var common_themeService = __webpack_require__(17);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/editorQuickOpen.js
-/* unused harmony export QuickOpenController */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseEditorQuickOpenAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -83435,6 +83461,10 @@ Object(editorExtensions["h" /* registerEditorContribution */])(editorQuickOpen_Q
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ inputBox_InputBox; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ inputBox_HistoryInputBox; });
+
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.css
 var inputBox = __webpack_require__(330);
 
@@ -83549,8 +83579,6 @@ var scrollableElement = __webpack_require__(79);
 var browser_event = __webpack_require__(33);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return inputBox_InputBox; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return inputBox_HistoryInputBox; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -84066,6 +84094,12 @@ var inputBox_HistoryInputBox = /** @class */ (function (_super) {
 
 "use strict";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ stringDiff; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ diff_LcsDiff; });
+
+// UNUSED EXPORTS: StringDiffSequence, Debug, MyArray
+
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/common/diff/diffChange.js
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -84106,11 +84140,6 @@ var DiffChange = /** @class */ (function () {
 var hash = __webpack_require__(154);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/base/common/diff/diff.js
-/* unused harmony export StringDiffSequence */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return stringDiff; });
-/* unused harmony export Debug */
-/* unused harmony export MyArray */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return diff_LcsDiff; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -85525,6 +85554,11 @@ var TextAreaWrapper = /** @class */ (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ referencesController_ReferencesController; });
+
+// UNUSED EXPORTS: ctxReferenceSearchVisible
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -87289,8 +87323,6 @@ var common_async = __webpack_require__(16);
 var keybindingsRegistry = __webpack_require__(77);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/peek/referencesController.js
-/* unused harmony export ctxReferenceSearchVisible */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return referencesController_ReferencesController; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -88435,7 +88467,11 @@ Object(_platform_theme_common_themeService_js__WEBPACK_IMPORTED_MODULE_12__[/* r
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "DefinitionAction", function() { return /* binding */ goToCommands_DefinitionAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js
 var aria = __webpack_require__(57);
@@ -88735,7 +88771,6 @@ var uri = __webpack_require__(24);
 var types = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/goToCommands.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefinitionAction", function() { return goToCommands_DefinitionAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -98442,7 +98477,12 @@ exports.getAlternativeStringQuotemark = getAlternativeStringQuotemark;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "SuggestController", function() { return /* binding */ suggestController_SuggestController; });
+__webpack_require__.d(__webpack_exports__, "TriggerSuggestAction", function() { return /* binding */ suggestController_TriggerSuggestAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js
 var aria = __webpack_require__(57);
@@ -101330,8 +101370,6 @@ var shiftKey = new /** @class */ (function (_super) {
 }(common_event["a" /* Emitter */]));
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/suggest/suggestController.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SuggestController", function() { return suggestController_SuggestController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TriggerSuggestAction", function() { return suggestController_TriggerSuggestAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -101984,7 +102022,11 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new SuggestCommand({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "FoldingController", function() { return /* binding */ folding_FoldingController; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/folding/folding.css
 var folding = __webpack_require__(332);
@@ -103144,7 +103186,6 @@ var intializingRangeProvider_InitializingRangeProvider = /** @class */ (function
 var contextkey = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/folding/folding.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FoldingController", function() { return folding_FoldingController; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -103956,7 +103997,11 @@ for (var folding_i = 1; folding_i <= 7; folding_i++) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "ModesHoverController", function() { return /* binding */ hover_ModesHoverController; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/hover/hover.css
 var hover = __webpack_require__(398);
@@ -105552,7 +105597,6 @@ var common_keybinding = __webpack_require__(44);
 var goToDefinitionAtPosition = __webpack_require__(168);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/hover/hover.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModesHoverController", function() { return hover_ModesHoverController; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -105887,7 +105931,28 @@ Object(common_themeService["e" /* registerThemingParticipant */])(function (them
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "DuplicateSelectionAction", function() { return /* binding */ linesOperations_DuplicateSelectionAction; });
+__webpack_require__.d(__webpack_exports__, "AbstractSortLinesAction", function() { return /* binding */ linesOperations_AbstractSortLinesAction; });
+__webpack_require__.d(__webpack_exports__, "SortLinesAscendingAction", function() { return /* binding */ linesOperations_SortLinesAscendingAction; });
+__webpack_require__.d(__webpack_exports__, "SortLinesDescendingAction", function() { return /* binding */ linesOperations_SortLinesDescendingAction; });
+__webpack_require__.d(__webpack_exports__, "TrimTrailingWhitespaceAction", function() { return /* binding */ linesOperations_TrimTrailingWhitespaceAction; });
+__webpack_require__.d(__webpack_exports__, "DeleteLinesAction", function() { return /* binding */ linesOperations_DeleteLinesAction; });
+__webpack_require__.d(__webpack_exports__, "IndentLinesAction", function() { return /* binding */ linesOperations_IndentLinesAction; });
+__webpack_require__.d(__webpack_exports__, "InsertLineBeforeAction", function() { return /* binding */ linesOperations_InsertLineBeforeAction; });
+__webpack_require__.d(__webpack_exports__, "InsertLineAfterAction", function() { return /* binding */ linesOperations_InsertLineAfterAction; });
+__webpack_require__.d(__webpack_exports__, "AbstractDeleteAllToBoundaryAction", function() { return /* binding */ linesOperations_AbstractDeleteAllToBoundaryAction; });
+__webpack_require__.d(__webpack_exports__, "DeleteAllLeftAction", function() { return /* binding */ linesOperations_DeleteAllLeftAction; });
+__webpack_require__.d(__webpack_exports__, "DeleteAllRightAction", function() { return /* binding */ linesOperations_DeleteAllRightAction; });
+__webpack_require__.d(__webpack_exports__, "JoinLinesAction", function() { return /* binding */ linesOperations_JoinLinesAction; });
+__webpack_require__.d(__webpack_exports__, "TransposeAction", function() { return /* binding */ linesOperations_TransposeAction; });
+__webpack_require__.d(__webpack_exports__, "AbstractCaseAction", function() { return /* binding */ linesOperations_AbstractCaseAction; });
+__webpack_require__.d(__webpack_exports__, "UpperCaseAction", function() { return /* binding */ linesOperations_UpperCaseAction; });
+__webpack_require__.d(__webpack_exports__, "LowerCaseAction", function() { return /* binding */ linesOperations_LowerCaseAction; });
+__webpack_require__.d(__webpack_exports__, "TitleCaseAction", function() { return /* binding */ linesOperations_TitleCaseAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -106510,24 +106575,6 @@ function sortLines(model, selection, descending) {
 }
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/linesOperations/linesOperations.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DuplicateSelectionAction", function() { return linesOperations_DuplicateSelectionAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractSortLinesAction", function() { return linesOperations_AbstractSortLinesAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SortLinesAscendingAction", function() { return linesOperations_SortLinesAscendingAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SortLinesDescendingAction", function() { return linesOperations_SortLinesDescendingAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrimTrailingWhitespaceAction", function() { return linesOperations_TrimTrailingWhitespaceAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteLinesAction", function() { return linesOperations_DeleteLinesAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndentLinesAction", function() { return linesOperations_IndentLinesAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InsertLineBeforeAction", function() { return linesOperations_InsertLineBeforeAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InsertLineAfterAction", function() { return linesOperations_InsertLineAfterAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractDeleteAllToBoundaryAction", function() { return linesOperations_AbstractDeleteAllToBoundaryAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteAllLeftAction", function() { return linesOperations_DeleteAllLeftAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteAllRightAction", function() { return linesOperations_DeleteAllRightAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JoinLinesAction", function() { return linesOperations_JoinLinesAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TransposeAction", function() { return linesOperations_TransposeAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractCaseAction", function() { return linesOperations_AbstractCaseAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpperCaseAction", function() { return linesOperations_UpperCaseAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LowerCaseAction", function() { return linesOperations_LowerCaseAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TitleCaseAction", function() { return linesOperations_TitleCaseAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -107515,7 +107562,11 @@ Object(editorExtensions["f" /* registerEditorAction */])(linesOperations_TitleCa
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "CodeLensContribution", function() { return /* binding */ codelensController_CodeLensContribution; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/async.js
 var common_async = __webpack_require__(16);
@@ -108091,7 +108142,6 @@ Object(extensions["b" /* registerSingleton */])(ICodeLensCache, codeLensCache_Co
 var hash = __webpack_require__(154);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/codelens/codelensController.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeLensContribution", function() { return codelensController_CodeLensContribution; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -108470,6 +108520,7 @@ Object(editorExtensions["h" /* registerEditorContribution */])(codelensControlle
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/arrays.js
@@ -109411,7 +109462,11 @@ commands["a" /* CommandsRegistry */].registerCommand('editor.action.format', fun
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "TriggerParameterHintsAction", function() { return /* binding */ parameterHints_TriggerParameterHintsAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -110243,7 +110298,6 @@ Object(themeService["e" /* registerThemingParticipant */])(function (theme, coll
 });
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/parameterHints.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TriggerParameterHintsAction", function() { return parameterHints_TriggerParameterHintsAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -110380,6 +110434,7 @@ Object(editorExtensions["g" /* registerEditorCommand */])(new ParameterHintsComm
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
@@ -111043,7 +111098,12 @@ Object(editorExtensions["f" /* registerEditorAction */])(comment_BlockCommentAct
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "SymbolEntry", function() { return /* binding */ quickOutline_SymbolEntry; });
+__webpack_require__.d(__webpack_exports__, "QuickOutlineAction", function() { return /* binding */ quickOutline_QuickOutlineAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/quickOutline.css
 var quickOutline = __webpack_require__(410);
@@ -111502,8 +111562,6 @@ var editorQuickOpen = __webpack_require__(160);
 var standaloneStrings = __webpack_require__(31);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickOpen/quickOutline.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SymbolEntry", function() { return quickOutline_SymbolEntry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuickOutlineAction", function() { return quickOutline_QuickOutlineAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -111782,6 +111840,7 @@ Object(editorExtensions["f" /* registerEditorAction */])(quickOutline_QuickOutli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
@@ -111935,7 +111994,11 @@ Object(editorExtensions["f" /* registerEditorAction */])(caretOperations_MoveCar
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "ContextMenuController", function() { return /* binding */ contextmenu_ContextMenuController; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -112001,7 +112064,6 @@ var ContextSubMenu = /** @class */ (function (_super) {
 
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/contextmenu/contextmenu.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContextMenuController", function() { return contextmenu_ContextMenuController; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -112265,7 +112327,11 @@ Object(editorExtensions["f" /* registerEditorAction */])(contextmenu_ShowContext
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "DragAndDropController", function() { return /* binding */ dnd_DragAndDropController; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/dnd/dnd.css
 var dnd = __webpack_require__(321);
@@ -112358,7 +112424,6 @@ var dragAndDropCommand_DragAndDropCommand = /** @class */ (function () {
 var textModel = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/dnd/dnd.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DragAndDropController", function() { return dnd_DragAndDropController; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -112568,6 +112633,7 @@ Object(editorExtensions["h" /* registerEditorContribution */])(dnd_DragAndDropCo
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
@@ -112821,6 +112887,7 @@ Object(themeService["e" /* registerThemingParticipant */])(function (theme, coll
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/links/links.css
@@ -113545,7 +113612,12 @@ Object(themeService["e" /* registerThemingParticipant */])(function (theme, coll
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "rename", function() { return /* binding */ rename; });
+__webpack_require__.d(__webpack_exports__, "RenameAction", function() { return /* binding */ rename_RenameAction; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/nls.js
 var nls = __webpack_require__(0);
@@ -113779,8 +113851,6 @@ var common_async = __webpack_require__(16);
 var types = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/rename/rename.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rename", function() { return rename; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenameAction", function() { return rename_RenameAction; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -114155,7 +114225,11 @@ Object(editorExtensions["e" /* registerDefaultLanguageCommand */])('_executeDocu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "provideSelectionRanges", function() { return /* binding */ provideSelectionRanges; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/base/common/arrays.js
 var arrays = __webpack_require__(15);
@@ -114281,7 +114355,6 @@ var commands = __webpack_require__(34);
 var errors = __webpack_require__(12);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/contrib/smartSelect/smartSelect.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "provideSelectionRanges", function() { return provideSelectionRanges; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -114622,7 +114695,11 @@ Object(editorExtensions["e" /* registerDefaultLanguageCommand */])('_executeSele
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "LanguageServiceDefaultsImpl", function() { return /* binding */ LanguageServiceDefaultsImpl; });
 
 // EXTERNAL MODULE: include-loader!./node_modules/monaco-editor/esm/vs/editor/editor.api.js
 var editor_api = __webpack_require__(143);
@@ -114631,7 +114708,6 @@ var editor_api = __webpack_require__(143);
 var typescriptVersion = "3.7.3";
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/language/typescript/monaco.contribution.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LanguageServiceDefaultsImpl", function() { return LanguageServiceDefaultsImpl; });
 
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -115046,6 +115122,9 @@ var DiffNavigator = /** @class */ (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ diffEditorWidget_DiffEditorWidget; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/media/diffEditor.css
 var media_diffEditor = __webpack_require__(428);
@@ -116094,7 +116173,6 @@ var errors = __webpack_require__(12);
 var progress = __webpack_require__(101);
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditorWidget.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return diffEditorWidget_DiffEditorWidget; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -128048,7 +128126,24 @@ module.exports = JSON.parse("{\"base\":\"vs-dark\",\"inherit\":true,\"rules\":[{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "CancellationTokenSource", function() { return /* binding */ CancellationTokenSource; });
+__webpack_require__.d(__webpack_exports__, "Emitter", function() { return /* binding */ Emitter; });
+__webpack_require__.d(__webpack_exports__, "KeyCode", function() { return /* binding */ editor_api_KeyCode; });
+__webpack_require__.d(__webpack_exports__, "KeyMod", function() { return /* binding */ editor_api_KeyMod; });
+__webpack_require__.d(__webpack_exports__, "Position", function() { return /* binding */ Position; });
+__webpack_require__.d(__webpack_exports__, "Range", function() { return /* binding */ Range; });
+__webpack_require__.d(__webpack_exports__, "Selection", function() { return /* binding */ Selection; });
+__webpack_require__.d(__webpack_exports__, "SelectionDirection", function() { return /* binding */ editor_api_SelectionDirection; });
+__webpack_require__.d(__webpack_exports__, "MarkerSeverity", function() { return /* binding */ editor_api_MarkerSeverity; });
+__webpack_require__.d(__webpack_exports__, "MarkerTag", function() { return /* binding */ editor_api_MarkerTag; });
+__webpack_require__.d(__webpack_exports__, "Uri", function() { return /* binding */ Uri; });
+__webpack_require__.d(__webpack_exports__, "Token", function() { return /* binding */ Token; });
+__webpack_require__.d(__webpack_exports__, "editor", function() { return /* binding */ editor_api_editor; });
+__webpack_require__.d(__webpack_exports__, "languages", function() { return /* binding */ languages; });
 
 // EXTERNAL MODULE: ./node_modules/monaco-editor/esm/vs/editor/common/config/editorOptions.js
 var editorOptions = __webpack_require__(26);
@@ -140652,20 +140747,6 @@ function createMonacoLanguagesAPI() {
 }
 
 // CONCATENATED MODULE: ./node_modules/monaco-editor/esm/vs/editor/editor.api.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CancellationTokenSource", function() { return CancellationTokenSource; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Emitter", function() { return Emitter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KeyCode", function() { return editor_api_KeyCode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KeyMod", function() { return editor_api_KeyMod; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Position", function() { return Position; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Range", function() { return Range; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Selection", function() { return Selection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectionDirection", function() { return editor_api_SelectionDirection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MarkerSeverity", function() { return editor_api_MarkerSeverity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MarkerTag", function() { return editor_api_MarkerTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Uri", function() { return Uri; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Token", function() { return Token; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editor", function() { return editor_api_editor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "languages", function() { return languages; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
