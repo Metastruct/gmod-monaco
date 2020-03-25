@@ -3,27 +3,26 @@ name: Build and Deploy GitHub Pages
 on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v1
-      
-    - name: Use Node.js 13
-      uses: actions/setup-node@v1
-      with:
-        node-version: 13
+        steps:
+            - uses: actions/checkout@v2
 
-    - name: npm install, build
-      run: |
-        yarn
-        yarn build
-      env:
-        CI: true
+            - name: Use Node.js 13
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 13
 
-    - name: Deploy GitHub Pages
-      uses: peaceiris/actions-gh-pages@v2.5.0
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./dist
+            - name: Build
+              run: |
+                  yarn
+                  yarn build
+              env:
+                  CI: true
+
+            - name: Deploy GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./dist
