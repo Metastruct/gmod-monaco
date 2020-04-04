@@ -127999,10 +127999,7 @@ var GluaFunc = /** @class */ (function (_super) {
         return ("" + (this.description.deprecated !== undefined ? "[deprecated] " : "") + (this.description.internal !== undefined ? "[internal] " : "") + "[" + this.realm + "] " + this.description.text.split("\n").shift());
     };
     GluaFunc.prototype.getSuggestDocumentation = function () {
-        return this.description.text
-            .split("\n")
-            .slice(1)
-            .join("\n");
+        return this.description.text.split("\n").slice(1).join("\n");
     };
     GluaFunc.prototype.getFullName = function () {
         if (this.type === "libraryfunc" && this.parent !== "Global") {
