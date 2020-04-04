@@ -90409,30 +90409,31 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var monaco = __importStar(__webpack_require__(150));
-var buildinSnippets = [{
+var buildinSnippets = [
+    {
         name: "local",
-        code: "local ${1:x} = ${2:1}"
+        code: "local ${1:x} = ${2:1}",
     },
     {
         name: "fun",
-        code: "function ${1:fname}(${2:...})\n${3:-- body}\nend"
+        code: "function ${1:fname}(${2:...})\n${3:-- body}\nend",
     },
     {
         name: "for",
-        code: "for ${1:i}=${2:1},${3:10} do\n${4:print(i)}\nend"
+        code: "for ${1:i}=${2:1},${3:10} do\n${4:print(i)}\nend",
     },
     {
         name: "forp",
-        code: "for ${1:i},${2:v} in pairs(${3:table_name}) do\n${4:-- body}\nend"
+        code: "for ${1:i},${2:v} in pairs(${3:table_name}) do\n${4:-- body}\nend",
     },
     {
         name: "fori",
-        code: "for ${1:i},${2:v} in ipairs(${3:table_name}) do\n${4:-- body}\nend"
+        code: "for ${1:i},${2:v} in ipairs(${3:table_name}) do\n${4:-- body}\nend",
     },
     {
         name: "hookadd",
-        code: "local function ${1:hookname}(${3:...})\n${4:-- body}\nend\nhook.Add(\"${1:hookname}\",${2:Tag},${1:hookname})"
-    }
+        code: 'local function ${1:hookname}(${3:...})\n${4:-- body}\nend\nhook.Add("${1:hookname}",${2:Tag},${1:hookname})',
+    },
 ];
 var buildinConstants = ["SERVER", "CLIENT", "_G", "_VERSION", "VERSION"];
 var keywords = [
@@ -90486,9 +90487,15 @@ var AutocompletionData = /** @class */ (function () {
                 detail: func.getDetail(),
                 documentation: func.getSuggestDocumentation(),
                 insertText: func.generateUsageSnippet(),
-                insertTextRules: func.hasArgs() ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-                tags: func.description.deprecated !== undefined ? [monaco.languages.CompletionItemTag.Deprecated] : [],
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: func.hasArgs()
+                    ? monaco.languages.CompletionItemInsertTextRule
+                        .InsertAsSnippet
+                    : monaco.languages.CompletionItemInsertTextRule
+                        .KeepWhitespace,
+                tags: func.description.deprecated !== undefined
+                    ? [monaco.languages.CompletionItemTag.Deprecated]
+                    : [],
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.globalCache.push(item);
         });
@@ -90499,8 +90506,9 @@ var AutocompletionData = /** @class */ (function () {
                 detail: "Value: " + enumObj.value,
                 documentation: enumObj.getDetail(),
                 insertText: enumObj.key,
-                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule
+                    .KeepWhitespace,
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.globalCache.push(item);
         });
@@ -90509,8 +90517,9 @@ var AutocompletionData = /** @class */ (function () {
                 label: snippet.name,
                 kind: monaco.languages.CompletionItemKind.Snippet,
                 insertText: snippet.code,
-                insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule
+                    .InsertAsSnippet,
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.globalCache.push(item);
         });
@@ -90519,7 +90528,7 @@ var AutocompletionData = /** @class */ (function () {
                 label: constant,
                 kind: monaco.languages.CompletionItemKind.Constant,
                 insertText: constant,
-                range: new monaco.Range(0, 0, 0, 0)
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.globalCache.push(item);
         });
@@ -90528,7 +90537,7 @@ var AutocompletionData = /** @class */ (function () {
                 label: keyword,
                 kind: monaco.languages.CompletionItemKind.Keyword,
                 insertText: keyword,
-                range: new monaco.Range(0, 0, 0, 0)
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.globalCache.push(item);
         });
@@ -90537,8 +90546,9 @@ var AutocompletionData = /** @class */ (function () {
                 label: moduleName,
                 kind: monaco.languages.CompletionItemKind.Module,
                 insertText: moduleName,
-                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule
+                    .KeepWhitespace,
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.globalCache.push(item);
         });
@@ -90548,8 +90558,9 @@ var AutocompletionData = /** @class */ (function () {
                 kind: interfaceValue.getCompletionKind(),
                 documentation: interfaceValue.description,
                 insertText: interfaceValue.getUsage(),
-                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule
+                    .KeepWhitespace,
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.globalCache.push(item);
         });
@@ -90565,9 +90576,15 @@ var AutocompletionData = /** @class */ (function () {
                 insertText: method.generateUsageSnippet(),
                 sortText: method.name,
                 filterText: method.name,
-                insertTextRules: method.hasArgs() ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-                tags: method.description.deprecated !== undefined ? [monaco.languages.CompletionItemTag.Deprecated] : [],
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: method.hasArgs()
+                    ? monaco.languages.CompletionItemInsertTextRule
+                        .InsertAsSnippet
+                    : monaco.languages.CompletionItemInsertTextRule
+                        .KeepWhitespace,
+                tags: method.description.deprecated !== undefined
+                    ? [monaco.languages.CompletionItemTag.Deprecated]
+                    : [],
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.methodsCache.push(item);
         });
@@ -90578,9 +90595,15 @@ var AutocompletionData = /** @class */ (function () {
                 detail: hook.getDetail(),
                 documentation: hook.getSuggestDocumentation(),
                 insertText: hook.generateUsageSnippet(),
-                insertTextRules: hook.hasArgs() ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-                tags: hook.description.deprecated !== undefined ? [monaco.languages.CompletionItemTag.Deprecated] : [],
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: hook.hasArgs()
+                    ? monaco.languages.CompletionItemInsertTextRule
+                        .InsertAsSnippet
+                    : monaco.languages.CompletionItemInsertTextRule
+                        .KeepWhitespace,
+                tags: hook.description.deprecated !== undefined
+                    ? [monaco.languages.CompletionItemTag.Deprecated]
+                    : [],
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.methodsCache.push(item);
         });
@@ -90595,8 +90618,9 @@ var AutocompletionData = /** @class */ (function () {
                 insertText: interfaceValue.getUsage(),
                 sortText: interfaceValue.name,
                 filterText: interfaceValue.name,
-                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-                range: new monaco.Range(0, 0, 0, 0)
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule
+                    .KeepWhitespace,
+                range: new monaco.Range(0, 0, 0, 0),
             };
             _this.methodsCache.push(item);
         });
@@ -90612,7 +90636,7 @@ var AutocompletionData = /** @class */ (function () {
         }
         this.updateCacheRange(this.globalCache, range);
         return {
-            suggestions: this.globalCache
+            suggestions: this.globalCache,
         };
     };
     AutocompletionData.prototype.methodAutocomplete = function (range) {
@@ -90621,7 +90645,7 @@ var AutocompletionData = /** @class */ (function () {
         }
         this.updateCacheRange(this.methodsCache, range);
         return {
-            suggestions: this.methodsCache
+            suggestions: this.methodsCache,
         };
     };
     AutocompletionData.prototype.hookAutocomplete = function (range, addQuotes) {
@@ -90636,12 +90660,12 @@ var AutocompletionData = /** @class */ (function () {
                 detail: hook.generateUsageText(),
                 documentation: hook.description.text,
                 insertText: addQuotes ? "\"" + hook.name + "\"" : hook.name,
-                range: range
+                range: range,
             };
             hookSuggestions.push(item);
         });
         return {
-            suggestions: hookSuggestions
+            suggestions: hookSuggestions,
         };
     };
     AutocompletionData.prototype.AddNewInterfaceValue = function (val) {
@@ -90650,7 +90674,8 @@ var AutocompletionData = /** @class */ (function () {
             console.error("Cant add new value without a fullname");
             return;
         }
-        if (buildinConstants.indexOf(val.fullname) !== -1 || keywords.indexOf(val.fullname) !== -1) {
+        if (buildinConstants.indexOf(val.fullname) !== -1 ||
+            keywords.indexOf(val.fullname) !== -1) {
             return;
         }
         exports.autocompletionData.interfaceValues.push(val);
@@ -119103,7 +119128,7 @@ function PreprocessGWikiElem(elem, parentElem) {
     else {
         elem.rets = [];
     }
-    if (typeof (elem.description) === "string") {
+    if (typeof elem.description === "string") {
         elem.description = { text: elem.description };
     }
     if (elem.description && !elem.description.text) {
@@ -119123,7 +119148,7 @@ function PreprocessGWikiElem(elem, parentElem) {
         // https://i.imgur.com/hipDRlx.png
         // This ruins everything
         elem.example.forEach(function (element, idx) {
-            if (typeof (element.code) !== "string") {
+            if (typeof element.code !== "string") {
                 elem.example.splice(idx, 1);
             }
         });
@@ -119152,7 +119177,8 @@ function addEnum(jsonOBJ) {
             return;
         }
         var enumObj = new GluaEnum_1.GluaEnum(element);
-        if (autocompletionData_1.autocompletionData.valuesLookup.has(enumObj.key)) { // Avoid enum duplicates
+        if (autocompletionData_1.autocompletionData.valuesLookup.has(enumObj.key)) {
+            // Avoid enum duplicates
             return;
         }
         enumObj.tableDesc = jsonOBJ.description;
@@ -119162,9 +119188,11 @@ function addEnum(jsonOBJ) {
 }
 function LoadAutocompletionData(currentState) {
     if (!exports.gwikiData) {
-        fetch('https://spiralp.github.io/gmod-wiki-declaration-scraper/gwiki.json').then(function (response) {
+        fetch("https://spiralp.github.io/gmod-wiki-declaration-scraper/gwiki.json")
+            .then(function (response) {
             return response.json();
-        }).then(function (data) {
+        })
+            .then(function (data) {
             exports.gwikiData = data;
             LoadAutocompletionData(currentState);
         });
@@ -127793,41 +127821,48 @@ var GLuaCompletionProvider = /** @class */ (function () {
     function GLuaCompletionProvider() {
     }
     GLuaCompletionProvider.prototype.provideCompletionItems = function (model, position, context, token) {
-        var lineUntil = model.getLineContent(position.lineNumber).substring(0, position.column);
+        var lineUntil = model
+            .getLineContent(position.lineNumber)
+            .substring(0, position.column);
         var word = model.getWordUntilPosition(position);
         var insertRange = {
             startLineNumber: position.lineNumber,
             endLineNumber: position.lineNumber,
             startColumn: word.startColumn,
-            endColumn: word.endColumn
+            endColumn: word.endColumn,
         };
         var prevWord = model.getWordUntilPosition({
             lineNumber: position.lineNumber,
-            column: word.startColumn - 1
+            column: word.startColumn - 1,
         });
         var lastChar = lineUntil.charAt(prevWord.endColumn - 1);
         var firstIdentifierWord = prevWord;
         var currentIdentifier = firstIdentifierWord.word;
         if (lastChar === "." || lastChar === "(") {
             while (true) {
-                if (lineUntil.charAt(firstIdentifierWord.startColumn - 2) !== ".") {
+                if (lineUntil.charAt(firstIdentifierWord.startColumn - 2) !==
+                    ".") {
                     break;
                 }
                 firstIdentifierWord = model.getWordUntilPosition({
                     lineNumber: position.lineNumber,
-                    column: firstIdentifierWord.startColumn - 1
+                    column: firstIdentifierWord.startColumn - 1,
                 });
-                currentIdentifier = firstIdentifierWord.word + "." + currentIdentifier;
+                currentIdentifier =
+                    firstIdentifierWord.word + "." + currentIdentifier;
             }
         }
         if (lastChar === ":") {
             return autocompletionData_1.autocompletionData.methodAutocomplete(insertRange);
         }
-        else if (lastChar === "." && autocompletionData_1.autocompletionData.modules.indexOf(currentIdentifier.split(".")[0]) !== -1) {
+        else if (lastChar === "." &&
+            autocompletionData_1.autocompletionData.modules.indexOf(currentIdentifier.split(".")[0]) !== -1) {
             insertRange.startColumn = firstIdentifierWord.startColumn;
             return autocompletionData_1.autocompletionData.globalAutocomplete(insertRange);
         }
-        else if ((lastChar === "(" || lastChar === "\"") && firstIdentifierWord.word === "hook" && currentIdentifier !== "hook.GetTable") {
+        else if ((lastChar === "(" || lastChar === '"') &&
+            firstIdentifierWord.word === "hook" &&
+            currentIdentifier !== "hook.GetTable") {
             return autocompletionData_1.autocompletionData.hookAutocomplete(insertRange, lastChar === "(");
         }
         else if (prevWord.word === "local") {
@@ -127837,23 +127872,24 @@ var GLuaCompletionProvider = /** @class */ (function () {
                         label: "function",
                         kind: monaco.languages.CompletionItemKind.Keyword,
                         insertText: "function",
-                        range: insertRange
+                        range: insertRange,
                     },
                     {
                         label: "fun",
                         kind: monaco.languages.CompletionItemKind.Snippet,
                         insertText: "function ${1:fname}(${2:...})\n${3:-- body}\nend",
-                        insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+                        insertTextRules: monaco.languages.CompletionItemInsertTextRule
+                            .InsertAsSnippet,
                         range: insertRange,
                     },
                 ],
-                incomplete: false
+                incomplete: false,
             };
         }
         else if (lastChar === ".") {
             return {
                 suggestions: [],
-                incomplete: false
+                incomplete: false,
             };
         }
         else {
@@ -127899,7 +127935,9 @@ var GmodInterfaceValue = /** @class */ (function (_super) {
     function GmodInterfaceValue(jsonObj) {
         var _this = _super.call(this, jsonObj) || this;
         if (!name) {
-            _this.name = "" + (_this.classFunction ? _this.fullname.split(":").pop() : _this.fullname);
+            _this.name = "" + (_this.classFunction
+                ? _this.fullname.split(":").pop()
+                : _this.fullname);
         }
         return _this;
     }
@@ -127961,7 +127999,10 @@ var GluaFunc = /** @class */ (function (_super) {
         return ("" + (this.description.deprecated !== undefined ? "[deprecated] " : "") + (this.description.internal !== undefined ? "[internal] " : "") + "[" + this.realm + "] " + this.description.text.split("\n").shift());
     };
     GluaFunc.prototype.getSuggestDocumentation = function () {
-        return this.description.text.split("\n").slice(1).join("\n");
+        return this.description.text
+            .split("\n")
+            .slice(1)
+            .join("\n");
     };
     GluaFunc.prototype.getFullName = function () {
         if (this.type === "libraryfunc" && this.parent !== "Global") {
@@ -128595,7 +128636,9 @@ var GLuaHoverProvider = /** @class */ (function () {
     }
     GLuaHoverProvider.prototype.provideHover = function (model, position, token) {
         var _a, _b;
-        var lineUntil = model.getLineContent(position.lineNumber).substring(0, position.column);
+        var lineUntil = model
+            .getLineContent(position.lineNumber)
+            .substring(0, position.column);
         var word = model.getWordAtPosition(position);
         if (!word) {
             return;
@@ -128604,35 +128647,40 @@ var GLuaHoverProvider = /** @class */ (function () {
         var currentIdentifier = word.word;
         if (lineUntil.charAt(word.startColumn - 2) === ".") {
             while (true) {
-                if (lineUntil.charAt(firstIdentifierWord.startColumn - 2) !== ".") {
+                if (lineUntil.charAt(firstIdentifierWord.startColumn - 2) !==
+                    ".") {
                     break;
                 }
                 firstIdentifierWord = model.getWordUntilPosition({
                     lineNumber: position.lineNumber,
-                    column: firstIdentifierWord.startColumn - 1
+                    column: firstIdentifierWord.startColumn - 1,
                 });
-                currentIdentifier = firstIdentifierWord.word + "." + currentIdentifier;
+                currentIdentifier =
+                    firstIdentifierWord.word + "." + currentIdentifier;
             }
         }
-        else if (lineUntil.charAt(word.startColumn - 2) === ":" && autocompletionData_1.autocompletionData.methodsLookup.has(word.word)) {
+        else if (lineUntil.charAt(word.startColumn - 2) === ":" &&
+            autocompletionData_1.autocompletionData.methodsLookup.has(word.word)) {
             var conent_1 = [];
-            (_a = autocompletionData_1.autocompletionData.methodsLookup.get(word.word)) === null || _a === void 0 ? void 0 : _a.forEach(function (method) {
+            (_a = autocompletionData_1.autocompletionData.methodsLookup
+                .get(word.word)) === null || _a === void 0 ? void 0 : _a.forEach(function (method) {
                 conent_1 = conent_1.concat(method.generateDocumentation());
             });
             return {
                 contents: conent_1,
-                range: new monaco.Range(position.lineNumber, word.startColumn, position.lineNumber, word.endColumn)
+                range: new monaco.Range(position.lineNumber, word.startColumn, position.lineNumber, word.endColumn),
             };
         }
         if (!autocompletionData_1.autocompletionData.valuesLookup.has(currentIdentifier)) {
             return {
                 contents: [],
-                range: new monaco.Range(position.lineNumber, firstIdentifierWord.startColumn, position.lineNumber, word.endColumn)
+                range: new monaco.Range(position.lineNumber, firstIdentifierWord.startColumn, position.lineNumber, word.endColumn),
             };
         }
         return {
-            contents: ((_b = autocompletionData_1.autocompletionData.valuesLookup.get(currentIdentifier)) === null || _b === void 0 ? void 0 : _b.generateDocumentation()) || [{ value: "No documentation" }],
-            range: new monaco.Range(position.lineNumber, firstIdentifierWord.startColumn, position.lineNumber, word.endColumn)
+            contents: ((_b = autocompletionData_1.autocompletionData.valuesLookup
+                .get(currentIdentifier)) === null || _b === void 0 ? void 0 : _b.generateDocumentation()) || [{ value: "No documentation" }],
+            range: new monaco.Range(position.lineNumber, firstIdentifierWord.startColumn, position.lineNumber, word.endColumn),
         };
     };
     return GLuaHoverProvider;
