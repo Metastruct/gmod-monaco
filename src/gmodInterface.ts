@@ -116,20 +116,18 @@ if (globalThis.gmodinterface) {
 
         // the LuaReport object must be passed from the gmod lua state :v
         SubmitLuaReport(report: LuaReport): void {
-            let markers: monaco.editor.IMarkerData[] = report.events.map(
-                (e) => {
-                    return {
-                        message: e.message,
-                        endColumn: e.endColumn,
-                        startColumn: e.startColumn,
-                        startLineNumber: e.line,
-                        endLineNumber: e.line,
-                        severity: e.isError
-                            ? monaco.MarkerSeverity.Error
-                            : monaco.MarkerSeverity.Warning,
-                    };
-                }
-            );
+            let markers: monaco.editor.IMarkerData[] = report.events.map(e => {
+                return {
+                    message: e.message,
+                    endColumn: e.endColumn,
+                    startColumn: e.startColumn,
+                    startLineNumber: e.line,
+                    endLineNumber: e.line,
+                    severity: e.isError
+                        ? monaco.MarkerSeverity.Error
+                        : monaco.MarkerSeverity.Warning,
+                };
+            });
 
             monaco.editor.setModelMarkers(
                 this.editor!.getModel()!,
@@ -212,7 +210,7 @@ if (globalThis.gmodinterface) {
         },
 
         LoadSessions(list: object[], newActive?: string): void {
-            list.forEach((sessionObj) => {
+            list.forEach(sessionObj => {
                 const session = EditorSession.fromObject(sessionObj);
                 sessions.set(session.name, session);
             });
@@ -291,7 +289,7 @@ if (globalThis.gmodinterface) {
                     );
                 }
             });
-            tables.forEach((table) => {
+            tables.forEach(table => {
                 if (autocompletionData.modules.indexOf(table) === -1) {
                     autocompletionData.modules.push(table);
                 }

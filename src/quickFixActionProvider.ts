@@ -8,8 +8,7 @@ interface QuickFixActionDictionary {
 }
 
 const quickFixActions: QuickFixActionDictionary = {
-	// we probably need an AST parser for these, you can add simple quickfix actions though, if you're brave enough
-
+    // we probably need an AST parser for these, you can add simple quickfix actions though, if you're brave enough
     /*["211"]: ( // unused local variable
         model: monaco.editor.ITextModel,
         markerData: monaco.editor.IMarkerData

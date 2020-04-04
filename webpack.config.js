@@ -1,13 +1,13 @@
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
     mode: "production",
     entry: {
-        index: './src/index.ts',
-        repl: './src/repl.ts'
+        index: "./src/index.ts",
+        repl: "./src/repl.ts",
     },
     resolve: {
         extensions: [".ts", ".js"],
@@ -37,14 +37,14 @@ module.exports = {
     plugins: [
         new MonacoWebpackPlugin(),
         new HtmlWebpackPlugin({
-          template: 'views/index.html',
-          chunks: ["index"]
+            template: "views/index.html",
+            chunks: ["index"],
         }),
         new HtmlWebpackPlugin({
-          filename: 'repl.html',
-          template: 'views/repl.html',
-          chunks: ["repl"]
-        })
+            filename: "repl.html",
+            template: "views/repl.html",
+            chunks: ["repl"],
+        }),
         // new webpack.optimize.LimitChunkCountPlugin({
         //   maxChunks: 1, // disable creating additional chunks
         // }),
@@ -55,7 +55,7 @@ module.exports = {
         minimize: false,
     },
 
-    devtool:"source-map",
+    devtool: "source-map",
 
     devServer: {
         contentBase: path.join(__dirname, "dist"),
