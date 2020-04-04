@@ -127948,12 +127948,7 @@ var GmodInterfaceValue = /** @class */ (function (_super) {
         return this.fullname;
     };
     GmodInterfaceValue.prototype.getCompletionKind = function () {
-        if (this.type in monaco.languages.CompletionItemKind) {
-            // @ts-ignore
-            // Have no idea how to do this properly
-            return monaco.languages.CompletionItemKind[this.type];
-        }
-        return monaco.languages.CompletionItemKind.Value;
+        return monaco.languages.CompletionItemKind[this.type];
     };
     GmodInterfaceValue.prototype.generateDocumentation = function () {
         if (this.description) {

@@ -127948,12 +127948,7 @@ var GmodInterfaceValue = /** @class */ (function (_super) {
         return this.fullname;
     };
     GmodInterfaceValue.prototype.getCompletionKind = function () {
-        if (this.type in monaco.languages.CompletionItemKind) {
-            // @ts-ignore
-            // Have no idea how to do this properly
-            return monaco.languages.CompletionItemKind[this.type];
-        }
-        return monaco.languages.CompletionItemKind.Value;
+        return monaco.languages.CompletionItemKind[this.type];
     };
     GmodInterfaceValue.prototype.generateDocumentation = function () {
         if (this.description) {
@@ -142083,6 +142078,7 @@ var EditorSession = /** @class */ (function () {
         this.code = "-- empty :c";
         this.language = "glua";
         this.model = monaco.editor.createModel(this.code, this.language);
+        this.versionId = 0;
     }
     EditorSession.prototype.getSerializable = function () {
         return {
@@ -142090,15 +142086,11 @@ var EditorSession = /** @class */ (function () {
             code: this.code,
             language: this.language,
             viewState: this.viewState,
-            vesrionId: this.model.getAlternativeVersionId(),
+            versionId: this.model.getAlternativeVersionId(),
         };
     };
     EditorSession.fromObject = function (sessionObj) {
-        var newSession = new EditorSession();
-        for (var propName in sessionObj) {
-            // @ts-ignore
-            newSession[propName] = sessionObj[propName];
-        }
+        var newSession = Object.assign(new EditorSession(), sessionObj);
         newSession.model.setValue(newSession.code);
         monaco.editor.setModelLanguage(newSession.model, newSession.language);
         return newSession;
