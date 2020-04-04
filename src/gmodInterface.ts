@@ -1,13 +1,13 @@
 import * as monaco from "monaco-editor";
 import { LuaReport } from "./luacheckCompat";
-import { EditorSession } from "./editorSession";
+import { EditorSession, EditorSessionObject } from "./editorSession";
 import { GmodInterfaceValue } from "./glua/GmodInterfaceValue";
 import { autocompletionData, ResetAutocomplete } from "./autocompletionData";
 import { LoadAutocompletionData } from "./glua/Gwiki";
 
 declare global {
     namespace globalThis {
-        var gmodinterface: GmodInterface | ExtendedGmodInterface | undefined;
+        var gmodinterface: GmodInterface | undefined;
     }
 }
 
@@ -176,7 +176,9 @@ if (globalThis.gmodinterface) {
             this.OnSessionSet(session.getSerializable());
         },
 
-        CreateSession(sessionObj: object): EditorSession | undefined {
+        CreateSession(
+            sessionObj: EditorSessionObject
+        ): EditorSession | undefined {
             const session = EditorSession.fromObject(sessionObj);
             if (sessions.has(session.name)) {
                 console.error(
@@ -211,7 +213,7 @@ if (globalThis.gmodinterface) {
             session.model.dispose();
         },
 
-        LoadSessions(list: object[], newActive?: string): void {
+        LoadSessions(list: EditorSessionObject[], newActive?: string): void {
             list.forEach((sessionObj) => {
                 const session = EditorSession.fromObject(sessionObj);
                 sessions.set(session.name, session);
@@ -220,6 +222,7 @@ if (globalThis.gmodinterface) {
                 this.SetSession(newActive);
             }
         },
+
         AddAutocompleteValue(value: object): void {
             autocompletionData.AddNewInterfaceValue(
                 new GmodInterfaceValue(value)
