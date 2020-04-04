@@ -81,9 +81,7 @@ export let gwikiData: any[];
 
 export function LoadAutocompletionData(currentState: string) {
     if (!gwikiData) {
-        fetch(
-            "https://spiralp.github.io/gmod-wiki-declaration-scraper/gwiki.json"
-        )
+        fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
             .then(response => {
                 return response.json();
             })
