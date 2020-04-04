@@ -1,7 +1,7 @@
 import * as monaco from "monaco-editor";
 import { formatText } from "lua-fmt";
 
-export class LuaFormatter
+export class GLuaFormatter
     implements monaco.languages.DocumentFormattingEditProvider {
     displayName?: string;
 
