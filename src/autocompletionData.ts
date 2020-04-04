@@ -113,7 +113,7 @@ class AutocompletionData {
             };
             this.globalCache.push(item);
         });
-        autocompletionData.snippets.forEach(snippet => {
+        autocompletionData.snippets.forEach((snippet) => {
             const item = {
                 label: snippet.name,
                 kind: monaco.languages.CompletionItemKind.Snippet,
@@ -125,7 +125,7 @@ class AutocompletionData {
             };
             this.globalCache.push(item);
         });
-        autocompletionData.constants.forEach(constant => {
+        autocompletionData.constants.forEach((constant) => {
             const item = {
                 label: constant,
                 kind: monaco.languages.CompletionItemKind.Constant,
@@ -134,7 +134,7 @@ class AutocompletionData {
             };
             this.globalCache.push(item);
         });
-        autocompletionData.keywords.forEach(keyword => {
+        autocompletionData.keywords.forEach((keyword) => {
             const item = {
                 label: keyword,
                 kind: monaco.languages.CompletionItemKind.Keyword,
@@ -239,7 +239,7 @@ class AutocompletionData {
         cache: monaco.languages.CompletionItem[],
         newRange: monaco.IRange
     ) {
-        cache.forEach(val => {
+        cache.forEach((val) => {
             val.range = newRange;
         });
     }
