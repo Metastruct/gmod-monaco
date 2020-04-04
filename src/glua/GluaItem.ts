@@ -5,7 +5,7 @@ export abstract class GluaItem {
         for (const propName in jsonObj) {
             // Will ts-ignore this bc our json is dirty
             // @ts-ignore
-            this[propName] = jsonObj[propName]
+            this[propName] = jsonObj[propName];
         }
         // Object.assign(this, jsonObj)
     }

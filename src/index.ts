@@ -27,47 +27,47 @@ monaco.languages.registerCompletionItemProvider(
     "glua",
     new GLuaCompletionProvider()
 );
-monaco.languages.registerHoverProvider(
-    "glua",
-    new GLuaHoverProvider()
-);
+monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
 monaco.languages.registerCodeActionProvider(
     "glua",
     new GLuaQuickFixActionProvider()
 );
 
-const editor = monaco.editor.create(document.getElementById("container")!, {
-    value: "",
-    language: "glua",
+const editor = monaco.editor.create(
+    document.getElementById("container")!,
+    {
+        value: "",
+        language: "glua",
 
-    theme: "vs-dark",
+        theme: "vs-dark",
 
-    minimap: {
-        enabled: true,
-    },
-    autoIndent: "full",
-    formatOnPaste: true,
-    formatOnType: true,
-    acceptSuggestionOnEnter: "off",
-}, 
-{
-    storageService: {
-        get() {},
-        getBoolean(key : string) {
-            if (key === "expandSuggestionDocs") return true;
-            return false;
+        minimap: {
+            enabled: true,
         },
-        remove() {},
-        store() {},
-        onWillSaveState() {},
-        onDidChangeStorage() {},
+        autoIndent: "full",
+        formatOnPaste: true,
+        formatOnType: true,
+        acceptSuggestionOnEnter: "off",
     },
-});
+    {
+        storageService: {
+            get() {},
+            getBoolean(key: string) {
+                if (key === "expandSuggestionDocs") return true;
+                return false;
+            },
+            remove() {},
+            store() {},
+            onWillSaveState() {},
+            onDidChangeStorage() {},
+        },
+    }
+);
 
 editor.focus();
 window.addEventListener("resize", () => editor.layout());
 
-LoadAutocompletionData("Client")
+LoadAutocompletionData("Client");
 
 // so all themes are available to gmod when OnReady is fired
 // this prevents any loading order issue
