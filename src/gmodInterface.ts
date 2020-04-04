@@ -242,7 +242,7 @@ if (globalThis.gmodinterface) {
             autocompletionData.GenerateMethodsCache();
             autocompletionData.GenerateGlobalCache();
             const values = clData.values.split("|");
-            const fucns = clData.funcs.split("|");
+            const funcs = clData.funcs.split("|");
             const tables: string[] = [];
             values.forEach((value: string) => {
                 let name = value;
@@ -263,7 +263,7 @@ if (globalThis.gmodinterface) {
                     );
                 }
             });
-            fucns.forEach((func: string) => {
+            funcs.forEach((func: string) => {
                 let name = func;
                 let classFunction = false;
                 let type = "Function";
