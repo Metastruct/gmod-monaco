@@ -110,6 +110,4 @@ temp/
 
 # End of https://www.gitignore.io/api/node
 
-!dist/index.html
-!dist/glua_wiki_dump.json
 package-lock.json

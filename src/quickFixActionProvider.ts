@@ -42,7 +42,7 @@ const quickFixActions: QuickFixActionDictionary = {
     },*/
 };
 
-export class LuaQuickFixActionProvider
+export class GLuaQuickFixActionProvider
     implements monaco.languages.CodeActionProvider {
     provideCodeActions(
         model: monaco.editor.ITextModel,
