@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[25],{
 
-/***/ 524:
+/***/ 527:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,10 +13,11 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
-    wordPattern: /(#?-?\d*\.\d\w*%?)|([@#!.:]?[\w-?]+%?)|[@#!.]/g,
+    // the default separators except `@$`
+    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g,
     comments: {
+        lineComment: '//',
         blockComment: ['/*', '*/'],
-        lineComment: '//'
     },
     brackets: [
         ['{', '}'],
@@ -24,11 +25,11 @@ var conf = {
         ['(', ')'],
     ],
     autoClosingPairs: [
-        { open: '{', close: '}', notIn: ['string', 'comment'] },
-        { open: '[', close: ']', notIn: ['string', 'comment'] },
-        { open: '(', close: ')', notIn: ['string', 'comment'] },
-        { open: '"', close: '"', notIn: ['string', 'comment'] },
-        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
+        { open: '{', close: '}' },
+        { open: '[', close: ']' },
+        { open: '(', close: ')' },
+        { open: '"', close: '"' },
+        { open: '\'', close: '\'' },
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
@@ -36,123 +37,124 @@ var conf = {
         { open: '(', close: ')' },
         { open: '"', close: '"' },
         { open: '\'', close: '\'' },
+        { open: '<', close: '>' },
     ],
     folding: {
         markers: {
-            start: new RegExp("^\\s*\\/\\*\\s*#region\\b\\s*(.*?)\\s*\\*\\/"),
-            end: new RegExp("^\\s*\\/\\*\\s*#endregion\\b.*\\*\\/")
+            start: new RegExp("^\\s*//\\s*(?:(?:#?region\\b)|(?:<editor-fold\\b))"),
+            end: new RegExp("^\\s*//\\s*(?:(?:#?endregion\\b)|(?:</editor-fold>))")
         }
     }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.less',
-    identifier: '-?-?([a-zA-Z]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
-    identifierPlus: '-?-?([a-zA-Z:.]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-:.]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
-    brackets: [
-        { open: '{', close: '}', token: 'delimiter.curly' },
-        { open: '[', close: ']', token: 'delimiter.bracket' },
-        { open: '(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '<', close: '>', token: 'delimiter.angle' }
+    tokenPostfix: '.kt',
+    keywords: [
+        'as', 'as?', 'break', 'class', 'continue', 'do', 'else', 'false', 'for', 'fun', 'if',
+        'in', '!in', 'interface', 'is', '!is', 'null', 'object', 'package', 'return', 'super',
+        'this', 'throw', 'true', 'try', 'typealias', 'val', 'var', 'when', 'while', 'by',
+        'catch', 'constructor', 'delegate', 'dynamic', 'field', 'file', 'finally', 'get',
+        'import', 'init', 'param', 'property', 'receiver', 'set', 'setparam', 'where', 'actual',
+        'abstract', 'annotation', 'companion', 'const', 'crossinline', 'data', 'enum', 'expect',
+        'external', 'final', 'infix', 'inline', 'inner', 'internal', 'lateinit', 'noinline',
+        'open', 'operator', 'out', 'override', 'private', 'protected', 'public', 'reified',
+        'sealed', 'suspend', 'tailrec', 'vararg', 'field', 'it'
     ],
+    operators: [
+        '+', '-', '*', '/', '%', '=', '+=', '-=', '*=', '/=',
+        '%=', '++', '--', '&&', '||', '!', '==', '!=', '===',
+        '!==', '>', '<', '<=', '>=', '[', ']', '!!', '?.', '?:',
+        '::', '..', ':', '?', '->', '@', ';', '$', '_'
+    ],
+    // we include these common regular expressions
+    symbols: /[=><!~?:&|+\-*\/\^%]+/,
+    escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
+    digits: /\d+(_+\d+)*/,
+    octaldigits: /[0-7]+(_+[0-7]+)*/,
+    binarydigits: /[0-1]+(_+[0-1]+)*/,
+    hexdigits: /[[0-9a-fA-F]+(_+[0-9a-fA-F]+)*/,
+    // The main tokenizer for our languages
     tokenizer: {
         root: [
-            { include: '@nestedJSBegin' },
-            ['[ \\t\\r\\n]+', ''],
-            { include: '@comments' },
-            { include: '@keyword' },
-            { include: '@strings' },
-            { include: '@numbers' },
-            ['[*_]?[a-zA-Z\\-\\s]+(?=:.*(;|(\\\\$)))', 'attribute.name', '@attribute'],
-            ['url(\\-prefix)?\\(', { token: 'tag', next: '@urldeclaration' }],
-            ['[{}()\\[\\]]', '@brackets'],
-            ['[,:;]', 'delimiter'],
-            ['#@identifierPlus', 'tag.id'],
-            ['&', 'tag'],
-            ['\\.@identifierPlus(?=\\()', 'tag.class', '@attribute'],
-            ['\\.@identifierPlus', 'tag.class'],
-            ['@identifierPlus', 'tag'],
-            { include: '@operators' },
-            ['@(@identifier(?=[:,\\)]))', 'variable', '@attribute'],
-            ['@(@identifier)', 'variable'],
-            ['@', 'key', '@atRules']
+            // class name highlighting
+            [/[A-Z][\w\$]*/, 'type.identifier'],
+            // identifiers and keywords
+            [/[a-zA-Z_$][\w$]*/, {
+                    cases: {
+                        '@keywords': { token: 'keyword.$0' },
+                        '@default': 'identifier'
+                    }
+                }],
+            // whitespace
+            { include: '@whitespace' },
+            // delimiters and operators
+            [/[{}()\[\]]/, '@brackets'],
+            [/[<>](?!@symbols)/, '@brackets'],
+            [/@symbols/, {
+                    cases: {
+                        '@operators': 'delimiter',
+                        '@default': ''
+                    }
+                }],
+            // @ annotations.
+            [/@\s*[a-zA-Z_\$][\w\$]*/, 'annotation'],
+            // numbers
+            [/(@digits)[eE]([\-+]?(@digits))?[fFdD]?/, 'number.float'],
+            [/(@digits)\.(@digits)([eE][\-+]?(@digits))?[fFdD]?/, 'number.float'],
+            [/0[xX](@hexdigits)[Ll]?/, 'number.hex'],
+            [/0(@octaldigits)[Ll]?/, 'number.octal'],
+            [/0[bB](@binarydigits)[Ll]?/, 'number.binary'],
+            [/(@digits)[fFdD]/, 'number.float'],
+            [/(@digits)[lL]?/, 'number'],
+            // delimiter: after number because of .\d floats
+            [/[;,.]/, 'delimiter'],
+            // strings
+            [/"([^"\\]|\\.)*$/, 'string.invalid'],
+            [/"""/, 'string', '@multistring'],
+            [/"/, 'string', '@string'],
+            // characters
+            [/'[^\\']'/, 'string'],
+            [/(')(@escapes)(')/, ['string', 'string.escape', 'string']],
+            [/'/, 'string.invalid']
         ],
-        nestedJSBegin: [
-            ['``', 'delimiter.backtick'],
-            ['`', { token: 'delimiter.backtick', next: '@nestedJSEnd', nextEmbedded: 'text/javascript' }],
-        ],
-        nestedJSEnd: [
-            ['`', { token: 'delimiter.backtick', next: '@pop', nextEmbedded: '@pop' }],
-        ],
-        operators: [
-            ['[<>=\\+\\-\\*\\/\\^\\|\\~]', 'operator']
-        ],
-        keyword: [
-            ['(@[\\s]*import|![\\s]*important|true|false|when|iscolor|isnumber|isstring|iskeyword|isurl|ispixel|ispercentage|isem|hue|saturation|lightness|alpha|lighten|darken|saturate|desaturate|fadein|fadeout|fade|spin|mix|round|ceil|floor|percentage)\\b', 'keyword']
-        ],
-        urldeclaration: [
-            { include: '@strings' },
-            ['[^)\r\n]+', 'string'],
-            ['\\)', { token: 'tag', next: '@pop' }],
-        ],
-        attribute: [
-            { include: '@nestedJSBegin' },
-            { include: '@comments' },
-            { include: '@strings' },
-            { include: '@numbers' },
-            { include: '@keyword' },
-            ['[a-zA-Z\\-]+(?=\\()', 'attribute.value', '@attribute'],
-            ['>', 'operator', '@pop'],
-            ['@identifier', 'attribute.value'],
-            { include: '@operators' },
-            ['@(@identifier)', 'variable'],
-            ['[)\\}]', '@brackets', '@pop'],
-            ['[{}()\\[\\]>]', '@brackets'],
-            ['[;]', 'delimiter', '@pop'],
-            ['[,=:]', 'delimiter'],
-            ['\\s', ''],
-            ['.', 'attribute.value']
-        ],
-        comments: [
-            ['\\/\\*', 'comment', '@comment'],
-            ['\\/\\/+.*', 'comment'],
+        whitespace: [
+            [/[ \t\r\n]+/, ''],
+            [/\/\*\*(?!\/)/, 'comment.doc', '@javadoc'],
+            [/\/\*/, 'comment', '@comment'],
+            [/\/\/.*$/, 'comment'],
         ],
         comment: [
-            ['\\*\\/', 'comment', '@pop'],
-            ['.', 'comment'],
+            [/[^\/*]+/, 'comment'],
+            [/\/\*/, 'comment', '@comment'],
+            [/\*\//, 'comment', '@pop'],
+            [/[\/*]/, 'comment']
         ],
-        numbers: [
-            ['(\\d*\\.)?\\d+([eE][\\-+]?\\d+)?', { token: 'attribute.value.number', next: '@units' }],
-            ['#[0-9a-fA-F_]+(?!\\w)', 'attribute.value.hex']
+        //Identical copy of comment above, except for the addition of .doc
+        javadoc: [
+            [/[^\/*]+/, 'comment.doc'],
+            [/\/\*/, 'comment.doc', '@push'],
+            [/\/\*/, 'comment.doc.invalid'],
+            [/\*\//, 'comment.doc', '@pop'],
+            [/[\/*]/, 'comment.doc']
         ],
-        units: [
-            ['(em|ex|ch|rem|vmin|vmax|vw|vh|vm|cm|mm|in|px|pt|pc|deg|grad|rad|turn|s|ms|Hz|kHz|%)?', 'attribute.value.unit', '@pop']
+        string: [
+            [/[^\\"]+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/\\./, 'string.escape.invalid'],
+            [/"/, 'string', '@pop']
         ],
-        strings: [
-            ['~?"', { token: 'string.delimiter', next: '@stringsEndDoubleQuote' }],
-            ['~?\'', { token: 'string.delimiter', next: '@stringsEndQuote' }]
+        multistring: [
+            [/[^\\"]+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/\\./, 'string.escape.invalid'],
+            [/"""/, 'string', '@pop'],
+            [/./, 'string']
         ],
-        stringsEndDoubleQuote: [
-            ['\\\\"', 'string'],
-            ['"', { token: 'string.delimiter', next: '@popall' }],
-            ['.', 'string']
-        ],
-        stringsEndQuote: [
-            ['\\\\\'', 'string'],
-            ['\'', { token: 'string.delimiter', next: '@popall' }],
-            ['.', 'string']
-        ],
-        atRules: [
-            { include: '@comments' },
-            { include: '@strings' },
-            ['[()]', 'delimiter'],
-            ['[\\{;]', 'delimiter', '@pop'],
-            ['.', 'key']
-        ]
-    }
+    },
 };
 
 
 /***/ })
 
 }]);
+//# sourceMappingURL=25.bundle.js.map

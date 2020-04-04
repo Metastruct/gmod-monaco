@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[16],{
 
-/***/ 514:
+/***/ 517:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,106 +13,168 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
+    wordPattern: /(#?-?\d*\.\d\w*%?)|((::|[@#.!:])?[\w-?]+%?)|::|[@#.!:]/g,
+    comments: {
+        blockComment: ['/*', '*/']
+    },
     brackets: [
         ['{', '}'],
         ['[', ']'],
         ['(', ')']
     ],
     autoClosingPairs: [
-        { open: '{', close: '}' },
-        { open: '[', close: ']' },
-        { open: '(', close: ')' },
-        { open: '"', close: '"' },
-        { open: '\'', close: '\'' },
+        { open: '{', close: '}', notIn: ['string', 'comment'] },
+        { open: '[', close: ']', notIn: ['string', 'comment'] },
+        { open: '(', close: ')', notIn: ['string', 'comment'] },
+        { open: '"', close: '"', notIn: ['string', 'comment'] },
+        { open: '\'', close: '\'', notIn: ['string', 'comment'] }
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
         { open: '"', close: '"' },
-        { open: '\'', close: '\'' },
-    ]
+        { open: '\'', close: '\'' }
+    ],
+    folding: {
+        markers: {
+            start: new RegExp("^\\s*\\/\\*\\s*#region\\b\\s*(.*?)\\s*\\*\\/"),
+            end: new RegExp("^\\s*\\/\\*\\s*#endregion\\b.*\\*\\/")
+        }
+    }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.dockerfile',
-    variable: /\${?[\w]+}?/,
+    tokenPostfix: '.css',
+    ws: '[ \t\n\r\f]*',
+    identifier: '-?-?([a-zA-Z]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
+    brackets: [
+        { open: '{', close: '}', token: 'delimiter.bracket' },
+        { open: '[', close: ']', token: 'delimiter.bracket' },
+        { open: '(', close: ')', token: 'delimiter.parenthesis' },
+        { open: '<', close: '>', token: 'delimiter.angle' }
+    ],
     tokenizer: {
         root: [
-            { include: '@whitespace' },
-            { include: '@comment' },
-            [/(ONBUILD)(\s+)/, ['keyword', '']],
-            [/(ENV)(\s+)([\w]+)/, ['keyword', '', { token: 'variable', next: '@arguments' }]],
-            [/(FROM|MAINTAINER|RUN|EXPOSE|ENV|ADD|ARG|VOLUME|LABEL|USER|WORKDIR|COPY|CMD|STOPSIGNAL|SHELL|HEALTHCHECK|ENTRYPOINT)/, { token: 'keyword', next: '@arguments' }]
+            { include: '@selector' },
         ],
-        arguments: [
-            { include: '@whitespace' },
+        selector: [
+            { include: '@comments' },
+            { include: '@import' },
             { include: '@strings' },
-            [/(@variable)/, {
-                    cases: {
-                        '@eos': { token: 'variable', next: '@popall' },
-                        '@default': 'variable'
-                    }
-                }],
-            [/\\/, {
-                    cases: {
-                        '@eos': '',
-                        '@default': ''
-                    }
-                }],
-            [/./, {
-                    cases: {
-                        '@eos': { token: '', next: '@popall' },
-                        '@default': ''
-                    }
-                }],
+            ['[@](keyframes|-webkit-keyframes|-moz-keyframes|-o-keyframes)', { token: 'keyword', next: '@keyframedeclaration' }],
+            ['[@](page|content|font-face|-moz-document)', { token: 'keyword' }],
+            ['[@](charset|namespace)', { token: 'keyword', next: '@declarationbody' }],
+            ['(url-prefix)(\\()', ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]],
+            ['(url)(\\()', ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]],
+            { include: '@selectorname' },
+            ['[\\*]', 'tag'],
+            ['[>\\+,]', 'delimiter'],
+            ['\\[', { token: 'delimiter.bracket', next: '@selectorattribute' }],
+            ['{', { token: 'delimiter.bracket', next: '@selectorbody' }]
         ],
-        // Deal with white space, including comments
-        whitespace: [
-            [/\s+/, {
-                    cases: {
-                        '@eos': { token: '', next: '@popall' },
-                        '@default': ''
-                    }
-                }],
+        selectorbody: [
+            { include: '@comments' },
+            ['[*_]?@identifier@ws:(?=(\\s|\\d|[^{;}]*[;}]))', 'attribute.name', '@rulevalue'],
+            ['}', { token: 'delimiter.bracket', next: '@pop' }]
+        ],
+        selectorname: [
+            ['(\\.|#(?=[^{])|%|(@identifier)|:)+', 'tag'],
+        ],
+        selectorattribute: [
+            { include: '@term' },
+            [']', { token: 'delimiter.bracket', next: '@pop' }],
+        ],
+        term: [
+            { include: '@comments' },
+            ['(url-prefix)(\\()', ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]],
+            ['(url)(\\()', ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]],
+            { include: '@functioninvocation' },
+            { include: '@numbers' },
+            { include: '@name' },
+            ['([<>=\\+\\-\\*\\/\\^\\|\\~,])', 'delimiter'],
+            [',', 'delimiter']
+        ],
+        rulevalue: [
+            { include: '@comments' },
+            { include: '@strings' },
+            { include: '@term' },
+            ['!important', 'keyword'],
+            [';', 'delimiter', '@pop'],
+            ['(?=})', { token: '', next: '@pop' }] // missing semicolon
+        ],
+        warndebug: [
+            ['[@](warn|debug)', { token: 'keyword', next: '@declarationbody' }]
+        ],
+        import: [
+            ['[@](import)', { token: 'keyword', next: '@declarationbody' }]
+        ],
+        urldeclaration: [
+            { include: '@strings' },
+            ['[^)\r\n]+', 'string'],
+            ['\\)', { token: 'delimiter.parenthesis', next: '@pop' }]
+        ],
+        parenthizedterm: [
+            { include: '@term' },
+            ['\\)', { token: 'delimiter.parenthesis', next: '@pop' }]
+        ],
+        declarationbody: [
+            { include: '@term' },
+            [';', 'delimiter', '@pop'],
+            ['(?=})', { token: '', next: '@pop' }] // missing semicolon
+        ],
+        comments: [
+            ['\\/\\*', 'comment', '@comment'],
+            ['\\/\\/+.*', 'comment']
         ],
         comment: [
-            [/(^#.*$)/, 'comment', '@popall']
+            ['\\*\\/', 'comment', '@pop'],
+            [/[^*/]+/, 'comment'],
+            [/./, 'comment'],
         ],
-        // Recognize strings, including those broken across lines with \ (but not without)
+        name: [
+            ['@identifier', 'attribute.value']
+        ],
+        numbers: [
+            ['-?(\\d*\\.)?\\d+([eE][\\-+]?\\d+)?', { token: 'attribute.value.number', next: '@units' }],
+            ['#[0-9a-fA-F_]+(?!\\w)', 'attribute.value.hex']
+        ],
+        units: [
+            ['(em|ex|ch|rem|vmin|vmax|vw|vh|vm|cm|mm|in|px|pt|pc|deg|grad|rad|turn|s|ms|Hz|kHz|%)?', 'attribute.value.unit', '@pop']
+        ],
+        keyframedeclaration: [
+            ['@identifier', 'attribute.value'],
+            ['{', { token: 'delimiter.bracket', switchTo: '@keyframebody' }],
+        ],
+        keyframebody: [
+            { include: '@term' },
+            ['{', { token: 'delimiter.bracket', next: '@selectorbody' }],
+            ['}', { token: 'delimiter.bracket', next: '@pop' }],
+        ],
+        functioninvocation: [
+            ['@identifier\\(', { token: 'attribute.value', next: '@functionarguments' }],
+        ],
+        functionarguments: [
+            ['\\$@identifier@ws:', 'attribute.name'],
+            ['[,]', 'delimiter'],
+            { include: '@term' },
+            ['\\)', { token: 'attribute.value', next: '@pop' }],
+        ],
         strings: [
-            [/'$/, 'string', '@popall'],
-            [/'/, 'string', '@stringBody'],
-            [/"$/, 'string', '@popall'],
-            [/"/, 'string', '@dblStringBody']
+            ['~?"', { token: 'string', next: '@stringenddoublequote' }],
+            ['~?\'', { token: 'string', next: '@stringendquote' }]
         ],
-        stringBody: [
-            [/[^\\\$']/, {
-                    cases: {
-                        '@eos': { token: 'string', next: '@popall' },
-                        '@default': 'string'
-                    }
-                }],
-            [/\\./, 'string.escape'],
-            [/'$/, 'string', '@popall'],
-            [/'/, 'string', '@pop'],
-            [/(@variable)/, 'variable'],
-            [/\\$/, 'string'],
-            [/$/, 'string', '@popall']
+        stringenddoublequote: [
+            ['\\\\.', 'string'],
+            ['"', { token: 'string', next: '@pop' }],
+            [/[^\\"]+/, 'string'],
+            ['.', 'string']
         ],
-        dblStringBody: [
-            [/[^\\\$"]/, {
-                    cases: {
-                        '@eos': { token: 'string', next: '@popall' },
-                        '@default': 'string'
-                    }
-                }],
-            [/\\./, 'string.escape'],
-            [/"$/, 'string', '@popall'],
-            [/"/, 'string', '@pop'],
-            [/(@variable)/, 'variable'],
-            [/\\$/, 'string'],
-            [/$/, 'string', '@popall']
+        stringendquote: [
+            ['\\\\.', 'string'],
+            ['\'', { token: 'string', next: '@pop' }],
+            [/[^\\']+/, 'string'],
+            ['.', 'string']
         ]
     }
 };
@@ -121,3 +183,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=16.bundle.js.map

@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[37],{
 
-/***/ 536:
+/***/ 539:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,619 +8,286 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "conf", function() { return conf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "language", function() { return language; });
 /*---------------------------------------------------------------------------------------------
- *  Copyright (c) Artyom Shalkhakov. All rights reserved.
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
- *
- *  Based on the ATS/Postiats lexer by Hongwei Xi.
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
+    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\@\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g,
     comments: {
         lineComment: '//',
-        blockComment: ['(*', '*)'],
+        blockComment: ['/*', '*/']
     },
-    brackets: [['{', '}'], ['[', ']'], ['(', ')'], ['<', '>']],
+    brackets: [
+        ['{', '}'],
+        ['[', ']'],
+        ['(', ')']
+    ],
     autoClosingPairs: [
-        { open: '"', close: '"', notIn: ['string', 'comment'] },
-        { open: '{', close: '}', notIn: ['string', 'comment'] },
-        { open: '[', close: ']', notIn: ['string', 'comment'] },
-        { open: '(', close: ')', notIn: ['string', 'comment'] },
-    ]
+        { open: '{', close: '}', notIn: ['string'] },
+        { open: '[', close: ']', notIn: ['string'] },
+        { open: '(', close: ')', notIn: ['string'] },
+        { open: '"', close: '"', notIn: ['string'] },
+        { open: '\'', close: '\'', notIn: ['string', 'comment'] }
+    ],
+    folding: {
+        markers: {
+            start: new RegExp("^\\s*(#|\/\/)region\\b"),
+            end: new RegExp("^\\s*(#|\/\/)endregion\\b")
+        }
+    }
 };
 var language = {
-    tokenPostfix: '.pats',
-    // TODO: staload and dynload are followed by a special kind of string literals
-    // with {$IDENTIFER} variables, and it also may make sense to highlight
-    // the punctuation (. and / and \) differently.
-    // Set defaultToken to invalid to see what you do not tokenize yet
-    defaultToken: 'invalid',
-    // keyword reference: https://github.com/githwxi/ATS-Postiats/blob/master/src/pats_lexing_token.dats
-    keywords: [
-        //
-        "abstype",
-        "abst0ype",
-        "absprop",
-        "absview",
-        "absvtype",
-        "absviewtype",
-        "absvt0ype",
-        "absviewt0ype",
-        //
-        "as",
-        //
-        "and",
-        //
-        "assume",
-        //
-        "begin",
-        //
-        /*
-                "case", // CASE
-        */
-        //
-        "classdec",
-        //
-        "datasort",
-        //
-        "datatype",
-        "dataprop",
-        "dataview",
-        "datavtype",
-        "dataviewtype",
-        //
-        "do",
-        //
-        "end",
-        //
-        "extern",
-        "extype",
-        "extvar",
-        //
-        "exception",
-        //
-        "fn",
-        "fnx",
-        "fun",
-        //
-        "prfn",
-        "prfun",
-        //
-        "praxi",
-        "castfn",
-        //
-        "if",
-        "then",
-        "else",
-        //
-        "ifcase",
-        //
-        "in",
-        //
-        "infix",
-        "infixl",
-        "infixr",
-        "prefix",
-        "postfix",
-        //
-        "implmnt",
-        "implement",
-        //
-        "primplmnt",
-        "primplement",
-        //
-        "import",
-        //
-        /*
-                "lam", // LAM
-                "llam", // LLAM
-                "fix", // FIX
-        */
-        //
-        "let",
-        //
-        "local",
-        //
-        "macdef",
-        "macrodef",
-        //
-        "nonfix",
-        //
-        "symelim",
-        "symintr",
-        "overload",
-        //
-        "of",
-        "op",
-        //
-        "rec",
-        //
-        "sif",
-        "scase",
-        //
-        "sortdef",
-        /*
-        // HX: [sta] is now deprecated
-        */
-        "sta",
-        "stacst",
-        "stadef",
-        "static",
-        /*
-                "stavar", // T_STAVAR
-        */
-        //
-        "staload",
-        "dynload",
-        //
-        "try",
-        //
-        "tkindef",
-        //
-        /*
-                "type", // TYPE
-        */
-        "typedef",
-        "propdef",
-        "viewdef",
-        "vtypedef",
-        "viewtypedef",
-        //
-        /*
-                "val", // VAL
-        */
-        "prval",
-        //
-        "var",
-        "prvar",
-        //
-        "when",
-        "where",
-        //
-        /*
-                "for", // T_FOR
-                "while", // T_WHILE
-        */
-        //
-        "with",
-        //
-        "withtype",
-        "withprop",
-        "withview",
-        "withvtype",
-        "withviewtype",
-    ],
-    keywords_dlr: [
-        "$delay",
-        "$ldelay",
-        //
-        "$arrpsz",
-        "$arrptrsize",
-        //
-        "$d2ctype",
-        //
-        "$effmask",
-        "$effmask_ntm",
-        "$effmask_exn",
-        "$effmask_ref",
-        "$effmask_wrt",
-        "$effmask_all",
-        //
-        "$extern",
-        "$extkind",
-        "$extype",
-        "$extype_struct",
-        //
-        "$extval",
-        "$extfcall",
-        "$extmcall",
-        //
-        "$literal",
-        //
-        "$myfilename",
-        "$mylocation",
-        "$myfunction",
-        //
-        "$lst",
-        "$lst_t",
-        "$lst_vt",
-        "$list",
-        "$list_t",
-        "$list_vt",
-        //
-        "$rec",
-        "$rec_t",
-        "$rec_vt",
-        "$record",
-        "$record_t",
-        "$record_vt",
-        //
-        "$tup",
-        "$tup_t",
-        "$tup_vt",
-        "$tuple",
-        "$tuple_t",
-        "$tuple_vt",
-        //
-        "$break",
-        "$continue",
-        //
-        "$raise",
-        //
-        "$showtype",
-        //
-        "$vcopyenv_v",
-        "$vcopyenv_vt",
-        //
-        "$tempenver",
-        //
-        "$solver_assert",
-        "$solver_verify",
-    ],
-    keywords_srp: [
-        //
-        "#if",
-        "#ifdef",
-        "#ifndef",
-        //
-        "#then",
-        //
-        "#elif",
-        "#elifdef",
-        "#elifndef",
-        //
-        "#else",
-        "#endif",
-        //
-        "#error",
-        //
-        "#prerr",
-        "#print",
-        //
-        "#assert",
-        //
-        "#undef",
-        "#define",
-        //
-        "#include",
-        "#require",
-        //
-        "#pragma",
-        "#codegen2",
-        "#codegen3",
-    ],
-    irregular_keyword_list: [
-        "val+",
-        "val-",
-        "val",
-        "case+",
-        "case-",
-        "case",
-        "addr@",
-        "addr",
-        "fold@",
-        "free@",
-        "fix@",
-        "fix",
-        "lam@",
-        "lam",
-        "llam@",
-        "llam",
-        "viewt@ype+",
-        "viewt@ype-",
-        "viewt@ype",
-        "viewtype+",
-        "viewtype-",
-        "viewtype",
-        "view+",
-        "view-",
-        "view@",
-        "view",
-        "type+",
-        "type-",
-        "type",
-        "vtype+",
-        "vtype-",
-        "vtype",
-        "vt@ype+",
-        "vt@ype-",
-        "vt@ype",
-        "viewt@ype+",
-        "viewt@ype-",
-        "viewt@ype",
-        "viewtype+",
-        "viewtype-",
-        "viewtype",
-        "prop+",
-        "prop-",
-        "prop",
-        "type+",
-        "type-",
-        "type",
-        "t@ype",
-        "t@ype+",
-        "t@ype-",
-        "abst@ype",
-        "abstype",
-        "absviewt@ype",
-        "absvt@ype",
-        "for*",
-        "for",
-        "while*",
-        "while"
-    ],
-    keywords_types: [
-        'bool',
-        'double',
-        'byte',
-        'int',
-        'short',
-        'char',
-        'void',
-        'unit',
-        'long',
-        'float',
-        'string',
-        'strptr'
-    ],
-    // TODO: reference for this?
-    keywords_effects: [
-        "0",
-        "fun",
-        "clo",
-        "prf",
-        "funclo",
-        "cloptr",
-        "cloref",
-        "ref",
-        "ntm",
-        "1" // all effects
-    ],
-    operators: [
-        "@",
-        "!",
-        "|",
-        "`",
-        ":",
-        "$",
-        ".",
-        "=",
-        "#",
-        "~",
-        //
-        "..",
-        "...",
-        //
-        "=>",
-        // "=<", // T_EQLT
-        "=<>",
-        "=/=>",
-        "=>>",
-        "=/=>>",
-        //
-        "<",
-        ">",
-        //
-        "><",
-        //
-        ".<",
-        ">.",
-        //
-        ".<>.",
-        //
-        "->",
-        //"-<", // T_MINUSLT
-        "-<>",
-    ],
-    brackets: [
-        { open: ',(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '`(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '%(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '\'(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '\'{', close: '}', token: 'delimiter.parenthesis' },
-        { open: '@(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '@{', close: '}', token: 'delimiter.brace' },
-        { open: '@[', close: ']', token: 'delimiter.square' },
-        { open: '#[', close: ']', token: 'delimiter.square' },
-        { open: '{', close: '}', token: 'delimiter.curly' },
-        { open: '[', close: ']', token: 'delimiter.square' },
-        { open: '(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '<', close: '>', token: 'delimiter.angle' }
-    ],
-    // we include these common regular expressions
-    symbols: /[=><!~?:&|+\-*\/\^%]+/,
-    IDENTFST: /[a-zA-Z_]/,
-    IDENTRST: /[a-zA-Z0-9_'$]/,
-    symbolic: /[%&+-./:=@~`^|*!$#?<>]/,
-    digit: /[0-9]/,
-    digitseq0: /@digit*/,
-    xdigit: /[0-9A-Za-z]/,
-    xdigitseq0: /@xdigit*/,
-    INTSP: /[lLuU]/,
-    FLOATSP: /[fFlL]/,
-    fexponent: /[eE][+-]?[0-9]+/,
-    fexponent_bin: /[pP][+-]?[0-9]+/,
-    deciexp: /\.[0-9]*@fexponent?/,
-    hexiexp: /\.[0-9a-zA-Z]*@fexponent_bin?/,
-    irregular_keywords: /val[+-]?|case[+-]?|addr\@?|fold\@|free\@|fix\@?|lam\@?|llam\@?|prop[+-]?|type[+-]?|view[+-@]?|viewt@?ype[+-]?|t@?ype[+-]?|v(iew)?t@?ype[+-]?|abst@?ype|absv(iew)?t@?ype|for\*?|while\*?/,
-    ESCHAR: /[ntvbrfa\\\?'"\(\[\{]/,
-    start: 'root',
-    // The main tokenizer for ATS/Postiats
-    // reference: https://github.com/githwxi/ATS-Postiats/blob/master/src/pats_lexing.dats
+    defaultToken: '',
+    tokenPostfix: '',
+    // ignoreCase: true,
+    // The main tokenizer for our languages
     tokenizer: {
         root: [
-            // lexing_blankseq0
-            { regex: /[ \t\r\n]+/, action: { token: '' } },
-            // NOTE: (*) is an invalid ML-like comment!
-            { regex: /\(\*\)/, action: { token: 'invalid' } },
-            { regex: /\(\*/, action: { token: 'comment', next: 'lexing_COMMENT_block_ml' } },
-            { regex: /\(/, action: '@brackets' /*{ token: 'delimiter.parenthesis' }*/ },
-            { regex: /\)/, action: '@brackets' /*{ token: 'delimiter.parenthesis' }*/ },
-            { regex: /\[/, action: '@brackets' /*{ token: 'delimiter.bracket' }*/ },
-            { regex: /\]/, action: '@brackets' /*{ token: 'delimiter.bracket' }*/ },
-            { regex: /\{/, action: '@brackets' /*{ token: 'delimiter.brace' }*/ },
-            { regex: /\}/, action: '@brackets' /*{ token: 'delimiter.brace' }*/ },
-            // lexing_COMMA
-            { regex: /,\(/, action: '@brackets' /*{ token: 'delimiter.parenthesis' }*/ },
-            { regex: /,/, action: { token: 'delimiter.comma' } },
-            { regex: /;/, action: { token: 'delimiter.semicolon' } },
-            // lexing_AT
-            { regex: /@\(/, action: '@brackets' /* { token: 'delimiter.parenthesis' }*/ },
-            { regex: /@\[/, action: '@brackets' /* { token: 'delimiter.bracket' }*/ },
-            { regex: /@\{/, action: '@brackets' /*{ token: 'delimiter.brace' }*/ },
-            // lexing_COLON
-            { regex: /:</, action: { token: 'keyword', next: '@lexing_EFFECT_commaseq0' } },
-            /*
-            lexing_DOT:
-
-            . // SYMBOLIC => lexing_IDENT_sym
-            . FLOATDOT => lexing_FLOAT_deciexp
-            . DIGIT => T_DOTINT
-            */
-            { regex: /\.@symbolic+/, action: { token: 'identifier.sym' } },
-            // FLOATDOT case
-            { regex: /\.@digit*@fexponent@FLOATSP*/, action: { token: 'number.float' } },
-            { regex: /\.@digit+/, action: { token: 'number.float' } },
-            // lexing_DOLLAR:
-            // '$' IDENTFST IDENTRST* => lexing_IDENT_dlr, _ => lexing_IDENT_sym
-            {
-                regex: /\$@IDENTFST@IDENTRST*/,
-                action: {
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.root' }],
+            [/<!DOCTYPE/, 'metatag.html', '@doctype'],
+            [/<!--/, 'comment.html', '@comment'],
+            [/(<)(\w+)(\/>)/, ['delimiter.html', 'tag.html', 'delimiter.html']],
+            [/(<)(script)/, ['delimiter.html', { token: 'tag.html', next: '@script' }]],
+            [/(<)(style)/, ['delimiter.html', { token: 'tag.html', next: '@style' }]],
+            [/(<)([:\w]+)/, ['delimiter.html', { token: 'tag.html', next: '@otherTag' }]],
+            [/(<\/)(\w+)/, ['delimiter.html', { token: 'tag.html', next: '@otherTag' }]],
+            [/</, 'delimiter.html'],
+            [/[^<]+/] // text
+        ],
+        doctype: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.comment' }],
+            [/[^>]+/, 'metatag.content.html'],
+            [/>/, 'metatag.html', '@pop'],
+        ],
+        comment: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.comment' }],
+            [/-->/, 'comment.html', '@pop'],
+            [/[^-]+/, 'comment.content.html'],
+            [/./, 'comment.content.html']
+        ],
+        otherTag: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.otherTag' }],
+            [/\/?>/, 'delimiter.html', '@pop'],
+            [/"([^"]*)"/, 'attribute.value'],
+            [/'([^']*)'/, 'attribute.value'],
+            [/[\w\-]+/, 'attribute.name'],
+            [/=/, 'delimiter'],
+            [/[ \t\r\n]+/],
+        ],
+        // -- BEGIN <script> tags handling
+        // After <script
+        script: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.script' }],
+            [/type/, 'attribute.name', '@scriptAfterType'],
+            [/"([^"]*)"/, 'attribute.value'],
+            [/'([^']*)'/, 'attribute.value'],
+            [/[\w\-]+/, 'attribute.name'],
+            [/=/, 'delimiter'],
+            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.text/javascript', nextEmbedded: 'text/javascript' }],
+            [/[ \t\r\n]+/],
+            [/(<\/)(script\s*)(>)/, ['delimiter.html', 'tag.html', { token: 'delimiter.html', next: '@pop' }]]
+        ],
+        // After <script ... type
+        scriptAfterType: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.scriptAfterType' }],
+            [/=/, 'delimiter', '@scriptAfterTypeEquals'],
+            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.text/javascript', nextEmbedded: 'text/javascript' }],
+            [/[ \t\r\n]+/],
+            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
+        ],
+        // After <script ... type =
+        scriptAfterTypeEquals: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.scriptAfterTypeEquals' }],
+            [/"([^"]*)"/, { token: 'attribute.value', switchTo: '@scriptWithCustomType.$1' }],
+            [/'([^']*)'/, { token: 'attribute.value', switchTo: '@scriptWithCustomType.$1' }],
+            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.text/javascript', nextEmbedded: 'text/javascript' }],
+            [/[ \t\r\n]+/],
+            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
+        ],
+        // After <script ... type = $S2
+        scriptWithCustomType: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.scriptWithCustomType.$S2' }],
+            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.$S2', nextEmbedded: '$S2' }],
+            [/"([^"]*)"/, 'attribute.value'],
+            [/'([^']*)'/, 'attribute.value'],
+            [/[\w\-]+/, 'attribute.name'],
+            [/=/, 'delimiter'],
+            [/[ \t\r\n]+/],
+            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
+        ],
+        scriptEmbedded: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInEmbeddedState.scriptEmbedded.$S2', nextEmbedded: '@pop' }],
+            [/<\/script/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }]
+        ],
+        // -- END <script> tags handling
+        // -- BEGIN <style> tags handling
+        // After <style
+        style: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.style' }],
+            [/type/, 'attribute.name', '@styleAfterType'],
+            [/"([^"]*)"/, 'attribute.value'],
+            [/'([^']*)'/, 'attribute.value'],
+            [/[\w\-]+/, 'attribute.name'],
+            [/=/, 'delimiter'],
+            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.text/css', nextEmbedded: 'text/css' }],
+            [/[ \t\r\n]+/],
+            [/(<\/)(style\s*)(>)/, ['delimiter.html', 'tag.html', { token: 'delimiter.html', next: '@pop' }]]
+        ],
+        // After <style ... type
+        styleAfterType: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.styleAfterType' }],
+            [/=/, 'delimiter', '@styleAfterTypeEquals'],
+            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.text/css', nextEmbedded: 'text/css' }],
+            [/[ \t\r\n]+/],
+            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
+        ],
+        // After <style ... type =
+        styleAfterTypeEquals: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.styleAfterTypeEquals' }],
+            [/"([^"]*)"/, { token: 'attribute.value', switchTo: '@styleWithCustomType.$1' }],
+            [/'([^']*)'/, { token: 'attribute.value', switchTo: '@styleWithCustomType.$1' }],
+            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.text/css', nextEmbedded: 'text/css' }],
+            [/[ \t\r\n]+/],
+            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
+        ],
+        // After <style ... type = $S2
+        styleWithCustomType: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInSimpleState.styleWithCustomType.$S2' }],
+            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.$S2', nextEmbedded: '$S2' }],
+            [/"([^"]*)"/, 'attribute.value'],
+            [/'([^']*)'/, 'attribute.value'],
+            [/[\w\-]+/, 'attribute.name'],
+            [/=/, 'delimiter'],
+            [/[ \t\r\n]+/],
+            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
+        ],
+        styleEmbedded: [
+            [/<\?((php)|=)?/, { token: '@rematch', switchTo: '@phpInEmbeddedState.styleEmbedded.$S2', nextEmbedded: '@pop' }],
+            [/<\/style/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }]
+        ],
+        // -- END <style> tags handling
+        phpInSimpleState: [
+            [/<\?((php)|=)?/, 'metatag.php'],
+            [/\?>/, { token: 'metatag.php', switchTo: '@$S2.$S3' }],
+            { include: 'phpRoot' }
+        ],
+        phpInEmbeddedState: [
+            [/<\?((php)|=)?/, 'metatag.php'],
+            [/\?>/, { token: 'metatag.php', switchTo: '@$S2.$S3', nextEmbedded: '$S3' }],
+            { include: 'phpRoot' }
+        ],
+        phpRoot: [
+            [/[a-zA-Z_]\w*/, {
                     cases: {
-                        '@keywords_dlr': { token: 'keyword.dlr' },
-                        '@default': { token: 'namespace' },
+                        '@phpKeywords': { token: 'keyword.php' },
+                        '@phpCompileTimeConstants': { token: 'constant.php' },
+                        '@default': 'identifier.php'
                     }
-                }
-            },
-            // lexing_SHARP:
-            // '#' IDENTFST IDENTRST* => lexing_ident_srp, _ => lexing_IDENT_sym
-            {
-                regex: /\#@IDENTFST@IDENTRST*/,
-                action: {
+                }],
+            [/[$a-zA-Z_]\w*/, {
                     cases: {
-                        '@keywords_srp': { token: 'keyword.srp' },
-                        '@default': { token: 'identifier' },
+                        '@phpPreDefinedVariables': { token: 'variable.predefined.php' },
+                        '@default': 'variable.php'
                     }
-                }
-            },
-            // lexing_PERCENT:
-            { regex: /%\(/, action: { token: 'delimiter.parenthesis' } },
-            { regex: /^%{(#|\^|\$)?/, action: { token: 'keyword', next: '@lexing_EXTCODE', nextEmbedded: 'text/javascript' } },
-            { regex: /^%}/, action: { token: 'keyword' } },
-            // lexing_QUOTE
-            { regex: /'\(/, action: { token: 'delimiter.parenthesis' } },
-            { regex: /'\[/, action: { token: 'delimiter.bracket' } },
-            { regex: /'\{/, action: { token: 'delimiter.brace' } },
-            [/(')(\\@ESCHAR|\\[xX]@xdigit+|\\@digit+)(')/, ['string', 'string.escape', 'string']],
-            [/'[^\\']'/, 'string'],
-            // lexing_DQUOTE
-            [/"/, 'string.quote', '@lexing_DQUOTE'],
-            // lexing_BQUOTE
-            { regex: /`\(/, action: '@brackets' /* { token: 'delimiter.parenthesis' }*/ },
-            // TODO: otherwise, try lexing_IDENT_sym
-            { regex: /\\/, action: { token: 'punctuation' } },
-            // lexing_IDENT_alp:
-            // NOTE: (?!regex) is syntax for "not-followed-by" regex
-            // to resolve ambiguity such as foreach$fwork being incorrectly lexed as [for] [each$fwork]!
-            { regex: /@irregular_keywords(?!@IDENTRST)/, action: { token: 'keyword' } },
-            {
-                regex: /@IDENTFST@IDENTRST*[<!\[]?/,
-                action: {
-                    cases: {
-                        // TODO: dynload and staload should be specially parsed
-                        // dynload whitespace+ "special_string"
-                        // this special string is really:
-                        //  '/' '\\' '.' => punctuation
-                        // ({\$)([a-zA-Z_][a-zA-Z_0-9]*)(}) => punctuation,keyword,punctuation
-                        // [^"] => identifier/literal
-                        '@keywords': { token: 'keyword' },
-                        '@keywords_types': { token: 'type' },
-                        '@default': { token: 'identifier' }
-                    }
-                }
-            },
-            // lexing_IDENT_sym:
-            { regex: /\/\/\/\//, action: { token: 'comment', next: '@lexing_COMMENT_rest' } },
-            { regex: /\/\/.*$/, action: { token: 'comment' } },
-            { regex: /\/\*/, action: { token: 'comment', next: '@lexing_COMMENT_block_c' } },
-            // AS-20160627: specifically for effect annotations
-            { regex: /-<|=</, action: { token: 'keyword', next: '@lexing_EFFECT_commaseq0' } },
-            {
-                regex: /@symbolic+/,
-                action: {
-                    cases: {
-                        '@operators': 'keyword',
-                        '@default': 'operator'
-                    }
-                }
-            },
-            // lexing_ZERO:
-            // FIXME: this one is quite messy/unfinished yet
-            // TODO: lexing_INT_hex
-            // - testing_hexiexp => lexing_FLOAT_hexiexp
-            // - testing_fexponent_bin => lexing_FLOAT_hexiexp
-            // - testing_intspseq0 => T_INT_hex
-            // lexing_INT_hex:
-            { regex: /0[xX]@xdigit+(@hexiexp|@fexponent_bin)@FLOATSP*/, action: { token: 'number.float' } },
-            { regex: /0[xX]@xdigit+@INTSP*/, action: { token: 'number.hex' } },
-            { regex: /0[0-7]+(?![0-9])@INTSP*/, action: { token: 'number.octal' } },
-            //{regex: /0/, action: { token: 'number' } }, // INTZERO
-            // lexing_INT_dec:
-            // - testing_deciexp => lexing_FLOAT_deciexp
-            // - testing_fexponent => lexing_FLOAT_deciexp
-            // - otherwise => intspseq0 ([0-9]*[lLuU]?)
-            { regex: /@digit+(@fexponent|@deciexp)@FLOATSP*/, action: { token: 'number.float' } },
-            { regex: /@digit@digitseq0@INTSP*/, action: { token: 'number.decimal' } },
-            // DIGIT, if followed by digitseq0, is lexing_INT_dec
-            { regex: /@digit+@INTSP*/, action: { token: 'number' } },
+                }],
+            // brackets
+            [/[{}]/, 'delimiter.bracket.php'],
+            [/[\[\]]/, 'delimiter.array.php'],
+            [/[()]/, 'delimiter.parenthesis.php'],
+            // whitespace
+            [/[ \t\r\n]+/],
+            // comments
+            [/(#|\/\/)$/, 'comment.php'],
+            [/(#|\/\/)/, 'comment.php', '@phpLineComment'],
+            // block comments
+            [/\/\*/, 'comment.php', '@phpComment'],
+            // strings
+            [/"/, 'string.php', '@phpDoubleQuoteString'],
+            [/'/, 'string.php', '@phpSingleQuoteString'],
+            // delimiters
+            [/[\+\-\*\%\&\|\^\~\!\=\<\>\/\?\;\:\.\,\@]/, 'delimiter.php'],
+            // numbers
+            [/\d*\d+[eE]([\-+]?\d+)?/, 'number.float.php'],
+            [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float.php'],
+            [/0[xX][0-9a-fA-F']*[0-9a-fA-F]/, 'number.hex.php'],
+            [/0[0-7']*[0-7]/, 'number.octal.php'],
+            [/0[bB][0-1']*[0-1]/, 'number.binary.php'],
+            [/\d[\d']*/, 'number.php'],
+            [/\d/, 'number.php'],
         ],
-        lexing_COMMENT_block_ml: [
-            [/[^\(\*]+/, 'comment'],
-            [/\(\*/, 'comment', '@push'],
-            [/\(\*/, 'comment.invalid'],
-            [/\*\)/, 'comment', '@pop'],
-            [/\*/, 'comment']
+        phpComment: [
+            [/\*\//, 'comment.php', '@pop'],
+            [/[^*]+/, 'comment.php'],
+            [/./, 'comment.php']
         ],
-        lexing_COMMENT_block_c: [
-            [/[^\/*]+/, 'comment'],
-            // [/\/\*/, 'comment', '@push' ],    // nested C-style block comments not allowed
-            // [/\/\*/,    'comment.invalid' ],	// NOTE: this breaks block comments in the shape of /* //*/
-            [/\*\//, 'comment', '@pop'],
-            [/[\/*]/, 'comment']
+        phpLineComment: [
+            [/\?>/, { token: '@rematch', next: '@pop' }],
+            [/.$/, 'comment.php', '@pop'],
+            [/[^?]+$/, 'comment.php', '@pop'],
+            [/[^?]+/, 'comment.php'],
+            [/./, 'comment.php']
         ],
-        lexing_COMMENT_rest: [
-            [/$/, 'comment', '@pop'],
-            [/.*/, 'comment']
+        phpDoubleQuoteString: [
+            [/[^\\"]+/, 'string.php'],
+            [/@escapes/, 'string.escape.php'],
+            [/\\./, 'string.escape.invalid.php'],
+            [/"/, 'string.php', '@pop']
         ],
-        // NOTE: added by AS, specifically for highlighting
-        lexing_EFFECT_commaseq0: [
-            {
-                regex: /@IDENTFST@IDENTRST+|@digit+/,
-                action: {
-                    cases: {
-                        '@keywords_effects': { token: 'type.effect' },
-                        '@default': { token: 'identifier' }
-                    }
-                }
-            },
-            { regex: /,/, action: { token: 'punctuation' } },
-            { regex: />/, action: { token: '@rematch', next: '@pop' } },
-        ],
-        lexing_EXTCODE: [
-            { regex: /^%}/, action: { token: '@rematch', next: '@pop', nextEmbedded: '@pop' } },
-            { regex: /[^%]+/, action: '' },
-        ],
-        lexing_DQUOTE: [
-            { regex: /"/, action: { token: 'string.quote', next: '@pop' } },
-            // AS-20160628: additional hi-lighting for variables in staload/dynload strings
-            { regex: /(\{\$)(@IDENTFST@IDENTRST*)(\})/, action: [{ token: 'string.escape' }, { token: 'identifier' }, { token: 'string.escape' }] },
-            { regex: /\\$/, action: { token: 'string.escape' } },
-            { regex: /\\(@ESCHAR|[xX]@xdigit+|@digit+)/, action: { token: 'string.escape' } },
-            { regex: /[^\\"]+/, action: { token: 'string' } }
+        phpSingleQuoteString: [
+            [/[^\\']+/, 'string.php'],
+            [/@escapes/, 'string.escape.php'],
+            [/\\./, 'string.escape.invalid.php'],
+            [/'/, 'string.php', '@pop']
         ],
     },
+    phpKeywords: [
+        'abstract', 'and', 'array', 'as', 'break',
+        'callable', 'case', 'catch', 'cfunction', 'class', 'clone',
+        'const', 'continue', 'declare', 'default', 'do',
+        'else', 'elseif', 'enddeclare', 'endfor', 'endforeach',
+        'endif', 'endswitch', 'endwhile', 'extends', 'false', 'final',
+        'for', 'foreach', 'function', 'global', 'goto',
+        'if', 'implements', 'interface', 'instanceof', 'insteadof',
+        'namespace', 'new', 'null', 'object', 'old_function', 'or', 'private',
+        'protected', 'public', 'resource', 'static', 'switch', 'throw', 'trait',
+        'try', 'true', 'use', 'var', 'while', 'xor',
+        'die', 'echo', 'empty', 'exit', 'eval',
+        'include', 'include_once', 'isset', 'list', 'require',
+        'require_once', 'return', 'print', 'unset', 'yield',
+        '__construct'
+    ],
+    phpCompileTimeConstants: [
+        '__CLASS__',
+        '__DIR__',
+        '__FILE__',
+        '__LINE__',
+        '__NAMESPACE__',
+        '__METHOD__',
+        '__FUNCTION__',
+        '__TRAIT__'
+    ],
+    phpPreDefinedVariables: [
+        '$GLOBALS',
+        '$_SERVER',
+        '$_GET',
+        '$_POST',
+        '$_FILES',
+        '$_REQUEST',
+        '$_SESSION',
+        '$_ENV',
+        '$_COOKIE',
+        '$php_errormsg',
+        '$HTTP_RAW_POST_DATA',
+        '$http_response_header',
+        '$argc',
+        '$argv'
+    ],
+    escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
 };
 
 
 /***/ })
 
 }]);
+//# sourceMappingURL=37.bundle.js.map

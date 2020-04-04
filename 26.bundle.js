@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[26],{
 
-/***/ 525:
+/***/ 528:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,21 +13,22 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
+    wordPattern: /(#?-?\d*\.\d\w*%?)|([@#!.:]?[\w-?]+%?)|[@#!.]/g,
     comments: {
-        lineComment: '--',
-        blockComment: ['--[[', ']]'],
+        blockComment: ['/*', '*/'],
+        lineComment: '//'
     },
     brackets: [
         ['{', '}'],
         ['[', ']'],
-        ['(', ')']
+        ['(', ')'],
     ],
     autoClosingPairs: [
-        { open: '{', close: '}' },
-        { open: '[', close: ']' },
-        { open: '(', close: ')' },
-        { open: '"', close: '"' },
-        { open: '\'', close: '\'' },
+        { open: '{', close: '}', notIn: ['string', 'comment'] },
+        { open: '[', close: ']', notIn: ['string', 'comment'] },
+        { open: '(', close: ')', notIn: ['string', 'comment'] },
+        { open: '"', close: '"', notIn: ['string', 'comment'] },
+        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
@@ -35,95 +36,124 @@ var conf = {
         { open: '(', close: ')' },
         { open: '"', close: '"' },
         { open: '\'', close: '\'' },
-    ]
+    ],
+    folding: {
+        markers: {
+            start: new RegExp("^\\s*\\/\\*\\s*#region\\b\\s*(.*?)\\s*\\*\\/"),
+            end: new RegExp("^\\s*\\/\\*\\s*#endregion\\b.*\\*\\/")
+        }
+    }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.lua',
-    keywords: [
-        'and', 'break', 'do', 'else', 'elseif',
-        'end', 'false', 'for', 'function', 'goto', 'if',
-        'in', 'local', 'nil', 'not', 'or',
-        'repeat', 'return', 'then', 'true', 'until',
-        'while'
-    ],
+    tokenPostfix: '.less',
+    identifier: '-?-?([a-zA-Z]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
+    identifierPlus: '-?-?([a-zA-Z:.]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-:.]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
     brackets: [
-        { token: 'delimiter.bracket', open: '{', close: '}' },
-        { token: 'delimiter.array', open: '[', close: ']' },
-        { token: 'delimiter.parenthesis', open: '(', close: ')' }
+        { open: '{', close: '}', token: 'delimiter.curly' },
+        { open: '[', close: ']', token: 'delimiter.bracket' },
+        { open: '(', close: ')', token: 'delimiter.parenthesis' },
+        { open: '<', close: '>', token: 'delimiter.angle' }
     ],
-    operators: [
-        '+', '-', '*', '/', '%', '^', '#', '==', '~=', '<=', '>=', '<', '>', '=',
-        ';', ':', ',', '.', '..', '...'
-    ],
-    // we include these common regular expressions
-    symbols: /[=><!~?:&|+\-*\/\^%]+/,
-    escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
-    // The main tokenizer for our languages
     tokenizer: {
         root: [
-            // identifiers and keywords
-            [/[a-zA-Z_]\w*/, {
-                    cases: {
-                        '@keywords': { token: 'keyword.$0' },
-                        '@default': 'identifier'
-                    }
-                }],
-            // whitespace
-            { include: '@whitespace' },
-            // keys
-            [/(,)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/, ['delimiter', '', 'key', '', 'delimiter']],
-            [/({)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/, ['@brackets', '', 'key', '', 'delimiter']],
-            // delimiters and operators
-            [/[{}()\[\]]/, '@brackets'],
-            [/@symbols/, {
-                    cases: {
-                        '@operators': 'delimiter',
-                        '@default': ''
-                    }
-                }],
-            // numbers
-            [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float'],
-            [/0[xX][0-9a-fA-F_]*[0-9a-fA-F]/, 'number.hex'],
-            [/\d+?/, 'number'],
-            // delimiter: after number because of .\d floats
-            [/[;,.]/, 'delimiter'],
-            // strings: recover on non-terminated strings
-            [/"([^"\\]|\\.)*$/, 'string.invalid'],
-            [/'([^'\\]|\\.)*$/, 'string.invalid'],
-            [/"/, 'string', '@string."'],
-            [/'/, 'string', '@string.\''],
+            { include: '@nestedJSBegin' },
+            ['[ \\t\\r\\n]+', ''],
+            { include: '@comments' },
+            { include: '@keyword' },
+            { include: '@strings' },
+            { include: '@numbers' },
+            ['[*_]?[a-zA-Z\\-\\s]+(?=:.*(;|(\\\\$)))', 'attribute.name', '@attribute'],
+            ['url(\\-prefix)?\\(', { token: 'tag', next: '@urldeclaration' }],
+            ['[{}()\\[\\]]', '@brackets'],
+            ['[,:;]', 'delimiter'],
+            ['#@identifierPlus', 'tag.id'],
+            ['&', 'tag'],
+            ['\\.@identifierPlus(?=\\()', 'tag.class', '@attribute'],
+            ['\\.@identifierPlus', 'tag.class'],
+            ['@identifierPlus', 'tag'],
+            { include: '@operators' },
+            ['@(@identifier(?=[:,\\)]))', 'variable', '@attribute'],
+            ['@(@identifier)', 'variable'],
+            ['@', 'key', '@atRules']
         ],
-        whitespace: [
-            [/[ \t\r\n]+/, ''],
-            [/--\[([=]*)\[/, 'comment', '@comment.$1'],
-            [/--.*$/, 'comment'],
+        nestedJSBegin: [
+            ['``', 'delimiter.backtick'],
+            ['`', { token: 'delimiter.backtick', next: '@nestedJSEnd', nextEmbedded: 'text/javascript' }],
+        ],
+        nestedJSEnd: [
+            ['`', { token: 'delimiter.backtick', next: '@pop', nextEmbedded: '@pop' }],
+        ],
+        operators: [
+            ['[<>=\\+\\-\\*\\/\\^\\|\\~]', 'operator']
+        ],
+        keyword: [
+            ['(@[\\s]*import|![\\s]*important|true|false|when|iscolor|isnumber|isstring|iskeyword|isurl|ispixel|ispercentage|isem|hue|saturation|lightness|alpha|lighten|darken|saturate|desaturate|fadein|fadeout|fade|spin|mix|round|ceil|floor|percentage)\\b', 'keyword']
+        ],
+        urldeclaration: [
+            { include: '@strings' },
+            ['[^)\r\n]+', 'string'],
+            ['\\)', { token: 'tag', next: '@pop' }],
+        ],
+        attribute: [
+            { include: '@nestedJSBegin' },
+            { include: '@comments' },
+            { include: '@strings' },
+            { include: '@numbers' },
+            { include: '@keyword' },
+            ['[a-zA-Z\\-]+(?=\\()', 'attribute.value', '@attribute'],
+            ['>', 'operator', '@pop'],
+            ['@identifier', 'attribute.value'],
+            { include: '@operators' },
+            ['@(@identifier)', 'variable'],
+            ['[)\\}]', '@brackets', '@pop'],
+            ['[{}()\\[\\]>]', '@brackets'],
+            ['[;]', 'delimiter', '@pop'],
+            ['[,=:]', 'delimiter'],
+            ['\\s', ''],
+            ['.', 'attribute.value']
+        ],
+        comments: [
+            ['\\/\\*', 'comment', '@comment'],
+            ['\\/\\/+.*', 'comment'],
         ],
         comment: [
-            [/[^\]]+/, 'comment'],
-            [/\]([=]*)\]/, {
-                    cases: {
-                        '$1==$S2': { token: 'comment', next: '@pop' },
-                        '@default': 'comment'
-                    }
-                }],
-            [/./, 'comment']
+            ['\\*\\/', 'comment', '@pop'],
+            ['.', 'comment'],
         ],
-        string: [
-            [/[^\\"']+/, 'string'],
-            [/@escapes/, 'string.escape'],
-            [/\\./, 'string.escape.invalid'],
-            [/["']/, {
-                    cases: {
-                        '$#==$S2': { token: 'string', next: '@pop' },
-                        '@default': 'string'
-                    }
-                }]
+        numbers: [
+            ['(\\d*\\.)?\\d+([eE][\\-+]?\\d+)?', { token: 'attribute.value.number', next: '@units' }],
+            ['#[0-9a-fA-F_]+(?!\\w)', 'attribute.value.hex']
         ],
-    },
+        units: [
+            ['(em|ex|ch|rem|vmin|vmax|vw|vh|vm|cm|mm|in|px|pt|pc|deg|grad|rad|turn|s|ms|Hz|kHz|%)?', 'attribute.value.unit', '@pop']
+        ],
+        strings: [
+            ['~?"', { token: 'string.delimiter', next: '@stringsEndDoubleQuote' }],
+            ['~?\'', { token: 'string.delimiter', next: '@stringsEndQuote' }]
+        ],
+        stringsEndDoubleQuote: [
+            ['\\\\"', 'string'],
+            ['"', { token: 'string.delimiter', next: '@popall' }],
+            ['.', 'string']
+        ],
+        stringsEndQuote: [
+            ['\\\\\'', 'string'],
+            ['\'', { token: 'string.delimiter', next: '@popall' }],
+            ['.', 'string']
+        ],
+        atRules: [
+            { include: '@comments' },
+            { include: '@strings' },
+            ['[()]', 'delimiter'],
+            ['[\\{;]', 'delimiter', '@pop'],
+            ['.', 'key']
+        ]
+    }
 };
 
 
 /***/ })
 
 }]);
+//# sourceMappingURL=26.bundle.js.map

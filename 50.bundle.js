@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[50],{
 
-/***/ 549:
+/***/ 552:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,102 +14,92 @@ __webpack_require__.r(__webpack_exports__);
 
 var conf = {
     comments: {
-        lineComment: ';',
-        blockComment: ['#|', '|#'],
+        lineComment: '\'',
     },
-    brackets: [['(', ')'], ['{', '}'], ['[', ']']],
+    brackets: [
+        ['(', ')'], ['[', ']'],
+        ['If', 'EndIf'],
+        ['While', 'EndWhile'],
+        ['For', 'EndFor'],
+        ['Sub', 'EndSub']
+    ],
     autoClosingPairs: [
-        { open: '{', close: '}' },
-        { open: '[', close: ']' },
-        { open: '(', close: ')' },
-        { open: '"', close: '"' },
-    ],
-    surroundingPairs: [
-        { open: '{', close: '}' },
-        { open: '[', close: ']' },
-        { open: '(', close: ')' },
-        { open: '"', close: '"' },
-    ],
+        { open: '"', close: '"', notIn: ['string', 'comment'] },
+        { open: '(', close: ')', notIn: ['string', 'comment'] },
+        { open: '[', close: ']', notIn: ['string', 'comment'] },
+    ]
 };
 var language = {
     defaultToken: '',
+    tokenPostfix: '.sb',
     ignoreCase: true,
-    tokenPostfix: '.scheme',
     brackets: [
-        { open: '(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '{', close: '}', token: 'delimiter.curly' },
-        { open: '[', close: ']', token: 'delimiter.square' },
+        { token: 'delimiter.array', open: '[', close: ']' },
+        { token: 'delimiter.parenthesis', open: '(', close: ')' },
+        // Special bracket statement pairs
+        { token: 'keyword.tag-if', open: 'If', close: 'EndIf' },
+        { token: 'keyword.tag-while', open: 'While', close: 'EndWhile' },
+        { token: 'keyword.tag-for', open: 'For', close: 'EndFor' },
+        { token: 'keyword.tag-sub', open: 'Sub', close: 'EndSub' },
     ],
     keywords: [
-        'case',
-        'do',
-        'let',
-        'loop',
-        'if',
-        'else',
-        'when',
-        'cons',
-        'car',
-        'cdr',
-        'cond',
-        'lambda',
-        'lambda*',
-        'syntax-rules',
-        'format',
-        'set!',
-        'quote',
-        'eval',
-        'append',
-        'list',
-        'list?',
-        'member?',
-        'load',
+        'Else', 'ElseIf', 'EndFor', 'EndIf', 'EndSub', 'EndWhile',
+        'For', 'Goto', 'If', 'Step', 'Sub', 'Then', 'To', 'While'
     ],
-    constants: ['#t', '#f'],
-    operators: ['eq?', 'eqv?', 'equal?', 'and', 'or', 'not', 'null?'],
+    tagwords: [
+        'If', 'Sub', 'While', 'For'
+    ],
+    operators: ['>', '<', '<>', '<=', '>=', 'And', 'Or', '+', '-', '*', '/', '='],
+    // we include these common regular expressions
+    identifier: /[a-zA-Z_][\w]*/,
+    symbols: /[=><:+\-*\/%\.,]+/,
+    escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
+    // The main tokenizer for our languages
     tokenizer: {
         root: [
-            [/#[xXoObB][0-9a-fA-F]+/, 'number.hex'],
-            [/[+-]?\d+(?:(?:\.\d*)?(?:[eE][+-]?\d+)?)?/, 'number.float'],
-            [
-                /(?:\b(?:(define|define-syntax|define-macro))\b)(\s+)((?:\w|\-|\!|\?)*)/,
-                ['keyword', 'white', 'variable'],
-            ],
+            // whitespace
             { include: '@whitespace' },
-            { include: '@strings' },
-            [
-                /[a-zA-Z_#][a-zA-Z0-9_\-\?\!\*]*/,
-                {
+            // classes
+            [/(@identifier)(?=[.])/, 'type'],
+            // identifiers, tagwords, and keywords
+            [/@identifier/, {
                     cases: {
-                        '@keywords': 'keyword',
-                        '@constants': 'constant',
-                        '@operators': 'operators',
-                        '@default': 'identifier',
-                    },
-                },
-            ],
-        ],
-        comment: [
-            [/[^\|#]+/, 'comment'],
-            [/#\|/, 'comment', '@push'],
-            [/\|#/, 'comment', '@pop'],
-            [/[\|#]/, 'comment'],
+                        '@keywords': { token: 'keyword.$0' },
+                        '@operators': 'operator',
+                        '@default': 'variable.name'
+                    }
+                }],
+            // methods, properties, and events
+            [/([.])(@identifier)/, {
+                    cases: {
+                        '$2': ['delimiter', 'type.member'],
+                        '@default': ''
+                    }
+                }],
+            // numbers
+            [/\d*\.\d+/, 'number.float'],
+            [/\d+/, 'number'],
+            // delimiters and operators
+            [/[()\[\]]/, '@brackets'],
+            [/@symbols/, {
+                    cases: {
+                        '@operators': 'operator',
+                        '@default': 'delimiter'
+                    }
+                }],
+            // strings
+            [/"([^"\\]|\\.)*$/, 'string.invalid'],
+            [/"/, 'string', '@string'],
         ],
         whitespace: [
-            [/[ \t\r\n]+/, 'white'],
-            [/#\|/, 'comment', '@comment'],
-            [/;.*$/, 'comment'],
+            [/[ \t\r\n]+/, ''],
+            [/(\').*$/, 'comment']
         ],
-        strings: [
-            [/"$/, 'string', '@popall'],
-            [/"(?=.)/, 'string', '@multiLineString'],
-        ],
-        multiLineString: [
-            [/[^\\"]+$/, 'string', '@popall'],
+        string: [
             [/[^\\"]+/, 'string'],
-            [/\\./, 'string.escape'],
-            [/"/, 'string', '@popall'],
-            [/\\$/, 'string']
+            [/@escapes/, 'string.escape'],
+            [/\\./, 'string.escape.invalid'],
+            [/"C?/, 'string', '@pop']
         ],
     },
 };
@@ -118,3 +108,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=50.bundle.js.map

@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[20],{
 
-/***/ 518:
+/***/ 521:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,193 +12,128 @@ __webpack_require__.r(__webpack_exports__);
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-// Allow for running under nodejs/requirejs in tests
-var _monaco = (typeof monaco === 'undefined' ? self.monaco : monaco);
-var EMPTY_ELEMENTS = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'menuitem', 'meta', 'param', 'source', 'track', 'wbr'];
 var conf = {
-    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\@\$\^\&\*\(\)\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\s]+)/g,
     comments: {
-        blockComment: ['{{!--', '--}}']
+        lineComment: '#'
     },
     brackets: [
-        ['<!--', '-->'],
-        ['<', '>'],
-        ['{{', '}}'],
         ['{', '}'],
+        ['[', ']'],
         ['(', ')']
     ],
     autoClosingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '"', close: '"' },
-        { open: '\'', close: '\'' }
+        { open: '"""', close: '"""', notIn: ['string', 'comment'] },
+        { open: '"', close: '"', notIn: ['string', 'comment'] },
     ],
     surroundingPairs: [
-        { open: '<', close: '>' },
+        { open: '{', close: '}' },
+        { open: '[', close: ']' },
+        { open: '(', close: ')' },
+        { open: '"""', close: '"""' },
         { open: '"', close: '"' },
-        { open: '\'', close: '\'' }
     ],
-    onEnterRules: [
-        {
-            beforeText: new RegExp("<(?!(?:" + EMPTY_ELEMENTS.join('|') + "))(\\w[\\w\\d]*)([^/>]*(?!/)>)[^<]*$", 'i'),
-            afterText: /^<\/(\w[\w\d]*)\s*>$/i,
-            action: { indentAction: _monaco.languages.IndentAction.IndentOutdent }
-        },
-        {
-            beforeText: new RegExp("<(?!(?:" + EMPTY_ELEMENTS.join('|') + "))(\\w[\\w\\d]*)([^/>]*(?!/)>)[^<]*$", 'i'),
-            action: { indentAction: _monaco.languages.IndentAction.Indent }
-        }
-    ],
+    folding: {
+        offSide: true
+    }
 };
 var language = {
-    defaultToken: '',
-    tokenPostfix: '',
-    // ignoreCase: true,
+    // Set defaultToken to invalid to see what you do not tokenize yet
+    defaultToken: 'invalid',
+    tokenPostfix: '.gql',
+    keywords: [
+        'null', 'true', 'false',
+        'query', 'mutation', 'subscription',
+        'extend', 'schema', 'directive',
+        'scalar', 'type', 'interface', 'union', 'enum', 'input', 'implements',
+        'fragment', 'on',
+    ],
+    typeKeywords: ['Int', 'Float', 'String', 'Boolean', 'ID'],
+    directiveLocations: [
+        'SCHEMA', 'SCALAR', 'OBJECT', 'FIELD_DEFINITION', 'ARGUMENT_DEFINITION',
+        'INTERFACE', 'UNION', 'ENUM', 'ENUM_VALUE', 'INPUT_OBJECT', 'INPUT_FIELD_DEFINITION',
+        'QUERY', 'MUTATION', 'SUBSCRIPTION', 'FIELD', 'FRAGMENT_DEFINITION',
+        'FRAGMENT_SPREAD', 'INLINE_FRAGMENT', 'VARIABLE_DEFINITION',
+    ],
+    operators: ['=', '!', '?', ':', '&', '|'],
+    // we include these common regular expressions
+    symbols: /[=!?:&|]+/,
+    // https://facebook.github.io/graphql/draft/#sec-String-Value
+    escapes: /\\(?:["\\\/bfnrt]|u[0-9A-Fa-f]{4})/,
     // The main tokenizer for our languages
     tokenizer: {
         root: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.root' }],
-            [/<!DOCTYPE/, 'metatag.html', '@doctype'],
-            [/<!--/, 'comment.html', '@comment'],
-            [/(<)(\w+)(\/>)/, ['delimiter.html', 'tag.html', 'delimiter.html']],
-            [/(<)(script)/, ['delimiter.html', { token: 'tag.html', next: '@script' }]],
-            [/(<)(style)/, ['delimiter.html', { token: 'tag.html', next: '@style' }]],
-            [/(<)([:\w]+)/, ['delimiter.html', { token: 'tag.html', next: '@otherTag' }]],
-            [/(<\/)(\w+)/, ['delimiter.html', { token: 'tag.html', next: '@otherTag' }]],
-            [/</, 'delimiter.html'],
-            [/\{/, 'delimiter.html'],
-            [/[^<{]+/] // text
+            // fields and argument names
+            [
+                /[a-z_][\w$]*/,
+                {
+                    cases: {
+                        '@keywords': 'keyword',
+                        '@default': 'key.identifier',
+                    },
+                },
+            ],
+            // identify typed input variables
+            [
+                /[$][\w$]*/,
+                {
+                    cases: {
+                        '@keywords': 'keyword',
+                        '@default': 'argument.identifier',
+                    },
+                },
+            ],
+            // to show class names nicely
+            [
+                /[A-Z][\w\$]*/,
+                {
+                    cases: {
+                        '@typeKeywords': 'keyword',
+                        '@default': 'type.identifier',
+                    },
+                },
+            ],
+            // whitespace
+            { include: '@whitespace' },
+            // delimiters and operators
+            [/[{}()\[\]]/, '@brackets'],
+            [
+                /@symbols/,
+                { cases: { '@operators': 'operator', '@default': '' } },
+            ],
+            // @ annotations.
+            // As an example, we emit a debugging log message on these tokens.
+            // Note: message are supressed during the first load -- change some lines to see them.
+            [
+                /@\s*[a-zA-Z_\$][\w\$]*/,
+                { token: 'annotation', log: 'annotation token: $0' },
+            ],
+            // numbers
+            [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float'],
+            [/0[xX][0-9a-fA-F]+/, 'number.hex'],
+            [/\d+/, 'number'],
+            // delimiter: after number because of .\d floats
+            [/[;,.]/, 'delimiter'],
+            [/"""/,
+                { token: 'string', next: '@mlstring', nextEmbedded: 'markdown' }
+            ],
+            // strings
+            [/"([^"\\]|\\.)*$/, 'string.invalid'],
+            [/"/, { token: 'string.quote', bracket: '@open', next: '@string' }],
         ],
-        doctype: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.comment' }],
-            [/[^>]+/, 'metatag.content.html'],
-            [/>/, 'metatag.html', '@pop'],
+        mlstring: [
+            [/[^"]+/, 'string'],
+            ['"""', { token: 'string', next: '@pop', nextEmbedded: '@pop' }]
         ],
-        comment: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.comment' }],
-            [/-->/, 'comment.html', '@pop'],
-            [/[^-]+/, 'comment.content.html'],
-            [/./, 'comment.content.html']
+        string: [
+            [/[^\\"]+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/\\./, 'string.escape.invalid'],
+            [/"/, { token: 'string.quote', bracket: '@close', next: '@pop' }],
         ],
-        otherTag: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.otherTag' }],
-            [/\/?>/, 'delimiter.html', '@pop'],
-            [/"([^"]*)"/, 'attribute.value'],
-            [/'([^']*)'/, 'attribute.value'],
-            [/[\w\-]+/, 'attribute.name'],
-            [/=/, 'delimiter'],
-            [/[ \t\r\n]+/],
-        ],
-        // -- BEGIN <script> tags handling
-        // After <script
-        script: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.script' }],
-            [/type/, 'attribute.name', '@scriptAfterType'],
-            [/"([^"]*)"/, 'attribute.value'],
-            [/'([^']*)'/, 'attribute.value'],
-            [/[\w\-]+/, 'attribute.name'],
-            [/=/, 'delimiter'],
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.text/javascript', nextEmbedded: 'text/javascript' }],
-            [/[ \t\r\n]+/],
-            [/(<\/)(script\s*)(>)/, ['delimiter.html', 'tag.html', { token: 'delimiter.html', next: '@pop' }]]
-        ],
-        // After <script ... type
-        scriptAfterType: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.scriptAfterType' }],
-            [/=/, 'delimiter', '@scriptAfterTypeEquals'],
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.text/javascript', nextEmbedded: 'text/javascript' }],
-            [/[ \t\r\n]+/],
-            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        // After <script ... type =
-        scriptAfterTypeEquals: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.scriptAfterTypeEquals' }],
-            [/"([^"]*)"/, { token: 'attribute.value', switchTo: '@scriptWithCustomType.$1' }],
-            [/'([^']*)'/, { token: 'attribute.value', switchTo: '@scriptWithCustomType.$1' }],
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.text/javascript', nextEmbedded: 'text/javascript' }],
-            [/[ \t\r\n]+/],
-            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        // After <script ... type = $S2
-        scriptWithCustomType: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.scriptWithCustomType.$S2' }],
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.$S2', nextEmbedded: '$S2' }],
-            [/"([^"]*)"/, 'attribute.value'],
-            [/'([^']*)'/, 'attribute.value'],
-            [/[\w\-]+/, 'attribute.name'],
-            [/=/, 'delimiter'],
-            [/[ \t\r\n]+/],
-            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        scriptEmbedded: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInEmbeddedState.scriptEmbedded.$S2', nextEmbedded: '@pop' }],
-            [/<\/script/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }]
-        ],
-        // -- END <script> tags handling
-        // -- BEGIN <style> tags handling
-        // After <style
-        style: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.style' }],
-            [/type/, 'attribute.name', '@styleAfterType'],
-            [/"([^"]*)"/, 'attribute.value'],
-            [/'([^']*)'/, 'attribute.value'],
-            [/[\w\-]+/, 'attribute.name'],
-            [/=/, 'delimiter'],
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.text/css', nextEmbedded: 'text/css' }],
-            [/[ \t\r\n]+/],
-            [/(<\/)(style\s*)(>)/, ['delimiter.html', 'tag.html', { token: 'delimiter.html', next: '@pop' }]]
-        ],
-        // After <style ... type
-        styleAfterType: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.styleAfterType' }],
-            [/=/, 'delimiter', '@styleAfterTypeEquals'],
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.text/css', nextEmbedded: 'text/css' }],
-            [/[ \t\r\n]+/],
-            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        // After <style ... type =
-        styleAfterTypeEquals: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.styleAfterTypeEquals' }],
-            [/"([^"]*)"/, { token: 'attribute.value', switchTo: '@styleWithCustomType.$1' }],
-            [/'([^']*)'/, { token: 'attribute.value', switchTo: '@styleWithCustomType.$1' }],
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.text/css', nextEmbedded: 'text/css' }],
-            [/[ \t\r\n]+/],
-            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        // After <style ... type = $S2
-        styleWithCustomType: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInSimpleState.styleWithCustomType.$S2' }],
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.$S2', nextEmbedded: '$S2' }],
-            [/"([^"]*)"/, 'attribute.value'],
-            [/'([^']*)'/, 'attribute.value'],
-            [/[\w\-]+/, 'attribute.name'],
-            [/=/, 'delimiter'],
-            [/[ \t\r\n]+/],
-            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        styleEmbedded: [
-            [/\{\{/, { token: '@rematch', switchTo: '@handlebarsInEmbeddedState.styleEmbedded.$S2', nextEmbedded: '@pop' }],
-            [/<\/style/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }]
-        ],
-        // -- END <style> tags handling
-        handlebarsInSimpleState: [
-            [/\{\{\{?/, 'delimiter.handlebars'],
-            [/\}\}\}?/, { token: 'delimiter.handlebars', switchTo: '@$S2.$S3' }],
-            { include: 'handlebarsRoot' }
-        ],
-        handlebarsInEmbeddedState: [
-            [/\{\{\{?/, 'delimiter.handlebars'],
-            [/\}\}\}?/, { token: 'delimiter.handlebars', switchTo: '@$S2.$S3', nextEmbedded: '$S3' }],
-            { include: 'handlebarsRoot' }
-        ],
-        handlebarsRoot: [
-            [/"[^"]*"/, 'string.handlebars'],
-            [/[#/][^\s}]+/, 'keyword.helper.handlebars'],
-            [/else\b/, 'keyword.helper.handlebars'],
-            [/[\s]+/],
-            [/[^}]/, 'variable.parameter.handlebars'],
-        ],
+        whitespace: [[/[ \t\r\n]+/, ''], [/#.*$/, 'comment']],
     },
 };
 
@@ -206,3 +141,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=20.bundle.js.map

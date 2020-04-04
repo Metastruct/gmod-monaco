@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[48],{
 
-/***/ 547:
+/***/ 550:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,20 +14,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var conf = {
     comments: {
-        lineComment: '//',
-        blockComment: ['/*', '*/'],
+        lineComment: '#',
+        blockComment: ['=begin', '=end'],
     },
     brackets: [
+        ['(', ')'],
         ['{', '}'],
-        ['[', ']'],
-        ['(', ')']
+        ['[', ']']
     ],
     autoClosingPairs: [
-        { open: '[', close: ']' },
         { open: '{', close: '}' },
+        { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
-        { open: '"', close: '"', notIn: ['string'] },
+        { open: '"', close: '"' },
+        { open: '\'', close: '\'' },
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
@@ -36,129 +36,366 @@ var conf = {
         { open: '"', close: '"' },
         { open: '\'', close: '\'' },
     ],
-    folding: {
-        markers: {
-            start: new RegExp("^\\s*#pragma\\s+region\\b"),
-            end: new RegExp("^\\s*#pragma\\s+endregion\\b")
-        }
+    indentationRules: {
+        increaseIndentPattern: new RegExp('^\\s*((begin|class|(private|protected)\\s+def|def|else|elsif|ensure|for|if|module|rescue|unless|until|when|while|case)|([^#]*\\sdo\\b)|([^#]*=\\s*(case|if|unless)))\\b([^#\\{;]|("|\'|\/).*\\4)*(#.*)?$'),
+        decreaseIndentPattern: new RegExp('^\\s*([}\\]]([,)]?\\s*(#|$)|\\.[a-zA-Z_]\\w*\\b)|(end|rescue|ensure|else|elsif|when)\\b)'),
     }
 };
+/*
+ * Ruby language definition
+ *
+ * Quite a complex language due to elaborate escape sequences
+ * and quoting of literate strings/regular expressions, and
+ * an 'end' keyword that does not always apply to modifiers like until and while,
+ * and a 'do' keyword that sometimes starts a block, but sometimes is part of
+ * another statement (like 'while').
+ *
+ * (1) end blocks:
+ * 'end' may end declarations like if or until, but sometimes 'if' or 'until'
+ * are modifiers where there is no 'end'. Also, 'do' sometimes starts a block
+ * that is ended by 'end', but sometimes it is part of a 'while', 'for', or 'until'
+ * To do proper brace matching we do some elaborate state manipulation.
+ * some examples:
+ *
+ *   until bla do
+ *     work until tired
+ *     list.each do
+ *       something if test
+ *     end
+ *   end
+ *
+ * or
+ *
+ * if test
+ *  something (if test then x end)
+ *  bar if bla
+ * end
+ *
+ * or, how about using class as a property..
+ *
+ * class Test
+ *   def endpoint
+ *     self.class.endpoint || routes
+ *   end
+ * end
+ *
+ * (2) quoting:
+ * there are many kinds of strings and escape sequences. But also, one can
+ * start many string-like things as '%qx' where q specifies the kind of string
+ * (like a command, escape expanded, regular expression, symbol etc.), and x is
+ * some character and only another 'x' ends the sequence. Except for brackets
+ * where the closing bracket ends the sequence.. and except for a nested bracket
+ * inside the string like entity. Also, such strings can contain interpolated
+ * ruby expressions again (and span multiple lines). Moreover, expanded
+ * regular expression can also contain comments.
+ */
 var language = {
-    tokenPostfix: '.rust',
-    defaultToken: 'invalid',
+    tokenPostfix: '.ruby',
     keywords: [
-        'as', 'box', 'break', 'const', 'continue', 'crate', 'else', 'enum',
-        'extern', 'false', 'fn', 'for', 'if', 'impl', 'in', 'let', 'loop',
-        'match', 'mod', 'move', 'mut', 'pub', 'ref', 'return', 'self',
-        'static', 'struct', 'super', 'trait', 'true', 'type', 'unsafe', 'use',
-        'where', 'while', 'catch', 'default', 'union', 'static', 'abstract',
-        'alignof', 'become', 'do', 'final', 'macro', 'offsetof', 'override',
-        'priv', 'proc', 'pure', 'sizeof', 'typeof', 'unsized', 'virtual',
-        'yield',
+        '__LINE__', '__ENCODING__', '__FILE__', 'BEGIN', 'END', 'alias', 'and', 'begin',
+        'break', 'case', 'class', 'def', 'defined?', 'do', 'else', 'elsif', 'end',
+        'ensure', 'for', 'false', 'if', 'in', 'module', 'next', 'nil', 'not', 'or', 'redo',
+        'rescue', 'retry', 'return', 'self', 'super', 'then', 'true', 'undef', 'unless',
+        'until', 'when', 'while', 'yield',
     ],
-    typeKeywords: [
-        'Self', 'm32', 'm64', 'm128', 'f80', 'f16', 'f128', 'int', 'uint',
-        'float', 'char', 'bool', 'u8', 'u16', 'u32', 'u64', 'f32', 'f64', 'i8',
-        'i16', 'i32', 'i64', 'str', 'Option', 'Either', 'c_float', 'c_double',
-        'c_void', 'FILE', 'fpos_t', 'DIR', 'dirent', 'c_char', 'c_schar',
-        'c_uchar', 'c_short', 'c_ushort', 'c_int', 'c_uint', 'c_long',
-        'c_ulong', 'size_t', 'ptrdiff_t', 'clock_t', 'time_t', 'c_longlong',
-        'c_ulonglong', 'intptr_t', 'uintptr_t', 'off_t', 'dev_t', 'ino_t',
-        'pid_t', 'mode_t', 'ssize_t',
+    keywordops: [
+        '::', '..', '...', '?', ':', '=>'
     ],
-    constants: [
-        'true', 'false', 'Some', 'None', 'Left', 'Right', 'Ok', 'Err',
+    builtins: [
+        'require', 'public', 'private', 'include', 'extend', 'attr_reader',
+        'protected', 'private_class_method', 'protected_class_method', 'new'
     ],
-    supportConstants: [
-        'EXIT_FAILURE', 'EXIT_SUCCESS', 'RAND_MAX', 'EOF', 'SEEK_SET',
-        'SEEK_CUR', 'SEEK_END', '_IOFBF', '_IONBF', '_IOLBF', 'BUFSIZ',
-        'FOPEN_MAX', 'FILENAME_MAX', 'L_tmpnam', 'TMP_MAX', 'O_RDONLY',
-        'O_WRONLY', 'O_RDWR', 'O_APPEND', 'O_CREAT', 'O_EXCL', 'O_TRUNC',
-        'S_IFIFO', 'S_IFCHR', 'S_IFBLK', 'S_IFDIR', 'S_IFREG', 'S_IFMT',
-        'S_IEXEC', 'S_IWRITE', 'S_IREAD', 'S_IRWXU', 'S_IXUSR', 'S_IWUSR',
-        'S_IRUSR', 'F_OK', 'R_OK', 'W_OK', 'X_OK', 'STDIN_FILENO',
-        'STDOUT_FILENO', 'STDERR_FILENO',
+    // these are closed by 'end' (if, while and until are handled separately)
+    declarations: [
+        'module', 'class', 'def', 'case', 'do', 'begin', 'for', 'if', 'while', 'until', 'unless'
     ],
-    supportMacros: [
-        'format!', 'print!', 'println!', 'panic!', 'format_args!', 'unreachable!',
-        'write!', 'writeln!'
+    linedecls: [
+        'def', 'case', 'do', 'begin', 'for', 'if', 'while', 'until', 'unless'
     ],
     operators: [
-        '!', '!=', '%', '%=', '&', '&=', '&&', '*', '*=', '+', '+=', '-', '-=',
-        '->', '.', '..', '...', '/', '/=', ':', ';', '<<', '<<=', '<', '<=', '=',
-        '==', '=>', '>', '>=', '>>', '>>=', '@', '^', '^=', '|', '|=', '||', '_',
-        '?', '#'
+        '^', '&', '|', '<=>', '==', '===', '!~', '=~', '>', '>=', '<', '<=', '<<', '>>', '+',
+        '-', '*', '/', '%', '**', '~', '+@', '-@', '[]', '[]=', '`',
+        '+=', '-=', '*=', '**=', '/=', '^=', '%=', '<<=', '>>=', '&=', '&&=', '||=', '|='
     ],
-    escapes: /\\([nrt0\"''\\]|x\h{2}|u\{\h{1,6}\})/,
-    delimiters: /[,]/,
-    symbols: /[\#\!\%\&\*\+\-\.\/\:\;\<\=\>\@\^\|_\?]+/,
-    intSuffixes: /[iu](8|16|32|64|128|size)/,
-    floatSuffixes: /f(32|64)/,
+    brackets: [
+        { open: '(', close: ')', token: 'delimiter.parenthesis' },
+        { open: '{', close: '}', token: 'delimiter.curly' },
+        { open: '[', close: ']', token: 'delimiter.square' }
+    ],
+    // we include these common regular expressions
+    symbols: /[=><!~?:&|+\-*\/\^%\.]+/,
+    // escape sequences
+    escape: /(?:[abefnrstv\\"'\n\r]|[0-7]{1,3}|x[0-9A-Fa-f]{1,2}|u[0-9A-Fa-f]{4})/,
+    escapes: /\\(?:C\-(@escape|.)|c(@escape|.)|@escape)/,
+    decpart: /\d(_?\d)*/,
+    decimal: /0|@decpart/,
+    delim: /[^a-zA-Z0-9\s\n\r]/,
+    heredelim: /(?:\w+|'[^']*'|"[^"]*"|`[^`]*`)/,
+    regexpctl: /[(){}\[\]\$\^|\-*+?\.]/,
+    regexpesc: /\\(?:[AzZbBdDfnrstvwWn0\\\/]|@regexpctl|c[A-Z]|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4})?/,
+    // The main tokenizer for our languages
     tokenizer: {
+        // Main entry.
+        // root.<decl> where decl is the current opening declaration (like 'class')
         root: [
-            [/[a-zA-Z][a-zA-Z0-9_]*!?|_[a-zA-Z0-9_]+/,
+            // identifiers and keywords
+            // most complexity here is due to matching 'end' correctly with declarations.
+            // We distinguish a declaration that comes first on a line, versus declarations further on a line (which are most likey modifiers)
+            [/^(\s*)([a-z_]\w*[!?=]?)/, ['white',
+                    {
+                        cases: {
+                            'for|until|while': { token: 'keyword.$2', next: '@dodecl.$2' },
+                            '@declarations': { token: 'keyword.$2', next: '@root.$2' },
+                            'end': { token: 'keyword.$S2', next: '@pop' },
+                            '@keywords': 'keyword',
+                            '@builtins': 'predefined',
+                            '@default': 'identifier'
+                        }
+                    }]],
+            [/[a-z_]\w*[!?=]?/,
                 {
                     cases: {
-                        '@typeKeywords': 'keyword.type',
+                        'if|unless|while|until': { token: 'keyword.$0x', next: '@modifier.$0x' },
+                        'for': { token: 'keyword.$2', next: '@dodecl.$2' },
+                        '@linedecls': { token: 'keyword.$0', next: '@root.$0' },
+                        'end': { token: 'keyword.$S2', next: '@pop' },
                         '@keywords': 'keyword',
-                        '@supportConstants': 'keyword',
-                        '@supportMacros': 'keyword',
-                        '@constants': 'keyword',
-                        '@default': 'identifier',
-                    }
-                }
-            ],
-            // Designator
-            [/\$/, 'identifier'],
-            // Lifetime annotations
-            [/'[a-zA-Z_][a-zA-Z0-9_]*(?=[^\'])/, 'identifier'],
-            // Byte literal
-            [/'\S'/, 'string.byteliteral'],
-            // Strings
-            [/"/, { token: 'string.quote', bracket: '@open', next: '@string' }],
-            { include: '@numbers' },
-            // Whitespace + comments
-            { include: '@whitespace' },
-            [/@delimiters/, {
-                    cases: {
-                        '@keywords': 'keyword',
-                        '@default': 'delimiter'
+                        '@builtins': 'predefined',
+                        '@default': 'identifier'
                     }
                 }],
-            [/[{}()\[\]<>]/, '@brackets'],
-            [/@symbols/, { cases: { '@operators': 'operator', '@default': '' } }],
+            [/[A-Z][\w]*[!?=]?/, 'constructor.identifier'],
+            [/\$[\w]*/, 'global.constant'],
+            [/@[\w]*/, 'namespace.instance.identifier'],
+            [/@@[\w]*/, 'namespace.class.identifier'],
+            // here document
+            [/<<[-~](@heredelim).*/, { token: 'string.heredoc.delimiter', next: '@heredoc.$1' }],
+            [/[ \t\r\n]+<<(@heredelim).*/, { token: 'string.heredoc.delimiter', next: '@heredoc.$1' }],
+            [/^<<(@heredelim).*/, { token: 'string.heredoc.delimiter', next: '@heredoc.$1' }],
+            // whitespace
+            { include: '@whitespace' },
+            // strings
+            [/"/, { token: 'string.d.delim', next: '@dstring.d."' }],
+            [/'/, { token: 'string.sq.delim', next: '@sstring.sq' }],
+            // % literals. For efficiency, rematch in the 'pstring' state
+            [/%([rsqxwW]|Q?)/, { token: '@rematch', next: 'pstring' }],
+            // commands and symbols
+            [/`/, { token: 'string.x.delim', next: '@dstring.x.`' }],
+            [/:(\w|[$@])\w*[!?=]?/, 'string.s'],
+            [/:"/, { token: 'string.s.delim', next: '@dstring.s."' }],
+            [/:'/, { token: 'string.s.delim', next: '@sstring.s' }],
+            // regular expressions. Lookahead for a (not escaped) closing forwardslash on the same line
+            [/\/(?=(\\\/|[^\/\n])+\/)/, { token: 'regexp.delim', next: '@regexp' }],
+            // delimiters and operators
+            [/[{}()\[\]]/, '@brackets'],
+            [/@symbols/, {
+                    cases: {
+                        '@keywordops': 'keyword',
+                        '@operators': 'operator',
+                        '@default': ''
+                    }
+                }],
+            [/[;,]/, 'delimiter'],
+            // numbers
+            [/0[xX][0-9a-fA-F](_?[0-9a-fA-F])*/, 'number.hex'],
+            [/0[_oO][0-7](_?[0-7])*/, 'number.octal'],
+            [/0[bB][01](_?[01])*/, 'number.binary'],
+            [/0[dD]@decpart/, 'number'],
+            [/@decimal((\.@decpart)?([eE][\-+]?@decpart)?)/, {
+                    cases: {
+                        '$1': 'number.float',
+                        '@default': 'number'
+                    }
+                }],
         ],
+        // used to not treat a 'do' as a block opener if it occurs on the same
+        // line as a 'do' statement: 'while|until|for'
+        // dodecl.<decl> where decl is the declarations started, like 'while'
+        dodecl: [
+            [/^/, { token: '', switchTo: '@root.$S2' }],
+            [/[a-z_]\w*[!?=]?/, {
+                    cases: {
+                        'end': { token: 'keyword.$S2', next: '@pop' },
+                        'do': { token: 'keyword', switchTo: '@root.$S2' },
+                        '@linedecls': { token: '@rematch', switchTo: '@root.$S2' },
+                        '@keywords': 'keyword',
+                        '@builtins': 'predefined',
+                        '@default': 'identifier'
+                    }
+                }],
+            { include: '@root' }
+        ],
+        // used to prevent potential modifiers ('if|until|while|unless') to match
+        // with 'end' keywords.
+        // modifier.<decl>x where decl is the declaration starter, like 'if'
+        modifier: [
+            [/^/, '', '@pop'],
+            [/[a-z_]\w*[!?=]?/, {
+                    cases: {
+                        'end': { token: 'keyword.$S2', next: '@pop' },
+                        'then|else|elsif|do': { token: 'keyword', switchTo: '@root.$S2' },
+                        '@linedecls': { token: '@rematch', switchTo: '@root.$S2' },
+                        '@keywords': 'keyword',
+                        '@builtins': 'predefined',
+                        '@default': 'identifier'
+                    }
+                }],
+            { include: '@root' }
+        ],
+        // single quote strings (also used for symbols)
+        // sstring.<kind>  where kind is 'sq' (single quote) or 's' (symbol)
+        sstring: [
+            [/[^\\']+/, 'string.$S2'],
+            [/\\\\|\\'|\\$/, 'string.$S2.escape'],
+            [/\\./, 'string.$S2.invalid'],
+            [/'/, { token: 'string.$S2.delim', next: '@pop' }]
+        ],
+        // double quoted "string".
+        // dstring.<kind>.<delim> where kind is 'd' (double quoted), 'x' (command), or 's' (symbol)
+        // and delim is the ending delimiter (" or `)
+        dstring: [
+            [/[^\\`"#]+/, 'string.$S2'],
+            [/#/, 'string.$S2.escape', '@interpolated'],
+            [/\\$/, 'string.$S2.escape'],
+            [/@escapes/, 'string.$S2.escape'],
+            [/\\./, 'string.$S2.escape.invalid'],
+            [/[`"]/, {
+                    cases: {
+                        '$#==$S3': { token: 'string.$S2.delim', next: '@pop' },
+                        '@default': 'string.$S2'
+                    }
+                }]
+        ],
+        // literal documents
+        // heredoc.<close> where close is the closing delimiter
+        heredoc: [
+            [/^(\s*)(@heredelim)$/, {
+                    cases: {
+                        '$2==$S2': ['string.heredoc', { token: 'string.heredoc.delimiter', next: '@pop' }],
+                        '@default': ['string.heredoc', 'string.heredoc']
+                    }
+                }],
+            [/.*/, 'string.heredoc'],
+        ],
+        // interpolated sequence
+        interpolated: [
+            [/\$\w*/, 'global.constant', '@pop'],
+            [/@\w*/, 'namespace.class.identifier', '@pop'],
+            [/@@\w*/, 'namespace.instance.identifier', '@pop'],
+            [/[{]/, { token: 'string.escape.curly', switchTo: '@interpolated_compound' }],
+            ['', '', '@pop'],
+        ],
+        // any code
+        interpolated_compound: [
+            [/[}]/, { token: 'string.escape.curly', next: '@pop' }],
+            { include: '@root' },
+        ],
+        // %r quoted regexp
+        // pregexp.<open>.<close> where open/close are the open/close delimiter
+        pregexp: [
+            { include: '@whitespace' },
+            // turns out that you can quote using regex control characters, aargh!
+            // for example; %r|kgjgaj| is ok (even though | is used for alternation)
+            // so, we need to match those first
+            [/[^\(\{\[\\]/, {
+                    cases: {
+                        '$#==$S3': { token: 'regexp.delim', next: '@pop' },
+                        '$#==$S2': { token: 'regexp.delim', next: '@push' },
+                        '~[)}\\]]': '@brackets.regexp.escape.control',
+                        '~@regexpctl': 'regexp.escape.control',
+                        '@default': 'regexp'
+                    }
+                }],
+            { include: '@regexcontrol' },
+        ],
+        // We match regular expression quite precisely
+        regexp: [
+            { include: '@regexcontrol' },
+            [/[^\\\/]/, 'regexp'],
+            ['/[ixmp]*', { token: 'regexp.delim' }, '@pop'],
+        ],
+        regexcontrol: [
+            [/(\{)(\d+(?:,\d*)?)(\})/, ['@brackets.regexp.escape.control', 'regexp.escape.control', '@brackets.regexp.escape.control']],
+            [/(\[)(\^?)/, ['@brackets.regexp.escape.control', { token: 'regexp.escape.control', next: '@regexrange' }]],
+            [/(\()(\?[:=!])/, ['@brackets.regexp.escape.control', 'regexp.escape.control']],
+            [/\(\?#/, { token: 'regexp.escape.control', next: '@regexpcomment' }],
+            [/[()]/, '@brackets.regexp.escape.control'],
+            [/@regexpctl/, 'regexp.escape.control'],
+            [/\\$/, 'regexp.escape'],
+            [/@regexpesc/, 'regexp.escape'],
+            [/\\\./, 'regexp.invalid'],
+            [/#/, 'regexp.escape', '@interpolated'],
+        ],
+        regexrange: [
+            [/-/, 'regexp.escape.control'],
+            [/\^/, 'regexp.invalid'],
+            [/\\$/, 'regexp.escape'],
+            [/@regexpesc/, 'regexp.escape'],
+            [/[^\]]/, 'regexp'],
+            [/\]/, '@brackets.regexp.escape.control', '@pop'],
+        ],
+        regexpcomment: [
+            [/[^)]+/, 'comment'],
+            [/\)/, { token: 'regexp.escape.control', next: '@pop' }]
+        ],
+        // % quoted strings
+        // A bit repetitive since we need to often special case the kind of ending delimiter
+        pstring: [
+            [/%([qws])\(/, { token: 'string.$1.delim', switchTo: '@qstring.$1.(.)' }],
+            [/%([qws])\[/, { token: 'string.$1.delim', switchTo: '@qstring.$1.[.]' }],
+            [/%([qws])\{/, { token: 'string.$1.delim', switchTo: '@qstring.$1.{.}' }],
+            [/%([qws])</, { token: 'string.$1.delim', switchTo: '@qstring.$1.<.>' }],
+            [/%([qws])(@delim)/, { token: 'string.$1.delim', switchTo: '@qstring.$1.$2.$2' }],
+            [/%r\(/, { token: 'regexp.delim', switchTo: '@pregexp.(.)' }],
+            [/%r\[/, { token: 'regexp.delim', switchTo: '@pregexp.[.]' }],
+            [/%r\{/, { token: 'regexp.delim', switchTo: '@pregexp.{.}' }],
+            [/%r</, { token: 'regexp.delim', switchTo: '@pregexp.<.>' }],
+            [/%r(@delim)/, { token: 'regexp.delim', switchTo: '@pregexp.$1.$1' }],
+            [/%(x|W|Q?)\(/, { token: 'string.$1.delim', switchTo: '@qqstring.$1.(.)' }],
+            [/%(x|W|Q?)\[/, { token: 'string.$1.delim', switchTo: '@qqstring.$1.[.]' }],
+            [/%(x|W|Q?)\{/, { token: 'string.$1.delim', switchTo: '@qqstring.$1.{.}' }],
+            [/%(x|W|Q?)</, { token: 'string.$1.delim', switchTo: '@qqstring.$1.<.>' }],
+            [/%(x|W|Q?)(@delim)/, { token: 'string.$1.delim', switchTo: '@qqstring.$1.$2.$2' }],
+            [/%([rqwsxW]|Q?)./, { token: 'invalid', next: '@pop' }],
+            [/./, { token: 'invalid', next: '@pop' }],
+        ],
+        // non-expanded quoted string.
+        // qstring.<kind>.<open>.<close>
+        //  kind = q|w|s  (single quote, array, symbol)
+        //  open = open delimiter
+        //  close = close delimiter
+        qstring: [
+            [/\\$/, 'string.$S2.escape'],
+            [/\\./, 'string.$S2.escape'],
+            [/./, {
+                    cases: {
+                        '$#==$S4': { token: 'string.$S2.delim', next: '@pop' },
+                        '$#==$S3': { token: 'string.$S2.delim', next: '@push' },
+                        '@default': 'string.$S2'
+                    }
+                }],
+        ],
+        // expanded quoted string.
+        // qqstring.<kind>.<open>.<close>
+        //  kind = Q|W|x  (double quote, array, command)
+        //  open = open delimiter
+        //  close = close delimiter
+        qqstring: [
+            [/#/, 'string.$S2.escape', '@interpolated'],
+            { include: '@qstring' }
+        ],
+        // whitespace & comments
         whitespace: [
-            [/[ \t\r\n]+/, 'white'],
-            [/\/\*/, 'comment', '@comment'],
-            [/\/\/.*$/, 'comment'],
+            [/[ \t\r\n]+/, ''],
+            [/^\s*=begin\b/, 'comment', '@comment'],
+            [/#.*$/, 'comment'],
         ],
         comment: [
-            [/[^\/*]+/, 'comment'],
-            [/\/\*/, 'comment', '@push'],
-            ["\\*/", 'comment', '@pop'],
-            [/[\/*]/, 'comment']
+            [/[^=]+/, 'comment'],
+            [/^\s*=begin\b/, 'comment.invalid'],
+            [/^\s*=end\b.*/, 'comment', '@pop'],
+            [/[=]/, 'comment']
         ],
-        string: [
-            [/[^\\"]+/, 'string'],
-            [/@escapes/, 'string.escape'],
-            [/\\./, 'string.escape.invalid'],
-            [/"/, { token: 'string.quote', bracket: '@close', next: '@pop' }]
-        ],
-        numbers: [
-            //Octal
-            [/(0o[0-7_]+)(@intSuffixes)?/, { token: 'number' }],
-            //Binary
-            [/(0b[0-1_]+)(@intSuffixes)?/, { token: 'number' }],
-            //Exponent
-            [/[\d][\d_]*(\.[\d][\d_]*)?[eE][+-][\d_]+(@floatSuffixes)?/, { token: 'number' }],
-            //Float
-            [/\b(\d\.?[\d_]*)(@floatSuffixes)?\b/, { token: 'number' }],
-            //Hexadecimal
-            [/(0x[\da-fA-F]+)_?(@intSuffixes)?/, { token: 'number' }],
-            //Integer
-            [/[\d][\d_]*(@intSuffixes?)?/, { token: 'number' }],
-        ]
     }
 };
 
@@ -166,3 +403,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=48.bundle.js.map

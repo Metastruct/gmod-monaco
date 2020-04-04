@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[19],{
 
-/***/ 517:
+/***/ 520:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var conf = {
     comments: {
-        lineComment: '#'
+        lineComment: '//',
+        blockComment: ['/*', '*/'],
     },
     brackets: [
         ['{', '}'],
@@ -25,115 +26,155 @@ var conf = {
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '"""', close: '"""', notIn: ['string', 'comment'] },
-        { open: '"', close: '"', notIn: ['string', 'comment'] },
+        { open: '`', close: '`', notIn: ['string'] },
+        { open: '"', close: '"', notIn: ['string'] },
+        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '"""', close: '"""' },
+        { open: '`', close: '`' },
         { open: '"', close: '"' },
-    ],
-    folding: {
-        offSide: true
-    }
+        { open: '\'', close: '\'' },
+    ]
 };
 var language = {
-    // Set defaultToken to invalid to see what you do not tokenize yet
-    defaultToken: 'invalid',
-    tokenPostfix: '.gql',
+    defaultToken: '',
+    tokenPostfix: '.go',
     keywords: [
-        'null', 'true', 'false',
-        'query', 'mutation', 'subscription',
-        'extend', 'schema', 'directive',
-        'scalar', 'type', 'interface', 'union', 'enum', 'input', 'implements',
-        'fragment', 'on',
+        'break',
+        'case',
+        'chan',
+        'const',
+        'continue',
+        'default',
+        'defer',
+        'else',
+        'fallthrough',
+        'for',
+        'func',
+        'go',
+        'goto',
+        'if',
+        'import',
+        'interface',
+        'map',
+        'package',
+        'range',
+        'return',
+        'select',
+        'struct',
+        'switch',
+        'type',
+        'var',
+        'bool',
+        'true',
+        'false',
+        'uint8',
+        'uint16',
+        'uint32',
+        'uint64',
+        'int8',
+        'int16',
+        'int32',
+        'int64',
+        'float32',
+        'float64',
+        'complex64',
+        'complex128',
+        'byte',
+        'rune',
+        'uint',
+        'int',
+        'uintptr',
+        'string',
+        'nil',
     ],
-    typeKeywords: ['Int', 'Float', 'String', 'Boolean', 'ID'],
-    directiveLocations: [
-        'SCHEMA', 'SCALAR', 'OBJECT', 'FIELD_DEFINITION', 'ARGUMENT_DEFINITION',
-        'INTERFACE', 'UNION', 'ENUM', 'ENUM_VALUE', 'INPUT_OBJECT', 'INPUT_FIELD_DEFINITION',
-        'QUERY', 'MUTATION', 'SUBSCRIPTION', 'FIELD', 'FRAGMENT_DEFINITION',
-        'FRAGMENT_SPREAD', 'INLINE_FRAGMENT', 'VARIABLE_DEFINITION',
+    operators: [
+        '+', '-', '*', '/', '%', '&', '|', '^', '<<', '>>', '&^',
+        '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '&^=',
+        '&&', '||', '<-', '++', '--', '==', '<', '>', '=', '!', '!=', '<=', '>=', ':=', '...',
+        '(', ')', '', ']', '{', '}', ',', ';', '.', ':'
     ],
-    operators: ['=', '!', '?', ':', '&', '|'],
     // we include these common regular expressions
-    symbols: /[=!?:&|]+/,
-    // https://facebook.github.io/graphql/draft/#sec-String-Value
-    escapes: /\\(?:["\\\/bfnrt]|u[0-9A-Fa-f]{4})/,
+    symbols: /[=><!~?:&|+\-*\/\^%]+/,
+    escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
     // The main tokenizer for our languages
     tokenizer: {
         root: [
-            // fields and argument names
-            [
-                /[a-z_][\w$]*/,
-                {
+            // identifiers and keywords
+            [/[a-zA-Z_]\w*/, {
                     cases: {
-                        '@keywords': 'keyword',
-                        '@default': 'key.identifier',
-                    },
-                },
-            ],
-            // identify typed input variables
-            [
-                /[$][\w$]*/,
-                {
-                    cases: {
-                        '@keywords': 'keyword',
-                        '@default': 'argument.identifier',
-                    },
-                },
-            ],
-            // to show class names nicely
-            [
-                /[A-Z][\w\$]*/,
-                {
-                    cases: {
-                        '@typeKeywords': 'keyword',
-                        '@default': 'type.identifier',
-                    },
-                },
-            ],
+                        '@keywords': { token: 'keyword.$0' },
+                        '@default': 'identifier'
+                    }
+                }],
             // whitespace
             { include: '@whitespace' },
+            // [[ attributes ]].
+            [/\[\[.*\]\]/, 'annotation'],
+            // Preprocessor directive
+            [/^\s*#\w+/, 'keyword'],
             // delimiters and operators
             [/[{}()\[\]]/, '@brackets'],
-            [
-                /@symbols/,
-                { cases: { '@operators': 'operator', '@default': '' } },
-            ],
-            // @ annotations.
-            // As an example, we emit a debugging log message on these tokens.
-            // Note: message are supressed during the first load -- change some lines to see them.
-            [
-                /@\s*[a-zA-Z_\$][\w\$]*/,
-                { token: 'annotation', log: 'annotation token: $0' },
-            ],
+            [/[<>](?!@symbols)/, '@brackets'],
+            [/@symbols/, {
+                    cases: {
+                        '@operators': 'delimiter',
+                        '@default': ''
+                    }
+                }],
             // numbers
+            [/\d*\d+[eE]([\-+]?\d+)?/, 'number.float'],
             [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float'],
-            [/0[xX][0-9a-fA-F]+/, 'number.hex'],
-            [/\d+/, 'number'],
+            [/0[xX][0-9a-fA-F']*[0-9a-fA-F]/, 'number.hex'],
+            [/0[0-7']*[0-7]/, 'number.octal'],
+            [/0[bB][0-1']*[0-1]/, 'number.binary'],
+            [/\d[\d']*/, 'number'],
+            [/\d/, 'number'],
             // delimiter: after number because of .\d floats
             [/[;,.]/, 'delimiter'],
-            [/"""/,
-                { token: 'string', next: '@mlstring', nextEmbedded: 'markdown' }
-            ],
             // strings
             [/"([^"\\]|\\.)*$/, 'string.invalid'],
-            [/"/, { token: 'string.quote', bracket: '@open', next: '@string' }],
+            [/"/, 'string', '@string'],
+            [/`/, "string", "@rawstring"],
+            // characters
+            [/'[^\\']'/, 'string'],
+            [/(')(@escapes)(')/, ['string', 'string.escape', 'string']],
+            [/'/, 'string.invalid']
         ],
-        mlstring: [
-            [/[^"]+/, 'string'],
-            ['"""', { token: 'string', next: '@pop', nextEmbedded: '@pop' }]
+        whitespace: [
+            [/[ \t\r\n]+/, ''],
+            [/\/\*\*(?!\/)/, 'comment.doc', '@doccomment'],
+            [/\/\*/, 'comment', '@comment'],
+            [/\/\/.*$/, 'comment'],
+        ],
+        comment: [
+            [/[^\/*]+/, 'comment'],
+            // [/\/\*/, 'comment', '@push' ],    // nested comment not allowed :-(
+            // [/\/\*/,    'comment.invalid' ],    // this breaks block comments in the shape of /* //*/
+            [/\*\//, 'comment', '@pop'],
+            [/[\/*]/, 'comment']
+        ],
+        //Identical copy of comment above, except for the addition of .doc
+        doccomment: [
+            [/[^\/*]+/, 'comment.doc'],
+            // [/\/\*/, 'comment.doc', '@push' ],    // nested comment not allowed :-(
+            [/\/\*/, 'comment.doc.invalid'],
+            [/\*\//, 'comment.doc', '@pop'],
+            [/[\/*]/, 'comment.doc']
         ],
         string: [
             [/[^\\"]+/, 'string'],
             [/@escapes/, 'string.escape'],
             [/\\./, 'string.escape.invalid'],
-            [/"/, { token: 'string.quote', bracket: '@close', next: '@pop' }],
+            [/"/, 'string', '@pop']
         ],
-        whitespace: [[/[ \t\r\n]+/, ''], [/#.*$/, 'comment']],
+        rawstring: [
+            [/[^\`]/, "string"],
+            [/`/, "string", "@pop"]
+        ],
     },
 };
 
@@ -141,3 +182,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=19.bundle.js.map

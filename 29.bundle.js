@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[29],{
 
-/***/ 528:
+/***/ 531:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,170 +13,133 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
+    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\@\#%\^\&\*\(\)\=\$\-\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g,
     comments: {
-        lineComment: '//',
-        blockComment: ['/*', '*/'],
+        blockComment: ['###', '###'],
+        lineComment: '#'
     },
-    brackets: [['[', ']'], ['(', ')'], ['{', '}']],
-    autoClosingPairs: [
-        { open: '"', close: '"', notIn: ['string', 'comment'] },
-        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
-        { open: '[', close: ']', notIn: ['string', 'comment'] },
-        { open: '(', close: ')', notIn: ['string', 'comment'] },
-        { open: '{', close: '}', notIn: ['string', 'comment'] },
-    ]
+    folding: {
+        markers: {
+            start: new RegExp("^\\s*#region\\b"),
+            end: new RegExp("^\\s*#endregion\\b")
+        }
+    }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.msdax',
-    ignoreCase: true,
-    brackets: [
-        { open: '[', close: ']', token: 'delimiter.square' },
-        { open: '{', close: '}', token: 'delimiter.brackets' },
-        { open: '(', close: ')', token: 'delimiter.parenthesis' }
-    ],
+    ignoreCase: false,
+    tokenPostfix: '.mips',
+    regEx: /\/(?!\/\/)(?:[^\/\\]|\\.)*\/[igm]*/,
     keywords: [
-        // Query keywords
-        'VAR',
-        'RETURN',
-        'NOT',
-        'EVALUATE',
-        'DATATABLE',
-        'ORDER',
-        'BY',
-        'START',
-        'AT',
-        'DEFINE',
-        'MEASURE',
-        'ASC',
-        'DESC',
-        'IN',
-        // Datatable types
-        'BOOLEAN',
-        'DOUBLE',
-        'INTEGER',
-        'DATETIME',
-        'CURRENCY',
-        'STRING'
+        '.data', '.text', 'syscall', 'trap',
+        'add', 'addu', 'addi', 'addiu', 'and', 'andi',
+        'div', 'divu', 'mult', 'multu', 'nor', 'or', 'ori',
+        'sll', 'slv', 'sra', 'srav', 'srl', 'srlv',
+        'sub', 'subu', 'xor', 'xori', 'lhi', 'lho',
+        'lhi', 'llo', 'slt', 'slti', 'sltu', 'sltiu',
+        'beq', 'bgtz', 'blez', 'bne', 'j', 'jal', 'jalr', 'jr',
+        'lb', 'lbu', 'lh', 'lhu', 'lw', 'li', 'la',
+        'sb', 'sh', 'sw', 'mfhi', 'mflo', 'mthi', 'mtlo', 'move',
     ],
-    functions: [
-        // Relational
-        'CLOSINGBALANCEMONTH', 'CLOSINGBALANCEQUARTER', 'CLOSINGBALANCEYEAR', 'DATEADD', 'DATESBETWEEN',
-        'DATESINPERIOD', 'DATESMTD', 'DATESQTD', 'DATESYTD', 'ENDOFMONTH',
-        'ENDOFQUARTER', 'ENDOFYEAR', 'FIRSTDATE', 'FIRSTNONBLANK', 'LASTDATE',
-        'LASTNONBLANK', 'NEXTDAY', 'NEXTMONTH', 'NEXTQUARTER', 'NEXTYEAR',
-        'OPENINGBALANCEMONTH', 'OPENINGBALANCEQUARTER', 'OPENINGBALANCEYEAR', 'PARALLELPERIOD', 'PREVIOUSDAY',
-        'PREVIOUSMONTH', 'PREVIOUSQUARTER', 'PREVIOUSYEAR', 'SAMEPERIODLASTYEAR', 'STARTOFMONTH',
-        'STARTOFQUARTER', 'STARTOFYEAR', 'TOTALMTD', 'TOTALQTD', 'TOTALYTD',
-        'ADDCOLUMNS', 'ADDMISSINGITEMS', 'ALL', 'ALLEXCEPT', 'ALLNOBLANKROW',
-        'ALLSELECTED', 'CALCULATE', 'CALCULATETABLE', 'CALENDAR', 'CALENDARAUTO',
-        'CROSSFILTER', 'CROSSJOIN', 'CURRENTGROUP', 'DATATABLE', 'DETAILROWS',
-        'DISTINCT', 'EARLIER', 'EARLIEST', 'EXCEPT', 'FILTER',
-        'FILTERS', 'GENERATE', 'GENERATEALL', 'GROUPBY', 'IGNORE',
-        'INTERSECT', 'ISONORAFTER', 'KEEPFILTERS', 'LOOKUPVALUE', 'NATURALINNERJOIN',
-        'NATURALLEFTOUTERJOIN', 'RELATED', 'RELATEDTABLE', 'ROLLUP', 'ROLLUPADDISSUBTOTAL',
-        'ROLLUPGROUP', 'ROLLUPISSUBTOTAL', 'ROW', 'SAMPLE', 'SELECTCOLUMNS',
-        'SUBSTITUTEWITHINDEX', 'SUMMARIZE', 'SUMMARIZECOLUMNS', 'TOPN', 'TREATAS',
-        'UNION', 'USERELATIONSHIP', 'VALUES', 'SUM', 'SUMX',
-        'PATH', 'PATHCONTAINS', 'PATHITEM', 'PATHITEMREVERSE', 'PATHLENGTH',
-        'AVERAGE', 'AVERAGEA', 'AVERAGEX', 'COUNT', 'COUNTA',
-        'COUNTAX', 'COUNTBLANK', 'COUNTROWS', 'COUNTX', 'DISTINCTCOUNT',
-        'DIVIDE', 'GEOMEAN', 'GEOMEANX', 'MAX', 'MAXA',
-        'MAXX', 'MEDIAN', 'MEDIANX', 'MIN', 'MINA',
-        'MINX', 'PERCENTILE.EXC', 'PERCENTILE.INC', 'PERCENTILEX.EXC', 'PERCENTILEX.INC',
-        'PRODUCT', 'PRODUCTX', 'RANK.EQ', 'RANKX', 'STDEV.P',
-        'STDEV.S', 'STDEVX.P', 'STDEVX.S', 'VAR.P', 'VAR.S',
-        'VARX.P', 'VARX.S', 'XIRR', 'XNPV',
-        // Scalar
-        'DATE', 'DATEDIFF', 'DATEVALUE', 'DAY', 'EDATE',
-        'EOMONTH', 'HOUR', 'MINUTE', 'MONTH', 'NOW',
-        'SECOND', 'TIME', 'TIMEVALUE', 'TODAY', 'WEEKDAY',
-        'WEEKNUM', 'YEAR', 'YEARFRAC', 'CONTAINS', 'CONTAINSROW',
-        'CUSTOMDATA', 'ERROR', 'HASONEFILTER', 'HASONEVALUE', 'ISBLANK',
-        'ISCROSSFILTERED', 'ISEMPTY', 'ISERROR', 'ISEVEN', 'ISFILTERED',
-        'ISLOGICAL', 'ISNONTEXT', 'ISNUMBER', 'ISODD', 'ISSUBTOTAL',
-        'ISTEXT', 'USERNAME', 'USERPRINCIPALNAME', 'AND', 'FALSE',
-        'IF', 'IFERROR', 'NOT', 'OR', 'SWITCH',
-        'TRUE', 'ABS', 'ACOS', 'ACOSH', 'ACOT',
-        'ACOTH', 'ASIN', 'ASINH', 'ATAN', 'ATANH',
-        'BETA.DIST', 'BETA.INV', 'CEILING', 'CHISQ.DIST', 'CHISQ.DIST.RT',
-        'CHISQ.INV', 'CHISQ.INV.RT', 'COMBIN', 'COMBINA', 'CONFIDENCE.NORM',
-        'CONFIDENCE.T', 'COS', 'COSH', 'COT', 'COTH',
-        'CURRENCY', 'DEGREES', 'EVEN', 'EXP', 'EXPON.DIST',
-        'FACT', 'FLOOR', 'GCD', 'INT', 'ISO.CEILING',
-        'LCM', 'LN', 'LOG', 'LOG10', 'MOD',
-        'MROUND', 'ODD', 'PERMUT', 'PI', 'POISSON.DIST',
-        'POWER', 'QUOTIENT', 'RADIANS', 'RAND', 'RANDBETWEEN',
-        'ROUND', 'ROUNDDOWN', 'ROUNDUP', 'SIGN', 'SIN',
-        'SINH', 'SQRT', 'SQRTPI', 'TAN', 'TANH',
-        'TRUNC', 'BLANK', 'CONCATENATE', 'CONCATENATEX', 'EXACT',
-        'FIND', 'FIXED', 'FORMAT', 'LEFT', 'LEN',
-        'LOWER', 'MID', 'REPLACE', 'REPT', 'RIGHT',
-        'SEARCH', 'SUBSTITUTE', 'TRIM', 'UNICHAR', 'UNICODE',
-        'UPPER', 'VALUE'
-    ],
+    // we include these common regular expressions
+    symbols: /[\.,\:]+/,
+    escapes: /\\(?:[abfnrtv\\"'$]|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
+    // The main tokenizer for our languages
     tokenizer: {
         root: [
-            { include: '@comments' },
-            { include: '@whitespace' },
-            { include: '@numbers' },
-            { include: '@strings' },
-            { include: '@complexIdentifiers' },
-            [/[;,.]/, 'delimiter'],
-            [/[({})]/, '@brackets'],
-            [/[a-z_][a-zA-Z0-9_]*/, {
+            // identifiers and keywords
+            [/\$[a-zA-Z_]\w*/, 'variable.predefined'],
+            [/[.a-zA-Z_]\w*/, {
                     cases: {
-                        '@keywords': 'keyword',
-                        '@functions': 'keyword',
-                        '@default': 'identifier'
+                        'this': 'variable.predefined',
+                        '@keywords': { token: 'keyword.$0' },
+                        '@default': ''
                     }
                 }],
-            [/[<>=!%&+\-*/|~^]/, 'operator'],
-        ],
-        whitespace: [
-            [/\s+/, 'white']
-        ],
-        comments: [
-            [/\/\/+.*/, 'comment'],
-            [/\/\*/, { token: 'comment.quote', next: '@comment' }]
-        ],
-        comment: [
-            [/[^*/]+/, 'comment'],
-            [/\*\//, { token: 'comment.quote', next: '@pop' }],
-            [/./, 'comment']
-        ],
-        numbers: [
-            [/0[xX][0-9a-fA-F]*/, 'number'],
-            [/[$][+-]*\d*(\.\d*)?/, 'number'],
-            [/((\d+(\.\d*)?)|(\.\d+))([eE][\-+]?\d+)?/, 'number']
-        ],
-        strings: [
-            [/N"/, { token: 'string', next: '@string' }],
-            [/"/, { token: 'string', next: '@string' }]
+            // whitespace
+            [/[ \t\r\n]+/, ''],
+            // Comments
+            [/#.*$/, 'comment'],
+            // regular expressions
+            ['///', { token: 'regexp', next: '@hereregexp' }],
+            [/^(\s*)(@regEx)/, ['', 'regexp']],
+            [/(\,)(\s*)(@regEx)/, ['delimiter', '', 'regexp']],
+            [/(\:)(\s*)(@regEx)/, ['delimiter', '', 'regexp']],
+            // delimiters
+            [/@symbols/, 'delimiter'],
+            // numbers
+            [/\d+[eE]([\-+]?\d+)?/, 'number.float'],
+            [/\d+\.\d+([eE][\-+]?\d+)?/, 'number.float'],
+            [/0[xX][0-9a-fA-F]+/, 'number.hex'],
+            [/0[0-7]+(?!\d)/, 'number.octal'],
+            [/\d+/, 'number'],
+            // delimiter: after number because of .\d floats
+            [/[,.]/, 'delimiter'],
+            // strings:
+            [/"""/, 'string', '@herestring."""'],
+            [/'''/, 'string', '@herestring.\'\'\''],
+            [/"/, {
+                    cases: {
+                        '@eos': 'string',
+                        '@default': { token: 'string', next: '@string."' }
+                    }
+                }],
+            [/'/, {
+                    cases: {
+                        '@eos': 'string',
+                        '@default': { token: 'string', next: '@string.\'' }
+                    }
+                }],
         ],
         string: [
-            [/[^"]+/, 'string'],
-            [/""/, 'string'],
-            [/"/, { token: 'string', next: '@pop' }]
+            [/[^"'\#\\]+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/\./, 'string.escape.invalid'],
+            [/\./, 'string.escape.invalid'],
+            [/#{/, {
+                    cases: {
+                        '$S2=="': { token: 'string', next: 'root.interpolatedstring' },
+                        '@default': 'string'
+                    }
+                }],
+            [/["']/, {
+                    cases: {
+                        '$#==$S2': { token: 'string', next: '@pop' },
+                        '@default': 'string'
+                    }
+                }],
+            [/#/, 'string']
         ],
-        complexIdentifiers: [
-            [/\[/, { token: 'identifier.quote', next: '@bracketedIdentifier' }],
-            [/'/, { token: 'identifier.quote', next: '@quotedIdentifier' }]
+        herestring: [
+            [/("""|''')/, {
+                    cases: {
+                        '$1==$S2': { token: 'string', next: '@pop' },
+                        '@default': 'string'
+                    }
+                }],
+            [/[^#\\'"]+/, 'string'],
+            [/['"]+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/\./, 'string.escape.invalid'],
+            [/#{/, { token: 'string.quote', next: 'root.interpolatedstring' }],
+            [/#/, 'string']
         ],
-        bracketedIdentifier: [
-            [/[^\]]+/, 'identifier'],
-            [/]]/, 'identifier'],
-            [/]/, { token: 'identifier.quote', next: '@pop' }]
+        comment: [
+            [/[^#]+/, 'comment',],
+            [/#/, 'comment'],
         ],
-        quotedIdentifier: [
-            [/[^']+/, 'identifier'],
-            [/''/, 'identifier'],
-            [/'/, { token: 'identifier.quote', next: '@pop' }]
-        ]
-    }
+        hereregexp: [
+            [/[^\\\/#]+/, 'regexp'],
+            [/\\./, 'regexp'],
+            [/#.*$/, 'comment'],
+            ['///[igm]*', { token: 'regexp', next: '@pop' }],
+            [/\//, 'regexp'],
+        ],
+    },
 };
 
 
 /***/ })
 
 }]);
+//# sourceMappingURL=29.bundle.js.map

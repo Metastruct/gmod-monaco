@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[33],{
 
-/***/ 532:
+/***/ 535:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,9 +13,11 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
+    // the default separators except `@$`
+    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g,
     comments: {
         lineComment: '//',
-        blockComment: ['(*', '*)'],
+        blockComment: ['{', '}'],
     },
     brackets: [
         ['{', '}'],
@@ -36,11 +38,17 @@ var conf = {
         { open: '(', close: ')' },
         { open: '<', close: '>' },
         { open: '\'', close: '\'' },
-    ]
+    ],
+    folding: {
+        markers: {
+            start: new RegExp("^\\s*\\{\\$REGION(\\s\\'.*\\')?\\}"),
+            end: new RegExp("^\\s*\\{\\$ENDREGION\\}")
+        }
+    }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.pascaligo',
+    tokenPostfix: '.pascal',
     ignoreCase: true,
     brackets: [
         { open: '{', close: '}', token: 'delimiter.curly' },
@@ -49,17 +57,30 @@ var language = {
         { open: '<', close: '>', token: 'delimiter.angle' }
     ],
     keywords: [
-        'begin', 'block', 'case', 'const', 'else', 'end',
-        'fail', 'for', 'from', 'function', 'if', 'is', 'nil',
-        'of', 'remove', 'return', 'skip', 'then', 'type', 'var',
-        'while', 'with', 'option', 'None', 'transaction'
+        'absolute', 'abstract', 'all', 'and_then', 'array', 'as', 'asm',
+        'attribute', 'begin', 'bindable', 'case', 'class', 'const',
+        'contains', 'default', 'div', 'else', 'end', 'except',
+        'exports', 'external', 'far', 'file', 'finalization', 'finally',
+        'forward', 'generic', 'goto', 'if', 'implements', 'import', 'in',
+        'index', 'inherited', 'initialization', 'interrupt', 'is', 'label',
+        'library', 'mod', 'module', 'name', 'near', 'not', 'object', 'of',
+        'on', 'only', 'operator', 'or_else', 'otherwise', 'override',
+        'package', 'packed', 'pow', 'private', 'program', 'protected',
+        'public', 'published', 'interface', 'implementation', 'qualified',
+        'read', 'record', 'resident', 'requires', 'resourcestring',
+        'restricted', 'segment', 'set', 'shl', 'shr', 'specialize', 'stored',
+        'then', 'threadvar', 'to', 'try', 'type', 'unit', 'uses', 'var',
+        'view', 'virtual', 'dynamic', 'overload', 'reintroduce', 'with',
+        'write', 'xor', 'true', 'false', 'procedure', 'function',
+        'constructor', 'destructor', 'property', 'break', 'continue', 'exit',
+        'abort', 'while', 'do', 'for', 'raise', 'repeat', 'until'
     ],
     typeKeywords: [
-        'bool', 'int', 'list', 'map', 'nat', 'record',
-        'string', 'unit', 'address', 'map', 'mtz', 'xtz'
+        'boolean', 'double', 'byte', 'integer', 'shortint', 'char',
+        'longint', 'float', 'string'
     ],
     operators: [
-        '=', '>', '<', '<=', '>=', '<>', ':', ':=', 'and', 'mod', 'or',
+        '=', '>', '<', '<=', '>=', '<>', ':', ':=', 'and', 'or',
         '+', '-', '*', '/', '@', '&', '^', '%'
     ],
     // we include these common regular expressions
@@ -99,12 +120,11 @@ var language = {
             [/'/, 'string.invalid'],
             [/\#\d+/, 'string']
         ],
-        /* */
         comment: [
-            [/[^\(\*]+/, 'comment'],
+            [/[^\*\}]+/, 'comment'],
             //[/\(\*/,    'comment', '@push' ],    // nested comment  not allowed :-(
-            [/\*\)/, 'comment', '@pop'],
-            [/\(\*/, 'comment']
+            [/\}/, 'comment', '@pop'],
+            [/[\{]/, 'comment']
         ],
         string: [
             [/[^\\']+/, 'string'],
@@ -113,7 +133,7 @@ var language = {
         ],
         whitespace: [
             [/[ \t\r\n]+/, 'white'],
-            [/\(\*/, 'comment', '@comment'],
+            [/\{/, 'comment', '@comment'],
             [/\/\/.*$/, 'comment'],
         ],
     },
@@ -123,3 +143,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=33.bundle.js.map

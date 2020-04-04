@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[51],{
 
-/***/ 550:
+/***/ 553:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,245 +13,109 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
-    wordPattern: /(#?-?\d*\.\d\w*%?)|([@$#!.:]?[\w-?]+%?)|[@#!.]/g,
     comments: {
-        blockComment: ['/*', '*/'],
-        lineComment: '//'
+        lineComment: ';',
+        blockComment: ['#|', '|#'],
     },
-    brackets: [
-        ['{', '}'],
-        ['[', ']'],
-        ['(', ')']
-    ],
+    brackets: [['(', ')'], ['{', '}'], ['[', ']']],
     autoClosingPairs: [
-        { open: '{', close: '}', notIn: ['string', 'comment'] },
-        { open: '[', close: ']', notIn: ['string', 'comment'] },
-        { open: '(', close: ')', notIn: ['string', 'comment'] },
-        { open: '"', close: '"', notIn: ['string', 'comment'] },
-        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
+        { open: '{', close: '}' },
+        { open: '[', close: ']' },
+        { open: '(', close: ')' },
+        { open: '"', close: '"' },
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
         { open: '"', close: '"' },
-        { open: '\'', close: '\'' },
     ],
-    folding: {
-        markers: {
-            start: new RegExp("^\\s*\\/\\*\\s*#region\\b\\s*(.*?)\\s*\\*\\/"),
-            end: new RegExp("^\\s*\\/\\*\\s*#endregion\\b.*\\*\\/")
-        }
-    }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.scss',
-    ws: '[ \t\n\r\f]*',
-    identifier: '-?-?([a-zA-Z]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
+    ignoreCase: true,
+    tokenPostfix: '.scheme',
     brackets: [
-        { open: '{', close: '}', token: 'delimiter.curly' },
-        { open: '[', close: ']', token: 'delimiter.bracket' },
         { open: '(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '<', close: '>', token: 'delimiter.angle' }
+        { open: '{', close: '}', token: 'delimiter.curly' },
+        { open: '[', close: ']', token: 'delimiter.square' },
     ],
+    keywords: [
+        'case',
+        'do',
+        'let',
+        'loop',
+        'if',
+        'else',
+        'when',
+        'cons',
+        'car',
+        'cdr',
+        'cond',
+        'lambda',
+        'lambda*',
+        'syntax-rules',
+        'format',
+        'set!',
+        'quote',
+        'eval',
+        'append',
+        'list',
+        'list?',
+        'member?',
+        'load',
+    ],
+    constants: ['#t', '#f'],
+    operators: ['eq?', 'eqv?', 'equal?', 'and', 'or', 'not', 'null?'],
     tokenizer: {
         root: [
-            { include: '@selector' },
-        ],
-        selector: [
-            { include: '@comments' },
-            { include: '@import' },
-            { include: '@variabledeclaration' },
-            { include: '@warndebug' },
-            ['[@](include)', { token: 'keyword', next: '@includedeclaration' }],
-            ['[@](keyframes|-webkit-keyframes|-moz-keyframes|-o-keyframes)', { token: 'keyword', next: '@keyframedeclaration' }],
-            ['[@](page|content|font-face|-moz-document)', { token: 'keyword' }],
-            ['[@](charset|namespace)', { token: 'keyword', next: '@declarationbody' }],
-            ['[@](function)', { token: 'keyword', next: '@functiondeclaration' }],
-            ['[@](mixin)', { token: 'keyword', next: '@mixindeclaration' }],
-            ['url(\\-prefix)?\\(', { token: 'meta', next: '@urldeclaration' }],
-            { include: '@controlstatement' },
-            { include: '@selectorname' },
-            ['[&\\*]', 'tag'],
-            ['[>\\+,]', 'delimiter'],
-            ['\\[', { token: 'delimiter.bracket', next: '@selectorattribute' }],
-            ['{', { token: 'delimiter.curly', next: '@selectorbody' }],
-        ],
-        selectorbody: [
-            ['[*_]?@identifier@ws:(?=(\\s|\\d|[^{;}]*[;}]))', 'attribute.name', '@rulevalue'],
-            { include: '@selector' },
-            ['[@](extend)', { token: 'keyword', next: '@extendbody' }],
-            ['[@](return)', { token: 'keyword', next: '@declarationbody' }],
-            ['}', { token: 'delimiter.curly', next: '@pop' }],
-        ],
-        selectorname: [
-            ['#{', { token: 'meta', next: '@variableinterpolation' }],
-            ['(\\.|#(?=[^{])|%|(@identifier)|:)+', 'tag'],
-        ],
-        selectorattribute: [
-            { include: '@term' },
-            [']', { token: 'delimiter.bracket', next: '@pop' }],
-        ],
-        term: [
-            { include: '@comments' },
-            ['url(\\-prefix)?\\(', { token: 'meta', next: '@urldeclaration' }],
-            { include: '@functioninvocation' },
-            { include: '@numbers' },
+            [/#[xXoObB][0-9a-fA-F]+/, 'number.hex'],
+            [/[+-]?\d+(?:(?:\.\d*)?(?:[eE][+-]?\d+)?)?/, 'number.float'],
+            [
+                /(?:\b(?:(define|define-syntax|define-macro))\b)(\s+)((?:\w|\-|\!|\?)*)/,
+                ['keyword', 'white', 'variable'],
+            ],
+            { include: '@whitespace' },
             { include: '@strings' },
-            { include: '@variablereference' },
-            ['(and\\b|or\\b|not\\b)', 'operator'],
-            { include: '@name' },
-            ['([<>=\\+\\-\\*\\/\\^\\|\\~,])', 'operator'],
-            [',', 'delimiter'],
-            ['!default', 'literal'],
-            ['\\(', { token: 'delimiter.parenthesis', next: '@parenthizedterm' }],
-        ],
-        rulevalue: [
-            { include: '@term' },
-            ['!important', 'literal'],
-            [';', 'delimiter', '@pop'],
-            ['{', { token: 'delimiter.curly', switchTo: '@nestedproperty' }],
-            ['(?=})', { token: '', next: '@pop' }],
-        ],
-        nestedproperty: [
-            ['[*_]?@identifier@ws:', 'attribute.name', '@rulevalue'],
-            { include: '@comments' },
-            ['}', { token: 'delimiter.curly', next: '@pop' }],
-        ],
-        warndebug: [
-            ['[@](warn|debug)', { token: 'keyword', next: '@declarationbody' }],
-        ],
-        import: [
-            ['[@](import)', { token: 'keyword', next: '@declarationbody' }],
-        ],
-        variabledeclaration: [
-            ['\\$@identifier@ws:', 'variable.decl', '@declarationbody'],
-        ],
-        urldeclaration: [
-            { include: '@strings' },
-            ['[^)\r\n]+', 'string'],
-            ['\\)', { token: 'meta', next: '@pop' }],
-        ],
-        parenthizedterm: [
-            { include: '@term' },
-            ['\\)', { token: 'delimiter.parenthesis', next: '@pop' }],
-        ],
-        declarationbody: [
-            { include: '@term' },
-            [';', 'delimiter', '@pop'],
-            ['(?=})', { token: '', next: '@pop' }],
-        ],
-        extendbody: [
-            { include: '@selectorname' },
-            ['!optional', 'literal'],
-            [';', 'delimiter', '@pop'],
-            ['(?=})', { token: '', next: '@pop' }],
-        ],
-        variablereference: [
-            ['\\$@identifier', 'variable.ref'],
-            ['\\.\\.\\.', 'operator'],
-            ['#{', { token: 'meta', next: '@variableinterpolation' }],
-        ],
-        variableinterpolation: [
-            { include: '@variablereference' },
-            ['}', { token: 'meta', next: '@pop' }],
-        ],
-        comments: [
-            ['\\/\\*', 'comment', '@comment'],
-            ['\\/\\/+.*', 'comment'],
+            [
+                /[a-zA-Z_#][a-zA-Z0-9_\-\?\!\*]*/,
+                {
+                    cases: {
+                        '@keywords': 'keyword',
+                        '@constants': 'constant',
+                        '@operators': 'operators',
+                        '@default': 'identifier',
+                    },
+                },
+            ],
         ],
         comment: [
-            ['\\*\\/', 'comment', '@pop'],
-            ['.', 'comment'],
+            [/[^\|#]+/, 'comment'],
+            [/#\|/, 'comment', '@push'],
+            [/\|#/, 'comment', '@pop'],
+            [/[\|#]/, 'comment'],
         ],
-        name: [
-            ['@identifier', 'attribute.value'],
-        ],
-        numbers: [
-            ['(\\d*\\.)?\\d+([eE][\\-+]?\\d+)?', { token: 'number', next: '@units' }],
-            ['#[0-9a-fA-F_]+(?!\\w)', 'number.hex'],
-        ],
-        units: [
-            ['(em|ex|ch|rem|vmin|vmax|vw|vh|vm|cm|mm|in|px|pt|pc|deg|grad|rad|turn|s|ms|Hz|kHz|%)?', 'number', '@pop']
-        ],
-        functiondeclaration: [
-            ['@identifier@ws\\(', { token: 'meta', next: '@parameterdeclaration' }],
-            ['{', { token: 'delimiter.curly', switchTo: '@functionbody' }],
-        ],
-        mixindeclaration: [
-            // mixin with parameters
-            ['@identifier@ws\\(', { token: 'meta', next: '@parameterdeclaration' }],
-            // mixin without parameters
-            ['@identifier', 'meta'],
-            ['{', { token: 'delimiter.curly', switchTo: '@selectorbody' }],
-        ],
-        parameterdeclaration: [
-            ['\\$@identifier@ws:', 'variable.decl'],
-            ['\\.\\.\\.', 'operator'],
-            [',', 'delimiter'],
-            { include: '@term' },
-            ['\\)', { token: 'meta', next: '@pop' }],
-        ],
-        includedeclaration: [
-            { include: '@functioninvocation' },
-            ['@identifier', 'meta'],
-            [';', 'delimiter', '@pop'],
-            ['(?=})', { token: '', next: '@pop' }],
-            ['{', { token: 'delimiter.curly', switchTo: '@selectorbody' }],
-        ],
-        keyframedeclaration: [
-            ['@identifier', 'meta'],
-            ['{', { token: 'delimiter.curly', switchTo: '@keyframebody' }],
-        ],
-        keyframebody: [
-            { include: '@term' },
-            ['{', { token: 'delimiter.curly', next: '@selectorbody' }],
-            ['}', { token: 'delimiter.curly', next: '@pop' }],
-        ],
-        controlstatement: [
-            ['[@](if|else|for|while|each|media)', { token: 'keyword.flow', next: '@controlstatementdeclaration' }],
-        ],
-        controlstatementdeclaration: [
-            ['(in|from|through|if|to)\\b', { token: 'keyword.flow' }],
-            { include: '@term' },
-            ['{', { token: 'delimiter.curly', switchTo: '@selectorbody' }],
-        ],
-        functionbody: [
-            ['[@](return)', { token: 'keyword' }],
-            { include: '@variabledeclaration' },
-            { include: '@term' },
-            { include: '@controlstatement' },
-            [';', 'delimiter'],
-            ['}', { token: 'delimiter.curly', next: '@pop' }],
-        ],
-        functioninvocation: [
-            ['@identifier\\(', { token: 'meta', next: '@functionarguments' }],
-        ],
-        functionarguments: [
-            ['\\$@identifier@ws:', 'attribute.name'],
-            ['[,]', 'delimiter'],
-            { include: '@term' },
-            ['\\)', { token: 'meta', next: '@pop' }],
+        whitespace: [
+            [/[ \t\r\n]+/, 'white'],
+            [/#\|/, 'comment', '@comment'],
+            [/;.*$/, 'comment'],
         ],
         strings: [
-            ['~?"', { token: 'string.delimiter', next: '@stringenddoublequote' }],
-            ['~?\'', { token: 'string.delimiter', next: '@stringendquote' }]
+            [/"$/, 'string', '@popall'],
+            [/"(?=.)/, 'string', '@multiLineString'],
         ],
-        stringenddoublequote: [
-            ['\\\\.', 'string'],
-            ['"', { token: 'string.delimiter', next: '@pop' }],
-            ['.', 'string']
+        multiLineString: [
+            [/[^\\"]+$/, 'string', '@popall'],
+            [/[^\\"]+/, 'string'],
+            [/\\./, 'string.escape'],
+            [/"/, 'string', '@popall'],
+            [/\\$/, 'string']
         ],
-        stringendquote: [
-            ['\\\\.', 'string'],
-            ['\'', { token: 'string.delimiter', next: '@pop' }],
-            ['.', 'string']
-        ]
-    }
+    },
 };
 
 
 /***/ })
 
 }]);
+//# sourceMappingURL=51.bundle.js.map

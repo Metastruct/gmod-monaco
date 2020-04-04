@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[24],{
 
-/***/ 523:
+/***/ 525:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48,23 +48,22 @@ var conf = {
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.kt',
+    tokenPostfix: '.java',
     keywords: [
-        'as', 'as?', 'break', 'class', 'continue', 'do', 'else', 'false', 'for', 'fun', 'if',
-        'in', '!in', 'interface', 'is', '!is', 'null', 'object', 'package', 'return', 'super',
-        'this', 'throw', 'true', 'try', 'typealias', 'val', 'var', 'when', 'while', 'by',
-        'catch', 'constructor', 'delegate', 'dynamic', 'field', 'file', 'finally', 'get',
-        'import', 'init', 'param', 'property', 'receiver', 'set', 'setparam', 'where', 'actual',
-        'abstract', 'annotation', 'companion', 'const', 'crossinline', 'data', 'enum', 'expect',
-        'external', 'final', 'infix', 'inline', 'inner', 'internal', 'lateinit', 'noinline',
-        'open', 'operator', 'out', 'override', 'private', 'protected', 'public', 'reified',
-        'sealed', 'suspend', 'tailrec', 'vararg', 'field', 'it'
+        'abstract', 'continue', 'for', 'new', 'switch', 'assert', 'default',
+        'goto', 'package', 'synchronized', 'boolean', 'do', 'if', 'private',
+        'this', 'break', 'double', 'implements', 'protected', 'throw', 'byte',
+        'else', 'import', 'public', 'throws', 'case', 'enum', 'instanceof', 'return',
+        'transient', 'catch', 'extends', 'int', 'short', 'try', 'char', 'final',
+        'interface', 'static', 'void', 'class', 'finally', 'long', 'strictfp',
+        'volatile', 'const', 'float', 'native', 'super', 'while', 'true', 'false'
     ],
     operators: [
-        '+', '-', '*', '/', '%', '=', '+=', '-=', '*=', '/=',
-        '%=', '++', '--', '&&', '||', '!', '==', '!=', '===',
-        '!==', '>', '<', '<=', '>=', '[', ']', '!!', '?.', '?:',
-        '::', '..', ':', '?', '->', '@', ';', '$', '_'
+        '=', '>', '<', '!', '~', '?', ':',
+        '==', '<=', '>=', '!=', '&&', '||', '++', '--',
+        '+', '-', '*', '/', '&', '|', '^', '%', '<<',
+        '>>', '>>>', '+=', '-=', '*=', '/=', '&=', '|=',
+        '^=', '%=', '<<=', '>>=', '>>>='
     ],
     // we include these common regular expressions
     symbols: /[=><!~?:&|+\-*\/\^%]+/,
@@ -76,8 +75,6 @@ var language = {
     // The main tokenizer for our languages
     tokenizer: {
         root: [
-            // class name highlighting
-            [/[A-Z][\w\$]*/, 'type.identifier'],
             // identifiers and keywords
             [/[a-zA-Z_$][\w$]*/, {
                     cases: {
@@ -110,7 +107,6 @@ var language = {
             [/[;,.]/, 'delimiter'],
             // strings
             [/"([^"\\]|\\.)*$/, 'string.invalid'],
-            [/"""/, 'string', '@multistring'],
             [/"/, 'string', '@string'],
             // characters
             [/'[^\\']'/, 'string'],
@@ -125,14 +121,15 @@ var language = {
         ],
         comment: [
             [/[^\/*]+/, 'comment'],
-            [/\/\*/, 'comment', '@comment'],
+            // [/\/\*/, 'comment', '@push' ],    // nested comment not allowed :-(
+            // [/\/\*/,    'comment.invalid' ],    // this breaks block comments in the shape of /* //*/
             [/\*\//, 'comment', '@pop'],
             [/[\/*]/, 'comment']
         ],
         //Identical copy of comment above, except for the addition of .doc
         javadoc: [
             [/[^\/*]+/, 'comment.doc'],
-            [/\/\*/, 'comment.doc', '@push'],
+            // [/\/\*/, 'comment.doc', '@push' ],    // nested comment not allowed :-(
             [/\/\*/, 'comment.doc.invalid'],
             [/\*\//, 'comment.doc', '@pop'],
             [/[\/*]/, 'comment.doc']
@@ -143,13 +140,6 @@ var language = {
             [/\\./, 'string.escape.invalid'],
             [/"/, 'string', '@pop']
         ],
-        multistring: [
-            [/[^\\"]+/, 'string'],
-            [/@escapes/, 'string.escape'],
-            [/\\./, 'string.escape.invalid'],
-            [/"""/, 'string', '@pop'],
-            [/./, 'string']
-        ],
     },
 };
 
@@ -157,3 +147,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=24.bundle.js.map
