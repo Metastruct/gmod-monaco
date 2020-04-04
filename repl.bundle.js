@@ -119188,7 +119188,7 @@ function addEnum(jsonOBJ) {
 }
 function LoadAutocompletionData(currentState) {
     if (!exports.gwikiData) {
-        fetch("https://spiralp.github.io/gmod-wiki-declaration-scraper/gwiki.json")
+        fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
             .then(function (response) {
             return response.json();
         })
