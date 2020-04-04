@@ -153,7 +153,8 @@ export const language: monaco.languages.IMonarchLanguage = {
             [/--.*$/, "comment"],
         ],
         comment: [
-            [/[^\/*]+/, "comment"],
+            // This breaks comment blocks
+            // [/[^\/*]+/, "comment"],
             [/\/\*/, "comment", "@push"], // nested comment
             [new RegExp("\\*/"), "comment", "@pop"],
             [/[\/*]/, "comment"],
