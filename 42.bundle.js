@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[42],{
 
-/***/ 541:
+/***/ 544:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,9 +12,12 @@ __webpack_require__.r(__webpack_exports__);
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+// Allow for running under nodejs/requirejs in tests
+var _monaco = (typeof monaco === 'undefined' ? self.monaco : monaco);
 var conf = {
     comments: {
-        lineComment: '#'
+        lineComment: '#',
+        blockComment: ['\'\'\'', '\'\'\''],
     },
     brackets: [
         ['{', '}'],
@@ -25,119 +28,160 @@ var conf = {
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '"', close: '"' },
+        { open: '"', close: '"', notIn: ['string'] },
+        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
         { open: '"', close: '"' },
-    ]
+        { open: '\'', close: '\'' },
+    ],
+    onEnterRules: [
+        {
+            beforeText: new RegExp("^\\s*(?:def|class|for|if|elif|else|while|try|with|finally|except|async).*?:\\s*$"),
+            action: { indentAction: _monaco.languages.IndentAction.Indent }
+        }
+    ],
+    folding: {
+        offSide: true,
+        markers: {
+            start: new RegExp("^\\s*#region\\b"),
+            end: new RegExp("^\\s*#endregion\\b")
+        }
+    }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.r',
-    roxygen: [
-        '@param',
-        '@return',
-        '@name',
-        '@rdname',
-        '@examples',
-        '@include',
-        '@docType',
-        '@S3method',
-        '@TODO',
-        '@aliases',
-        '@alias',
-        '@assignee',
-        '@author',
-        '@callGraphDepth',
-        '@callGraph',
-        '@callGraphPrimitives',
-        '@concept',
-        '@exportClass',
-        '@exportMethod',
-        '@exportPattern',
-        '@export',
-        '@formals',
-        '@format',
-        '@importClassesFrom',
-        '@importFrom',
-        '@importMethodsFrom',
-        '@import',
-        '@keywords',
-        '@method',
-        '@nord',
-        '@note',
-        '@references',
-        '@seealso',
-        '@setClass',
-        '@slot',
-        '@source',
-        '@title',
-        '@usage'
-    ],
-    constants: [
-        'NULL',
-        'FALSE',
-        'TRUE',
-        'NA',
-        'Inf',
-        'NaN ',
-        'NA_integer_',
-        'NA_real_',
-        'NA_complex_',
-        'NA_character_ ',
-        'T',
-        'F',
-        'LETTERS',
-        'letters',
-        'month.abb',
-        'month.name',
-        'pi',
-        'R.version.string'
-    ],
+    tokenPostfix: '.python',
     keywords: [
+        'and',
+        'as',
+        'assert',
         'break',
-        'next',
-        'return',
-        'if',
+        'class',
+        'continue',
+        'def',
+        'del',
+        'elif',
         'else',
+        'except',
+        'exec',
+        'finally',
         'for',
+        'from',
+        'global',
+        'if',
+        'import',
         'in',
-        'repeat',
+        'is',
+        'lambda',
+        'None',
+        'not',
+        'or',
+        'pass',
+        'print',
+        'raise',
+        'return',
+        'self',
+        'try',
         'while',
-        'array',
-        'category',
-        'character',
+        'with',
+        'yield',
+        'int',
+        'float',
+        'long',
         'complex',
-        'double',
-        'function',
-        'integer',
+        'hex',
+        'abs',
+        'all',
+        'any',
+        'apply',
+        'basestring',
+        'bin',
+        'bool',
+        'buffer',
+        'bytearray',
+        'callable',
+        'chr',
+        'classmethod',
+        'cmp',
+        'coerce',
+        'compile',
+        'complex',
+        'delattr',
+        'dict',
+        'dir',
+        'divmod',
+        'enumerate',
+        'eval',
+        'execfile',
+        'file',
+        'filter',
+        'format',
+        'frozenset',
+        'getattr',
+        'globals',
+        'hasattr',
+        'hash',
+        'help',
+        'id',
+        'input',
+        'intern',
+        'isinstance',
+        'issubclass',
+        'iter',
+        'len',
+        'locals',
         'list',
-        'logical',
-        'matrix',
-        'numeric',
-        'vector',
-        'data.frame',
-        'factor',
-        'library',
-        'require',
-        'attach',
-        'detach',
-        'source'
-    ],
-    special: [
-        '\\n',
-        '\\r',
-        '\\t',
-        '\\b',
-        '\\a',
-        '\\f',
-        '\\v',
-        '\\\'',
-        '\\"',
-        '\\\\'
+        'map',
+        'max',
+        'memoryview',
+        'min',
+        'next',
+        'object',
+        'oct',
+        'open',
+        'ord',
+        'pow',
+        'print',
+        'property',
+        'reversed',
+        'range',
+        'raw_input',
+        'reduce',
+        'reload',
+        'repr',
+        'reversed',
+        'round',
+        'set',
+        'setattr',
+        'slice',
+        'sorted',
+        'staticmethod',
+        'str',
+        'sum',
+        'super',
+        'tuple',
+        'type',
+        'unichr',
+        'unicode',
+        'vars',
+        'xrange',
+        'zip',
+        'True',
+        'False',
+        '__dict__',
+        '__methods__',
+        '__members__',
+        '__class__',
+        '__bases__',
+        '__name__',
+        '__mro__',
+        '__subclasses__',
+        '__init__',
+        '__import__'
     ],
     brackets: [
         { open: '{', close: '}', token: 'delimiter.curly' },
@@ -146,82 +190,63 @@ var language = {
     ],
     tokenizer: {
         root: [
+            { include: '@whitespace' },
             { include: '@numbers' },
             { include: '@strings' },
-            [/[{}\[\]()]/, '@brackets'],
-            { include: '@operators' },
-            [/#'/, 'comment.doc', '@roxygen'],
-            [/(^#.*$)/, 'comment'],
-            [/\s+/, 'white'],
             [/[,:;]/, 'delimiter'],
+            [/[{}\[\]()]/, '@brackets'],
             [/@[a-zA-Z]\w*/, 'tag'],
             [/[a-zA-Z]\w*/, {
                     cases: {
                         '@keywords': 'keyword',
-                        '@constants': 'constant',
                         '@default': 'identifier'
                     }
                 }]
         ],
-        // Recognize Roxygen comments
-        roxygen: [
-            [/@\w+/, {
-                    cases: {
-                        '@roxygen': 'tag',
-                        '@eos': { token: 'comment.doc', next: '@pop' },
-                        '@default': 'comment.doc'
-                    }
-                }],
-            [/\s+/, {
-                    cases: {
-                        '@eos': { token: 'comment.doc', next: '@pop' },
-                        '@default': 'comment.doc'
-                    }
-                }],
-            [/.*/, { token: 'comment.doc', next: '@pop' }]
+        // Deal with white space, including single and multi-line comments
+        whitespace: [
+            [/\s+/, 'white'],
+            [/(^#.*$)/, 'comment'],
+            [/'''/, 'string', '@endDocString'],
+            [/"""/, 'string', '@endDblDocString']
         ],
-        // Recognize positives, negatives, decimals, imaginaries, and scientific notation
+        endDocString: [
+            [/[^']+/, 'string'],
+            [/\\'/, 'string'],
+            [/'''/, 'string', '@popall'],
+            [/'/, 'string']
+        ],
+        endDblDocString: [
+            [/[^"]+/, 'string'],
+            [/\\"/, 'string'],
+            [/"""/, 'string', '@popall'],
+            [/"/, 'string']
+        ],
+        // Recognize hex, negatives, decimals, imaginaries, longs, and scientific notation
         numbers: [
-            [/0[xX][0-9a-fA-F]+/, 'number.hex'],
-            [/-?(\d*\.)?\d+([eE][+\-]?\d+)?/, 'number']
+            [/-?0x([abcdef]|[ABCDEF]|\d)+[lL]?/, 'number.hex'],
+            [/-?(\d*\.)?\d+([eE][+\-]?\d+)?[jJ]?[lL]?/, 'number']
         ],
-        // Recognize operators
-        operators: [
-            [/<{1,2}-/, 'operator'],
-            [/->{1,2}/, 'operator'],
-            [/%[^%\s]+%/, 'operator'],
-            [/\*\*/, 'operator'],
-            [/%%/, 'operator'],
-            [/&&/, 'operator'],
-            [/\|\|/, 'operator'],
-            [/<</, 'operator'],
-            [/>>/, 'operator'],
-            [/[-+=&|!<>^~*/:$]/, 'operator']
-        ],
-        // Recognize strings, including those broken across lines
+        // Recognize strings, including those broken across lines with \ (but not without)
         strings: [
+            [/'$/, 'string.escape', '@popall'],
             [/'/, 'string.escape', '@stringBody'],
+            [/"$/, 'string.escape', '@popall'],
             [/"/, 'string.escape', '@dblStringBody']
         ],
         stringBody: [
-            [/\\./, {
-                    cases: {
-                        '@special': 'string',
-                        '@default': 'error-token'
-                    }
-                }],
+            [/[^\\']+$/, 'string', '@popall'],
+            [/[^\\']+/, 'string'],
+            [/\\./, 'string'],
             [/'/, 'string.escape', '@popall'],
-            [/./, 'string'],
+            [/\\$/, 'string']
         ],
         dblStringBody: [
-            [/\\./, {
-                    cases: {
-                        '@special': 'string',
-                        '@default': 'error-token'
-                    }
-                }],
+            [/[^\\"]+$/, 'string', '@popall'],
+            [/[^\\"]+/, 'string'],
+            [/\\./, 'string'],
             [/"/, 'string.escape', '@popall'],
-            [/./, 'string'],
+            [/\\$/, 'string']
         ]
     }
 };
@@ -230,3 +255,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=42.bundle.js.map

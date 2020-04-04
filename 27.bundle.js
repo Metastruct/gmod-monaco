@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[27],{
 
-/***/ 526:
+/***/ 529:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var conf = {
     comments: {
-        blockComment: ['<!--', '-->',]
+        lineComment: '--',
+        blockComment: ['--[[', ']]'],
     },
     brackets: [
         ['{', '}'],
@@ -25,168 +26,105 @@ var conf = {
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '<', close: '>', notIn: ['string'] }
+        { open: '"', close: '"' },
+        { open: '\'', close: '\'' },
     ],
     surroundingPairs: [
-        { open: '(', close: ')' },
+        { open: '{', close: '}' },
         { open: '[', close: ']' },
-        { open: '`', close: '`' },
-    ],
-    folding: {
-        markers: {
-            start: new RegExp("^\\s*<!--\\s*#?region\\b.*-->"),
-            end: new RegExp("^\\s*<!--\\s*#?endregion\\b.*-->")
-        }
-    }
+        { open: '(', close: ')' },
+        { open: '"', close: '"' },
+        { open: '\'', close: '\'' },
+    ]
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.md',
-    // escape codes
-    control: /[\\`*_\[\]{}()#+\-\.!]/,
-    noncontrol: /[^\\`*_\[\]{}()#+\-\.!]/,
-    escapes: /\\(?:@control)/,
-    // escape codes for javascript/CSS strings
-    jsescapes: /\\(?:[btnfr\\"']|[0-7][0-7]?|[0-3][0-7]{2})/,
-    // non matched elements
-    empty: [
-        'area', 'base', 'basefont', 'br', 'col', 'frame',
-        'hr', 'img', 'input', 'isindex', 'link', 'meta', 'param'
+    tokenPostfix: '.lua',
+    keywords: [
+        'and', 'break', 'do', 'else', 'elseif',
+        'end', 'false', 'for', 'function', 'goto', 'if',
+        'in', 'local', 'nil', 'not', 'or',
+        'repeat', 'return', 'then', 'true', 'until',
+        'while'
     ],
+    brackets: [
+        { token: 'delimiter.bracket', open: '{', close: '}' },
+        { token: 'delimiter.array', open: '[', close: ']' },
+        { token: 'delimiter.parenthesis', open: '(', close: ')' }
+    ],
+    operators: [
+        '+', '-', '*', '/', '%', '^', '#', '==', '~=', '<=', '>=', '<', '>', '=',
+        ';', ':', ',', '.', '..', '...'
+    ],
+    // we include these common regular expressions
+    symbols: /[=><!~?:&|+\-*\/\^%]+/,
+    escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
+    // The main tokenizer for our languages
     tokenizer: {
         root: [
-            // markdown tables
-            [/^\s*\|/, '@rematch', '@table_header'],
-            // headers (with #)
-            [/^(\s{0,3})(#+)((?:[^\\#]|@escapes)+)((?:#+)?)/, ['white', 'keyword', 'keyword', 'keyword']],
-            // headers (with =)
-            [/^\s*(=+|\-+)\s*$/, 'keyword'],
-            // headers (with ***)
-            [/^\s*((\*[ ]?)+)\s*$/, 'meta.separator'],
-            // quote
-            [/^\s*>+/, 'comment'],
-            // list (starting with * or number)
-            [/^\s*([\*\-+:]|\d+\.)\s/, 'keyword'],
-            // code block (4 spaces indent)
-            [/^(\t|[ ]{4})[^ ].*$/, 'string'],
-            // code block (3 tilde)
-            [/^\s*~~~\s*((?:\w|[\/\-#])+)?\s*$/, { token: 'string', next: '@codeblock' }],
-            // github style code blocks (with backticks and language)
-            [/^\s*```\s*((?:\w|[\/\-#])+).*$/, { token: 'string', next: '@codeblockgh', nextEmbedded: '$1' }],
-            // github style code blocks (with backticks but no language)
-            [/^\s*```\s*$/, { token: 'string', next: '@codeblock' }],
-            // markup within lines
-            { include: '@linecontent' },
-        ],
-        table_header: [
-            { include: '@table_common' },
-            [/[^\|]+/, 'keyword.table.header'],
-        ],
-        table_body: [
-            { include: '@table_common' },
-            { include: '@linecontent' },
-        ],
-        table_common: [
-            [/\s*[\-:]+\s*/, { token: 'keyword', switchTo: 'table_body' }],
-            [/^\s*\|/, 'keyword.table.left'],
-            [/^\s*[^\|]/, '@rematch', '@pop'],
-            [/^\s*$/, '@rematch', '@pop'],
-            [/\|/, {
+            // identifiers and keywords
+            [/[a-zA-Z_]\w*/, {
                     cases: {
-                        '@eos': 'keyword.table.right',
-                        '@default': 'keyword.table.middle',
+                        '@keywords': { token: 'keyword.$0' },
+                        '@default': 'identifier'
                     }
                 }],
-        ],
-        codeblock: [
-            [/^\s*~~~\s*$/, { token: 'string', next: '@pop' }],
-            [/^\s*```\s*$/, { token: 'string', next: '@pop' }],
-            [/.*$/, 'variable.source'],
-        ],
-        // github style code blocks
-        codeblockgh: [
-            [/```\s*$/, { token: 'variable.source', next: '@pop', nextEmbedded: '@pop' }],
-            [/[^`]+/, 'variable.source'],
-        ],
-        linecontent: [
-            // escapes
-            [/&\w+;/, 'string.escape'],
-            [/@escapes/, 'escape'],
-            // various markup
-            [/\b__([^\\_]|@escapes|_(?!_))+__\b/, 'strong'],
-            [/\*\*([^\\*]|@escapes|\*(?!\*))+\*\*/, 'strong'],
-            [/\b_[^_]+_\b/, 'emphasis'],
-            [/\*([^\\*]|@escapes)+\*/, 'emphasis'],
-            [/`([^\\`]|@escapes)+`/, 'variable'],
-            // links
-            [/\{+[^}]+\}+/, 'string.target'],
-            [/(!?\[)((?:[^\]\\]|@escapes)*)(\]\([^\)]+\))/, ['string.link', '', 'string.link']],
-            [/(!?\[)((?:[^\]\\]|@escapes)*)(\])/, 'string.link'],
-            // or html
-            { include: 'html' },
-        ],
-        // Note: it is tempting to rather switch to the real HTML mode instead of building our own here
-        // but currently there is a limitation in Monarch that prevents us from doing it: The opening
-        // '<' would start the HTML mode, however there is no way to jump 1 character back to let the
-        // HTML mode also tokenize the opening angle bracket. Thus, even though we could jump to HTML,
-        // we cannot correctly tokenize it in that mode yet.
-        html: [
-            // html tags
-            [/<(\w+)\/>/, 'tag'],
-            [/<(\w+)/, {
+            // whitespace
+            { include: '@whitespace' },
+            // keys
+            [/(,)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/, ['delimiter', '', 'key', '', 'delimiter']],
+            [/({)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/, ['@brackets', '', 'key', '', 'delimiter']],
+            // delimiters and operators
+            [/[{}()\[\]]/, '@brackets'],
+            [/@symbols/, {
                     cases: {
-                        '@empty': { token: 'tag', next: '@tag.$1' },
-                        '@default': { token: 'tag', next: '@tag.$1' }
+                        '@operators': 'delimiter',
+                        '@default': ''
                     }
                 }],
-            [/<\/(\w+)\s*>/, { token: 'tag' }],
-            [/<!--/, 'comment', '@comment']
+            // numbers
+            [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float'],
+            [/0[xX][0-9a-fA-F_]*[0-9a-fA-F]/, 'number.hex'],
+            [/\d+?/, 'number'],
+            // delimiter: after number because of .\d floats
+            [/[;,.]/, 'delimiter'],
+            // strings: recover on non-terminated strings
+            [/"([^"\\]|\\.)*$/, 'string.invalid'],
+            [/'([^'\\]|\\.)*$/, 'string.invalid'],
+            [/"/, 'string', '@string."'],
+            [/'/, 'string', '@string.\''],
+        ],
+        whitespace: [
+            [/[ \t\r\n]+/, ''],
+            [/--\[([=]*)\[/, 'comment', '@comment.$1'],
+            [/--.*$/, 'comment'],
         ],
         comment: [
-            [/[^<\-]+/, 'comment.content'],
-            [/-->/, 'comment', '@pop'],
-            [/<!--/, 'comment.content.invalid'],
-            [/[<\-]/, 'comment.content']
-        ],
-        // Almost full HTML tag matching, complete with embedded scripts & styles
-        tag: [
-            [/[ \t\r\n]+/, 'white'],
-            [/(type)(\s*=\s*)(")([^"]+)(")/, ['attribute.name.html', 'delimiter.html', 'string.html',
-                    { token: 'string.html', switchTo: '@tag.$S2.$4' },
-                    'string.html']],
-            [/(type)(\s*=\s*)(')([^']+)(')/, ['attribute.name.html', 'delimiter.html', 'string.html',
-                    { token: 'string.html', switchTo: '@tag.$S2.$4' },
-                    'string.html']],
-            [/(\w+)(\s*=\s*)("[^"]*"|'[^']*')/, ['attribute.name.html', 'delimiter.html', 'string.html']],
-            [/\w+/, 'attribute.name.html'],
-            [/\/>/, 'tag', '@pop'],
-            [/>/, {
+            [/[^\]]+/, 'comment'],
+            [/\]([=]*)\]/, {
                     cases: {
-                        '$S2==style': { token: 'tag', switchTo: 'embeddedStyle', nextEmbedded: 'text/css' },
-                        '$S2==script': {
-                            cases: {
-                                '$S3': { token: 'tag', switchTo: 'embeddedScript', nextEmbedded: '$S3' },
-                                '@default': { token: 'tag', switchTo: 'embeddedScript', nextEmbedded: 'text/javascript' }
-                            }
-                        },
-                        '@default': { token: 'tag', next: '@pop' }
+                        '$1==$S2': { token: 'comment', next: '@pop' },
+                        '@default': 'comment'
                     }
                 }],
+            [/./, 'comment']
         ],
-        embeddedStyle: [
-            [/[^<]+/, ''],
-            [/<\/style\s*>/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }],
-            [/</, '']
+        string: [
+            [/[^\\"']+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/\\./, 'string.escape.invalid'],
+            [/["']/, {
+                    cases: {
+                        '$#==$S2': { token: 'string', next: '@pop' },
+                        '@default': 'string'
+                    }
+                }]
         ],
-        embeddedScript: [
-            [/[^<]+/, ''],
-            [/<\/script\s*>/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }],
-            [/</, '']
-        ],
-    }
+    },
 };
 
 
 /***/ })
 
 }]);
+//# sourceMappingURL=27.bundle.js.map

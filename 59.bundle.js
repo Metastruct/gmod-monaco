@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[59],{
 
-/***/ 558:
+/***/ 561:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,271 +13,129 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
-    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\@\$\^\&\*\(\)\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\s]+)/g,
-    comments: {
-        blockComment: ['{#', '#}'],
-    },
     brackets: [
-        ['{#', '#}'],
-        ['{%', '%}'],
-        ['{{', '}}'],
-        ['(', ')'],
+        ['{', '}'],
         ['[', ']'],
-        // HTML
-        ['<!--', '-->'],
-        ['<', '>'],
+        ['(', ')']
     ],
     autoClosingPairs: [
-        { open: '{# ', close: ' #}' },
-        { open: '{% ', close: ' %}' },
-        { open: '{{ ', close: ' }}' },
+        { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
         { open: '"', close: '"' },
         { open: '\'', close: '\'' },
     ],
     surroundingPairs: [
+        { open: '{', close: '}' },
+        { open: '[', close: ']' },
+        { open: '(', close: ')' },
         { open: '"', close: '"' },
         { open: '\'', close: '\'' },
-        // HTML
-        { open: '<', close: '>' },
-    ],
+    ]
 };
 var language = {
-    defaultToken: '',
-    tokenPostfix: '',
-    ignoreCase: true,
-    keywords: [
-        // (opening) tags
-        'apply', 'autoescape', 'block', 'deprecated', 'do', 'embed', 'extends',
-        'flush', 'for', 'from', 'if', 'import', 'include', 'macro', 'sandbox',
-        'set', 'use', 'verbatim', 'with',
-        // closing tags
-        'endapply', 'endautoescape', 'endblock', 'endembed', 'endfor', 'endif',
-        'endmacro', 'endsandbox', 'endset', 'endwith',
-        // literals
-        'true', 'false',
+    tokenPostfix: '.tcl',
+    specialFunctions: [
+        'set', 'unset', 'rename', 'variable', 'proc', 'coroutine',
+        'foreach',
+        'incr', 'append',
+        'lappend', 'linsert', 'lreplace'
     ],
+    mainFunctions: [
+        'if', 'then', 'elseif', 'else', 'case', 'switch', 'while', 'for',
+        'break', 'continue', 'return',
+        'package', 'namespace',
+        'catch', 'exit',
+        'eval', 'expr', 'uplevel', 'upvar'
+    ],
+    builtinFunctions: [
+        'file', 'info', 'concat', 'join', 'lindex',
+        'list', 'llength', 'lrange', 'lsearch', 'lsort', 'split',
+        'array', 'parray', 'binary', 'format', 'regexp', 'regsub', 'scan', 'string',
+        'subst', 'dict', 'cd', 'clock', 'exec', 'glob', 'pid', 'pwd', 'close', 'eof', 'fblocked',
+        'fconfigure', 'fcopy', 'fileevent', 'flush', 'gets', 'open', 'puts', 'read', 'seek',
+        'socket', 'tell', 'interp', 'after', 'auto_execok',
+        'auto_load', 'auto_mkindex', 'auto_reset', 'bgerror', 'error',
+        'global', 'history', 'load', 'source', 'time', 'trace',
+        'unknown', 'unset', 'update', 'vwait', 'winfo', 'wm', 'bind', 'event',
+        'pack', 'place', 'grid', 'font', 'bell', 'clipboard', 'destroy', 'focus', 'grab', 'lower',
+        'option', 'raise', 'selection', 'send', 'tk', 'tkwait', 'tk_bisque', 'tk_focusNext',
+        'tk_focusPrev', 'tk_focusFollowsMouse', 'tk_popup', 'tk_setPalette'
+    ],
+    symbols: /[=><!~?:&|+\-*\/\^%]+/,
+    brackets: [
+        { open: '(', close: ')', token: 'delimiter.parenthesis' },
+        { open: '{', close: '}', token: 'delimiter.curly' },
+        { open: '[', close: ']', token: 'delimiter.square' }
+    ],
+    escapes: /\\(?:[abfnrtv\\"'\[\]\{\};\$]|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
+    variables: /(?:\$+(?:(?:\:\:?)?[a-zA-Z_]\w*)+)/,
     tokenizer: {
         root: [
+            // identifiers and keywords
+            [/[a-zA-Z_]\w*/, { cases: {
+                        '@specialFunctions': { token: 'keyword.flow', next: '@specialFunc' },
+                        '@mainFunctions': 'keyword',
+                        '@builtinFunctions': 'variable',
+                        '@default': 'operator.scss'
+                    } }],
+            [/\s+\-+(?!\d|\.)\w*|{\*}/, 'metatag'],
             // whitespace
-            [/\s+/],
-            // Twig Tag Delimiters
-            [/{#/, 'comment.twig', '@commentState'],
-            [/{%[-~]?/, 'delimiter.twig', '@blockState'],
-            [/{{[-~]?/, 'delimiter.twig', '@variableState'],
-            // HTML
-            [/<!DOCTYPE/, 'metatag.html', '@doctype'],
-            [/<!--/, 'comment.html', '@comment'],
-            [/(<)((?:[\w\-]+:)?[\w\-]+)(\s*)(\/>)/, ['delimiter.html', 'tag.html', '', 'delimiter.html']],
-            [/(<)(script)/, ['delimiter.html', { token: 'tag.html', next: '@script' }]],
-            [/(<)(style)/, ['delimiter.html', { token: 'tag.html', next: '@style' }]],
-            [/(<)((?:[\w\-]+:)?[\w\-]+)/, ['delimiter.html', { token: 'tag.html', next: '@otherTag' }]],
-            [/(<\/)((?:[\w\-]+:)?[\w\-]+)/, ['delimiter.html', { token: 'tag.html', next: '@otherTag' }]],
-            [/</, 'delimiter.html'],
-            [/[^<]+/],
-        ],
-        /**
-         * Comment Tag Handling
-         */
-        commentState: [
-            [/#}/, 'comment.twig', '@pop'],
-            [/./, 'comment.twig'],
-        ],
-        /**
-         * Block Tag Handling
-         */
-        blockState: [
-            [/[-~]?%}/, 'delimiter.twig', '@pop'],
-            // whitespace
-            [/\s+/],
-            // verbatim
-            // Unlike other blocks, verbatim ehas its own state
-            // transition to ensure we mark its contents as strings.
-            [/(verbatim)(\s*)([-~]?%})/, [
-                    'keyword.twig',
-                    '',
-                    { token: 'delimiter.twig', next: '@rawDataState' },
-                ]],
-            { include: 'expression' }
-        ],
-        rawDataState: [
-            // endverbatim
-            [/({%[-~]?)(\s*)(endverbatim)(\s*)([-~]?%})/, [
-                    'delimiter.twig',
-                    '',
-                    'keyword.twig',
-                    '',
-                    { token: 'delimiter.twig', next: '@popall' },
-                ]],
-            [/./, 'string.twig'],
-        ],
-        /**
-         * Variable Tag Handling
-         */
-        variableState: [
-            [/[-~]?}}/, 'delimiter.twig', '@pop'],
-            { include: 'expression' },
-        ],
-        stringState: [
-            // closing double quoted string
-            [/"/, 'string.twig', '@pop'],
-            // interpolation start
-            [/#{\s*/, 'string.twig', '@interpolationState'],
-            // string part
-            [/[^#"\\]*(?:(?:\\.|#(?!\{))[^#"\\]*)*/, 'string.twig'],
-        ],
-        interpolationState: [
-            // interpolation end
-            [/}/, 'string.twig', '@pop'],
-            { include: 'expression' },
-        ],
-        /**
-         * Expression Handling
-         */
-        expression: [
-            // whitespace
-            [/\s+/],
-            // operators - math
-            [/\+|-|\/{1,2}|%|\*{1,2}/, 'operators.twig'],
-            // operators - logic
-            [/(and|or|not|b-and|b-xor|b-or)(\s+)/, ['operators.twig', '']],
-            // operators - comparison (symbols)
-            [/==|!=|<|>|>=|<=/, 'operators.twig'],
-            // operators - comparison (words)
-            [/(starts with|ends with|matches)(\s+)/, ['operators.twig', '']],
-            // operators - containment
-            [/(in)(\s+)/, ['operators.twig', '']],
-            // operators - test
-            [/(is)(\s+)/, ['operators.twig', '']],
-            // operators - misc
-            [/\||~|:|\.{1,2}|\?{1,2}/, 'operators.twig'],
-            // names
-            [/[^\W\d][\w]*/, {
-                    cases: {
-                        '@keywords': 'keyword.twig',
-                        '@default': 'variable.twig'
-                    }
-                }],
+            { include: '@whitespace' },
+            // delimiters and operators
+            [/[{}()\[\]]/, '@brackets'],
+            [/@symbols/, 'operator'],
+            [/\$+(?:\:\:)?\{/, { token: 'identifier', next: '@nestedVariable' }],
+            [/@variables/, 'type.identifier'],
+            [/\.(?!\d|\.)[\w\-]*/, 'operator.sql'],
             // numbers
-            [/\d+(\.\d+)?/, 'number.twig'],
-            // punctuation
-            [/\(|\)|\[|\]|{|}|,/, 'delimiter.twig'],
+            [/\d+(\.\d+)?/, 'number'],
+            [/\d+/, 'number'],
+            // delimiter
+            [/;/, 'delimiter'],
             // strings
-            [/"([^#"\\]*(?:\\.[^#"\\]*)*)"|\'([^\'\\]*(?:\\.[^\'\\]*)*)\'/, 'string.twig'],
-            // opening double quoted string
-            [/"/, 'string.twig', '@stringState'],
-            // misc syntactic constructs
-            // These are not operators per se, but for the purposes of lexical analysis we
-            // can treat them as such.
-            // arrow functions
-            [/=>/, 'operators.twig'],
-            // assignment
-            [/=/, 'operators.twig'],
+            [/"/, { token: 'string.quote', bracket: '@open', next: '@dstring' }],
+            [/'/, { token: 'string.quote', bracket: '@open', next: '@sstring' }]
         ],
-        /**
-         * HTML
-         */
-        doctype: [
-            [/[^>]+/, 'metatag.content.html'],
-            [/>/, 'metatag.html', '@pop'],
+        dstring: [
+            [/\[/, { token: '@brackets', next: '@nestedCall' }],
+            [/\$+(?:\:\:)?\{/, { token: 'identifier', next: '@nestedVariable' }],
+            [/@variables/, 'type.identifier'],
+            [/[^\\$\[\]"]+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/"/, { token: 'string.quote', bracket: '@close', next: '@pop' }],
         ],
-        comment: [
-            [/-->/, 'comment.html', '@pop'],
-            [/[^-]+/, 'comment.content.html'],
-            [/./, 'comment.content.html']
+        sstring: [
+            [/\[/, { token: '@brackets', next: '@nestedCall' }],
+            [/\$+(?:\:\:)?\{/, { token: 'identifier', next: '@nestedVariable' }],
+            [/@variables/, 'type.identifier'],
+            [/[^\\$\[\]']+/, 'string'],
+            [/@escapes/, 'string.escape'],
+            [/'/, { token: 'string.quote', bracket: '@close', next: '@pop' }]
         ],
-        otherTag: [
-            [/\/?>/, 'delimiter.html', '@pop'],
-            [/"([^"]*)"/, 'attribute.value.html'],
-            [/'([^']*)'/, 'attribute.value.html'],
-            [/[\w\-]+/, 'attribute.name.html'],
-            [/=/, 'delimiter.html'],
-            [/[ \t\r\n]+/],
+        whitespace: [
+            [/[ \t\r\n]+/, 'white'],
+            [/#.*\\$/, { token: 'comment', next: '@newlineComment' }],
+            [/#.*(?!\\)$/, 'comment']
         ],
-        // -- BEGIN <script> tags handling
-        // After <script
-        script: [
-            [/type/, 'attribute.name.html', '@scriptAfterType'],
-            [/"([^"]*)"/, 'attribute.value.html'],
-            [/'([^']*)'/, 'attribute.value.html'],
-            [/[\w\-]+/, 'attribute.name.html'],
-            [/=/, 'delimiter.html'],
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded', nextEmbedded: 'text/javascript' }],
-            [/[ \t\r\n]+/],
-            [/(<\/)(script\s*)(>)/, ['delimiter.html', 'tag.html', { token: 'delimiter.html', next: '@pop' }]]
+        newlineComment: [
+            [/.*\\$/, 'comment'],
+            [/.*(?!\\)$/, { token: 'comment', next: '@pop' }]
         ],
-        // After <script ... type
-        scriptAfterType: [
-            [/=/, 'delimiter.html', '@scriptAfterTypeEquals'],
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded', nextEmbedded: 'text/javascript' }],
-            [/[ \t\r\n]+/],
-            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
+        nestedVariable: [
+            [/[^\{\}\$]+/, 'type.identifier'],
+            [/\}/, { token: 'identifier', next: '@pop' }]
         ],
-        // After <script ... type =
-        scriptAfterTypeEquals: [
-            [/"([^"]*)"/, { token: 'attribute.value.html', switchTo: '@scriptWithCustomType.$1' }],
-            [/'([^']*)'/, { token: 'attribute.value.html', switchTo: '@scriptWithCustomType.$1' }],
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded', nextEmbedded: 'text/javascript' }],
-            [/[ \t\r\n]+/],
-            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
+        nestedCall: [
+            [/\[/, { token: '@brackets', next: '@nestedCall' }],
+            [/\]/, { token: '@brackets', next: '@pop' }],
+            { include: 'root' }
         ],
-        // After <script ... type = $S2
-        scriptWithCustomType: [
-            [/>/, { token: 'delimiter.html', next: '@scriptEmbedded.$S2', nextEmbedded: '$S2' }],
-            [/"([^"]*)"/, 'attribute.value.html'],
-            [/'([^']*)'/, 'attribute.value.html'],
-            [/[\w\-]+/, 'attribute.name.html'],
-            [/=/, 'delimiter.html'],
-            [/[ \t\r\n]+/],
-            [/<\/script\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        scriptEmbedded: [
-            [/<\/script/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }],
-            [/[^<]+/, '']
-        ],
-        // -- END <script> tags handling
-        // -- BEGIN <style> tags handling
-        // After <style
-        style: [
-            [/type/, 'attribute.name.html', '@styleAfterType'],
-            [/"([^"]*)"/, 'attribute.value.html'],
-            [/'([^']*)'/, 'attribute.value.html'],
-            [/[\w\-]+/, 'attribute.name.html'],
-            [/=/, 'delimiter.html'],
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded', nextEmbedded: 'text/css' }],
-            [/[ \t\r\n]+/],
-            [/(<\/)(style\s*)(>)/, ['delimiter.html', 'tag.html', { token: 'delimiter.html', next: '@pop' }]]
-        ],
-        // After <style ... type
-        styleAfterType: [
-            [/=/, 'delimiter.html', '@styleAfterTypeEquals'],
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded', nextEmbedded: 'text/css' }],
-            [/[ \t\r\n]+/],
-            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        // After <style ... type =
-        styleAfterTypeEquals: [
-            [/"([^"]*)"/, { token: 'attribute.value.html', switchTo: '@styleWithCustomType.$1' }],
-            [/'([^']*)'/, { token: 'attribute.value.html', switchTo: '@styleWithCustomType.$1' }],
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded', nextEmbedded: 'text/css' }],
-            [/[ \t\r\n]+/],
-            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        // After <style ... type = $S2
-        styleWithCustomType: [
-            [/>/, { token: 'delimiter.html', next: '@styleEmbedded.$S2', nextEmbedded: '$S2' }],
-            [/"([^"]*)"/, 'attribute.value.html'],
-            [/'([^']*)'/, 'attribute.value.html'],
-            [/[\w\-]+/, 'attribute.name.html'],
-            [/=/, 'delimiter.html'],
-            [/[ \t\r\n]+/],
-            [/<\/style\s*>/, { token: '@rematch', next: '@pop' }]
-        ],
-        styleEmbedded: [
-            [/<\/style/, { token: '@rematch', next: '@pop', nextEmbedded: '@pop' }],
-            [/[^<]+/, '']
-        ],
+        specialFunc: [
+            [/"/, { token: 'string', next: '@dstring' }],
+            [/'/, { token: 'string', next: '@sstring' }],
+            [/(?:(?:\:\:?)?[a-zA-Z_]\w*)+/, { token: 'type', next: '@pop' }],
+        ]
     }
 };
 
@@ -285,3 +143,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=59.bundle.js.map

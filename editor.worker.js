@@ -9205,3 +9205,4 @@ self.onmessage = function (e) {
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=editor.worker.js.map

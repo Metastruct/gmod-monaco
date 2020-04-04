@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[18],{
 
-/***/ 516:
+/***/ 519:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 var conf = {
     comments: {
         lineComment: '//',
-        blockComment: ['/*', '*/'],
+        blockComment: ['(*', '*)'],
     },
     brackets: [
         ['{', '}'],
@@ -26,80 +26,55 @@ var conf = {
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '`', close: '`', notIn: ['string'] },
-        { open: '"', close: '"', notIn: ['string'] },
-        { open: '\'', close: '\'', notIn: ['string', 'comment'] },
+        { open: '"', close: '"' }
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '`', close: '`' },
         { open: '"', close: '"' },
-        { open: '\'', close: '\'' },
-    ]
+        { open: '\'', close: '\'' }
+    ],
+    folding: {
+        markers: {
+            start: new RegExp("^\\s*//\\s*#region\\b|^\\s*\\(\\*\\s*#region(.*)\\*\\)"),
+            end: new RegExp("^\\s*//\\s*#endregion\\b|^\\s*\\(\\*\\s*#endregion\\s*\\*\\)")
+        }
+    }
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.go',
+    tokenPostfix: '.fs',
     keywords: [
-        'break',
-        'case',
-        'chan',
-        'const',
-        'continue',
-        'default',
-        'defer',
-        'else',
-        'fallthrough',
-        'for',
-        'func',
-        'go',
-        'goto',
-        'if',
-        'import',
-        'interface',
-        'map',
-        'package',
-        'range',
-        'return',
-        'select',
-        'struct',
-        'switch',
-        'type',
-        'var',
-        'bool',
-        'true',
-        'false',
-        'uint8',
-        'uint16',
-        'uint32',
-        'uint64',
-        'int8',
-        'int16',
-        'int32',
-        'int64',
-        'float32',
-        'float64',
-        'complex64',
-        'complex128',
-        'byte',
-        'rune',
-        'uint',
-        'int',
-        'uintptr',
-        'string',
-        'nil',
-    ],
-    operators: [
-        '+', '-', '*', '/', '%', '&', '|', '^', '<<', '>>', '&^',
-        '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '&^=',
-        '&&', '||', '<-', '++', '--', '==', '<', '>', '=', '!', '!=', '<=', '>=', ':=', '...',
-        '(', ')', '', ']', '{', '}', ',', ';', '.', ':'
+        'abstract', 'and', 'atomic', 'as',
+        'assert', 'asr', 'base', 'begin',
+        'break', 'checked', 'component',
+        'const', 'constraint', 'constructor',
+        'continue', 'class', 'default',
+        'delegate', 'do', 'done', 'downcast',
+        'downto', 'elif', 'else', 'end',
+        'exception', 'eager', 'event', 'external',
+        'extern', 'false', 'finally', 'for',
+        'fun', 'function', 'fixed', 'functor',
+        'global', 'if', 'in', 'include', 'inherit',
+        'inline', 'interface', 'internal', 'land',
+        'lor', 'lsl', 'lsr', 'lxor', 'lazy', 'let',
+        'match', 'member', 'mod', 'module', 'mutable',
+        'namespace', 'method', 'mixin', 'new', 'not',
+        'null', 'of', 'open', 'or', 'object',
+        'override', 'private', 'parallel', 'process',
+        'protected', 'pure', 'public', 'rec', 'return',
+        'static', 'sealed', 'struct', 'sig', 'then',
+        'to', 'true', 'tailcall', 'trait',
+        'try', 'type', 'upcast', 'use',
+        'val', 'void', 'virtual', 'volatile',
+        'when', 'while', 'with', 'yield'
     ],
     // we include these common regular expressions
-    symbols: /[=><!~?:&|+\-*\/\^%]+/,
+    symbols: /[=><!~?:&|+\-*\^%;\.,\/]+/,
     escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
+    integersuffix: /[uU]?[yslnLI]?/,
+    floatsuffix: /[fFmM]?/,
     // The main tokenizer for our languages
     tokenizer: {
         root: [
@@ -112,68 +87,61 @@ var language = {
                 }],
             // whitespace
             { include: '@whitespace' },
-            // [[ attributes ]].
-            [/\[\[.*\]\]/, 'annotation'],
+            // [< attributes >].
+            [/\[<.*>\]/, 'annotation'],
             // Preprocessor directive
-            [/^\s*#\w+/, 'keyword'],
+            [/^#(if|else|endif)/, 'keyword'],
             // delimiters and operators
             [/[{}()\[\]]/, '@brackets'],
             [/[<>](?!@symbols)/, '@brackets'],
-            [/@symbols/, {
-                    cases: {
-                        '@operators': 'delimiter',
-                        '@default': ''
-                    }
-                }],
+            [/@symbols/, 'delimiter'],
             // numbers
-            [/\d*\d+[eE]([\-+]?\d+)?/, 'number.float'],
-            [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float'],
-            [/0[xX][0-9a-fA-F']*[0-9a-fA-F]/, 'number.hex'],
-            [/0[0-7']*[0-7]/, 'number.octal'],
-            [/0[bB][0-1']*[0-1]/, 'number.binary'],
-            [/\d[\d']*/, 'number'],
-            [/\d/, 'number'],
+            [/\d*\d+[eE]([\-+]?\d+)?(@floatsuffix)/, 'number.float'],
+            [/\d*\.\d+([eE][\-+]?\d+)?(@floatsuffix)/, 'number.float'],
+            [/0x[0-9a-fA-F]+LF/, 'number.float'],
+            [/0x[0-9a-fA-F]+(@integersuffix)/, 'number.hex'],
+            [/0b[0-1]+(@integersuffix)/, 'number.bin'],
+            [/\d+(@integersuffix)/, 'number'],
             // delimiter: after number because of .\d floats
             [/[;,.]/, 'delimiter'],
             // strings
             [/"([^"\\]|\\.)*$/, 'string.invalid'],
-            [/"/, 'string', '@string'],
-            [/`/, "string", "@rawstring"],
+            [/"""/, 'string', '@string."""'],
+            [/"/, 'string', '@string."'],
+            // literal string
+            [/\@"/, { token: 'string.quote', next: '@litstring' }],
             // characters
-            [/'[^\\']'/, 'string'],
+            [/'[^\\']'B?/, 'string'],
             [/(')(@escapes)(')/, ['string', 'string.escape', 'string']],
             [/'/, 'string.invalid']
         ],
         whitespace: [
             [/[ \t\r\n]+/, ''],
-            [/\/\*\*(?!\/)/, 'comment.doc', '@doccomment'],
-            [/\/\*/, 'comment', '@comment'],
+            [/\(\*(?!\))/, 'comment', '@comment'],
             [/\/\/.*$/, 'comment'],
         ],
         comment: [
-            [/[^\/*]+/, 'comment'],
-            // [/\/\*/, 'comment', '@push' ],    // nested comment not allowed :-(
-            // [/\/\*/,    'comment.invalid' ],    // this breaks block comments in the shape of /* //*/
-            [/\*\//, 'comment', '@pop'],
-            [/[\/*]/, 'comment']
-        ],
-        //Identical copy of comment above, except for the addition of .doc
-        doccomment: [
-            [/[^\/*]+/, 'comment.doc'],
-            // [/\/\*/, 'comment.doc', '@push' ],    // nested comment not allowed :-(
-            [/\/\*/, 'comment.doc.invalid'],
-            [/\*\//, 'comment.doc', '@pop'],
-            [/[\/*]/, 'comment.doc']
+            [/[^*(]+/, 'comment'],
+            [/\*\)/, 'comment', '@pop'],
+            [/\*/, 'comment'],
+            [/\(\*\)/, 'comment'],
+            [/\(/, 'comment']
         ],
         string: [
             [/[^\\"]+/, 'string'],
             [/@escapes/, 'string.escape'],
             [/\\./, 'string.escape.invalid'],
-            [/"/, 'string', '@pop']
+            [/("""|"B?)/, {
+                    cases: {
+                        '$#==$S2': { token: 'string', next: '@pop' },
+                        '@default': 'string'
+                    }
+                }]
         ],
-        rawstring: [
-            [/[^\`]/, "string"],
-            [/`/, "string", "@pop"]
+        litstring: [
+            [/[^"]+/, 'string'],
+            [/""/, 'string.escape'],
+            [/"/, { token: 'string.quote', next: '@pop' }]
         ],
     },
 };
@@ -182,3 +150,4 @@ var language = {
 /***/ })
 
 }]);
+//# sourceMappingURL=18.bundle.js.map

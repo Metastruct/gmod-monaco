@@ -1,6 +1,6 @@
 (self["webpackJsonp"] = self["webpackJsonp"] || []).push([[32],{
 
-/***/ 531:
+/***/ 534:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,133 +13,184 @@ __webpack_require__.r(__webpack_exports__);
  *--------------------------------------------------------------------------------------------*/
 
 var conf = {
-    // the default separators except `@$`
-    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g,
     comments: {
         lineComment: '//',
-        blockComment: ['{', '}'],
+        blockComment: ['/*', '*/'],
     },
     brackets: [
         ['{', '}'],
         ['[', ']'],
-        ['(', ')'],
-        ['<', '>'],
+        ['(', ')']
     ],
     autoClosingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '<', close: '>' },
+        { open: '"', close: '"' },
         { open: '\'', close: '\'' },
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '<', close: '>' },
+        { open: '"', close: '"' },
         { open: '\'', close: '\'' },
-    ],
-    folding: {
-        markers: {
-            start: new RegExp("^\\s*\\{\\$REGION(\\s\\'.*\\')?\\}"),
-            end: new RegExp("^\\s*\\{\\$ENDREGION\\}")
-        }
-    }
+    ]
 };
 var language = {
     defaultToken: '',
-    tokenPostfix: '.pascal',
-    ignoreCase: true,
-    brackets: [
-        { open: '{', close: '}', token: 'delimiter.curly' },
-        { open: '[', close: ']', token: 'delimiter.square' },
-        { open: '(', close: ')', token: 'delimiter.parenthesis' },
-        { open: '<', close: '>', token: 'delimiter.angle' }
-    ],
+    tokenPostfix: '.objective-c',
     keywords: [
-        'absolute', 'abstract', 'all', 'and_then', 'array', 'as', 'asm',
-        'attribute', 'begin', 'bindable', 'case', 'class', 'const',
-        'contains', 'default', 'div', 'else', 'end', 'except',
-        'exports', 'external', 'far', 'file', 'finalization', 'finally',
-        'forward', 'generic', 'goto', 'if', 'implements', 'import', 'in',
-        'index', 'inherited', 'initialization', 'interrupt', 'is', 'label',
-        'library', 'mod', 'module', 'name', 'near', 'not', 'object', 'of',
-        'on', 'only', 'operator', 'or_else', 'otherwise', 'override',
-        'package', 'packed', 'pow', 'private', 'program', 'protected',
-        'public', 'published', 'interface', 'implementation', 'qualified',
-        'read', 'record', 'resident', 'requires', 'resourcestring',
-        'restricted', 'segment', 'set', 'shl', 'shr', 'specialize', 'stored',
-        'then', 'threadvar', 'to', 'try', 'type', 'unit', 'uses', 'var',
-        'view', 'virtual', 'dynamic', 'overload', 'reintroduce', 'with',
-        'write', 'xor', 'true', 'false', 'procedure', 'function',
-        'constructor', 'destructor', 'property', 'break', 'continue', 'exit',
-        'abort', 'while', 'do', 'for', 'raise', 'repeat', 'until'
+        '#import',
+        '#include',
+        '#define',
+        '#else',
+        '#endif',
+        '#if',
+        '#ifdef',
+        '#ifndef',
+        '#ident',
+        '#undef',
+        '@class',
+        '@defs',
+        '@dynamic',
+        '@encode',
+        '@end',
+        '@implementation',
+        '@interface',
+        '@package',
+        '@private',
+        '@protected',
+        '@property',
+        '@protocol',
+        '@public',
+        '@selector',
+        '@synthesize',
+        '__declspec',
+        'assign',
+        'auto',
+        'BOOL',
+        'break',
+        'bycopy',
+        'byref',
+        'case',
+        'char',
+        'Class',
+        'const',
+        'copy',
+        'continue',
+        'default',
+        'do',
+        'double',
+        'else',
+        'enum',
+        'extern',
+        'FALSE',
+        'false',
+        'float',
+        'for',
+        'goto',
+        'if',
+        'in',
+        'int',
+        'id',
+        'inout',
+        'IMP',
+        'long',
+        'nil',
+        'nonatomic',
+        'NULL',
+        'oneway',
+        'out',
+        'private',
+        'public',
+        'protected',
+        'readwrite',
+        'readonly',
+        'register',
+        'return',
+        'SEL',
+        'self',
+        'short',
+        'signed',
+        'sizeof',
+        'static',
+        'struct',
+        'super',
+        'switch',
+        'typedef',
+        'TRUE',
+        'true',
+        'union',
+        'unsigned',
+        'volatile',
+        'void',
+        'while',
     ],
-    typeKeywords: [
-        'boolean', 'double', 'byte', 'integer', 'shortint', 'char',
-        'longint', 'float', 'string'
-    ],
-    operators: [
-        '=', '>', '<', '<=', '>=', '<>', ':', ':=', 'and', 'or',
-        '+', '-', '*', '/', '@', '&', '^', '%'
-    ],
-    // we include these common regular expressions
-    symbols: /[=><:@\^&|+\-*\/\^%]+/,
-    // The main tokenizer for our languages
+    decpart: /\d(_?\d)*/,
+    decimal: /0|@decpart/,
     tokenizer: {
         root: [
-            // identifiers and keywords
-            [/[a-zA-Z_][\w]*/, {
+            { include: '@comments' },
+            { include: '@whitespace' },
+            { include: '@numbers' },
+            { include: '@strings' },
+            [/[,:;]/, 'delimiter'],
+            [/[{}\[\]()<>]/, '@brackets'],
+            [/[a-zA-Z@#]\w*/, {
                     cases: {
-                        '@keywords': { token: 'keyword.$0' },
+                        '@keywords': 'keyword',
                         '@default': 'identifier'
                     }
                 }],
-            // whitespace
-            { include: '@whitespace' },
-            // delimiters and operators
-            [/[{}()\[\]]/, '@brackets'],
-            [/[<>](?!@symbols)/, '@brackets'],
-            [/@symbols/, {
-                    cases: {
-                        '@operators': 'delimiter',
-                        '@default': ''
-                    }
-                }],
-            // numbers
-            [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float'],
-            [/\$[0-9a-fA-F]{1,16}/, 'number.hex'],
-            [/\d+/, 'number'],
-            // delimiter: after number because of .\d floats
-            [/[;,.]/, 'delimiter'],
-            // strings
-            [/'([^'\\]|\\.)*$/, 'string.invalid'],
-            [/'/, 'string', '@string'],
-            // characters
-            [/'[^\\']'/, 'string'],
-            [/'/, 'string.invalid'],
-            [/\#\d+/, 'string']
-        ],
-        comment: [
-            [/[^\*\}]+/, 'comment'],
-            //[/\(\*/,    'comment', '@push' ],    // nested comment  not allowed :-(
-            [/\}/, 'comment', '@pop'],
-            [/[\{]/, 'comment']
-        ],
-        string: [
-            [/[^\\']+/, 'string'],
-            [/\\./, 'string.escape.invalid'],
-            [/'/, { token: 'string.quote', bracket: '@close', next: '@pop' }]
+            [/[<>=\\+\\-\\*\\/\\^\\|\\~,]|and\\b|or\\b|not\\b]/, 'operator'],
         ],
         whitespace: [
-            [/[ \t\r\n]+/, 'white'],
-            [/\{/, 'comment', '@comment'],
-            [/\/\/.*$/, 'comment'],
+            [/\s+/, 'white'],
         ],
-    },
+        comments: [
+            ['\\/\\*', 'comment', '@comment'],
+            ['\\/\\/+.*', 'comment'],
+        ],
+        comment: [
+            ['\\*\\/', 'comment', '@pop'],
+            ['.', 'comment',],
+        ],
+        numbers: [
+            [/0[xX][0-9a-fA-F]*(_?[0-9a-fA-F])*/, 'number.hex'],
+            [/@decimal((\.@decpart)?([eE][\-+]?@decpart)?)[fF]*/, {
+                    cases: {
+                        '(\\d)*': 'number',
+                        '$0': 'number.float'
+                    }
+                }]
+        ],
+        // Recognize strings, including those broken across lines with \ (but not without)
+        strings: [
+            [/'$/, 'string.escape', '@popall'],
+            [/'/, 'string.escape', '@stringBody'],
+            [/"$/, 'string.escape', '@popall'],
+            [/"/, 'string.escape', '@dblStringBody']
+        ],
+        stringBody: [
+            [/[^\\']+$/, 'string', '@popall'],
+            [/[^\\']+/, 'string'],
+            [/\\./, 'string'],
+            [/'/, 'string.escape', '@popall'],
+            [/\\$/, 'string']
+        ],
+        dblStringBody: [
+            [/[^\\"]+$/, 'string', '@popall'],
+            [/[^\\"]+/, 'string'],
+            [/\\./, 'string'],
+            [/"/, 'string.escape', '@popall'],
+            [/\\$/, 'string']
+        ]
+    }
 };
 
 
 /***/ })
 
 }]);
+//# sourceMappingURL=32.bundle.js.map
