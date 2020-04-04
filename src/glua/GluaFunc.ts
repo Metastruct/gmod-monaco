@@ -46,10 +46,7 @@ export class GluaFunc extends GluaItem {
         );
     }
     getSuggestDocumentation(): string {
-        return this.description.text
-            .split("\n")
-            .slice(1)
-            .join("\n");
+        return this.description.text.split("\n").slice(1).join("\n");
     }
     getFullName(): string {
         if (this.type === "libraryfunc" && this.parent !== "Global") {
@@ -91,7 +88,7 @@ export class GluaFunc extends GluaItem {
             return this.getFullName() + "()";
         }
         const args: string[] = [];
-        this.args.forEach(elem => {
+        this.args.forEach((elem) => {
             let arg = `(${elem.type})${elem.name}`;
             if (elem.default && elem.default !== "" && elem.default !== "nil") {
                 arg += "=" + elem.default;

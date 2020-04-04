@@ -82,16 +82,16 @@ export let gwikiData: any[];
 export function LoadAutocompletionData(currentState: string) {
     if (!gwikiData) {
         fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
-            .then(response => {
+            .then((response) => {
                 return response.json();
             })
-            .then(data => {
+            .then((data) => {
                 gwikiData = data;
                 LoadAutocompletionData(currentState);
             });
         return;
     }
-    gwikiData.forEach(elem => {
+    gwikiData.forEach((elem) => {
         if (elem.realms.indexOf(currentState) === -1) {
             return;
         }
