@@ -156,9 +156,9 @@ export const language: monaco.languages.IMonarchLanguage = {
             // This breaks comment blocks
             // [/[^\/*]+/, "comment"],
             [/\/\*/, "comment", "@push"], // nested comment
-            [new RegExp("\\*/"), "comment", "@pop"],
+            [/\*\//, "comment", "@pop"],
             [/[\/*]/, "comment"],
-            [/[^\]]+/, "comment"],
+            // [/[^\]]+/, "comment"],
             [
                 /\]([=]*)\]/,
                 {
@@ -168,7 +168,7 @@ export const language: monaco.languages.IMonarchLanguage = {
                     },
                 },
             ],
-            [/./, "comment"],
+            [/./, "comment.content"],
         ],
         string: [
             [/[^\\"']+/, "string"],
