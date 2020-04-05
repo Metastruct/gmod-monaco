@@ -122788,9 +122788,9 @@ exports.language = {
             // This breaks comment blocks
             // [/[^\/*]+/, "comment"],
             [/\/\*/, "comment", "@push"],
-            [new RegExp("\\*/"), "comment", "@pop"],
+            [/\*\//, "comment", "@pop"],
             [/[\/*]/, "comment"],
-            [/[^\]]+/, "comment"],
+            // [/[^\]]+/, "comment"],
             [
                 /\]([=]*)\]/,
                 {
@@ -122800,7 +122800,7 @@ exports.language = {
                     },
                 },
             ],
-            [/./, "comment"],
+            [/./, "comment.content"],
         ],
         string: [
             [/[^\\"']+/, "string"],
