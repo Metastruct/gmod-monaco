@@ -122754,6 +122754,8 @@ exports.language = {
                 /({)(\s*)([a-zA-Z_]\w*)(\s*)(:)(?!:)/,
                 ["@brackets", "", "key", "", "delimiter"],
             ],
+            // Multiline string, needs to be added before brackets
+            [/\[(=*)\[/, "string", "@string_multiline"],
             // delimiters and operators
             [/[{}()\[\]]/, "@brackets"],
             [
@@ -122776,6 +122778,12 @@ exports.language = {
             [/'([^'\\]|\\.)*$/, "string.invalid"],
             [/"/, "string", '@string."'],
             [/'/, "string", "@string.'"],
+        ],
+        string_multiline: [
+            [/[^\\\]\\\]]+/, "string"],
+            [/@escapes/, "string.escape"],
+            [/\\./, "string.escape.invalid"],
+            [/\](=*)\]/, "string", "@pop"],
         ],
         whitespace: [
             [/[ \t\r\n]+/, ""],
