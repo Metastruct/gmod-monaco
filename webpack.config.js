@@ -45,15 +45,7 @@ module.exports = {
             template: "views/repl.html",
             chunks: ["repl"],
         }),
-        // new webpack.optimize.LimitChunkCountPlugin({
-        //   maxChunks: 1, // disable creating additional chunks
-        // }),
     ],
-
-    // having minimize enabled gives weird Â's for blank lines??
-    optimization: {
-        minimize: false,
-    },
 
     devtool: "source-map",
 
