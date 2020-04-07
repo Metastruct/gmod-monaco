@@ -5,7 +5,6 @@ import { GLuaCompletionProvider } from "./completionProvider";
 import { GLuaHoverProvider } from "./hoverProvider";
 import { ThemeLoader } from "./themeLoader";
 import { replInterface } from "./replInterface";
-import { LoadAutocompletionData } from "./glua/Gwiki";
 
 const themeLoader: ThemeLoader = new ThemeLoader();
 const themePromise: Promise<void> = themeLoader.loadThemes();

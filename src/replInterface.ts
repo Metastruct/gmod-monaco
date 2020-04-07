@@ -116,7 +116,6 @@ if (globalThis.replinterface) {
                         this.historyIndex++;
                         histStr = this.history[this.historyIndex - 1];
                         line.setValue(histStr);
-                        console.log("up", histStr, histStr.length);
                         // .hack
                         setTimeout(() => {
                             line.setPosition(
@@ -137,7 +136,6 @@ if (globalThis.replinterface) {
                         this.historyIndex--;
                         histStr = this.history[this.historyIndex - 1];
                         line.setValue(histStr);
-                        console.log("down", histStr, histStr.length);
                         line.setPosition(
                             new monaco.Position(1, histStr.length + 1)
                         );
@@ -175,8 +173,21 @@ if (globalThis.replinterface) {
             };
         },
         AddText(text: string): void {
-            this.editor!.setValue(`${this.editor!.getValue()}${text}\n`);
+            this.editor!.updateOptions({
+                readOnly: false,
+            });
+            const lineCount = this.editor!.getModel()!.getLineCount();
+            this.editor!.executeEdits("repl-AddText", [
+                {
+                    forceMoveMarkers: true,
+                    range: new monaco.Range(lineCount, 1, lineCount, 1),
+                    text: text + "\n",
+                },
+            ]);
             this.editor!.revealLine(this.editor!.getModel()!.getLineCount());
+            this.editor!.updateOptions({
+                readOnly: true,
+            });
         },
         Clear(): void {
             this.replLines.clear();

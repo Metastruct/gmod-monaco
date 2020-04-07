@@ -174,6 +174,11 @@ if (globalThis.gmodinterface) {
             }
             currentSession = session;
             this.OnSessionSet(session.getSerializable());
+            monaco.editor.setModelMarkers(
+                this.editor!.getModel()!,
+                "luacheck",
+                []
+            );
         },
 
         CreateSession(
