@@ -79,6 +79,16 @@ function addEnum(jsonOBJ: any) {
 
 export let gwikiData: any[];
 
+export function FetchGwiki() {
+    fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            gwikiData = data;
+        });
+}
+
 export function LoadAutocompletionData(currentState: string) {
     if (!gwikiData) {
         fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")

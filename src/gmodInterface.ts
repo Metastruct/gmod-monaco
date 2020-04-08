@@ -8,6 +8,7 @@ import { LoadAutocompletionData } from "./glua/Gwiki";
 declare global {
     namespace globalThis {
         var gmodinterface: GmodInterface | undefined;
+        var editor: monaco.editor.IStandaloneCodeEditor | undefined;
     }
 }
 
@@ -71,8 +72,10 @@ if (globalThis.gmodinterface) {
 
         SetEditor(editor: monaco.editor.IStandaloneCodeEditor): void {
             this.editor = editor;
+            // Need to expose editor to gmod to have some more JS HACKS
+            globalThis.editor = editor;
 
-            editor.getModel()!.onDidChangeContent(() => {
+            editor.onDidChangeModelContent(() => {
                 this.OnCode(
                     editor.getValue(),
                     editor.getModel()!.getAlternativeVersionId()
