@@ -1,6 +1,6 @@
 import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
 import * as lua from "./lua";
-import { LoadAutocompletionData } from "./glua/Gwiki";
+import { LoadAutocompletionData, FetchGwiki } from "./glua/Gwiki";
 import { autocompletionData, ResetAutocomplete } from "./autocompletionData";
 import { GmodInterfaceValue } from "./glua/GmodInterfaceValue";
 
@@ -19,8 +19,8 @@ interface ExtendedReplInterface extends ReplInterface {
     editor?: monaco.editor.IStandaloneCodeEditor;
     line?: monaco.editor.IStandaloneCodeEditor;
     replLines: Map<number, number>;
-    history: string[];
-    historyIndex: number;
+    replHistory: string[];
+    replHistoryIndex: number;
     replCounter: number;
     SetEditors(
         editor: monaco.editor.IStandaloneCodeEditor,
@@ -45,8 +45,8 @@ if (globalThis.replinterface) {
         ...globalThis.replinterface,
 
         replLines: new Map<number, number>(),
-        history: [],
-        historyIndex: 0,
+        replHistory: [],
+        replHistoryIndex: 0,
         replCounter: 0,
 
         SetEditors(
@@ -104,17 +104,17 @@ if (globalThis.replinterface) {
                         );
                         this.replCounter++;
                         line.setValue("");
-                        this.history.unshift(code);
-                        this.historyIndex = 0;
+                        this.replHistory.unshift(code);
+                        this.replHistoryIndex = 0;
                         this.OnCode(code);
                         break;
 
                     case monaco.KeyCode.UpArrow:
-                        if (this.historyIndex >= history.length) {
+                        if (this.replHistoryIndex >= this.replHistory.length) {
                             break;
                         }
-                        this.historyIndex++;
-                        histStr = this.history[this.historyIndex - 1];
+                        this.replHistoryIndex++;
+                        histStr = this.replHistory[this.replHistoryIndex - 1];
                         line.setValue(histStr);
                         // .hack
                         setTimeout(() => {
@@ -125,16 +125,16 @@ if (globalThis.replinterface) {
                         break;
 
                     case monaco.KeyCode.DownArrow:
-                        if (this.historyIndex === 1) {
+                        if (this.replHistoryIndex === 1) {
                             line.setValue("");
-                            this.historyIndex = 0;
+                            this.replHistoryIndex = 0;
                             break;
                         }
-                        if (this.historyIndex === 0) {
+                        if (this.replHistoryIndex === 0) {
                             break;
                         }
-                        this.historyIndex--;
-                        histStr = this.history[this.historyIndex - 1];
+                        this.replHistoryIndex--;
+                        histStr = this.replHistory[this.replHistoryIndex - 1];
                         line.setValue(histStr);
                         line.setPosition(
                             new monaco.Position(1, histStr.length + 1)
@@ -171,6 +171,8 @@ if (globalThis.replinterface) {
             ) => {
                 this.OpenURL(url);
             };
+
+            FetchGwiki();
         },
         AddText(text: string): void {
             this.editor!.updateOptions({
