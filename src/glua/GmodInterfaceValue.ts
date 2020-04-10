@@ -7,6 +7,7 @@ export class GmodInterfaceValue extends GluaItem {
     classFunction?: boolean;
     description?: string;
     type!: keyof typeof monaco.languages.CompletionItemKind;
+    parent?: string;
     constructor(jsonObj: object) {
         super(jsonObj);
         if (!name) {
@@ -21,6 +22,9 @@ export class GmodInterfaceValue extends GluaItem {
         if (this.type === "Function" || this.type === "Method") {
             return `${this.classFunction ? this.name : this.fullname}()`;
         }
+        return this.fullname;
+    }
+    getFullName() {
         return this.fullname;
     }
     getCompletionKind(): monaco.languages.CompletionItemKind {
