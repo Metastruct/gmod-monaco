@@ -41,7 +41,7 @@ interface ExtendedGmodInterface extends GmodInterface {
     AddSnippet(name: string, code: string): void;
     LoadSnippets(snippets: { name: string; code: string }[]): void;
     AddAction(action: EditorAction): void;
-    LoadAutocompleteState(state: string): void;
+    LoadAutocompleteState(state: string): Promise<void>;
     ResetAutocompletion(): void;
     GetSessions(): void;
 }
@@ -387,9 +387,13 @@ if (globalThis.gmodinterface) {
             this.editor!.addAction(newAction);
         },
 
-        LoadAutocompleteState(state: string): void {
-            LoadAutocompletionData(state);
-            autocompletionData.ClearAutocompleteCache();
+        LoadAutocompleteState(state: string): Promise<void> {
+            return new Promise<void>(function (resolve, reject) {
+                LoadAutocompletionData(state).then(() => {
+                    autocompletionData.ClearAutocompleteCache();
+                    resolve();
+                });
+            });
         },
         ResetAutocompletion(): void {
             ResetAutocomplete();

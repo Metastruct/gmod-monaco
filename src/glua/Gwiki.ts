@@ -79,30 +79,22 @@ function addEnum(jsonOBJ: any) {
 
 export let gwikiData: any[];
 
-export function FetchGwiki() {
-    fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            gwikiData = data;
-        });
+export async function FetchGwiki() {
+    gwikiData = await (
+        await fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
+    ).json();
 }
 
-export function LoadAutocompletionData(currentState: string) {
+export async function LoadAutocompletionData(currentState: string) {
     if (!gwikiData) {
-        fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                gwikiData = data;
-                LoadAutocompletionData(currentState);
-            });
-        return;
+        await FetchGwiki();
     }
     gwikiData.forEach((elem) => {
-        if (elem.realms.indexOf(currentState) === -1) {
+        if (currentState == "Shared") {
+            if (elem.realms.length == 1 && elem.realms[0] == "Menu") {
+                return;
+            }
+        } else if (elem.realms.indexOf(currentState) === -1) {
             return;
         }
         if (elem.function) {

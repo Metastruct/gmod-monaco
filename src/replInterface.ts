@@ -29,7 +29,7 @@ interface ExtendedReplInterface extends ReplInterface {
     AddText(text: string): void;
     Clear(): void;
     Reset(): void;
-    LoadAutocompleteState(state: string): void;
+    LoadAutocompleteState(state: string): Promise<void>;
     ResetAutocompletion(): void;
     LoadAutocomplete(clData: ClientAutocompleteData): void;
 }
@@ -206,9 +206,13 @@ if (globalThis.replinterface) {
             this.replCounter = 0;
             this.Clear();
         },
-        LoadAutocompleteState(state: string): void {
-            LoadAutocompletionData(state);
-            autocompletionData.ClearAutocompleteCache();
+        LoadAutocompleteState(state: string): Promise<void> {
+            return new Promise<void>(function (resolve, reject) {
+                LoadAutocompletionData(state).then(() => {
+                    autocompletionData.ClearAutocompleteCache();
+                    resolve();
+                });
+            });
         },
         ResetAutocompletion(): void {
             ResetAutocomplete();
@@ -218,8 +222,6 @@ if (globalThis.replinterface) {
         LoadAutocomplete(clData: ClientAutocompleteData): void {
             // Build caches first to avoid duplicates
             autocompletionData.interfaceValues = [];
-            autocompletionData.GenerateMethodsCache();
-            autocompletionData.GenerateGlobalCache();
             const values = clData.values.split("|");
             const funcs = clData.funcs.split("|");
             const tables: string[] = [];
@@ -289,7 +291,6 @@ if (globalThis.replinterface) {
                         autocompletionData.AddNewInterfaceValue(
                             new GmodInterfaceValue({
                                 name,
-                                parent,
                                 fullname: func,
                                 classFunction,
                                 type,

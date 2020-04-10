@@ -67,13 +67,14 @@ const editor = monaco.editor.create(
 editor.focus();
 window.addEventListener("resize", () => editor.layout());
 
-LoadAutocompletionData("Client");
-
 // so all themes are available to gmod when OnReady is fired
 // this prevents any loading order issue
 themePromise.finally(() => {
     if (gmodInterface) {
         gmodInterface.SetEditor(editor);
         gmodInterface.OnReady();
+    } else {
+        // For people viewing page in browser
+        LoadAutocompletionData("Client");
     }
 });
