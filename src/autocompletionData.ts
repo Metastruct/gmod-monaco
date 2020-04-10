@@ -157,6 +157,12 @@ class AutocompletionData {
         });
         autocompletionData.interfaceValues.forEach(
             (interfaceValue: GmodInterfaceValue) => {
+                // Avoid duplicates
+                if (
+                    autocompletionData.valuesLookup.has(interfaceValue.fullname)
+                ) {
+                    return;
+                }
                 const item = {
                     label: interfaceValue.fullname,
                     kind: interfaceValue.getCompletionKind(),
@@ -219,9 +225,26 @@ class AutocompletionData {
                 if (!interfaceValue.classFunction) {
                     return;
                 }
+                if (autocompletionData.methodsLookup.has(interfaceValue.name)) {
+                    let found = false;
+                    autocompletionData.methodsLookup
+                        .get(name)
+                        ?.forEach((method) => {
+                            if (
+                                method.getFullName() ==
+                                interfaceValue.getFullName()
+                            ) {
+                                found = true;
+                            }
+                        });
+                    if (found) {
+                        return;
+                    }
+                }
                 const item = {
                     label: interfaceValue.fullname,
                     kind: interfaceValue.getCompletionKind(),
+                    detail: "Clientside value",
                     documentation: interfaceValue.description,
                     insertText: interfaceValue.getUsage(),
                     sortText: interfaceValue.name,

@@ -39,6 +39,13 @@ interface ClientAutocompleteData {
     funcs: string; // Same as above but global functions and object methods
 }
 
+// I use this for debugging in browser
+// globalThis.replinterface = {
+//     OpenURL: console.log,
+//     OnReady: console.log,
+//     OnCode: console.log,
+// };
+
 let maybeReplInterface: ExtendedReplInterface | undefined;
 if (globalThis.replinterface) {
     maybeReplInterface = {
@@ -214,7 +221,7 @@ if (globalThis.replinterface) {
             autocompletionData.GenerateMethodsCache();
             autocompletionData.GenerateGlobalCache();
             const values = clData.values.split("|");
-            const fucns = clData.funcs.split("|");
+            const funcs = clData.funcs.split("|");
             const tables: string[] = [];
             values.forEach((value: string) => {
                 let name = value;
@@ -235,10 +242,11 @@ if (globalThis.replinterface) {
                     );
                 }
             });
-            fucns.forEach((func: string) => {
+            funcs.forEach((func: string) => {
                 let name = func;
                 let classFunction = false;
                 let type = "Function";
+                let parent = undefined;
                 if (func.indexOf(".") !== -1) {
                     const split = func.split(".");
                     name = split.pop()!;
@@ -248,19 +256,46 @@ if (globalThis.replinterface) {
                     }
                 } else if (func.indexOf(":") !== -1) {
                     const split = func.split(":");
+                    parent = split[1];
                     name = split.pop()!;
                     classFunction = true;
                     type = "Method";
                 }
-                if (!autocompletionData.valuesLookup.has(func)) {
+                if (classFunction) {
+                    if (autocompletionData.methodsLookup.has(name)) {
+                        let found = false;
+                        autocompletionData.methodsLookup
+                            .get(name)
+                            ?.forEach((method) => {
+                                if (method.getFullName() == func) {
+                                    found = true;
+                                }
+                            });
+                        if (found) {
+                            return;
+                        }
+                    }
                     autocompletionData.AddNewInterfaceValue(
                         new GmodInterfaceValue({
                             name,
+                            parent,
                             fullname: func,
                             classFunction,
                             type,
                         })
                     );
+                } else {
+                    if (!autocompletionData.valuesLookup.has(func)) {
+                        autocompletionData.AddNewInterfaceValue(
+                            new GmodInterfaceValue({
+                                name,
+                                parent,
+                                fullname: func,
+                                classFunction,
+                                type,
+                            })
+                        );
+                    }
                 }
             });
             tables.forEach((table) => {

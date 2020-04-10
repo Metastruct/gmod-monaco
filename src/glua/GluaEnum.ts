@@ -21,4 +21,7 @@ export class GluaEnum extends GluaItem {
     getDetail(): string {
         return `${this.text || ""}\n\n${this.tableDesc || "No description"}`;
     }
+    getFullName() {
+        return this.key;
+    }
 }

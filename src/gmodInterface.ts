@@ -34,6 +34,7 @@ interface ExtendedGmodInterface extends GmodInterface {
     CreateSession(sessionObj: object): EditorSession | undefined;
     CloseSession(sessionName?: string, switchTo?: string): void;
     LoadSessions(list: object[], newActive?: string): void;
+    SetSessionCode(sessionName: string, code: string): void;
     AddAutocompleteValue(value: object): void;
     AddAutocompleteValues(valuesArray: object[]): void;
     LoadAutocomplete(clData: ClientAutocompleteData): void;
@@ -231,6 +232,15 @@ if (globalThis.gmodinterface) {
             }
         },
 
+        SetSessionCode(sessionName: string, code: string): void {
+            if (!sessions.has(sessionName)) {
+                console.error(
+                    `Cant set code for session session named ${sessionName}, it does not exist`
+                );
+            }
+            sessions.get(sessionName)?.model.setValue(code);
+        },
+
         AddAutocompleteValue(value: object): void {
             autocompletionData.AddNewInterfaceValue(
                 new GmodInterfaceValue(value)
@@ -278,6 +288,7 @@ if (globalThis.gmodinterface) {
                 let name = func;
                 let classFunction = false;
                 let type = "Function";
+                let parent = undefined;
                 if (func.indexOf(".") !== -1) {
                     const split = func.split(".");
                     name = split.pop()!;
@@ -287,19 +298,46 @@ if (globalThis.gmodinterface) {
                     }
                 } else if (func.indexOf(":") !== -1) {
                     const split = func.split(":");
+                    parent = split[1];
                     name = split.pop()!;
                     classFunction = true;
                     type = "Method";
                 }
-                if (!autocompletionData.valuesLookup.has(func)) {
+                if (classFunction) {
+                    if (autocompletionData.methodsLookup.has(name)) {
+                        let found = false;
+                        autocompletionData.methodsLookup
+                            .get(name)
+                            ?.forEach((method) => {
+                                if (method.getFullName() == func) {
+                                    found = true;
+                                }
+                            });
+                        if (found) {
+                            return;
+                        }
+                    }
                     autocompletionData.AddNewInterfaceValue(
                         new GmodInterfaceValue({
                             name,
+                            parent,
                             fullname: func,
                             classFunction,
                             type,
                         })
                     );
+                } else {
+                    if (!autocompletionData.valuesLookup.has(func)) {
+                        autocompletionData.AddNewInterfaceValue(
+                            new GmodInterfaceValue({
+                                name,
+                                parent,
+                                fullname: func,
+                                classFunction,
+                                type,
+                            })
+                        );
+                    }
                 }
             });
             tables.forEach((table) => {

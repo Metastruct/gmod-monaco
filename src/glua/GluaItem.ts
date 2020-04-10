@@ -10,4 +10,5 @@ export abstract class GluaItem {
         // Object.assign(this, jsonObj)
     }
     abstract generateDocumentation(): monaco.IMarkdownString[];
+    abstract getFullName(): string;
 }
