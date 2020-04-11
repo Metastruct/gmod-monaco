@@ -66,6 +66,15 @@ interface EditorAction {
     contextMenuGroup: string;
 }
 
+globalThis.gmodinterface = {
+    OnReady: console.log,
+    OnCode: console.log,
+    OpenURL: console.log,
+    OnSessionSet: console.log,
+    OnAction: console.log,
+    OnSessions: console.log,
+};
+
 let maybeGmodInterface: ExtendedGmodInterface | undefined;
 if (globalThis.gmodinterface) {
     maybeGmodInterface = {
@@ -99,7 +108,9 @@ if (globalThis.gmodinterface) {
             if (keepViewState) {
                 this.editor!.restoreViewState(viewState!);
             }
-            this.SaveSession();
+            if (currentSession) {
+                this.SaveSession();
+            }
         },
 
         SetTheme(themeName: string): void {
