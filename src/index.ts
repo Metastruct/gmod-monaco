@@ -2,7 +2,6 @@ import * as monaco from "monaco-editor";
 import * as lua from "./lua";
 import { GLuaFormatter } from "./formatter";
 import { GLuaCompletionProvider } from "./completionProvider";
-import { GLuaQuickFixActionProvider } from "./quickFixActionProvider";
 import { gmodInterface } from "./gmodInterface";
 import { ThemeLoader } from "./themeLoader";
 import { LoadAutocompletionData } from "./glua/Gwiki";
@@ -28,10 +27,6 @@ monaco.languages.registerCompletionItemProvider(
     new GLuaCompletionProvider()
 );
 monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
-monaco.languages.registerCodeActionProvider(
-    "glua",
-    new GLuaQuickFixActionProvider()
-);
 
 const editor = monaco.editor.create(
     document.getElementById("container")!,
@@ -51,15 +46,15 @@ const editor = monaco.editor.create(
     },
     {
         storageService: {
-            get() {},
+            get() { },
             getBoolean(key: string) {
                 if (key === "expandSuggestionDocs") return true;
                 return false;
             },
-            remove() {},
-            store() {},
-            onWillSaveState() {},
-            onDidChangeStorage() {},
+            remove() { },
+            store() { },
+            onWillSaveState() { },
+            onDidChangeStorage() { },
         },
     }
 );
