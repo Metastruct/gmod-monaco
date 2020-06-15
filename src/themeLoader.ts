@@ -1,7 +1,10 @@
 import * as monaco from "monaco-editor";
 
 export class ThemeLoader {
+    private loadedThemes: Array<string> = [];
+
     async loadThemes(): Promise<void> {
+        this.loadedThemes = [];
         try {
             let data = (await import("../themes/themelist.json")) as Object;
             let themeNames: string[] = Object.values(data);
@@ -12,10 +15,15 @@ export class ThemeLoader {
                     .replace(/(\s|_)/g, "-")
                     .replace(/(\(|\))/g, "")
                     .toLowerCase();
+                this.loadedThemes.push(name);
                 monaco.editor.defineTheme(name, themeData);
             }
         } catch (err) {
             console.warn("Could not load custom themes?!: ", err);
         }
+    }
+
+    getLoadedThemes(): Array<string> {
+        return this.loadedThemes;
     }
 }

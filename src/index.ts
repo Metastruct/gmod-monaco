@@ -46,15 +46,15 @@ const editor = monaco.editor.create(
     },
     {
         storageService: {
-            get() { },
+            get() {},
             getBoolean(key: string) {
                 if (key === "expandSuggestionDocs") return true;
                 return false;
             },
-            remove() { },
-            store() { },
-            onWillSaveState() { },
-            onDidChangeStorage() { },
+            remove() {},
+            store() {},
+            onWillSaveState() {},
+            onDidChangeStorage() {},
         },
     }
 );
@@ -66,6 +66,7 @@ window.addEventListener("resize", () => editor.layout());
 // this prevents any loading order issue
 themePromise.finally(() => {
     if (gmodInterface) {
+        gmodInterface.GetThemes = themeLoader.getLoadedThemes;
         gmodInterface.SetEditor(editor);
         gmodInterface.OnReady();
     } else {
