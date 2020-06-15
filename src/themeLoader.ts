@@ -1,10 +1,10 @@
 import * as monaco from "monaco-editor";
 
 export class ThemeLoader {
-    private loadedThemes: string[] = [];
+    private loadedThemes: string[] = ["vs-dark"];
 
     async loadThemes(): Promise<void> {
-        this.loadedThemes = [];
+        this.loadedThemes = ["vs-dark"];
         try {
             let data = (await import("../themes/themelist.json")) as Object;
             let themeNames: string[] = Object.values(data);
