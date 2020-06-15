@@ -66,7 +66,7 @@ window.addEventListener("resize", () => editor.layout());
 // this prevents any loading order issue
 themePromise.finally(() => {
     if (gmodInterface) {
-        gmodInterface.GetThemes = themeLoader.getLoadedThemes;
+        gmodInterface.OnThemesLoaded(themeLoader.getLoadedThemes());
         gmodInterface.SetEditor(editor);
         gmodInterface.OnReady();
     } else {

@@ -1,7 +1,7 @@
 import * as monaco from "monaco-editor";
 
 export class ThemeLoader {
-    private loadedThemes: Array<string> = [];
+    private loadedThemes: string[] = [];
 
     async loadThemes(): Promise<void> {
         this.loadedThemes = [];
@@ -23,7 +23,7 @@ export class ThemeLoader {
         }
     }
 
-    getLoadedThemes(): Array<string> {
+    getLoadedThemes(): string[] {
         return this.loadedThemes;
     }
 }
