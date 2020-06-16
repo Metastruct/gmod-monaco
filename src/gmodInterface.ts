@@ -27,6 +27,7 @@ interface ExtendedGmodInterface extends GmodInterface {
     SetEditor(editor: monaco.editor.IStandaloneCodeEditor): void;
     SetCode(code: string): void;
     SetTheme(themeName: string): void;
+    SetLanguage(langId: string): void;
     GotoLine(line: number): void;
     SubmitLuaReport(report: LuaReport): void;
     SaveSession(): void;
@@ -116,6 +117,10 @@ if (globalThis.gmodinterface) {
 
         SetTheme(themeName: string): void {
             monaco.editor.setTheme(themeName);
+        },
+
+        SetLanguage(langId: string): void {
+            monaco.editor.setModelLanguage(this.editor!.getModel()!, langId);
         },
 
         GotoLine(lineNumber: number): void {
