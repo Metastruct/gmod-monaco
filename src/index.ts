@@ -67,6 +67,9 @@ window.addEventListener("resize", () => editor.layout());
 themePromise.finally(() => {
     if (gmodInterface) {
         gmodInterface.OnThemesLoaded(themeLoader.getLoadedThemes());
+        gmodInterface.OnLanguages(
+            monaco.languages.getLanguages().map((lang) => lang.id)
+        );
         gmodInterface.SetEditor(editor);
         gmodInterface.OnReady();
     } else {
