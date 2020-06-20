@@ -20,6 +20,7 @@ interface GmodInterface {
     OnAction(actionId: string): void;
     OnSessions(sessions: object[]): void;
     OnThemesLoaded(themes: string[]): void;
+    OnLanguages(langs: string[]): void;
 }
 
 interface ExtendedGmodInterface extends GmodInterface {
