@@ -94,7 +94,13 @@ monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
 
 themePromise.finally(() => {
     if (replInterface) {
-        replInterface.SetEditors(editor, line);
+        // Im sorry for this hack but for some reason widgets are now lazy loading
+        let haxInterval = setInterval(() => {
+            if (replHax()) {
+                clearInterval(haxInterval);
+                replInterface!.SetEditors(editor, line);
+            }
+        }, 100);
         replInterface.OnReady();
     }
 });
@@ -108,37 +114,44 @@ line._standaloneKeybindingService
     )[0].resolvedKeybinding._parts[0].keyCode = 0;
 // @ts-ignore
 line._standaloneKeybindingService.updateResolver();
-// @ts-ignore
-const widget = line._contentWidgets["editor.widget.suggestWidget"].widget;
-const OLDshowSuggestions = widget.showSuggestions.bind(widget);
-// Hacking to invert the order and select the last line
-// @ts-ignore
-widget.showSuggestions = (...args) => {
-    OLDshowSuggestions(...args);
-    widget.selectLast();
-    if (!widget.completionModel || widget.completionModel.hacked) {
-        return;
-    }
-    const oldFn = widget.completionModel._snippetCompareFn;
+function replHax(): boolean {
     // @ts-ignore
-    widget.completionModel._snippetCompareFn = (...cmpArgs) => {
-        return -oldFn(...cmpArgs);
+    const widgetContainer = line._contentWidgets["editor.widget.suggestWidget"];
+    if (widgetContainer === undefined) {
+        return false;
+    }
+    const widget = widgetContainer.widget;
+    const OLDshowSuggestions = widget.showSuggestions.bind(widget);
+    // Hacking to invert the order and select the last line
+    // @ts-ignore
+    widget.showSuggestions = (...args) => {
+        OLDshowSuggestions(...args);
+        widget.selectLast();
+        if (!widget.completionModel || widget.completionModel.hacked) {
+            return;
+        }
+        const oldFn = widget.completionModel._snippetCompareFn;
+        // @ts-ignore
+        widget.completionModel._snippetCompareFn = (...cmpArgs) => {
+            return -oldFn(...cmpArgs);
+        };
+        widget.completionModel.hacked = true;
     };
-    widget.completionModel.hacked = true;
-};
-const elem = widget.element;
-// Force the popup widget to have this style cus monaco updates the style all the time
-const widgetStyle =
-    "position: fixed; visibility: inherit; max-width: 1162px; line-height: 19px; bottom: 26px;";
-const observer = new MutationObserver(() => {
-    const oldLeft = elem.style.left;
-    if (!oldLeft) {
-        return;
-    }
-    // A hack to keep the left atribute while changing everything else
-    const newStyle = `${widgetStyle} left: ${oldLeft};`;
-    if (elem.style.cssText !== newStyle) {
-        elem.style.cssText = widgetStyle;
-    }
-});
-observer.observe(elem, { attributes: true });
+    const elem = widget.element;
+    // Force the popup widget to have this style cus monaco updates the style all the time
+    const widgetStyle =
+        "position: fixed; visibility: inherit; max-width: 1162px; line-height: 19px; bottom: 26px;";
+    const observer = new MutationObserver(() => {
+        const oldLeft = elem.style.left;
+        if (!oldLeft) {
+            return;
+        }
+        // A hack to keep the left atribute while changing everything else
+        const newStyle = `${widgetStyle} left: ${oldLeft};`;
+        if (elem.style.cssText !== newStyle) {
+            elem.style.cssText = widgetStyle;
+        }
+    });
+    observer.observe(elem, { attributes: true });
+    return true;
+}
