@@ -20,7 +20,7 @@ interface GmodInterface {
     OnAction(actionId: string): void;
     OnSessions(sessions: object[]): void;
     OnThemesLoaded(themes: string[]): void;
-    OnLanguages(langs: string[]): void;
+    OnLanguages(langs: string[], populatedLangs: monaco.languages.ILanguageExtensionPoint[]): void;
 }
 
 interface ExtendedGmodInterface extends GmodInterface {

@@ -67,8 +67,11 @@ window.addEventListener("resize", () => editor.layout());
 themePromise.finally(() => {
     if (gmodInterface) {
         gmodInterface.OnThemesLoaded(themeLoader.getLoadedThemes());
+        let langs = monaco.languages.getLanguages();
+        // Sending populated objects after strings so nothing breaks
         gmodInterface.OnLanguages(
-            monaco.languages.getLanguages().map((lang) => lang.id)
+            langs.map((lang) => lang.id),
+            langs
         );
         gmodInterface.SetEditor(editor);
         gmodInterface.OnReady();
