@@ -80,9 +80,18 @@ function addEnum(jsonOBJ: any) {
 export let gwikiData: any[];
 
 export async function FetchGwiki() {
-    gwikiData = await (
-        await fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
-    ).json();
+    try {
+        // For prod, shoud work on github pages
+        // better to use relative path since we cant rely on static hostames anymore (thanks CORS)
+        gwikiData = await (
+            await fetch("/gmod-wiki-scraper/gwiki.json")
+        ).json();
+    } catch (_) {
+        // For local development
+        gwikiData = await (
+            await fetch("https://metastruct.eu/gmod-wiki-scraper/gwiki.json")
+        ).json();
+    }
 }
 
 export async function LoadAutocompletionData(currentState: string) {
