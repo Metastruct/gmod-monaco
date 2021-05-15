@@ -97,14 +97,14 @@ monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
 
 themePromise.finally(() => {
     if (replInterface) {
+        replInterface!.SetEditors(editor, line);
+        replInterface!.OnReady();
         // Im sorry for this hack but for some reason widgets are now lazy loading
         let haxInterval = setInterval(() => {
             if (replHax()) {
                 clearInterval(haxInterval);
-                replInterface!.SetEditors(editor, line);
             }
         }, 100);
-        replInterface.OnReady();
     }
 });
 
@@ -140,6 +140,7 @@ function replHax(): boolean {
         };
         widget._completionModel.hacked = true;
     };
+    replInterface!.SetWidget(widget);
     const elem = widget.element.domNode;
     // Force the popup widget to have this style cus monaco updates the style all the time
     const widgetStyle =

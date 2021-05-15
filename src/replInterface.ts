@@ -22,10 +22,13 @@ interface ExtendedReplInterface extends ReplInterface {
     replHistory: string[];
     replHistoryIndex: number;
     replCounter: number;
+    suggestWidget?: any;
+
     SetEditors(
         editor: monaco.editor.IStandaloneCodeEditor,
         line: monaco.editor.IStandaloneCodeEditor
     ): void;
+    SetWidget(widget: object): void;
     AddText(text: string): void;
     Clear(): void;
     Reset(): void;
@@ -85,13 +88,10 @@ if (globalThis.replinterface) {
                     }
                 }
             });
-            const widget =
-                // @ts-ignore
-                line._contentWidgets["editor.widget.suggestWidget"].widget._widget;
             line.onKeyDown((event: monaco.IKeyboardEvent) => {
                 let prevent = true;
                 if (
-                    widget._state !== 0 &&
+                    (!this.suggestWidget || this.suggestWidget._state !== 0) &&
                     event.keyCode !== monaco.KeyCode.Enter
                 ) {
                     return;
@@ -180,6 +180,9 @@ if (globalThis.replinterface) {
             };
 
             FetchGwiki();
+        },
+        SetWidget(widget: object): void {
+            this.suggestWidget = widget;
         },
         AddText(text: string): void {
             this.editor!.updateOptions({

@@ -1,6 +1,9 @@
 name: Build and Deploy GitHub Pages
 
-on: [push]
+on:
+    push:
+        branches:
+            - master
 
 jobs:
     build:
