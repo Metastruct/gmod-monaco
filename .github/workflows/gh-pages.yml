@@ -9,7 +9,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Use Node.js 13
+            - name: Use Node.js 14.15.1
               uses: actions/setup-node@v1
               with:
                   node-version: "14.15.1"
