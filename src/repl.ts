@@ -23,15 +23,18 @@ monaco.languages.registerDocumentFormattingEditProvider(
 
 const storageService = {
     // tslint:disable: no-empty
-    get() {},
+    get() { },
     getBoolean(key: string) {
         if (key === "expandSuggestionDocs") return true;
         return false;
     },
-    remove() {},
-    store() {},
-    onWillSaveState() {},
-    onDidChangeStorage() {},
+    getNumber(key: string) {
+        return 0;
+    },
+    remove() { },
+    store() { },
+    onWillSaveState() { },
+    onDidChangeStorage() { },
     // tslint:enable: no-empty
 };
 
@@ -120,27 +123,27 @@ function replHax(): boolean {
     if (widgetContainer === undefined) {
         return false;
     }
-    const widget = widgetContainer.widget;
+    const widget = widgetContainer.widget._widget;
     const OLDshowSuggestions = widget.showSuggestions.bind(widget);
     // Hacking to invert the order and select the last line
     // @ts-ignore
     widget.showSuggestions = (...args) => {
         OLDshowSuggestions(...args);
         widget.selectLast();
-        if (!widget.completionModel || widget.completionModel.hacked) {
+        if (!widget._completionModel || widget._completionModel.hacked) {
             return;
         }
-        const oldFn = widget.completionModel._snippetCompareFn;
+        const oldFn = widget._completionModel._snippetCompareFn;
         // @ts-ignore
-        widget.completionModel._snippetCompareFn = (...cmpArgs) => {
+        widget._completionModel._snippetCompareFn = (...cmpArgs) => {
             return -oldFn(...cmpArgs);
         };
-        widget.completionModel.hacked = true;
+        widget._completionModel.hacked = true;
     };
-    const elem = widget.element;
+    const elem = widget.element.domNode;
     // Force the popup widget to have this style cus monaco updates the style all the time
     const widgetStyle =
-        "position: fixed; visibility: inherit; max-width: 1162px; line-height: 19px; bottom: 26px;";
+        "background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69); width: 430px; position: fixed; visibility: inherit; max-width: 1162px; line-height: 19px; bottom: 26px;";
     const observer = new MutationObserver(() => {
         const oldLeft = elem.style.left;
         if (!oldLeft) {

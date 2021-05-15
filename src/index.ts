@@ -46,15 +46,18 @@ const editor = monaco.editor.create(
     },
     {
         storageService: {
-            get() {},
+            get() { },
             getBoolean(key: string) {
                 if (key === "expandSuggestionDocs") return true;
                 return false;
             },
-            remove() {},
-            store() {},
-            onWillSaveState() {},
-            onDidChangeStorage() {},
+            getNumber(key: string) {
+                return 0;
+            },
+            remove() { },
+            store() { },
+            onWillSaveState() { },
+            onDidChangeStorage() { },
         },
     }
 );

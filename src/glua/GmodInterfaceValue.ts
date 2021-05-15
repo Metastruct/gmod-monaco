@@ -10,12 +10,11 @@ export class GmodInterfaceValue extends GluaItem {
     parent?: string;
     constructor(jsonObj: object) {
         super(jsonObj);
-        if (!name) {
-            this.name = `${
-                this.classFunction
+        if (!this.name) {
+            this.name = `${this.classFunction
                     ? this.fullname.split(":").pop()
                     : this.fullname
-            }`;
+                }`;
         }
     }
     getUsage(): string {
@@ -28,6 +27,9 @@ export class GmodInterfaceValue extends GluaItem {
         return this.fullname;
     }
     getCompletionKind(): monaco.languages.CompletionItemKind {
+        if (!this.type) {
+            return monaco.languages.CompletionItemKind.Value;
+        }
         return monaco.languages.CompletionItemKind[this.type];
     }
     generateDocumentation(): monaco.IMarkdownString[] {
