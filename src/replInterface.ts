@@ -70,7 +70,7 @@ if (globalThis.replinterface) {
                 const hoverWidget =
                     // @ts-ignore
                     line._contentWidgets[
-                        "editor.contrib.modesContentHoverWidget"
+                    "editor.contrib.modesContentHoverWidget"
                     ];
                 if (
                     hoverWidget &&
@@ -87,11 +87,11 @@ if (globalThis.replinterface) {
             });
             const widget =
                 // @ts-ignore
-                line._contentWidgets["editor.widget.suggestWidget"].widget;
+                line._contentWidgets["editor.widget.suggestWidget"].widget._widget;
             line.onKeyDown((event: monaco.IKeyboardEvent) => {
                 let prevent = true;
                 if (
-                    widget.state !== 0 &&
+                    widget._state !== 0 &&
                     event.keyCode !== monaco.KeyCode.Enter
                 ) {
                     return;
