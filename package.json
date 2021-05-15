@@ -4,7 +4,7 @@
     "main": "src/index.js",
     "license": "MIT",
     "scripts": {
-        "build": "webpack",
+        "build": "webpack -p",
         "watch": "webpack --watch",
         "dev": "webpack-dev-server"
     },
