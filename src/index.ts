@@ -78,6 +78,7 @@ themePromise.finally(() => {
         );
         gmodInterface.SetEditor(editor);
         gmodInterface.OnReady();
+        LoadAutocompletionData("Client");
     } else {
         // For people viewing page in browser
         LoadAutocompletionData("Client");
