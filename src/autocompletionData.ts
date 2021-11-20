@@ -88,9 +88,9 @@ class AutocompletionData {
                 insertText: func.generateUsageSnippet(),
                 insertTextRules: func.hasArgs()
                     ? monaco.languages.CompletionItemInsertTextRule
-                          .InsertAsSnippet
+                        .InsertAsSnippet
                     : monaco.languages.CompletionItemInsertTextRule
-                          .KeepWhitespace,
+                        .KeepWhitespace,
                 tags:
                     func.description.deprecated !== undefined
                         ? [monaco.languages.CompletionItemTag.Deprecated]
@@ -186,9 +186,9 @@ class AutocompletionData {
                 filterText: method.name,
                 insertTextRules: method.hasArgs()
                     ? monaco.languages.CompletionItemInsertTextRule
-                          .InsertAsSnippet
+                        .InsertAsSnippet
                     : monaco.languages.CompletionItemInsertTextRule
-                          .KeepWhitespace,
+                        .KeepWhitespace,
                 tags:
                     method.description.deprecated !== undefined
                         ? [monaco.languages.CompletionItemTag.Deprecated]
@@ -206,9 +206,9 @@ class AutocompletionData {
                 insertText: hook.generateUsageSnippet(),
                 insertTextRules: hook.hasArgs()
                     ? monaco.languages.CompletionItemInsertTextRule
-                          .InsertAsSnippet
+                        .InsertAsSnippet
                     : monaco.languages.CompletionItemInsertTextRule
-                          .KeepWhitespace,
+                        .KeepWhitespace,
                 tags:
                     hook.description.deprecated !== undefined
                         ? [monaco.languages.CompletionItemTag.Deprecated]
