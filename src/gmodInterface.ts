@@ -363,6 +363,7 @@ if (globalThis.gmodinterface) {
                     autocompletionData.modules.push(table);
                 }
             });
+            autocompletionData.ClearAutocompleteCache();
         },
 
         AddSnippet(name: string, code: string): void {

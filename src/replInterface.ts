@@ -225,6 +225,8 @@ if (globalThis.replinterface) {
         LoadAutocomplete(clData: ClientAutocompleteData): void {
             // Build caches first to avoid duplicates
             autocompletionData.interfaceValues = [];
+            autocompletionData.GenerateMethodsCache();
+            autocompletionData.GenerateGlobalCache();
             const values = clData.values.split("|");
             const funcs = clData.funcs.split("|");
             const tables: string[] = [];
@@ -307,6 +309,7 @@ if (globalThis.replinterface) {
                     autocompletionData.modules.push(table);
                 }
             });
+            autocompletionData.ClearAutocompleteCache();
         },
     };
 
