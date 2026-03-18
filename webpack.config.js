@@ -1,6 +1,5 @@
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
@@ -16,6 +15,7 @@ module.exports = {
         globalObject: "self",
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
+        clean: true,
     },
     module: {
         rules: [
@@ -30,12 +30,42 @@ module.exports = {
             },
             {
                 test: /\.ttf$/,
-                use: ["file-loader"],
+                type: "asset/resource",
             },
         ],
     },
     plugins: [
-        new MonacoWebpackPlugin(),
+        new MonacoWebpackPlugin({
+            // Only include essential features for GLua editor
+            languages: [], // GLua is registered at runtime, no built-in languages needed
+            features: [
+                "bracketMatching",
+                "clipboard",
+                "codeAction",
+                "codelens",
+                "colorPicker",
+                "comment",
+                "contextmenu",
+                "cursorUndo",
+                "find",
+                "folding",
+                "fontZoom",
+                "format",
+                "hover",
+                "indentation",
+                "inlineCompletions",
+                "linesOperations",
+                "links",
+                "multicursor",
+                "parameterHints",
+                "quickCommand",
+                "quickOutline",
+                "smartSelect",
+                "suggest",
+                "wordHighlighter",
+                "wordOperations",
+            ],
+        }),
         new HtmlWebpackPlugin({
             template: "views/index.html",
             chunks: ["index"],
@@ -49,10 +79,15 @@ module.exports = {
 
     devtool: "source-map",
 
+    performance: {
+        // Monaco editor bundles are inherently large
+        hints: false,
+    },
+
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        static: path.join(__dirname, "dist"),
         port: 8080,
         compress: true,
-        disableHostCheck: true,
+        allowedHosts: "all",
     },
 };
