@@ -2,8 +2,15 @@ import * as monaco from "monaco-editor";
 import { LuaReport } from "./luacheckCompat";
 import { EditorSession, EditorSessionObject } from "./editorSession";
 import { GmodInterfaceValue } from "./glua/GmodInterfaceValue";
-import { autocompletionData, ResetAutocomplete } from "./autocompletionData";
-import { LoadAutocompletionData } from "./glua/Gwiki";
+import { autocompletionData } from "./autocompletionData";
+import {
+    AutocompleteRequestContext,
+    DynamicAutocompleteItem,
+} from "./completionProvider";
+import {
+    ClientAutocompleteData,
+    createSharedInterfaceMethods,
+} from "./baseInterface";
 
 declare global {
     namespace globalThis {
@@ -21,10 +28,16 @@ interface GmodInterface {
     OnSessions(sessions: object[]): void;
     OnThemesLoaded(themes: string[]): void;
     OnLanguages(langs: string[], populatedLangs: monaco.languages.ILanguageExtensionPoint[]): void;
+    /** Called when Monaco requests dynamic autocomplete items */
+    OnAutocompleteRequest?(context: AutocompleteRequestContext, requestId: number): void;
 }
 
 interface ExtendedGmodInterface extends GmodInterface {
     editor?: monaco.editor.IStandaloneCodeEditor;
+    /** Pending dynamic autocomplete callbacks by request ID */
+    _autocompleteCallbacks?: Map<number, (items: DynamicAutocompleteItem[]) => void>;
+    /** Counter for autocomplete request IDs */
+    _autocompleteRequestId?: number;
     SetEditor(editor: monaco.editor.IStandaloneCodeEditor): void;
     SetCode(code: string): void;
     SetTheme(themeName: string): void;
@@ -47,15 +60,18 @@ interface ExtendedGmodInterface extends GmodInterface {
     LoadAutocompleteState(state: string): Promise<void>;
     ResetAutocompletion(): void;
     GetSessions(): void;
+    /** Enable dynamic autocomplete - Gmod must implement OnAutocompleteRequest */
+    EnableDynamicAutocomplete(timeoutMs?: number): void;
+    /** Disable dynamic autocomplete */
+    DisableDynamicAutocomplete(): void;
+    /** Called by Gmod to provide autocomplete items for a request */
+    ProvideAutocompleteItems(requestId: number, items: DynamicAutocompleteItem[]): void;
+    /** Setup link opener for editor - from shared mixin */
+    setupLinkOpener(editor: monaco.editor.IStandaloneCodeEditor): void;
 }
 
 let currentSession: EditorSession | undefined;
 export const sessions: Map<string, EditorSession> = new Map();
-
-interface ClientAutocompleteData {
-    values: string; // Array of global non-table concatenated by '|'
-    funcs: string; // Same as above but global functions and object methods
-}
 
 interface Snippet {
     name: string;
@@ -69,19 +85,58 @@ interface EditorAction {
     contextMenuGroup: string;
 }
 
+/**
+ * Parse a keybinding string like "Mod.CtrlCmd | Key.KeyS" into a Monaco keybinding number
+ */
+function parseKeybinding(keybindingStr: string): number {
+    let result = 0;
+
+    // Split by | and trim each part
+    const parts = keybindingStr.split("|").map((p) => p.trim());
+
+    for (const part of parts) {
+        if (part.startsWith("Mod.")) {
+            const modName = part.substring(4); // Remove "Mod."
+            const mod = (monaco.KeyMod as unknown as Record<string, number>)[modName];
+            if (mod !== undefined) {
+                result |= mod;
+            } else {
+                console.warn(`[parseKeybinding] Unknown modifier: ${modName}`);
+            }
+        } else if (part.startsWith("Key.")) {
+            const keyName = part.substring(4); // Remove "Key."
+            const key = (monaco.KeyCode as unknown as Record<string, number>)[keyName];
+            if (key !== undefined) {
+                result |= key;
+            } else {
+                console.warn(`[parseKeybinding] Unknown key: ${keyName}`);
+            }
+        } else {
+            console.warn(`[parseKeybinding] Invalid keybinding part: ${part}`);
+        }
+    }
+
+    return result;
+}
+
+// Browser testing snippets - uncomment to enable testing in browser
 // globalThis.gmodinterface = {
-//     OnReady: console.log,
-//     OnCode: console.log,
-//     OpenURL: console.log,
-//     OnSessionSet: console.log,
-//     OnAction: console.log,
-//     OnSessions: console.log,
+//     OnReady: () => console.log("[OnReady] Editor interface ready"),
+//     OnCode: (code: string, versionId: number) => console.log("[OnCode]", { versionId, length: code.length }),
+//     OpenURL: (url: string) => { console.log("[OpenURL]", url); window.open(url, "_blank"); },
+//     OnSessionSet: (session: object) => console.log("[OnSessionSet]", session),
+//     OnAction: (actionId: string) => console.log("[OnAction]", actionId),
+//     OnSessions: (sessions: object[]) => console.log("[OnSessions]", sessions),
+//     OnThemesLoaded: (themes: string[]) => console.log("[OnThemesLoaded]", themes),
+//     OnLanguages: (langs: string[], populated: monaco.languages.ILanguageExtensionPoint[]) =>
+//         console.log("[OnLanguages]", { langs, populated }),
 // };
 
 let maybeGmodInterface: ExtendedGmodInterface | undefined;
 if (globalThis.gmodinterface) {
     maybeGmodInterface = {
         ...globalThis.gmodinterface,
+        ...createSharedInterfaceMethods(),
 
         SetEditor(editor: monaco.editor.IStandaloneCodeEditor): void {
             this.editor = editor;
@@ -94,12 +149,7 @@ if (globalThis.gmodinterface) {
                     editor.getModel()!.getAlternativeVersionId()
                 );
             });
-            // @ts-ignore
-            editor.getContribution("editor.linkDetector").openerService.open = (
-                url: string
-            ) => {
-                this.OpenURL(url);
-            };
+            this.setupLinkOpener(editor);
         },
 
         SetCode(code: string, keepViewState: boolean = false): void {
@@ -273,99 +323,6 @@ if (globalThis.gmodinterface) {
             });
         },
 
-        // This function will load all the client autocomplete stuff
-        // See ClientAutocompleteData for input format
-        LoadAutocomplete(clData: ClientAutocompleteData): void {
-            // Build caches first to avoid duplicates
-            autocompletionData.interfaceValues = [];
-            autocompletionData.GenerateMethodsCache();
-            autocompletionData.GenerateGlobalCache();
-            const values = clData.values.split("|");
-            const funcs = clData.funcs.split("|");
-            const tables: string[] = [];
-            values.forEach((value: string) => {
-                let name = value;
-                if (value.indexOf(".") !== -1) {
-                    const split = value.split(".");
-                    name = split.pop()!;
-                    const tableName = split.join(".");
-                    if (tables.indexOf(tableName) === -1) {
-                        tables.push(tableName);
-                    }
-                }
-                if (!autocompletionData.valuesLookup.has(value)) {
-                    autocompletionData.AddNewInterfaceValue(
-                        new GmodInterfaceValue({
-                            name,
-                            fullname: value,
-                        })
-                    );
-                }
-            });
-            funcs.forEach((func: string) => {
-                let name = func;
-                let classFunction = false;
-                let type = "Function";
-                let parent = undefined;
-                if (func.indexOf(".") !== -1) {
-                    const split = func.split(".");
-                    name = split.pop()!;
-                    const tableName = split.join(".");
-                    if (tables.indexOf(tableName) === -1) {
-                        tables.push(tableName);
-                    }
-                } else if (func.indexOf(":") !== -1) {
-                    const split = func.split(":");
-                    parent = split[1];
-                    name = split.pop()!;
-                    classFunction = true;
-                    type = "Method";
-                }
-                if (classFunction) {
-                    if (autocompletionData.methodsLookup.has(name)) {
-                        let found = false;
-                        autocompletionData.methodsLookup
-                            .get(name)
-                            ?.forEach((method) => {
-                                if (method.getFullName() == func) {
-                                    found = true;
-                                }
-                            });
-                        if (found) {
-                            return;
-                        }
-                    }
-                    autocompletionData.AddNewInterfaceValue(
-                        new GmodInterfaceValue({
-                            name,
-                            parent,
-                            fullname: func,
-                            classFunction,
-                            type,
-                        })
-                    );
-                } else {
-                    if (!autocompletionData.valuesLookup.has(func)) {
-                        autocompletionData.AddNewInterfaceValue(
-                            new GmodInterfaceValue({
-                                name,
-                                parent,
-                                fullname: func,
-                                classFunction,
-                                type,
-                            })
-                        );
-                    }
-                }
-            });
-            tables.forEach((table) => {
-                if (autocompletionData.modules.indexOf(table) === -1) {
-                    autocompletionData.modules.push(table);
-                }
-            });
-            autocompletionData.ClearAutocompleteCache();
-        },
-
         AddSnippet(name: string, code: string): void {
             autocompletionData.snippets.push({
                 name,
@@ -386,6 +343,10 @@ if (globalThis.gmodinterface) {
 
         AddAction(action: EditorAction): void {
             // {id: "Test", label: "Test", keyBindings: ["Mod.CtrlCmd | Key.F2"]}
+            if (!action.label) {
+                console.warn("[AddAction] Skipping action without label:", action);
+                return;
+            }
             const newAction: monaco.editor.IActionDescriptor = {
                 id: action.id,
                 label: action.label,
@@ -396,26 +357,14 @@ if (globalThis.gmodinterface) {
                 },
             };
             if (action.keyBindings) {
-                action.keyBindings.forEach((obj: string) => {
-                    obj = obj.replace(/Mod\./g, "monaco.KeyMod.");
-                    obj = obj.replace(/Key\./g, "monaco.KeyCode.");
-                    // Not the best way to do it, but im too lazy
-                    newAction.keybindings!.push(eval(obj));
+                action.keyBindings.forEach((binding: string) => {
+                    const parsed = parseKeybinding(binding);
+                    if (parsed !== 0) {
+                        newAction.keybindings!.push(parsed);
+                    }
                 });
             }
             this.editor!.addAction(newAction);
-        },
-
-        LoadAutocompleteState(state: string): Promise<void> {
-            return new Promise<void>(function (resolve, reject) {
-                LoadAutocompletionData(state).then(() => {
-                    autocompletionData.ClearAutocompleteCache();
-                    resolve();
-                });
-            });
-        },
-        ResetAutocompletion(): void {
-            ResetAutocomplete();
         },
 
         GetSessions(): void {

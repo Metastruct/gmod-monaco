@@ -67,6 +67,7 @@ function addEnum(jsonOBJ: any) {
             return;
         }
         const enumObj = new GluaEnum(element);
+        if (!enumObj.key) return;
         if (autocompletionData.valuesLookup.has(enumObj.key)) {
             // Avoid enum duplicates
             return;
@@ -89,7 +90,7 @@ export async function FetchGwiki() {
     } catch (_) {
         // For local development
         gwikiData = await (
-            await fetch("https://metastruct.eu/gmod-wiki-scraper/gwiki.json")
+            await fetch("https://metastruct.github.io/gmod-wiki-scraper/gwiki.json")
         ).json();
     }
 }
@@ -111,7 +112,7 @@ export async function LoadAutocompletionData(currentState: string) {
             PreprocessGWikiElem(funcElem, elem);
             const func = new GluaFunc(funcElem);
             autocompletionData.valuesLookup.set(func.getFullName(), func);
-            if (autocompletionData.modules.indexOf(func.parent) === -1) {
+            if (func.parent && autocompletionData.modules.indexOf(func.parent) === -1) {
                 autocompletionData.modules.push(func.parent);
             }
             if (func.type === "classfunc" || func.type === "panelfunc") {
