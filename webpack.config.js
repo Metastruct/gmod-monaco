@@ -18,8 +18,9 @@ module.exports = {
         type: "filesystem",
     },
     entry: {
-        index: ["./src/polyfills.ts", "./src/index.ts"],
-        repl: ["./src/polyfills.ts", "./src/repl.ts"],
+        polyfills: "./src/polyfills.ts",
+        index: { import: "./src/index.ts", dependOn: "polyfills" },
+        repl: { import: "./src/repl.ts", dependOn: "polyfills" },
     },
     resolve: {
         extensions: [".ts", ".js"],
@@ -144,12 +145,14 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "views/index.html",
-            chunks: ["index"],
+            chunks: ["polyfills", "index"],
+            chunksSortMode: "manual",
         }),
         new HtmlWebpackPlugin({
             filename: "repl.html",
             template: "views/repl.html",
-            chunks: ["repl"],
+            chunks: ["polyfills", "repl"],
+            chunksSortMode: "manual",
         }),
     ],
 
