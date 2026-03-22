@@ -12,16 +12,19 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+
             - name: Use Node.js 22
               uses: actions/setup-node@v4
               with:
                   node-version: "22"
-                  cache: "yarn"
+                  cache: "pnpm"
 
             - name: Build
               run: |
-                  yarn
-                  yarn build
+                  pnpm install
+                  pnpm build
               env:
                   CI: true
 
