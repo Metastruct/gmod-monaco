@@ -4,12 +4,19 @@ const path = require("path");
 
 module.exports = {
     mode: "production",
+    cache: {
+        type: "filesystem",
+    },
     entry: {
         index: "./src/index.ts",
         repl: "./src/repl.ts",
     },
     resolve: {
         extensions: [".ts", ".js"],
+        fallback: {
+            path: false,
+            fs: false,
+        },
     },
     output: {
         globalObject: "self",
@@ -21,7 +28,10 @@ module.exports = {
         rules: [
             {
                 test: /\.ts?$/,
-                use: "ts-loader",
+                loader: "esbuild-loader",
+                options: {
+                    target: "es2022",
+                },
                 exclude: /node_modules/,
             },
             {

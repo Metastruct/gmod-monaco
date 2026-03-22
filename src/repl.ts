@@ -1,3 +1,4 @@
+import "./browserFallback"; // Must be first - sets up mock interface if browser mode enabled
 import * as monaco from "monaco-editor";
 import * as lua from "./lua";
 import { GLuaFormatter } from "./formatter";
@@ -5,6 +6,7 @@ import { GLuaCompletionProvider } from "./completionProvider";
 import { GLuaHoverProvider } from "./hoverProvider";
 import { ThemeLoader } from "./themeLoader";
 import { replInterface } from "./replInterface";
+import "./browserTestUtils"; // Exposes testUtils to window for browser testing
 
 const themeLoader: ThemeLoader = new ThemeLoader();
 const themePromise: Promise<void> = themeLoader.loadThemes();
@@ -96,6 +98,19 @@ line.addAction({
     run: () => {
         editor.focus();
         editor.trigger("keyboard", "actions.find", null);
+    },
+});
+
+line.addAction({
+    id: "reverse-history-search",
+    label: "Reverse History Search",
+    keybindings: [monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyR],
+    run: () => {
+        if (replInterface?.searchMode) {
+            replInterface.ExitSearchMode(true);
+        } else {
+            replInterface?.EnterSearchMode();
+        }
     },
 });
 

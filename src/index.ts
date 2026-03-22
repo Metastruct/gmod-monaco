@@ -1,3 +1,4 @@
+import "./browserFallback"; // Must be first - sets up mock interface if browser mode enabled
 import * as monaco from "monaco-editor";
 import * as lua from "./lua";
 import { GLuaFormatter } from "./formatter";
@@ -6,6 +7,7 @@ import { gmodInterface } from "./gmodInterface";
 import { ThemeLoader } from "./themeLoader";
 import { LoadAutocompletionData } from "./glua/Gwiki";
 import { GLuaHoverProvider } from "./hoverProvider";
+import "./browserTestUtils"; // Exposes testUtils to window for browser testing
 
 const themeLoader: ThemeLoader = new ThemeLoader();
 const themePromise: Promise<void> = themeLoader.loadThemes();
