@@ -80,164 +80,133 @@ class AutocompletionData {
     GenerateGlobalCache() {
         this.globalCache = [];
         autocompletionData.functions.forEach((func: GluaFunc) => {
-            const item = {
+            if (!func?.isValid()) return;
+            this.globalCache.push({
                 label: func.getFullName(),
                 kind: monaco.languages.CompletionItemKind.Function,
                 detail: func.getDetail(),
                 documentation: func.getSuggestDocumentation(),
                 insertText: func.generateUsageSnippet(),
                 insertTextRules: func.hasArgs()
-                    ? monaco.languages.CompletionItemInsertTextRule
-                        .InsertAsSnippet
-                    : monaco.languages.CompletionItemInsertTextRule
-                        .KeepWhitespace,
-                tags:
-                    func.description.deprecated !== undefined
-                        ? [monaco.languages.CompletionItemTag.Deprecated]
-                        : [],
+                    ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                    : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
+                tags: func.description?.deprecated !== undefined
+                    ? [monaco.languages.CompletionItemTag.Deprecated]
+                    : [],
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.globalCache.push(item);
+            });
         });
         autocompletionData.enums.forEach((enumObj: GluaEnum) => {
-            const item = {
+            if (!enumObj?.key) return;
+            this.globalCache.push({
                 label: enumObj.key,
                 kind: monaco.languages.CompletionItemKind.Enum,
-                detail: `Value: ${enumObj.value}`,
-                documentation: enumObj.getDetail(),
+                detail: `Value: ${enumObj.value ?? ""}`,
+                documentation: enumObj.getDetail?.() ?? "",
                 insertText: enumObj.key,
-                insertTextRules:
-                    monaco.languages.CompletionItemInsertTextRule
-                        .KeepWhitespace,
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.globalCache.push(item);
+            });
         });
         autocompletionData.snippets.forEach((snippet) => {
-            const item = {
+            if (!snippet?.name) return;
+            this.globalCache.push({
                 label: snippet.name,
                 kind: monaco.languages.CompletionItemKind.Snippet,
-                insertText: snippet.code,
-                insertTextRules:
-                    monaco.languages.CompletionItemInsertTextRule
-                        .InsertAsSnippet,
+                insertText: snippet.code ?? "",
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.globalCache.push(item);
+            });
         });
         autocompletionData.constants.forEach((constant) => {
-            const item = {
+            this.globalCache.push({
                 label: constant,
                 kind: monaco.languages.CompletionItemKind.Constant,
                 insertText: constant,
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.globalCache.push(item);
+            });
         });
         autocompletionData.keywords.forEach((keyword) => {
-            const item = {
+            this.globalCache.push({
                 label: keyword,
                 kind: monaco.languages.CompletionItemKind.Keyword,
                 insertText: keyword,
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.globalCache.push(item);
+            });
         });
         autocompletionData.modules.forEach((moduleName: string) => {
-            const item = {
+            if (!moduleName) return;
+            this.globalCache.push({
                 label: moduleName,
                 kind: monaco.languages.CompletionItemKind.Module,
                 insertText: moduleName,
-                insertTextRules:
-                    monaco.languages.CompletionItemInsertTextRule
-                        .KeepWhitespace,
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.globalCache.push(item);
+            });
         });
-        autocompletionData.interfaceValues.forEach(
-            (interfaceValue: GmodInterfaceValue) => {
-                if (interfaceValue.classFunction) {
-                    return;
-                }
-                const item = {
-                    label: interfaceValue.fullname,
-                    kind: interfaceValue.getCompletionKind(),
-                    documentation: interfaceValue.description,
-                    insertText: interfaceValue.getUsage(),
-                    insertTextRules:
-                        monaco.languages.CompletionItemInsertTextRule
-                            .KeepWhitespace,
-                    range: new monaco.Range(0, 0, 0, 0),
-                };
-                this.globalCache.push(item);
-            }
-        );
+        autocompletionData.interfaceValues.forEach((interfaceValue: GmodInterfaceValue) => {
+            if (!interfaceValue?.fullname || interfaceValue.classFunction) return;
+            this.globalCache.push({
+                label: interfaceValue.fullname,
+                kind: interfaceValue.getCompletionKind?.() ?? monaco.languages.CompletionItemKind.Variable,
+                documentation: interfaceValue.description ?? "",
+                insertText: interfaceValue.getUsage?.() ?? interfaceValue.fullname,
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
+                range: new monaco.Range(0, 0, 0, 0),
+            });
+        });
     }
     GenerateMethodsCache() {
         autocompletionData.classmethods.forEach((method: GluaFunc) => {
-            const item = {
+            if (!method?.isValid()) return;
+            this.methodsCache.push({
                 label: method.getFullName(),
                 kind: monaco.languages.CompletionItemKind.Method,
                 detail: method.getDetail(),
                 documentation: method.getSuggestDocumentation(),
                 insertText: method.generateUsageSnippet(),
-                sortText: method.name,
-                filterText: method.name,
+                sortText: method.name ?? "",
+                filterText: method.name ?? "",
                 insertTextRules: method.hasArgs()
-                    ? monaco.languages.CompletionItemInsertTextRule
-                        .InsertAsSnippet
-                    : monaco.languages.CompletionItemInsertTextRule
-                        .KeepWhitespace,
-                tags:
-                    method.description.deprecated !== undefined
-                        ? [monaco.languages.CompletionItemTag.Deprecated]
-                        : [],
+                    ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                    : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
+                tags: method.description?.deprecated !== undefined
+                    ? [monaco.languages.CompletionItemTag.Deprecated]
+                    : [],
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.methodsCache.push(item);
+            });
         });
         autocompletionData.hooks.forEach((hook: GluaFunc) => {
-            const item = {
+            if (!hook?.isValid()) return;
+            this.methodsCache.push({
                 label: hook.getFullName(),
                 kind: monaco.languages.CompletionItemKind.Event,
                 detail: hook.getDetail(),
                 documentation: hook.getSuggestDocumentation(),
                 insertText: hook.generateUsageSnippet(),
                 insertTextRules: hook.hasArgs()
-                    ? monaco.languages.CompletionItemInsertTextRule
-                        .InsertAsSnippet
-                    : monaco.languages.CompletionItemInsertTextRule
-                        .KeepWhitespace,
-                tags:
-                    hook.description.deprecated !== undefined
-                        ? [monaco.languages.CompletionItemTag.Deprecated]
-                        : [],
+                    ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                    : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
+                tags: hook.description?.deprecated !== undefined
+                    ? [monaco.languages.CompletionItemTag.Deprecated]
+                    : [],
                 range: new monaco.Range(0, 0, 0, 0),
-            };
-            this.methodsCache.push(item);
+            });
         });
-        autocompletionData.interfaceValues.forEach(
-            (interfaceValue: GmodInterfaceValue) => {
-                if (!interfaceValue.classFunction) {
-                    return;
-                }
-                const item = {
-                    label: interfaceValue.fullname,
-                    kind: interfaceValue.getCompletionKind(),
-                    detail: "Clientside value",
-                    documentation: interfaceValue.description,
-                    insertText: interfaceValue.getUsage(),
-                    sortText: interfaceValue.name,
-                    filterText: interfaceValue.name,
-                    insertTextRules:
-                        monaco.languages.CompletionItemInsertTextRule
-                            .KeepWhitespace,
-                    range: new monaco.Range(0, 0, 0, 0),
-                };
-                this.methodsCache.push(item);
-            }
-        );
+        autocompletionData.interfaceValues.forEach((interfaceValue: GmodInterfaceValue) => {
+            if (!interfaceValue?.fullname || !interfaceValue.classFunction) return;
+            this.methodsCache.push({
+                label: interfaceValue.fullname,
+                kind: interfaceValue.getCompletionKind?.() ?? monaco.languages.CompletionItemKind.Method,
+                detail: "Clientside value",
+                documentation: interfaceValue.description ?? "",
+                insertText: interfaceValue.getUsage?.() ?? interfaceValue.fullname,
+                sortText: interfaceValue.name ?? "",
+                filterText: interfaceValue.name ?? "",
+                insertTextRules: monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
+                range: new monaco.Range(0, 0, 0, 0),
+            });
+        });
     }
     updateCacheRange(
         cache: monaco.languages.CompletionItem[],
@@ -265,28 +234,21 @@ class AutocompletionData {
             suggestions: this.methodsCache,
         };
     }
-    hookAutocomplete(
-        range: monaco.IRange,
-        addQuotes: boolean
-    ): monaco.languages.CompletionList {
+    hookAutocomplete(range: monaco.IRange, addQuotes: boolean): monaco.languages.CompletionList {
         const hookSuggestions: monaco.languages.CompletionItem[] = [];
         autocompletionData.hooks.forEach((hook: GluaFunc) => {
-            if (hook.parent !== "GM") {
-                return;
-            }
-            const item = {
-                label: `"${hook.name}"`,
+            if (!hook?.isValid() || hook.parent !== "GM") return;
+            const hookName = hook.name ?? "";
+            hookSuggestions.push({
+                label: `"${hookName}"`,
                 kind: monaco.languages.CompletionItemKind.Event,
                 detail: hook.generateUsageText(),
-                documentation: hook.description.text,
-                insertText: addQuotes ? `"${hook.name}"` : hook.name,
+                documentation: hook.description?.text ?? "",
+                insertText: addQuotes ? `"${hookName}"` : hookName,
                 range,
-            };
-            hookSuggestions.push(item);
+            });
         });
-        return {
-            suggestions: hookSuggestions,
-        };
+        return { suggestions: hookSuggestions };
     }
     AddNewInterfaceValue(val: GmodInterfaceValue) {
         if (!val.fullname) {

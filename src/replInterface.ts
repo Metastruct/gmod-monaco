@@ -1,8 +1,13 @@
 import * as monaco from "monaco-editor";
-import * as lua from "./lua";
-import { LoadAutocompletionData, FetchGwiki } from "./glua/Gwiki";
-import { autocompletionData, ResetAutocomplete } from "./autocompletionData";
-import { GmodInterfaceValue } from "./glua/GmodInterfaceValue";
+import { FetchGwiki } from "./glua/Gwiki";
+import {
+    AutocompleteRequestContext,
+    DynamicAutocompleteItem,
+} from "./completionProvider";
+import {
+    ClientAutocompleteData,
+    createSharedInterfaceMethods,
+} from "./baseInterface";
 
 declare global {
     namespace globalThis {
@@ -13,6 +18,8 @@ interface ReplInterface {
     OnReady(): void;
     OnCode(code: string): void;
     OpenURL(url: string): void;
+    /** Called when Monaco requests dynamic autocomplete items */
+    OnAutocompleteRequest?(context: AutocompleteRequestContext, requestId: number): void;
 }
 
 interface ExtendedReplInterface extends ReplInterface {
@@ -23,6 +30,12 @@ interface ExtendedReplInterface extends ReplInterface {
     replHistoryIndex: number;
     replCounter: number;
     suggestWidget?: any;
+    searchMode: boolean;
+    searchModePrevValue: string;
+    /** Pending dynamic autocomplete callbacks by request ID */
+    _autocompleteCallbacks?: Map<number, (items: DynamicAutocompleteItem[]) => void>;
+    /** Counter for autocomplete request IDs */
+    _autocompleteRequestId?: number;
 
     SetEditors(
         editor: monaco.editor.IStandaloneCodeEditor,
@@ -35,29 +48,47 @@ interface ExtendedReplInterface extends ReplInterface {
     LoadAutocompleteState(state: string): Promise<void>;
     ResetAutocompletion(): void;
     LoadAutocomplete(clData: ClientAutocompleteData): void;
+    EnterSearchMode(): void;
+    ExitSearchMode(restoreValue: boolean): void;
+    SetHistory(entries: string[]): void;
+    AddHistory(entry: string): void;
+    /** Enable dynamic autocomplete - Gmod must implement OnAutocompleteRequest */
+    EnableDynamicAutocomplete(timeoutMs?: number): void;
+    /** Disable dynamic autocomplete */
+    DisableDynamicAutocomplete(): void;
+    /** Called by Gmod to provide autocomplete items for a request */
+    ProvideAutocompleteItems(requestId: number, items: DynamicAutocompleteItem[]): void;
+    /** Setup link opener for editor - from shared mixin */
+    setupLinkOpener(editor: monaco.editor.IStandaloneCodeEditor): void;
 }
 
-interface ClientAutocompleteData {
-    values: string; // Array of global non-table concatenated by '|'
-    funcs: string; // Same as above but global functions and object methods
-}
-
-// I use this for debugging in browser
+// Browser testing snippets - uncomment to enable testing in browser
 // globalThis.replinterface = {
-//     OpenURL: console.log,
-//     OnReady: console.log,
-//     OnCode: console.log,
+//     OpenURL: (url: string) => { console.log("[OpenURL]", url); window.open(url, "_blank"); },
+//     OnReady: () => console.log("[OnReady] REPL interface ready"),
+//     OnCode: (code: string) => {
+//         console.log("[OnCode]", code);
+//         // Simulate execution result
+//         setTimeout(() => {
+//             if (globalThis.replinterface && "AddText" in globalThis.replinterface) {
+//                 (globalThis.replinterface as ExtendedReplInterface).AddText(`> ${code}\n= [result]`);
+//             }
+//         }, 100);
+//     },
 // };
 
 let maybeReplInterface: ExtendedReplInterface | undefined;
 if (globalThis.replinterface) {
     maybeReplInterface = {
         ...globalThis.replinterface,
+        ...createSharedInterfaceMethods(),
 
         replLines: new Map<number, number>(),
         replHistory: [],
         replHistoryIndex: 0,
         replCounter: 0,
+        searchMode: false,
+        searchModePrevValue: "",
 
         SetEditors(
             editor: monaco.editor.IStandaloneCodeEditor,
@@ -87,8 +118,26 @@ if (globalThis.replinterface) {
                         style.top = null;
                     }
                 }
+                if (this.searchMode) {
+                    setTimeout(() => {
+                        if (this.suggestWidget && this.suggestWidget._state === 0) {
+                            // Only exit if user has typed something and then suggestions closed
+                            // Don't exit when line is empty (just entered search mode)
+                            if (line.getValue().length > 0) {
+                                this.ExitSearchMode(false);
+                            }
+                        } else {
+                            line.trigger("search", "editor.action.triggerSuggest", {});
+                        }
+                    }, 0);
+                }
             });
             line.onKeyDown((event: monaco.IKeyboardEvent) => {
+                if (this.searchMode) {
+                    if (event.keyCode === monaco.KeyCode.UpArrow || event.keyCode === monaco.KeyCode.DownArrow) {
+                        return;
+                    }
+                }
                 let prevent = true;
                 if (
                     (!this.suggestWidget || this.suggestWidget._state !== 0) &&
@@ -99,6 +148,14 @@ if (globalThis.replinterface) {
                 let histStr;
                 switch (event.keyCode) {
                     case monaco.KeyCode.Enter:
+                        if (this.searchMode) {
+                            // Accept the highlighted suggestion if widget is open
+                            if (this.suggestWidget && this.suggestWidget._state !== 0) {
+                                line.trigger("keyboard", "acceptSelectedSuggestion", {});
+                            }
+                            this.ExitSearchMode(false);
+                            break;
+                        }
                         const code = line.getValue();
                         if (code.trim() === "") {
                             prevent = true;
@@ -172,12 +229,7 @@ if (globalThis.replinterface) {
                     this.Clear();
                 },
             });
-            // @ts-ignore
-            editor.getContribution("editor.linkDetector").openerService.open = (
-                url: string
-            ) => {
-                this.OpenURL(url);
-            };
+            this.setupLinkOpener(editor);
 
             FetchGwiki();
         },
@@ -209,107 +261,33 @@ if (globalThis.replinterface) {
             this.replCounter = 0;
             this.Clear();
         },
-        LoadAutocompleteState(state: string): Promise<void> {
-            return new Promise<void>(function (resolve, reject) {
-                LoadAutocompletionData(state).then(() => {
-                    autocompletionData.ClearAutocompleteCache();
-                    resolve();
-                });
-            });
+        EnterSearchMode(): void {
+            if (this.searchMode) return;
+            this.searchMode = true;
+            this.searchModePrevValue = this.line!.getValue();
+            document.getElementById("input-prompt")!.textContent = "search>";
+            this.line!.setValue("");
+            this.line!.focus();
+            setTimeout(() => {
+                this.line!.trigger("search", "editor.action.triggerSuggest", {});
+            }, 0);
         },
-        ResetAutocompletion(): void {
-            ResetAutocomplete();
+        ExitSearchMode(restoreValue: boolean): void {
+            if (!this.searchMode) return;
+            this.searchMode = false;
+            document.getElementById("input-prompt")!.textContent = "lua>";
+            if (restoreValue) {
+                this.line!.setValue(this.searchModePrevValue);
+                const len = this.searchModePrevValue.length;
+                this.line!.setPosition(new monaco.Position(1, len + 1));
+            }
+            this.replHistoryIndex = 0;
         },
-        // This function will load all the client autocomplete stuff
-        // See ClientAutocompleteData for input format
-        LoadAutocomplete(clData: ClientAutocompleteData): void {
-            // Build caches first to avoid duplicates
-            autocompletionData.interfaceValues = [];
-            autocompletionData.GenerateMethodsCache();
-            autocompletionData.GenerateGlobalCache();
-            const values = clData.values.split("|");
-            const funcs = clData.funcs.split("|");
-            const tables: string[] = [];
-            values.forEach((value: string) => {
-                let name = value;
-                if (value.indexOf(".") !== -1) {
-                    const split = value.split(".");
-                    name = split.pop()!;
-                    const tableName = split.join(".");
-                    if (tables.indexOf(tableName) === -1) {
-                        tables.push(tableName);
-                    }
-                }
-                if (!autocompletionData.valuesLookup.has(value)) {
-                    autocompletionData.AddNewInterfaceValue(
-                        new GmodInterfaceValue({
-                            name,
-                            fullname: value,
-                        })
-                    );
-                }
-            });
-            funcs.forEach((func: string) => {
-                let name = func;
-                let classFunction = false;
-                let type = "Function";
-                let parent = undefined;
-                if (func.indexOf(".") !== -1) {
-                    const split = func.split(".");
-                    name = split.pop()!;
-                    const tableName = split.join(".");
-                    if (tables.indexOf(tableName) === -1) {
-                        tables.push(tableName);
-                    }
-                } else if (func.indexOf(":") !== -1) {
-                    const split = func.split(":");
-                    parent = split[1];
-                    name = split.pop()!;
-                    classFunction = true;
-                    type = "Method";
-                }
-                if (classFunction) {
-                    if (autocompletionData.methodsLookup.has(name)) {
-                        let found = false;
-                        autocompletionData.methodsLookup
-                            .get(name)
-                            ?.forEach((method) => {
-                                if (method.getFullName() == func) {
-                                    found = true;
-                                }
-                            });
-                        if (found) {
-                            return;
-                        }
-                    }
-                    autocompletionData.AddNewInterfaceValue(
-                        new GmodInterfaceValue({
-                            name,
-                            parent,
-                            fullname: func,
-                            classFunction,
-                            type,
-                        })
-                    );
-                } else {
-                    if (!autocompletionData.valuesLookup.has(func)) {
-                        autocompletionData.AddNewInterfaceValue(
-                            new GmodInterfaceValue({
-                                name,
-                                fullname: func,
-                                classFunction,
-                                type,
-                            })
-                        );
-                    }
-                }
-            });
-            tables.forEach((table) => {
-                if (autocompletionData.modules.indexOf(table) === -1) {
-                    autocompletionData.modules.push(table);
-                }
-            });
-            autocompletionData.ClearAutocompleteCache();
+        SetHistory(entries: string[]): void {
+            this.replHistory = entries;
+        },
+        AddHistory(entry: string): void {
+            this.replHistory.unshift(entry);
         },
     };
 
