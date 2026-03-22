@@ -1,76 +1,85 @@
-import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
+import * as monaco from "monaco-editor";
 import { GluaItem } from "./GluaItem";
 
 export class GluaFunc extends GluaItem {
-    name!: string;
-    parent!: string;
-    type!: string;
-    description!: {
+    declare name: string;
+    declare parent: string;
+    declare type: string;
+    declare description: {
         text: string;
         internal?: string;
         deprecated?: string;
     };
-    realm!: string;
-    file?: { text: string; line: string };
-    args!: {
+    declare realm: string;
+    declare file: { text: string; line: string } | undefined;
+    declare args: {
         text: string;
         name: string;
         type: string;
         default?: string;
     }[];
-    rets!: {
+    declare rets: {
         text: string;
         name: string;
         type: string;
     }[];
-    example!: {
+    declare example: {
         description: string;
         code: string;
         output: string;
     }[];
-    realms!: string[];
-    objType!: string;
+    declare realms: string[];
+    declare objType: string;
     constructor(jsonObj: object) {
         super(jsonObj);
     }
+    isValid(): boolean {
+        return typeof this.name === "string" && this.name.length > 0;
+    }
     hasArgs(): boolean {
-        return this.args.length !== 0;
+        return this.args?.length > 0;
     }
     getDetail(): string {
+        const desc = this.description ?? { text: "" };
         return (
             `${
-                this.description.deprecated !== undefined ? "[deprecated] " : ""
-            }${this.description.internal !== undefined ? "[internal] " : ""}[${
-                this.realm
-            }] ` + this.description.text.split("\n").shift()
+                desc.deprecated !== undefined ? "[deprecated] " : ""
+            }${desc.internal !== undefined ? "[internal] " : ""}[${
+                this.realm ?? "unknown"
+            }] ` + (desc.text?.split("\n").shift() ?? "")
         );
     }
     getSuggestDocumentation(): string {
-        return this.description.text.split("\n").slice(1).join("\n");
+        return this.description?.text?.split("\n").slice(1).join("\n") ?? "";
     }
     getFullName(): string {
-        if (this.type === "libraryfunc" && this.parent !== "Global") {
-            return `${this.parent}.${this.name}`;
+        const name = this.name ?? "";
+        const parent = this.parent ?? "";
+        if (this.type === "libraryfunc" && parent !== "Global") {
+            return `${parent}.${name}`;
         } else if (this.type === "classfunc" || this.type === "panelfunc") {
-            return `${this.parent}:${this.name}`;
+            return `${parent}:${name}`;
         }
-        return this.name;
+        return name;
     }
 
     generateUsageSnippet(): string {
+        const name = this.name ?? "";
         if (!this.hasArgs()) {
             return `${
                 this.type === "classfunc" ||
                 this.type === "hook" ||
                 this.type === "panelfunc"
-                    ? this.name
+                    ? name
                     : this.getFullName()
             }()`;
         }
         const args: string[] = [];
         this.args.forEach((elem, idx) => {
-            let arg = `${idx + 1}:${elem.type}_${elem.name}`;
-            if (elem.default && elem.default !== "" && elem.default !== "nil") {
+            const elemType = elem?.type ?? "any";
+            const elemName = elem?.name ?? `arg${idx}`;
+            let arg = `${idx + 1}:${elemType}_${elemName}`;
+            if (elem?.default && elem.default !== "" && elem.default !== "nil") {
                 arg += "=" + elem.default;
             }
             args.push("${" + arg + "}");
@@ -79,7 +88,7 @@ export class GluaFunc extends GluaItem {
             this.type === "classfunc" ||
             this.type === "hook" ||
             this.type === "panelfunc"
-                ? this.name
+                ? name
                 : this.getFullName()
         }(${args.join(", ")})`;
     }
@@ -89,8 +98,10 @@ export class GluaFunc extends GluaItem {
         }
         const args: string[] = [];
         this.args.forEach((elem) => {
-            let arg = `(${elem.type})${elem.name}`;
-            if (elem.default && elem.default !== "" && elem.default !== "nil") {
+            const elemType = elem?.type ?? "any";
+            const elemName = elem?.name ?? "arg";
+            let arg = `(${elemType})${elemName}`;
+            if (elem?.default && elem.default !== "" && elem.default !== "nil") {
                 arg += "=" + elem.default;
             }
             args.push(arg);
@@ -98,60 +109,64 @@ export class GluaFunc extends GluaItem {
         return `${this.getFullName()}(${args.join(", ")})`;
     }
     generateDocumentation(): monaco.IMarkdownString[] {
+        const desc = this.description ?? { text: "" };
         const output = [
             { value: `**${this.generateUsageText()}**` },
-            { value: `#### Realm: \`${this.realm}\`` },
+            { value: `#### Realm: \`${this.realm ?? "unknown"}\`` },
             {
                 value: `${
-                    this.description.deprecated !== undefined
-                        ? "### Deprecated\n" + this.description.deprecated
+                    desc.deprecated !== undefined
+                        ? "### Deprecated\n" + desc.deprecated
                         : ""
                 }`,
             },
             {
                 value: `${
-                    this.description.internal !== undefined
-                        ? "### Internal\n" + this.description.internal
+                    desc.internal !== undefined
+                        ? "### Internal\n" + desc.internal
                         : ""
                 }`,
             },
-            { value: `${this.description.text}` },
+            { value: `${desc.text ?? ""}` },
         ];
         if (this.hasArgs()) {
             let result = "## Arguments\n";
             this.args.forEach((arg, idx) => {
-                let argStr = `${idx + 1}. (${arg.type}) ${arg.name}`;
+                const argType = arg?.type ?? "any";
+                const argName = arg?.name ?? `arg${idx}`;
+                const argText = arg?.text ?? "";
+                let argStr = `${idx + 1}. (${argType}) ${argName}`;
                 if (
-                    arg.default &&
+                    arg?.default &&
                     arg.default !== "" &&
                     arg.default !== "nil"
                 ) {
                     argStr += "=" + arg.default;
                 }
-                result += `### ${argStr}\n##### ${arg.text.replace(
+                result += `### ${argStr}\n##### ${argText.replace(
                     "\n",
                     "\n##### "
                 )}\n`;
             });
             output.push({ value: result.trim() });
         }
-        if (this.rets !== undefined && this.rets.length !== 0) {
+        if (this.rets?.length > 0) {
             let result = "## Returns\n";
             this.rets.forEach((ret, idx) => {
-                result += `### ${idx + 1}. ${
-                    ret.type
-                }\n##### ${ret.text.replace("\n", "\n##### ")}\n`;
+                const retType = ret?.type ?? "any";
+                const retText = ret?.text ?? "";
+                result += `### ${idx + 1}. ${retType}\n##### ${retText.replace("\n", "\n##### ")}\n`;
             });
             output.push({ value: result.trim() });
         }
-        if (this.example.length !== 0) {
+        if (this.example?.length > 0) {
             output.push({ value: `## Examples` });
             this.example.forEach((elem, idx) => {
                 output.push({
-                    value: `### Example ${idx + 1}.\n#### ${elem.description}`,
+                    value: `### Example ${idx + 1}.\n#### ${elem?.description ?? ""}`,
                 });
-                output.push({ value: `\`\`\`glua\n${elem.code}\n\`\`\`` });
-                if (elem.output !== "" && elem.output !== undefined) {
+                output.push({ value: `\`\`\`glua\n${elem?.code ?? ""}\n\`\`\`` });
+                if (elem?.output && elem.output !== "") {
                     output.push({ value: `##### Output\n\`${elem.output}\`` });
                 }
             });

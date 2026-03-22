@@ -3,5 +3,8 @@
     "editor.tabSize": 4,
     "typescript.tsdk": "node_modules\\typescript\\lib",
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
