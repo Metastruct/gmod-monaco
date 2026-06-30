@@ -6,7 +6,9 @@ import {
 } from "./completionProvider";
 import {
     ClientAutocompleteData,
+    EditorAction,
     createSharedInterfaceMethods,
+    parseKeybinding,
 } from "./baseInterface";
 
 declare global {
@@ -18,6 +20,7 @@ interface ReplInterface {
     OnReady(): void;
     OnCode(code: string): void;
     OpenURL(url: string): void;
+    OnAction(actionId: string): void;
     /** Called when Monaco requests dynamic autocomplete items */
     OnAutocompleteRequest?(context: AutocompleteRequestContext, requestId: number): void;
 }
@@ -42,6 +45,7 @@ interface ExtendedReplInterface extends ReplInterface {
         line: monaco.editor.IStandaloneCodeEditor
     ): void;
     SetWidget(widget: object): void;
+    AddAction(action: EditorAction): void;
     AddText(text: string): void;
     Clear(): void;
     Reset(): void;
@@ -235,6 +239,32 @@ if (globalThis.replinterface) {
         },
         SetWidget(widget: object): void {
             this.suggestWidget = widget;
+        },
+        AddAction(action: EditorAction): void {
+            if (!action.label) {
+                console.warn("[AddAction] Skipping action without label:", action);
+                return;
+            }
+            const keybindings: number[] = [];
+            if (action.keyBindings) {
+                action.keyBindings.forEach((binding: string) => {
+                    const parsed = parseKeybinding(binding);
+                    if (parsed !== 0) {
+                        keybindings.push(parsed);
+                    }
+                });
+            }
+            const descriptor: monaco.editor.IActionDescriptor = {
+                id: action.id,
+                label: action.label,
+                contextMenuGroupId: action.contextMenuGroup,
+                keybindings,
+                run: () => {
+                    this.OnAction(action.id);
+                },
+            };
+            this.editor!.addAction(descriptor);
+            this.line!.addAction(descriptor);
         },
         AddText(text: string): void {
             this.editor!.updateOptions({

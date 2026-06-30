@@ -9,7 +9,9 @@ import {
 } from "./completionProvider";
 import {
     ClientAutocompleteData,
+    EditorAction,
     createSharedInterfaceMethods,
+    parseKeybinding,
 } from "./baseInterface";
 
 declare global {
@@ -73,50 +75,63 @@ interface ExtendedGmodInterface extends GmodInterface {
 let currentSession: EditorSession | undefined;
 export const sessions: Map<string, EditorSession> = new Map();
 
+// Monaco's WordHighlighter stores its decoration state inside the editor view
+// state. Restoring that state calls WordHighlighter.restore(250), which arms a
+// 250ms delayer. Switching sessions again before it fires disposes/cancels that
+// delayer and rejects its (uncaught) promise with a benign "Canceled" error -
+// this is what surfaces when switching sessions really fast. Word highlights
+// are ephemeral and not worth carrying across a switch, so we drop that
+// contribution's state before restoring: the delayer is never armed and fast
+// switching becomes safe. Cursor and scroll position live elsewhere in the
+// view state and are preserved.
+const WORD_HIGHLIGHTER_CONTRIB_ID = "editor.contrib.wordHighlighter";
+
+function restoreViewStateSafely(
+    editor: monaco.editor.IStandaloneCodeEditor,
+    viewState: monaco.editor.ICodeEditorViewState
+): void {
+    const contributionsState = viewState.contributionsState;
+    if (contributionsState && WORD_HIGHLIGHTER_CONTRIB_ID in contributionsState) {
+        // Shallow clone so the stored session view state isn't mutated.
+        viewState = {
+            ...viewState,
+            contributionsState: { ...contributionsState },
+        };
+        delete viewState.contributionsState[WORD_HIGHLIGHTER_CONTRIB_ID];
+    }
+    editor.restoreViewState(viewState);
+}
+
+// The WordHighlighter also arms a short (50ms) delayer whenever the cursor or
+// selection moves. Swapping the editor model disposes that highlighter, which
+// cancels the pending delayer and rejects its promise with a benign "Canceled"
+// error. Monaco discards that promise without a catch handler, so it surfaces
+// as an unhandled rejection when a session is switched away within that window.
+// Since we are the ones about to trigger the disposal, we attach a no-op catch
+// to the pending promise first so the cancellation is handled, not logged.
+function settlePendingWordHighlight(
+    editor: monaco.editor.IStandaloneCodeEditor
+): void {
+    try {
+        // Reaching into Monaco internals: the public API exposes no way to
+        // observe or drain the highlighter's delayer. Guarded so any internal
+        // change can never break session switching.
+        const contrib = editor.getContribution(
+            WORD_HIGHLIGHTER_CONTRIB_ID
+        ) as unknown as {
+            wordHighlighter?: { runDelayer?: { completionPromise?: Promise<unknown> } };
+        } | null;
+        const completionPromise =
+            contrib?.wordHighlighter?.runDelayer?.completionPromise;
+        completionPromise?.catch(() => {});
+    } catch {
+        // ignore - this is a best-effort suppression of benign cancellation noise
+    }
+}
+
 interface Snippet {
     name: string;
     code: string;
-}
-
-interface EditorAction {
-    id: string;
-    label: string;
-    keyBindings: string[];
-    contextMenuGroup: string;
-}
-
-/**
- * Parse a keybinding string like "Mod.CtrlCmd | Key.KeyS" into a Monaco keybinding number
- */
-function parseKeybinding(keybindingStr: string): number {
-    let result = 0;
-
-    // Split by | and trim each part
-    const parts = keybindingStr.split("|").map((p) => p.trim());
-
-    for (const part of parts) {
-        if (part.startsWith("Mod.")) {
-            const modName = part.substring(4); // Remove "Mod."
-            const mod = (monaco.KeyMod as unknown as Record<string, number>)[modName];
-            if (mod !== undefined) {
-                result |= mod;
-            } else {
-                console.warn(`[parseKeybinding] Unknown modifier: ${modName}`);
-            }
-        } else if (part.startsWith("Key.")) {
-            const keyName = part.substring(4); // Remove "Key."
-            const key = (monaco.KeyCode as unknown as Record<string, number>)[keyName];
-            if (key !== undefined) {
-                result |= key;
-            } else {
-                console.warn(`[parseKeybinding] Unknown key: ${keyName}`);
-            }
-        } else {
-            console.warn(`[parseKeybinding] Invalid keybinding part: ${part}`);
-        }
-    }
-
-    return result;
 }
 
 // Browser testing snippets - uncomment to enable testing in browser
@@ -159,7 +174,7 @@ if (globalThis.gmodinterface) {
             }
             this.editor!.setValue(code);
             if (keepViewState) {
-                this.editor!.restoreViewState(viewState!);
+                restoreViewStateSafely(this.editor!, viewState!);
             }
             if (currentSession) {
                 this.SaveSession();
@@ -240,9 +255,13 @@ if (globalThis.gmodinterface) {
                 this.SaveSession();
             }
             const session = sessions.get(name)!;
+            // Swapping the model disposes the current model's word highlighter;
+            // handle its pending delayer first so fast switches don't leak a
+            // benign "Canceled" rejection to the console.
+            settlePendingWordHighlight(this.editor!);
             this.editor!.setModel(session.model);
             if (session!.viewState) {
-                this.editor!.restoreViewState(session.viewState);
+                restoreViewStateSafely(this.editor!, session.viewState);
             }
             currentSession = session;
             this.OnSessionSet(session.getSerializable());

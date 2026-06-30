@@ -113,8 +113,14 @@ module.exports = {
             path.resolve(__dirname, "src/patches/findSectionHeaders.js")
         ),
         new MonacoWebpackPlugin({
-            // Only include essential features for GLua editor
-            languages: [], // GLua is registered at runtime, no built-in languages needed
+            // We import the full "monaco-editor" entry, so every built-in language
+            // is already bundled. This option only controls which language *workers*
+            // get emitted + registered in MonacoEnvironment's worker map. JSON/CSS/
+            // HTML/TypeScript are the only languages that spin up a web worker; without
+            // their workers, opening such a tab requests an undefined worker URL and
+            // throws "[object Event]". (TypeScript's worker also serves JavaScript.)
+            // GLua and all other languages tokenize on the main thread and need none.
+            languages: ["json", "css", "html", "typescript"],
             features: [
                 "bracketMatching",
                 "clipboard",

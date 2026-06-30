@@ -9,6 +9,7 @@
         "build:dev": "webpack --mode development",
         "watch": "webpack --watch --mode development",
         "dev": "webpack serve --mode development",
+        "serve:prod": "webpack serve --mode production",
         "clean": "rm -rf node_modules/.cache dist",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix"
