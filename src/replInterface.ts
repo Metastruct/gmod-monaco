@@ -5,6 +5,7 @@ import {
     SharedInterfaceMethods,
     createSharedInterfaceMethods,
 } from "./baseInterface";
+import { refreshReplFolding } from "./replFoldingProvider";
 
 declare global {
     namespace globalThis {
@@ -32,6 +33,12 @@ interface ExtendedReplInterface extends ReplInterface, SharedInterfaceMethods {
     replHistory: string[];
     replHistoryIndex: number;
     replCounter: number;
+    /** Finalized folding ranges for completed repl entries (1-based lines). */
+    replFoldRanges: Array<{ start: number; end: number }>;
+    /** Start lines of repl entries still awaiting their answer (FIFO). */
+    replPendingStarts: number[];
+    /** Ids of the current separator decorations in the output editor. */
+    replDecorations: string[];
     suggestWidget?: any;
     searchMode: boolean;
     searchModePrevValue: string;
@@ -44,10 +51,17 @@ interface ExtendedReplInterface extends ReplInterface, SharedInterfaceMethods {
     ): void;
     SetWidget(widget: object): void;
     SetLanguage(langId: string): void;
-    AddText(text: string): void;
+    /**
+     * Append text to the output editor.
+     * @param isReplAnswer when true, this text is the result of a repl input and
+     *   closes the oldest open entry, finalizing its collapsible fold range.
+     *   Loose console output (prints, errors) should omit it.
+     */
+    AddText(text: string, isReplAnswer?: boolean): void;
+    updateReplDecorations(): void;
     Clear(): void;
     Reset(): void;
-    EnterSearchMode(): void;
+    EnterSearchMode(keepValue?: boolean): void;
     ExitSearchMode(restoreValue: boolean): void;
     SetHistory(entries: string[]): void;
     AddHistory(entry: string): void;
@@ -78,6 +92,9 @@ if (globalThis.replinterface) {
         replHistory: [],
         replHistoryIndex: 0,
         replCounter: 0,
+        replFoldRanges: [],
+        replPendingStarts: [],
+        replDecorations: [],
         searchMode: false,
         searchModePrevValue: "",
         prompt: "lua>",
@@ -90,6 +107,18 @@ if (globalThis.replinterface) {
             this.line = line;
             line.onDidChangeModelContent((event) => {
                 const content = line.getValue();
+                // Bash-style "!!" opens history search. The "!!" stays in the
+                // line (the completion provider ignores it when filtering) and
+                // is replaced along with the rest of the line when an entry is
+                // accepted. "!! query" (e.g. pasted whole) also triggers, with
+                // everything after the space used as the search query.
+                if (
+                    !this.searchMode &&
+                    (content === "!!" || content.startsWith("!! "))
+                ) {
+                    this.EnterSearchMode(true);
+                    return;
+                }
                 if (content.indexOf(event.eol) !== -1) {
                     line.setValue(content.replace(/(?:\r\n|\r|\n)/g, " "));
                 }
@@ -154,11 +183,14 @@ if (globalThis.replinterface) {
                             break;
                         }
                         this.AddText(code);
-                        this.replLines.set(
-                            this.editor!.getModel()!.getLineCount() - 1,
-                            this.replCounter
-                        );
+                        const startLine =
+                            this.editor!.getModel()!.getLineCount() - 1;
+                        this.replLines.set(startLine, this.replCounter);
                         this.replCounter++;
+                        // Open an entry; its answer (AddText with isReplAnswer)
+                        // will close it into a collapsible fold range.
+                        this.replPendingStarts.push(startLine);
+                        this.updateReplDecorations();
                         line.setValue("");
                         this.replHistory.unshift(code);
                         this.replHistoryIndex = 0;
@@ -239,7 +271,7 @@ if (globalThis.replinterface) {
                     this.prompt;
             }
         },
-        AddText(text: string): void {
+        AddText(text: string, isReplAnswer: boolean = false): void {
             this.editor!.updateOptions({
                 readOnly: false,
             });
@@ -255,21 +287,66 @@ if (globalThis.replinterface) {
             this.editor!.updateOptions({
                 readOnly: true,
             });
+
+            // An answer closes the oldest open entry, finalizing its fold range.
+            // Loose console output (isReplAnswer omitted/false) is left unfolded,
+            // which also keeps old Lua callers of AddText(text) working unchanged.
+            if (isReplAnswer && this.replPendingStarts.length > 0) {
+                const start = this.replPendingStarts.shift()!;
+                const end = this.editor!.getModel()!.getLineCount() - 1;
+                if (end > start) {
+                    this.replFoldRanges.push({ start, end });
+                }
+            }
+            this.updateReplDecorations();
+            refreshReplFolding();
+        },
+        updateReplDecorations(): void {
+            const model = this.editor!.getModel();
+            if (!model) return;
+            const lineCount = model.getLineCount();
+            const decorations: monaco.editor.IModelDeltaDecoration[] = [];
+            // Draw a separator above the first line of every repl entry.
+            for (const lineNumber of this.replLines.keys()) {
+                if (lineNumber < 1 || lineNumber > lineCount) continue;
+                decorations.push({
+                    range: new monaco.Range(lineNumber, 1, lineNumber, 1),
+                    options: {
+                        isWholeLine: true,
+                        className: "repl-entry-separator",
+                    },
+                });
+            }
+            this.replDecorations = this.editor!.deltaDecorations(
+                this.replDecorations,
+                decorations
+            );
         },
         Clear(): void {
             this.replLines.clear();
+            this.replFoldRanges = [];
+            this.replPendingStarts = [];
             this.editor!.setValue("");
+            this.replDecorations = this.editor!.deltaDecorations(
+                this.replDecorations,
+                []
+            );
+            refreshReplFolding();
         },
         Reset(): void {
             this.replCounter = 0;
             this.Clear();
         },
-        EnterSearchMode(): void {
+        EnterSearchMode(keepValue: boolean = false): void {
             if (this.searchMode) return;
             this.searchMode = true;
-            this.searchModePrevValue = this.line!.getValue();
+            // Restoring the "!!" trigger on cancel would just re-enter search
+            // mode, so the keepValue path restores an empty line instead.
+            this.searchModePrevValue = keepValue ? "" : this.line!.getValue();
             document.getElementById("input-prompt")!.textContent = "search>";
-            this.line!.setValue("");
+            if (!keepValue) {
+                this.line!.setValue("");
+            }
             this.line!.focus();
             setTimeout(() => {
                 this.line!.trigger("search", "editor.action.triggerSuggest", {});

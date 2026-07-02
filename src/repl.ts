@@ -7,6 +7,7 @@ import { GLuaHoverProvider } from "./hoverProvider";
 import { GLuaLinkProvider } from "./gluaLinkProvider";
 import { ThemeLoader } from "./themeLoader";
 import { replInterface } from "./replInterface";
+import { replFoldingProvider } from "./replFoldingProvider";
 import "./browserTestUtils"; // Exposes testUtils to window for browser testing
 
 const themeLoader: ThemeLoader = new ThemeLoader();
@@ -49,6 +50,8 @@ const editor = monaco.editor.create(
         theme: "vs-dark",
         scrollBeyondLastLine: false,
         lineNumbers: "off",
+        folding: true,
+        showFoldingControls: "always",
         minimap: {
             enabled: true,
         },
@@ -80,6 +83,7 @@ const line = monaco.editor.create(
             handleMouseWheel: false,
             horizontal: "hidden",
         },
+        fixedOverflowWidgets: true,
     },
     {
         storageService,
@@ -121,17 +125,16 @@ monaco.languages.registerCompletionItemProvider(
 );
 monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
 monaco.languages.registerLinkProvider("glua", new GLuaLinkProvider());
+// The output editor can switch language (glua/javascript), so register folding
+// for both. The provider itself only returns ranges for the output editor model.
+monaco.languages.registerFoldingRangeProvider("glua", replFoldingProvider);
+monaco.languages.registerFoldingRangeProvider("javascript", replFoldingProvider);
 
 themePromise.finally(() => {
     if (replInterface) {
         replInterface!.SetEditors(editor, line);
         replInterface!.OnReady();
-        // Im sorry for this hack but for some reason widgets are now lazy loading
-        const haxInterval = setInterval(() => {
-            if (replHax()) {
-                clearInterval(haxInterval);
-            }
-        }, 100);
+        setupSuggestWidget();
     }
     // Click prompt label to focus input
     document.getElementById("input-prompt")!.addEventListener("click", () => {
@@ -156,58 +159,58 @@ try {
 } catch (e) {
     console.warn("Failed to disable quick command keybinding:", e);
 }
-function replHax(): boolean {
-    // @ts-expect-error - accessing private Monaco API
-    const widgetContainer = line._contentWidgets?.["editor.widget.suggestWidget"];
-    if (widgetContainer === undefined) {
-        return false;
+// Minimal shapes of the private Monaco suggest APIs the REPL relies on
+interface PrivateCompletionModel {
+    replInverted?: boolean;
+    _snippetCompareFn?: (a: unknown, b: unknown) => number;
+    _refilterKind?: number;
+}
+interface PrivateSuggestWidget {
+    showSuggestions?: (
+        completionModel: PrivateCompletionModel,
+        ...args: unknown[]
+    ) => void;
+    selectLast?: () => boolean;
+}
+interface PrivateSuggestController extends monaco.editor.IEditorContribution {
+    widget?: { value?: PrivateSuggestWidget };
+    forceRenderingAbove?: () => void;
+}
+
+// The REPL input sits at the bottom of the page, so the suggest widget must
+// render above it with the best match at the bottom (closest to the input).
+// Monaco has no public API for list order, so the completion model's compare
+// function is inverted through the suggest controller's internals.
+function setupSuggestWidget(): void {
+    const controller = line.getContribution<PrivateSuggestController>(
+        "editor.contrib.suggestController"
+    );
+    if (!controller?.widget || !controller.forceRenderingAbove) {
+        console.warn("Monaco suggest controller API changed, some REPL features may not work");
+        return;
     }
-    const widget = widgetContainer.widget?._widget ?? widgetContainer.widget;
-    if (!widget) {
-        return false;
-    }
-    if (!widget.showSuggestions || !widget.selectLast) {
+    controller.forceRenderingAbove();
+    // The widget is created lazily; reading .value instantiates it now
+    const widget = controller.widget.value;
+    if (!widget?.showSuggestions || !widget.selectLast) {
         console.warn("Monaco suggest widget API changed, some REPL features may not work");
-        return false;
+        return;
     }
-    const OLDshowSuggestions = widget.showSuggestions.bind(widget);
-    // Hacking to invert the order and select the last line
-    // @ts-expect-error - accessing private Monaco API
-    widget.showSuggestions = (...args) => {
-        OLDshowSuggestions(...args);
-        widget.selectLast();
-        if (!widget._completionModel || widget._completionModel.hacked) {
-            return;
+    const originalShow = widget.showSuggestions.bind(widget);
+    const selectLast = widget.selectLast.bind(widget);
+    widget.showSuggestions = (completionModel, ...args) => {
+        if (completionModel && !completionModel.replInverted) {
+            const compare = completionModel._snippetCompareFn;
+            if (compare) {
+                completionModel._snippetCompareFn = (a, b) => -compare(a, b);
+                // Refilter.All, so the already-sorted items get re-sorted
+                // with the inverted order before the first render
+                completionModel._refilterKind = 1;
+            }
+            completionModel.replInverted = true;
         }
-        const oldFn = widget._completionModel._snippetCompareFn;
-        if (oldFn) {
-            // @ts-expect-error - accessing private Monaco API
-            widget._completionModel._snippetCompareFn = (...cmpArgs) => {
-                return -oldFn(...cmpArgs);
-            };
-        }
-        widget._completionModel.hacked = true;
+        originalShow(completionModel, ...args);
+        selectLast();
     };
     replInterface!.SetWidget(widget);
-    const elem = widget.element?.domNode ?? widget.element;
-    if (!elem) {
-        console.warn("Monaco suggest widget element not found");
-        return true; // Still return true to stop the interval
-    }
-    // Force the popup widget to have this style cus monaco updates the style all the time
-    const widgetStyle =
-        "background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69); width: 430px; position: fixed; visibility: inherit; max-width: 1162px; line-height: 19px; bottom: 29px;";
-    const observer = new MutationObserver(() => {
-        const oldLeft = elem.style.left;
-        if (!oldLeft) {
-            return;
-        }
-        // A hack to keep the left atribute while changing everything else
-        const newStyle = `${widgetStyle} left: ${oldLeft};`;
-        if (elem.style.cssText !== newStyle) {
-            elem.style.cssText = widgetStyle;
-        }
-    });
-    observer.observe(elem, { attributes: true });
-    return true;
 }

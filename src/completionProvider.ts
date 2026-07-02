@@ -144,6 +144,24 @@ export class GLuaCompletionProvider
             lastChar
         );
 
+        // In the line input, also offer previous repl commands. Perfect (prefix)
+        // matches are ranked above the Lua completions.
+        const historyItems = this.getLineHistoryCompletions(model, position);
+        // Keep `incomplete` inherited from the static list (normally false).
+        // Forcing it true makes Monaco rebuild the completion model on every
+        // keystroke, which discards the REPL's inverted-sort hack in repl.ts
+        // (it negates the model's comparator once and relies on the model being
+        // reused/refiltered rather than recreated).
+        const baseCompletions: CompletionList = historyItems.length
+            ? {
+                  suggestions: [
+                      ...staticCompletions.suggestions,
+                      ...historyItems,
+                  ],
+                  incomplete: staticCompletions.incomplete,
+              }
+            : staticCompletions;
+
         // If we have a dynamic provider, request additional completions
         if (dynamicAutocompleteProvider) {
             return this.getCompletionsWithDynamic(
@@ -154,11 +172,11 @@ export class GLuaCompletionProvider
                 fullIdentifier,
                 lastChar,
                 lineUntil,
-                staticCompletions
+                baseCompletions
             );
         }
 
-        return staticCompletions;
+        return baseCompletions;
     }
 
     private getCompletionsWithDynamic(
@@ -339,7 +357,8 @@ export class GLuaCompletionProvider
         model: monaco.editor.ITextModel,
         position: monaco.Position
     ): CompletionList {
-        const query = model.getLineContent(1).toLowerCase();
+        const rawLine = model.getLineContent(1);
+        const query = rawLine.replace(/^!! ?/, "").toLowerCase();
         const fullRange: IRange = {
             startLineNumber: 1,
             endLineNumber: 1,
@@ -359,10 +378,67 @@ export class GLuaCompletionProvider
                 kind: monaco.languages.CompletionItemKind.Text,
                 insertText: entry,
                 range: fullRange,
-                filterText: query || entry,
+                filterText: rawLine || entry,
                 sortText: String(i).padStart(8, "0"),
             });
         }
         return { suggestions, incomplete: true };
+    }
+
+    /**
+     * Repl history entries offered alongside normal completions in the line
+     * input (outside search mode). Each entry replaces the whole line when
+     * accepted. Entries whose text starts with what the user typed ("perfect
+     * matches") are ranked ahead of the Lua completions via a sortText prefix
+     * that sorts before any ordinary label.
+     */
+    private getLineHistoryCompletions(
+        model: monaco.editor.ITextModel,
+        position: monaco.Position
+    ): monaco.languages.CompletionItem[] {
+        if (
+            !replInterface ||
+            replInterface.searchMode ||
+            replInterface.line?.getModel() !== model
+        ) {
+            return [];
+        }
+
+        const typed = model
+            .getLineContent(position.lineNumber)
+            .substring(0, position.column - 1);
+        if (typed.trim() === "") return [];
+        const typedLower = typed.toLowerCase();
+
+        const fullRange: IRange = {
+            startLineNumber: position.lineNumber,
+            endLineNumber: position.lineNumber,
+            startColumn: 1,
+            endColumn: model.getLineMaxColumn(position.lineNumber),
+        };
+
+        const seen = new Set<string>();
+        const suggestions: monaco.languages.CompletionItem[] = [];
+        const history = replInterface.replHistory;
+        for (let i = 0; i < history.length; i++) {
+            const entry = history[i];
+            if (!entry || entry === typed || seen.has(entry)) continue;
+            const entryLower = entry.toLowerCase();
+            if (!entryLower.includes(typedLower)) continue;
+            seen.add(entry);
+            // " " sorts before any ordinary label, so prefix matches beat
+            // the Lua completions; substring-only matches sort just after.
+            const rank = entryLower.startsWith(typedLower) ? "0" : "1";
+            suggestions.push({
+                label: entry,
+                kind: monaco.languages.CompletionItemKind.Text,
+                insertText: entry,
+                range: fullRange,
+                filterText: entry,
+                detail: "history",
+                sortText: ` ${rank}${String(i).padStart(8, "0")}`,
+            });
+        }
+        return suggestions;
     }
 }
