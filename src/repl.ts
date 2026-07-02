@@ -4,6 +4,7 @@ import * as lua from "./lua";
 import { GLuaFormatter } from "./formatter";
 import { GLuaCompletionProvider } from "./completionProvider";
 import { GLuaHoverProvider } from "./hoverProvider";
+import { GLuaLinkProvider } from "./gluaLinkProvider";
 import { ThemeLoader } from "./themeLoader";
 import { replInterface } from "./replInterface";
 import "./browserTestUtils"; // Exposes testUtils to window for browser testing
@@ -119,6 +120,7 @@ monaco.languages.registerCompletionItemProvider(
     new GLuaCompletionProvider()
 );
 monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
+monaco.languages.registerLinkProvider("glua", new GLuaLinkProvider());
 
 themePromise.finally(() => {
     if (replInterface) {

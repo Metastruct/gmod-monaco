@@ -70,6 +70,7 @@ function setupMockReplInterface(): void {
             window.open(url, "_blank");
         },
         OnReady: () => console.log("[Mock] OnReady - REPL interface ready"),
+        OnAction: (actionId: string) => console.log("[Mock] OnAction", actionId),
         OnCode: (code: string) => {
             console.log("[Mock] OnCode", code);
             // Simulate execution result after a short delay

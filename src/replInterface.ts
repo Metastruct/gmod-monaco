@@ -1,14 +1,9 @@
 import * as monaco from "monaco-editor";
 import { FetchGwiki } from "./glua/Gwiki";
 import {
-    AutocompleteRequestContext,
-    DynamicAutocompleteItem,
-} from "./completionProvider";
-import {
-    ClientAutocompleteData,
-    EditorAction,
+    BaseCallbacks,
+    SharedInterfaceMethods,
     createSharedInterfaceMethods,
-    parseKeybinding,
 } from "./baseInterface";
 
 declare global {
@@ -16,16 +11,21 @@ declare global {
         var replinterface: ReplInterface | ExtendedReplInterface | undefined;
     }
 }
-interface ReplInterface {
-    OnReady(): void;
+
+// Prompt label shown before the input line, per editor language. Falls back to
+// "<langId>>" for any language without an explicit entry.
+const LANGUAGE_PROMPTS: Record<string, string> = {
+    glua: "lua>",
+    javascript: "js>",
+};
+function promptForLanguage(langId: string): string {
+    return LANGUAGE_PROMPTS[langId] ?? `${langId}>`;
+}
+interface ReplInterface extends BaseCallbacks {
     OnCode(code: string): void;
-    OpenURL(url: string): void;
-    OnAction(actionId: string): void;
-    /** Called when Monaco requests dynamic autocomplete items */
-    OnAutocompleteRequest?(context: AutocompleteRequestContext, requestId: number): void;
 }
 
-interface ExtendedReplInterface extends ReplInterface {
+interface ExtendedReplInterface extends ReplInterface, SharedInterfaceMethods {
     editor?: monaco.editor.IStandaloneCodeEditor;
     line?: monaco.editor.IStandaloneCodeEditor;
     replLines: Map<number, number>;
@@ -35,35 +35,22 @@ interface ExtendedReplInterface extends ReplInterface {
     suggestWidget?: any;
     searchMode: boolean;
     searchModePrevValue: string;
-    /** Pending dynamic autocomplete callbacks by request ID */
-    _autocompleteCallbacks?: Map<number, (items: DynamicAutocompleteItem[]) => void>;
-    /** Counter for autocomplete request IDs */
-    _autocompleteRequestId?: number;
+    /** Prompt label for the currently active language (e.g. "lua>", "js>") */
+    prompt: string;
 
     SetEditors(
         editor: monaco.editor.IStandaloneCodeEditor,
         line: monaco.editor.IStandaloneCodeEditor
     ): void;
     SetWidget(widget: object): void;
-    AddAction(action: EditorAction): void;
+    SetLanguage(langId: string): void;
     AddText(text: string): void;
     Clear(): void;
     Reset(): void;
-    LoadAutocompleteState(state: string): Promise<void>;
-    ResetAutocompletion(): void;
-    LoadAutocomplete(clData: ClientAutocompleteData): void;
     EnterSearchMode(): void;
     ExitSearchMode(restoreValue: boolean): void;
     SetHistory(entries: string[]): void;
     AddHistory(entry: string): void;
-    /** Enable dynamic autocomplete - Gmod must implement OnAutocompleteRequest */
-    EnableDynamicAutocomplete(timeoutMs?: number): void;
-    /** Disable dynamic autocomplete */
-    DisableDynamicAutocomplete(): void;
-    /** Called by Gmod to provide autocomplete items for a request */
-    ProvideAutocompleteItems(requestId: number, items: DynamicAutocompleteItem[]): void;
-    /** Setup link opener for editor - from shared mixin */
-    setupLinkOpener(editor: monaco.editor.IStandaloneCodeEditor): void;
 }
 
 // Browser testing snippets - uncomment to enable testing in browser
@@ -93,6 +80,7 @@ if (globalThis.replinterface) {
         replCounter: 0,
         searchMode: false,
         searchModePrevValue: "",
+        prompt: "lua>",
 
         SetEditors(
             editor: monaco.editor.IStandaloneCodeEditor,
@@ -240,31 +228,16 @@ if (globalThis.replinterface) {
         SetWidget(widget: object): void {
             this.suggestWidget = widget;
         },
-        AddAction(action: EditorAction): void {
-            if (!action.label) {
-                console.warn("[AddAction] Skipping action without label:", action);
-                return;
+        SetLanguage(langId: string): void {
+            monaco.editor.setModelLanguage(this.editor!.getModel()!, langId);
+            monaco.editor.setModelLanguage(this.line!.getModel()!, langId);
+            this.prompt = promptForLanguage(langId);
+            // Search mode owns the prompt while active; it restores this.prompt
+            // on exit, so only update the visible label when not searching.
+            if (!this.searchMode) {
+                document.getElementById("input-prompt")!.textContent =
+                    this.prompt;
             }
-            const keybindings: number[] = [];
-            if (action.keyBindings) {
-                action.keyBindings.forEach((binding: string) => {
-                    const parsed = parseKeybinding(binding);
-                    if (parsed !== 0) {
-                        keybindings.push(parsed);
-                    }
-                });
-            }
-            const descriptor: monaco.editor.IActionDescriptor = {
-                id: action.id,
-                label: action.label,
-                contextMenuGroupId: action.contextMenuGroup,
-                keybindings,
-                run: () => {
-                    this.OnAction(action.id);
-                },
-            };
-            this.editor!.addAction(descriptor);
-            this.line!.addAction(descriptor);
         },
         AddText(text: string): void {
             this.editor!.updateOptions({
@@ -305,7 +278,7 @@ if (globalThis.replinterface) {
         ExitSearchMode(restoreValue: boolean): void {
             if (!this.searchMode) return;
             this.searchMode = false;
-            document.getElementById("input-prompt")!.textContent = "lua>";
+            document.getElementById("input-prompt")!.textContent = this.prompt;
             if (restoreValue) {
                 this.line!.setValue(this.searchModePrevValue);
                 const len = this.searchModePrevValue.length;
