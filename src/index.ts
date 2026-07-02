@@ -7,6 +7,7 @@ import { gmodInterface } from "./gmodInterface";
 import { ThemeLoader } from "./themeLoader";
 import { LoadAutocompletionData } from "./glua/Gwiki";
 import { GLuaHoverProvider } from "./hoverProvider";
+import { GLuaLinkProvider } from "./gluaLinkProvider";
 import "./browserTestUtils"; // Exposes testUtils to window for browser testing
 
 const themeLoader: ThemeLoader = new ThemeLoader();
@@ -29,6 +30,7 @@ monaco.languages.registerCompletionItemProvider(
     new GLuaCompletionProvider()
 );
 monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
+monaco.languages.registerLinkProvider("glua", new GLuaLinkProvider());
 
 const editor = monaco.editor.create(
     document.getElementById("container")!,

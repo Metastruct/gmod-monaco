@@ -8,6 +8,11 @@ import {
     setDynamicAutocompleteProvider,
     setDynamicAutocompleteTimeout,
 } from "./completionProvider";
+import {
+    setFileExistsChecker,
+    setFileExistsTimeout,
+    clearFileExistsCache,
+} from "./gluaLinkProvider";
 
 export interface ClientAutocompleteData {
     values: string; // Array of global non-table concatenated by '|'
@@ -53,25 +58,71 @@ export function parseKeybinding(keybindingStr: string): number {
     return result;
 }
 
+// Callbacks implemented by the Gmod Lua side, common to the editor and REPL
+// interfaces. OnCode is declared per-interface because its signature differs
+// (the editor passes a versionId along with the code).
+export interface BaseCallbacks {
+    OnReady(): void;
+    OpenURL(url: string): void;
+    OnAction(actionId: string): void;
+    /** Called when Monaco requests dynamic autocomplete items */
+    OnAutocompleteRequest?(context: AutocompleteRequestContext, requestId: number): void;
+    /** Called when Monaco needs to know whether a referenced file exists */
+    OnFileExistsRequest?(path: string, requestId: number): void;
+}
+
 // Interface that both extended interfaces must satisfy for the mixin to work
-export interface BaseInterfaceShape {
+export interface BaseInterfaceShape extends BaseCallbacks {
     editor?: monaco.editor.IStandaloneCodeEditor;
+    /** REPL input line - shared methods also target it when present */
+    line?: monaco.editor.IStandaloneCodeEditor;
     _autocompleteCallbacks?: Map<number, (items: DynamicAutocompleteItem[]) => void>;
     _autocompleteRequestId?: number;
-    OpenURL(url: string): void;
-    OnAutocompleteRequest?(context: AutocompleteRequestContext, requestId: number): void;
+    _fileExistsCallbacks?: Map<number, (exists: boolean) => void>;
+    _fileExistsRequestId?: number;
 }
 
 export function createSharedInterfaceMethods() {
     return {
         _autocompleteCallbacks: undefined as Map<number, (items: DynamicAutocompleteItem[]) => void> | undefined,
         _autocompleteRequestId: undefined as number | undefined,
+        _fileExistsCallbacks: undefined as Map<number, (exists: boolean) => void> | undefined,
+        _fileExistsRequestId: undefined as number | undefined,
 
         setupLinkOpener(this: BaseInterfaceShape, editor: monaco.editor.IStandaloneCodeEditor): void {
             // @ts-ignore
             editor.getContribution("editor.linkDetector").openerService.open = (url: string) => {
                 this.OpenURL(url);
             };
+        },
+
+        AddAction(this: BaseInterfaceShape, action: EditorAction): void {
+            if (!action.label) {
+                console.warn("[AddAction] Skipping action without label:", action);
+                return;
+            }
+            const keybindings: number[] = [];
+            if (action.keyBindings) {
+                action.keyBindings.forEach((binding: string) => {
+                    const parsed = parseKeybinding(binding);
+                    if (parsed !== 0) {
+                        keybindings.push(parsed);
+                    }
+                });
+            }
+            const descriptor: monaco.editor.IActionDescriptor = {
+                id: action.id,
+                label: action.label,
+                contextMenuGroupId: action.contextMenuGroup,
+                keybindings,
+                run: () => {
+                    this.OnAction(action.id);
+                },
+            };
+            // The REPL registers actions on its input line as well
+            [this.editor, this.line].forEach((target) =>
+                target?.addAction(descriptor)
+            );
         },
 
         LoadAutocompleteState(state: string): Promise<void> {
@@ -211,5 +262,50 @@ export function createSharedInterfaceMethods() {
                 callback(items);
             }
         },
+
+        EnableLinkValidation(this: BaseInterfaceShape, timeoutMs?: number): void {
+            if (!this.OnFileExistsRequest) {
+                console.warn("[EnableLinkValidation] OnFileExistsRequest callback not defined");
+                return;
+            }
+            this._fileExistsCallbacks = new Map();
+            this._fileExistsRequestId = 0;
+
+            if (timeoutMs !== undefined) {
+                setFileExistsTimeout(timeoutMs);
+            }
+
+            const self = this;
+            setFileExistsChecker((path, callback) => {
+                const requestId = self._fileExistsRequestId!++;
+                self._fileExistsCallbacks!.set(requestId, callback);
+                self.OnFileExistsRequest!(path, requestId);
+            });
+        },
+
+        DisableLinkValidation(this: BaseInterfaceShape): void {
+            setFileExistsChecker(undefined);
+            this._fileExistsCallbacks?.clear();
+        },
+
+        ProvideFileExists(this: BaseInterfaceShape, requestId: number, exists: boolean): void {
+            const callback = this._fileExistsCallbacks?.get(requestId);
+            if (callback) {
+                this._fileExistsCallbacks!.delete(requestId);
+                callback(exists);
+            }
+        },
+
+        /** Called by Gmod when files were created/deleted and cached answers may be stale */
+        ClearFileExistsCache(): void {
+            clearFileExistsCache();
+        },
     };
 }
+
+/**
+ * Everything createSharedInterfaceMethods provides, derived from the
+ * implementation so the extended interfaces can inherit these declarations
+ * instead of restating them (and drifting).
+ */
+export type SharedInterfaceMethods = ReturnType<typeof createSharedInterfaceMethods>;

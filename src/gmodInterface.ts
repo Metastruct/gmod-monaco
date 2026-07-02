@@ -4,14 +4,9 @@ import { EditorSession, EditorSessionObject } from "./editorSession";
 import { GmodInterfaceValue } from "./glua/GmodInterfaceValue";
 import { autocompletionData } from "./autocompletionData";
 import {
-    AutocompleteRequestContext,
-    DynamicAutocompleteItem,
-} from "./completionProvider";
-import {
-    ClientAutocompleteData,
-    EditorAction,
+    BaseCallbacks,
+    SharedInterfaceMethods,
     createSharedInterfaceMethods,
-    parseKeybinding,
 } from "./baseInterface";
 
 declare global {
@@ -21,25 +16,16 @@ declare global {
     }
 }
 
-interface GmodInterface {
-    OnReady(): void;
+interface GmodInterface extends BaseCallbacks {
     OnCode(code: string, versionId: number): void;
-    OpenURL(url: string): void;
     OnSessionSet(session: object): void;
-    OnAction(actionId: string): void;
     OnSessions(sessions: object[]): void;
     OnThemesLoaded(themes: string[]): void;
     OnLanguages(langs: string[], populatedLangs: monaco.languages.ILanguageExtensionPoint[]): void;
-    /** Called when Monaco requests dynamic autocomplete items */
-    OnAutocompleteRequest?(context: AutocompleteRequestContext, requestId: number): void;
 }
 
-interface ExtendedGmodInterface extends GmodInterface {
+interface ExtendedGmodInterface extends GmodInterface, SharedInterfaceMethods {
     editor?: monaco.editor.IStandaloneCodeEditor;
-    /** Pending dynamic autocomplete callbacks by request ID */
-    _autocompleteCallbacks?: Map<number, (items: DynamicAutocompleteItem[]) => void>;
-    /** Counter for autocomplete request IDs */
-    _autocompleteRequestId?: number;
     SetEditor(editor: monaco.editor.IStandaloneCodeEditor): void;
     SetCode(code: string): void;
     SetTheme(themeName: string): void;
@@ -55,21 +41,9 @@ interface ExtendedGmodInterface extends GmodInterface {
     SetSessionCode(sessionName: string, code: string): void;
     AddAutocompleteValue(value: object): void;
     AddAutocompleteValues(valuesArray: object[]): void;
-    LoadAutocomplete(clData: ClientAutocompleteData): void;
     AddSnippet(name: string, code: string): void;
     LoadSnippets(snippets: { name: string; code: string }[]): void;
-    AddAction(action: EditorAction): void;
-    LoadAutocompleteState(state: string): Promise<void>;
-    ResetAutocompletion(): void;
     GetSessions(): void;
-    /** Enable dynamic autocomplete - Gmod must implement OnAutocompleteRequest */
-    EnableDynamicAutocomplete(timeoutMs?: number): void;
-    /** Disable dynamic autocomplete */
-    DisableDynamicAutocomplete(): void;
-    /** Called by Gmod to provide autocomplete items for a request */
-    ProvideAutocompleteItems(requestId: number, items: DynamicAutocompleteItem[]): void;
-    /** Setup link opener for editor - from shared mixin */
-    setupLinkOpener(editor: monaco.editor.IStandaloneCodeEditor): void;
 }
 
 let currentSession: EditorSession | undefined;
@@ -358,32 +332,6 @@ if (globalThis.gmodinterface) {
                 });
             });
             autocompletionData.ClearGlobalAutocompletionCache();
-        },
-
-        AddAction(action: EditorAction): void {
-            // {id: "Test", label: "Test", keyBindings: ["Mod.CtrlCmd | Key.F2"]}
-            if (!action.label) {
-                console.warn("[AddAction] Skipping action without label:", action);
-                return;
-            }
-            const newAction: monaco.editor.IActionDescriptor = {
-                id: action.id,
-                label: action.label,
-                contextMenuGroupId: action.contextMenuGroup,
-                keybindings: [],
-                run: () => {
-                    this.OnAction(action.id);
-                },
-            };
-            if (action.keyBindings) {
-                action.keyBindings.forEach((binding: string) => {
-                    const parsed = parseKeybinding(binding);
-                    if (parsed !== 0) {
-                        newAction.keybindings!.push(parsed);
-                    }
-                });
-            }
-            this.editor!.addAction(newAction);
         },
 
         GetSessions(): void {
