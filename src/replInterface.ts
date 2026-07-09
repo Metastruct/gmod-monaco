@@ -40,6 +40,8 @@ interface ExtendedReplInterface extends ReplInterface, SharedInterfaceMethods {
     /** Ids of the current separator decorations in the output editor. */
     replDecorations: string[];
     suggestWidget?: any;
+    /** True while the input line is empty; gates the target-cycle Tab action. */
+    replInputEmpty?: monaco.editor.IContextKey<boolean>;
     searchMode: boolean;
     searchModePrevValue: string;
     /** Prompt label for the currently active language (e.g. "lua>", "js>") */
@@ -105,8 +107,13 @@ if (globalThis.replinterface) {
         ): void {
             this.editor = editor;
             this.line = line;
+            this.replInputEmpty = line.createContextKey<boolean>(
+                "replInputEmpty",
+                true
+            );
             line.onDidChangeModelContent((event) => {
                 const content = line.getValue();
+                this.replInputEmpty?.set(content.trim() === "");
                 // Bash-style "!!" opens history search. The "!!" stays in the
                 // line (the completion provider ignores it when filtering) and
                 // is replaced along with the rest of the line when an entry is
