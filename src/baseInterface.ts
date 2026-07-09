@@ -24,6 +24,8 @@ export interface EditorAction {
     label: string;
     keyBindings?: string[];
     contextMenuGroup?: string;
+    /** Monaco context-key expression; the action's keybinding only fires when it holds */
+    precondition?: string;
 }
 
 /**
@@ -115,6 +117,7 @@ export function createSharedInterfaceMethods() {
                 label: action.label,
                 contextMenuGroupId: action.contextMenuGroup,
                 keybindings,
+                precondition: action.precondition,
                 run: () => {
                     this.OnAction(action.id);
                 },
