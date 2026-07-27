@@ -6,6 +6,26 @@ import {
     createSharedInterfaceMethods,
 } from "./baseInterface";
 import { refreshReplFolding } from "./replFoldingProvider";
+import { colorClassName, ReplColor } from "./replColors";
+
+/** Identifier for a foldable reply block. */
+export type ReplId = string | number;
+/**
+ * One argument of AddColoredText: a color (paints following strings), a string
+ * (emitted with the current color), or `false` to reset to default tokenizer
+ * coloring.
+ */
+export type ReplSegment = string | ReplColor | false;
+
+function isReplColor(value: unknown): value is ReplColor {
+    return (
+        typeof value === "object" &&
+        value !== null &&
+        typeof (value as ReplColor).r === "number" &&
+        typeof (value as ReplColor).g === "number" &&
+        typeof (value as ReplColor).b === "number"
+    );
+}
 
 declare global {
     namespace globalThis {
@@ -37,8 +57,12 @@ interface ExtendedReplInterface extends ReplInterface, SharedInterfaceMethods {
     replFoldRanges: Array<{ start: number; end: number }>;
     /** Start lines of repl entries still awaiting their answer (FIFO). */
     replPendingStarts: number[];
+    /** Currently-open id-based reply blocks: id -> stack of 1-based start lines. */
+    replOpenReplies: Map<ReplId, number[]>;
     /** Ids of the current separator decorations in the output editor. */
     replDecorations: string[];
+    /** Ids of inline color decorations from AddColoredText (never rebuilt). */
+    replColorDecorations: string[];
     suggestWidget?: any;
     /** True while the input line is empty; gates the target-cycle Tab action. */
     replInputEmpty?: monaco.editor.IContextKey<boolean>;
@@ -60,6 +84,22 @@ interface ExtendedReplInterface extends ReplInterface, SharedInterfaceMethods {
      *   Loose console output (prints, errors) should omit it.
      */
     AddText(text: string, isReplAnswer?: boolean): void;
+    /**
+     * Append text with per-segment colors, MsgC-style. Arguments are a stream of
+     * colors and strings: a color paints the strings that follow it, and `false`
+     * resets to the default tokenizer coloring. An optional trailing boolean is
+     * isReplAnswer (like AddText): when true it closes the pending repl entry's
+     * fold. Standalone output can also be grouped with BeginReply/EndReply.
+     */
+    AddColoredText(...args: Array<ReplSegment | boolean>): void;
+    /** Close the oldest open repl entry's fold. Internal (shared by Add*Text). */
+    _finalizeReplAnswer(): void;
+    /** Open a collapsible reply block; blocks may nest. */
+    BeginReply(id: ReplId): void;
+    /** Finalize the reply block opened with the given id (unknown id: no-op). */
+    EndReply(id: ReplId): void;
+    /** Insert text at end of output, returning the start position. Internal. */
+    _appendOutput(text: string): monaco.Position;
     updateReplDecorations(): void;
     Clear(): void;
     Reset(): void;
@@ -96,7 +136,9 @@ if (globalThis.replinterface) {
         replCounter: 0,
         replFoldRanges: [],
         replPendingStarts: [],
+        replOpenReplies: new Map<ReplId, number[]>(),
         replDecorations: [],
+        replColorDecorations: [],
         searchMode: false,
         searchModePrevValue: "",
         prompt: "lua>",
@@ -278,11 +320,15 @@ if (globalThis.replinterface) {
                     this.prompt;
             }
         },
-        AddText(text: string, isReplAnswer: boolean = false): void {
+        // Insert text at the end of the output model (with a trailing newline)
+        // and return the 1-based position where the text began. Shared by
+        // AddText and AddColoredText; does not touch folding or decorations.
+        _appendOutput(text: string): monaco.Position {
             this.editor!.updateOptions({
                 readOnly: false,
             });
             const lineCount = this.editor!.getModel()!.getLineCount();
+            const start = new monaco.Position(lineCount, 1);
             this.editor!.executeEdits("repl-AddText", [
                 {
                     forceMoveMarkers: true,
@@ -294,18 +340,142 @@ if (globalThis.replinterface) {
             this.editor!.updateOptions({
                 readOnly: true,
             });
-
-            // An answer closes the oldest open entry, finalizing its fold range.
-            // Loose console output (isReplAnswer omitted/false) is left unfolded,
-            // which also keeps old Lua callers of AddText(text) working unchanged.
-            if (isReplAnswer && this.replPendingStarts.length > 0) {
+            return start;
+        },
+        // Close the oldest open repl entry, finalizing its collapsible fold range
+        // (from the entry's command line down to the just-appended answer). Shared
+        // by AddText and AddColoredText so colored answers fold identically.
+        _finalizeReplAnswer(): void {
+            if (this.replPendingStarts.length > 0) {
                 const start = this.replPendingStarts.shift()!;
                 const end = this.editor!.getModel()!.getLineCount() - 1;
                 if (end > start) {
                     this.replFoldRanges.push({ start, end });
                 }
             }
+        },
+        AddText(text: string, isReplAnswer: boolean = false): void {
+            this._appendOutput(text);
+
+            // An answer closes the oldest open entry, finalizing its fold range.
+            // Loose console output (isReplAnswer omitted/false) is left unfolded,
+            // which also keeps old Lua callers of AddText(text) working unchanged.
+            if (isReplAnswer) this._finalizeReplAnswer();
             this.updateReplDecorations();
+            refreshReplFolding();
+        },
+        AddColoredText(...args: Array<ReplSegment | boolean>): void {
+            // An optional trailing boolean is isReplAnswer (mirrors AddText): when
+            // true it closes the pending entry's fold, exactly like a plain answer.
+            // A trailing `false` is popped too -- it's the default, and a trailing
+            // color-reset segment is a no-op anyway -- so callers can always pass
+            // the flag last without it being mistaken for a color reset.
+            let isReplAnswer = false;
+            if (args.length > 0 && typeof args[args.length - 1] === "boolean") {
+                isReplAnswer = args.pop() as boolean;
+            }
+            const segments = args as ReplSegment[];
+            // Walk the MsgC-style stream: colors set the active color, `false`
+            // resets to default (no decoration), strings are emitted. Build the
+            // full text and, for each colored run, its char offsets into it.
+            let fullText = "";
+            let currentColor: ReplColor | null = null;
+            const runs: Array<{
+                startOffset: number;
+                endOffset: number;
+                color: ReplColor;
+            }> = [];
+            for (const segment of segments) {
+                if (segment === false) {
+                    currentColor = null;
+                } else if (isReplColor(segment)) {
+                    currentColor = segment;
+                } else if (typeof segment === "string") {
+                    if (segment.length === 0) continue;
+                    const startOffset = fullText.length;
+                    fullText += segment;
+                    if (currentColor) {
+                        runs.push({
+                            startOffset,
+                            endOffset: fullText.length,
+                            color: currentColor,
+                        });
+                    }
+                }
+            }
+
+            // A flag-only/color-only call has no text; skip the append so it
+            // doesn't inject a stray blank line (it may still close a fold).
+            if (fullText.length > 0) {
+                const start = this._appendOutput(fullText);
+
+                if (runs.length > 0) {
+                    const model = this.editor!.getModel()!;
+                    const base = model.getOffsetAt(start);
+                    const decorations: monaco.editor.IModelDeltaDecoration[] =
+                        [];
+                    for (const run of runs) {
+                        const className = colorClassName(run.color);
+                        const from = model.getPositionAt(
+                            base + run.startOffset
+                        );
+                        const to = model.getPositionAt(base + run.endOffset);
+                        // One range per line the run covers.
+                        for (
+                            let ln = from.lineNumber;
+                            ln <= to.lineNumber;
+                            ln++
+                        ) {
+                            const startCol =
+                                ln === from.lineNumber ? from.column : 1;
+                            const endCol =
+                                ln === to.lineNumber
+                                    ? to.column
+                                    : model.getLineMaxColumn(ln);
+                            if (endCol > startCol) {
+                                decorations.push({
+                                    range: new monaco.Range(
+                                        ln,
+                                        startCol,
+                                        ln,
+                                        endCol
+                                    ),
+                                    options: { inlineClassName: className },
+                                });
+                            }
+                        }
+                    }
+                    // Append without disturbing the separator decorations, which
+                    // live in their own replDecorations array; Monaco tracks
+                    // these ranges as later output is appended below them.
+                    const ids = this.editor!.deltaDecorations([], decorations);
+                    this.replColorDecorations.push(...ids);
+                }
+            }
+
+            if (isReplAnswer) this._finalizeReplAnswer();
+            this.updateReplDecorations();
+            refreshReplFolding();
+        },
+        BeginReply(id: ReplId): void {
+            // Anchor at the line where the next appended text will start. Blocks
+            // may nest, and the same id may be open more than once at a time, so
+            // starts are kept in a per-id stack (closed LIFO by EndReply).
+            const start = this.editor!.getModel()!.getLineCount();
+            const starts = this.replOpenReplies.get(id);
+            if (starts) starts.push(start);
+            else this.replOpenReplies.set(id, [start]);
+        },
+        EndReply(id: ReplId): void {
+            // LIFO: the most recently opened block with this id closes first.
+            const starts = this.replOpenReplies.get(id);
+            if (!starts || starts.length === 0) return;
+            const start = starts.pop()!;
+            if (starts.length === 0) this.replOpenReplies.delete(id);
+            const end = this.editor!.getModel()!.getLineCount() - 1;
+            if (end > start) {
+                this.replFoldRanges.push({ start, end });
+            }
             refreshReplFolding();
         },
         updateReplDecorations(): void {
@@ -333,9 +503,14 @@ if (globalThis.replinterface) {
             this.replLines.clear();
             this.replFoldRanges = [];
             this.replPendingStarts = [];
+            this.replOpenReplies.clear();
             this.editor!.setValue("");
             this.replDecorations = this.editor!.deltaDecorations(
                 this.replDecorations,
+                []
+            );
+            this.replColorDecorations = this.editor!.deltaDecorations(
+                this.replColorDecorations,
                 []
             );
             refreshReplFolding();
