@@ -5,6 +5,7 @@ import { GLuaFormatter } from "./formatter";
 import { GLuaCompletionProvider } from "./completionProvider";
 import { GLuaHoverProvider } from "./hoverProvider";
 import { GLuaLinkProvider } from "./gluaLinkProvider";
+import { GLuaColorProvider } from "./gluaColorProvider";
 import { ThemeLoader } from "./themeLoader";
 import { replInterface } from "./replInterface";
 import { replFoldingProvider } from "./replFoldingProvider";
@@ -130,6 +131,7 @@ monaco.languages.registerCompletionItemProvider(
 );
 monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
 monaco.languages.registerLinkProvider("glua", new GLuaLinkProvider());
+monaco.languages.registerColorProvider("glua", new GLuaColorProvider());
 // The output editor can switch language (glua/javascript), so register folding
 // for both. The provider itself only returns ranges for the output editor model.
 monaco.languages.registerFoldingRangeProvider("glua", replFoldingProvider);

@@ -8,6 +8,7 @@ import { ThemeLoader } from "./themeLoader";
 import { LoadAutocompletionData } from "./glua/Gwiki";
 import { GLuaHoverProvider } from "./hoverProvider";
 import { GLuaLinkProvider } from "./gluaLinkProvider";
+import { GLuaColorProvider } from "./gluaColorProvider";
 import "./browserTestUtils"; // Exposes testUtils to window for browser testing
 
 const themeLoader: ThemeLoader = new ThemeLoader();
@@ -31,6 +32,7 @@ monaco.languages.registerCompletionItemProvider(
 );
 monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
 monaco.languages.registerLinkProvider("glua", new GLuaLinkProvider());
+monaco.languages.registerColorProvider("glua", new GLuaColorProvider());
 
 const editor = monaco.editor.create(
     document.getElementById("container")!,
