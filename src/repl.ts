@@ -55,6 +55,9 @@ const editor = monaco.editor.create(
         minimap: {
             enabled: true,
         },
+        tabSize: 4,
+        // insertSpaces: true,
+        detectIndentation: true,
         readOnly: true,
     },
     {
@@ -74,7 +77,9 @@ const line = monaco.editor.create(
         acceptSuggestionOnEnter: "off",
         tabCompletion: "off",
         contextmenu: false,
-        tabSize: 2,
+        tabSize: 4,
+        // insertSpaces: true,
+        detectIndentation: true,
         codeLens: false,
         minimap: {
             enabled: false,

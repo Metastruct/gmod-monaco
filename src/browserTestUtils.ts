@@ -416,6 +416,29 @@ export const browserTestUtils = {
     get gmodInterface() {
         return gmodInterface;
     },
+
+    /**
+     * Demo colored REPL output with a nested reply block. Exercises
+     * AddColoredText (MsgC-style: colors paint following strings, `false`
+     * resets to default tokenizer coloring) plus BeginReply/EndReply folding.
+     */
+    demoColoredRepl() {
+        const r = globalThis.replinterface as any;
+        if (!r || !r.AddColoredText) {
+            console.warn("REPL interface not ready");
+            return;
+        }
+        r.BeginReply("outer");
+        r.AddColoredText(
+            { r: 255, g: 80, b: 80 }, "error: ",
+            { r: 200, g: 200, b: 200 }, "bad argument #1\n",
+            false, "print('back to default coloring')\n"
+        );
+        r.BeginReply("inner");
+        r.AddText("  stack traceback line\n");
+        r.EndReply("inner");
+        r.EndReply("outer");
+    },
 };
 
 // Expose to window for browser console access
@@ -481,5 +504,20 @@ if (typeof window !== "undefined") {
  * // Access Monaco KeyCode/KeyMod values
  * console.log(testUtils.KeyCode);  // All key codes
  * console.log(testUtils.KeyMod);   // All modifiers
+ * ```
+ *
+ * === COLORED REPL OUTPUT (repl page only) ===
+ * ```js
+ * // Demo colored output + nested collapsible reply blocks
+ * testUtils.demoColoredRepl();
+ * ```
+ *
+ * ```js
+ * // Raw MsgC-style call: colors paint following strings, false = reset
+ * const r = globalThis.replinterface;
+ * r.BeginReply("x");
+ * r.AddColoredText({r:255,g:80,b:80}, "red ", {r:80,g:160,b:255}, "blue\n",
+ *   false, "print('default tokenizer coloring')\n");
+ * r.EndReply("x");
  * ```
  */

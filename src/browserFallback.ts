@@ -73,12 +73,22 @@ function setupMockReplInterface(): void {
         OnAction: (actionId: string) => console.log("[Mock] OnAction", actionId),
         OnCode: (code: string) => {
             console.log("[Mock] OnCode", code);
-            // Simulate execution result after a short delay
+            // Simulate execution result after a short delay, wrapped in a
+            // collapsible reply block and demoing MsgC-style colored output.
             setTimeout(() => {
                 const repl = globalThis.replinterface as any;
-                if (repl?.AddText) {
+                if (!repl?.AddText) return;
+                if (repl.BeginReply) repl.BeginReply(code);
+                if (repl.AddColoredText) {
+                    repl.AddColoredText(
+                        { r: 120, g: 200, b: 120 }, "= ",
+                        false, `[simulated result for] `,
+                        { r: 200, g: 200, b: 120 }, `${code}\n`
+                    );
+                } else {
                     repl.AddText(`> ${code}\n= [simulated result]`);
                 }
+                if (repl.EndReply) repl.EndReply(code);
             }, 100);
         },
     };
