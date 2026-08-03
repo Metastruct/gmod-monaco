@@ -1,15 +1,18 @@
 import * as monaco from "monaco-editor";
-import { formatText } from "lua-fmt";
 
 export class GLuaFormatter
     implements monaco.languages.DocumentFormattingEditProvider {
     displayName?: string;
 
-    provideDocumentFormattingEdits(
+    // lua-fmt (and its luaparse + diff deps, ~250KB) are only needed when the
+    // user actually formats. Import it lazily so it stays off the first-paint
+    // path and loads as its own chunk on the first format/paste/type.
+    async provideDocumentFormattingEdits(
         model: monaco.editor.ITextModel,
         options: monaco.languages.FormattingOptions,
         token: monaco.CancellationToken
-    ): monaco.languages.ProviderResult<monaco.languages.TextEdit[]> {
+    ): Promise<monaco.languages.TextEdit[]> {
+        const { formatText } = await import("lua-fmt");
         let code: string = model.getValue();
         return [
             {
