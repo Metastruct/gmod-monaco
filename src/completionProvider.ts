@@ -21,6 +21,8 @@ export interface AutocompleteRequestContext {
     fullIdentifier: string;
     /** The character before the current word (".", ":", or empty) */
     lastChar: string;
+    /** Language id of the editor the request came from (e.g. "glua", "sql") */
+    language: string;
     /** Line number in the editor */
     lineNumber: number;
     /** Column position */
@@ -95,8 +97,6 @@ const LOCAL_COMPLETIONS: monaco.languages.CompletionItem[] = [
     },
 ];
 
-const EMPTY_COMPLETIONS: CompletionList = { suggestions: [], incomplete: false };
-
 /**
  * Convert a kind string to Monaco CompletionItemKind.
  * Accepts Monaco CompletionItemKind key names: "Function", "Method", "Variable", "Value", etc.
@@ -108,6 +108,121 @@ function parseCompletionKind(kind?: keyof typeof monaco.languages.CompletionItem
     return monaco.languages.CompletionItemKind[kind] ?? monaco.languages.CompletionItemKind.Value;
 }
 
+/** Range that replaces the current word when a completion is accepted. */
+export function createInsertRange(
+    position: monaco.Position,
+    word: monaco.editor.IWordAtPosition
+): IRange {
+    return {
+        startLineNumber: position.lineNumber,
+        endLineNumber: position.lineNumber,
+        startColumn: word.startColumn,
+        endColumn: word.endColumn,
+    };
+}
+
+/** Convert a Gmod-provided dynamic item into a Monaco completion item. */
+export function convertDynamicItem(
+    item: DynamicAutocompleteItem,
+    range: IRange
+): monaco.languages.CompletionItem {
+    return {
+        label: item.label,
+        kind: parseCompletionKind(item.kind),
+        detail: item.detail,
+        documentation: item.documentation,
+        insertText: item.insertText ?? item.label,
+        insertTextRules: item.isSnippet
+            ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+            : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
+        range,
+        sortText: "~~~" + item.label, // Sort dynamic items after static ones
+    };
+}
+
+/**
+ * Guard against a suggestion whose `label` isn't a non-empty string (undefined,
+ * or a `{label}` object missing `.label`). Monaco's CompletionItem constructor
+ * does `label.toLowerCase()`, so one malformed item throws and takes down the
+ * entire suggest widget. Returns a new list with any such items dropped.
+ */
+export function sanitizeCompletionList(list: CompletionList): CompletionList {
+    return {
+        ...list,
+        suggestions: list.suggestions.filter((s) => {
+            const label =
+                typeof s.label === "string" ? s.label : s.label?.label;
+            return typeof label === "string" && label.length > 0;
+        }),
+    };
+}
+
+/**
+ * Merge live completions from Gmod into a static list. Resolves to the static
+ * list alone if the dynamic provider is unset, times out, or returns nothing.
+ * Language-agnostic: the caller sets `context.language` so Gmod can tailor its
+ * response (Lua globals vs. SQL tables/columns).
+ */
+export function requestDynamicCompletions(
+    context: AutocompleteRequestContext,
+    insertRange: IRange,
+    staticCompletions: CompletionList
+): Promise<CompletionList> {
+    if (!dynamicAutocompleteProvider) {
+        return Promise.resolve(staticCompletions);
+    }
+
+    return new Promise((resolve) => {
+        let resolved = false;
+
+        const timeoutId = setTimeout(() => {
+            if (!resolved) {
+                resolved = true;
+                resolve(staticCompletions);
+            }
+        }, dynamicAutocompleteTimeout);
+
+        dynamicAutocompleteProvider!(context, (items) => {
+            if (resolved) return;
+            resolved = true;
+            clearTimeout(timeoutId);
+
+            if (!items || items.length === 0) {
+                resolve(staticCompletions);
+                return;
+            }
+
+            // Build a set of existing labels for deduplication
+            const existingLabels = new Set<string>();
+            for (const suggestion of staticCompletions.suggestions) {
+                const label = typeof suggestion.label === "string"
+                    ? suggestion.label
+                    : suggestion.label?.label;
+                if (label) existingLabels.add(label);
+            }
+
+            // Filter out duplicates and convert dynamic items. Skip any item
+            // without a non-empty string label -- Monaco's CompletionItem does
+            // label.toLowerCase(), so a malformed item crashes the whole widget.
+            const dynamicSuggestions: monaco.languages.CompletionItem[] = [];
+            for (const item of items) {
+                if (typeof item.label !== "string" || item.label.length === 0) {
+                    continue;
+                }
+                if (!existingLabels.has(item.label)) {
+                    dynamicSuggestions.push(convertDynamicItem(item, insertRange));
+                    existingLabels.add(item.label);
+                }
+            }
+
+            resolve(sanitizeCompletionList({
+                suggestions: [...staticCompletions.suggestions, ...dynamicSuggestions],
+                incomplete: true, // Allow re-triggering as user types
+            }));
+        });
+    });
+}
+
 export class GLuaCompletionProvider
     implements monaco.languages.CompletionItemProvider {
     public triggerCharacters = [":", ".", "("];
@@ -117,13 +232,13 @@ export class GLuaCompletionProvider
         position: monaco.Position
     ): monaco.languages.ProviderResult<CompletionList> {
         if (replInterface?.searchMode && replInterface.line?.getModel() === model) {
-            return this.getHistoryCompletions(model, position);
+            return sanitizeCompletionList(getSearchModeCompletions(model, position));
         }
         const lineUntil = model
             .getLineContent(position.lineNumber)
             .substring(0, position.column - 1);
         const word = model.getWordUntilPosition(position);
-        const insertRange = this.createInsertRange(position, word);
+        const insertRange = createInsertRange(position, word);
         const prevWord = model.getWordUntilPosition({
             lineNumber: position.lineNumber,
             column: word.startColumn - 1,
@@ -146,7 +261,7 @@ export class GLuaCompletionProvider
 
         // In the line input, also offer previous repl commands. Perfect (prefix)
         // matches are ranked above the Lua completions.
-        const historyItems = this.getLineHistoryCompletions(model, position);
+        const historyItems = getLineHistoryCompletions(model, position);
         // Keep `incomplete` inherited from the static list (normally false).
         // Forcing it true makes Monaco rebuild the completion model on every
         // keystroke, which discards the REPL's inverted-sort hack in repl.ts
@@ -164,114 +279,19 @@ export class GLuaCompletionProvider
 
         // If we have a dynamic provider, request additional completions
         if (dynamicAutocompleteProvider) {
-            return this.getCompletionsWithDynamic(
-                model,
-                position,
-                insertRange,
-                word,
+            const context: AutocompleteRequestContext = {
+                word: word.word,
                 fullIdentifier,
                 lastChar,
-                lineUntil,
-                baseCompletions
-            );
+                language: model.getLanguageId(),
+                lineNumber: position.lineNumber,
+                column: position.column,
+                lineContent: lineUntil,
+            };
+            return requestDynamicCompletions(context, insertRange, baseCompletions);
         }
 
-        return baseCompletions;
-    }
-
-    private getCompletionsWithDynamic(
-        model: monaco.editor.ITextModel,
-        position: monaco.Position,
-        insertRange: IRange,
-        word: monaco.editor.IWordAtPosition,
-        fullIdentifier: string,
-        lastChar: string,
-        lineUntil: string,
-        staticCompletions: CompletionList
-    ): Promise<CompletionList> {
-        const context: AutocompleteRequestContext = {
-            word: word.word,
-            fullIdentifier,
-            lastChar,
-            lineNumber: position.lineNumber,
-            column: position.column,
-            lineContent: lineUntil,
-        };
-
-        return new Promise((resolve) => {
-            let resolved = false;
-
-            const timeoutId = setTimeout(() => {
-                if (!resolved) {
-                    resolved = true;
-                    resolve(staticCompletions);
-                }
-            }, dynamicAutocompleteTimeout);
-
-            dynamicAutocompleteProvider!(context, (items) => {
-                if (resolved) return;
-                resolved = true;
-                clearTimeout(timeoutId);
-
-                if (!items || items.length === 0) {
-                    resolve(staticCompletions);
-                    return;
-                }
-
-                // Build a set of existing labels for deduplication
-                const existingLabels = new Set<string>();
-                for (const suggestion of staticCompletions.suggestions) {
-                    const label = typeof suggestion.label === "string"
-                        ? suggestion.label
-                        : suggestion.label.label;
-                    existingLabels.add(label);
-                }
-
-                // Filter out duplicates and convert dynamic items
-                const dynamicSuggestions: monaco.languages.CompletionItem[] = [];
-                for (const item of items) {
-                    if (!existingLabels.has(item.label)) {
-                        dynamicSuggestions.push(this.convertDynamicItem(item, insertRange));
-                        existingLabels.add(item.label);
-                    }
-                }
-
-                resolve({
-                    suggestions: [...staticCompletions.suggestions, ...dynamicSuggestions],
-                    incomplete: true, // Allow re-triggering as user types
-                });
-            });
-        });
-    }
-
-    private convertDynamicItem(
-        item: DynamicAutocompleteItem,
-        range: IRange
-    ): monaco.languages.CompletionItem {
-        return {
-            label: item.label,
-            kind: parseCompletionKind(item.kind),
-            detail: item.detail,
-            documentation: item.documentation,
-            insertText: item.insertText ?? item.label,
-            insertTextRules: item.isSnippet
-                ? monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
-                : monaco.languages.CompletionItemInsertTextRule.KeepWhitespace,
-            range,
-            sortText: "~~~" + item.label, // Sort dynamic items after static ones
-        };
-    }
-
-    private createInsertRange(
-        position: monaco.Position,
-        word: monaco.editor.IWordAtPosition
-    ): IRange {
-        return {
-            startLineNumber: position.lineNumber,
-            endLineNumber: position.lineNumber,
-            startColumn: word.startColumn,
-            endColumn: word.endColumn,
-        };
+        return sanitizeCompletionList(baseCompletions);
     }
 
     private parseIdentifierChain(
@@ -308,13 +328,6 @@ export class GLuaCompletionProvider
             return autocompletionData.methodAutocomplete(insertRange);
         }
 
-        if (lastChar === "." && this.isModuleAccess(fullIdentifier)) {
-            return autocompletionData.globalAutocomplete({
-                ...insertRange,
-                startColumn: firstWord.startColumn,
-            });
-        }
-
         if (this.isHookCall(lastChar, firstWord.word, fullIdentifier)) {
             return autocompletionData.hookAutocomplete(insertRange, lastChar === "(");
         }
@@ -324,15 +337,13 @@ export class GLuaCompletionProvider
         }
 
         if (lastChar === ".") {
-            return EMPTY_COMPLETIONS;
+            return autocompletionData.globalAutocomplete({
+                ...insertRange,
+                startColumn: firstWord.startColumn,
+            });
         }
 
         return autocompletionData.globalAutocomplete(insertRange);
-    }
-
-    private isModuleAccess(identifier: string): boolean {
-        const rootModule = identifier.split(".")[0];
-        return autocompletionData.modules.includes(rootModule);
     }
 
     private isHookCall(lastChar: string, firstWord: string, fullIdentifier: string): boolean {
@@ -353,11 +364,18 @@ export class GLuaCompletionProvider
         };
     }
 
-    private getHistoryCompletions(
-        model: monaco.editor.ITextModel,
-        position: monaco.Position
-    ): CompletionList {
-        const rawLine = model.getLineContent(1);
+}
+
+/**
+ * Reverse-search completions shown while the REPL line is in search mode: every
+ * distinct history entry matching the current query, replacing the whole line.
+ * Shared by every REPL language provider.
+ */
+export function getSearchModeCompletions(
+    model: monaco.editor.ITextModel,
+    position: monaco.Position
+): CompletionList {
+    const rawLine = model.getLineContent(1);
         const query = rawLine.replace(/^!! ?/, "").toLowerCase();
         const fullRange: IRange = {
             startLineNumber: 1,
@@ -385,17 +403,17 @@ export class GLuaCompletionProvider
         return { suggestions, incomplete: true };
     }
 
-    /**
-     * Repl history entries offered alongside normal completions in the line
-     * input (outside search mode). Each entry replaces the whole line when
-     * accepted. Entries whose text starts with what the user typed ("perfect
-     * matches") are ranked ahead of the Lua completions via a sortText prefix
-     * that sorts before any ordinary label.
-     */
-    private getLineHistoryCompletions(
-        model: monaco.editor.ITextModel,
-        position: monaco.Position
-    ): monaco.languages.CompletionItem[] {
+/**
+ * Repl history entries offered alongside normal completions in the line
+ * input (outside search mode). Each entry replaces the whole line when
+ * accepted. Entries whose text starts with what the user typed ("perfect
+ * matches") are ranked ahead of the language completions via a sortText prefix
+ * that sorts before any ordinary label. Shared by every REPL language provider.
+ */
+export function getLineHistoryCompletions(
+    model: monaco.editor.ITextModel,
+    position: monaco.Position
+): monaco.languages.CompletionItem[] {
         if (
             !replInterface ||
             replInterface.searchMode ||
@@ -441,4 +459,3 @@ export class GLuaCompletionProvider
         }
         return suggestions;
     }
-}

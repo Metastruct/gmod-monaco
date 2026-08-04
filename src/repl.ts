@@ -3,6 +3,7 @@ import * as monaco from "monaco-editor";
 import * as lua from "./lua";
 import { GLuaFormatter } from "./formatter";
 import { GLuaCompletionProvider } from "./completionProvider";
+import { SQLCompletionProvider } from "./sqlCompletionProvider";
 import { GLuaHoverProvider } from "./hoverProvider";
 import { GLuaLinkProvider } from "./gluaLinkProvider";
 import { GLuaColorProvider } from "./gluaColorProvider";
@@ -112,6 +113,39 @@ line.addAction({
     },
 });
 
+// Command palette, opened with VSCode-style Ctrl+Shift+P. It always opens in the
+// output editor, so both editors get the same action: focus the output, then
+// open. addAction scopes each keybinding to its own editor (via an `editorId`
+// when-clause) and registers it with a higher weight than any built-in binding.
+function openCommandPalette(): void {
+    editor.focus();
+    editor.trigger("keyboard", "editor.action.quickCommand", null);
+}
+for (const target of [editor, line]) {
+    target.addAction({
+        id: "repl-command-palette",
+        label: "Command Palette",
+        keybindings: [
+            monaco.KeyMod.CtrlCmd | monaco.KeyMod.Shift | monaco.KeyCode.KeyP,
+        ],
+        run: openCommandPalette,
+    });
+}
+
+// The input line's built-in F1 (quickCommand) would open the palette anchored to
+// the tiny single-line editor, which looks broken -- so swallow F1 there. This
+// replaces the old hack that zeroed a resolvedKeybinding shared by BOTH editors
+// (and so wrongly disabled F1 everywhere); binding a no-op via addAction is
+// scoped to the line editor alone and outweighs the built-in.
+line.addAction({
+    id: "suppress-line-quick-command",
+    label: "Suppress Command Palette (input line)",
+    keybindings: [monaco.KeyCode.F1],
+    run: () => {
+        // no-op: keep F1 from opening the palette inside the input line
+    },
+});
+
 line.addAction({
     id: "reverse-history-search",
     label: "Reverse History Search",
@@ -129,13 +163,21 @@ monaco.languages.registerCompletionItemProvider(
     "glua",
     new GLuaCompletionProvider()
 );
+// The REPL can switch to SQLite mode (SetLanguage("sql")); Monaco's built-in
+// "sql" language only tokenizes, so register our own completions for it.
+monaco.languages.registerCompletionItemProvider(
+    "sql",
+    new SQLCompletionProvider()
+);
 monaco.languages.registerHoverProvider("glua", new GLuaHoverProvider());
 monaco.languages.registerLinkProvider("glua", new GLuaLinkProvider());
 monaco.languages.registerColorProvider("glua", new GLuaColorProvider());
-// The output editor can switch language (glua/javascript), so register folding
-// for both. The provider itself only returns ranges for the output editor model.
+// The output editor can switch language (glua/javascript/sql), so register
+// folding for each. The provider itself only returns ranges for the output
+// editor model.
 monaco.languages.registerFoldingRangeProvider("glua", replFoldingProvider);
 monaco.languages.registerFoldingRangeProvider("javascript", replFoldingProvider);
+monaco.languages.registerFoldingRangeProvider("sql", replFoldingProvider);
 
 themePromise.finally(() => {
     if (replInterface) {
@@ -151,21 +193,6 @@ themePromise.finally(() => {
     line.focus();
 });
 
-// Stuff bellow is big brain hacking to make the line thing look normal
-// Disable the quick command keybinding (F1) in the line editor
-try {
-    // @ts-expect-error - accessing private Monaco API
-    const keybindingService = line._standaloneKeybindingService;
-    const resolver = keybindingService._getResolver();
-    const lookupMap = resolver._lookupMap;
-    const quickCommandBindings = lookupMap.get("editor.action.quickCommand");
-    if (quickCommandBindings && quickCommandBindings[0]?.resolvedKeybinding?._parts?.[0]) {
-        quickCommandBindings[0].resolvedKeybinding._parts[0].keyCode = 0;
-        keybindingService.updateResolver();
-    }
-} catch (e) {
-    console.warn("Failed to disable quick command keybinding:", e);
-}
 // Minimal shapes of the private Monaco suggest APIs the REPL relies on
 interface PrivateCompletionModel {
     replInverted?: boolean;
