@@ -119,6 +119,9 @@ class AutocompletionData {
             });
         });
         autocompletionData.constants.forEach((constant) => {
+            // Guard like the other builders: a nil/empty entry would produce a
+            // labelless item, and Monaco's CompletionItem does label.toLowerCase().
+            if (!constant) return;
             this.globalCache.push({
                 label: constant,
                 kind: monaco.languages.CompletionItemKind.Constant,
@@ -127,6 +130,7 @@ class AutocompletionData {
             });
         });
         autocompletionData.keywords.forEach((keyword) => {
+            if (!keyword) return;
             this.globalCache.push({
                 label: keyword,
                 kind: monaco.languages.CompletionItemKind.Keyword,

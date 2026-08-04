@@ -38,6 +38,7 @@ declare global {
 const LANGUAGE_PROMPTS: Record<string, string> = {
     glua: "lua>",
     javascript: "js>",
+    sql: "sql>",
 };
 function promptForLanguage(langId: string): string {
     return LANGUAGE_PROMPTS[langId] ?? `${langId}>`;
