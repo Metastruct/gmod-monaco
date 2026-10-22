@@ -1,6 +1,7 @@
 import { autocompletionData } from "../autocompletionData";
 import { GluaFunc } from "./GluaFunc";
 import { GluaEnum } from "./GluaEnum";
+import { enumPageFromLink, resolveEnumPage } from "./wikiLinks";
 
 function PreprocessGWikiElem(elem: any, parentElem: any) {
     if (elem.args && elem.args.arg) {
@@ -48,10 +49,10 @@ function PreprocessGWikiElem(elem: any, parentElem: any) {
     }
 }
 
-function addEnum(jsonOBJ: any) {
+function addEnum(jsonOBJ: any, link?: string) {
     if (Array.isArray(jsonOBJ.enum)) {
         jsonOBJ.enum.forEach((element: any) => {
-            addEnum({ items: element });
+            addEnum({ items: element }, link);
         });
         return;
     }
@@ -59,11 +60,23 @@ function addEnum(jsonOBJ: any) {
     if (Array.isArray(jsonOBJ)) {
         enums = jsonOBJ;
     } else {
-        enums = jsonOBJ.items.item;
+        enums = jsonOBJ.items?.item;
     }
+    if (!Array.isArray(enums)) {
+        enums = enums ? [enums] : [];
+    }
+    // Newer dumps carry the page path; older ones have to be matched against
+    // the known enum pages by key prefix. Either way, resolve once per table.
+    const wikiPage =
+        enumPageFromLink(link) ??
+        resolveEnumPage(
+            enums
+                .map((element: { key?: unknown }) => element?.key)
+                .filter((key: unknown): key is string => typeof key === "string")
+        );
     enums.forEach((element: { items: any }) => {
         if (element.items) {
-            addEnum(element);
+            addEnum(element, link);
             return;
         }
         const enumObj = new GluaEnum(element);
@@ -73,6 +86,8 @@ function addEnum(jsonOBJ: any) {
             return;
         }
         enumObj.tableDesc = jsonOBJ.description;
+        enumObj.realm = enumObj.realm ?? jsonOBJ.realm;
+        enumObj.wikiPage = wikiPage;
         autocompletionData.valuesLookup.set(enumObj.key, enumObj);
         autocompletionData.enums.push(enumObj);
     });
@@ -110,6 +125,7 @@ export async function LoadAutocompletionData(currentState: string) {
         if (elem.function) {
             const funcElem = elem.function;
             PreprocessGWikiElem(funcElem, elem);
+            funcElem.link = elem.link;
             const func = new GluaFunc(funcElem);
             autocompletionData.valuesLookup.set(func.getFullName(), func);
             if (func.parent && autocompletionData.modules.indexOf(func.parent) === -1) {
@@ -129,7 +145,7 @@ export async function LoadAutocompletionData(currentState: string) {
                 autocompletionData.functions.push(func);
             }
         } else if (elem.enum) {
-            addEnum(elem.enum);
+            addEnum(elem.enum, elem.link);
         }
     });
     autocompletionData.ClearAutocompleteCache();

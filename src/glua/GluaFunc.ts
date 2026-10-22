@@ -1,5 +1,14 @@
 import * as monaco from "monaco-editor";
 import { GluaItem } from "./GluaItem";
+import { funcWikiUrl, sourceUrl, wikiUrlFromLink } from "./wikiLinks";
+import {
+    cleanText,
+    indentContinuation,
+    joinSections,
+    renderAdmonitions,
+    renderExampleOutput,
+    renderRichText,
+} from "./docMarkdown";
 
 export class GluaFunc extends GluaItem {
     declare name: string;
@@ -9,9 +18,18 @@ export class GluaFunc extends GluaItem {
         text: string;
         internal?: string;
         deprecated?: string;
+        removed?: string;
+        note?: unknown;
+        warning?: unknown;
+        bug?: unknown;
+        validate?: string;
     };
     declare realm: string;
+    declare added: string | undefined;
+    declare predicted: string | undefined;
     declare file: { text: string; line: string } | undefined;
+    /** Wiki page path recorded by the scraper, when the dump is new enough. */
+    declare link: string | undefined;
     declare args: {
         text: string;
         name: string;
@@ -62,6 +80,25 @@ export class GluaFunc extends GluaItem {
         }
         return name;
     }
+    /**
+     * Name as the wiki writes it. Unlike getFullName (which is what you type,
+     * and so stays bare for hooks and globals) this qualifies hooks and fields
+     * with their parent, e.g. `GM:PlayerSpawn`.
+     */
+    getDisplayName(): string {
+        const full = this.getFullName();
+        const parent = this.parent ?? "";
+        if (!parent || parent === "Global" || /[.:]/.test(full)) {
+            return full;
+        }
+        return `${parent}${this.type === "libraryfield" ? "." : ":"}${full}`;
+    }
+    getWikiUrl(): string | undefined {
+        return (
+            wikiUrlFromLink(this.link) ??
+            funcWikiUrl(this.type, this.parent, this.name)
+        );
+    }
 
     generateUsageSnippet(): string {
         const name = this.name ?? "";
@@ -94,83 +131,136 @@ export class GluaFunc extends GluaItem {
     }
     generateUsageText(): string {
         if (!this.hasArgs()) {
-            return this.getFullName() + "()";
+            return this.getDisplayName() + "()";
         }
         const args: string[] = [];
-        this.args.forEach((elem) => {
+        this.args.forEach((elem, idx) => {
             const elemType = elem?.type ?? "any";
-            const elemName = elem?.name ?? "arg";
-            let arg = `(${elemType})${elemName}`;
+            const elemName = elem?.name ?? `arg${idx}`;
+            let arg = `${elemType} ${elemName}`;
             if (elem?.default && elem.default !== "" && elem.default !== "nil") {
-                arg += "=" + elem.default;
+                arg += " = " + elem.default;
             }
             args.push(arg);
         });
-        return `${this.getFullName()}(${args.join(", ")})`;
+        return `${this.getDisplayName()}(${args.join(", ")})`;
     }
-    generateDocumentation(): monaco.IMarkdownString[] {
+
+    /** `Shared` · `deprecated` · `predicted` — the at-a-glance flags row. */
+    private generateBadges(): string {
         const desc = this.description ?? { text: "" };
-        const output = [
-            { value: `**${this.generateUsageText()}**` },
-            { value: `#### Realm: \`${this.realm ?? "unknown"}\`` },
-            {
-                value: `${
-                    desc.deprecated !== undefined
-                        ? "### Deprecated\n" + desc.deprecated
-                        : ""
-                }`,
-            },
-            {
-                value: `${
-                    desc.internal !== undefined
-                        ? "### Internal\n" + desc.internal
-                        : ""
-                }`,
-            },
-            { value: `${desc.text ?? ""}` },
-        ];
-        if (this.hasArgs()) {
-            let result = "## Arguments\n";
-            this.args.forEach((arg, idx) => {
-                const argType = arg?.type ?? "any";
-                const argName = arg?.name ?? `arg${idx}`;
-                const argText = arg?.text ?? "";
-                let argStr = `${idx + 1}. (${argType}) ${argName}`;
-                if (
-                    arg?.default &&
-                    arg.default !== "" &&
-                    arg.default !== "nil"
-                ) {
-                    argStr += "=" + arg.default;
-                }
-                result += `### ${argStr}\n##### ${argText.replace(
-                    "\n",
-                    "\n##### "
-                )}\n`;
-            });
-            output.push({ value: result.trim() });
+        const badges = [this.realm ?? "unknown"];
+        if (desc.removed !== undefined) badges.push("removed");
+        if (desc.deprecated !== undefined) badges.push("deprecated");
+        if (desc.internal !== undefined) badges.push("internal");
+        if (this.predicted) badges.push("predicted");
+        return badges.map((badge) => `\`${badge}\``).join(" · ");
+    }
+
+    private generateSignature(): string {
+        const returns = this.rets?.length
+            ? `${this.rets.map((ret) => ret?.type ?? "any").join(", ")} `
+            : "";
+        return joinSections([
+            `\`\`\`glua\n${returns}${this.generateUsageText()}\n\`\`\``,
+            this.generateBadges(),
+        ]);
+    }
+
+    private generateBody(): string {
+        const desc = this.description ?? { text: "" };
+        return joinSections([
+            cleanText(desc.text),
+            ...renderAdmonitions("Removed", desc.removed),
+            ...renderAdmonitions("Deprecated", desc.deprecated),
+            ...renderAdmonitions("Internal", desc.internal),
+            ...renderAdmonitions("Warning", desc.warning),
+            ...renderAdmonitions("Note", desc.note),
+            ...renderAdmonitions("Bug", desc.bug),
+            ...renderAdmonitions("Validate", desc.validate),
+        ]);
+    }
+
+    private generateArguments(): string {
+        if (!this.hasArgs()) return "";
+        const items = this.args.map((arg, idx) => {
+            const type = arg?.type ?? "any";
+            const name = arg?.name ?? `arg${idx}`;
+            const hasDefault =
+                arg?.default && arg.default !== "" && arg.default !== "nil";
+            const head = `${idx + 1}. \`${name}\` — *${type}*${
+                hasDefault ? ` (default \`${arg.default}\`)` : ""
+            }`;
+            const text = renderRichText(arg?.text);
+            return text
+                ? `${head}\n\n   ${indentContinuation(text, 3)}`
+                : head;
+        });
+        return `**Arguments**\n\n${items.join("\n")}`;
+    }
+
+    private generateReturns(): string {
+        if (!this.rets?.length) return "";
+        const items = this.rets.map((ret, idx) => {
+            const head = `${idx + 1}. *${ret?.type ?? "any"}*${
+                ret?.name ? ` \`${ret.name}\`` : ""
+            }`;
+            const text = renderRichText(ret?.text);
+            return text
+                ? `${head}\n\n   ${indentContinuation(text, 3)}`
+                : head;
+        });
+        return `**Returns**\n\n${items.join("\n")}`;
+    }
+
+    private generateExamples(): string[] {
+        if (!this.example?.length) return [];
+        return this.example.map((elem, idx) => {
+            const title =
+                this.example.length > 1
+                    ? `**Example ${idx + 1}**`
+                    : "**Example**";
+            return joinSections([
+                title,
+                renderRichText(elem?.description),
+                `\`\`\`glua\n${elem?.code ?? ""}\n\`\`\``,
+                renderExampleOutput(elem?.output),
+            ]);
+        });
+    }
+
+    private generateFooter(): string {
+        const wikiUrl = this.getWikiUrl();
+        const parts: string[] = [];
+        if (wikiUrl) {
+            parts.push(`[View on the Garry's Mod Wiki](${wikiUrl})`);
         }
-        if (this.rets?.length > 0) {
-            let result = "## Returns\n";
-            this.rets.forEach((ret, idx) => {
-                const retType = ret?.type ?? "any";
-                const retText = ret?.text ?? "";
-                result += `### ${idx + 1}. ${retType}\n##### ${retText.replace("\n", "\n##### ")}\n`;
-            });
-            output.push({ value: result.trim() });
+        if (this.added) {
+            parts.push(`added in \`${this.added}\``);
         }
-        if (this.example?.length > 0) {
-            output.push({ value: `## Examples` });
-            this.example.forEach((elem, idx) => {
-                output.push({
-                    value: `### Example ${idx + 1}.\n#### ${elem?.description ?? ""}`,
-                });
-                output.push({ value: `\`\`\`glua\n${elem?.code ?? ""}\n\`\`\`` });
-                if (elem?.output && elem.output !== "") {
-                    output.push({ value: `##### Output\n\`${elem.output}\`` });
-                }
-            });
+        if (this.file?.text) {
+            const line = this.file.line?.split("-")[0];
+            const label = `${this.file.text}${line ? `:${line}` : ""}`;
+            const source = sourceUrl(this.file);
+            parts.push(
+                source
+                    ? `[source: \`${label}\`](${source})`
+                    : `defined in \`${label}\``
+            );
         }
-        return output;
+        return parts.join(" · ");
+    }
+
+    generateDocumentation(): monaco.IMarkdownString[] {
+        return [
+            this.generateSignature(),
+            this.generateBody(),
+            this.generateArguments(),
+            this.generateReturns(),
+            ...this.generateExamples(),
+            this.generateFooter(),
+        ]
+            .filter((section) => section.trim())
+            .map((value) => ({ value }));
     }
 }
